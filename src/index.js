@@ -17,3 +17,9 @@ const main = () => {
 };
 
 exports.main = main;
+
+exports.onUnload = function (reason) {
+  if (reason === 'uninstall' || reason === 'disable') {
+    NewTabURL.reset();
+  }
+};
