@@ -1,5 +1,6 @@
+const {Cc, Ci} = require('chrome');
 const preferences = require('sdk/simple-prefs');
-const NewTabURL = require('resource:///modules/NewTabURL.jsm').NewTabURL;
+const aboutNewTabService = Cc['@mozilla.org/browser/aboutnewtab-service;1'].getService(Ci.nsIAboutNewTabService);
 
 const newtaboverride = {
   init : function () {
@@ -7,7 +8,7 @@ const newtaboverride = {
   },
   
   onPrefChange : function () {
-    NewTabURL.override(preferences.prefs['url'] || 'about:newtab');
+    aboutNewTabService.newTabURL = preferences.prefs['url'] || 'about:newtab';
   }
 };
 
@@ -20,6 +21,6 @@ exports.main = main;
 
 exports.onUnload = function (reason) {
   if (reason === 'uninstall' || reason === 'disable') {
-    NewTabURL.reset();
+    aboutNewTabService.resetNewTabURL();
   }
 };
