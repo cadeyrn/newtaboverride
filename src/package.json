@@ -1,6 +1,6 @@
 {
   "id": "newtaboverride@agenedia.com",
-  "title": "New Tab Override (browser.newtab.url replacement for Fx 41+)",
+  "title": "New Tab Override (browser.newtab.url replacement)",
   "name": "newtaboverride",
   "version": "2.0pre",
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
@@ -11,6 +11,34 @@
   },
   "license": "MIT",
   "preferences": [
+    {
+      "name": "type",
+      "type": "menulist",
+      "title": "Options",
+      "value": "custom_url",
+      "options": [
+        {
+            "value": "about:blank",
+            "label": "about:blank"
+        },
+        {
+            "value": "about:home",
+            "label": "about:home"
+        },
+        {
+            "value": "about:newtab",
+            "label": "about_newtab"
+        },
+        {
+            "value": "homepage",
+            "label": "homepage"
+        },
+        {
+            "value": "custom_url",
+            "label": "custom_url"
+        }
+      ]
+    },
     {
       "name": "url",
       "type": "string",
