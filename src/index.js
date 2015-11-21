@@ -47,7 +47,7 @@ const newtaboverride = {
         newTabUrl = simplePrefs.prefs['url'];
         break;
       case 'homepage':
-        var homepage = preferencesService.get('browser.startup.homepage', 'about:blank').split('|')[0];
+        var homepage = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];
         newTabUrl = homepage;
         break;
       default:
