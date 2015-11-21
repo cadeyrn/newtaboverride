@@ -1,13 +1,36 @@
-const { Cc, Ci } = require('chrome');
+const NEW_API_FIREFOX_VERSION = 44;
+
 const { PrefsTarget } = require('sdk/preferences/event-target');
-const aboutNewTabService = Cc['@mozilla.org/browser/aboutnewtab-service;1'].getService(Ci.nsIAboutNewTabService);
+const { version } = require('sdk/system/xul-app');
 const simplePrefs = require('sdk/simple-prefs');
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 
 const newtaboverride = {
   init : function () {
-    this.onPrefChange();
+    newtaboverride.onPrefChange();
+  },
+
+  override : function (newTabUrl) {
+    if (version < NEW_API_FIREFOX_VERSION) {
+      require('resource:///modules/NewTabURL.jsm').NewTabURL.override(newTabUrl);
+    } else {
+      const { Cc, Ci } = require('chrome');
+      const aboutNewTabService = Cc['@mozilla.org/browser/aboutnewtab-service;1'].getService(Ci.nsIAboutNewTabService);
+
+      aboutNewTabService.newTabURL = newTabUrl;
+    }
+  },
+
+  reset : function () {
+    if (version < NEW_API_FIREFOX_VERSION) {
+      require('resource:///modules/NewTabURL.jsm').NewTabURL.reset();
+    } else {
+      const { Cc, Ci } = require('chrome');
+      const aboutNewTabService = Cc['@mozilla.org/browser/aboutnewtab-service;1'].getService(Ci.nsIAboutNewTabService);
+
+      aboutNewTabService.resetNewTabURL();
+    }
   },
   
   onPrefChange : function () {
@@ -31,7 +54,7 @@ const newtaboverride = {
         newTabUrl = 'about:newtab';
     }
 
-    aboutNewTabService.newTabURL = newTabUrl;
+    newtaboverride.override(newTabUrl);
   }
 };
 
@@ -45,6 +68,6 @@ exports.main = main;
 
 exports.onUnload = function (reason) {
   if (reason === 'uninstall' || reason === 'disable') {
-    aboutNewTabService.resetNewTabURL();
+    newtaboverride.reset();
   }
 };
