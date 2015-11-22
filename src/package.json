@@ -36,6 +36,10 @@
         {
             "value": "custom_url",
             "label": "custom_url"
+        },
+        {
+            "value": "clipboard",
+            "label": "clipboard"
         }
       ]
     },
