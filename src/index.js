@@ -50,7 +50,11 @@ const newtaboverride = {
         tabs.on('open', newtaboverride.clipboardAction);
         break;
       case 'custom_url':
-        newTabUrl = simplePrefs.prefs['url'];
+        if (!simplePrefs.prefs['url'] || simplePrefs.prefs['url'] === '') {
+          newTabUrl = 'about:blank';
+        } else {
+          newTabUrl = simplePrefs.prefs['url'];
+        }
         break;
       case 'homepage':
         var homepage = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];
