@@ -1,14 +1,21 @@
 const NEW_API_FIREFOX_VERSION = 44;
+const ONE_SECOND_IN_MILLISECONDS = 1000;
+const URL_CHARS_LIMIT = 2000;
 
 const { PrefsTarget } = require('sdk/preferences/event-target');
+const { setInterval, clearInterval } = require('sdk/timers');
 const { version } = require('sdk/system/xul-app');
 const clipboard = require('sdk/clipboard');
+const events = require('sdk/system/events');
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
 
 const newtaboverride = {
+  lastClipboardUrl : false,
+  timer : false,
+
   init : function () {
     newtaboverride.onPrefChange();
   },
@@ -47,7 +54,8 @@ const newtaboverride = {
         break;
       case 'clipboard':
         newTabUrl = 'about:blank';
-        tabs.on('open', newtaboverride.clipboardAction);
+        // unfortunately there is no "clipboard changed" event…
+        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, ONE_SECOND_IN_MILLISECONDS);
         break;
       case 'custom_url':
         if (!simplePrefs.prefs['url'] || simplePrefs.prefs['url'] === '') {
@@ -65,18 +73,27 @@ const newtaboverride = {
     }
 
     if (type !== 'clipboard') {
-      tabs.removeListener('open', newtaboverride.clipboardAction);
+      clearInterval(newtaboverride.timer);
+      newtaboverride.lastClipboardUrl = false;
     }
 
     newtaboverride.override(newTabUrl);
   },
 
-  clipboardAction : function (tab) {
+  clipboardAction : function () {
     var clipboardContent = clipboard.get();
 
-    if (newtaboverride.isUrl(clipboardContent)) {
-      tab.url = clipboardContent;
+    if (clipboard.currentFlavors.indexOf('text') === -1) {
+      return;
+    }
+
+    if (clipboardContent.length > URL_CHARS_LIMIT || !newtaboverride.isUrl(clipboardContent)) {
+      return;
+    }
+
+    if (!newtaboverride.lastClipboardUrl || clipboardContent !== newtaboverride.lastClipboardUrl) {
       newtaboverride.override(clipboardContent);
+      newtaboverride.lastClipboardUrl = clipboardContent;
     }
   },
 
@@ -100,7 +117,8 @@ exports.main = main;
 
 exports.onUnload = function (reason) {
   if (reason === 'uninstall' || reason === 'disable') {
-    tabs.removeListener('open', newtaboverride.clipboardAction);
+    clearInterval(newtaboverride.timer);
+    newtaboverride.lastClipboardUrl = false;
     newtaboverride.reset();
   }
 };
