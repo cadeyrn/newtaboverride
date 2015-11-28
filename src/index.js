@@ -53,7 +53,7 @@ const newtaboverride = {
       case 'clipboard':
         newTabUrl = 'about:blank';
         // unfortunately there is no "clipboard changed" event…
-        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, ONE_SECOND_IN_MILLISECONDS);
+        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, ONE_SECOND_IN_MILLISECONDS / 2);
         break;
       case 'custom_url':
         if (!simplePrefs.prefs['url'] || simplePrefs.prefs['url'] === '') {
