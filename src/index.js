@@ -6,11 +6,9 @@ const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const { version } = require('sdk/system/xul-app');
 const clipboard = require('sdk/clipboard');
-const events = require('sdk/system/events');
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const simplePrefs = require('sdk/simple-prefs');
-const tabs = require('sdk/tabs');
 
 const newtaboverride = {
   lastClipboardUrl : false,
