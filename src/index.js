@@ -57,10 +57,14 @@ const newtaboverride = {
         newtaboverride.timer = setInterval(newtaboverride.clipboardAction, ONE_SECOND_IN_MILLISECONDS / 2);
         break;
       case 'custom_url':
-        if (!simplePrefs.prefs['url'] || simplePrefs.prefs['url'] === '') {
+        var url = simplePrefs.prefs['url'];
+        if (url === '') {
           newTabUrl = 'about:blank';
+        }
+        else if (newtaboverride.isValidUri(url)) {
+          newTabUrl = url;
         } else {
-          newTabUrl = simplePrefs.prefs['url'];
+          newTabUrl = 'about:newtab';
         }
         break;
       case 'homepage':
@@ -85,7 +89,7 @@ const newtaboverride = {
       return;
     }
 
-    if (clipboardContent.length > URL_CHARS_LIMIT || !newtaboverride.isUrl(clipboardContent)) {
+    if (clipboardContent.length > URL_CHARS_LIMIT || !newtaboverride.isValidUri(clipboardContent)) {
       return;
     }
 
@@ -98,9 +102,11 @@ const newtaboverride = {
   /**
    * @see http://stackoverflow.com/a/9284473
    */
-  isUrl : function (string) {
-    var regexp = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
-    return regexp.test(string);
+  isValidUri : function (string) {
+    var website = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+    var aboutpage = /^about:(about|accounts|addons|blank|buildconfig|cache|config|crashes|credits|customizing|debugging|downloads|healthreport|home|license|logo|memory|mozilla|networking|newtab|performance|plugins|preferences|privatebrowsing|remote-newtab|rights|robots|serviceworkers|support|sync-log|sync-tabs|telemetry|webrtc)?$/i;
+
+    return website.test(string) || aboutpage.test(string);
   }
 };
 
