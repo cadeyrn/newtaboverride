@@ -48,6 +48,7 @@ const newtaboverride = {
       case 'about:blank':
       case 'about:home':
       case 'about:newtab':
+      case 'about:sync-tabs':
         newTabUrl = type;
         break;
       case 'clipboard':

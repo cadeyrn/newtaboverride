@@ -30,6 +30,10 @@
             "label": "about_newtab"
         },
         {
+            "value": "about:synctabs",
+            "label": "about:synctabs"
+        },
+        {
             "value": "homepage",
             "label": "homepage"
         },
