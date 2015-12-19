@@ -13,13 +13,14 @@ const simplePrefs = require('sdk/simple-prefs');
 const newtaboverride = {
   lastClipboardUrl : false,
   timer : false,
+  version : parseFloat(version),
 
   init : function () {
     newtaboverride.onPrefChange();
   },
 
   override : function (newTabUrl) {
-    if (version < NEW_API_FIREFOX_VERSION) {
+    if (this.version < NEW_API_FIREFOX_VERSION) {
       require('resource:///modules/NewTabURL.jsm').NewTabURL.override(newTabUrl);
     } else {
       const { Cc, Ci } = require('chrome');
@@ -30,7 +31,7 @@ const newtaboverride = {
   },
 
   reset : function () {
-    if (version < NEW_API_FIREFOX_VERSION) {
+    if (this.version < NEW_API_FIREFOX_VERSION) {
       require('resource:///modules/NewTabURL.jsm').NewTabURL.reset();
     } else {
       const { Cc, Ci } = require('chrome');
