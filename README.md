@@ -7,4 +7,4 @@ Mozilla decided to remove it (see [bug 1118285](https://bugzilla.mozilla.org/sho
 by removing it, Mozilla also introduced a new API to bring this functionality back to life as an add-on. This add-on
 allows the user to choose a certain page in a new tab.
 ### Download
-**[Download New Tab Override 2.1](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
+**[Download New Tab Override 2.2](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
