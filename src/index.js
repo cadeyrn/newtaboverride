@@ -61,11 +61,8 @@ const newtaboverride = {
         var url = simplePrefs.prefs['url'];
         if (url === '') {
           newTabUrl = 'about:blank';
-        }
-        else if (newtaboverride.isValidUri(url)) {
-          newTabUrl = url;
         } else {
-          newTabUrl = 'about:newtab';
+          newTabUrl = url;
         }
         break;
       case 'homepage':
