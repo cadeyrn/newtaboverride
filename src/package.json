@@ -6,6 +6,9 @@
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
   "main": "index.js",
   "author": "Sören Hentzschel (agenedia.com)",
+  "translators": [
+    "Tonnes (NL)"
+  ],
   "engines": {
     "firefox": ">=41.0a1"
   },
