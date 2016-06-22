@@ -13,6 +13,9 @@
     "firefox": ">=41.0a1"
   },
   "license": "MIT",
+  "permissions": {
+    "multiprocess": true
+  },
   "preferences": [
     {
       "name": "type",
