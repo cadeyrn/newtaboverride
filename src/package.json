@@ -10,7 +10,7 @@
     "Tonnes (NL)"
   ],
   "engines": {
-    "firefox": ">=41.0a1"
+    "firefox": ">=45.0a1"
   },
   "license": "MIT",
   "permissions": {
