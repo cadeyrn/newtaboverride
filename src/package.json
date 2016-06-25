@@ -60,5 +60,16 @@
       "description": "This page is shown when opening a new tab (default: about:newtab)",
       "value": "about:newtab"
     }
-  ]
+  ],
+  "locales": {
+    "de": {
+      "description": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
+    },
+    "en": {
+      "description": "This add-on brings back the ability to change the page which is shown when opening a new tab."
+    },
+    "nl": {
+      "description": "Deze add-on herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
+    }
+  }
 }
