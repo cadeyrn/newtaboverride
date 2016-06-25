@@ -20,7 +20,7 @@
     {
       "name": "type",
       "type": "menulist",
-      "title": "Options",
+      "title": "Option",
       "value": "custom_url",
       "options": [
         {
