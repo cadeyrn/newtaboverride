@@ -71,8 +71,24 @@ label {
   font-weight: bold;
 }
 
-input {
+select {
+  box-sizing: border-box;
+  padding: 2px 5px;
   width: 100%;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 2px 5px;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  border: .5px solid rgb(218, 218, 218);
+  transition: border ease 250ms;
+}
+
+input:focus {
+  border-color: rgb(193, 56, 50);
 }
 
 button {
