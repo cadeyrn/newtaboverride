@@ -56,13 +56,13 @@ h2 {
 }
 
 a {
-  color: rgb(219, 128, 119);
+  color: rgb(193, 56, 50);
   text-decoration: none;
   transition: color ease 250ms;
 }
 
 a:hover {
-  color: rgb(193, 56, 50);
+  color: rgb(210, 57, 49);
 }
 
 label {
@@ -96,16 +96,15 @@ button {
   width: 100%;
   border: none;
   border-radius: 3px;
-  background: rgb(245, 222, 179);
+  background: rgb(193, 56, 50);
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  color: inherit;
-  transition: all ease 500ms;
+  transition: background ease 500ms;
   cursor: pointer;
 }
 
 button:hover {
-  background: rgb(193, 56, 50);
-  color: rgb(255, 255, 255);
+  background: rgb(210, 57, 49);
 }
 
 footer {
