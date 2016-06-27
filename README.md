@@ -6,5 +6,7 @@ preference browser.newtab.url in about.config. Because of the fact that hijacker
 Mozilla decided to remove it (see [bug 1118285](https://bugzilla.mozilla.org/show_bug.cgi?id=1118285)). Fortunately,
 by removing it, Mozilla also introduced a new API to bring this functionality back to life as an add-on. This add-on
 allows the user to choose a certain page in a new tab.
+### System Requirements (current version)
+Firefox 45.0+
 ### Download
-**[Download New Tab Override 2.3.1](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
+**[Download New Tab Override 3.0](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
