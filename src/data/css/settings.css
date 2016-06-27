@@ -56,8 +56,7 @@ h2 {
 }
 
 a {
-  font-weight: bold;
-  color: inherit;
+  color: rgb(219, 128, 119);
   text-decoration: none;
   transition: color ease 250ms;
 }
@@ -127,7 +126,7 @@ footer a {
   background: url('../images/sh-at.png') no-repeat;
   background-size: 32px 32px;
   background-position: center left;
-  font-weight: normal;
+  color: rgb(33, 37, 42);
 }
 
 .description {
