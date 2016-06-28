@@ -12,6 +12,7 @@ const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
+const windows = require('sdk/windows');
 
 const newtaboverride = {
   actionButton : null,
@@ -84,10 +85,13 @@ const newtaboverride = {
           newtaboverride.actionButton.badge = null;
         }
 
-        for (let tab of tabs) {
-          if (tab.url === data.url('html/settings.html')) {
-            tab.activate();
-            return;
+        for (let window of windows.browserWindows) {
+          for (let tab of window.tabs) {
+            if (tab.url === data.url('html/settings.html')) {
+              window.activate();
+              tab.activate();
+              return;
+            }
           }
         }
 
