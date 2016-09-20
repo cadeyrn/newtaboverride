@@ -3,7 +3,7 @@ const elUrl = document.querySelector('#url');
 
 // set favicon
 self.port.on('data-url', function(baseurl) {
-  let link = document.createElement('link');
+  const link = document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
   link.href = baseurl + 'images/icon-32.png';
@@ -12,7 +12,7 @@ self.port.on('data-url', function(baseurl) {
 
 // translate HTML elements
 self.port.on('i18n', function (t) {
-  let items = document.querySelectorAll('[data-l10n-id]');
+  const items = document.querySelectorAll('[data-l10n-id]');
   for (let item of items) {
     if (item.dataset.l10nId.endsWith('.placeholder')) {
       item.setAttribute('placeholder', t[item.dataset.l10nId]);
