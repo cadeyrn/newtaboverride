@@ -61,6 +61,7 @@
       "value": "about:newtab"
     }
   ],
+  "preferencesURL": "about:newtaboverride",
   "locales": {
     "de": {
       "description": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
