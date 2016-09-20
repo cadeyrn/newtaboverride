@@ -1,7 +1,7 @@
 const ABOUT_UUID = '{73e40ef0-7f3c-11e6-bdf4-0800200c9a66}';
 const ABOUT_PAGE = 'newtaboverride';
 const ABOUT_URI = 'about:' + ABOUT_PAGE;
-const ONE_SECOND_IN_MILLISECONDS = 1000;
+const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
 const URL_CHARS_LIMIT = 2000;
 
 const _ = require('sdk/l10n').get;
@@ -123,7 +123,7 @@ const newtaboverride = {
       case 'clipboard':
         newTabUrl = 'about:blank';
         // unfortunately there is no "clipboard changed" event…
-        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, ONE_SECOND_IN_MILLISECONDS / 2);
+        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, CLIPBOARD_INTERVAL_IN_MILLISECONDS);
         break;
       case 'custom_url':
         var url = simplePrefs.prefs['url'];
