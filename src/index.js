@@ -11,6 +11,7 @@ const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const clipboard = require('sdk/clipboard');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
+const pageMod = require('sdk/page-mod');
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const self = require('sdk/self');
@@ -42,7 +43,7 @@ const AboutPage = {
 
     // Firefox >= 48
     if (services.vc.compare(services.appinfo.version, '47.*') > 0) {
-      let uri = services.io.newURI(self.data.url('html/settings.html'), null, null);
+      const uri = services.io.newURI(self.data.url('html/settings.html'), null, null);
       channel = services.io.newChannelFromURIWithLoadInfo(uri, aSecurity_or_aLoadInfo);
     }
     // Firefox <= 47
@@ -67,14 +68,13 @@ const newtaboverride = {
   },
 
   initPageMod : function () {
-    const pageMod = require('sdk/page-mod');
     pageMod.PageMod({
       include: [ABOUT_URI],
       contentScriptFile: [self.data.url('js/content-script.js')],
       contentStyleFile: [self.data.url('css/settings.css')],
       onAttach: function(worker) {
-        let t = {};
-        let langvars = [
+        const t = {};
+        const langvars = [
           'settings_ask_questions',
           'settings_code_caption',
           'settings_code_link',
@@ -110,8 +110,8 @@ const newtaboverride = {
   },
 
   onPrefChange : function () {
-    var type = simplePrefs.prefs['type'];
-    var newTabUrl;
+    const type = simplePrefs.prefs['type'];
+    let newTabUrl;
 
     switch (type) {
       case 'about:blank':
@@ -126,7 +126,7 @@ const newtaboverride = {
         newtaboverride.timer = setInterval(newtaboverride.clipboardAction, CLIPBOARD_INTERVAL_IN_MILLISECONDS);
         break;
       case 'custom_url':
-        var url = simplePrefs.prefs['url'];
+        const url = simplePrefs.prefs['url'];
         if (url === '') {
           newTabUrl = 'about:blank';
         } else {
@@ -181,7 +181,7 @@ const newtaboverride = {
   },
 
   clipboardAction : function () {
-    var clipboardContent = clipboard.get();
+    const clipboardContent = clipboard.get();
 
     if (clipboard.currentFlavors.indexOf('text') === -1) {
       return;
@@ -201,8 +201,8 @@ const newtaboverride = {
    * @see http://stackoverflow.com/a/9284473
    */
   isValidUri : function (string) {
-    var website = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
-    var aboutpage = /^about:(about|accounts|addons|blank|buildconfig|cache|checkerboard|config|crashes|credits|debugging|downloads|healthreport|home|license|logo|memory|mozilla|networking|newtab|performance|plugins|preferences|privatebrowsing|profiles|rights|robots|searchreset|serviceworkers|support|sync-log|sync-tabs|telemetry|webrtc)?$/i;
+    const website = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+    const aboutpage = /^about:(about|accounts|addons|blank|buildconfig|cache|checkerboard|config|crashes|credits|debugging|downloads|healthreport|home|license|logo|memory|mozilla|networking|newtab|performance|plugins|preferences|privatebrowsing|profiles|rights|robots|searchreset|serviceworkers|support|sync-log|sync-tabs|telemetry|webrtc)?$/i;
 
     return website.test(string) || aboutpage.test(string) || string === ABOUT_URI;
   }
