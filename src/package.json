@@ -5,7 +5,11 @@
   "version": "3.0",
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
   "main": "index.js",
-  "author": "Sören Hentzschel (agenedia.com)",
+  "author": {
+    "name" : "Sören Hentzschel",
+    "email" : "kontakt@agenedia.com",
+    "url" : "https://agenedia.com"
+  },
   "translators": [
     "Tonnes (NL)"
   ],
