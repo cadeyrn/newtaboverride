@@ -1,7 +1,13 @@
 const ABOUT_SETTINGS_UUID = '{73e40ef0-7f3c-11e6-bdf4-0800200c9a66}';
 const ABOUT_SETTINGS_PAGE = 'newtaboverride';
 const ABOUT_SETTINGS_URI = 'about:' + ABOUT_SETTINGS_PAGE;
+
+const ABOUT_FEED_UUID = '{67eb5aa0-8b2f-11e6-bdf4-0800200c9a66}';
+const ABOUT_FEED_PAGE = 'newtabfeed';
+const ABOUT_FEED_URI = 'about:' + ABOUT_FEED_PAGE;
+
 const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
+const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
 const URL_CHARS_LIMIT = 2000;
 
 const _ = require('sdk/l10n').get;
@@ -10,6 +16,7 @@ const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
+const feedreader = require('lib/feedreader.js');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const pageMod = require('sdk/page-mod');
 const preferencesService = require('sdk/preferences/service');
@@ -22,6 +29,8 @@ const windows = require('sdk/windows');
 const SettingsPage = aboutpage.createAboutPage('settings');
 const SettingsPageFactory = aboutpage.createAboutPageFactory(SettingsPage);
 
+const FeedPage = aboutpage.createAboutPage('feed');
+const FeedPageFactory = aboutpage.createAboutPageFactory(FeedPage);
 
 const newtaboverride = {
   actionButton : null,
@@ -29,12 +38,12 @@ const newtaboverride = {
   timer : false,
 
   init : function () {
-    newtaboverride.initPageMod();
+    newtaboverride.initPageMods();
     newtaboverride.onPrefChange();
     newtaboverride.createButton();
   },
 
-  initPageMod : function () {
+  initPageMods : function () {
     pageMod.PageMod({
       include: [ABOUT_SETTINGS_URI],
       contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/settings.js')],
@@ -54,6 +63,7 @@ const newtaboverride = {
           'type_options.about_newtab',
           'type_options.clipboard',
           'type_options.custom_url',
+          'type_options.feed',
           'type_options.homepage',
           'type_title',
           'url_description',
@@ -66,6 +76,33 @@ const newtaboverride = {
 
         worker.port.on('change-preference', (preference) => {
           simplePrefs.prefs[preference.key] = preference.value;
+        });
+      }
+    });
+
+    pageMod.PageMod({
+      include: [ABOUT_FEED_URI],
+      contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/feed.js')],
+      contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/feed.css')],
+      onAttach: function(worker) {
+        const langvars = [
+          'feed_published_at.global',
+          'feed_read_more.global',
+          'feed_title',
+          'settings_ask_questions',
+          'settings_code_caption',
+          'settings_code_link',
+          'settings_donate',
+          'settings_donation_text',
+          'settings_licence_link',
+          'settings_support_caption'
+        ];
+
+        worker.port.emit('data-url', self.data.url());
+        worker.port.emit('i18n', newtaboverride.getTranslationsForPageMod(langvars));
+
+        feedreader.getFeedItems(FEED_URL).then(function(result) {
+          worker.port.emit('feed-items', result);
         });
       }
     });
@@ -107,6 +144,9 @@ const newtaboverride = {
         break;
       case 'homepage':
         newTabUrl = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];
+        break;
+      case 'feed':
+        newTabUrl = ABOUT_FEED_URI;
         break;
       default:
         newTabUrl = 'about:newtab';
@@ -176,12 +216,13 @@ const newtaboverride = {
     const website = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
     const aboutpage = /^about:(about|accounts|addons|blank|buildconfig|cache|checkerboard|config|crashes|credits|debugging|downloads|healthreport|home|license|logo|memory|mozilla|networking|newtab|performance|plugins|preferences|privatebrowsing|profiles|rights|robots|searchreset|serviceworkers|support|sync-log|sync-tabs|telemetry|webrtc)?$/i;
 
-    return website.test(string) || aboutpage.test(string) || string === ABOUT_SETTINGS_URI;
+    return website.test(string) || aboutpage.test(string) || string === ABOUT_SETTINGS_URI || string === ABOUT_FEED_URI;
   }
 };
 
 const main = (options) => {
   aboutpage.registerAboutPage(ABOUT_SETTINGS_UUID, ABOUT_SETTINGS_URI, ABOUT_SETTINGS_PAGE, SettingsPageFactory);
+  aboutpage.registerAboutPage(ABOUT_FEED_UUID, ABOUT_FEED_URI, ABOUT_FEED_PAGE, FeedPageFactory);
 
   newtaboverride.init();
 
@@ -201,6 +242,7 @@ const unload = (reason) => {
   }
 
   aboutpage.unregisterAboutPage(ABOUT_SETTINGS_UUID, SettingsPageFactory);
+  aboutpage.unregisterAboutPage(ABOUT_FEED_UUID, FeedPageFactory);
 };
 
 exports.main = main;

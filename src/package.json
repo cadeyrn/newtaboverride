@@ -55,6 +55,10 @@
         {
             "value": "clipboard",
             "label": "clipboard"
+        },
+        {
+            "value": "feed",
+            "label": "feed"
         }
       ]
     },
