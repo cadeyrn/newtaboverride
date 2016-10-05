@@ -69,7 +69,7 @@ a:hover {
   color: rgb(210, 57, 49);
 }
 
-button {
+button, .button {
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
@@ -82,7 +82,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover, .button:hover {
   background: rgb(210, 57, 49);
 }
 
@@ -105,6 +105,12 @@ footer a {
   background-size: 32px 32px;
   background-position: center left;
   color: rgb(33, 37, 42);
+}
+
+@media screen and (min-width: 900px) {
+  section > div {
+    width: calc(100vw - 460px);
+  }
 }
 
 @media screen and (max-width: 899px) {
