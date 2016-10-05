@@ -40,7 +40,6 @@ const newtaboverride = {
       contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/settings.js')],
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
       onAttach: function(worker) {
-        const t = {};
         const langvars = [
           'settings_ask_questions',
           'settings_code_caption',
@@ -61,12 +60,8 @@ const newtaboverride = {
           'url_title'
         ];
 
-        for (let langvar of langvars) {
-          t[langvar] = _(langvar);
-        }
-
         worker.port.emit('data-url', self.data.url());
-        worker.port.emit('i18n', t);
+        worker.port.emit('i18n', newtaboverride.getTranslationsForPageMod(langvars));
         worker.port.emit('show-preferences', simplePrefs);
 
         worker.port.on('change-preference', (preference) => {
@@ -74,6 +69,16 @@ const newtaboverride = {
         });
       }
     });
+  },
+
+  getTranslationsForPageMod : function (langvars) {
+    const t = { };
+
+    for (let langvar of langvars) {
+      t[langvar] = _(langvar);
+    }
+
+    return t;
   },
 
   onPrefChange : function () {
