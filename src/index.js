@@ -71,7 +71,7 @@ const newtaboverride = {
     pageMod.PageMod({
       include: [ABOUT_URI],
       contentScriptFile: [self.data.url('js/content-script.js')],
-      contentStyleFile: [self.data.url('css/settings.css')],
+      contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
       onAttach: function(worker) {
         const t = {};
         const langvars = [
