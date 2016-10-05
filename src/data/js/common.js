@@ -1,6 +1,3 @@
-const elType = document.querySelector('#type');
-const elUrl = document.querySelector('#url');
-
 // set favicon
 self.port.on('data-url', function(baseurl) {
   const link = document.createElement('link');
@@ -20,19 +17,4 @@ self.port.on('i18n', function (t) {
       item.textContent = t[item.dataset.l10nId];
     }
   }
-});
-
-// show preferences
-self.port.on('show-preferences', (preferences) => {
-  elType.querySelector('[value="' + preferences.prefs['type'] + '"]').selected = true;
-  elUrl.value = preferences.prefs['url'];
-});
-
-// listen to preference changes
-elType.addEventListener('change', function () {
-  self.port.emit('change-preference', { key : 'type', value : this.value });
-});
-
-elUrl.addEventListener('input', function () {
-  self.port.emit('change-preference', { key : 'url', value : this.value });
 });

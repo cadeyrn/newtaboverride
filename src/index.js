@@ -37,7 +37,7 @@ const newtaboverride = {
   initPageMod : function () {
     pageMod.PageMod({
       include: [ABOUT_SETTINGS_URI],
-      contentScriptFile: [self.data.url('js/content-script.js')],
+      contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/settings.js')],
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
       onAttach: function(worker) {
         const t = {};
