@@ -1,60 +1,27 @@
-const ABOUT_UUID = '{73e40ef0-7f3c-11e6-bdf4-0800200c9a66}';
-const ABOUT_PAGE = 'newtaboverride';
-const ABOUT_URI = 'about:' + ABOUT_PAGE;
+const ABOUT_SETTINGS_UUID = '{73e40ef0-7f3c-11e6-bdf4-0800200c9a66}';
+const ABOUT_SETTINGS_PAGE = 'newtaboverride';
+const ABOUT_SETTINGS_URI = 'about:' + ABOUT_SETTINGS_PAGE;
 const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
 const URL_CHARS_LIMIT = 2000;
 
 const _ = require('sdk/l10n').get;
 const { ActionButton } = require('sdk/ui/button/action');
-const { Ci, Cm, Cr, components } = require('chrome');
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
+const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const pageMod = require('sdk/page-mod');
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const self = require('sdk/self');
-const services = require('resource://gre/modules/Services.jsm').Services;
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
-const XPCOMUtils = require('resource://gre/modules/XPCOMUtils.jsm').XPCOMUtils;
 const windows = require('sdk/windows');
 
-const AboutPageFactory = {
-  createInstance: function(outer, iid) {
-    if (outer) {
-      throw Cr.NS_ERROR_NO_AGGREGATION;
-    }
+const SettingsPage = aboutpage.createAboutPage('settings');
+const SettingsPageFactory = aboutpage.createAboutPageFactory(SettingsPage);
 
-    return AboutPage.QueryInterface(iid);
-  }
-};
-
-const AboutPage = {
-  QueryInterface: XPCOMUtils.generateQI([Ci.nsIAboutModule]),
-
-  getURIFlags: function(aURI) {
-    return Ci.nsIAboutModule.ALLOW_SCRIPT;
-  },
-
-  newChannel: function(aURI, aSecurity_or_aLoadInfo) {
-    let channel;
-
-    // Firefox >= 48
-    if (services.vc.compare(services.appinfo.version, '47.*') > 0) {
-      const uri = services.io.newURI(self.data.url('html/settings.html'), null, null);
-      channel = services.io.newChannelFromURIWithLoadInfo(uri, aSecurity_or_aLoadInfo);
-    }
-    // Firefox <= 47
-    else {
-      channel = services.io.newChannel(self.data.url('html/settings.html'), null, null);
-    }
-
-    channel.originalURI = aURI;
-    return channel;
-  }
-};
 
 const newtaboverride = {
   actionButton : null,
@@ -69,7 +36,7 @@ const newtaboverride = {
 
   initPageMod : function () {
     pageMod.PageMod({
-      include: [ABOUT_URI],
+      include: [ABOUT_SETTINGS_URI],
       contentScriptFile: [self.data.url('js/content-script.js')],
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
       onAttach: function(worker) {
@@ -165,7 +132,7 @@ const newtaboverride = {
 
         for (let window of windows.browserWindows) {
           for (let tab of window.tabs) {
-            if (tab.url === ABOUT_URI) {
+            if (tab.url === ABOUT_SETTINGS_URI) {
               window.activate();
               tab.activate();
               return;
@@ -174,7 +141,7 @@ const newtaboverride = {
         }
 
         tabs.open({
-          url : ABOUT_URI
+          url : ABOUT_SETTINGS_URI
         });
       }
     });
@@ -204,17 +171,12 @@ const newtaboverride = {
     const website = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
     const aboutpage = /^about:(about|accounts|addons|blank|buildconfig|cache|checkerboard|config|crashes|credits|debugging|downloads|healthreport|home|license|logo|memory|mozilla|networking|newtab|performance|plugins|preferences|privatebrowsing|profiles|rights|robots|searchreset|serviceworkers|support|sync-log|sync-tabs|telemetry|webrtc)?$/i;
 
-    return website.test(string) || aboutpage.test(string) || string === ABOUT_URI;
+    return website.test(string) || aboutpage.test(string) || string === ABOUT_SETTINGS_URI;
   }
 };
 
 const main = (options) => {
-  Cm.QueryInterface(Ci.nsIComponentRegistrar).registerFactory(
-      components.ID(ABOUT_UUID),
-      ABOUT_URI,
-      '@mozilla.org/network/protocol/about;1?what=' + ABOUT_PAGE,
-      AboutPageFactory
-  );
+  aboutpage.registerAboutPage(ABOUT_SETTINGS_UUID, ABOUT_SETTINGS_URI, ABOUT_SETTINGS_PAGE, SettingsPageFactory);
 
   newtaboverride.init();
 
@@ -233,9 +195,7 @@ const unload = (reason) => {
     newTabUrlJsm.reset();
   }
 
-  Cm.QueryInterface(Ci.nsIComponentRegistrar).unregisterFactory(
-      components.ID(ABOUT_UUID), AboutPageFactory
-  );
+  aboutpage.unregisterAboutPage(ABOUT_SETTINGS_UUID, SettingsPageFactory);
 };
 
 exports.main = main;
