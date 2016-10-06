@@ -14,7 +14,7 @@ const feedreader = {
   },
 
   fetch : function (url) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       let xhr = new XMLHttpRequest();
 
       xhr.onload = function() {
