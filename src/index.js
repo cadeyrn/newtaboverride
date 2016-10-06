@@ -101,7 +101,7 @@ const newtaboverride = {
         worker.port.emit('data-url', self.data.url());
         worker.port.emit('i18n', newtaboverride.getTranslationsForPageMod(langvars));
 
-        feedreader.getFeedItems(FEED_URL).then(function(result) {
+        feedreader.getFeedItems(FEED_URL).then(function (result) {
           worker.port.emit('feed-items', result);
         });
       }
