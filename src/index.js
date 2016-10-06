@@ -48,7 +48,7 @@ const newtaboverride = {
       include: [ABOUT_SETTINGS_URI],
       contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/settings.js')],
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
-      onAttach: function(worker) {
+      onAttach: function (worker) {
         const langvars = [
           'settings_ask_questions',
           'settings_code_caption',
@@ -84,7 +84,7 @@ const newtaboverride = {
       include: [ABOUT_FEED_URI],
       contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/feed.js')],
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/feed.css')],
-      onAttach: function(worker) {
+      onAttach: function (worker) {
         const langvars = [
           'feed_published_at.global',
           'feed_read_more.global',
