@@ -1,0 +1,71 @@
+{
+  "extension_description": {
+    "message": "Deze add-on herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
+  },
+  "feed_published_at.global": {
+    "message": "Gepubliceerd:"
+  },
+  "feed_read_more.global": {
+    "message": "Meer info…"
+  },
+  "feed_title": {
+    "message": "Mozilla-nieuws"
+  },
+  "settings_ask_questions": {
+    "message": "Hebt u vragen? Stel ze gerust!"
+  },
+  "settings_code_caption": {
+    "message": "Broncode en licentie"
+  },
+  "settings_code_link": {
+    "message": "Broncode"
+  },
+  "settings_donate": {
+    "message": "Doneren"
+  },
+  "settings_donation_text": {
+    "message": "Overweeg een donatie om de actieve ontwikkeling van deze add-on te steunen."
+  },
+  "settings_licence_link": {
+    "message": "MIT-licentie"
+  },
+  "settings_main_caption": {
+    "message": "Instellingen"
+  },
+  "settings_support_caption": {
+    "message": "Ondersteuning"
+  },
+  "settings_title": {
+    "message": "Nieuw tabblad – Instellingen"
+  },
+  "settings_title_short": {
+    "message": "Tabblad\u00adinstellinge"
+  },
+  "settings_url_field.placeholder": {
+    "message": "URL"
+  },
+  "type_options.about_newtab": {
+    "message": "about:newtab (Standaard)"
+  },
+  "type_options.clipboard": {
+    "message": "van klembord"
+  },
+  "type_options.custom_url": {
+    "message": "aangepaste URL"
+  },
+  "type_options.feed": {
+    "message": "Mozilla-nieuws (Duits)"
+  },
+  "type_options.homepage": {
+    "message": "startpagina"
+  },
+  "type_title": {
+    "message": "Optie"
+  },
+  "url_description": {
+    "message": "Deze pagina wordt bij het openen van een nieuw tabblad weergegeven als de optie \"aangepaste URL\" is geselecteerd."
+  },
+  "url_title": {
+    "message": "URL"
+  }
+}

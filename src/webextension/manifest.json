@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "newtaboverride",
+  "version": "5.0.0pre",
+  "description": "__MSG_extension_description__",
+  "homepage_url": "https://www.soeren-hentzschel.at",
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": {
+      "16": "images/icon-18.png",
+      "32": "images/icon-32.png",
+      "64": "images/icon-64.png"
+    },
+    "default_title": "__MSG_settings_title_short__"
+  },
+  "default_locale": "en",
+  "applications": {
+    "gecko": {
+      "id": "newtaboverride@agenedia.com"
+    }
+  }
+}

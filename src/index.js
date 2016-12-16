@@ -1,3 +1,5 @@
+'use strict';
+
 const ABOUT_SETTINGS_UUID = '{73e40ef0-7f3c-11e6-bdf4-0800200c9a66}';
 const ABOUT_SETTINGS_PAGE = 'newtaboverride';
 const ABOUT_SETTINGS_URI = 'about:' + ABOUT_SETTINGS_PAGE;
@@ -10,10 +12,9 @@ const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
 const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
 const URL_CHARS_LIMIT = 2000;
 
-const _ = require('sdk/l10n').get;
-const { ActionButton } = require('sdk/ui/button/action');
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
+const { syncLegacyDataPort } = require('lib/prefs.js');
 const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
 const feedreader = require('lib/feedreader.js');
@@ -24,6 +25,7 @@ const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const self = require('sdk/self');
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
+const webextension = require('sdk/webextension');
 const windows = require('sdk/windows');
 
 const SettingsPage = aboutpage.createAboutPage('settings');
@@ -33,89 +35,25 @@ const FeedPage = aboutpage.createAboutPage('feed');
 const FeedPageFactory = aboutpage.createAboutPageFactory(FeedPage);
 
 const newtaboverride = {
-  actionButton : null,
   lastClipboardUrl : false,
   timer : false,
 
   init : function () {
     newtaboverride.initPageMods();
     newtaboverride.onPrefChange();
-    newtaboverride.createButton();
   },
 
   initPageMods : function () {
     pageMod.PageMod({
-      include: [ABOUT_SETTINGS_URI],
-      contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/settings.js')],
-      contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
-      onAttach: function (worker) {
-        const langvars = [
-          'settings_ask_questions',
-          'settings_code_caption',
-          'settings_code_link',
-          'settings_donate',
-          'settings_donation_text',
-          'settings_licence_link',
-          'settings_main_caption',
-          'settings_support_caption',
-          'settings_title',
-          'settings_url_field.placeholder',
-          'type_options.about_newtab',
-          'type_options.clipboard',
-          'type_options.custom_url',
-          'type_options.feed',
-          'type_options.homepage',
-          'type_title',
-          'url_description',
-          'url_title'
-        ];
-
-        worker.port.emit('data-url', self.data.url());
-        worker.port.emit('i18n', newtaboverride.getTranslationsForPageMod(langvars));
-        worker.port.emit('show-preferences', simplePrefs);
-
-        worker.port.on('change-preference', (preference) => {
-          simplePrefs.prefs[preference.key] = preference.value;
-        });
-      }
-    });
-
-    pageMod.PageMod({
       include: [ABOUT_FEED_URI],
-      contentScriptFile: [self.data.url('js/common.js'), self.data.url('js/feed.js')],
-      contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/feed.css')],
+      contentScriptFile: [self.data.url('js/feed.js')],
+      contentStyleFile: [self.data.url('css/feed.css')],
       onAttach: function (worker) {
-        const langvars = [
-          'feed_published_at.global',
-          'feed_read_more.global',
-          'feed_title',
-          'settings_ask_questions',
-          'settings_code_caption',
-          'settings_code_link',
-          'settings_donate',
-          'settings_donation_text',
-          'settings_licence_link',
-          'settings_support_caption'
-        ];
-
-        worker.port.emit('data-url', self.data.url());
-        worker.port.emit('i18n', newtaboverride.getTranslationsForPageMod(langvars));
-
         feedreader.getFeedItems(FEED_URL).then(function (result) {
           worker.port.emit('feed-items', result);
         });
       }
     });
-  },
-
-  getTranslationsForPageMod : function (langvars) {
-    const t = { };
-
-    for (let langvar of langvars) {
-      t[langvar] = _(langvar);
-    }
-
-    return t;
   },
 
   onPrefChange : function () {
@@ -160,38 +98,6 @@ const newtaboverride = {
     newTabUrlJsm.override(newTabUrl);
   },
 
-  createButton : function () {
-    newtaboverride.actionButton = ActionButton({
-      id : 'newtaboverride-button',
-      label : _('settings_title_short'),
-      icon : {
-        '18' : self.data.url('images/icon-18.png'),
-        '32' : self.data.url('images/icon-32.png'),
-        '36' : self.data.url('images/icon-36.png'),
-        '64' : self.data.url('images/icon-64.png')
-      },
-      onClick : () => {
-        if (newtaboverride.actionButton.badge) {
-          newtaboverride.actionButton.badge = null;
-        }
-
-        for (let window of windows.browserWindows) {
-          for (let tab of window.tabs) {
-            if (tab.url === ABOUT_SETTINGS_URI) {
-              window.activate();
-              tab.activate();
-              return;
-            }
-          }
-        }
-
-        tabs.open({
-          url : ABOUT_SETTINGS_URI
-        });
-      }
-    });
-  },
-
   clipboardAction : function () {
     const clipboardContent = clipboard.get();
 
@@ -220,7 +126,7 @@ const newtaboverride = {
   }
 };
 
-const main = (options) => {
+const main = () => {
   aboutpage.registerAboutPage(ABOUT_SETTINGS_UUID, ABOUT_SETTINGS_URI, ABOUT_SETTINGS_PAGE, SettingsPageFactory);
   aboutpage.registerAboutPage(ABOUT_FEED_UUID, ABOUT_FEED_URI, ABOUT_FEED_PAGE, FeedPageFactory);
 
@@ -228,10 +134,6 @@ const main = (options) => {
 
   simplePrefs.on('', newtaboverride.onPrefChange);
   prefsTarget.on('homepage', newtaboverride.onPrefChange);
-
-  if (options.loadReason === 'install') {
-    newtaboverride.actionButton.badge = '★';
-  }
 };
 
 const unload = (reason) => {
@@ -244,6 +146,14 @@ const unload = (reason) => {
   aboutpage.unregisterAboutPage(ABOUT_SETTINGS_UUID, SettingsPageFactory);
   aboutpage.unregisterAboutPage(ABOUT_FEED_UUID, FeedPageFactory);
 };
+
+webextension.startup().then(({browser}) => {
+  browser.runtime.onConnect.addListener(port => {
+    if (port.name === 'sync-legacy-data') {
+      syncLegacyDataPort(port);
+    }
+  });
+});
 
 exports.main = main;
 exports.onUnload = unload;

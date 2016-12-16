@@ -1,0 +1,71 @@
+{
+  "extension_description": {
+    "message": "This add-on brings back the ability to change the page which is shown when opening a new tab."
+  },
+  "feed_published_at.global": {
+    "message": "Published:"
+  },
+  "feed_read_more.global": {
+    "message": "Read More…"
+  },
+  "feed_title": {
+    "message": "Read More…"
+  },
+  "settings_ask_questions": {
+    "message": "Do you have questions? Do not hesitate to ask!"
+  },
+  "settings_code_caption": {
+    "message": "Source Code & Licence"
+  },
+  "settings_code_link": {
+    "message": "Source Code"
+  },
+  "settings_donate": {
+    "message": "Donate"
+  },
+  "settings_donation_text": {
+    "message": "Please consider a donation to support the ongoing development of this add-on."
+  },
+  "settings_licence_link": {
+    "message": "MIT Licence"
+  },
+  "settings_main_caption": {
+    "message": "Settings"
+  },
+  "settings_support_caption": {
+    "message": "Support"
+  },
+  "settings_title": {
+    "message": "New Tab — Settings"
+  },
+  "settings_title_short": {
+    "message": "Tab Settings"
+  },
+  "settings_url_field.placeholder": {
+    "message": "URL"
+  },
+  "type_options.about_newtab": {
+    "message": "about:newtab (Default)"
+  },
+  "type_options.clipboard": {
+    "message": "from clipboard"
+  },
+  "type_options.custom_url": {
+    "message": "custom URL"
+  },
+  "type_options.feed": {
+    "message": "Mozilla News (German)"
+  },
+  "type_options.homepage": {
+    "message": "Homepage"
+  },
+  "type_title": {
+    "message": "Option"
+  },
+  "url_description": {
+    "message": "This page is shown when opening a new tab and the option \"custom URL\" is selected."
+  },
+  "url_title": {
+    "message": "URL"
+  }
+}

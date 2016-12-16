@@ -1,0 +1,71 @@
+{
+  "extension_description": {
+    "message": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
+  },
+  "feed_published_at.global": {
+    "message": "Veröffentlicht am"
+  },
+  "feed_read_more.global": {
+    "message": "Weiterlesen…"
+  },
+  "feed_title": {
+    "message": "Mozilla-Neuigkeiten"
+  },
+  "settings_ask_questions": {
+    "message": "Fragen? Einfach eine E-Mail schreiben!"
+  },
+  "settings_code_caption": {
+    "message": "Quellcode & Lizenz"
+  },
+  "settings_code_link": {
+    "message": "Quellcode"
+  },
+  "settings_donate": {
+    "message": "Spenden"
+  },
+  "settings_donation_text": {
+    "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieses Add-ons zu gewährleisten."
+  },
+  "settings_licence_link": {
+    "message": "MIT-Lizenz"
+  },
+  "settings_main_caption": {
+    "message": "Einstellungen"
+  },
+  "settings_support_caption": {
+    "message": "Unterstützung"
+  },
+  "settings_title": {
+    "message": "Neuer Tab — Einstellungen"
+  },
+  "settings_title_short": {
+    "message": "Tab-Einst."
+  },
+  "settings_url_field.placeholder": {
+    "message": "URL"
+  },
+  "type_options.about_newtab": {
+    "message": "about:newtab (Standard)"
+  },
+  "type_options.clipboard": {
+    "message": "aus der Zwischenablage"
+  },
+  "type_options.custom_url": {
+    "message": "eigene URL"
+  },
+  "type_options.feed": {
+    "message": "Mozilla-Neuigkeiten"
+  },
+  "type_options.homepage": {
+    "message": "Startseite"
+  },
+  "type_title": {
+    "message": "Option"
+  },
+  "url_description": {
+    "message": "Die Seite wird beim Öffnen eines neuen Tabs angezeigt, wenn die Option \"eigene URL\" ausgewählt worden ist."
+  },
+  "url_title": {
+    "message": "URL"
+  }
+}

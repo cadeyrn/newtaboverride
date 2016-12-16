@@ -2,7 +2,7 @@
   "id": "newtaboverride@agenedia.com",
   "title": "New Tab Override (browser.newtab.url replacement)",
   "name": "newtaboverride",
-  "version": "4.0.2",
+  "version": "5.0.0pre",
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
   "main": "index.js",
   "author": {
@@ -15,9 +15,10 @@
     "Tonnes (NL)"
   ],
   "engines": {
-    "firefox": ">=45.0a1"
+    "firefox": ">=51.0a1"
   },
   "license": "MIT",
+  "hasEmbeddedWebExtension": true,
   "permissions": {
     "multiprocess": true,
     "private-browsing": true
@@ -71,7 +72,6 @@
       "value": "about:newtab"
     }
   ],
-  "preferencesURL": "about:newtaboverride",
   "locales": {
     "de": {
       "description": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
