@@ -54,6 +54,8 @@ const newtaboverride = {
         const langvars = [
           'focus_website_caption',
           'focus_website_label',
+          'nto_introduction_part1',
+          'nto_introduction_part2',
           'settings_ask_questions',
           'settings_code_caption',
           'settings_code_link',

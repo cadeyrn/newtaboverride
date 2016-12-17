@@ -23,6 +23,23 @@ input:focus {
   border-color: rgb(193, 56, 50);
 }
 
+#nto-introduction {
+  margin: 20px 20px 0 20px;
+  padding: 10px;
+  background: rgb(193,56,50);
+  color: rgb(255, 255, 255);
+}
+
+#nto-introduction a {
+  color: inherit;
+  font-weight: bold;
+  transition: color ease 250ms;
+}
+
+#nto-introduction a:hover {
+  color: rgb(220, 220, 220);
+}
+
 .description {
   display: block;
   margin: 5px 0 10px 0;

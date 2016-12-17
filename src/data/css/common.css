@@ -118,7 +118,11 @@ footer a {
     display: block;
   }
 
-  section > div , aside > div {
+  section > div {
+    margin: 0;
+  }
+
+  aside > div {
     margin: 20px 0;
   }
 }
