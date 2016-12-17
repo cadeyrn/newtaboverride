@@ -14,6 +14,7 @@ const _ = require('sdk/l10n').get;
 const { ActionButton } = require('sdk/ui/button/action');
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
+const { viewFor } = require('sdk/view/core');
 const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
 const feedreader = require('lib/feedreader.js');
@@ -24,6 +25,7 @@ const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const self = require('sdk/self');
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
+const tabutils = require('sdk/tabs/utils');
 const windows = require('sdk/windows');
 
 const SettingsPage = aboutpage.createAboutPage('settings');
@@ -50,6 +52,8 @@ const newtaboverride = {
       contentStyleFile: [self.data.url('css/common.css'), self.data.url('css/settings.css')],
       onAttach: function (worker) {
         const langvars = [
+          'focus_website_caption',
+          'focus_website_label',
           'settings_ask_questions',
           'settings_code_caption',
           'settings_code_link',
@@ -158,6 +162,21 @@ const newtaboverride = {
     }
 
     newTabUrlJsm.override(newTabUrl);
+
+    const focus_website = simplePrefs.prefs['focus_website'];
+    if (focus_website) {
+      tabs.on('open', newtaboverride.focusListener);
+    } else {
+      tabs.removeListener('open', newtaboverride.focusListener);
+    }
+  },
+
+  focusListener: function (tab) {
+    tab.on('ready', function () {
+      let xultab = viewFor(tab);
+      let browser = tabutils.getBrowserForTab(xultab);
+      browser.focus();
+    });
   },
 
   createButton : function () {

@@ -69,6 +69,13 @@
       "title": "URL",
       "description": "This page is shown when opening a new tab (default: about:newtab)",
       "value": "about:newtab"
+    },
+    {
+      "name": "focus_website",
+      "type": "bool",
+      "title": "Focus",
+      "description": "Set focus to the website instead of the address bar",
+      "value": false
     }
   ],
   "preferencesURL": "about:newtaboverride",
