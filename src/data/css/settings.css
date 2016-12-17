@@ -27,6 +27,5 @@ input:focus {
   display: block;
   margin: 5px 0 10px 0;
   padding-left: 20px;
-  max-width: 400px;
   font-size: 14px;
 }
