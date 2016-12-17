@@ -74,7 +74,7 @@
       "name": "focus_website",
       "type": "bool",
       "title": "Focus",
-      "description": "Set focus to the website instead of the address bar",
+      "description": "Set focus to the web page instead of the location bar",
       "value": false
     }
   ],
