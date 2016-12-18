@@ -40,10 +40,6 @@ section > div, aside > div {
   background: rgb(239, 239, 239);
 }
 
-section form > div {
-  margin-bottom: 20px;
-}
-
 h1 {
   margin: 0;
   padding-left: 80px;
@@ -65,24 +61,26 @@ a {
   transition: color ease 250ms;
 }
 
-a:hover {
+a:not(.button):hover {
   color: rgb(210, 57, 49);
 }
 
-button, .button {
+.button {
+  display: block;
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
   border: none;
   border-radius: 3px;
+  font-weight: bold;
   background: rgb(193, 56, 50);
   color: rgb(255, 255, 255);
-  font-weight: bold;
-  transition: background ease 500ms;
+  text-align: center;
   cursor: pointer;
+  transition: background ease 500ms;
 }
 
-button:hover, .button:hover {
+.button:hover {
   background: rgb(210, 57, 49);
 }
 

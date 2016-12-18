@@ -44,7 +44,7 @@ self.port.on('feed-items', (items) => {
 
     let a2 = document.createElement('a');
     a2.setAttribute('href', items[i].link);
-    a2.setAttribute('class', 'button');
+    a2.setAttribute('class', 'button readmore-button');
     a2.setAttribute('target', '_blank');
     li.appendChild(a2);
 

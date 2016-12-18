@@ -1,3 +1,7 @@
+section form > div {
+  margin-bottom: 20px;
+}
+
 label:not(.hasOwnLabel), .label {
   display: block;
   font-weight: bold;
