@@ -2,7 +2,11 @@ section form > div {
   margin-bottom: 20px;
 }
 
-label:not(.hasOwnLabel), .label {
+h3 {
+  font-size: 16px;
+}
+
+label:not(.hasOwnLabel) {
   display: block;
   font-weight: bold;
 }
@@ -47,6 +51,18 @@ input:focus {
 .description {
   display: block;
   margin: 5px 0 10px 0;
-  padding-left: 20px;
   font-size: 14px;
+}
+
+.hidden-label {
+  display: none !important;
+}
+
+.vertical-align > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vertical-align label {
+  margin-left: 5px;
 }
