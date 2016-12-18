@@ -11,6 +11,21 @@
   "feed_title": {
     "message": "Mozilla-nieuws"
   },
+  "focus_website_caption": {
+    "message": "Focus"
+  },
+  "focus_website_label": {
+    "message": "Focus op de webpagina leggen in plaats van de locatiebalk"
+  },
+  "nto_introduction_part1": {
+    "message": "Deze pagina wordt aangeboden door"
+  },
+  "nto_introduction_part2": {
+    "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
+  },
+  "review_text": {
+    "message": "Do you like the add-on? Then please leave a review on"
+  },
   "settings_ask_questions": {
     "message": "Hebt u vragen? Stel ze gerust!"
   },

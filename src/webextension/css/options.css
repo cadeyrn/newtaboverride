@@ -1,4 +1,12 @@
-label {
+section form > div {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+label:not(.hasOwnLabel) {
   display: block;
   font-weight: bold;
 }
@@ -9,7 +17,7 @@ select {
   width: 100%;
 }
 
-input {
+input[type='text'] {
   box-sizing: border-box;
   padding: 2px 5px;
   width: 100%;
@@ -23,10 +31,38 @@ input:focus {
   border-color: rgb(193, 56, 50);
 }
 
+#nto-introduction {
+  margin: 20px 20px 0 20px;
+  padding: 10px;
+  background: rgb(193,56,50);
+  color: rgb(255, 255, 255);
+}
+
+#nto-introduction a {
+  color: inherit;
+  font-weight: bold;
+  transition: color ease 250ms;
+}
+
+#nto-introduction a:hover {
+  color: rgb(220, 220, 220);
+}
+
 .description {
   display: block;
   margin: 5px 0 10px 0;
-  padding-left: 20px;
-  max-width: 400px;
   font-size: 14px;
+}
+
+.hidden-label {
+  display: none !important;
+}
+
+.vertical-align > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vertical-align label {
+  margin-left: 5px;
 }

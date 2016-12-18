@@ -43,6 +43,8 @@ const newtaboverride = {
           newTabUrl = 'about:newtab';
       }
 
+      // TODO: Fokus-Option
+
       browser.tabs.query({currentWindow : true, active : true}, function (tab) {
         browser.tabs.update(tab.id, {url : newTabUrl})
       });

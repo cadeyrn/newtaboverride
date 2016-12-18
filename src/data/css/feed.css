@@ -8,15 +8,11 @@
   margin-bottom: 20px;
 }
 
-.button {
+.readmore-button {
   display: inline-block;
-  margin: 10px 0;
+  margin-top: 10px;
   width: auto;
   font-size: 11px;
-}
-
-.button:hover {
-  color: rgb(255, 255, 255);
 }
 
 #throbber-wrapper {

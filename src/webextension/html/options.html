@@ -11,13 +11,19 @@
   <header>
     <h1>__MSG_settings_title__</h1>
   </header>
+  <div id='nto-introduction'>
+    <span>__MSG_nto_introduction_part1__</span>
+    <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>New Tab Override</a>:
+    <span>__MSG_nto_introduction_part2__</span>
+  </div>
   <main>
     <section>
       <div>
         <h2>__MSG_settings_main_caption__</h2>
         <form>
           <div>
-            <label for='type'>__MSG_type_title__</label>
+            <h3>__MSG_type_title__</h3>
+            <label for='type' class='hidden-label'>__MSG_type_title__</label>
             <select name='type' id='type'>
               <option value='about:blank'>about:blank</option>
               <option value='about:home'>about:home</option>
@@ -29,12 +35,18 @@
               <option value='feed'>__MSG_type_options.feed__</option>
             </select>
           </div>
-          <div>
-            <label for='url'>__MSG_url_title__</label>
+          <div id='url_option'>
+            <h3>__MSG_url_title__</h3>
+            <label for='url' class='hidden-label'>__MSG_url_title__</label>
             <span class='description'>
               <em>__MSG_url_description__</em>
             </span>
             <input type='text' name='url' id='url' placeholder='__MSG_settings_url_field.placeholder__' />
+          </div>
+          <div class='vertical-align'>
+            <h3>__MSG_focus_website_caption__</h3>
+            <div><input type='checkbox' name='focus_website' id='focus_website'></div>
+            <div><label for='focus_website' class='hasOwnLabel'>__MSG_focus_website_label__</label></div>
           </div>
         </form>
       </div>
@@ -47,25 +59,31 @@
           <a href='mailto:kontakt@agenedia.com?subject='>kontakt@agenedia.com</a>
         </p>
         <p>__MSG_settings_donation_text__</p>
-        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-          <input type='hidden' name='cmd' value='_s-xclick'>
-          <input type='hidden' name='hosted_button_id' value='JU3BQ3KWSPANE'>
-          <button type='submit'>__MSG_settings_donate__</button>
-        </form>
+        <a href='https://www.paypal.me/agenedia' class='button' target='_blank' target='_blank' rel='noopener'>
+          __MSG_settings_donate__
+        </a>
+        <p>
+          __MSG_review_text__
+          <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>addons.mozilla.org</a>!
+        </p>
         <h2>__MSG_settings_code_caption__</h2>
         <ul>
           <li>
-            <a href='https://git.agenedia.com/firefox-add-ons/newtaboverride'>__MSG_settings_code_link__</a>
+            <a href='https://git.agenedia.com/firefox-add-ons/newtaboverride' target='_blank' rel='noopener'>
+              __MSG_settings_code_link__
+            </a>
           </li>
           <li>
-            <a href='https://opensource.org/licenses/mit-license.php'>__MSG_settings_licence_link__</a>
+            <a href='https://opensource.org/licenses/mit-license.php' target='_blank' rel='noopener'>
+              __MSG_settings_licence_link__
+            </a>
           </li>
         </ul>
       </div>
     </aside>
   </main>
   <footer>
-    <a href='https://www.soeren-hentzschel.at'>
+    <a href='https://www.soeren-hentzschel.at' target='_blank' rel='noopener'>
       New Tab Override © 2015 - 2017, soeren-hentzschel.at
     </a>
   </footer>

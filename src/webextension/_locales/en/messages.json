@@ -11,6 +11,21 @@
   "feed_title": {
     "message": "Read More…"
   },
+  "focus_website_caption": {
+    "message": "Focus"
+  },
+  "focus_website_label": {
+    "message": "Set focus to the web page instead of the location bar"
+  },
+  "nto_introduction_part1": {
+    "message": "This page is provided by"
+  },
+  "nto_introduction_part2": {
+    "message": "Select which page should open as new tab!"
+  },
+  "review_text": {
+    "message": "Do you like the add-on? Then please leave a review on"
+  },
   "settings_ask_questions": {
     "message": "Do you have questions? Do not hesitate to ask!"
   },

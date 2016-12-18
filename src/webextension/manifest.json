@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "newtaboverride",
-  "version": "5.0.0pre",
+  "version": "6.0.0pre",
   "description": "__MSG_extension_description__",
   "homepage_url": "https://www.soeren-hentzschel.at",
   "permissions": [

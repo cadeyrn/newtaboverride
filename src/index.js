@@ -15,6 +15,7 @@ const URL_CHARS_LIMIT = 2000;
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const { syncLegacyDataPort } = require('lib/prefs.js');
+const { viewFor } = require('sdk/view/core');
 const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
 const feedreader = require('lib/feedreader.js');
@@ -25,6 +26,7 @@ const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const self = require('sdk/self');
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
+const tabutils = require('sdk/tabs/utils');
 const webextension = require('sdk/webextension');
 const windows = require('sdk/windows');
 
@@ -96,6 +98,21 @@ const newtaboverride = {
     }
 
     newTabUrlJsm.override(newTabUrl);
+
+    const focus_website = simplePrefs.prefs['focus_website'];
+    if (focus_website) {
+      tabs.on('open', newtaboverride.focusListener);
+    } else {
+      tabs.removeListener('open', newtaboverride.focusListener);
+    }
+  },
+
+  focusListener: function (tab) {
+    tab.on('ready', function () {
+      let xultab = viewFor(tab);
+      let browser = tabutils.getBrowserForTab(xultab);
+      browser.focus();
+    });
   },
 
   clipboardAction : function () {

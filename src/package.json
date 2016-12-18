@@ -2,7 +2,7 @@
   "id": "newtaboverride@agenedia.com",
   "title": "New Tab Override (browser.newtab.url replacement)",
   "name": "newtaboverride",
-  "version": "5.0.0pre",
+  "version": "6.0.0pre",
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
   "main": "index.js",
   "author": {
@@ -70,6 +70,13 @@
       "title": "URL",
       "description": "This page is shown when opening a new tab (default: about:newtab)",
       "value": "about:newtab"
+    },
+    {
+      "name": "focus_website",
+      "type": "bool",
+      "title": "Focus",
+      "description": "Set focus to the web page instead of the location bar",
+      "value": false
     }
   ],
   "locales": {
