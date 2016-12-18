@@ -27,6 +27,7 @@ self.port.on('feed-items', (items) => {
     let a1 = document.createElement('a');
     a1.setAttribute('href', items[i].link);
     a1.setAttribute('target', '_blank');
+    a1.setAttribute('rel', 'noopener');
     li.appendChild(a1);
 
     let strong = document.createElement('strong');
@@ -46,6 +47,7 @@ self.port.on('feed-items', (items) => {
     a2.setAttribute('href', items[i].link);
     a2.setAttribute('class', 'button readmore-button');
     a2.setAttribute('target', '_blank');
+    a2.setAttribute('rel', 'noopener');
     li.appendChild(a2);
 
     let text4 = document.createTextNode(window.global_i18n.feed_read_more);
