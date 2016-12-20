@@ -77,6 +77,13 @@
       "title": "Focus",
       "description": "Set focus to the web page instead of the location bar",
       "value": false
+    },
+    {
+      "name": "clear_locationbar",
+      "type": "bool",
+      "title": "Clear location bar",
+      "description": "Clear location bar after opening a new tab",
+      "value": false
     }
   ],
   "preferencesURL": "about:newtaboverride",
