@@ -1,4 +1,10 @@
 {
+  "clear_locationbar_caption": {
+    "message": "Locatiebalk wissen"
+  },
+  "clear_locationbar_label": {
+    "message": "Locatiebalk wissen na het openen van een nieuw tabblad"
+  },
   "extension_description": {
     "message": "Deze add-on herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
   },
@@ -24,7 +30,7 @@
     "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "review_text": {
-    "message": "Do you like the add-on? Then please leave a review on"
+    "message": "Bevalt de add-on u? Laat dan een beoordeling achter op"
   },
   "settings_ask_questions": {
     "message": "Hebt u vragen? Stel ze gerust!"

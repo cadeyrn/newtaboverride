@@ -2,6 +2,7 @@ const elType = document.querySelector('#type');
 const elUrlOption = document.querySelector('#url_option');
 const elUrl = document.querySelector('#url');
 const elFocusWebsite = document.querySelector('#focus_website');
+const elClearLocationBar = document.querySelector('#clear_locationbar');
 
 const options = {
   load : function () {
@@ -23,6 +24,10 @@ const options = {
       elFocusWebsite.checked = result.focus_website || false;
     }
 
+    function setClearLocationBar(result) {
+      elClearLocationBar.checked = result.clear_locationbar || false;
+    }
+
     function onError(error) {
       console.log(`Error: ${error}`);
     }
@@ -35,6 +40,9 @@ const options = {
 
     let focus_website = browser.storage.local.get('focus_website');
     focus_website.then(setFocusWebsite, onError);
+
+    let clear_locationbar = browser.storage.local.get('clear_locationbar');
+    clear_locationbar.then(setClearLocationBar, onError);
   }
 };
 
@@ -51,4 +59,8 @@ elUrl.addEventListener('input', function () {
 
 elFocusWebsite.addEventListener('change', function () {
   browser.storage.local.set({'focus_website' : this.checked});
+});
+
+elClearLocationBar.addEventListener('change', function () {
+  browser.storage.local.set({'clear_locationbar' : this.checked});
 });

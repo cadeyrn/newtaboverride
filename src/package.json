@@ -2,7 +2,7 @@
   "id": "newtaboverride@agenedia.com",
   "title": "New Tab Override (browser.newtab.url replacement)",
   "name": "newtaboverride",
-  "version": "6.0.0pre",
+  "version": "7.0.0pre",
   "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
   "main": "index.js",
   "author": {
@@ -12,7 +12,8 @@
   },
   "homepage": "https://www.soeren-hentzschel.at",
   "translators": [
-    "Tonnes (NL)"
+    "Tonnes (NL)",
+    "Michael Wolf (DSB, HSB)"
   ],
   "engines": {
     "firefox": ">=51.0a1"
@@ -76,6 +77,13 @@
       "type": "bool",
       "title": "Focus",
       "description": "Set focus to the web page instead of the location bar",
+      "value": false
+    },
+    {
+      "name": "clear_locationbar",
+      "type": "bool",
+      "title": "Clear location bar",
+      "description": "Clear location bar after opening a new tab",
       "value": false
     }
   ],

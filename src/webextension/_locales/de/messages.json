@@ -1,4 +1,10 @@
 {
+  "clear_locationbar_caption": {
+    "message": "Adressleiste leeren"
+  },
+  "clear_locationbar_label": {
+    "message": "Leere die Adressleiste nach Öffnen eines neuen Tabs"
+  },
   "extension_description": {
     "message": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
@@ -15,7 +21,7 @@
     "message": "Fokus"
   },
   "focus_website_label": {
-    "message": "Fokus aus Webseite statt in Adressleiste setzen"
+    "message": "Fokus auf Webseite statt in Adressleiste setzen"
   },
   "nto_introduction_part1": {
     "message": "Diese Seite wird bereitgestellt von"

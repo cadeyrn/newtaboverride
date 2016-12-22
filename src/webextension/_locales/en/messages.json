@@ -1,4 +1,10 @@
 {
+  "clear_locationbar_caption": {
+    "message": "Clear location bar"
+  },
+  "clear_locationbar_label": {
+    "message": "Clear location bar after opening a new tab"
+  },
   "extension_description": {
     "message": "This add-on brings back the ability to change the page which is shown when opening a new tab."
   },

@@ -1,0 +1,92 @@
+{
+  "clear_locationbar_caption": {
+    "message": "Adresowe pólo wuprozniś"
+  },
+  "clear_locationbar_label": {
+    "message": "Adresowe pólo pó wócynjanju nowego rejtarka wuprozniś"
+  },
+  "extension_description": {
+    "message": "Toś ten dodank pśinjaso funkciju slědk, bok změniś, kótaryž so pśi wócynjanju nowego rejtarka pokazujo."
+  },
+  "feed_published_at.global": {
+    "message": "Wózjawjony:"
+  },
+  "feed_read_more.global": {
+    "message": "Dalej cytaś…"
+  },
+  "feed_title": {
+    "message": "Nowosći Mozilla"
+  },
+  "focus_website_caption": {
+    "message": "Fokus"
+  },
+  "focus_website_label": {
+    "message": "Fokus na webbok město na adresowe pólo stajiś"
+  },
+  "nto_introduction_part1": {
+    "message": "Toś ten bok staja se k dispoziciji wót"
+  },
+  "nto_introduction_part2": {
+    "message": "Wubjeŕśo, kótary bok ma se ako nowy rejtark wócyniś!"
+  },
+  "review_text": {
+    "message": "Dodank se wam spódoba? Ga zawóstajśo pógódnośenje na"
+  },
+  "settings_ask_questions": {
+    "message": "Maśo pšašanja? Pšašajśo se jadnorje!"
+  },
+  "settings_code_caption": {
+    "message": "Žrědłowy kod a licenca"
+  },
+  "settings_code_link": {
+    "message": "Žrědłowy kod"
+  },
+  "settings_donate": {
+    "message": "Pósćiś"
+  },
+  "settings_donation_text": {
+    "message": "Pšosym rozwažujśo dar, aby dalšne wuwijanje toś togo dodanka pódpěrał."
+  },
+  "settings_licence_link": {
+    "message": "MIT-licenca"
+  },
+  "settings_main_caption": {
+    "message": "Nastajenja"
+  },
+  "settings_support_caption": {
+    "message": "Pódpěra"
+  },
+  "settings_title": {
+    "message": "Nowy rejtark — Nastajenja"
+  },
+  "settings_title_short": {
+    "message": "Rejtarkowe nastajenja"
+  },
+  "settings_url_field.placeholder": {
+    "message": "URL"
+  },
+  "type_options.about_newtab": {
+    "message": "about:newtab (standard)"
+  },
+  "type_options.clipboard": {
+    "message": "z mjazywótkłada"
+  },
+  "type_options.custom_url": {
+    "message": "swójski URL"
+  },
+  "type_options.feed": {
+    "message": "Nowinki Mozilla (nimski)"
+  },
+  "type_options.homepage": {
+    "message": "Startowy bok"
+  },
+  "type_title": {
+    "message": "Opcija"
+  },
+  "url_description": {
+    "message": "Toś ten bok se pokazujo, gaž se nowy rejtark wócynja a se opcija \"swójski URL\" wuběra."
+  },
+  "url_title": {
+    "message": "URL"
+  }
+}

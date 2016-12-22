@@ -1,0 +1,92 @@
+{
+  "clear_locationbar_caption": {
+    "message": "Adresowe polo wuprózdnić"
+  },
+  "clear_locationbar_label": {
+    "message": "Adresowe polo po wočinjenju noweho rajtarka wuprózdnić"
+  },
+  "extension_description": {
+    "message": "Tutón přidatk přinjese funkciju wróćo, stronu změnić, kotraž se při wočinjenju noweho rajtarka pokazuje."
+  },
+  "feed_published_at.global": {
+    "message": "Wozjewjeny:"
+  },
+  "feed_read_more.global": {
+    "message": "Dale čitać…"
+  },
+  "feed_title": {
+    "message": "Nowinki Mozilla"
+  },
+  "focus_website_caption": {
+    "message": "Fokus"
+  },
+  "focus_website_label": {
+    "message": "Fokus na webstronu město na adresowe polo stajić"
+  },
+  "nto_introduction_part1": {
+    "message": "Tuta strona staja so k dispoziciji wot"
+  },
+  "nto_introduction_part2": {
+    "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
+  },
+  "review_text": {
+    "message": "Přidatk so wam spodoba? Da zawostajće pohódnoćenje na"
+  },
+  "settings_ask_questions": {
+    "message": "Maće prašenja? Prašejće so prosće!"
+  },
+  "settings_code_caption": {
+    "message": "Žórłowy kod a licenca"
+  },
+  "settings_code_link": {
+    "message": "Žórłowy kod"
+  },
+  "settings_donate": {
+    "message": "Darić"
+  },
+  "settings_donation_text": {
+    "message": "Prošu rozmyslujće dar, zo byšće dalše wuwiwanje tutoho přidatka podpěrał."
+  },
+  "settings_licence_link": {
+    "message": "MIT-licenca"
+  },
+  "settings_main_caption": {
+    "message": "Nastajenja"
+  },
+  "settings_support_caption": {
+    "message": "Podpěra"
+  },
+  "settings_title": {
+    "message": "Nowy rajtark — Nastajenja"
+  },
+  "settings_title_short": {
+    "message": "Rajtarkowe nastajenja"
+  },
+  "settings_url_field.placeholder": {
+    "message": "URL"
+  },
+  "type_options.about_newtab": {
+    "message": "about:newtab (standard)"
+  },
+  "type_options.clipboard": {
+    "message": "z mjezyskłada"
+  },
+  "type_options.custom_url": {
+    "message": "swójski URL"
+  },
+  "type_options.feed": {
+    "message": "Nowinki Mozilla (němsce)"
+  },
+  "type_options.homepage": {
+    "message": "Startowa strona"
+  },
+  "type_title": {
+    "message": "Opcija"
+  },
+  "url_description": {
+    "message": "Tuta strona so pokazuje, hdyž so nowy rajtark wočinja a so opcija \"swójski URL\" wuběra."
+  },
+  "url_title": {
+    "message": "URL"
+  }
+}
