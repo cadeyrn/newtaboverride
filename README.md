@@ -9,4 +9,4 @@ allows the user to choose a certain page in a new tab.
 ### System Requirements (current version)
 Firefox 45.0+
 ### Download
-**[Download New Tab Override 6.0](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
+**[Download New Tab Override 6.0.1](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
