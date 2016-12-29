@@ -44,6 +44,7 @@ const newtaboverride = {
       }
 
       // TODO: Fokus-Option
+      // TODO: Adressleiste leeren Option
 
       browser.tabs.query({currentWindow : true, active : true}, function (tab) {
         browser.tabs.update(tab.id, {url : newTabUrl})
