@@ -30,7 +30,8 @@
   "default_locale": "en",
   "applications": {
     "gecko": {
-      "id": "newtaboverride@agenedia.com"
+      "id": "newtaboverride@agenedia.com",
+      "strict_min_version": "52a1"
     }
   }
 }
