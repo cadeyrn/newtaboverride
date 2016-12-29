@@ -3,7 +3,10 @@
   "name": "newtaboverride",
   "version": "7.0.0pre",
   "description": "__MSG_extension_description__",
-  "homepage_url": "https://www.soeren-hentzschel.at",
+  "developer": {
+    "name": "Sören Hentzschel",
+    "url": "https://www.soeren-hentzschel.at"
+  },
   "permissions": [
     "<all_urls>",
     "storage",
