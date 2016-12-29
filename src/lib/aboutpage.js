@@ -14,15 +14,10 @@ const aboutpage = {
 
       newChannel: function(aURI, aSecurity_or_aLoadInfo) {
         let channel;
-
-        // Firefox >= 48
+        
         if (services.vc.compare(services.appinfo.version, '47.*') > 0) {
           const uri = services.io.newURI(self.data.url('html/' + page + '.html'), null, null);
           channel = services.io.newChannelFromURIWithLoadInfo(uri, aSecurity_or_aLoadInfo);
-        }
-        // Firefox <= 47
-        else {
-          channel = services.io.newChannel(self.data.url('html/' + page + '.html'), null, null);
         }
 
         channel.originalURI = aURI;
