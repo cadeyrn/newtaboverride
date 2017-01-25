@@ -7,14 +7,14 @@ const elFocusWebsite = document.getElementById('focus_website');
 const elClearLocationBar = document.getElementById('clear_locationbar');
 
 const options = {
-  load : function () {
-    function toggleUrlOption() {
-      elUrlOption.style.display = (elType.options[elType.selectedIndex].value == 'custom_url') ? 'block' : 'none';
-    }
+  toggleUrlOption : function () {
+    elUrlOption.style.display = (elType.options[elType.selectedIndex].value == 'custom_url') ? 'block' : 'none';
+  },
 
+  load : function () {
     browser.storage.local.get({ 'type' : 'custom_url' }).then((option) => {
       elType.querySelector('[value="' + option.type + '"]').selected = true;
-      toggleUrlOption();
+      options.toggleUrlOption();
     });
 
     browser.storage.local.get({ 'url' : 'about:newtab' }).then((option) => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', options.load);
 
 elType.addEventListener('change', function () {
   browser.storage.local.set({ 'type' : this.value });
-  toggleUrlOption();
+  options.toggleUrlOption();
 });
 
 elUrl.addEventListener('input', function () {
