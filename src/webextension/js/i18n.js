@@ -2,7 +2,7 @@
 
 const i18n = {
   findWithXPath : function (path) {
-    return document.evaluate(path, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+    return document.evaluate(path, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
   },
 
   getMessage : function (string, key) {
@@ -22,10 +22,13 @@ const i18n = {
       text.nodeValue = i18n.replace(text.nodeValue);
     }
 
-    const placeholderAttributes = i18n.findWithXPath('//*/attribute::placeholder[contains(., "__MSG_")]');
-    for (let i = 0, length = placeholderAttributes.snapshotLength; i < length; i++) {
-      const placeholder = placeholderAttributes.snapshotItem(i);
-      placeholder.value = i18n.replace(placeholder.value);
+    const attributes = ['title', 'placeholder'];
+    for (let attribute of attributes) {
+      const nodes = i18n.findWithXPath('//*/attribute::' + attribute + '[contains(., "__MSG_")]');
+      for (let i = 0, length = nodes.snapshotLength; i < length; i++) {
+        const node = nodes.snapshotItem(i);
+        node.value = i18n.replace(node.value);
+      }
     }
   }
 };
