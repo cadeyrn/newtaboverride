@@ -16,7 +16,7 @@
     "Michael Wolf (DSB, HSB)"
   ],
   "engines": {
-    "firefox": ">=52.0a1"
+    "firefox": ">=54.0a1"
   },
   "license": "MIT",
   "hasEmbeddedWebExtension": true,
