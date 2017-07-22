@@ -43,10 +43,6 @@
             "label": "about_newtab"
         },
         {
-            "value": "about:sync-tabs",
-            "label": "about:sync-tabs"
-        },
-        {
             "value": "homepage",
             "label": "homepage"
         },
