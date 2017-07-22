@@ -1,0 +1,35 @@
+{
+  "name": "newtaboberride",
+  "version": "7.0.0",
+  "description": "This add-on brings back the ability to change the page which is shown when opening a new tab.",
+  "author": {
+    "name": "Sören Hentzschel",
+    "email": "kontakt@agenedia.com",
+    "url": "https://agenedia.com"
+  },
+  "homepage": "https://www.soeren-hentzschel.at/newtaboverride/",
+  "bugs": {
+    "email": "kontakt@agenedia.com"
+  },
+  "license": "MPL 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cadeyrn/newtaboverride/"
+  },
+  "private": true,
+  "browserslist": [
+    "Firefox >= 55"
+  ],
+  "devDependencies": {
+    "npm-run-all": "4.0.2",
+    "web-ext": "1.10.1"
+  },
+  "scripts": {
+    "build": "cd src && web-ext build -a ../dist",
+    "lint:webext": "cd src && web-ext lint",
+    "run:nightly": "cd src && web-ext run --firefox=\"/Applications/Firefox Nightly.app\"",
+    "run:aurora": "cd src && web-ext run --firefox=\"/Applications/Firefox Developer Edition.app\"",
+    "run:beta": "cd src && web-ext run --firefox=\"/Applications/Firefox Beta.app\"",
+    "run:stable": "cd src && web-ext run --firefox=\"/Applications/Firefox Stable.app\""
+  }
+}
