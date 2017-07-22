@@ -1,2 +1,5 @@
 .idea
 .DS_Store
+docs
+node_modules
+_TODO.txt
