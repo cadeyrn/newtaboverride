@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extension_name__",
+  "version": "7.0.0",
+  "description": "__MSG_extension_description__",
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png"
+  },
+  "developer": {
+    "name": "Sören Hentzschel",
+    "url": "https://www.soeren-hentzschel.at/newtaboverride/"
+  },
+  "default_locale": "en",
+  "applications": {
+    "gecko": {
+      "id": "newtaboverride@agenedia.com",
+      "strict_min_version": "55.0"
+    }
+  }
+}
