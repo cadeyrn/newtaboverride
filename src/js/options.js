@@ -1,5 +1,7 @@
 'use strict';
 
+const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
+
 const elFeedPermission = document.getElementById('feed_permission_container');
 const elFeedPermissionBtn = document.getElementById('feed_permission');
 const elType = document.getElementById('type');
@@ -34,7 +36,7 @@ const options = {
   },
 
   async testFeedPermission () {
-    const isAllowed = await browser.permissions.contains({ origins : ['https://www.soeren-hentzschel.at/*'] });
+    const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
 
     if (!isAllowed) {
       elFeedPermission.classList.remove('hidden');
@@ -45,7 +47,7 @@ const options = {
   async requestFeedPermission (e) {
     e.preventDefault();
 
-    const granted = await browser.permissions.request({ origins : ['https://www.soeren-hentzschel.at/*'] });
+    const granted = await browser.permissions.request(FEED_PERMISSION);
 
     if (granted) {
       elFeedPermission.classList.add('hidden');
