@@ -12,7 +12,7 @@ const newtab = {
   init () {
     browser.storage.local.get({ type : 'custom_url', url : '' }, options => {
       if (options.type === 'custom_url') {
-        browser.tabs.update({ url : options.url });
+        browser.tabs.update({ url : options.url || 'about:blank' });
       }
     });
   }
