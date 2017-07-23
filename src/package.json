@@ -18,7 +18,7 @@
   "engines": {
     "firefox": ">=45.0a1"
   },
-  "license": "MIT",
+  "license": "MPL 2.0",
   "permissions": {
     "multiprocess": true,
     "private-browsing": true

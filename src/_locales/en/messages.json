@@ -30,7 +30,7 @@
     "message": "Please consider a donation to support the ongoing development of this add-on."
   },
   "settings_license_link": {
-    "message": "MIT License"
+    "message": "MPL 2.0 License"
   },
   "settings_main_caption": {
     "message": "Settings"
