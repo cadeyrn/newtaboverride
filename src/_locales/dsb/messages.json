@@ -5,6 +5,15 @@
   "extension_name": {
     "message": "New Tab Override"
   },
+  "feed_published_at": {
+    "message": "Wózjawjony:"
+  },
+  "feed_read_more": {
+    "message": "Dalej cytaś…"
+  },
+  "feed_title": {
+    "message": "Nowosći Mozilla"
+  },
   "introduction_part_one": {
     "message": "Toś ten bok staja se k dispoziciji wót"
   },
@@ -46,6 +55,9 @@
   },
   "type_options_custom_url": {
     "message": "swójski URL"
+  },
+   "type_options_feed": {
+    "message": "Nowinki Mozilla (nimski)"
   },
   "type_title": {
     "message": "Opcija"

@@ -1,6 +1,10 @@
-const INTERVAL_BETWEEN_FETCHES_IN_MS = 3600000; // 1 hour
-const { XMLHttpRequest } = require('sdk/net/xhr');
+'use strict';
 
+const INTERVAL_BETWEEN_FETCHES_IN_MS = 3600000; // 1 hour
+
+/**
+ * @exports feedreader
+ */
 const feedreader = {
   lastFetched : null,
   feedItems : null,
@@ -47,5 +51,3 @@ const feedreader = {
     });
   }
 };
-
-exports.getFeedItems = feedreader.getFeedItems;

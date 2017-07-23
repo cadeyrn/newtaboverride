@@ -5,6 +5,15 @@
   "extension_name": {
     "message": "New Tab Override"
   },
+  "feed_published_at": {
+    "message": "Published:"
+  },
+  "feed_read_more": {
+    "message": "Read More…"
+  },
+  "feed_title": {
+    "message": "Mozilla News"
+  },
   "introduction_part_one": {
     "message": "This page is provided by"
   },
@@ -46,6 +55,9 @@
   },
   "type_options_custom_url": {
     "message": "custom URL"
+  },
+   "type_options_feed": {
+    "message": "Mozilla News (German)"
   },
   "type_title": {
     "message": "Option"

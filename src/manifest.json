@@ -32,6 +32,7 @@
     "open_in_tab": true
   },
   "permissions": [
+    "https://www.soeren-hentzschel.at/*",
     "storage",
     "tabs"
   ],

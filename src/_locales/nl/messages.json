@@ -5,6 +5,15 @@
   "extension_name": {
     "message": "New Tab Override"
   },
+  "feed_published_at": {
+    "message": "Gepubliceerd:"
+  },
+  "feed_read_more": {
+    "message": "Meer info…"
+  },
+  "feed_title": {
+    "message": "Mozilla-nieuws"
+  },
   "introduction_part_one": {
     "message": "Deze pagina wordt aangeboden door"
   },
@@ -46,6 +55,9 @@
   },
   "type_options_custom_url": {
     "message": "aangepaste URL"
+  },
+   "type_options_feed": {
+    "message": "Mozilla-nieuws (Duits)"
   },
   "type_title": {
     "message": "Optie"

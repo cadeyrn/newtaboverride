@@ -5,6 +5,15 @@
   "extension_name": {
     "message": "New Tab Override"
   },
+  "feed_published_at": {
+    "message": "Veröffentlicht am"
+  },
+  "feed_read_more": {
+    "message": "Weiterlesen…"
+  },
+  "feed_title": {
+    "message": "Mozilla-Neuigkeiten"
+  },
   "introduction_part_one": {
     "message": "Diese Seite wird bereitgestellt von"
   },
@@ -46,6 +55,9 @@
   },
   "type_options_custom_url": {
     "message": "eigene URL"
+  },
+   "type_options_feed": {
+    "message": "Mozilla-Neuigkeiten"
   },
   "type_title": {
     "message": "Option"

@@ -1,5 +1,7 @@
 'use strict';
 
+const FEED_PAGE = 'html/feed.html';
+
 /**
  * @exports newtab
  */
@@ -18,6 +20,9 @@ const newtab = {
           break;
         case 'custom_url':
           browser.tabs.update({ url : options.url || 'about:blank' });
+          break;
+        case 'feed':
+          browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
           break;
         default:
           // default handling?
