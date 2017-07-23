@@ -8,7 +8,6 @@ const clipboard = require('sdk/clipboard');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
-const self = require('sdk/self');
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
