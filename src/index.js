@@ -33,7 +33,6 @@ const newtaboverride = {
   init : function () {
     newtaboverride.initPageMods();
     newtaboverride.onPrefChange();
-    newtaboverride.createButton();
   },
 
   initPageMods : function () {
@@ -81,8 +80,6 @@ const newtaboverride = {
     let newTabUrl;
 
     switch (type) {
-      case 'about:blank':
-      case 'about:home':
       case 'about:newtab':
         newTabUrl = type;
         break;
@@ -90,14 +87,6 @@ const newtaboverride = {
         newTabUrl = 'about:blank';
         // unfortunately there is no "clipboard changed" event…
         newtaboverride.timer = setInterval(newtaboverride.clipboardAction, CLIPBOARD_INTERVAL_IN_MILLISECONDS);
-        break;
-      case 'custom_url':
-        const url = simplePrefs.prefs['url'];
-        if (url === '') {
-          newTabUrl = 'about:blank';
-        } else {
-          newTabUrl = url;
-        }
         break;
       case 'homepage':
         newTabUrl = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];

@@ -11,8 +11,16 @@ const newtab = {
    */
   init () {
     browser.storage.local.get({ type : 'custom_url', url : '' }, options => {
-      if (options.type === 'custom_url') {
-        browser.tabs.update({ url : options.url || 'about:blank' });
+      switch (options.type) {
+        case 'about:blank':
+        case 'about:home':
+          browser.tabs.update({ url : options.type });
+          break;
+        case 'custom_url':
+          browser.tabs.update({ url : options.url || 'about:blank' });
+          break;
+        default:
+          // default handling?
       }
     });
   }
