@@ -14,6 +14,9 @@
   "background": {
     "scripts": ["js/background.js"]
   },
+  "chrome_url_overrides" : {
+    "newtab": "html/newtab.html"
+  },
   "browser_action": {
     "browser_style": false,
     "default_area": "navbar",
