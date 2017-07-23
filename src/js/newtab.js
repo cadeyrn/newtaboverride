@@ -10,7 +10,7 @@ const newtab = {
    * @returns {void}
    */
   init () {
-    browser.storage.local.get({ type : 'custom_url', url : '' }, options => {
+    browser.storage.local.get(defaults, options => {
       switch (options.type) {
         case 'about:blank':
         case 'about:home':

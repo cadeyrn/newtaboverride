@@ -19,10 +19,7 @@ const options = {
    * @returns {void}
    */
   async load () {
-    const option = await browser.storage.local.get({
-      type : 'custom_url',
-      url : ''
-    });
+    const option = await browser.storage.local.get(defaults);
 
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
