@@ -33,6 +33,10 @@ const options = {
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
     options.toggleUrlOption();
+
+    if (option.type === 'feed') {
+      options.testFeedPermission();
+    }
   },
 
   async testFeedPermission () {
@@ -60,6 +64,9 @@ document.addEventListener('DOMContentLoaded', options.load);
 elType.addEventListener('change', (e) => {
   if (e.target.value === 'feed') {
     options.testFeedPermission();
+  }
+  else {
+    elFeedPermission.classList.add('hidden');
   }
 
   browser.storage.local.set({ type : e.target.value });
