@@ -4,7 +4,6 @@ const URL_CHARS_LIMIT = 2000;
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const { viewFor } = require('sdk/view/core');
-const aboutpage = require('lib/aboutpage.js');
 const clipboard = require('sdk/clipboard');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const preferencesService = require('sdk/preferences/service');
