@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>__MSG_settings_title__</title>
+  <link rel='stylesheet' href='../css/common.css' />
+  <link rel='stylesheet' href='../css/options.css' />
+  <link rel='icon' type='image/png' href='../images/icon-32.png' />
+</head>
+<body>
+  <header>
+    <h1>__MSG_settings_title__</h1>
+  </header>
+  <div id='nto-introduction'>
+    <span>__MSG_introduction_part_one__</span>
+    <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>
+      __MSG_extension_name__
+    </a>:
+    <span>__MSG_introduction_part_two__</span>
+  </div>
+  <main>
+    <section>
+      <div>
+        <h2>__MSG_settings_main_caption__</h2>
+        <form>
+          <div>
+            <h3>__MSG_type_title__</h3>
+            <label for='type' class='hidden-label'>__MSG_type_title__</label>
+            <select name='type' id='type'>
+              <option value='custom_url'>__MSG_type_options_custom_url__</option>
+            </select>
+          </div>
+          <div id='url_option'>
+            <h3>__MSG_url_title__</h3>
+            <label for='url' class='hidden-label'>__MSG_url_title__</label>
+            <span class='description'>
+              <em>__MSG_url_description__</em>
+            </span>
+            <input type='text' name='url' id='url' placeholder='__MSG_settings_url_field_placeholder__' />
+          </div>
+        </form>
+      </div>
+    </section>
+    <aside>
+      <div>
+        <h2>__MSG_settings_support_caption__</h2>
+        <p>
+          <span>__MSG_settings_ask_questions__</span>
+          <a href='mailto:kontakt@agenedia.com?subject='>kontakt@agenedia.com</a>
+        </p>
+        <p>__MSG_settings_donation_text__</p>
+        <a href='https://www.paypal.me/agenedia' class='button' target='_blank' rel='noopener'>__MSG_settings_donate__</a>
+        <p>
+          <span>__MSG_review_text__</span>
+          <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>addons.mozilla.org</a>!
+        </p>
+        <h2>__MSG_settings_code_caption__</h2>
+        <ul>
+          <li>
+            <a href='https://git.agenedia.com/firefox-add-ons/newtaboverride' target='_blank' rel='noopener'>__MSG_settings_code_link__</a>
+          </li>
+          <li>
+            <a href='https://opensource.org/licenses/mit-license.php' target='_blank' rel='noopener'>__MSG_settings_license_link__</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <a href='https://www.soeren-hentzschel.at/new-tab-override/' target='_blank' rel='noopener'>
+      __MSG_extension_name__ © 2015 - 2017, soeren-hentzschel.at
+    </a>
+  </footer>
+  <script src='../js/i18n.js'></script>
+  <script src='../js/options.js'></script>
+</body>
+</html>

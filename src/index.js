@@ -213,7 +213,7 @@ const newtaboverride = {
       label : _('settings_title_short'),
       icon : {
         '18' : self.data.url('images/icon-18.png'),
-        '32' : self.data.url('images/icon-32.png'),
+        '32' : self.data.url('images/icon-36.png'),
         '36' : self.data.url('images/icon-36.png'),
         '64' : self.data.url('images/icon-64.png')
       },

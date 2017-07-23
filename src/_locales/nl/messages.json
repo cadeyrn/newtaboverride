@@ -4,5 +4,56 @@
   },
   "extension_name": {
     "message": "New Tab Override"
+  },
+  "introduction_part_one": {
+    "message": "Deze pagina wordt aangeboden door"
+  },
+  "introduction_part_two": {
+    "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
+  },
+  "review_text": {
+    "message": "Bevalt de add-on u? Laat dan een beoordeling achter op"
+  },
+  "settings_ask_questions": {
+    "message": "Hebt u vragen? Stel ze gerust!"
+  },
+  "settings_code_caption": {
+    "message": "Broncode en licentie"
+  },
+  "settings_code_link": {
+    "message": "Broncode"
+  },
+  "settings_donate": {
+    "message": "Doneren"
+  },
+  "settings_donation_text": {
+    "message": "Overweeg een donatie om de actieve ontwikkeling van deze add-on te steunen."
+  },
+  "settings_license_link": {
+    "message": "MIT-licentie"
+  },
+  "settings_main_caption": {
+    "message": "Instellingen"
+  },
+  "settings_support_caption": {
+    "message": "Ondersteuning"
+  },
+  "settings_title": {
+    "message": "Nieuw tabblad – Instellingen"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_custom_url": {
+    "message": "aangepaste URL"
+  },
+  "type_title": {
+    "message": "Optie"
+  },
+  "url_description": {
+    "message": "Deze pagina wordt bij het openen van een nieuw tabblad weergegeven als de optie \"aangepaste URL\" is geselecteerd."
+  },
+  "url_title": {
+    "message": "URL"
   }
 }

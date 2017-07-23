@@ -4,5 +4,56 @@
   },
   "extension_name": {
     "message": "New Tab Override"
+  },
+  "introduction_part_one": {
+    "message": "Diese Seite wird bereitgestellt von"
+  },
+  "introduction_part_two": {
+    "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
+  },
+  "review_text": {
+    "message": "Magst du diese Erweiterung? Dann hinterlasse bitte eine Bewertung auf"
+  },
+  "settings_ask_questions": {
+    "message": "Fragen? Einfach eine E-Mail schreiben!"
+  },
+  "settings_code_caption": {
+    "message": "Quellcode & Lizenz"
+  },
+  "settings_code_link": {
+    "message": "Quellcode"
+  },
+  "settings_donate": {
+    "message": "Spenden"
+  },
+  "settings_donation_text": {
+    "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieses Add-ons zu gewährleisten."
+  },
+  "settings_license_link": {
+    "message": "MIT-Lizenz"
+  },
+  "settings_main_caption": {
+    "message": "Einstellungen"
+  },
+  "settings_support_caption": {
+    "message": "Unterstützung"
+  },
+  "settings_title": {
+    "message": "Neuer Tab — Einstellungen"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_custom_url": {
+    "message": "eigene URL"
+  },
+  "type_title": {
+    "message": "Option"
+  },
+  "url_description": {
+    "message": "Die Seite wird beim Öffnen eines neuen Tabs angezeigt, wenn die Option \"eigene URL\" ausgewählt worden ist."
+  },
+  "url_title": {
+    "message": "URL"
   }
 }

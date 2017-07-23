@@ -4,5 +4,56 @@
   },
   "extension_name": {
     "message": "New Tab Override"
+  },
+  "introduction_part_one": {
+    "message": "This page is provided by"
+  },
+  "introduction_part_two": {
+    "message": "Select which page should open as new tab!"
+  },
+  "review_text": {
+    "message": "Do you like the add-on? Then please leave a review on"
+  },
+  "settings_ask_questions": {
+    "message": "Do you have questions? Do not hesitate to ask!"
+  },
+  "settings_code_caption": {
+    "message": "Source Code & License"
+  },
+  "settings_code_link": {
+    "message": "Source Code"
+  },
+  "settings_donate": {
+    "message": "Donate"
+  },
+  "settings_donation_text": {
+    "message": "Please consider a donation to support the ongoing development of this add-on."
+  },
+  "settings_license_link": {
+    "message": "MIT License"
+  },
+  "settings_main_caption": {
+    "message": "Settings"
+  },
+  "settings_support_caption": {
+    "message": "Support"
+  },
+  "settings_title": {
+    "message": "New Tab — Settings"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_custom_url": {
+    "message": "custom URL"
+  },
+  "type_title": {
+    "message": "Option"
+  },
+  "url_description": {
+    "message": "This page is shown when opening a new tab and the option \"custom URL\" is selected."
+  },
+  "url_title": {
+    "message": "URL"
   }
 }

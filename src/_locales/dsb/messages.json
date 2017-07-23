@@ -4,5 +4,56 @@
   },
   "extension_name": {
     "message": "New Tab Override"
+  },
+  "introduction_part_one": {
+    "message": "Toś ten bok staja se k dispoziciji wót"
+  },
+  "introduction_part_two": {
+    "message": "Wubjeŕśo, kótary bok ma se ako nowy rejtark wócyniś!"
+  },
+  "review_text": {
+    "message": "Dodank se wam spódoba? Ga zawóstajśo pógódnośenje na"
+  },
+  "settings_ask_questions": {
+    "message": "Maśo pšašanja? Pšašajśo se jadnorje!"
+  },
+  "settings_code_caption": {
+    "message": "Žrědłowy kod a licenca"
+  },
+  "settings_code_link": {
+    "message": "Žrědłowy kod"
+  },
+  "settings_donate": {
+    "message": "Pósćiś"
+  },
+  "settings_donation_text": {
+    "message": "Pšosym rozwažujśo dar, aby dalšne wuwijanje toś togo dodanka pódpěrał."
+  },
+  "settings_license_link": {
+    "message": "MIT-licenca"
+  },
+  "settings_main_caption": {
+    "message": "Nastajenja"
+  },
+  "settings_support_caption": {
+    "message": "Pódpěra"
+  },
+  "settings_title": {
+    "message": "Nowy rejtark — Nastajenja"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_custom_url": {
+    "message": "swójski URL"
+  },
+  "type_title": {
+    "message": "Opcija"
+  },
+  "url_description": {
+    "message": "Toś ten bok se pokazujo, gaž se nowy rejtark wócynja a se opcija \"swójski URL\" wuběra."
+  },
+  "url_title": {
+    "message": "URL"
   }
 }

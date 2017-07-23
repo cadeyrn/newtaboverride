@@ -3,7 +3,7 @@ self.port.on('data-url', function(baseurl) {
   const link = document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
-  link.href = baseurl + 'images/icon-32.png';
+  link.href = baseurl + 'images/icon-36.png';
   document.getElementsByTagName('head')[0].appendChild(link);
 });
 

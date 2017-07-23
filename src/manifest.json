@@ -11,6 +11,13 @@
     "name": "Sören Hentzschel",
     "url": "https://www.soeren-hentzschel.at/new-tab-override/"
   },
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage"
+  ],
   "default_locale": "en",
   "applications": {
     "gecko": {
