@@ -17,37 +17,31 @@ const feedreader = {
     return feedreader.feedItems;
   },
 
-  fetch : function (url) {
-    return new Promise(function (resolve, reject) {
-      let xhr = new XMLHttpRequest();
+  fetch : async function (url) {
+    let feeditems = [];
 
-      xhr.onload = function() {
-        let feeditems = [];
-        let doc = this.responseXML;
+    const parser = new DOMParser();
+    const response = await fetch(url, { cache : 'no-store' });
+    const text = await response.text();
+    const document = await parser.parseFromString(text, 'text/xml');
 
-        if (doc === null) {
-          return feeditems;
-        }
+    if (document === null) {
+      return feeditems;
+    }
 
-        let items = doc.querySelectorAll('item');
+    let items = document.querySelectorAll('item');
 
-        for (let i = 0; i < items.length; i++) {
-          let feeditem = {};
-          feeditem.title = items[i].getElementsByTagName('title')[0].textContent;
-          feeditem.description = items[i].getElementsByTagName('description')[0].textContent;
-          feeditem.link = items[i].getElementsByTagName('link')[0].textContent;
-          feeditem.pubDate = items[i].getElementsByTagName('pubDate')[0].textContent;
-          feeditems.push(feeditem);
-        }
+    for (let i = 0; i < items.length; i++) {
+      let feeditem = {};
+      feeditem.title = items[i].getElementsByTagName('title')[0].textContent;
+      feeditem.description = items[i].getElementsByTagName('description')[0].textContent;
+      feeditem.link = items[i].getElementsByTagName('link')[0].textContent;
+      feeditem.pubDate = items[i].getElementsByTagName('pubDate')[0].textContent;
+      feeditems.push(feeditem);
+    }
 
-        feedreader.lastFetched = Date.now();
+    feedreader.lastFetched = Date.now();
 
-        resolve(feeditems);
-      };
-
-      xhr.onerror = reject;
-      xhr.open('GET', url);
-      xhr.send();
-    });
+    return feeditems;
   }
 };
