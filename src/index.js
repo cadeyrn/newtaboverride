@@ -11,7 +11,6 @@ const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
 const URL_CHARS_LIMIT = 2000;
 
 const _ = require('sdk/l10n').get;
-const { ActionButton } = require('sdk/ui/button/action');
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const { viewFor } = require('sdk/view/core');
@@ -35,7 +34,6 @@ const FeedPage = aboutpage.createAboutPage('feed');
 const FeedPageFactory = aboutpage.createAboutPageFactory(FeedPage);
 
 const newtaboverride = {
-  actionButton : null,
   lastClipboardUrl : false,
   timer : false,
 
@@ -207,38 +205,6 @@ const newtaboverride = {
     });
   },
 
-  createButton : function () {
-    newtaboverride.actionButton = ActionButton({
-      id : 'newtaboverride-button',
-      label : _('settings_title_short'),
-      icon : {
-        '18' : self.data.url('images/icon-18.png'),
-        '32' : self.data.url('images/icon-36.png'),
-        '36' : self.data.url('images/icon-36.png'),
-        '64' : self.data.url('images/icon-64.png')
-      },
-      onClick : () => {
-        if (newtaboverride.actionButton.badge) {
-          newtaboverride.actionButton.badge = null;
-        }
-
-        for (let window of windows.browserWindows) {
-          for (let tab of window.tabs) {
-            if (tab.url === ABOUT_SETTINGS_URI) {
-              window.activate();
-              tab.activate();
-              return;
-            }
-          }
-        }
-
-        tabs.open({
-          url : ABOUT_SETTINGS_URI
-        });
-      }
-    });
-  },
-
   clipboardAction : function () {
     const clipboardContent = clipboard.get();
 
@@ -267,7 +233,7 @@ const newtaboverride = {
   }
 };
 
-const main = (options) => {
+const main = () => {
   aboutpage.registerAboutPage(ABOUT_SETTINGS_UUID, ABOUT_SETTINGS_URI, ABOUT_SETTINGS_PAGE, SettingsPageFactory);
   aboutpage.registerAboutPage(ABOUT_FEED_UUID, ABOUT_FEED_URI, ABOUT_FEED_PAGE, FeedPageFactory);
 
@@ -275,10 +241,6 @@ const main = (options) => {
 
   simplePrefs.on('', newtaboverride.onPrefChange);
   prefsTarget.on('homepage', newtaboverride.onPrefChange);
-
-  if (options.loadReason === 'install') {
-    newtaboverride.actionButton.badge = '★';
-  }
 };
 
 const unload = (reason) => {
