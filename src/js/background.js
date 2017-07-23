@@ -1,6 +1,6 @@
 'use strict';
 
-const UI_PAGE = 'html/options.html';
+const OPTIONS_PAGE = 'html/options.html';
 
 /**
  * @exports newtaboverride
@@ -27,7 +27,7 @@ const newtaboverride = {
    * @returns {void}
    */
   openUserInterface () {
-    const url = browser.extension.getURL(UI_PAGE);
+    const url = browser.extension.getURL(OPTIONS_PAGE);
 
     browser.browserAction.setBadgeText({ text : '' });
     browser.tabs.query({}, (tabs) => {
