@@ -32,9 +32,11 @@
     "open_in_tab": true
   },
   "permissions": [
-    "https://www.soeren-hentzschel.at/*",
     "storage",
     "tabs"
+  ],
+  "optional_permissions": [
+    "https://www.soeren-hentzschel.at/*"
   ],
   "default_locale": "en",
   "applications": {

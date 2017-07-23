@@ -1,5 +1,7 @@
 'use strict';
 
+const elFeedPermission = document.getElementById('feed_permission_container');
+const elFeedPermissionBtn = document.getElementById('feed_permission');
 const elType = document.getElementById('type');
 const elUrlOption = document.getElementById('url_option');
 const elUrl = document.getElementById('url');
@@ -29,12 +31,35 @@ const options = {
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
     options.toggleUrlOption();
+  },
+
+  async testFeedPermission () {
+    const isAllowed = await browser.permissions.contains({ origins : ['https://www.soeren-hentzschel.at/*'] });
+
+    if (!isAllowed) {
+      elFeedPermission.classList.remove('hidden');
+      elFeedPermissionBtn.addEventListener('click', options.requestFeedPermission);
+    }
+  },
+
+  async requestFeedPermission (e) {
+    e.preventDefault();
+
+    const granted = await browser.permissions.request({ origins : ['https://www.soeren-hentzschel.at/*'] });
+
+    if (granted) {
+      elFeedPermission.classList.add('hidden');
+    }
   }
 };
 
 document.addEventListener('DOMContentLoaded', options.load);
 
 elType.addEventListener('change', (e) => {
+  if (e.target.value === 'feed') {
+    options.testFeedPermission();
+  }
+
   browser.storage.local.set({ type : e.target.value });
   options.toggleUrlOption();
 });
