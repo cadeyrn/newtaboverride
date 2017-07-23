@@ -10,7 +10,7 @@ const newtaboverride = {
    * Fired when the extension is first installed, when the extension is updated to a new version or when the browser
    * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed.
    *
-   * @param {runtime.OnInstalledReason} details - details.reason contains the reason why this event is being dispatched.
+   * @param {runtime.OnInstalledReason} details - details.reason contains the reason why this event is being dispatched
    *
    * @returns {void}
    */
