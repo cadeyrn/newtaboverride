@@ -11,12 +11,26 @@
     "name": "Sören Hentzschel",
     "url": "https://www.soeren-hentzschel.at/new-tab-override/"
   },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "browser_style": false,
+    "default_area": "navbar",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "64": "images/icon-64.png"
+    },
+    "default_title": "__MSG_settings_title__"
+  },
   "options_ui": {
     "page": "html/options.html",
     "open_in_tab": true
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "default_locale": "en",
   "applications": {
