@@ -9,7 +9,12 @@ const elUrl = document.getElementById('url');
  */
 const options = {
   toggleUrlOption () {
-    elUrlOption.style.display = (elType.options[elType.selectedIndex].value == 'custom_url') ? 'block' : 'none';
+    if (elType.options[elType.selectedIndex].value === 'custom_url') {
+      elUrlOption.classList.remove('hidden');
+    }
+    else {
+      elUrlOption.classList.add('hidden');
+    }
   },
 
   /**

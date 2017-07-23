@@ -65,6 +65,10 @@ a:not(.button):hover {
   color: rgb(210, 57, 49);
 }
 
+.hidden {
+  display: none;
+}
+
 .button {
   display: block;
   box-sizing: border-box;
