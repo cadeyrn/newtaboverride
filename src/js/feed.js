@@ -1,11 +1,27 @@
 'use strict';
 
+const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
+
+const elPermissionNeeded = document.getElementById('permission-needed');
 
 /**
  * @exports feed
  */
 const feed = {
+  async init () {
+    const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
+
+    if (isAllowed) {
+      const result = await feedreader.getFeedItems(FEED_URL);
+      feed.readFeedItems(result);
+    }
+    else {
+      document.getElementById('throbber').remove();
+      elPermissionNeeded.classList.remove('hidden');
+    }
+  },
+
   /**
    * This method is used to read the news feed defined in FEED_URL.
    *
@@ -13,7 +29,7 @@ const feed = {
    *
    * @returns {void}
    */
-  init (items) {
+  readFeedItems (items) {
     document.getElementById('throbber').remove();
 
     for (let i = 0; i < items.length; i++) {
@@ -73,6 +89,4 @@ const feed = {
   }
 };
 
-feedreader.getFeedItems(FEED_URL).then(result => {
-  feed.init(result);
-});
+feed.init();
