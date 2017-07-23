@@ -1,7 +1,6 @@
 const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
 const URL_CHARS_LIMIT = 2000;
 
-const _ = require('sdk/l10n').get;
 const { PrefsTarget } = require('sdk/preferences/event-target');
 const { setInterval, clearInterval } = require('sdk/timers');
 const { viewFor } = require('sdk/view/core');
@@ -22,16 +21,6 @@ const newtaboverride = {
 
   init : function () {
     newtaboverride.onPrefChange();
-  },
-
-  getTranslationsForPageMod : function (langvars) {
-    const t = { };
-
-    for (let langvar of langvars) {
-      t[langvar] = _(langvar);
-    }
-
-    return t;
   },
 
   onPrefChange : function () {
