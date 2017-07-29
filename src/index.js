@@ -5,10 +5,6 @@ const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
 
 const newtaboverride = {
-  init : function () {
-    newtaboverride.onPrefChange();
-  },
-
   onPrefChange : function () {
     const type = simplePrefs.prefs['type'];
     let newTabUrl;
@@ -64,16 +60,7 @@ const newtaboverride = {
 };
 
 const main = () => {
-  newtaboverride.init();
-
   simplePrefs.on('', newtaboverride.onPrefChange);
 };
 
-const unload = (reason) => {
-  if (reason === 'uninstall' || reason === 'disable') {
-    newTabUrlJsm.reset();
-  }
-};
-
 exports.main = main;
-exports.onUnload = unload;
