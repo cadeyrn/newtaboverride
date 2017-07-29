@@ -4,8 +4,8 @@
   "version": "7.0.0",
   "description": "__MSG_extension_description__",
   "icons": {
-    "48": "images/icon-48.png",
-    "96": "images/icon-96.png"
+    "48": "images/icon.svg",
+    "96": "images/icon.svg"
   },
   "developer": {
     "name": "Sören Hentzschel",
@@ -20,11 +20,7 @@
   "browser_action": {
     "browser_style": false,
     "default_area": "navbar",
-    "default_icon": {
-      "16": "images/icon-16.png",
-      "32": "images/icon-32.png",
-      "64": "images/icon-64.png"
-    },
+    "default_icon": "images/icon.svg",
     "default_title": "__MSG_settings_title__"
   },
   "options_ui": {

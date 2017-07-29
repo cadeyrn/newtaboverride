@@ -43,7 +43,7 @@ section > div, aside > div {
 h1 {
   margin: 0;
   padding-left: 80px;
-  background: url('../images/icon-128.png') no-repeat;
+  background: url('../images/icon.svg') no-repeat;
   background-size: 64px 64px;
 }
 
