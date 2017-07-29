@@ -13,8 +13,6 @@ const newtaboverride = {
       case 'about:newtab':
         newTabUrl = type;
         break;
-      default:
-        newTabUrl = 'about:newtab';
     }
 
     newTabUrlJsm.override(newTabUrl);

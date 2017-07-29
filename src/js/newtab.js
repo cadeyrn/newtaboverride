@@ -25,7 +25,7 @@ const newtab = {
           browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
           break;
         default:
-          // default handling?
+          // do nothing
       }
     });
   }
