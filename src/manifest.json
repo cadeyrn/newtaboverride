@@ -23,6 +23,9 @@
     "default_icon": "images/icon.svg",
     "default_title": "__MSG_settings_title__"
   },
+  "omnibox": {
+    "keyword" : "newtab"
+  },
   "options_ui": {
     "page": "html/options.html",
     "open_in_tab": true

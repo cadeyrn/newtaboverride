@@ -20,6 +20,12 @@
   "introduction_part_two": {
     "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
   },
+  "omnibox_command_settings": {
+    "message": "Open the new tab's settings"
+  },
+  "omnibox_default_description": {
+    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+  },
   "review_text": {
     "message": "Přidatk so wam spodoba? Da zawostajće pohódnoćenje na"
   },

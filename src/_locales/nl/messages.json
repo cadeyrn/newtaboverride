@@ -20,6 +20,12 @@
   "introduction_part_two": {
     "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
+  "omnibox_command_settings": {
+    "message": "Open the new tab's settings"
+  },
+  "omnibox_default_description": {
+    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+  },
   "review_text": {
     "message": "Bevalt de add-on u? Laat dan een beoordeling achter op"
   },

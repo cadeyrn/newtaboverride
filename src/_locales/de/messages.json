@@ -20,6 +20,12 @@
   "introduction_part_two": {
     "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
   },
+  "omnibox_command_settings": {
+    "message": "Öffne die Einstellungen für den neuen Tab"
+  },
+  "omnibox_default_description": {
+    "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird"
+  },
   "review_text": {
     "message": "Magst du diese Erweiterung? Dann hinterlasse bitte eine Bewertung auf"
   },

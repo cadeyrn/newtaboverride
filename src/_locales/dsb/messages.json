@@ -20,6 +20,12 @@
   "introduction_part_two": {
     "message": "Wubjeŕśo, kótary bok ma se ako nowy rejtark wócyniś!"
   },
+  "omnibox_command_settings": {
+    "message": "Open the new tab's settings"
+  },
+  "omnibox_default_description": {
+    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+  },
   "review_text": {
     "message": "Dodank se wam spódoba? Ga zawóstajśo pógódnośenje na"
   },
