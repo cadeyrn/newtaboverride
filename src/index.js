@@ -1,10 +1,5 @@
-const CLIPBOARD_INTERVAL_IN_MILLISECONDS = 500;
-const URL_CHARS_LIMIT = 2000;
-
 const { PrefsTarget } = require('sdk/preferences/event-target');
-const { setInterval, clearInterval } = require('sdk/timers');
 const { viewFor } = require('sdk/view/core');
-const clipboard = require('sdk/clipboard');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const preferencesService = require('sdk/preferences/service');
 const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
@@ -13,9 +8,6 @@ const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
 
 const newtaboverride = {
-  lastClipboardUrl : false,
-  timer : false,
-
   init : function () {
     newtaboverride.onPrefChange();
   },
@@ -28,21 +20,11 @@ const newtaboverride = {
       case 'about:newtab':
         newTabUrl = type;
         break;
-      case 'clipboard':
-        newTabUrl = 'about:blank';
-        // unfortunately there is no "clipboard changed" event…
-        newtaboverride.timer = setInterval(newtaboverride.clipboardAction, CLIPBOARD_INTERVAL_IN_MILLISECONDS);
-        break;
       case 'homepage':
         newTabUrl = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];
         break;
       default:
         newTabUrl = 'about:newtab';
-    }
-
-    if (type !== 'clipboard') {
-      clearInterval(newtaboverride.timer);
-      newtaboverride.lastClipboardUrl = false;
     }
 
     newTabUrlJsm.override(newTabUrl);
@@ -86,23 +68,6 @@ const newtaboverride = {
     });
   },
 
-  clipboardAction : function () {
-    const clipboardContent = clipboard.get();
-
-    if (clipboard.currentFlavors.indexOf('text') === -1) {
-      return;
-    }
-
-    if (clipboardContent.length > URL_CHARS_LIMIT || !newtaboverride.isValidUri(clipboardContent)) {
-      return;
-    }
-
-    if (!newtaboverride.lastClipboardUrl || clipboardContent !== newtaboverride.lastClipboardUrl) {
-      newTabUrlJsm.override(clipboardContent);
-      newtaboverride.lastClipboardUrl = clipboardContent;
-    }
-  },
-
   /**
    * @see http://stackoverflow.com/a/9284473
    */
@@ -123,8 +88,6 @@ const main = () => {
 
 const unload = (reason) => {
   if (reason === 'uninstall' || reason === 'disable') {
-    clearInterval(newtaboverride.timer);
-    newtaboverride.lastClipboardUrl = false;
     newTabUrlJsm.reset();
   }
 };
