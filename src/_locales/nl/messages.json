@@ -44,6 +44,15 @@
   "settings_donation_text": {
     "message": "Overweeg een donatie om de actieve ontwikkeling van deze add-on te steunen."
   },
+  "settings_feed_permission_action": {
+    "message": "Grant permission"
+  },
+  "settings_feed_permission_description": {
+    "message": "Allow Firefox to read the news feed from soeren-hentzschel.at. You can revoke this permission at any time."
+  },
+  "settings_feed_permission_needed": {
+    "message": "To use this feature you have to allow Firefox to access the data source."
+  },
   "settings_license_link": {
     "message": "MPL 2.0 licentie"
   },

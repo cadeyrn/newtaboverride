@@ -44,6 +44,15 @@
   "settings_donation_text": {
     "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieses Add-ons zu gewährleisten."
   },
+  "settings_feed_permission_action": {
+    "message": "Berechtigung erteilen"
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox die Berechtigung erteilen, den News-Feed von soeren-hentzschel.at zu lesen. Diese Berechtigung kann jederzeit widerrufen werden."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, die Datenquelle zu lesen."
+  },
   "settings_license_link": {
     "message": "MPL 2.0 Lizenz"
   },
