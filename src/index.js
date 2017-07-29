@@ -11,7 +11,6 @@ const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
-const windows = require('sdk/windows');
 
 const newtaboverride = {
   lastClipboardUrl : false,
