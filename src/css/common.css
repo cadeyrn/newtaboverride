@@ -109,6 +109,23 @@ footer a {
   color: rgb(33, 37, 42);
 }
 
+.info-icon {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  color: rgb(90, 90, 90);
+}
+
+.info-icon::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height:18px;
+  background: url('../images/info.svg') center center / 18px 18px no-repeat transparent;
+}
+
 @media screen and (min-width: 900px) {
   section > div {
     width: calc(100vw - 460px);
