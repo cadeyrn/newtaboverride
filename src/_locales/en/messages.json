@@ -1,6 +1,9 @@
 {
-  "compat_notice": {
+  "compat_notice_message": {
     "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
+  },
+  "compat_notice_title": {
+    "message": "Missing some options?"
   },
   "extension_description": {
     "message": "This add-on brings back the ability to change the page which is shown when opening a new tab."
