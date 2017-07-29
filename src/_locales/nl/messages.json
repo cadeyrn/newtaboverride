@@ -48,10 +48,16 @@
     "message": "Grant permission"
   },
   "settings_feed_permission_description": {
-    "message": "Allow Firefox to read the news feed from soeren-hentzschel.at. You can revoke this permission at any time."
+    "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You can revoke this permission at any time."
   },
   "settings_feed_permission_needed": {
     "message": "To use this feature you have to allow Firefox to access the data source."
+  },
+  "settings_feed_permission_revoke_action": {
+    "message": "Revoke permission"
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You have already granted this permission."
   },
   "settings_license_link": {
     "message": "MPL 2.0 licentie"
