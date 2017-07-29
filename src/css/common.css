@@ -44,7 +44,8 @@ h1 {
   margin: 0;
   padding-left: 80px;
   background: url('../images/icon.svg') no-repeat;
-  background-size: 64px 64px;
+  background-size: 54px auto;
+  background-position: 0 6px;
 }
 
 h2 {
