@@ -1,4 +1,7 @@
 {
+  "compat_notice": {
+    "message": "New Tab Override wurde von Grund auf neu als sogenannte WebExtension entwickelt. Damit ist New Tab Override auch zu Firefox 57 und neuer kompatibel. Nicht alle Optionen der Vorgänger-Version sind derzeit als WebExtension umsetzbar. Sobald Mozilla die Unterstützung für fehlende Funktionen in Firefox ergänzt, werden diese als Update von New Tab Override nachgereicht."
+  },
   "extension_description": {
     "message": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },

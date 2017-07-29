@@ -34,12 +34,6 @@ aside > div {
   margin-left: 20px;
 }
 
-section > div, aside > div {
-  box-sizing: border-box;
-  padding: 20px;
-  background: rgb(239, 239, 239);
-}
-
 h1 {
   margin: 0;
   padding-left: 80px;
@@ -64,6 +58,12 @@ a {
 
 a:not(.button):hover {
   color: rgb(18, 149, 204);
+}
+
+.grey-bg {
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgb(239, 239, 239);
 }
 
 .hidden {
@@ -126,6 +126,11 @@ footer a {
   width: 18px;
   height:18px;
   background: url('../images/info.svg') center center / 18px 18px no-repeat transparent;
+}
+
+#compat-notice {
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 @media screen and (min-width: 900px) {

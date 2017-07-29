@@ -1,4 +1,7 @@
 {
+  "compat_notice": {
+    "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
+  },
   "extension_description": {
     "message": "Tutón přidatk přinjese funkciju wróćo, stronu změnić, kotraž se při wočinjenju noweho rajtarka pokazuje."
   },
