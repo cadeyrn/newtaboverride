@@ -23,18 +23,18 @@ input[type='text'] {
   width: 100%;
   height: 24px;
   line-height: 24px;
-  border: .5px solid rgb(218, 218, 218);
+  border: 1px solid rgb(218, 218, 218);
   transition: border ease 250ms;
 }
 
 input:focus {
-  border-color: rgb(193, 56, 50);
+  border-color: rgb(38, 169, 224);
 }
 
 #nto-introduction {
   margin: 20px 20px 0 20px;
   padding: 10px;
-  background: rgb(193,56,50);
+  background: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
 }
 
@@ -45,7 +45,7 @@ input:focus {
 }
 
 #nto-introduction a:hover {
-  color: rgb(220, 220, 220);
+  color: rgb(235, 235, 235);
 }
 
 .description {

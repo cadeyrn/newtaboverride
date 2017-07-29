@@ -56,13 +56,13 @@ h2:first-child {
 }
 
 a {
-  color: rgb(193, 56, 50);
+  color: rgb(38, 169, 224);
   text-decoration: none;
   transition: color ease 250ms;
 }
 
 a:not(.button):hover {
-  color: rgb(210, 57, 49);
+  color: rgb(18, 149, 204);
 }
 
 .hidden {
@@ -77,7 +77,7 @@ a:not(.button):hover {
   border: none;
   border-radius: 3px;
   font-weight: bold;
-  background: rgb(193, 56, 50);
+  background: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
   text-align: center;
   cursor: pointer;
@@ -85,7 +85,7 @@ a:not(.button):hover {
 }
 
 .button:hover {
-  background: rgb(210, 57, 49);
+  background: rgb(18, 149, 204);
 }
 
 footer {
