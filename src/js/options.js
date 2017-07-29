@@ -2,6 +2,7 @@
 
 const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 
+const elCompatNotice = document.getElementById('compat-notice');
 const elFeedPermission = document.getElementById('feed_permission_container');
 const elFeedPermissionBtn = document.getElementById('feed_permission');
 const elFeedPermissionRevoke = document.getElementById('feed_permission_revoke_container');
@@ -38,6 +39,10 @@ const options = {
 
     if (option.type === 'feed') {
       options.testFeedPermission();
+    }
+
+    if (option.show_compat_notice === true) {
+      elCompatNotice.classList.remove('hidden');
     }
   },
 

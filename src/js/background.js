@@ -19,6 +19,10 @@ const newtaboverride = {
     if (details.reason === 'install' || details.reason === 'update') {
       browser.browserAction.setBadgeText({ text : '★' });
     }
+
+    if (details.reason === 'update') {
+      browser.storage.local.set({ show_compat_notice : true });
+    }
   },
 
   /**
