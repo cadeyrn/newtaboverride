@@ -23,6 +23,13 @@
     "default_icon": "images/icon.svg",
     "default_title": "__MSG_settings_title__"
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Shift+F2"
+      }
+    }
+  },
   "omnibox": {
     "keyword" : "newtab"
   },
