@@ -1,8 +1,5 @@
-const { PrefsTarget } = require('sdk/preferences/event-target');
 const { viewFor } = require('sdk/view/core');
 const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
-const preferencesService = require('sdk/preferences/service');
-const prefsTarget = PrefsTarget({ branchName: 'browser.startup.'});
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
@@ -19,9 +16,6 @@ const newtaboverride = {
     switch (type) {
       case 'about:newtab':
         newTabUrl = type;
-        break;
-      case 'homepage':
-        newTabUrl = preferencesService.getLocalized('browser.startup.homepage', 'about:blank').split('|')[0];
         break;
       default:
         newTabUrl = 'about:newtab';
@@ -73,7 +67,6 @@ const main = () => {
   newtaboverride.init();
 
   simplePrefs.on('', newtaboverride.onPrefChange);
-  prefsTarget.on('homepage', newtaboverride.onPrefChange);
 };
 
 const unload = (reason) => {
