@@ -16,11 +16,12 @@ const newtaboverride = {
    * @returns {void}
    */
   onInstalledHandler (details) {
-    if (details.reason === 'install' || details.reason === 'update') {
+    if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
     }
 
-    if (details.reason === 'update') {
+    if (details.reason === 'update' && parseFloat(details.previousVersion) < 7) {
+      browser.browserAction.setBadgeText({ text : '★' });
       browser.storage.local.set({ show_compat_notice : true });
     }
   },
