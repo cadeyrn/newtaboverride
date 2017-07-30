@@ -31,17 +31,17 @@ const options = {
    * @returns {void}
    */
   async load () {
-    const options = await browser.storage.local.get(defaults);
+    const option = await browser.storage.local.get(defaults);
 
-    elType.querySelector('[value="' + options.type + '"]').selected = true;
-    elUrl.value = options.url;
+    elType.querySelector('[value="' + option.type + '"]').selected = true;
+    elUrl.value = option.url;
     options.toggleUrlOption();
 
-    if (options.type === 'feed') {
+    if (option.type === 'feed') {
       options.testFeedPermission();
     }
 
-    if (options.show_compat_notice === true) {
+    if (option.show_compat_notice === true) {
       elCompatNotice.classList.remove('hidden');
     }
   },
