@@ -6,6 +6,15 @@ const OPTIONS_PAGE = 'html/options.html';
  * @exports newtaboverride
  */
 const newtaboverride = {
+  parseVersion (version) {
+    const x = version.split('.');
+    const major = parseInt(x[0]) || 0;
+    const minor = parseInt(x[1]) || 0;
+    const patch = parseInt(x[2]) || 0;
+
+    return { major, minor, patch }
+  },
+
   /**
    * Fired when the extension is first installed, when the extension is updated to a new version or when the browser
    * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed
@@ -20,9 +29,14 @@ const newtaboverride = {
       browser.browserAction.setBadgeText({ text : '★' });
     }
 
-    if (details.reason === 'update' && parseFloat(details.previousVersion) < 7) {
-      browser.browserAction.setBadgeText({ text : '★' });
-      browser.storage.local.set({ show_compat_notice : true });
+    if (details.reason === 'update') {
+      if (newtaboverride.parseVersion(details.previousVersion).major < 7) {
+        browser.browserAction.setBadgeText({text : '★'});
+        browser.storage.local.set({show_compat_notice : true});
+      }
+      else {
+        browser.storage.local.set({show_compat_notice : false});
+      }
     }
   },
 
