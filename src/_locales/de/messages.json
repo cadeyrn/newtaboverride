@@ -1,4 +1,10 @@
 {
+  "clear_locationbar_description": {
+    "message": "Das automatische Leeren der Adressleiste wird in späteren Versionen von Firefox wieder möglich sein."
+  },
+  "clear_locationbar_title": {
+    "message": "Adressleiste leeren"
+  },
   "compat_notice_message": {
     "message": "New Tab Override wurde von Grund auf neu als sogenannte WebExtension entwickelt. Damit ist New Tab Override auch zu Firefox 57 und neuer kompatibel. Nicht alle Optionen der Vorgänger-Version sind derzeit als WebExtension umsetzbar. Sobald Mozilla die Unterstützung für fehlende Funktionen in Firefox ergänzt, werden diese als Update von New Tab Override nachgereicht."
   },

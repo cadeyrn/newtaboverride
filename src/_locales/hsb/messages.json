@@ -1,4 +1,10 @@
 {
+  "clear_locationbar_description": {
+    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox."
+  },
+  "clear_locationbar_title": {
+    "message": "Adresowe polo wuprózdnić"
+  },
   "compat_notice_message": {
     "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
   },
