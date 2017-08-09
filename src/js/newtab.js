@@ -35,7 +35,7 @@ const newtab = {
     });
   },
 
-  isValidUri : function (string) {
+  isValidUri (string) {
     return URI_REGEX.test(string);
   }
 };
