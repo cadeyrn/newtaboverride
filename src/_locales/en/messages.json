@@ -86,6 +86,9 @@
   "type_title": {
     "message": "Option"
   },
+  "upgrade_notice_message": {
+    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+  },
   "url_description": {
     "message": "This page is shown when opening a new tab and the option „custom URL“ is selected."
   },

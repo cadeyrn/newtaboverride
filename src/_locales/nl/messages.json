@@ -86,6 +86,9 @@
   "type_title": {
     "message": "Optie"
   },
+  "upgrade_notice_message": {
+    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+  },
   "url_description": {
     "message": "Deze pagina wordt bij het openen van een nieuw tabblad weergegeven als de optie „aangepaste URL“ is geselecteerd."
   },

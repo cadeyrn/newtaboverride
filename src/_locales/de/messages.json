@@ -86,6 +86,9 @@
   "type_title": {
     "message": "Option"
   },
+  "upgrade_notice_message": {
+    "message": "Nutzer bisheriger Versionen von New Tab Override müssen das Add-on neu konfigurieren."
+  },
   "url_description": {
     "message": "Die Seite wird beim Öffnen eines neuen Tabs angezeigt, wenn die Option „eigene URL“ ausgewählt worden ist."
   },

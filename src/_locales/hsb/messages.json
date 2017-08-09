@@ -86,6 +86,9 @@
   "type_title": {
     "message": "Opcija"
   },
+  "upgrade_notice_message": {
+    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+  },
   "url_description": {
     "message": "Tuta strona so pokazuje, hdyž so nowy rajtark wočinja a so opcija „swójski URL“ wuběra."
   },
