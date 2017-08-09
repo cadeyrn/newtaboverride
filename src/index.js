@@ -1,22 +1,10 @@
 const { viewFor } = require('sdk/view/core');
-const newTabUrlJsm = require('resource:///modules/NewTabURL.jsm').NewTabURL;
 const simplePrefs = require('sdk/simple-prefs');
 const tabs = require('sdk/tabs');
 const tabutils = require('sdk/tabs/utils');
 
 const newtaboverride = {
   onPrefChange : function () {
-    const type = simplePrefs.prefs['type'];
-    let newTabUrl;
-
-    switch (type) {
-      case 'about:newtab':
-        newTabUrl = type;
-        break;
-    }
-
-    newTabUrlJsm.override(newTabUrl);
-
     const focus_website = simplePrefs.prefs['focus_website'];
     if (focus_website) {
       tabs.on('open', newtaboverride.focusListener);
