@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "npm-run-all": "4.0.2",
-    "web-ext": "1.10.1"
+    "web-ext": "2.0.0"
   },
   "scripts": {
     "build": "cd src && web-ext build -a ../dist",
