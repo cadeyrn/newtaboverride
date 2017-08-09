@@ -31,7 +31,7 @@ const newtaboverride = {
 
     if (details.reason === 'update') {
       if (newtaboverride.parseVersion(details.previousVersion).major < 7) {
-        browser.browserAction.setBadgeText({text : '★'});
+        browser.runtime.openOptionsPage();
         browser.storage.local.set({show_compat_notice : true});
       }
       else {
