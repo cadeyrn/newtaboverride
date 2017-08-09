@@ -3,6 +3,7 @@
 const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 
 const elCompatNotice = document.getElementById('compat-notice');
+const elDefaultOption = document.getElementById('default_option');
 const elFeedPermission = document.getElementById('feed_permission_container');
 const elFeedPermissionBtn = document.getElementById('feed_permission');
 const elFeedPermissionRevoke = document.getElementById('feed_permission_revoke_container');
@@ -15,7 +16,14 @@ const elUrl = document.getElementById('url');
  * @exports options
  */
 const options = {
-  toggleUrlOption () {
+  toggleOptionsDetails () {
+    if (elType.options[elType.selectedIndex].value === 'default') {
+      elDefaultOption.classList.remove('hidden');
+    }
+    else {
+      elDefaultOption.classList.add('hidden');
+    }
+
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       elUrlOption.classList.remove('hidden');
     }
@@ -35,7 +43,7 @@ const options = {
 
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
-    options.toggleUrlOption();
+    options.toggleOptionsDetails();
 
     if (option.type === 'feed') {
       options.testFeedPermission();
@@ -94,7 +102,7 @@ elType.addEventListener('change', (e) => {
   }
 
   browser.storage.local.set({ type : e.target.value });
-  options.toggleUrlOption();
+  options.toggleOptionsDetails();
 });
 
 elUrl.addEventListener('input', (e) => {

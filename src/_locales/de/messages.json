@@ -5,6 +5,9 @@
   "compat_notice_title": {
     "message": "Es fehlen Funktionen?"
   },
+  "default_option_description": {
+    "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere das Add-on New Tab Override (keine Deinstallation notwendig)."
+  },
   "extension_description": {
     "message": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
@@ -79,6 +82,9 @@
   },
   "type_options_custom_url": {
     "message": "eigene URL"
+  },
+  "type_options_default": {
+    "message": "Standard-Seite von Firefox verwenden"
   },
    "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"

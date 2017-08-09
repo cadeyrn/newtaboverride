@@ -5,6 +5,9 @@
   "compat_notice_title": {
     "message": "Missing some options?"
   },
+  "default_option_description": {
+    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override add-on (no uninstall required)."
+  },
   "extension_description": {
     "message": "Deze add-on herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
   },
@@ -79,6 +82,9 @@
   },
   "type_options_custom_url": {
     "message": "aangepaste URL"
+  },
+  "type_options_default": {
+    "message": "use default page of Firefox"
   },
    "type_options_feed": {
     "message": "Mozilla-nieuws (Duits)"

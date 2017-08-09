@@ -5,6 +5,9 @@
   "compat_notice_title": {
     "message": "Missing some options?"
   },
+  "default_option_description": {
+    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override add-on (no uninstall required)."
+  },
   "extension_description": {
     "message": "Toś ten dodank pśinjaso funkciju slědk, bok změniś, kótaryž so pśi wócynjanju nowego rejtarka pokazujo."
   },
@@ -79,6 +82,9 @@
   },
   "type_options_custom_url": {
     "message": "swójski URL"
+  },
+  "type_options_default": {
+    "message": "use default page of Firefox"
   },
    "type_options_feed": {
     "message": "Nowinki Mozilla (nimski)"
