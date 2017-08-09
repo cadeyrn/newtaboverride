@@ -11,13 +11,6 @@ const newtaboverride = {
     } else {
       tabs.removeListener('open', newtaboverride.focusListener);
     }
-
-    const clear_locationbar = simplePrefs.prefs['clear_locationbar'];
-    if (clear_locationbar) {
-      tabs.on('open', newtaboverride.clearLocationBarListener);
-    } else {
-      tabs.removeListener('open', newtaboverride.clearLocationBarListener);
-    }
   },
 
   focusListener: function (tab) {
@@ -30,19 +23,7 @@ const newtaboverride = {
         tab_opened = false;
       }
     });
-  },
-
-  clearLocationBarListener: function (tab) {
-    let tab_opened = true;
-    tab.on('ready', function () {
-      if (tab_opened) {
-        let xultab = viewFor(tab);
-        let window = tabutils.getOwnerWindow(xultab);
-        window.document.getElementById('urlbar').value = '';
-        tab_opened = false;
-      }
-    });
-  },
+  }
 };
 
 const main = () => {
