@@ -74,9 +74,9 @@ input:focus {
 }
 
 #url:focus {
-  border: 1px solid rgb(58, 189, 244);
+  border-color: rgb(58, 189, 244);
 }
 
-#url.error, #url.error:focus {
+#url.error {
   border-color: rgb(220, 100, 83);
 }
