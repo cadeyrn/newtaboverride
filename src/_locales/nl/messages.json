@@ -12,7 +12,7 @@
     "message": "Missing some options?"
   },
   "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override add-on (no uninstall required)."
+    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
   "extension_description": {
     "message": "Deze add-on herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
@@ -102,7 +102,7 @@
     "message": "Optie"
   },
   "upgrade_notice_message": {
-    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+    "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
   },
   "url_description": {
     "message": "Deze pagina wordt bij het openen van een nieuw tabblad weergegeven als de optie „aangepaste URL“ is geselecteerd."

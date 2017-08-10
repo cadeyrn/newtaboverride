@@ -12,7 +12,7 @@
     "message": "Missing some options?"
   },
   "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override add-on (no uninstall required)."
+    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
   "extension_description": {
     "message": "Tutón přidatk přinjese funkciju wróćo, stronu změnić, kotraž se při wočinjenju noweho rajtarka pokazuje."
@@ -102,7 +102,7 @@
     "message": "Opcija"
   },
   "upgrade_notice_message": {
-    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+    "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
   },
   "url_description": {
     "message": "Tuta strona so pokazuje, hdyž so nowy rajtark wočinja a so opcija „swójski URL“ wuběra."

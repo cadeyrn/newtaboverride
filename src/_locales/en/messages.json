@@ -12,10 +12,10 @@
     "message": "Missing some options?"
   },
   "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override add-on (no uninstall required)."
+    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
   "extension_description": {
-    "message": "This add-on brings back the ability to change the page which is shown when opening a new tab."
+    "message": "This extension brings back the ability to change the page which is shown when opening a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -60,7 +60,7 @@
     "message": "Donate"
   },
   "settings_donation_text": {
-    "message": "Please consider a donation to support the ongoing development of this add-on."
+    "message": "Please consider a donation to support the ongoing development of this extension."
   },
   "settings_feed_permission_action": {
     "message": "Grant permission"
@@ -102,7 +102,7 @@
     "message": "Option"
   },
   "upgrade_notice_message": {
-    "message": "Users of previous versions of New Tab Override need to reconfigure the add-on."
+    "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
   },
   "url_description": {
     "message": "This page is shown when opening a new tab and the option „custom URL“ is selected."

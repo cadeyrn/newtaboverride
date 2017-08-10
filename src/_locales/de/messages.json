@@ -12,10 +12,10 @@
     "message": "Es fehlen Funktionen?"
   },
   "default_option_description": {
-    "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere das Add-on New Tab Override (keine Deinstallation notwendig)."
+    "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
   },
   "extension_description": {
-    "message": "Dieses Add-on bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
+    "message": "Diese Erweiterung bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -60,7 +60,7 @@
     "message": "Spenden"
   },
   "settings_donation_text": {
-    "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieses Add-ons zu gewährleisten."
+    "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieser Erweiterung zu gewährleisten."
   },
   "settings_feed_permission_action": {
     "message": "Berechtigung erteilen"
@@ -102,7 +102,7 @@
     "message": "Option"
   },
   "upgrade_notice_message": {
-    "message": "Nutzer bisheriger Versionen von New Tab Override müssen das Add-on neu konfigurieren."
+    "message": "Nutzer bisheriger Versionen von New Tab Override müssen die Erweiterung neu konfigurieren."
   },
   "url_description": {
     "message": "Die Seite wird beim Öffnen eines neuen Tabs angezeigt, wenn die Option „eigene URL“ ausgewählt worden ist."

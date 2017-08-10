@@ -125,7 +125,7 @@ elUrl.addEventListener('input', (e) => {
   if (options.isValidUri(e.target.value)) {
     elUrl.classList.remove('error');
     elUrlWrapper.querySelector('.error-message').classList.add('hidden');
-    
+
     browser.storage.local.set({ url : e.target.value });
   }
   else {
