@@ -32,10 +32,10 @@ const newtaboverride = {
     if (details.reason === 'update') {
       if (newtaboverride.parseVersion(details.previousVersion).major < 7) {
         browser.runtime.openOptionsPage();
-        browser.storage.local.set({show_compat_notice : true});
+        browser.storage.local.set({ show_compat_notice : true });
       }
       else {
-        browser.storage.local.set({show_compat_notice : false});
+        browser.storage.local.set({ show_compat_notice : false });
       }
     }
   },
