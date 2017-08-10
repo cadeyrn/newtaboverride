@@ -131,13 +131,13 @@ elUrl.addEventListener('input', (e) => {
   else {
     elUrl.classList.add('error');
 
-    if (e.target.value.startsWith('ftp://')) {
+    if (e.target.value.startsWith('file://')) {
       elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
-      elUrlWrapper.querySelector('.error-message.ftp').classList.remove('hidden');
+      elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
     }
     else {
       elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
-      elUrlWrapper.querySelector('.error-message.ftp').classList.add('hidden');
+      elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
     }
 
     browser.storage.local.set({ url : 'about:blank' });

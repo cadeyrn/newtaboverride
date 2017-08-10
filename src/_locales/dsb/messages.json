@@ -113,7 +113,7 @@
   "url_validation_default": {
     "message": "This is not a valid URL."
   },
-  "url_validation_ftp": {
+  "url_validation_file": {
     "message": "Access to local files is no longer possible for extensions."
   }
 }
