@@ -79,7 +79,7 @@ input:focus {
   right: 0;
   font-size: 12px;
   background: rgb(220, 100, 83);
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 0 10px;
   height: 20px;
   line-height: 20px;
