@@ -11,6 +11,10 @@ label:not(.has-own-label) {
   font-weight: bold;
 }
 
+label.has-own-label {
+  color: rgb(90, 90, 90);
+}
+
 select {
   box-sizing: border-box;
   padding: 2px 5px;
@@ -25,6 +29,10 @@ input[type='text'] {
   line-height: 24px;
   border: 1px solid rgb(218, 218, 218);
   transition: border ease 250ms;
+}
+
+input[type='checkbox'] {
+  vertical-align: text-bottom;
 }
 
 input:focus {
