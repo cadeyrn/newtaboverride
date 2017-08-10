@@ -81,7 +81,7 @@ input:focus {
   background: rgb(220, 100, 83);
   color: rgb(255, 255, 255);
   padding: 0 10px;
-  height: 20px;
+  min-height: 20px;
   line-height: 20px;
 }
 

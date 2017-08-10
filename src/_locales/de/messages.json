@@ -112,5 +112,8 @@
   },
   "url_validation_default": {
     "message": "Dies ist keine gültige URL."
+  },
+  "url_validation_ftp": {
+    "message": "Der Zugriff auf lokale Dateien ist für Erweiterungen nicht länger möglich."
   }
 }
