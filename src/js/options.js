@@ -122,9 +122,11 @@ elType.addEventListener('change', (e) => {
 
 elUrl.addEventListener('input', (e) => {
   if (options.isValidUri(e.target.value)) {
+    elUrl.classList.remove('error');
     browser.storage.local.set({ url : e.target.value });
   }
   else {
+    elUrl.classList.add('error');
     browser.storage.local.set({ url : 'about:blank' });
   }
 });

@@ -68,3 +68,15 @@ input:focus {
 .vertical-align label {
   margin-left: 5px;
 }
+
+#url {
+  border: 1px solid rgb(38, 169, 224);
+}
+
+#url:focus {
+  border: 1px solid rgb(58, 189, 244);
+}
+
+#url.error, #url.error:focus {
+  border-color: rgb(220, 100, 83);
+}
