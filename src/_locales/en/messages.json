@@ -1,6 +1,6 @@
 {
   "clear_locationbar_description": {
-    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox."
+    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
   },
   "clear_locationbar_title": {
     "message": "Clear location bar"
@@ -35,6 +35,12 @@
   "focus_website_title": {
     "message": "Focus"
   },
+  "github_link": {
+    "message": "New Tab Override on GitHub"
+  },
+  "github_notice": {
+    "message": "Feature requests or error report? Open a ticket on GitHub:"
+  },
   "introduction_part_one": {
     "message": "This page is provided by"
   },
@@ -49,12 +55,6 @@
   },
   "review_text": {
     "message": "Do you like the add-on? Then please leave a review on"
-  },
-  "settings_code_caption": {
-    "message": "Source Code & License"
-  },
-  "settings_code_link": {
-    "message": "Source Code"
   },
   "settings_donate": {
     "message": "Donate"
@@ -76,9 +76,6 @@
   },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You have already granted this permission."
-  },
-  "settings_license_link": {
-    "message": "MPL 2.0 License"
   },
   "settings_main_caption": {
     "message": "Settings"

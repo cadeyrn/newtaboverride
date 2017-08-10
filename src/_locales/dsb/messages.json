@@ -1,6 +1,6 @@
 {
   "clear_locationbar_description": {
-    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox."
+    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
   },
   "clear_locationbar_title": {
     "message": "Adresowe pólo wuprozniś"
@@ -35,6 +35,12 @@
   "focus_website_title": {
     "message": "Fokus"
   },
+  "github_link": {
+    "message": "New Tab Override on GitHub"
+  },
+  "github_notice": {
+    "message": "Feature requests or error report? Open a ticket on GitHub:"
+  },
   "introduction_part_one": {
     "message": "Toś ten bok staja se k dispoziciji wót"
   },
@@ -49,12 +55,6 @@
   },
   "review_text": {
     "message": "Dodank se wam spódoba? Ga zawóstajśo pógódnośenje na"
-  },
-  "settings_code_caption": {
-    "message": "Žrědłowy kod a licenca"
-  },
-  "settings_code_link": {
-    "message": "Žrědłowy kod"
   },
   "settings_donate": {
     "message": "Pósćiś"
@@ -76,9 +76,6 @@
   },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You have already granted this permission."
-  },
-  "settings_license_link": {
-    "message": "MPL 2.0 licenca"
   },
   "settings_main_caption": {
     "message": "Nastajenja"

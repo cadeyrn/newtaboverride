@@ -1,6 +1,6 @@
 {
   "clear_locationbar_description": {
-    "message": "Das automatische Leeren der Adressleiste wird in späteren Versionen von Firefox wieder möglich sein."
+    "message": "Das automatische Leeren der Adressleiste wird in späteren Versionen von Firefox wieder möglich sein. Dies erfordert eine Änderung seitens Mozilla."
   },
   "clear_locationbar_title": {
     "message": "Adressleiste leeren"
@@ -35,6 +35,12 @@
   "focus_website_title": {
     "message": "Fokus"
   },
+  "github_link": {
+    "message": "New Tab Override auf GitHub"
+  },
+  "github_notice": {
+    "message": "Feature-Wünsche oder Fehler-Bericht? Eröffne ein Ticket auf GitHub:"
+  },
   "introduction_part_one": {
     "message": "Diese Seite wird bereitgestellt von"
   },
@@ -49,12 +55,6 @@
   },
   "review_text": {
     "message": "Magst du diese Erweiterung? Dann hinterlasse bitte eine Bewertung auf"
-  },
-  "settings_code_caption": {
-    "message": "Quellcode & Lizenz"
-  },
-  "settings_code_link": {
-    "message": "Quellcode"
   },
   "settings_donate": {
     "message": "Spenden"
@@ -76,9 +76,6 @@
   },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox benötigt deine Erlaubnis, um den News-Feed von soeren-hentzschel.at zu lesen. Du hast diese Berechtigung bereits erteilt."
-  },
-  "settings_license_link": {
-    "message": "MPL 2.0 Lizenz"
   },
   "settings_main_caption": {
     "message": "Einstellungen"
