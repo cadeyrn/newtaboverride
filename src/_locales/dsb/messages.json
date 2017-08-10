@@ -109,5 +109,8 @@
   },
   "url_title": {
     "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "This is not a valid URL."
   }
 }

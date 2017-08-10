@@ -69,6 +69,22 @@ input:focus {
   margin-left: 5px;
 }
 
+#url-wrapper {
+  position: relative;
+}
+
+#url-wrapper .error-message {
+  position: absolute;
+  bottom: -21px;
+  right: 0;
+  font-size: 12px;
+  background: rgb(220, 100, 83);
+  color: #fff;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+}
+
 #url {
   border: 1px solid rgb(38, 169, 224);
 }

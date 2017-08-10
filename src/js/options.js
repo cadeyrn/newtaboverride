@@ -15,15 +15,16 @@ const elFeedPermissionRevoke = document.getElementById('feed_permission_revoke_c
 const elFeedPermissionRevokeBtn = document.getElementById('feed_permission_revoke');
 const elFocusWebsite = document.getElementById('focus_website');
 const elType = document.getElementById('type');
-const elUrlOption = document.getElementById('url_option');
 const elUrl = document.getElementById('url');
+const elUrlOption = document.getElementById('url_option');
+const elUrlWrapper = document.getElementById('url-wrapper');
 
 /**
  * @exports options
  */
 const options = {
   isValidUri (string) {
-    return URI_REGEX.test(string);
+    return URI_REGEX.test(string) || string === '' || string === 'about:blank';
   },
 
   toggleOptionsDetails () {
@@ -123,10 +124,12 @@ elType.addEventListener('change', (e) => {
 elUrl.addEventListener('input', (e) => {
   if (options.isValidUri(e.target.value)) {
     elUrl.classList.remove('error');
+    elUrlWrapper.querySelector('.error-message').classList.add('hidden');
     browser.storage.local.set({ url : e.target.value });
   }
   else {
     elUrl.classList.add('error');
+    elUrlWrapper.querySelector('.error-message').classList.remove('hidden');
     browser.storage.local.set({ url : 'about:blank' });
   }
 });

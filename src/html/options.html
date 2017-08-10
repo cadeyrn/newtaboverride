@@ -39,7 +39,10 @@
             <h3>__MSG_url_title__</h3>
             <label for='url' class='hidden-label'>__MSG_url_title__</label>
             <div class='info-icon'>__MSG_url_description__</div>
-            <input type='text' name='url' id='url' placeholder='__MSG_settings_url_field_placeholder__' />
+            <div id='url-wrapper'>
+              <input type='text' name='url' id='url' placeholder='__MSG_settings_url_field_placeholder__' />
+              <span class='error-message hidden'>__MSG_url_validation_default__</span>
+            </div>
             <h3>__MSG_focus_website_title__</h3>
             <div>
               <input type='checkbox' name='focus_website' id='focus_website'>
