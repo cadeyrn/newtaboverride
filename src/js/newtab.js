@@ -22,14 +22,14 @@ const newtab = {
           if (options.focus_website) {
             browser.tabs.getCurrent((tab) => {
               const tabId = tab.id;
-              const created = browser.tabs.create({ 'url' : options.url });
+              const created = browser.tabs.create({ 'url' : options.url || 'about:blank' });
               created.then(() => {
                 browser.tabs.remove(tabId);
               });
             });
           }
           else {
-            browser.tabs.update({ url : options.url });
+            browser.tabs.update({ url : options.url || 'about:blank' });
           }
           break;
         case 'feed':
