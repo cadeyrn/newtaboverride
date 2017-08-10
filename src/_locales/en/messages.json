@@ -29,6 +29,12 @@
   "feed_title": {
     "message": "Mozilla News"
   },
+  "focus_website_description": {
+    "message": "Set focus to the web page instead of the location bar"
+  },
+  "focus_website_title": {
+    "message": "Focus"
+  },
   "introduction_part_one": {
     "message": "This page is provided by"
   },

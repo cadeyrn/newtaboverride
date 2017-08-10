@@ -29,6 +29,12 @@
   "feed_title": {
     "message": "Mozilla-Neuigkeiten"
   },
+  "focus_website_description": {
+    "message": "Fokus auf Webseite statt in Adressleiste setzen"
+  },
+  "focus_website_title": {
+    "message": "Fokus"
+  },
   "introduction_part_one": {
     "message": "Diese Seite wird bereitgestellt von"
   },

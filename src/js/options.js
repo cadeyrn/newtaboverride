@@ -8,6 +8,7 @@ const elFeedPermission = document.getElementById('feed_permission_container');
 const elFeedPermissionBtn = document.getElementById('feed_permission');
 const elFeedPermissionRevoke = document.getElementById('feed_permission_revoke_container');
 const elFeedPermissionRevokeBtn = document.getElementById('feed_permission_revoke');
+const elFocusWebsite = document.getElementById('focus_website');
 const elType = document.getElementById('type');
 const elUrlOption = document.getElementById('url_option');
 const elUrl = document.getElementById('url');
@@ -41,6 +42,7 @@ const options = {
   async load () {
     const option = await browser.storage.local.get(defaults);
 
+    elFocusWebsite.checked = option.focus_website;
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
     options.toggleOptionsDetails();
@@ -91,6 +93,10 @@ const options = {
 document.addEventListener('DOMContentLoaded', options.load);
 elFeedPermissionBtn.addEventListener('click', options.requestFeedPermission);
 elFeedPermissionRevokeBtn.addEventListener('click', options.revokeFeedPermission);
+
+elFocusWebsite.addEventListener('change', (e) => {
+  browser.storage.local.set({ focus_website : e.target.checked });
+});
 
 elType.addEventListener('change', (e) => {
   if (e.target.value === 'feed') {

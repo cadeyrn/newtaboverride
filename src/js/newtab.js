@@ -24,7 +24,19 @@ const newtab = {
           browser.tabs.update({ url : options.type });
           break;
         case 'custom_url':
-          browser.tabs.update({ url : newtab.isValidUri(options.url) ? options.url : 'about:blank' });
+          const newTabUrl = newtab.isValidUri(options.url) ? options.url : 'about:blank';
+          if (options.focus_website) {
+            browser.tabs.getCurrent((tab) => {
+              const tabId = tab.id;
+              const created = browser.tabs.create({ 'url' : newTabUrl });
+              created.then(() => {
+                browser.tabs.remove(tabId);
+              });
+            });
+          }
+          else {
+            browser.tabs.update({ url : newTabUrl });
+          }
           break;
         case 'feed':
           browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });

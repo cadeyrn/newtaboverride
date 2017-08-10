@@ -6,7 +6,7 @@ h3 {
   font-size: 16px;
 }
 
-label:not(.hasOwnLabel) {
+label:not(.has-own-label) {
   display: block;
   font-weight: bold;
 }

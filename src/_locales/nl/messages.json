@@ -29,6 +29,12 @@
   "feed_title": {
     "message": "Mozilla-nieuws"
   },
+  "focus_website_description": {
+    "message": "Focus op de webpagina leggen in plaats van de locatiebalk"
+  },
+  "focus_website_title": {
+    "message": "Focus"
+  },
   "introduction_part_one": {
     "message": "Deze pagina wordt aangeboden door"
   },
