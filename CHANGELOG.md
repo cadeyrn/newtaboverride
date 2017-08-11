@@ -2,6 +2,45 @@
 
 ## Release Notes
 
+### Version 7.0.0 (2017-08-11)
+
+**New Tab Override is a WebExtension and compatible with Firefox 57+ now!**
+
+New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible
+with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as
+Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of
+New Tab Override.
+
+**Notice for users of previous versions:** you have re-configure the add-on. After the update the settings page will
+  automatically be opened.
+
+**New features:**
+
+- [DESIGN] some design improvements, including a new logo
+- [ENHANCEMENT] new logo is a SVG file instead of a number of different PNG files
+- [ENHANCEMENT] use of new permission system and only request needed permissions
+- [ENHANCEMENT] use of optional permission for feed option. You can revoke the permission at any time
+- [ENHANCEMENT] use of fetch instead of XMLHttpRequest for feed option
+- [ENHANCEMENT] there is now a live validation for custom URLs so that you have a direct feedback during the input
+- [ENHANCEMENT] you can open the settings via keyboard shortcut Shift + F12
+- [ENHANCEMENT] you can open the settings via entering "newtab settings" in the address bar
+- [ENHANCEMENT] there is an upgrade notice for users of the legecy version of New Tab Override. This notice is not
+  visible on fresh installs
+- [CODE QUALITY] improved code quality and more code documentation, use of ESlint, stylelint, htmllint and JSDoc
+
+**Thanks to [Ura Design](https://ura.design/) for the new logo!**
+
+Missing features:
+
+- At the moment You can't clear the address bar for new tabs. It will be possible in future versions of Firefox again.
+- At the moment You can't use the home page as new tab page. Please enter manually the URL in the settings of New Tab
+  Override. It will be possible in future versions of Firefox again.
+- You can no longer use about:sync-tabs as new tab page as Mozilla removed this page in Firefox 55. It's not yet
+  decided if showing synced tabs as new tab page will be possible again in the future.
+- You can no longer use local files via file:// protocol as new tab page for security reasons. Please upload your local
+  file to a web server to use it again.
+- The option to use the last URL from clipboard was not re-implemented in New Tab Override 7.0.
+
 ### Version 6.0.1 (2016-12-27)
 
 - [TRANSLATION] updated translations
