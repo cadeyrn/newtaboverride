@@ -15,7 +15,7 @@
     "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
   "extension_description": {
-    "message": "Tutón přidatk přinjese funkciju wróćo, stronu změnić, kotraž se při wočinjenju noweho rajtarka pokazuje."
+    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -49,9 +49,6 @@
   },
   "omnibox_command_settings": {
     "message": "Open the new tab's settings"
-  },
-  "omnibox_default_description": {
-    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
   },
   "review_text": {
     "message": "Přidatk so wam spodoba? Da zawostajće pohódnoćenje na"

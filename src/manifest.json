@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_extension_name__",
   "version": "7.0.0",
-  "description": "__MSG_extension_description__",
+  "description": "__MSG_extension_description__.",
   "icons": {
     "48": "images/icon.svg",
     "96": "images/icon.svg"

@@ -15,7 +15,7 @@
     "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
   },
   "extension_description": {
-    "message": "Diese Erweiterung bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
+    "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird"
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -49,9 +49,6 @@
   },
   "omnibox_command_settings": {
     "message": "Öffne die Einstellungen für den neuen Tab"
-  },
-  "omnibox_default_description": {
-    "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird"
   },
   "review_text": {
     "message": "Magst du diese Erweiterung? Dann hinterlasse bitte eine Bewertung auf"

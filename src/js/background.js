@@ -133,5 +133,5 @@ const newtaboverride = {
 browser.browserAction.onClicked.addListener(newtaboverride.openUserInterface);
 browser.omnibox.onInputChanged.addListener(newtaboverride.showOmniboxSuggestions);
 browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
-browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('omnibox_default_description') });
+browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
 browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
