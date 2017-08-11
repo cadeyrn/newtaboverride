@@ -11,7 +11,7 @@
 - [ENHANCEMENT] new option: clear location bar after opening a tab
 - [TRANSLATION] added Upper Sorbian translation (Thanks, milupo!)
 - [TRANSLATION] added Lower Sorbian translation (Thanks, milupo!)
-- [TRANSLATION] Updated Dutch translation (Thanks, Tonnes!)
+- [TRANSLATION] updated Dutch translation (Thanks, Tonnes!)
 
 ### Version 5.0.0 (2016-12-18)
 
