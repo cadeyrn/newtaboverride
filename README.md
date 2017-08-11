@@ -1,10 +1,10 @@
 # Firefox Add-on: New Tab Override (WebExtension)
 
-New Tab Override brings back the ability to change the page which is shown when opening a new tab.
-
-<img src="logo.png" alt="Logo" width="300" border="0" />
+<img src="logo.png" alt="Logo" width="200" border="0" />
 
 ## Description
+
+**New Tab Override brings back the ability to change the page which is shown when opening a new tab.**
 
 Since Firefox 41 it's no longer possible to customize the page shown in a new tab via changing the preference
 browser.newtab.url in about.config. Because of the fact that hijackers abused the preference in the past, Mozilla
