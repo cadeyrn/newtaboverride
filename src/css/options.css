@@ -1,4 +1,4 @@
-section form > div {
+form > div {
   margin-bottom: 20px;
 }
 
@@ -6,9 +6,9 @@ h3 {
   font-size: 16px;
 }
 
-label:not(.has-own-label) {
+label:not(.has-own-label):not(.hidden-label) {
   display: block;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 label.has-own-label {
@@ -40,7 +40,7 @@ input:focus {
 }
 
 #nto-introduction {
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px 0;
   padding: 10px;
   background: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
@@ -48,7 +48,7 @@ input:focus {
 
 #nto-introduction a {
   color: inherit;
-  font-weight: bold;
+  font-weight: 700;
   transition: color ease 250ms;
 }
 
@@ -57,7 +57,7 @@ input:focus {
 }
 
 .hidden-label {
-  display: none !important;
+  display: none;
 }
 
 .vertical-align > div {
@@ -77,12 +77,12 @@ input:focus {
   position: absolute;
   bottom: -21px;
   right: 0;
-  font-size: 12px;
-  background: rgb(220, 100, 83);
-  color: rgb(255, 255, 255);
   padding: 0 10px;
   min-height: 20px;
   line-height: 20px;
+  font-size: 12px;
+  background: rgb(220, 100, 83);
+  color: rgb(255, 255, 255);
 }
 
 #url {
