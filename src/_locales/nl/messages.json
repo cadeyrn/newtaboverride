@@ -1,8 +1,8 @@
 {
-  "clear_locationbar_description": {
+  "clear_addressbar_description": {
     "message": "Het automatisch legen van de locatiebalk wordt weer mogelijk in latere versies van Firefox. Dit vereist een wijziging door Mozilla."
   },
-  "clear_locationbar_title": {
+  "clear_addressbar_title": {
     "message": "Locatiebalk wissen"
   },
   "compat_notice_message": {

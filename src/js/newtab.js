@@ -31,7 +31,7 @@ const newtab = {
             });
           });
         }
-        // set focus on location bar
+        // set focus on address bar
         else {
           browser.tabs.update({ url : options.url || 'about:blank' });
         }

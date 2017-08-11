@@ -1,9 +1,9 @@
 {
-  "clear_locationbar_description": {
-    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
+  "clear_addressbar_description": {
+    "message": "The automatic emptying of the address bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
   },
-  "clear_locationbar_title": {
-    "message": "Clear location bar"
+  "clear_addressbar_title": {
+    "message": "Clear address bar"
   },
   "compat_notice_message": {
     "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
@@ -30,7 +30,7 @@
     "message": "Mozilla News"
   },
   "focus_website_description": {
-    "message": "Set focus to the web page instead of the location bar"
+    "message": "Set focus to the web page instead of the address bar"
   },
   "focus_website_title": {
     "message": "Focus"

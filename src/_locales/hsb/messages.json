@@ -1,8 +1,8 @@
 {
-  "clear_locationbar_description": {
-    "message": "The automatic emptying of the location bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
+  "clear_addressbar_description": {
+    "message": "The automatic emptying of the address bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
   },
-  "clear_locationbar_title": {
+  "clear_addressbar_title": {
     "message": "Adresowe polo wuprózdnić"
   },
   "compat_notice_message": {
