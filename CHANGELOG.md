@@ -26,7 +26,7 @@ New Tab Override.
 - [ENHANCEMENT] you can open the settings via entering "newtab settings" in the address bar
 - [ENHANCEMENT] there is an upgrade notice for users of the legecy version of New Tab Override. This notice is not
   visible on fresh installs
-- [CODE QUALITY] improved code quality and more code documentation, use of ESlint, stylelint, htmllint and JSDoc
+- [CODE QUALITY] improved code quality and added more code documentation, use of ESlint, stylelint, htmllint and JSDoc
 
 **Thanks to [Ura Design](https://ura.design/) for the new logo!**
 
