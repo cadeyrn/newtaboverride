@@ -1,5 +1,6 @@
 'use strict';
 
+const FIRST_WEBEXT_VERSION_NUMBER = 7;
 const OPTIONS_PAGE = 'html/options.html';
 
 /**
@@ -7,12 +8,12 @@ const OPTIONS_PAGE = 'html/options.html';
  */
 const newtaboverride = {
   parseVersion (version) {
-    const x = version.split('.');
-    const major = parseInt(x[0]) || 0;
-    const minor = parseInt(x[1]) || 0;
-    const patch = parseInt(x[2]) || 0;
+    const versionParts = version.split('.');
+    const major = parseInt(versionParts[0]) || 0;
+    const minor = parseInt(versionParts[1]) || 0;
+    const patch = parseInt(versionParts[2]) || 0;
 
-    return { major, minor, patch }
+    return { major, minor, patch };
   },
 
   /**
@@ -30,7 +31,7 @@ const newtaboverride = {
     }
 
     if (details.reason === 'update') {
-      if (newtaboverride.parseVersion(details.previousVersion).major < 7) {
+      if (newtaboverride.parseVersion(details.previousVersion).major < FIRST_WEBEXT_VERSION_NUMBER) {
         browser.runtime.openOptionsPage();
         browser.storage.local.set({ show_compat_notice : true });
       }
