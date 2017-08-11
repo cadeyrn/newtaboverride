@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    "node_modules/jsdoc-strip-async-await"
+  ],
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "opts": {
+    "destination": "./docs"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    },
+    "systemName": "New Tab Override",
+    "copyright": "© 2015 - 2017, soeren-hentzschel.at",
+    "path": "ink-docstrap",
+    "theme": "united",
+    "linenums": true,
+    "dateFormat": "DD.MM.YYYY, HH:mm:ss",
+    "outputSourceFiles": true,
+    "search": false,
+    "sort": false
+  }
+}
