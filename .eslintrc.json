@@ -134,7 +134,7 @@
     "no-lone-blocks": "error",
     "no-lonely-if": "error",
     "no-loop-func": "error",
-    "no-magic-numbers": ["error", { "enforceConst": true, "ignore": [-1, 0, 2], "ignoreArrayIndexes": true }],
+    "no-magic-numbers": ["error", { "enforceConst": true, "ignore": [-1, 0, 1, 2], "ignoreArrayIndexes": true }],
     "no-mixed-operators": "error",
     "no-mixed-spaces-and-tabs": "error",
     "no-multi-assign": "error",
