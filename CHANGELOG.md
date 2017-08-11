@@ -39,7 +39,7 @@ Missing features:
   decided if showing synced tabs as new tab page will be possible again in the future.
 - You can no longer use local files via file:// protocol as new tab page for security reasons. Please upload your local
   file to a web server to use it again.
-- The option to use the last URL from clipboard was not re-implemented in New Tab Override 7.0.
+- The option to use the last URL from clipboard was not re-implemented in New Tab Override 7.0.0.
 
 ### Version 6.0.1 (2016-12-27)
 
