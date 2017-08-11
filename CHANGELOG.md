@@ -11,7 +11,7 @@ with Firefox 57 and later. Not all options of the previous version are currently
 Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of
 New Tab Override.
 
-**Notice for users of previous versions:** you have re-configure the add-on. After the update the settings page will
+**Notice for users of previous versions:** you have to re-configure the add-on. After the update the settings page will
   automatically be opened.
 
 **New features:**
