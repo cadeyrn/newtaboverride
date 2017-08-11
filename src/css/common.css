@@ -14,7 +14,7 @@ header {
 main {
   display: flex;
   box-sizing: border-box;
-  padding: 20px 20px 120px 20px;
+  padding: 20px 20px 120px;
   width: 100%;
 }
 
@@ -78,7 +78,7 @@ a:not(.button):hover {
   border: none;
   border-radius: 3px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   background: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
   text-align: center;
@@ -124,7 +124,7 @@ footer a {
   top: 2px;
   left: 0;
   width: 18px;
-  height:18px;
+  height: 18px;
   background: url('../images/info.svg') center center / 18px 18px no-repeat transparent;
 }
 
