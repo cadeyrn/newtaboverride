@@ -1,6 +1,6 @@
 'use strict';
 
-// 1 hour
+// one hour in milliseconds
 const INTERVAL_BETWEEN_FETCHES_IN_MS = 3600000;
 
 /**
@@ -10,6 +10,13 @@ const feedreader = {
   lastFetched : null,
   feedItems : null,
 
+  /**
+   * Checks for new feed items, only once per INTERVAL_BETWEEN_FETCHES_IN_MS milliseconds.
+   *
+   * @param {string} url - the URL to load
+   *
+   * @returns {Array.Object} - an array with the content of all feed items
+   */
   getFeedItems (url) {
     if (feedreader.feedItems === null || (Date.now() - feedreader.lastFetched > INTERVAL_BETWEEN_FETCHES_IN_MS)) {
       feedreader.feedItems = feedreader.fetch(url);
@@ -18,6 +25,14 @@ const feedreader = {
     return feedreader.feedItems;
   },
 
+  /**
+   * Loads the content for a given URL via fetch() API and assign the content of the feed items to an object. Returns
+   * an array with all of feed item objects.
+   *
+   * @param {string} url - the URL to load
+   *
+   * @returns {Array.Object} - an array with the content of all feed items
+   */
   async fetch (url) {
     const feeditems = [];
 

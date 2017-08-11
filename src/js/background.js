@@ -7,6 +7,14 @@ const OPTIONS_PAGE = 'html/options.html';
  * @exports newtaboverride
  */
 const newtaboverride = {
+  /**
+   * This method is used for version comparisons. It parses a given version number string and splits it into a major,
+   * a minor and a patch component.
+   *
+   * @param {string} version - version number as string
+   *
+   * @returns {{major: (int), minor: (int), patch: (int)}} - object with major, minor and patch component of version
+   */
   parseVersion (version) {
     const versionParts = version.split('.');
     const major = parseInt(versionParts[0]) || 0;
@@ -18,18 +26,20 @@ const newtaboverride = {
 
   /**
    * Fired when the extension is first installed, when the extension is updated to a new version or when the browser
-   * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed
-   * or. If the legacy version of this add-on was installed we want to open the options page.
+   * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed.
+   * If the legacy version of this add-on was previously installed we want to open the options page.
    *
    * @param {runtime.OnInstalledReason} details - details.reason contains the reason why this event is being dispatched
    *
    * @returns {void}
    */
   onInstalledHandler (details) {
+    // new install
     if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
     }
 
+    // update
     if (details.reason === 'update') {
       if (newtaboverride.parseVersion(details.previousVersion).major < FIRST_WEBEXT_VERSION_NUMBER) {
         browser.runtime.openOptionsPage();
@@ -111,9 +121,11 @@ const newtaboverride = {
         }
       }
 
+      // there is already a tab open
       if (tabId) {
         browser.tabs.update(tabId, { active : true });
       }
+      // open a new tab
       else {
         browser.tabs.create({ url });
       }

@@ -22,6 +22,7 @@ const newtab = {
         browser.tabs.update({ url : options.type });
         break;
       case 'custom_url':
+        // set focus on website
         if (options.focus_website) {
           browser.tabs.getCurrent((tab) => {
             const tabId = tab.id;
@@ -30,6 +31,7 @@ const newtab = {
             });
           });
         }
+        // set focus on location bar
         else {
           browser.tabs.update({ url : options.url || 'about:blank' });
         }

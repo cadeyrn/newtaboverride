@@ -26,11 +26,24 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
+  /**
+   * Tests if a given string is a valid URL.
+   *
+   * @param {string} string - string to check
+   *
+   * @returns {boolean} - whether the given string is an URL or not
+   */
   isValidUri (string) {
     return URI_REGEX.test(string) || string === '' || string === 'about:blank';
   },
 
+  /**
+   * This method handles the visibilty of the sub sections of some options.
+   *
+   * @returns {void}
+   */
   toggleOptionsDetails () {
+    // default new tab page - show notice for disabling the add-on
     if (elType.options[elType.selectedIndex].value === 'default') {
       elDefaultOption.classList.remove('hidden');
     }
@@ -38,6 +51,7 @@ const options = {
       elDefaultOption.classList.add('hidden');
     }
 
+    // custom url - show advanved options
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       elUrlOption.classList.remove('hidden');
     }
@@ -64,11 +78,18 @@ const options = {
       options.testFeedPermission();
     }
 
+    // only for updates from the legacy add-on
     if (option.show_compat_notice === true) {
       elCompatNotice.classList.remove('hidden');
     }
   },
 
+  /**
+   * Checks if the permission for reading the feed is granted. If so it shows the option to revoke the permission.
+   * Otherwise it shows the option to grant the permission.
+   *
+   * @returns {void}
+   */
   async testFeedPermission () {
     const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
 
@@ -80,6 +101,13 @@ const options = {
     }
   },
 
+  /**
+   * This method is used to request and to grant the permission.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
   async requestFeedPermission (e) {
     e.preventDefault();
 
@@ -91,6 +119,13 @@ const options = {
     }
   },
 
+  /**
+   * This method is used to remove the permission.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
   async revokeFeedPermission (e) {
     e.preventDefault();
 
@@ -125,19 +160,23 @@ elType.addEventListener('change', (e) => {
 });
 
 elUrl.addEventListener('input', (e) => {
+  // valid URL
   if (options.isValidUri(e.target.value)) {
     elUrl.classList.remove('error');
     elUrlWrapper.querySelector('.error-message').classList.add('hidden');
 
     browser.storage.local.set({ url : e.target.value });
   }
+  // no valid URL
   else {
     elUrl.classList.add('error');
 
+    // error message for local files
     if (e.target.value.startsWith('file://')) {
       elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
       elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
     }
+    // default error message
     else {
       elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
       elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');

@@ -11,13 +11,21 @@ const elPermissionNeeded = document.getElementById('permission-needed');
  * @exports feed
  */
 const feed = {
+  /**
+   * This method checks if the permission is granted to read the feed. If so it reads the feed, otherwise it shows
+   * an error message and a link to the options page.
+   *
+   * @returns {void}
+   */
   async init () {
     const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
 
+    // permission is granted
     if (isAllowed) {
       const result = await feedreader.getFeedItems(FEED_URL);
       feed.readFeedItems(result);
     }
+    // permission is not granted
     else {
       document.getElementById('throbber').remove();
       elPermissionNeeded.classList.remove('hidden');
