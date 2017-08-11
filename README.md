@@ -1,12 +1,59 @@
-# New Tab Override (browser.newtab.url replacement)
+# Firefox Add-on: New Tab Override (WebExtension)
 
-### Description
-With Firefox 41 (and higher), it's no longer possible to customize the page shown in a new tab via changing the
-preference browser.newtab.url in about:config. Because of the fact that hijackers abused the preference in the past,
-Mozilla decided to remove it (see [bug 1118285](https://bugzilla.mozilla.org/show_bug.cgi?id=1118285)). Fortunately,
-by removing it, Mozilla also introduced a new API to bring this functionality back to life as an add-on. This add-on
-allows the user to choose a certain page in a new tab.
-### System Requirements (current version)
-Firefox 45.0+
-### Download
-**[Download New Tab Override 6.0.1](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)**
+New Tab Override brings back the ability to change the page which is shown when opening a new tab.
+
+<img src="logo.png" alt="Logo" width="300" border="0" />
+
+## Description
+
+Since Firefox 41 it's no longer possible to customize the page shown in a new tab via changing the preference
+browser.newtab.url in about.config. Because of the fact that hijackers abused the preference in the past, Mozilla
+decided to remove it. Fortunately, by removing it, Mozilla also introduced a new API to bring this functionality back
+to life as an add-on. This add-on allows the user to choose a certain page in a new tab. New Tab Override, today with
+**more than 100,000 users**, was the first add-on providing this functionality and **is therefore the original**.
+
+**New Tab Override is a WebExtension and also compatible with Firefox 57 and later.**
+
+### Features
+
+- change the new tab page to whatever URL you like
+- use about:blank as new tab page
+- use about:home as new tab page
+- get the latest news about Mozilla as new tab page (only in German language)
+- set the focus either to the address bar or to the web site (for example Google search field)
+- beautiful settings UI to make it easy to customize your new tab experience
+- live validation for custom URL so that you get direct feedback
+
+### Shortcuts
+
+The settings interface can also be accessed via the keyboard. For this purpose the combination **Shift + F12** is
+reserved. It is also possible to open the settings interface via entering **newtab settings** in the address bar.
+
+### Planned features
+
+There are already some features planned for the future but these features are still in the investigation phase so there
+is nothing to announce yet. Please suggest your feature requests in the
+[issues tracker](https://github.com/cadeyrn/newtaboverride/issues).
+
+### Languages
+
+The extension is currently available in the following languages:
+
+- English
+- German
+- Dutch (Thanks, Tonnes!)
+- Upper Sorbian (Thanks, milupo!)
+- Lower Sorbian (Thanks, milupo!)
+
+## Compatibility
+
+The extension requires at least Firefox 55. Because the extension makes use of modern web technologies and the latest
+WebExtension APIs, support for older versions of Firefox is not possible for technical reasons.
+
+## Download
+
+[Download New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)
+
+## Release Notes
+
+[Release Notes](CHANGELOG.md "Release Notes")
