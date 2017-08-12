@@ -1,21 +1,21 @@
 {
   "clear_addressbar_description": {
-    "message": "The automatic emptying of the address bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
+    "message": "Awtomatiske prózdnjenje adresoweho pola budźe zaso móžno w pozdźišich wersijach Firefox. To sej změna ze strony Mozilla wužaduje."
   },
   "clear_addressbar_title": {
     "message": "Adresowe polo wuprózdnić"
   },
   "compat_notice_message": {
-    "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
+    "message": "New Tab Override je so dospołnje nowy jako tak mjenowane WebExtension wuwiło. Přez to je New Tab Override tež kompatibelne z Firefox 57 a nowšimi. Nic wšě opcije předchadneje wersije su tuchwilu jako WebExtension realizujomne. Hdyž Mozilla podpěru za falowace funkcije wudospołnja, so tute jako aktualizacija New Tab Override přidadźa."
   },
   "compat_notice_title": {
-    "message": "Missing some options?"
+    "message": "Faluja funkcije?"
   },
   "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
+    "message": "Zo byšće standardnu stronu Firefox wužiwał, wuwołajće about:addons a znjemóžńće rozšěrjenje Tab Override (žane wotinstalowanje trěbne)."
   },
   "extension_description": {
-    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+    "message": "New Tab Override funkciju wróćo přinjese, z kotrejž móžeće stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje"
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -36,10 +36,10 @@
     "message": "Fokus"
   },
   "github_link": {
-    "message": "New Tab Override on GitHub"
+    "message": "New Tab Override na GitHub"
   },
   "github_notice": {
-    "message": "Feature requests or error report? Open a ticket on GitHub:"
+    "message": "Přejeće sej funkcije abo chceće zmylk zdźělić? Pisajće rozprawu na GitHub:"
   },
   "introduction_part_one": {
     "message": "Tuta strona staja so k dispoziciji wot"
@@ -48,7 +48,7 @@
     "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
   },
   "omnibox_command_settings": {
-    "message": "Open the new tab's settings"
+    "message": "Nastajenja za nowy rajtark wočinić"
   },
   "review_text": {
     "message": "Přidatk so wam spodoba? Da zawostajće pohódnoćenje na"
@@ -60,19 +60,19 @@
     "message": "Prošu rozmyslujće dar, zo byšće dalše wuwiwanje tutoho přidatka podpěrał."
   },
   "settings_feed_permission_action": {
-    "message": "Grant permission"
+    "message": "Dowolnosć dać"
   },
   "settings_feed_permission_description": {
-    "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You can revoke this permission at any time."
+    "message": "Firefox dowolnosć trjeba, zo by powěsćowy kanal soeren-hentzschel.at čitał. Móžeće dowolnosć kóždy čas zebrać."
   },
   "settings_feed_permission_needed": {
-    "message": "To use this feature you have to allow Firefox to access the data source."
+    "message": "Zo byšće móhł tutu funkciju wužiwać, dyrbiće Firefox dowolić, datowe žórło čitać."
   },
   "settings_feed_permission_revoke_action": {
-    "message": "Revoke permission"
+    "message": "Dowohlnosć zebrać"
   },
   "settings_feed_permission_revoke_description": {
-    "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You have already granted this permission."
+    "message": "Firefox dowolnosć trjeba, zo by powěsćowy kanal soeren-hentzschel.at čitał. Sće tutu dowolnosć hižo dał."
   },
   "settings_main_caption": {
     "message": "Nastajenja"
@@ -90,7 +90,7 @@
     "message": "swójski URL"
   },
   "type_options_default": {
-    "message": "use default page of Firefox"
+    "message": "Standardnu stronu Firefox wužiwać"
   },
    "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
@@ -99,7 +99,7 @@
     "message": "Opcija"
   },
   "upgrade_notice_message": {
-    "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
+    "message": "Wužiwarjo dotalnych wersijow New Tab Override dyrbja rozšěrjenje konfigurować."
   },
   "url_description": {
     "message": "Tuta strona so pokazuje, hdyž so nowy rajtark wočinja a so opcija „swójski URL“ wuběra."
@@ -108,9 +108,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "This is not a valid URL."
+    "message": "To płaćiwy URL njeje."
   },
   "url_validation_file": {
-    "message": "Access to local files is no longer possible for extensions."
+    "message": "Bohužel přistup na lokalne dataje za rozšěrjenja hižo móžny njeje."
   }
 }
