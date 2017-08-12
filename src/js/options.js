@@ -182,6 +182,6 @@ elUrl.addEventListener('input', (e) => {
       elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
     }
 
-    browser.storage.local.set({ url : 'about:blank' });
+    browser.storage.local.set({ url : '' });
   }
 });
