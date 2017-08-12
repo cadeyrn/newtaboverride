@@ -24,14 +24,18 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  */
 const options = {
   /**
-   * Tests if a given string is a valid URL.
+   * prepend "http://" to string if the string does not start with "http://" or "https://"
    *
    * @param {string} string - string to check
    *
-   * @returns {boolean} - whether the given string is an URL or not
+   * @returns {string} - URL with protocol
    */
-  isValidUri (string) {
-    return URI_REGEX.test(string) || string === '' || string === 'about:blank';
+  getValidUri (string) {
+    if (!URI_REGEX.test(string) && string !== '' && string !== 'about:blank' && string !== 'about:home') {
+      return 'http://' + string;
+    }
+
+    return string;
   },
 
   /**
@@ -157,28 +161,16 @@ elType.addEventListener('change', (e) => {
 });
 
 elUrl.addEventListener('input', (e) => {
-  // valid URL
-  if (options.isValidUri(e.target.value)) {
-    elUrl.classList.remove('error');
-    elUrlWrapper.querySelector('.error-message').classList.add('hidden');
-
-    browser.storage.local.set({ url : e.target.value });
-  }
-  // no valid URL
-  else {
+  // local file access is not allowed for WebExtensions
+  if (e.target.value.startsWith('file://')) {
     elUrl.classList.add('error');
+    elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
+  }
+  // set url
+  else {
+    elUrl.classList.remove('error');
+    elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
 
-    // error message for local files
-    if (e.target.value.startsWith('file://')) {
-      elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
-      elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
-    }
-    // default error message
-    else {
-      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
-      elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
-    }
-
-    browser.storage.local.set({ url : '' });
+    browser.storage.local.set({ url : options.getValidUri(e.target.value) });
   }
 });
