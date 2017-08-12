@@ -2,7 +2,18 @@
 
 ## Release Notes
 
-### Version 7.0.0 (2017-08-11)
+### Version 7.1.0 (2017-08-12)
+
+- [ENHANCEMENT] less strict URL validation, added support for localhost again, fixes
+  [#5](https://github.com/cadeyrn/newtaboverride/issues/5)
+- [ENHANCEMENT] automatically prepend "http://" if the there is no protocol, fixes
+  [#8](https://github.com/cadeyrn/newtaboverride/issues/8)
+- [TRANSLATION] updated Upper Sorbian and Lower Sorbian translations (Thanks, milupo!)
+- [TRANSLATION] fixed typo in German translation
+- [DEPENDENCY] updated gulp-stylelint from version 3.9.0 to 4.0.0
+- [DEPENDENCY] updated jsdoc from version 3.5.3 to 3.5.4
+
+### Version 7.0.0 (2017-08-12)
 
 **New Tab Override is a WebExtension and compatible with Firefox 57+ now!**
 
