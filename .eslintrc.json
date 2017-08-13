@@ -188,7 +188,7 @@
     "no-unsafe-negation": "error",
     "no-unsanitized/method": "error",
     "no-unsanitized/property": "error",
-    "no-unused-expressions": "error",
+    "no-unused-expressions": ["error", { "allowTernary": true }],
     "no-unused-labels": "error",
     "no-unused-vars": ["error", { "vars": "local" }],
     "no-use-before-define": "error",

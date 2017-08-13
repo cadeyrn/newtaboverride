@@ -80,9 +80,9 @@ const options = {
    * @param {HTMLElement} el - the DOM element which should be visible or hidden
    * @param {boolean} condition - whether the element should be visible or hidden
    *
-   * @return {void}
+   * @returns {void}
    */
-  toggleVisibility(el, condition) {
+  toggleVisibility (el, condition) {
     condition ? el.classList.remove('hidden') : el.classList.add('hidden');
   },
 
