@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 7.1.0 (2017-08-12)
+### Version 7.1.0 (2017-08-13)
 
 - [ENHANCEMENT] less strict URL validation, added support for localhost again, fixes
   [#5](https://github.com/cadeyrn/newtaboverride/issues/5)
