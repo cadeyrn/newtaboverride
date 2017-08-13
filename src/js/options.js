@@ -7,12 +7,14 @@ const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 // a not very advanved regex to match most URLs…
 const URI_REGEX = /^https?:\/\/(.*)/i;
 
+const elClearOption = document.getElementById('clear-option');
 const elCompatNotice = document.getElementById('compat-notice');
 const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
 const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-container');
 const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revoke');
+const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
 const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
@@ -44,21 +46,44 @@ const options = {
    * @returns {void}
    */
   toggleOptionsDetails () {
-    // default new tab page - show notice for disabling the add-on
+    let showDisableNotice = false;
+    let showUrlOption = false;
+    let showFocusOption = false;
+    let showClearOption = false;
+
+    // default new tab page
     if (elType.options[elType.selectedIndex].value === 'default') {
-      elDefaultOption.classList.remove('hidden');
-    }
-    else {
-      elDefaultOption.classList.add('hidden');
+      showDisableNotice = true;
     }
 
-    // custom url - show advanved options
+    // about:home
+    if (elType.options[elType.selectedIndex].value === 'about:home') {
+      showFocusOption = true;
+    }
+
+    // custom url
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
-      elUrlOption.classList.remove('hidden');
+      showUrlOption = true;
+      showFocusOption = true;
+      showClearOption = true;
     }
-    else {
-      elUrlOption.classList.add('hidden');
-    }
+
+    options.toggleVisibility(elDefaultOption, showDisableNotice);
+    options.toggleVisibility(elUrlOption, showUrlOption);
+    options.toggleVisibility(elFocusOption, showFocusOption);
+    options.toggleVisibility(elClearOption, showClearOption);
+  },
+
+  /**
+   * This method is used to make an DOM element either visible or invisible based on a given condition.
+   *
+   * @param {HTMLElement} el - the DOM element which should be visible or hidden
+   * @param {boolean} condition - whether the element should be visible or hidden
+   *
+   * @return {void}
+   */
+  toggleVisibility(el, condition) {
+    condition ? el.classList.remove('hidden') : el.classList.add('hidden');
   },
 
   /**
