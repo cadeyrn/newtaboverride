@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
+  "new_tab_title": {
+    "message": "Nieuw tabblad"
+  },
   "omnibox_command_settings": {
     "message": "Instellingen voor het nieuwe tabblad openen"
   },
@@ -85,6 +88,9 @@
   },
   "settings_url_field_placeholder": {
     "message": "URL"
+  },
+  "type_options_background_color": {
+    "message": "background color"
   },
   "type_options_custom_url": {
     "message": "aangepaste URL"

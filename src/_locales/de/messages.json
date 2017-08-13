@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
   },
+  "new_tab_title": {
+    "message": "Neuer Tab"
+  },
   "omnibox_command_settings": {
     "message": "Öffne die Einstellungen für den neuen Tab"
   },
@@ -86,13 +89,16 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "type_options_background_color": {
+    "message": "Hintergrund-Farbe"
+  },
   "type_options_custom_url": {
     "message": "eigene URL"
   },
   "type_options_default": {
     "message": "Standard-Seite von Firefox verwenden"
   },
-   "type_options_feed": {
+  "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"
   },
   "type_title": {

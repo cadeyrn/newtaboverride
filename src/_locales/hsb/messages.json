@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
   },
+  "new_tab_title": {
+    "message": "Nowy rajtark"
+  },
   "omnibox_command_settings": {
     "message": "Nastajenja za nowy rajtark wočinić"
   },
@@ -85,6 +88,9 @@
   },
   "settings_url_field_placeholder": {
     "message": "URL"
+  },
+  "type_options_background_color": {
+    "message": "Hintergrund-Farbe"
   },
   "type_options_custom_url": {
     "message": "swójski URL"

@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Wubjeŕśo, kótary bok ma se ako nowy rejtark wócyniś!"
   },
+  "new_tab_title": {
+    "message": "Nowy rejtark"
+  },
   "omnibox_command_settings": {
     "message": "Nastajenja za nowy rejtark wócyniś"
   },
@@ -85,6 +88,9 @@
   },
   "settings_url_field_placeholder": {
     "message": "URL"
+  },
+  "type_options_background_color": {
+    "message": "Hintergrund-Farbe"
   },
   "type_options_custom_url": {
     "message": "swójski URL"

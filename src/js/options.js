@@ -7,6 +7,8 @@ const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 // a not very advanved regex to match most URLs…
 const URI_REGEX = /^https?:\/\/(.*)/i;
 
+const elBackgroundColor = document.getElementById('background-color');
+const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
 const elCompatNotice = document.getElementById('compat-notice');
 const elDefaultOption = document.getElementById('default-option');
@@ -50,6 +52,7 @@ const options = {
     let showUrlOption = false;
     let showFocusOption = false;
     let showClearOption = false;
+    let showBackgroundColorOption = false;
 
     // default new tab page
     if (elType.options[elType.selectedIndex].value === 'default') {
@@ -68,10 +71,17 @@ const options = {
       showClearOption = true;
     }
 
+    // background color
+    if (elType.options[elType.selectedIndex].value === 'background_color') {
+      showBackgroundColorOption = true;
+      showClearOption = true;
+    }
+
     options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
     options.toggleVisibility(elFocusOption, showFocusOption);
     options.toggleVisibility(elClearOption, showClearOption);
+    options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
   },
 
   /**
@@ -98,6 +108,7 @@ const options = {
     elFocusWebsite.checked = option.focus_website;
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
+    elBackgroundColor.value = option.background_color;
     options.toggleOptionsDetails();
 
     if (option.type === 'feed') {
@@ -198,4 +209,8 @@ elUrl.addEventListener('input', (e) => {
 
     browser.storage.local.set({ url : options.getValidUri(e.target.value) });
   }
+});
+
+elBackgroundColor.addEventListener('input', (e) => {
+  browser.storage.local.set({ background_color : e.target.value });
 });

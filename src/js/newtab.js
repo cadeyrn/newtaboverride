@@ -2,6 +2,7 @@
 
 /* global defaults */
 
+const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const FEED_PAGE = 'html/feed.html';
 
 /**
@@ -36,6 +37,9 @@ const newtab = {
         else {
           browser.tabs.update({ url : url || 'about:blank' });
         }
+        break;
+      case 'background_color':
+        browser.tabs.update({ url : browser.extension.getURL(BACKGROUND_COLOR_PAGE) });
         break;
       case 'feed':
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
