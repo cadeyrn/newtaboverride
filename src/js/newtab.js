@@ -44,6 +44,10 @@ const newtab = {
       case 'feed':
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
         break;
+      case 'custom_file':
+        let result = await browser.storage.local.get("customNewTabFile");
+        document.body.innerHTML = result.customNewTabFile;
+        break;
       default:
         browser.tabs.update({ url : 'about:blank' });
     }
