@@ -1,9 +1,9 @@
 {
   "clear_addressbar_description": {
-    "message": "Het automatisch legen van de locatiebalk wordt weer mogelijk in latere versies van Firefox. Dit vereist een wijziging door Mozilla."
+    "message": "Het automatisch legen van de adresbalk wordt weer mogelijk in latere versies van Firefox. Dit vereist een wijziging door Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Locatiebalk wissen"
+    "message": "Adresbalk wissen"
   },
   "compat_notice_message": {
     "message": "New Tab Override is opnieuw ontwikkeld als zogenaamde WebExtension. Dit maakt New Tab Override compatibel met Firefox 57 en hoger. Momenteel zijn niet alle opties van de vorige versie beschikbaar als WebExtension. Zodra Mozilla ondersteuning voor ontbrekende functionaliteiten in Firefox toevoegt, zullen deze in een toekomstige update van New Tab Override worden geïntegreerd."
@@ -30,7 +30,7 @@
     "message": "Mozilla-nieuws"
   },
   "focus_website_description": {
-    "message": "Focus op de webpagina leggen in plaats van de locatiebalk"
+    "message": "Focus op de webpagina leggen in plaats van de adresbalk"
   },
   "focus_website_title": {
     "message": "Focus"
@@ -90,7 +90,7 @@
     "message": "URL"
   },
   "type_options_background_color": {
-    "message": "background color"
+    "message": "achtergrondkleur"
   },
   "type_options_custom_url": {
     "message": "aangepaste URL"
