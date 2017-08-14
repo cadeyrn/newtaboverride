@@ -11,6 +11,9 @@
   "compat_notice_title": {
     "message": "Es fehlen Funktionen?"
   },
+  "custom_file_description": {
+    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
+   },
   "default_option_description": {
     "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
   },
@@ -91,6 +94,9 @@
   },
   "type_options_background_color": {
     "message": "Hintergrund-Farbe"
+  },
+  "type_options_custom_file": {
+    "message": "eigene Datei"
   },
   "type_options_custom_url": {
     "message": "eigene URL"

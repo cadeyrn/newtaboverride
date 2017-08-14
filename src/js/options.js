@@ -22,6 +22,8 @@ const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
 const elUrlOption = document.getElementById('url-option');
 const elUrlWrapper = document.getElementById('url-wrapper');
+const elCustomFile = document.getElementById("custom-file");
+const elCustomFileUpload = document.getElementById("custom-file-upload");
 
 /**
  * @exports options
@@ -53,6 +55,7 @@ const options = {
     let showFocusOption = false;
     let showClearOption = false;
     let showBackgroundColorOption = false;
+    let showCustomFileOption = false;
 
     // default new tab page
     if (elType.options[elType.selectedIndex].value === 'default') {
@@ -77,11 +80,17 @@ const options = {
       showClearOption = true;
     }
 
+    // custom file
+    if(elType.options[elType.selectedIndex].value === 'custom_file') {
+      showCustomFileOption = true;
+    }
+
     options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
     options.toggleVisibility(elFocusOption, showFocusOption);
     options.toggleVisibility(elClearOption, showClearOption);
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
+    options.toggleVisibility(elCustomFile, showCustomFileOption);
   },
 
   /**
@@ -192,6 +201,9 @@ elType.addEventListener('change', (e) => {
     elFeedPermissionRevoke.classList.add('hidden');
   }
 
+  if (e.target.value !== 'custom-file') {
+    browser.storage.local.set({customNewTabFile: ''});
+  }
   browser.storage.local.set({ type : e.target.value });
   options.toggleOptionsDetails();
 });
@@ -213,4 +225,13 @@ elUrl.addEventListener('input', (e) => {
 
 elBackgroundColor.addEventListener('input', (e) => {
   browser.storage.local.set({ background_color : e.target.value });
+});
+
+elCustomFileUpload.addEventListener("change", (e) => {
+  let reader = new FileReader();
+  reader.readAsText(elCustomFileUpload.files[0]);
+  reader.addEventListener("loadend", () => {
+    let file = reader.result;
+    browser.storage.local.set({customNewTabFile: file});
+  });
 });
