@@ -5,6 +5,7 @@
  */
 const defaults = {
   background_color : '#ffffff',
+  customNewTabFile : '',
   focus_website : false,
   show_compat_notice : false,
   storage_schema : '1',
