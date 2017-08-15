@@ -11,6 +11,8 @@ const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
 const elCompatNotice = document.getElementById('compat-notice');
+const elCustomFile = document.getElementById('custom-file');
+const elCustomFileUpload = document.getElementById('custom-file-upload');
 const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
@@ -22,8 +24,6 @@ const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
 const elUrlOption = document.getElementById('url-option');
 const elUrlWrapper = document.getElementById('url-wrapper');
-const elCustomFile = document.getElementById("custom-file");
-const elCustomFileUpload = document.getElementById("custom-file-upload");
 
 /**
  * @exports options
@@ -81,7 +81,7 @@ const options = {
     }
 
     // custom file
-    if(elType.options[elType.selectedIndex].value === 'custom_file') {
+    if (elType.options[elType.selectedIndex].value === 'custom_file') {
       showCustomFileOption = true;
     }
 
@@ -201,10 +201,13 @@ elType.addEventListener('change', (e) => {
     elFeedPermissionRevoke.classList.add('hidden');
   }
 
-  if (e.target.value !== 'custom-file') {
-    browser.storage.local.set({customNewTabFile: ''});
+  if (e.target.value === 'custom-file') {
+    browser.storage.local.set({ type : e.target.value });
   }
-  browser.storage.local.set({ type : e.target.value });
+  else {
+    browser.storage.local.set({ customNewTabFile : '' });
+  }
+
   options.toggleOptionsDetails();
 });
 
@@ -227,11 +230,12 @@ elBackgroundColor.addEventListener('input', (e) => {
   browser.storage.local.set({ background_color : e.target.value });
 });
 
-elCustomFileUpload.addEventListener("change", (e) => {
-  let reader = new FileReader();
+elCustomFileUpload.addEventListener('change', () => {
+  const reader = new FileReader();
+
   reader.readAsText(elCustomFileUpload.files[0]);
-  reader.addEventListener("loadend", () => {
-    let file = reader.result;
-    browser.storage.local.set({customNewTabFile: file});
+  reader.addEventListener('loadend', () => {
+    const file = reader.result;
+    browser.storage.local.set({ customNewTabFile : file });
   });
 });

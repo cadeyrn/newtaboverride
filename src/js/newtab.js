@@ -17,6 +17,7 @@ const newtab = {
   async init () {
     const options = await browser.storage.local.get(defaults);
     const url = options.type === 'about:home' ? options.type : options.url;
+    let localFile = null;
 
     switch (options.type) {
       case 'about:blank':
@@ -45,8 +46,8 @@ const newtab = {
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
         break;
       case 'custom_file':
-        let result = await browser.storage.local.get("customNewTabFile");
-        document.body.innerHTML = result.customNewTabFile;
+        localFile = await browser.storage.local.get('customNewTabFile');
+        document.body.innerHTML = localFile.customNewTabFile;
         break;
       default:
         browser.tabs.update({ url : 'about:blank' });
