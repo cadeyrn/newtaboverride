@@ -12,7 +12,8 @@
 - [ENHANCEMENT] allow to set the focus on the web page instead of the address bar also on about:home, fixes
   [#10](https://github.com/cadeyrn/newtaboverride/issues/10)
 - [ENHANCEMENT] updated some textes to make it even more clear that the file:// protocol is no longer supported due to
-  Firefox restrictions, fixes [#13](https://github.com/cadeyrn/newtaboverride/issues/13)
+  Firefox restrictions. Suggest new local file option or the use of a local web server as alternatives, fixes
+  [#13](https://github.com/cadeyrn/newtaboverride/issues/13)
 - [CODE QUALITY] refactored the visibility handling of advanced options
 - [DEPENDENCY] updated ESLint from version 4.4.1 to 4.5.0
 
