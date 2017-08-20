@@ -86,8 +86,8 @@ const options = {
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
 
-      const option = await browser.storage.local.get({ local_file : defaults.local_file });
-      if (option.local_file) {
+      const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
+      if (local_file) {
         showLocalFileDeleteLink = true;
       }
     }

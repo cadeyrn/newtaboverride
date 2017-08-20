@@ -29,7 +29,7 @@
     "block-scoped-var": "error",
     "block-spacing": "error",
     "brace-style": ["error", "stroustrup"],
-    "camelcase": ["error", { "properties": "never" }],
+    "camelcase": "off",
     "capitalized-comments": "off",
     "class-methods-use-this": "error",
     "comma-dangle": "error",
