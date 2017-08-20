@@ -2,6 +2,17 @@
 
 ## Release Notes
 
+### Version 8.0.0 (2017-08-20)
+
+- [ENHANCEMENT] **added support for local files!** You can upload a local html file and use this as new tab page, fixes
+  [#27](https://github.com/cadeyrn/newtaboverride/issues/27) (Thanks, seeba8!)
+- [ENHANCEMENT] **added support for custom background color!** You can use any color as background color for the new tab
+  page, fixes [#9](https://github.com/cadeyrn/newtaboverride/issues/9)
+- [ENHANCEMENT] allow to set the focus on the web page instead of the address bar also on about:home, fixes
+  [#10](https://github.com/cadeyrn/newtaboverride/issues/10)
+- [CODE QUALITY] refactored the visibility handling of advanced options
+- [DEPENDENCY] updated ESLint from version 4.4.1 to 4.5.0
+
 ### Version 7.1.0 (2017-08-13)
 
 - [ENHANCEMENT] less strict URL validation, added support for localhost again, fixes
