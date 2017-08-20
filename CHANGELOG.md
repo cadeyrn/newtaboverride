@@ -4,7 +4,8 @@
 
 ### Version 8.0.0 (2017-08-20)
 
-- [ENHANCEMENT] **added support for local files!** You can upload a local html file and use this as new tab page, fixes
+- [ENHANCEMENT] **added support for local files!** You can upload a local html file and use the content as new tab
+  content. Please pay attention to the related information on the settings page, fixes
   [#27](https://github.com/cadeyrn/newtaboverride/issues/27) (Thanks, seeba8!)
 - [ENHANCEMENT] **added support for custom background color!** You can use any color as background color for the new tab
   page, fixes [#9](https://github.com/cadeyrn/newtaboverride/issues/9)
