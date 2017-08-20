@@ -50,7 +50,12 @@
           </div>
           <div id='local-file-option' class='hidden'>
             <h3>__MSG_local_file_title__</h3>
-            <div class='info-icon'>__MSG_local_file_description__</div>
+            <div class='info-icon'>
+              __MSG_local_file_description__<br />
+              <a href='#' id='delete-local-file' class='hidden' data-confirm='__MSG_local_file_delete_confirmation__'>
+                __MSG_local_file_delete_text__
+              </a>
+            </div>
             <input type='file' id='local-file' accept='.html, .htm' />
           </div>
           <div id='background-color-option' class='hidden'>

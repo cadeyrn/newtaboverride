@@ -47,6 +47,12 @@
   "introduction_part_two": {
     "message": "Select which page should open as new tab!"
   },
+  "local_file_delete_confirmation": {
+    "message": "Are you sure you want to delete the file from the extension's storage?"
+  },
+  "local_file_delete_text": {
+    "message": "delete existing file"
+  },
   "local_file_description": {
    "message": "Upload a html file. All external resources need to be accessed via full URLs, relative URLs or file:// URIs do not work"
   },

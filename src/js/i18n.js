@@ -74,7 +74,7 @@ const i18n = {
       text.nodeValue = i18n.replace(text.nodeValue);
     }
 
-    const attributes = ['title', 'placeholder'];
+    const attributes = ['title', 'placeholder', 'data-confirm'];
     for (const attribute of attributes) {
       const nodes = i18n.findWithXPath('//*/attribute::' + attribute + '[contains(., "__MSG_")]');
       const AttributesSnapshotLength = nodes.snapshotLength;

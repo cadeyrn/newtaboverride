@@ -19,6 +19,7 @@ const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revok
 const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
 const elLocalFile = document.getElementById('local-file');
+const elLocalFileDeleteLink = document.getElementById('delete-local-file');
 const elLocalFileOption = document.getElementById('local-file-option');
 const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
@@ -49,13 +50,14 @@ const options = {
    *
    * @returns {void}
    */
-  toggleOptionsDetails () {
+  async toggleOptionsDetails () {
     let showDisableNotice = false;
     let showUrlOption = false;
     let showFocusOption = false;
     let showClearOption = false;
     let showBackgroundColorOption = false;
     let showLocalFileOption = false;
+    let showLocalFileDeleteLink = false;
 
     // default new tab page
     if (elType.options[elType.selectedIndex].value === 'default') {
@@ -83,6 +85,11 @@ const options = {
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
+
+      const option = await browser.storage.local.get(defaults);
+      if (option.local_file) {
+        showLocalFileDeleteLink = true;
+      }
     }
 
     options.toggleVisibility(elDefaultOption, showDisableNotice);
@@ -91,6 +98,7 @@ const options = {
     options.toggleVisibility(elClearOption, showClearOption);
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
     options.toggleVisibility(elLocalFileOption, showLocalFileOption);
+    options.toggleVisibility(elLocalFileDeleteLink, showLocalFileDeleteLink);
   },
 
   /**
@@ -228,8 +236,22 @@ elLocalFile.addEventListener('change', () => {
   const reader = new FileReader();
 
   reader.readAsText(elLocalFile.files[0]);
-  reader.addEventListener('loadend', () => {
+  reader.addEventListener('loadend', async () => {
     const file = reader.result;
-    browser.storage.local.set({ local_file : file });
+
+    await browser.storage.local.set({ local_file : file });
+    options.toggleVisibility(elLocalFileDeleteLink, true);
   });
+});
+
+elLocalFileDeleteLink.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // eslint-disable-next-line no-alert
+  if (!confirm(e.target.getAttribute('data-confirm'))) {
+    return;
+  }
+
+  browser.storage.local.set({ local_file : '' });
+  options.toggleVisibility(elLocalFileDeleteLink, false);
 });

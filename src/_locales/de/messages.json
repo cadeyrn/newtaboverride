@@ -47,6 +47,12 @@
   "introduction_part_two": {
     "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
   },
+  "local_file_delete_confirmation": {
+    "message": "Bist du sicher, dass du die Datei aus dem Speicher der Erweiterung löschen möchtest?"
+  },
+  "local_file_delete_text": {
+    "message": "existierende Datei löschen"
+  },
   "local_file_description": {
     "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
   },

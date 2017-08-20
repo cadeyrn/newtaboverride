@@ -96,3 +96,7 @@ input:focus {
 #url.error {
   border-color: rgb(220, 100, 83);
 }
+
+#delete-local-file {
+  font-size: 12px;
+}
