@@ -129,7 +129,7 @@
     "message": "Nutzer bisheriger Versionen von New Tab Override müssen die Erweiterung neu konfigurieren."
   },
   "url_description": {
-    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist nicht länger möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP."
+    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht länger möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP."
   },
   "url_title": {
     "message": "URL"
