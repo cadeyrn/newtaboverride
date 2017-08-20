@@ -3,6 +3,7 @@
 /* global defaults */
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
+const LOCAL_FILE_PAGE = 'html/local_file.html';
 const FEED_PAGE = 'html/feed.html';
 
 /**
@@ -17,7 +18,6 @@ const newtab = {
   async init () {
     const options = await browser.storage.local.get(defaults);
     const url = options.type === 'about:home' ? options.type : options.url;
-    let localFile = null;
 
     switch (options.type) {
       case 'about:blank':
@@ -46,8 +46,7 @@ const newtab = {
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
         break;
       case 'custom_file':
-        localFile = await browser.storage.local.get('customNewTabFile');
-        document.body.innerHTML = localFile.customNewTabFile;
+        browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_PAGE) });
         break;
       default:
         browser.tabs.update({ url : 'about:blank' });
