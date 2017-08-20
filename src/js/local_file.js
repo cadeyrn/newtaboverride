@@ -10,6 +10,8 @@ const localfile = {
     const body = document.querySelector('body');
     const options = await browser.storage.local.get(defaults);
 
+    // The file has been uploaded by the user. Therefore, the user wants the content, regardless of possible problems
+    // eslint-disable-next-line no-unsanitized/method
     body.insertAdjacentHTML('beforeend', options.local_file);
   }
 };
