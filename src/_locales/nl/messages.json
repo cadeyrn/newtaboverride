@@ -47,6 +47,12 @@
   "introduction_part_two": {
     "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
+  "local_file_description": {
+   "message": "Upload a html file. All external resources need to be accessed via full URLs, relative URLs or file:// URIs do not work"
+  },
+  "local_file_title": {
+    "message": "Local file"
+  },
   "new_tab_title": {
     "message": "Nieuw tabblad"
   },
@@ -100,6 +106,9 @@
   },
    "type_options_feed": {
     "message": "Mozilla-nieuws (Duits)"
+  },
+  "type_options_local_file": {
+    "message": "local file"
   },
   "type_title": {
     "message": "Optie"

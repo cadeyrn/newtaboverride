@@ -45,7 +45,7 @@ const newtab = {
       case 'feed':
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
         break;
-      case 'custom_file':
+      case 'local_file':
         browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_PAGE) });
         break;
       default:

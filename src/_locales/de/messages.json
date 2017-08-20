@@ -11,9 +11,6 @@
   "compat_notice_title": {
     "message": "Es fehlen Funktionen?"
   },
-  "custom_file_description": {
-    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
-   },
   "default_option_description": {
     "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
   },
@@ -49,6 +46,12 @@
   },
   "introduction_part_two": {
     "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
+  },
+  "local_file_description": {
+    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
+  },
+  "local_file_title": {
+    "message": "Lokale Datei"
   },
   "new_tab_title": {
     "message": "Neuer Tab"
@@ -95,9 +98,6 @@
   "type_options_background_color": {
     "message": "Hintergrund-Farbe"
   },
-  "type_options_custom_file": {
-    "message": "eigene Datei"
-  },
   "type_options_custom_url": {
     "message": "eigene URL"
   },
@@ -106,6 +106,9 @@
   },
   "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"
+  },
+  "type_options_local_file": {
+    "message": "lokale Datei"
   },
   "type_title": {
     "message": "Option"

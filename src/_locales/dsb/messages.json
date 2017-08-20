@@ -47,6 +47,12 @@
   "introduction_part_two": {
     "message": "Wubjeŕśo, kótary bok ma se ako nowy rejtark wócyniś!"
   },
+  "local_file_description": {
+    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
+  },
+  "local_file_title": {
+    "message": "Lokale Datei"
+  },
   "new_tab_title": {
     "message": "Nowy rejtark"
   },
@@ -100,6 +106,9 @@
   },
    "type_options_feed": {
     "message": "Nowinki Mozilla (nimski)"
+  },
+  "type_options_local_file": {
+    "message": "lokale Datei"
   },
   "type_title": {
     "message": "Opcija"

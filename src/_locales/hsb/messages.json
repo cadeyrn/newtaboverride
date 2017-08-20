@@ -47,6 +47,12 @@
   "introduction_part_two": {
     "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
   },
+  "local_file_description": {
+    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
+  },
+  "local_file_title": {
+    "message": "Lokale Datei"
+  },
   "new_tab_title": {
     "message": "Nowy rajtark"
   },
@@ -100,6 +106,9 @@
   },
    "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
+  },
+  "type_options_local_file": {
+    "message": "lokale Datei"
   },
   "type_title": {
     "message": "Opcija"

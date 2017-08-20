@@ -11,8 +11,6 @@ const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
 const elCompatNotice = document.getElementById('compat-notice');
-const elCustomFile = document.getElementById('custom-file');
-const elCustomFileUpload = document.getElementById('custom-file-upload');
 const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
@@ -20,6 +18,8 @@ const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-c
 const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revoke');
 const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
+const elLocalFile = document.getElementById('local-file');
+const elLocalFileOption = document.getElementById('local-file-option');
 const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
 const elUrlOption = document.getElementById('url-option');
@@ -55,7 +55,7 @@ const options = {
     let showFocusOption = false;
     let showClearOption = false;
     let showBackgroundColorOption = false;
-    let showCustomFileOption = false;
+    let showLocalFileOption = false;
 
     // default new tab page
     if (elType.options[elType.selectedIndex].value === 'default') {
@@ -80,9 +80,9 @@ const options = {
       showClearOption = true;
     }
 
-    // custom file
-    if (elType.options[elType.selectedIndex].value === 'custom_file') {
-      showCustomFileOption = true;
+    // local file
+    if (elType.options[elType.selectedIndex].value === 'local_file') {
+      showLocalFileOption = true;
     }
 
     options.toggleVisibility(elDefaultOption, showDisableNotice);
@@ -90,7 +90,7 @@ const options = {
     options.toggleVisibility(elFocusOption, showFocusOption);
     options.toggleVisibility(elClearOption, showClearOption);
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
-    options.toggleVisibility(elCustomFile, showCustomFileOption);
+    options.toggleVisibility(elLocalFileOption, showLocalFileOption);
   },
 
   /**
@@ -224,12 +224,12 @@ elBackgroundColor.addEventListener('input', (e) => {
   browser.storage.local.set({ background_color : e.target.value });
 });
 
-elCustomFileUpload.addEventListener('change', () => {
+elLocalFile.addEventListener('change', () => {
   const reader = new FileReader();
 
-  reader.readAsText(elCustomFileUpload.files[0]);
+  reader.readAsText(elLocalFile.files[0]);
   reader.addEventListener('loadend', () => {
     const file = reader.result;
-    browser.storage.local.set({ customNewTabFile : file });
+    browser.storage.local.set({ local_file : file });
   });
 });

@@ -11,9 +11,6 @@
   "compat_notice_title": {
     "message": "Missing some options?"
   },
-  "custom_file_description": {
-   "message": "Upload a html file. All external resources need to be accessed via full URLs, relative URLs or file:// URIs do not work"
-  },
   "default_option_description": {
     "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
@@ -49,6 +46,12 @@
   },
   "introduction_part_two": {
     "message": "Select which page should open as new tab!"
+  },
+  "local_file_description": {
+   "message": "Upload a html file. All external resources need to be accessed via full URLs, relative URLs or file:// URIs do not work"
+  },
+  "local_file_title": {
+    "message": "Local file"
   },
   "new_tab_title": {
     "message": "New Tab"
@@ -95,9 +98,6 @@
   "type_options_background_color": {
     "message": "background color"
   },
-  "type_options_custom_file": {
-    "message": "custom file"
-  },
   "type_options_custom_url": {
     "message": "custom URL"
   },
@@ -106,6 +106,9 @@
   },
    "type_options_feed": {
     "message": "Mozilla News (German)"
+  },
+  "type_options_local_file": {
+    "message": "local file"
   },
   "type_title": {
     "message": "Option"
