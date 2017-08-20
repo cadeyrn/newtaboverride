@@ -54,7 +54,7 @@
     "message": "existierende Datei löschen"
   },
   "local_file_description": {
-    "message": "Lade eine HTML-Datei hoch. Alle URLs müssen absolut sein, und file:// URIs funktionieren nicht"
+    "message": "Aufgrund von Restriktionen seitens Firefox ist es für Erweiterungen nicht möglich, via URL auf lokale Dateien zuzugreifen. New Tab Override bietet dir zumindest die Möglichkeit, lokale HTML-Dateien in den Speicher der Erweiterung zu laden und auf diese Weise als Inhalt für den neuen Tab zu nutzen. Darin ggfs. enthaltene URLs und Verknüpfungen zu Bildern und CSS- sowie JavaScript-Dateien müssen über das Web erreichbar sein, da Firefox nicht auf lokale Dateien auf dem System zugreifen kann."
   },
   "local_file_title": {
     "message": "Lokale Datei"
@@ -123,7 +123,7 @@
     "message": "Nutzer bisheriger Versionen von New Tab Override müssen die Erweiterung neu konfigurieren."
   },
   "url_description": {
-    "message": "Die Seite wird beim Öffnen eines neuen Tabs angezeigt, wenn die Option „eigene URL“ ausgewählt worden ist."
+    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist nicht länger möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP."
   },
   "url_title": {
     "message": "URL"
@@ -132,6 +132,6 @@
     "message": "Dies ist keine gültige URL."
   },
   "url_validation_file": {
-    "message": "Der Zugriff auf lokale Dateien ist für Erweiterungen nicht länger möglich."
+    "message": "Der Zugriff auf lokale Dateien via URL ist für Erweiterungen nicht länger möglich."
   }
 }

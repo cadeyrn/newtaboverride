@@ -54,7 +54,7 @@
     "message": "delete existing file"
   },
   "local_file_description": {
-   "message": "Upload a html file. All external resources need to be accessed via full URLs, relative URLs or file:// URIs do not work"
+   "message": "Due to Firefox restrictions, it is not possible for extensions to access local files. New Tab Override provides you with the possibility to load local HTML files into the extension's storage and to use this as a new tab content. Any URLs and links to images, CSS, and JavaScript files that may be included must be accessible via the web because Firefox can not access local files on the system."
   },
   "local_file_title": {
     "message": "Local file"
@@ -123,7 +123,7 @@
     "message": "Gebruikers van eerdere versies van New Tab Override dienen de extensie opnieuw te configureren."
   },
   "url_description": {
-    "message": "Deze pagina wordt bij het openen van een nieuw tabblad weergegeven als de optie ‘aangepaste URL’ is geselecteerd."
+    "message": "The web page entered here is displayed when opening a new tab. Please note: Access to local files via URL is no longer possible. Please consider using the „local file“ option or a local web server, for example via MAMP or XAMPP."
   },
   "url_title": {
     "message": "URL"
