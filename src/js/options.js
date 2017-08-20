@@ -201,13 +201,7 @@ elType.addEventListener('change', (e) => {
     elFeedPermissionRevoke.classList.add('hidden');
   }
 
-  if (e.target.value === 'custom-file') {
-    browser.storage.local.set({ type : e.target.value });
-  }
-  else {
-    browser.storage.local.set({ customNewTabFile : '' });
-  }
-
+  browser.storage.local.set({ type : e.target.value });
   options.toggleOptionsDetails();
 });
 
