@@ -4,6 +4,7 @@
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
+const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
 const FEED_PAGE = 'html/feed.html';
 
 /**
@@ -46,7 +47,12 @@ const newtab = {
         browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
         break;
       case 'local_file':
-        browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_PAGE) });
+        if (options.local_file) {
+          browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_PAGE) });
+        }
+        else {
+          browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_MISSING_PAGE) });
+        }
         break;
       default:
         browser.tabs.update({ url : 'about:blank' });
