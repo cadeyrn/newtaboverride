@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 8.0.0 (2017-08-20)
+### Version 8.0.0 (2017-08-22)
 
 - [ENHANCEMENT] **added support for local files!** You can upload a local html file and use the content as new tab
   content. Please pay attention to the related information on the settings page, fixes
