@@ -76,20 +76,29 @@ const options = {
       showClearOption = true;
     }
 
-    // background color
-    if (elType.options[elType.selectedIndex].value === 'background_color') {
-      showBackgroundColorOption = true;
-      showClearOption = true;
-    }
-
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
+      showFocusOption = true;
+      showClearOption = true;
 
       const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
       if (local_file) {
         showLocalFileDeleteLink = true;
       }
+    }
+
+    // background color
+    if (elType.options[elType.selectedIndex].value === 'background_color') {
+      showBackgroundColorOption = true;
+      showFocusOption = true;
+      showClearOption = true;
+    }
+
+    // feed
+    if (elType.options[elType.selectedIndex].value === 'feed') {
+      showFocusOption = true;
+      showClearOption = true;
     }
 
     options.toggleVisibility(elDefaultOption, showDisableNotice);

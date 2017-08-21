@@ -26,36 +26,48 @@ const newtab = {
         break;
       case 'about:home':
       case 'custom_url':
-        // set focus on website
-        if (options.focus_website) {
-          browser.tabs.getCurrent((tab) => {
-            const tabId = tab.id;
-            browser.tabs.create({ url : url || 'about:blank' }, () => {
-              browser.tabs.remove(tabId);
-            });
-          });
-        }
-        // set focus on address bar
-        else {
-          browser.tabs.update({ url : url || 'about:blank' });
-        }
+        newtab.updateOrCreateTab(url, options.focus_website);
         break;
       case 'background_color':
-        browser.tabs.update({ url : browser.extension.getURL(BACKGROUND_COLOR_PAGE) });
+        newtab.updateOrCreateTab(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
         break;
       case 'feed':
-        browser.tabs.update({ url : browser.extension.getURL(FEED_PAGE) });
+        newtab.updateOrCreateTab(browser.extension.getURL(FEED_PAGE), options.focus_website);
         break;
       case 'local_file':
         if (options.local_file) {
-          browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_PAGE) });
+          newtab.updateOrCreateTab(browser.extension.getURL(LOCAL_FILE_PAGE), options.focus_website);
         }
         else {
-          browser.tabs.update({ url : browser.extension.getURL(LOCAL_FILE_MISSING_PAGE) });
+          newtab.updateOrCreateTab(browser.extension.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
         }
         break;
       default:
         browser.tabs.update({ url : 'about:blank' });
+    }
+  },
+
+  /**
+   * This method is used to set the focus either on the address bar or on the web page.
+   *
+   * @param {string} url - url to open
+   * @param {boolean} focus_website - whether the focus should be on the web page instead of the address bar
+   *
+   * @returns {void}
+   */
+  updateOrCreateTab (url, focus_website) {
+    // set focus on website
+    if (focus_website) {
+      browser.tabs.getCurrent((tab) => {
+        const tabId = tab.id;
+        browser.tabs.create({ url : url || 'about:blank' }, () => {
+          browser.tabs.remove(tabId);
+        });
+      });
+    }
+    // set focus on address bar
+    else {
+      browser.tabs.update({ url : url || 'about:blank' });
     }
   }
 };
