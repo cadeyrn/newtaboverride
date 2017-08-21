@@ -48,22 +48,22 @@
     "message": "Wubjerće, kotra strona ma so jako nowy rajtark wočinić!"
   },
   "local_file_delete_confirmation": {
-    "message": "Bist du sicher, dass du die Datei aus dem Speicher der Erweiterung löschen möchtest?"
+    "message": "Chceš woprawdźe dataju ze składowaka rozšěrjenja zhašeć?"
   },
   "local_file_delete_text": {
-    "message": "existierende Datei löschen"
+    "message": "eksistowacu dataju zhašeć"
   },
   "local_file_description": {
-    "message": "Aufgrund von Restriktionen seitens Firefox ist es für Erweiterungen nicht möglich, auf lokale Dateien zuzugreifen. New Tab Override bietet dir zumindest die Möglichkeit, lokale HTML-Dateien in den Speicher der Erweiterung zu laden und auf diese Weise als Inhalt für den neuen Tab zu nutzen. Darin ggfs. enthaltene URLs und Verknüpfungen zu Bildern und CSS- sowie JavaScript-Dateien müssen über das Web erreichbar sein, da Firefox nicht auf lokale Dateien auf dem System zugreifen kann."
+    "message": "Restrikcijow přez Fiefox dla za rozšěrjenja móžno njeje, přistup na lokalne dataje měć. New Tab Override ći znajmjeńša móžnosć skići, lokalne dataje do składowaka rozšěrjenja začitać a na tute wašnje jako wobsah za nowy rajtark wužiwać. Ewentuelnje w nim wobsahowane URL a zwjazanja k wobrazam a CSS- a JavaScriptowym datajam dyrbja přez web docpějomne być, dokelž Firefox přistup na lokalne dataje na systemje nima."
   },
   "local_file_no_file": {
-    "message": "Du hast die Option „lokale Datei“ ausgewählt, aber keine lokale Datei hochgeladen. Bitte hol dies in den Einstellungen von New Tab Override nach."
+    "message": "Sy opciju „lokalna dataja“ wubrał, ale njejsy lokalnu dataju nahrał. Prošu nachwataj to w nastajenjach New Tab Override."
   },
   "local_file_title": {
-    "message": "Lokale Datei"
+    "message": "Lokalna dataja"
   },
   "local_file_upload": {
-    "message": "Lokale Datei hochladen"
+    "message": "Lokalnu dataju nahrać"
   },
   "new_tab_title": {
     "message": "Nowy rajtark"
@@ -129,7 +129,7 @@
     "message": "Wužiwarjo dotalnych wersijow New Tab Override dyrbja rozšěrjenje konfigurować."
   },
   "url_description": {
-    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht länger möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP."
+    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP."
   },
   "url_title": {
     "message": "URL"
@@ -138,6 +138,6 @@
     "message": "To płaćiwy URL njeje."
   },
   "url_validation_file": {
-    "message": "Bohužel přistup na lokalne dataje za rozšěrjenja hižo móžny njeje."
+    "message": "Přistup na lokalne dataje přez URL za rozšěrjenja hižo móžny njeje."
   }
 }

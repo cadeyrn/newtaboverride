@@ -14,6 +14,7 @@
 - [ENHANCEMENT] updated some textes to make it even more clear that the file:// protocol is no longer supported due to
   Firefox restrictions. Suggest new local file option or the use of a local web server as alternatives, fixes
   [#13](https://github.com/cadeyrn/newtaboverride/issues/13)
+- [TRANSLATION] updated translations (Thanks, Tonnes and milupo!)
 - [CODE QUALITY] refactored the visibility handling of advanced options
 - [DEPENDENCY] updated ESLint from version 4.4.1 to 4.5.0
 

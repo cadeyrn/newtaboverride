@@ -48,22 +48,22 @@
     "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "local_file_delete_confirmation": {
-    "message": "Are you sure you want to delete the file from the extension's storage?"
+    "message": "Weet u zeker dat u het bestand uit de opslag van de extensie wilt verwijderen?"
   },
   "local_file_delete_text": {
-    "message": "delete existing file"
+    "message": "bestaande bestand verwijderen"
   },
   "local_file_description": {
-   "message": "Due to Firefox restrictions, it is not possible for extensions to access local files. New Tab Override provides you with the possibility to load local HTML files into the extension's storage and to use this as a new tab content. Any URLs and links to images, CSS, and JavaScript files that may be included must be accessible via the web because Firefox can not access local files on the system."
+   "message": "Vanwege beperkingen van Firefox is het niet mogelijk dat extensies toegang hebben tot lokale bestanden. New Tab Override biedt u de mogelijkheid om lokale HTML-bestanden in de opslag van de extensie te laden en deze als inhoud van een nieuw tabblad te gebruiken. URL’s en koppelingen naar afbeeldingen, CSS en JavaScript-bestanden die mogelijk zijn bijgesloten, moeten via het web toegankelijk zijn, omdat Firefox geen lokale bestanden op het systeem kan benaderen."
   },
   "local_file_no_file": {
-    "message": "You selected the „local file“ option, but did not upload a local file. Please upload a file in the New Tab Override settings."
+    "message": "U hebt de optie ‘lokaal bestand’ geselecteerd, maar geen lokaal bestand geüpload. Upload een bestand in de instellingen van New Tab Override."
   },
   "local_file_title": {
-    "message": "Local file"
+    "message": "Lokaal bestand"
   },
   "local_file_upload": {
-    "message": "Upload local file"
+    "message": "Lokaal bestand uploaden"
   },
   "new_tab_title": {
     "message": "Nieuw tabblad"
@@ -129,7 +129,7 @@
     "message": "Gebruikers van eerdere versies van New Tab Override dienen de extensie opnieuw te configureren."
   },
   "url_description": {
-    "message": "The web page entered here is displayed when opening a new tab. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the „local file“ option or a local web server, for example via MAMP or XAMPP."
+    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van WebExtensions. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
   },
   "url_title": {
     "message": "URL"
@@ -138,6 +138,6 @@
     "message": "Dit is geen geldige URL."
   },
   "url_validation_file": {
-    "message": "Toegang tot lokale bestanden is niet meer mogelijk voor extensies."
+    "message": "Toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox."
   }
 }
