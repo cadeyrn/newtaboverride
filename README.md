@@ -17,6 +17,8 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 ### Features
 
 - change the new tab page to whatever URL you like
+- upload a local HTML file to the extension's storage and use the content as new tab content
+- use any color as background color for the new tab page
 - use about:blank as new tab page
 - use about:home as new tab page
 - get the latest news about Mozilla as new tab page (only in German language)
