@@ -34,7 +34,7 @@
     "htmllint": "0.6.0",
     "jsdoc": "3.5.4",
     "jsdoc-strip-async-await": "0.1.0",
-    "npm-run-all": "4.0.2",
+    "npm-run-all": "4.1.1",
     "stylelint": "8.0.0",
     "stylelint-csstree-validator": "1.1.1",
     "stylelint-order": "0.6.0",
