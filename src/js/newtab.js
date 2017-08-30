@@ -6,6 +6,7 @@ const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
 const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
 const FEED_PAGE = 'html/feed.html';
+const NEW_TAB_PAGE = 'html/newtab.html';
 
 /**
  * @exports newtab
@@ -26,20 +27,20 @@ const newtab = {
         break;
       case 'about:home':
       case 'custom_url':
-        newtab.updateOrCreateTab(url, options.focus_website);
+        newtab.openNewTabPage(url, options.focus_website);
         break;
       case 'background_color':
-        newtab.updateOrCreateTab(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
+        newtab.openNewTabPage(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
         break;
       case 'feed':
-        newtab.updateOrCreateTab(browser.extension.getURL(FEED_PAGE), options.focus_website);
+        newtab.openNewTabPage(browser.extension.getURL(FEED_PAGE), options.focus_website);
         break;
       case 'local_file':
         if (options.local_file) {
-          newtab.updateOrCreateTab(browser.extension.getURL(LOCAL_FILE_PAGE), options.focus_website);
+          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_PAGE), options.focus_website);
         }
         else {
-          newtab.updateOrCreateTab(browser.extension.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
+          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
         }
         break;
       default:
@@ -55,15 +56,18 @@ const newtab = {
    *
    * @returns {void}
    */
-  updateOrCreateTab (url, focus_website) {
+  async openNewTabPage (url, focus_website) {
     // set focus on website
     if (focus_website) {
-      browser.tabs.getCurrent((tab) => {
+      await browser.tabs.getCurrent((tab) => {
         const tabId = tab.id;
         browser.tabs.create({ url : url || 'about:blank' }, () => {
           browser.tabs.remove(tabId);
         });
       });
+
+      // delete spammy new tab page entry from history (only works for browser.tabs.create() at the moment)
+      browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
     }
     // set focus on address bar
     else {
