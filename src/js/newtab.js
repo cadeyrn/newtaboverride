@@ -65,14 +65,16 @@ const newtab = {
           browser.tabs.remove(tabId);
         });
       });
-
-      // delete spammy new tab page entry from history (only works for browser.tabs.create() at the moment)
-      browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
     }
     // set focus on address bar
     else {
-      browser.tabs.update({ url : url || 'about:blank' });
+      await browser.tabs.update({ url : url || 'about:blank' }, () => {
+        // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl does not work
+      });
     }
+
+    // delete spammy new tab page entry from history
+    browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
   }
 };
 
