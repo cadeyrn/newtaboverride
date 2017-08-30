@@ -69,7 +69,7 @@ const newtab = {
     // set focus on address bar
     else {
       await browser.tabs.update({ url : url || 'about:blank' }, () => {
-        // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl does not work
+        // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
       });
     }
 
