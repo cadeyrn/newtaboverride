@@ -52,6 +52,7 @@
     "func-name-matching": "error",
     "func-names": "off",
     "func-style": "error",
+    "function-paren-newline": "off",
     "generator-star-spacing": "error",
     "getter-return": "error",
     "guard-for-in": "error",
