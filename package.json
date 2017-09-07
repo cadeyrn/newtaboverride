@@ -36,7 +36,7 @@
     "jsdoc-strip-async-await": "0.1.0",
     "npm-run-all": "4.1.1",
     "stylelint": "8.1.1",
-    "stylelint-csstree-validator": "1.1.1",
+    "stylelint-csstree-validator": "1.2.0",
     "stylelint-order": "0.6.0",
     "web-ext": "2.0.0"
   },
