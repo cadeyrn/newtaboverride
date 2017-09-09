@@ -122,8 +122,11 @@
   "type_options_custom_url": {
     "message": "benutzerdefinierte URL"
   },
-  "type_options_default": {
-    "message": "Standard-Seite von Firefox als neuer Tab"
+  "type_options_default_home_page": {
+    "message": "Standard-Startseite von Firefox"
+  },
+  "type_options_default_new_tab": {
+    "message": "Standard-Neuer-Tab-Seite von Firefox"
   },
   "type_options_empty_page": {
     "message": "leere Seite (about:blank)"

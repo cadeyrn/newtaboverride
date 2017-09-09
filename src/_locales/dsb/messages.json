@@ -122,10 +122,13 @@
   "type_options_custom_url": {
     "message": "swójski URL"
   },
-  "type_options_default": {
+  "type_options_default_home_page": {
+    "message": "Standard-Startseite von Firefox"
+  },
+  "type_options_default_new_tab": {
     "message": "Standardny bok Firefox wužywaś"
   },
-  "type_empty_page": {
+  "type_options_empty_page": {
     "message": "leere Seite (about:blank)"
   },
    "type_options_feed": {

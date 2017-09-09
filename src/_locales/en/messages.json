@@ -122,10 +122,13 @@
   "type_options_custom_url": {
     "message": "custom URL"
   },
-  "type_options_default": {
+  "type_options_default_home_page": {
+    "message": "default home page of Firefox"
+  },
+  "type_options_default_new_tab": {
     "message": "default new tab page of Firefox"
   },
-  "type_empty_page": {
+  "type_options_empty_page": {
     "message": "empty page (about:blank)"
   },
    "type_options_feed": {
