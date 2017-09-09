@@ -1,6 +1,6 @@
 'use strict';
 
-/* global defaults */
+/* global defaults, utils */
 
 const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 
@@ -18,6 +18,8 @@ const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-c
 const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revoke');
 const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
+const elHomepageOption = document.getElementById('homepage-option');
+const elHomepageFutureVersionNotice = document.getElementById('homepage-feature-version-notice');
 const elLocalFile = document.getElementById('local-file');
 const elLocalFileDeleteLink = document.getElementById('delete-local-file');
 const elLocalFileOption = document.getElementById('local-file-option');
@@ -53,6 +55,8 @@ const options = {
   async toggleOptionsDetails () {
     let showDisableNotice = false;
     let showUrlOption = false;
+    let showHomepageOption = false;
+    let showHomepageFutureVersionNotice = false;
     let showFocusOption = false;
     let showClearOption = false;
     let showBackgroundColorOption = false;
@@ -67,6 +71,21 @@ const options = {
     // about:home
     if (elType.options[elType.selectedIndex].value === 'about:home') {
       showFocusOption = true;
+    }
+
+    // home page
+    if (elType.options[elType.selectedIndex].value === 'homepage') {
+      const browserInfo = await browser.runtime.getBrowserInfo();
+      const firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
+
+      if (firefox57) {
+        showHomepageOption = true;
+        showFocusOption = true;
+        showClearOption = true;
+      }
+      else {
+        showHomepageFutureVersionNotice = true;
+      }
     }
 
     // custom url
@@ -103,6 +122,8 @@ const options = {
 
     options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
+    options.toggleVisibility(elHomepageOption, showHomepageOption);
+    options.toggleVisibility(elHomepageFutureVersionNotice, showHomepageFutureVersionNotice);
     options.toggleVisibility(elFocusOption, showFocusOption);
     options.toggleVisibility(elClearOption, showClearOption);
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);

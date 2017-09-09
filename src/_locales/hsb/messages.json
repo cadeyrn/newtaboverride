@@ -41,6 +41,12 @@
   "github_notice": {
     "message": "Přejeće sej funkcije abo chceće zmylk zdźělić? Pisajće rozprawu na GitHub:"
   },
+  "homepage_description": {
+    "message": "Bei Aktivierung dieser Option verwendet Firefox die Startseite auch als Seite für den neuen Tab. Du kannst die Startseite ändern, indem du about:preferences#general in die Adressleiste eingibst. Nur Startseiten, welche mit http:// oder https:// beginnen, werden unterstützt. Wenn mehrere Startseiten konfiguriert sind, wird New Tab Override die erste nutzen."
+  },
+  "homepage_future_version_description": {
+    "message": "Ab Firefox 57 (geplante Veröffentlichung: 14. November 2017) wird Firefox auch die Startseite automatisch als Seite für den neuen Tab verwenden können. Bis dahin wähle bitte die Option „eigene URL“, um die Seite manuell festzulegen."
+  },
   "introduction_part_one": {
     "message": "Tuta strona staja so k dispoziciji wot"
   },
@@ -118,6 +124,9 @@
   },
    "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
+  },
+  "type_options_homepage": {
+    "message": "Startowa strona"
   },
   "type_options_local_file": {
     "message": "lokale Datei"

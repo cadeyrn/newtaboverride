@@ -41,6 +41,12 @@
   "github_notice": {
     "message": "Aanvragen voor functies of een fout melden? Open een ticket op GitHub:"
   },
+  "homepage_description": {
+    "message": "If this option is enabled Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#general in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home page are configured, New Tab Override will use the first one."
+  },
+  "homepage_future_version_description": {
+    "message": "From Firefox 57 (scheduled release: November 14, 2017) Firefox will also be able to automatically use the homepage as the new tab page. Until then please select the „custom URL“ option to set the page manually."
+  },
   "introduction_part_one": {
     "message": "Deze pagina wordt aangeboden door"
   },
@@ -118,6 +124,9 @@
   },
    "type_options_feed": {
     "message": "Mozilla-nieuws (Duits)"
+  },
+  "type_options_homepage": {
+    "message": "startpagina"
   },
   "type_options_local_file": {
     "message": "local file"

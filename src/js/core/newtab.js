@@ -1,6 +1,6 @@
 'use strict';
 
-/* global defaults */
+/* global defaults, utils */
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
@@ -28,6 +28,26 @@ const newtab = {
       case 'about:home':
       case 'custom_url':
         newtab.openNewTabPage(url, options.focus_website);
+        break;
+      case 'homepage':
+        const browserInfo = await browser.runtime.getBrowserInfo();
+        const firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
+
+        if (firefox57) {
+          const homepage = await browser.browserSettings.homepageOverride.get({});
+          const firstHomepage = homepage.value.split('|')[0];
+
+          if (!/^https?:\/\//i.test(firstHomepage)) {
+            browser.tabs.update({ url : 'about:blank' });
+            break;
+          }
+
+          newtab.openNewTabPage(homepage.value.split('|')[0], options.focus_website);
+        }
+        else {
+          browser.tabs.update({ url : 'about:blank' });
+        }
+
         break;
       case 'background_color':
         newtab.openNewTabPage(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);

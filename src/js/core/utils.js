@@ -1,5 +1,7 @@
 'use strict';
 
+const FIREFOX_57 = 57;
+
 /**
  * @exports utils
  */

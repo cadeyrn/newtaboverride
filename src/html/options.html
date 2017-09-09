@@ -29,6 +29,7 @@
               <option value='default'>__MSG_type_options_default__</option>
               <option value='about:blank'>about:blank</option>
               <option value='about:home'>about:home</option>
+              <option value='homepage'>__MSG_type_options_homepage__</option>
               <option value='custom_url'>__MSG_type_options_custom_url__</option>
               <option value='local_file'>__MSG_type_options_local_file__</option>
               <option value='background_color'>__MSG_type_options_background_color__</option>
@@ -47,6 +48,12 @@
               <span class='error-message hidden default'>__MSG_url_validation_default__</span>
               <span class='error-message hidden file'>__MSG_url_validation_file__</span>
             </div>
+          </div>
+          <div id='homepage-option' class='hidden'>
+            <div class='info-icon'>__MSG_homepage_description__</div>
+          </div>
+          <div id='homepage-feature-version-notice' class='hidden'>
+            <div class='info-icon'>__MSG_homepage_future_version_description__</div>
           </div>
           <div id='local-file-option' class='hidden'>
             <h3>__MSG_local_file_title__</h3>
@@ -132,6 +139,7 @@
   </footer>
   <script src='../js/lib/i18n.js'></script>
   <script src='../js/core/defaults.js'></script>
+  <script src='../js/core/utils.js'></script>
   <script src='../js/core/options.js'></script>
 </body>
 </html>
