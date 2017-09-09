@@ -63,7 +63,7 @@
     "message": "eksistěrujucu dataju lašowaś"
   },
   "local_file_description": {
-    "message": "Restrikcijow pśez Firefox dla njejo móžno za rozšyrjenja, pśistup na lokalne dataje měś. New Tab Override śi nanejmjenjej móžnosć bitujo, lokalne dataje do składowaka rozšyrjenja zacytaś a na toś ten nałog ako wopśimjeśe za nowy rejtark wužywaś. Ewentuelnje w nim wopśimowane URL a zwězanja k wobrazam a CSS- a JavaScriptowym datajam muse pśez web k dostaśeju byś, dokulaž Firefox njama pśistup na lokalne dataje na systemje."
+    "message": "Restrikcijow pśez Firefox dla njejo móžno za rozšyrjenja, pśistup na lokalne dataje měś. New Tab Override śi nanejmjenjej móžnosć bitujo, lokalne dataje do składowaka rozšyrjenja zacytaś a na toś ten nałog ako wopśimjeśe za nowy rejtark wužywaś. Ewentuelnje w nim wopśimowane URL a zwězanja k wobrazam a CSS- a JavaScriptowym datajam muse pśez web k dostaśeju byś, dokulaž Firefox njama pśistup na lokalne dataje na systemje. Alternativ, erwäge bitte die Verwendung eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP, mit der Option „benutzerdefinierte URL“. Das funktioniert ohne jede Einschränkung."
   },
   "local_file_no_file": {
     "message": "Sy opciju „lokalna dataja“ wubrał, ale njejsy lokalnu dataju nagrał. Pšosym nachwataj to w nastajenjach New Tab Override."

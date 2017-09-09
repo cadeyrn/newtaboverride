@@ -66,7 +66,7 @@
     "message": "Restrikcijow přez Fiefox dla za rozšěrjenja móžno njeje, přistup na lokalne dataje měć. New Tab Override ći znajmjeńša móžnosć skići, lokalne dataje do składowaka rozšěrjenja začitać a na tute wašnje jako wobsah za nowy rajtark wužiwać. Ewentuelnje w nim wobsahowane URL a zwjazanja k wobrazam a CSS- a JavaScriptowym datajam dyrbja přez web docpějomne być, dokelž Firefox přistup na lokalne dataje na systemje nima."
   },
   "local_file_no_file": {
-    "message": "Sy opciju „lokalna dataja“ wubrał, ale njejsy lokalnu dataju nahrał. Prošu nachwataj to w nastajenjach New Tab Override."
+    "message": "Sy opciju „lokalna dataja“ wubrał, ale njejsy lokalnu dataju nahrał. Prošu nachwataj to w nastajenjach New Tab Override. Alternativ, erwäge bitte die Verwendung eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP, mit der Option „benutzerdefinierte URL“. Das funktioniert ohne jede Einschränkung."
   },
   "local_file_title": {
     "message": "Lokalna dataja"

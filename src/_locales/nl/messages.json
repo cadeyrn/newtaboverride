@@ -63,7 +63,7 @@
     "message": "bestaande bestand verwijderen"
   },
   "local_file_description": {
-   "message": "Vanwege beperkingen van Firefox is het niet mogelijk dat extensies toegang hebben tot lokale bestanden. New Tab Override biedt u de mogelijkheid om lokale HTML-bestanden in de opslag van de extensie te laden en deze als inhoud van een nieuw tabblad te gebruiken. URL’s en koppelingen naar afbeeldingen, CSS en JavaScript-bestanden die mogelijk zijn bijgesloten, moeten via het web toegankelijk zijn, omdat Firefox geen lokale bestanden op het systeem kan benaderen."
+   "message": "Vanwege beperkingen van Firefox is het niet mogelijk dat extensies toegang hebben tot lokale bestanden. New Tab Override biedt u de mogelijkheid om lokale HTML-bestanden in de opslag van de extensie te laden en deze als inhoud van een nieuw tabblad te gebruiken. URL’s en koppelingen naar afbeeldingen, CSS en JavaScript-bestanden die mogelijk zijn bijgesloten, moeten via het web toegankelijk zijn, omdat Firefox geen lokale bestanden op het systeem kan benaderen. Alternatively, please consider using a local web server, for example via MAMP or XAMPP, with the „custom URL“ option. This works without any restriction."
   },
   "local_file_no_file": {
     "message": "U hebt de optie ‘lokaal bestand’ geselecteerd, maar geen lokaal bestand geüpload. Upload een bestand in de instellingen van New Tab Override."
