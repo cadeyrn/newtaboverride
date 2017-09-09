@@ -2,6 +2,25 @@
 
 ## Release Notes
 
+### Version 9.0.0 (2017-09-10)
+
+- [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
+  one home page New Tab Override uses the first one. This feature requires Firefox 57 or later, fixes
+  [#19](https://github.com/cadeyrn/newtaboverride/issues/19)
+- [ENHANCEMENT] **New Tab Override does no longer create useless history entries!** That's why New Tab Override needs
+  the permission to modify the browser history beginning with version 9.0.0, fixes
+  [#20](https://github.com/cadeyrn/newtaboverride/issues/20)
+- [ENHANCEMENT] **The back button of Firefox is no longer enabled on the new tab page!** This feature requires
+  Firefox 57 or later, fixes [#46](https://github.com/cadeyrn/newtaboverride/issues/46)
+- [ENHANCEMENT] show favicon on new tab page if background color option is enabled
+- [ENHANCEMENT] some textual and style improvements
+- [CODE QUALITY] organized the script files in folders
+- [DEPENDENCY] updated eslint from version 4.5.0 to 4.6.1
+- [DEPENDENCY] updated gulp-stylelint from version 4.0.0 to 5.0.0
+- [DEPENDENCY] updated npm-run-all from version 4.0.2 to 4.1.1
+- [DEPENDENCY] updated stylelint from version 8.0.0 to 8.1.1
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.1.1 to 1.2.0
+
 ### Version 8.0.0 (2017-08-22)
 
 - [ENHANCEMENT] **added support for local files!** You can upload a local html file and use the content as new tab
