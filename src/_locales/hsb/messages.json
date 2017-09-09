@@ -147,7 +147,7 @@
     "message": "Wužiwarjo dotalnych wersijow New Tab Override dyrbja rozšěrjenje konfigurować."
   },
   "url_description": {
-    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP."
+    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Nur URLs, welche mit http:// oder https:// beginnen, werden unterstützt. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP."
   },
   "url_title": {
     "message": "URL"

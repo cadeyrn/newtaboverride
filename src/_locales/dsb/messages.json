@@ -147,7 +147,7 @@
     "message": "Wužywarje doněntnych wersijow New Tab Override muse rozšyrjenje konfigurěrowaś."
   },
   "url_description": {
-    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP."
+    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Nur URLs, welche mit http:// oder https:// beginnen, werden unterstützt. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP."
   },
   "url_title": {
     "message": "URL"

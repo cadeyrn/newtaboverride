@@ -147,7 +147,7 @@
     "message": "Gebruikers van eerdere versies van New Tab Override dienen de extensie opnieuw te configureren."
   },
   "url_description": {
-    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van WebExtensions. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
+    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Only URLs starting with http:// or https:// are supported. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van WebExtensions. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
   },
   "url_title": {
     "message": "URL"
