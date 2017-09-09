@@ -125,6 +125,9 @@
   "type_options_default": {
     "message": "Standardnu stronu Firefox wužiwać"
   },
+  "type_empty_page": {
+    "message": "leere Seite (about:blank)"
+  },
    "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
   },

@@ -125,6 +125,9 @@
   "type_options_default": {
     "message": "use default page of Firefox"
   },
+  "type_empty_page": {
+    "message": "empty page (about:blank)"
+  },
    "type_options_feed": {
     "message": "Mozilla News (German)"
   },

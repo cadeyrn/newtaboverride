@@ -125,6 +125,9 @@
   "type_options_default": {
     "message": "Standard-Seite von Firefox verwenden"
   },
+  "type_options_empty_page": {
+    "message": "leere Seite (about:blank)"
+  },
   "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"
   },
