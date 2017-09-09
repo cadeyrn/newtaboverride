@@ -123,7 +123,7 @@
     "message": "benutzerdefinierte URL"
   },
   "type_options_default": {
-    "message": "Standard-Seite von Firefox verwenden"
+    "message": "Standard-Seite von Firefox als neuer Tab"
   },
   "type_options_empty_page": {
     "message": "leere Seite (about:blank)"
