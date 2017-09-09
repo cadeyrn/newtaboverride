@@ -53,6 +53,8 @@ The extension is currently available in the following languages:
 The extension requires at least Firefox 55. Because the extension makes use of modern web technologies and the latest
 WebExtension APIs, support for older versions of Firefox is not possible for technical reasons.
 
+Some features are only available on Firefox 57 and higher.
+
 ## Download
 
 [Download New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)
