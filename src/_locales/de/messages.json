@@ -123,10 +123,10 @@
     "message": "benutzerdefinierte URL"
   },
   "type_options_default_home_page": {
-    "message": "Standard-Startseite von Firefox"
+    "message": "Standard-Startseite von Firefox (about:home)"
   },
   "type_options_default_new_tab": {
-    "message": "Standard-Neuer-Tab-Seite von Firefox"
+    "message": "Standard-Neuer-Tab-Seite von Firefox (about:newtab)"
   },
   "type_options_empty_page": {
     "message": "leere Seite (about:blank)"
