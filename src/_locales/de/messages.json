@@ -45,7 +45,7 @@
     "message": "Bei Aktivierung dieser Option verwendet Firefox die Startseite auch als Seite für den neuen Tab. Du kannst die Startseite ändern, indem du about:preferences#general in die Adressleiste eingibst. Nur Startseiten, welche mit http:// oder https:// beginnen, werden unterstützt. Wenn mehrere Startseiten konfiguriert sind, wird New Tab Override die erste nutzen."
   },
   "homepage_future_version_description": {
-    "message": "Ab Firefox 57 (geplante Veröffentlichung: 14. November 2017) wird Firefox auch die Startseite automatisch als Seite für den neuen Tab verwenden können. Bis dahin wähle bitte die Option „eigene URL“, um die Seite manuell festzulegen."
+    "message": "Ab Firefox 57 (geplante Veröffentlichung: 14. November 2017) wird Firefox auch die Startseite automatisch als Seite für den neuen Tab verwenden können. Bis dahin wähle bitte die Option „benutzerdefinierte URL“, um die Seite manuell festzulegen."
   },
   "introduction_part_one": {
     "message": "Diese Seite wird bereitgestellt von"
@@ -117,7 +117,7 @@
     "message": "Hintergrund-Farbe"
   },
   "type_options_custom_url": {
-    "message": "eigene URL"
+    "message": "benutzerdefinierte URL"
   },
   "type_options_default": {
     "message": "Standard-Seite von Firefox verwenden"
