@@ -66,13 +66,13 @@
     "message": "Aufgrund von Restriktionen seitens Firefox ist es für Erweiterungen nicht möglich, via URL auf lokale Dateien zuzugreifen. New Tab Override bietet dir zumindest die Möglichkeit, lokale HTML-Dateien in den Speicher der Erweiterung zu laden und auf diese Weise als Inhalt für den neuen Tab zu nutzen. Darin ggfs. enthaltene URLs und Verknüpfungen zu Bildern und CSS- sowie JavaScript-Dateien müssen über das Web erreichbar sein, da Firefox nicht auf lokale Dateien auf dem System zugreifen kann."
   },
   "local_file_no_file": {
-    "message": "Du hast die Option „lokale Datei“ ausgewählt, aber keine lokale Datei hochgeladen. Bitte hol dies in den Einstellungen von New Tab Override nach."
+    "message": "Du hast die Option „lokale Datei“ ausgewählt, aber keine lokale Datei gespeichert. Bitte hol dies in den Einstellungen von New Tab Override nach."
   },
   "local_file_title": {
     "message": "Lokale Datei"
   },
   "local_file_upload": {
-    "message": "Lokale Datei hochladen"
+    "message": "Lokale Datei speichern"
   },
   "new_tab_title": {
     "message": "Neuer Tab"

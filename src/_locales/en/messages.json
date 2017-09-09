@@ -66,13 +66,13 @@
    "message": "Due to Firefox restrictions, it is not possible for extensions to access local files. New Tab Override provides you with the possibility to load local HTML files into the extension's storage and to use them as a new tab content. Any URLs and links to images, CSS files and JavaScript files that may be included must be accessible via the web because Firefox can not access local files on the system."
   },
   "local_file_no_file": {
-    "message": "You selected the „local file“ option, but did not upload a local file. Please upload a file in the New Tab Override settings."
+    "message": "You selected the „local file“ option, but did not stored a local file. Please store a file in the New Tab Override settings."
   },
   "local_file_title": {
     "message": "Local file"
   },
   "local_file_upload": {
-    "message": "Upload local file"
+    "message": "Store local file"
   },
   "new_tab_title": {
     "message": "New Tab"
