@@ -12,12 +12,17 @@ const NEW_TAB_PAGE = 'html/newtab.html';
  * @exports newtab
  */
 const newtab = {
+  firefox57 : false,
+
   /**
    * This method is used to navigate to the set new tab page.
    *
    * @returns {void}
    */
   async init () {
+    const browserInfo = await browser.runtime.getBrowserInfo();
+    newtab.firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
+
     const options = await browser.storage.local.get(defaults);
     const url = options.type === 'about:home' ? options.type : options.url;
 
@@ -30,10 +35,7 @@ const newtab = {
         newtab.openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
-        const browserInfo = await browser.runtime.getBrowserInfo();
-        const firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
-
-        if (firefox57) {
+        if (newtab.firefox57) {
           const homepage = await browser.browserSettings.homepageOverride.get({});
           const firstHomepage = homepage.value.split('|')[0];
 
@@ -88,7 +90,16 @@ const newtab = {
     }
     // set focus on address bar
     else {
-      await browser.tabs.update({ url : url || 'about:blank' }, () => {
+      let options;
+
+      if (newtab.firefox57) {
+        options = { url : url || 'about:blank', loadReplace : true };
+      }
+      else {
+        options = { url : url || 'about:blank' };
+      }
+
+      await browser.tabs.update(options, () => {
         // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
       });
     }
