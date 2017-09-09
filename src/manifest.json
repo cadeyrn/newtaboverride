@@ -12,7 +12,7 @@
     "url": "https://www.soeren-hentzschel.at/new-tab-override/"
   },
   "background": {
-    "scripts": ["js/core/background.js"]
+    "scripts": ["js/core/utils.js", "js/core/background.js"]
   },
   "chrome_url_overrides" : {
     "newtab": "html/newtab.html"
