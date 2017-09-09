@@ -1,4 +1,7 @@
 {
+  "background_color_title": {
+    "message": "Achtergrondkleur"
+  },
   "clear_addressbar_description": {
     "message": "Het automatisch legen van de adresbalk wordt weer mogelijk in latere versies van Firefox. Dit vereist een wijziging door Mozilla."
   },

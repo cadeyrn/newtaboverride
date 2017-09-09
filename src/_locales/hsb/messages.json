@@ -1,4 +1,7 @@
 {
+  "background_color_title": {
+    "message": "Pozadkowa barba"
+  },
   "clear_addressbar_description": {
     "message": "Awtomatiske prózdnjenje adresoweho pola budźe zaso móžno w pozdźišich wersijach Firefox. To sej změna ze strony Mozilla wužaduje."
   },

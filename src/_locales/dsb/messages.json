@@ -1,4 +1,7 @@
 {
+  "background_color_title": {
+    "message": "Slězynowa barwa"
+  },
   "clear_addressbar_description": {
     "message": "Awtomatiske proznjenje adresowego póla buźo zasej móžne w póznjejšych wersijach Firefox. To se změna z boka Mozilla pomina."
   },

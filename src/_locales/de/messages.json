@@ -1,4 +1,7 @@
 {
+  "background_color_title": {
+    "message": "Hintergrund-Farbe"
+  },
   "clear_addressbar_description": {
     "message": "Das automatische Leeren der Adressleiste wird in späteren Versionen von Firefox wieder möglich sein. Dies erfordert eine Änderung seitens Mozilla."
   },

@@ -1,4 +1,7 @@
 {
+  "background_color_title": {
+    "message": "Background color"
+  },
   "clear_addressbar_description": {
     "message": "The automatic emptying of the address bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
   },
