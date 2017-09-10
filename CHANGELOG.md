@@ -14,6 +14,7 @@
   Firefox 57 or later, fixes [#46](https://github.com/cadeyrn/newtaboverride/issues/46)
 - [ENHANCEMENT] show favicon on new tab page if background color option is enabled
 - [ENHANCEMENT] some textual and style improvements
+- [TRANSLATION] updated translations (Thanks, Tonnnes and milupo!)
 - [CODE QUALITY] organized the script files in folders
 - [DEPENDENCY] updated eslint from version 4.5.0 to 4.6.1
 - [DEPENDENCY] updated gulp-stylelint from version 4.0.0 to 5.0.0
