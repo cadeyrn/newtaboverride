@@ -4,9 +4,6 @@
 
 const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
 
-// a not very advanced regex to match most URLs…
-const URI_REGEX = /^https?:\/\/(.*)/i;
-
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');

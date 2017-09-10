@@ -2,6 +2,9 @@
 
 const FIREFOX_57 = 57;
 
+// a not very advanced regex to match most URLs…
+const URI_REGEX = /^https?:\/\//i;
+
 /**
  * @exports utils
  */

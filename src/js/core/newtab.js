@@ -39,7 +39,7 @@ const newtab = {
           const homepage = await browser.browserSettings.homepageOverride.get({});
           const firstHomepage = homepage.value.split('|')[0];
 
-          if (!/^https?:\/\//i.test(firstHomepage)) {
+          if (!URI_REGEX.test(firstHomepage)) {
             browser.tabs.update({ url : 'about:blank' });
             break;
           }
