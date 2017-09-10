@@ -44,7 +44,7 @@ const newtab = {
             break;
           }
 
-          newtab.openNewTabPage(homepage.value.split('|')[0], options.focus_website);
+          newtab.openNewTabPage(firstHomepage, options.focus_website);
         }
         else {
           browser.tabs.update({ url : 'about:blank' });
