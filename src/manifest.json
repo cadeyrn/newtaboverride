@@ -9,7 +9,7 @@
   },
   "developer": {
     "name": "Sören Hentzschel",
-    "url": "https://www.soeren-hentzschel.at/new-tab-override/"
+    "url": "https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/"
   },
   "background": {
     "scripts": ["js/core/utils.js", "js/core/background.js"]
