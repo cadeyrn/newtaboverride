@@ -99,13 +99,13 @@
     "message": "Firefox a besoin de votre permission de lire le flux de nouvelles de soeren-hentzschel.at. Vous avez déjà accordé cette autorisation."
   },
   "settings_homepage_permission_description": {
-    "message": "Firefox needs your permission to read and to modify the browser settings. Vous pouvez révoquer cette autorisation à tout moment."
+    "message": "Firefox a besoin de votre permission de lire et de modifier les paramètres du navigateur. Vous pouvez révoquer cette autorisation à tout moment."
   },
   "settings_homepage_permission_needed": {
-    "message": "To use this feature you have to allow Firefox to read and to modify the browser settings."
+    "message": "Pour utiliser cette fonctionnalité, vous devez autoriser Firefox à lire et à modifier les paramètres du navigateur."
   },
   "settings_homepage_permission_revoke_description": {
-    "message": "Firefox needs your permission to read and to modify the browser settings. Vous avez déjà accordé cette autorisation."
+    "message": "Firefox a besoin de votre permission de lire et de modifier les paramètres du navigateur. Vous avez déjà accordé cette autorisation."
   },
   "settings_main_caption": {
     "message": "Paramètres"
