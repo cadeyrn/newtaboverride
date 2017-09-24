@@ -44,6 +44,7 @@ The extension is currently available in the following languages:
 
 - English
 - German
+- French (Thanks, SuperPat45!)
 - Dutch (Thanks, Tonnes!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
