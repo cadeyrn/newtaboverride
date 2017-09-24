@@ -1,8 +1,6 @@
 'use strict';
 
-/* global defaults, utils */
-
-const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
+/* global defaults, permissions, utils */
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
@@ -156,72 +154,25 @@ const options = {
     options.toggleOptionsDetails();
 
     if (option.type === 'feed') {
-      options.testFeedPermission();
+      permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
     }
 
     // only for updates from the legacy add-on
     if (option.show_compat_notice === true) {
       elCompatNotice.classList.remove('hidden');
     }
-  },
-
-  /**
-   * Checks if the permission for reading the feed is granted. If so it shows the option to revoke the permission.
-   * Otherwise it shows the option to grant the permission.
-   *
-   * @returns {void}
-   */
-  async testFeedPermission () {
-    const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
-
-    if (isAllowed) {
-      elFeedPermissionRevoke.classList.remove('hidden');
-    }
-    else {
-      elFeedPermission.classList.remove('hidden');
-    }
-  },
-
-  /**
-   * This method is used to request and to grant the permission.
-   *
-   * @param {Event} e - event
-   *
-   * @returns {void}
-   */
-  async requestFeedPermission (e) {
-    e.preventDefault();
-
-    const granted = await browser.permissions.request(FEED_PERMISSION);
-
-    if (granted) {
-      elFeedPermission.classList.add('hidden');
-      elFeedPermissionRevoke.classList.remove('hidden');
-    }
-  },
-
-  /**
-   * This method is used to remove the permission.
-   *
-   * @param {Event} e - event
-   *
-   * @returns {void}
-   */
-  async revokeFeedPermission (e) {
-    e.preventDefault();
-
-    const revoked = await browser.permissions.remove(FEED_PERMISSION);
-
-    if (revoked) {
-      elFeedPermission.classList.remove('hidden');
-      elFeedPermissionRevoke.classList.add('hidden');
-    }
   }
 };
 
 document.addEventListener('DOMContentLoaded', options.load);
-elFeedPermissionBtn.addEventListener('click', options.requestFeedPermission);
-elFeedPermissionRevokeBtn.addEventListener('click', options.revokeFeedPermission);
+
+permissions.setupListeners({
+  permission: PERMISSION_FEED,
+  elGrantPermissionContainer: elFeedPermission,
+  elRevokePermissionContainer: elFeedPermissionRevoke,
+  elGrantBtn: elFeedPermissionBtn,
+  elRevokeBtn: elFeedPermissionRevokeBtn,
+});
 
 elFocusWebsite.addEventListener('change', (e) => {
   browser.storage.local.set({ focus_website : e.target.checked });
@@ -229,7 +180,7 @@ elFocusWebsite.addEventListener('change', (e) => {
 
 elType.addEventListener('change', (e) => {
   if (e.target.value === 'feed') {
-    options.testFeedPermission();
+    permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
   }
   else {
     elFeedPermission.classList.add('hidden');
