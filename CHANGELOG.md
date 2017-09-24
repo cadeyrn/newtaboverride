@@ -5,7 +5,7 @@
 ### Version 9.0.0 (2017-09-24)
 
 - [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
-  one home page New Tab Override uses the first one. This feature requires Firefox 57 or later. And **optional**
+  one home page New Tab Override uses the first one. This feature requires Firefox 57 or later. An **optional**
   permission for reading and modifying browser settings is needed to use this feature, fixes
   [#19](https://github.com/cadeyrn/newtaboverride/issues/19)
 - [ENHANCEMENT] **New Tab Override does no longer create useless history entries!** That's why New Tab Override needs
