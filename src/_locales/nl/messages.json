@@ -89,23 +89,32 @@
   "settings_donation_text": {
     "message": "Overweeg een donatie om de actieve ontwikkeling van deze extensie te steunen."
   },
-  "settings_feed_permission_action": {
-    "message": "Toestemming verlenen"
-  },
   "settings_feed_permission_description": {
     "message": "Firefox heeft uw toestemming nodig om de nieuwsfeed van soeren-hentzschel.at te lezen. U kunt deze toestemming altijd intrekken."
   },
   "settings_feed_permission_needed": {
     "message": "U moet Firefox toestemming geven voor het lezen van de gegevensbron om deze functie te gebruiken."
   },
-  "settings_feed_permission_revoke_action": {
-    "message": "Toestemming intrekken"
-  },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox heeft uw toestemming nodig om de nieuwsfeed van soeren-hentzschel.at te lezen. U hebt deze toestemming al verleend."
   },
+  "settings_homepage_permission_description": {
+    "message": "Firefox needs your permission to read and to modify the browser settings. U kunt deze toestemming altijd intrekken."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "To use this feature you have to allow Firefox to read and to modify the browser settings."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox needs your permission to read and to modify the browser settings. U hebt deze toestemming al verleend."
+  },
   "settings_main_caption": {
     "message": "Instellingen"
+  },
+  "settings_permission_action": {
+    "message": "Toestemming verlenen"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Toestemming intrekken"
   },
   "settings_support_caption": {
     "message": "Ondersteuning"

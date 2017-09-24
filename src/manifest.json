@@ -39,12 +39,12 @@
     "open_in_tab": true
   },
   "permissions": [
-    "browserSettings",
     "history",
     "storage",
     "tabs"
   ],
   "optional_permissions": [
+    "browserSettings",
     "https://www.soeren-hentzschel.at/*"
   ],
   "default_locale": "en",

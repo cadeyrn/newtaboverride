@@ -89,23 +89,32 @@
   "settings_donation_text": {
     "message": "Prošu rozmysluj dar, zo by dalše wuwiwanje tutoho přidatka podpěrał."
   },
-  "settings_feed_permission_action": {
-    "message": "Dowolnosć dać"
-  },
   "settings_feed_permission_description": {
     "message": "Firefox dowolnosć trjeba, zo by powěsćowy kanal soeren-hentzschel.at čitał. Móžeš dowolnosć kóždy čas zebrać."
   },
   "settings_feed_permission_needed": {
     "message": "Zo by móhł tutu funkciju wužiwać, dyrbiš Firefox dowolić, datowe žórło čitać."
   },
-  "settings_feed_permission_revoke_action": {
-    "message": "Dowolnosć zebrać"
-  },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox dowolnosć trjeba, zo by powěsćowy kanal soeren-hentzschel.at čitał. Sy tutu dowolnosć hižo dał."
   },
+  "settings_homepage_permission_description": {
+    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu modifizieren. Móžeš dowolnosć kóždy čas zebrać."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, Browser-Einstellungen zu lesen und zu modifizieren."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox benötigt deine Erlaubnis, um Browser-Einstellungen zu lesen und zu modifizieren. Sy tutu dowolnosć hižo dał."
+  },
   "settings_main_caption": {
     "message": "Nastajenja"
+  },
+  "settings_permission_action": {
+    "message": "Dowolnosć dać"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Dowolnosć zebrać"
   },
   "settings_support_caption": {
     "message": "Podpěra"

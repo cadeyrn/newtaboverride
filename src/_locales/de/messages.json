@@ -89,23 +89,32 @@
   "settings_donation_text": {
     "message": "Bitte erwäge eine Spende, um die weitere Entwicklung dieser Erweiterung zu gewährleisten."
   },
-  "settings_feed_permission_action": {
-    "message": "Berechtigung erteilen"
-  },
   "settings_feed_permission_description": {
     "message": "Firefox benötigt deine Erlaubnis, um den News-Feed von soeren-hentzschel.at zu lesen. Die Berechtigung kann jederzeit widerrufen werden."
   },
   "settings_feed_permission_needed": {
     "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, die Datenquelle zu lesen."
   },
-  "settings_feed_permission_revoke_action": {
-    "message": "Berechtigung entziehen"
-  },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox benötigt deine Erlaubnis, um den News-Feed von soeren-hentzschel.at zu lesen. Du hast diese Berechtigung bereits erteilt."
   },
+  "settings_homepage_permission_description": {
+    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu modifizieren. Die Berechtigung kann jederzeit widerrufen werden."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, Browser-Einstellungen zu lesen und zu modifizieren."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox benötigt deine Erlaubnis, um Browser-Einstellungen zu lesen und zu modifizieren. Du hast diese Berechtigung bereits erteilt."
+  },
   "settings_main_caption": {
     "message": "Einstellungen"
+  },
+  "settings_permission_action": {
+    "message": "Berechtigung erteilen"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Berechtigung entziehen"
   },
   "settings_support_caption": {
     "message": "Unterstützung"

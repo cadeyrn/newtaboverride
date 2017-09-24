@@ -15,6 +15,10 @@ const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
 const elHomepageFutureVersionNotice = document.getElementById('homepage-feature-version-notice');
 const elHomepageOption = document.getElementById('homepage-option');
+const elHomepagePermission = document.getElementById('homepage-permission-container');
+const elHomepagePermissionBtn = document.getElementById('homepage-permission');
+const elHomepagePermissionRevoke = document.getElementById('homepage-permission-revoke-container');
+const elHomepagePermissionRevokeBtn = document.getElementById('homepage-permission-revoke');
 const elLocalFile = document.getElementById('local-file');
 const elLocalFileDeleteLink = document.getElementById('delete-local-file');
 const elLocalFileOption = document.getElementById('local-file-option');
@@ -153,6 +157,10 @@ const options = {
     elBackgroundColor.value = option.background_color;
     options.toggleOptionsDetails();
 
+    if (option.type === 'homepage') {
+      permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
+    }
+
     if (option.type === 'feed') {
       permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
     }
@@ -174,11 +182,27 @@ permissions.setupListeners({
   elRevokeBtn: elFeedPermissionRevokeBtn,
 });
 
+permissions.setupListeners({
+  permission: PERMISSION_HOMEPAGE,
+  elGrantPermissionContainer: elHomepagePermission,
+  elRevokePermissionContainer: elHomepagePermissionRevoke,
+  elGrantBtn: elHomepagePermissionBtn,
+  elRevokeBtn: elHomepagePermissionRevokeBtn,
+});
+
 elFocusWebsite.addEventListener('change', (e) => {
   browser.storage.local.set({ focus_website : e.target.checked });
 });
 
 elType.addEventListener('change', (e) => {
+  if (e.target.value === 'homepage') {
+    permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
+  }
+  else {
+    elHomepagePermission.classList.add('hidden');
+    elHomepagePermissionRevoke.classList.add('hidden');
+  }
+
   if (e.target.value === 'feed') {
     permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
   }
