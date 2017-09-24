@@ -17,7 +17,7 @@
 - [ENHANCEMENT] some textual and style improvements
 - [TRANSLATION] added French translation (Thanks, SuperPat45!)
 - [TRANSLATION] updated translations (Thanks, milupo!)
-_ [CODE QUALITY] refactored the handling of optional permissions for easier implementing of new features, fixes
+- [CODE QUALITY] refactored the handling of optional permissions for easier implementing of new features, fixes
   [#61](https://github.com/cadeyrn/newtaboverride/issues/61)
 - [CODE QUALITY] organized the script files in folders
 - [DEPENDENCY] updated eslint from version 4.5.0 to 4.7.2
