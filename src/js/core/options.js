@@ -31,6 +31,8 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
+  firefox57 : false,
+
   /**
    * prepend "http://" to string if the string does not start with "http://" or "https://"
    *
@@ -74,10 +76,7 @@ const options = {
 
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
-      const browserInfo = await browser.runtime.getBrowserInfo();
-      const firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
-
-      if (firefox57) {
+      if (options.firefox57) {
         showHomepageOption = true;
         showFocusOption = true;
         showClearOption = true;
@@ -149,6 +148,9 @@ const options = {
    * @returns {void}
    */
   async load () {
+    const browserInfo = await browser.runtime.getBrowserInfo();
+    options.firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
+
     const option = await browser.storage.local.get(defaults);
 
     elFocusWebsite.checked = option.focus_website;
@@ -157,7 +159,7 @@ const options = {
     elBackgroundColor.value = option.background_color;
     options.toggleOptionsDetails();
 
-    if (option.type === 'homepage') {
+    if (options.firefox57 && option.type === 'homepage') {
       permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
     }
 
@@ -195,12 +197,14 @@ elFocusWebsite.addEventListener('change', (e) => {
 });
 
 elType.addEventListener('change', (e) => {
-  if (e.target.value === 'homepage') {
-    permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
-  }
-  else {
-    elHomepagePermission.classList.add('hidden');
-    elHomepagePermissionRevoke.classList.add('hidden');
+  if (options.firefox57) {
+    if (e.target.value === 'homepage') {
+      permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
+    }
+    else {
+      elHomepagePermission.classList.add('hidden');
+      elHomepagePermissionRevoke.classList.add('hidden');
+    }
   }
 
   if (e.target.value === 'feed') {
