@@ -92,9 +92,11 @@ const newtab = {
     else {
       let options;
 
+      // set loadReplace to true to disable the back button
       if (newtab.firefox57) {
         options = { url : url || 'about:blank', loadReplace : true };
       }
+      // loadReplace is not available before Firefox 57
       else {
         options = { url : url || 'about:blank' };
       }
