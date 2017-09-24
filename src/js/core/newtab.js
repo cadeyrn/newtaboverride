@@ -3,6 +3,7 @@
 /* global defaults, utils */
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
+const HOME_PAGE_MISSING_PERMISSION = 'html/homepage_permission_needed.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
 const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
 const FEED_PAGE = 'html/feed.html';
@@ -35,16 +36,26 @@ const newtab = {
         newtab.openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
+        // only on Firefox 57+
         if (newtab.firefox57) {
-          const homepage = await browser.browserSettings.homepageOverride.get({});
-          const firstHomepage = homepage.value.split('|')[0];
+          const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
 
-          if (!URI_REGEX.test(firstHomepage)) {
-            browser.tabs.update({ url : 'about:blank' });
-            break;
+          // a permission is needed
+          if (isAllowed) {
+            const homepage = await browser.browserSettings.homepageOverride.get({});
+            const firstHomepage = homepage.value.split('|')[0];
+
+            if (!URI_REGEX.test(firstHomepage)) {
+              browser.tabs.update({ url : 'about:blank' });
+              break;
+            }
+
+            newtab.openNewTabPage(firstHomepage, options.focus_website);
           }
-
-          newtab.openNewTabPage(firstHomepage, options.focus_website);
+          // no permission granted
+          else {
+            newtab.openNewTabPage(browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION), options.focus_website);
+          }
         }
         else {
           browser.tabs.update({ url : 'about:blank' });
