@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 9.0.0 (2017-09-24)
+### Version 9.0.0 (2017-09-26)
 
 - [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
   one home page New Tab Override uses the first one. This feature requires Firefox 57 or later. An **optional**
@@ -26,6 +26,7 @@
 - [DEPENDENCY] updated npm-run-all from version 4.0.2 to 4.1.1
 - [DEPENDENCY] updated stylelint from version 8.0.0 to 8.1.1
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.1.1 to 1.2.0
+- [DEPENDENCY] updated stylelint-order from version 0.6.0 to 0.7.0
 
 ### Version 8.0.0 (2017-08-22)
 
