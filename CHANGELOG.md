@@ -2,14 +2,14 @@
 
 ## Release Notes
 
-### Version 9.0.0 (2017-09-26)
+### Version 9.0.0 (2017-09-28)
 
 - [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
   one home page New Tab Override uses the first one. This feature requires Firefox 57 or later. An **optional**
   permission for reading and modifying browser settings is needed to use this feature, fixes
   [#19](https://github.com/cadeyrn/newtaboverride/issues/19)
 - [ENHANCEMENT] **New Tab Override does no longer create useless history entries!** That's why New Tab Override needs
-  the permission to modify the browser history beginning with version 9.0.0, fixes
+  the permission to access the browser history beginning with version 9.0.0, fixes
   [#20](https://github.com/cadeyrn/newtaboverride/issues/20)
 - [ENHANCEMENT] **The back button of Firefox is no longer enabled on the new tab page!** This feature requires
   Firefox 57 or later, fixes [#46](https://github.com/cadeyrn/newtaboverride/issues/46)
@@ -27,6 +27,8 @@
 - [DEPENDENCY] updated stylelint from version 8.0.0 to 8.1.1
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.1.1 to 1.2.0
 - [DEPENDENCY] updated stylelint-order from version 0.6.0 to 0.7.0
+
+**Minimum required Firefox version is Firefox 56 now.**
 
 ### Version 8.0.0 (2017-08-22)
 
@@ -153,7 +155,7 @@ Missing features:
 - [ENHANCEMENT] compatibility workaround for Firefox 44 Beta (Bugzilla #1240559) removed, it's no longer needed
 - [DEPENDENCY] compiled with JPM 1.0.7 (before: 1.0.4)
 
-**Minimum requirement is Firefox 45 now (no tests and no support for older versions of Firefox!**
+**Minimum required Firefox version is Firefox 45 now.**
   
 ### Version 2.3.1 (2016-01-19)
 
