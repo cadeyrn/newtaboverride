@@ -96,6 +96,8 @@ Missing features:
   file to a web server to use it again.
 - The option to use the last URL from clipboard was not re-implemented in New Tab Override 7.0.0.
 
+**Minimum required Firefox version is Firefox 55 now.**
+
 ### Version 6.0.1 (2016-12-27)
 
 - [TRANSLATION] updated translations
