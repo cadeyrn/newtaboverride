@@ -45,10 +45,10 @@
     "message": "Feature requests or error report? Open a ticket on GitHub:"
   },
   "homepage_description": {
-    "message": "If this option is enabled Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#general in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home page are configured, New Tab Override will use the first one."
+    "message": "If this option is enabled, Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#general in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home pages are configured, New Tab Override will use the first one."
   },
   "homepage_future_version_description": {
-    "message": "From Firefox 57 (scheduled release: November 14, 2017) Firefox will also be able to automatically use the homepage as the new tab page. Until then please select the „custom URL“ option to set the page manually."
+    "message": "From Firefox 57 (scheduled release: November 14, 2017) Firefox will also be able to automatically use the homepage as the new tab page. Until then please select the “custom URL” option to set the page manually."
   },
   "introduction_part_one": {
     "message": "This page is provided by"
@@ -63,10 +63,10 @@
     "message": "delete existing file"
   },
   "local_file_description": {
-   "message": "Due to Firefox restrictions, it is not possible for extensions to access local files. New Tab Override provides you with the possibility to load local HTML files into the extension's storage and to use them as a new tab content. Any URLs and links to images, CSS files and JavaScript files that may be included must be accessible via the web because Firefox can not access local files on the system. Alternatively, please consider using a local web server, for example via MAMP or XAMPP, with the „custom URL“ option. This works without any restriction."
+   "message": "Due to Firefox restrictions, it is not possible for extensions to access local files. New Tab Override provides you with the possibility to load local HTML files into the extension's storage and to use them as a new tab content. Any URLs and links to images, CSS files and JavaScript files that may be included must be accessible via the web because Firefox can not access local files on the system. Alternatively, please consider using a local web server, for example via MAMP or XAMPP, with the “custom URL” option. This works without any restriction."
   },
   "local_file_no_file": {
-    "message": "You selected the „local file“ option, but did not stored a local file. Please store a file in the New Tab Override settings."
+    "message": "You selected the “local file” option, but did not store a local file. Please store a file in the New Tab Override settings."
   },
   "local_file_title": {
     "message": "Local file"
@@ -156,7 +156,7 @@
     "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
   },
   "url_description": {
-    "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with http:// or https:// are supported. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the „local file“ option or a local web server, for example via MAMP or XAMPP."
+    "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with http:// or https:// are supported. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the “local file” option or a local web server, for example via MAMP or XAMPP."
   },
   "url_title": {
     "message": "URL"
