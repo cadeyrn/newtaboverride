@@ -34,8 +34,7 @@ reserved. It is also possible to open the settings interface via entering **newt
 
 ### Planned features
 
-There are already some features planned for the future but these features are still in the investigation phase so there
-is nothing to announce yet. Please suggest your feature requests in the
+There are already some new features planned for the future. Please suggest your feature requests in the
 [issues tracker](https://github.com/cadeyrn/newtaboverride/issues).
 
 ### Languages
