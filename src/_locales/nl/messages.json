@@ -45,16 +45,16 @@
     "message": "Aanvragen voor functies of een fout melden? Open een ticket op GitHub:"
   },
   "homepage_description": {
-    "message": "Als deze optie is ingeschakeld, gebruikt Firefox ook de startpagina als de nieuwe tabblad. U kunt de startpagina wijzigen door te typen over: voorkeuren # algemeen in de adresbalk. Alleen thuispagina's die beginnen met http: // of https: // worden ondersteund. Als meerdere thuispagina's zijn geconfigureerd, gebruikt de nieuwe tabblad de eerste."
+    "message": "Als deze optie is ingeschakeld, gebruikt Firefox de startpagina ook als de nieuw-tabbladpagina. U kunt de startpagina wijzigen door about:preferences#general in de adresbalk te typen. Alleen startpagina’s die met http:// of https:// beginnen worden ondersteund. Als meerdere startpagina’s zijn geconfigureerd, gebruikt New Tab Override de eerste."
   },
   "homepage_future_version_description": {
-    "message": "Van Firefox 57 (geplande versie: 14 november 2017) kan Firefox ook automatisch de homepage gebruiken als de nieuwe tabblad. Selecteer tot dan toe de optie 'Aangepaste URL' om de pagina handmatig in te stellen."
+    "message": "Vanaf Firefox 57 (geplande release: 14 november 2017) kan Firefox ook automatisch de startpagina als de nieuw-tabbladpagina gebruiken. Selecteer tot die datum de optie ‘Aangepaste URL’ om de pagina handmatig in te stellen."
   },
   "introduction_part_one": {
     "message": "Deze pagina wordt aangeboden door"
   },
   "introduction_part_two": {
-    "message": "Selecteer welke pagina als nieuw tabblad moet worden geopend!"
+    "message": "selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "local_file_delete_confirmation": {
     "message": "Weet u zeker dat u het bestand uit de opslag van de extensie wilt verwijderen?"
@@ -63,16 +63,16 @@
     "message": "bestaande bestand verwijderen"
   },
   "local_file_description": {
-   "message": "Vanwege beperkingen van Firefox is het niet mogelijk dat extensies toegang hebben tot lokale bestanden. New Tab Override biedt u de mogelijkheid om lokale HTML-bestanden in de opslag van de extensie te laden en deze als inhoud van een nieuw tabblad te gebruiken. URL’s en koppelingen naar afbeeldingen, CSS en JavaScript-bestanden die mogelijk zijn bijgesloten, moeten via het web toegankelijk zijn, omdat Firefox geen lokale bestanden op het systeem kan benaderen. Als alternatief kunt u overwegen om een lokale webserver te gebruiken, bijvoorbeeld via MAMP of XAMPP, met de optie ‘aangepaste URL‘. Dit werkt zonder enige beperking."
+   "message": "Vanwege beperkingen van Firefox is het niet mogelijk dat extensies toegang hebben tot lokale bestanden. New Tab Override biedt u de mogelijkheid om lokale HTML-bestanden in de opslag van de extensie te laden en deze als inhoud van een nieuw tabblad te gebruiken. URL’s en koppelingen naar afbeeldingen, CSS-bestanden en JavaScript-bestanden die mogelijk zijn bijgesloten, moeten via het web toegankelijk zijn, omdat Firefox geen lokale bestanden op het systeem kan benaderen. Als alternatief kunt u overwegen een lokale webserver te gebruiken, bijvoorbeeld via MAMP of XAMPP, met de optie ‘aangepaste URL’. Dit werkt zonder enige beperking."
   },
   "local_file_no_file": {
-    "message": "U hebt de optie ‘lokaal bestand’ geselecteerd, maar geen lokaal bestand geüpload. Upload een bestand in de instellingen van New Tab Override."
+    "message": "U hebt de optie ‘lokaal bestand’ geselecteerd, maar geen lokaal bestand opgegeven. Geef een lokaal bestand op in de instellingen van New Tab Override."
   },
   "local_file_title": {
     "message": "Lokaal bestand"
   },
   "local_file_upload": {
-    "message": "Lokaal bestand uploaden"
+    "message": "Lokaal bestand opgeven"
   },
   "new_tab_title": {
     "message": "Nieuw tabblad"
@@ -99,13 +99,13 @@
     "message": "Firefox heeft uw toestemming nodig om de nieuwsfeed van soeren-hentzschel.at te lezen. U hebt deze toestemming al verleend."
   },
   "settings_homepage_permission_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en te wijzigen. U kunt deze toestemming altijd intrekken."
+    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U kunt deze toestemming altijd intrekken."
   },
   "settings_homepage_permission_needed": {
-    "message": "Om deze functie te kunnen gebruiken, moet u Firefox de browserinstellingen lezen en wijzigen."
+    "message": "U moet Firefox toestemming geven voor het lezen en aanpassen van de browserinstellingen om deze functie te gebruiken."
   },
   "settings_homepage_permission_revoke_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en te wijzigen. U hebt deze toestemming al verleend."
+    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U hebt deze toestemming al verleend."
   },
   "settings_main_caption": {
     "message": "Instellingen"
@@ -135,7 +135,7 @@
     "message": "standaard startpagina van Firefox (about:home)"
   },
   "type_options_default_new_tab": {
-    "message": "standaard nieuwe tabblad van Firefox (about:newtab)"
+    "message": "standaard nieuw-tabbladpagina van Firefox (about:newtab)"
   },
   "type_options_empty_page": {
     "message": "lege pagina (about:blank)"
@@ -144,7 +144,7 @@
     "message": "Mozilla-nieuws (Duits)"
   },
   "type_options_homepage": {
-    "message": "huidige homepage"
+    "message": "huidige startpagina"
   },
   "type_options_local_file": {
     "message": "lokaal bestand"
@@ -156,7 +156,7 @@
     "message": "Gebruikers van eerdere versies van New Tab Override dienen de extensie opnieuw te configureren."
   },
   "url_description": {
-    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL's die starten met http: // of https: // worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van WebExtensions. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
+    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL’s die met http:// of https:// beginnen worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
   },
   "url_title": {
     "message": "URL"
@@ -165,6 +165,6 @@
     "message": "Dit is geen geldige URL."
   },
   "url_validation_file": {
-    "message": "Toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox."
+    "message": "Toegang tot lokale bestanden via een URL is niet meer mogelijk voor extensies."
   }
 }
