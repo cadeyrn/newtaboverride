@@ -12,7 +12,7 @@
     "message": "New Tab Override jo se dopołnje nowy ako tak pomjenjone WebExtension wuwiło. Pśez to jo New Tab Override teke kompatibelne z Firefox 57 a nowšymi. Nic wšykne opcije pjerwjejšneje wersije su tuchylu ako WebExtension realizěrujobne. Gaž Mozilla pódpěru za felujuce funkcije wudopołnjujo, se toś te ako aktualizacija New Tab Override pśidaju."
   },
   "compat_notice_title": {
-    "message": "Felujośo funkcije?"
+    "message": "Feluju funkcije?"
   },
   "default_option_description": {
     "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
@@ -93,19 +93,19 @@
     "message": "Firefox dowólnosć trjeba, aby powěsćowy kanal soeren-hentzschel.at cytał. Móžoš dowólnosć kuždy cas zajmjeś."
   },
   "settings_feed_permission_needed": {
-    "message": "Aby mógał toś tu funkciju wužywaś, musyš Firefox dowóliś, datowe žrědło cytaś"
+    "message": "Aby mógał toś tu funkciju wužywaś, musyš Firefox dowóliś, datowe žrědło cytaś."
   },
   "settings_feed_permission_revoke_description": {
     "message": "Firefox dowólnosć trjeba, aby powěsćowy kanal soeren-hentzschel.at cytał. Sy toś tu dowólnosć južo dał."
   },
   "settings_homepage_permission_description": {
-    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu modifizieren. Móžoš dowólnosć kuždy cas zajmjeś."
+    "message": "Firefox twóju dowólnosć trjeba, aby nastajenja wobglědowaka cytał a změnił. Móžoš dowólnosć kuždy cas zajmjeś."
   },
   "settings_homepage_permission_needed": {
-    "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, Browser-Einstellungen zu lesen und zu modifizieren."
+    "message": "Aby mógał toś tu funkciju wužywaś, musyš Firefox dowóliś, nastajenja wobglědowaka cytaś a změniś."
   },
   "settings_homepage_permission_revoke_description": {
-    "message": "Firefox benötigt deine Erlaubnis, um Browser-Einstellungen zu lesen und zu modifizieren. Sy toś tu dowólnosć južo dał."
+    "message": "Firefox twóju dowólnosć trjeba, aby nastajenja wobglědowaka cytał a změnił. Sy toś tu dowólnosć južo dał."
   },
   "settings_main_caption": {
     "message": "Nastajenja"
