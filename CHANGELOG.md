@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 9.0.0 (2017-09-28)
+### Version 9.0.0 (2017-09-27)
 
 - [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
   one home page New Tab Override uses the first one. This feature requires Firefox 57 or later. An **optional**
