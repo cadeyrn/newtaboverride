@@ -16,7 +16,7 @@
 - [ENHANCEMENT] show favicon on new tab page if background color option is enabled
 - [ENHANCEMENT] some textual and style improvements
 - [TRANSLATION] added French translation (Thanks, SuperPat45!)
-- [TRANSLATION] updated translations (Thanks, milupo!)
+- [TRANSLATION] updated translations (Thanks, Tonnes and milupo!)
 - [CODE QUALITY] refactored the handling of optional permissions for easier implementing of new features, fixes
   [#61](https://github.com/cadeyrn/newtaboverride/issues/61)
 - [CODE QUALITY] organized the script files in folders
