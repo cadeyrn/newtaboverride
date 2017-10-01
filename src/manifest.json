@@ -41,6 +41,7 @@
   "permissions": [
     "history",
     "storage",
+    "cookies",
     "tabs"
   ],
   "optional_permissions": [

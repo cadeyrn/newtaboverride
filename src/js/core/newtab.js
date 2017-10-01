@@ -94,7 +94,7 @@ const newtab = {
     if (focus_website) {
       await browser.tabs.getCurrent((tab) => {
         const tabId = tab.id;
-        browser.tabs.create({ url : url || 'about:blank' }, () => {
+        browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
       });
