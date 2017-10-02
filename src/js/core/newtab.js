@@ -94,6 +94,8 @@ const newtab = {
     if (focus_website) {
       await browser.tabs.getCurrent((tab) => {
         const tabId = tab.id;
+
+        // we need to pass the cookieStoreId to support the container feature of Firefox
         browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
