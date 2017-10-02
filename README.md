@@ -14,6 +14,12 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 
 **New Tab Override is a WebExtension and also compatible with Firefox 57 and later.**
 
+### Permissions
+
+New Tab Override needs the permissions to access your tabs and your history. Why does New Tab Override need access to
+your history? It's needed to prevent spammy "moz-extension://" entries in your browsing history every time you open a
+new tab. There is no way to prevent this without this permission.
+
 ### Features
 
 - change the new tab page to whatever web accesible URL you like
@@ -25,7 +31,7 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 - get the latest news about Mozilla as new tab page (only in German language)
 - set the focus either to the address bar or to the web site (for example Google search field)
 - beautiful settings UI to make it easy to customize your new tab experience
-- live validation for custom URL so that you get direct feedback
+- automatically prepend http:// if protocol is missing
 
 ### Shortcuts
 
