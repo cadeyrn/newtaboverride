@@ -99,7 +99,7 @@
     "message": "Firefox benötigt deine Erlaubnis, um den News-Feed von soeren-hentzschel.at zu lesen. Du hast diese Berechtigung bereits erteilt."
   },
   "settings_homepage_permission_description": {
-    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu modifizieren. Die Berechtigung kann jederzeit widerrufen werden."
+    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu verändern. Die Berechtigung kann jederzeit widerrufen werden."
   },
   "settings_homepage_permission_needed": {
     "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, Browser-Einstellungen zu lesen und zu modifizieren."
