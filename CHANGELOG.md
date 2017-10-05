@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 10.0.0 (2017-10-xx)
+
+- [ENHANCEMENT] New Tab Override no longer loses container information if the option "Set focus to the web page instead
+  of the address bar" and the container tabs feature of Firefox are used (Thanks, m-khvoinitsky!)
+- [TRANSLATION] added Chinese (simplified) translation (Thanks, zhaiyusci!)
+- [DEPENDENCY] updated eslint from version 4.7.2 to 4.8.0
+- [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.0
+- [DEPENDENCY] updated stylelint from version 8.1.1 to 8.2.0
+
 ### Version 9.0.0 (2017-09-27)
 
 - [ENHANCEMENT] **New Tab Override can now automatically use your home page as new tab page!** If you have more than
