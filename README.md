@@ -32,6 +32,7 @@ new tab. There is no way to prevent this without this permission.
 - set the focus either to the address bar or to the web site (for example Google search field)
 - beautiful settings UI to make it easy to customize your new tab experience
 - automatically prepend http:// if protocol is missing
+- can be used together with the container tabs feature of Firefox
 
 ### Shortcuts
 
@@ -51,6 +52,7 @@ The extension is currently available in the following languages:
 - German
 - French (Thanks, SuperPat45!)
 - Dutch (Thanks, Tonnes!)
+- Chinese (simplified) (Thanks, zhaiyusci!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
