@@ -8,7 +8,7 @@
   of the address bar" and the container tabs feature of Firefox are used (Thanks, m-khvoinitsky!)
 - [TRANSLATION] added Chinese (simplified) translation (Thanks, zhaiyusci!)
 - [DEPENDENCY] updated eslint from version 4.7.2 to 4.8.0
-- [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.0
+- [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.1
 - [DEPENDENCY] updated stylelint from version 8.1.1 to 8.2.0
 
 ### Version 9.0.0 (2017-09-27)
