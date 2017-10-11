@@ -10,6 +10,7 @@
 - [DEPENDENCY] updated eslint from version 4.7.2 to 4.8.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.1
 - [DEPENDENCY] updated stylelint from version 8.1.1 to 8.2.0
+- [DEPENDENCY] updated web-ext from version 2.0.0 to 2.1.0
 
 ### Version 9.0.0 (2017-09-27)
 
