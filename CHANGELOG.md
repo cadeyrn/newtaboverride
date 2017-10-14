@@ -9,6 +9,8 @@
 - [ENHANCEMENT] added a menu item to the tools menu to open New Tab Override's settings, fixes
   [#35](https://github.com/cadeyrn/newtaboverride/issues/35)
 - [TRANSLATION] added Chinese (simplified) translation (Thanks, zhaiyusci!)
+- [DOCUMENTATION] added documentation about used permissions to the README, fixes
+  [#75](https://github.com/cadeyrn/newtaboverride/issues/75)
 - [DEPENDENCY] updated eslint from version 4.7.2 to 4.8.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.1
 - [DEPENDENCY] updated stylelint from version 8.1.1 to 8.2.0
