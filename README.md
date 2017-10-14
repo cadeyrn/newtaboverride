@@ -101,7 +101,7 @@ page instead of the address bar" and the container tabs feature of Firefox are u
 ##### menus
 _(since 10.0.0)_
 
-The menus permission is needed for providing an menu entry in the tools menu for accessing New Tab Override's settings.
+The menus permission is needed for providing an menu entry in the tools menu to access New Tab Override's settings.
 
 ##### storage
 
