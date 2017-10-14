@@ -81,7 +81,7 @@ _(since 9.0.0)_
 
 The permission to read and modify browser settings is only needed if you enable the option to automatically use your
 home page as new tab page. Without this permission New Tab Override does not know your home page and you have to
-manually set your new tab page.
+manually set your home page as new tab page.
 
 #### silent permissions
 
