@@ -102,9 +102,6 @@ The menus permission is needed for providing an menu entry in the tools menu for
 
 The storage permission is needed so that New Tab Override can store settings such as your new tab page.
 
-the permissions to access your tabs and your history. Why does New Tab Override need access to
-your history? 
-
 ## Compatibility
 
 The extension requires at least Firefox 56. Because the extension makes use of modern web technologies and the latest
