@@ -47,9 +47,6 @@
   "homepage_description": {
     "message": "Si cette option est activée, Firefox utilisera également la page d'accueil comme page nouvel onglet. Vous pouvez modifier la page d'accueil en entrant about:preferences#general dans la barre d'adresse. Seules les pages d'accueil commençant par http:// ou https:// sont pris en charge. Si plusieurs pages d'accueil sont configurées, New Tab Override utilisera la première."
   },
-  "homepage_future_version_description": {
-    "message": "À partir de Firefox 57 (version programmée le 14 novembre 2017), Firefox pourra également utiliser automatiquement la page d'accueil comme page nouvel onglet. Jusque-là, sélectionnez l'option „URL personnalisée“ pour configurer la page manuellement."
-  },
   "introduction_part_one": {
     "message": "Cette page est fournie par"
   },

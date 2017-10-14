@@ -47,9 +47,6 @@
   "homepage_description": {
     "message": "如果此选项被启用，Firefox 会使用主页作为新标签页。你可以在地址栏输入 about:preferences#general 来更改主页。只有以 http:// 或者 https:// 开头的主页是支持的。如果设置了多个主页，New Tab Override 会采用第一个。"
   },
-  "homepage_future_version_description": {
-    "message": "从 Firefox 57（计划发布时间 2017年11月14日）Firefox 会内建支持采用主页作为新标签页。再此之前，请选择“自定义网址”手动设定该页面。"
-  },
   "introduction_part_one": {
     "message": "此页面由以下人员提供："
   },

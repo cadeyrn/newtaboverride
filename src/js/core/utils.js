@@ -1,6 +1,5 @@
 'use strict';
 
-const FIREFOX_57 = 57;
 const PERMISSION_FEED = { origins : ['https://www.soeren-hentzschel.at/*'] };
 const PERMISSION_HOMEPAGE = { permissions: ['browserSettings'] };
 

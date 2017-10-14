@@ -47,9 +47,6 @@
   "homepage_description": {
     "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#general do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
   },
-  "homepage_future_version_description": {
-    "message": "Wót Firefox 57 (planowane wózjawjenje: 14. nowembra 2017) móžo Firefox startowy bok teke awtomatiski ako bok za nowy rejtark wužywaś. Wubjeŕ pšosym do togo nastajenje „wót wužywarja definěrowany URL“, aby bok manuelnje nastajił."
-  },
   "introduction_part_one": {
     "message": "Toś ten bok staja se k dispoziciji wót"
   },

@@ -47,9 +47,6 @@
   "homepage_description": {
     "message": "Hdyž tute nastajenje zmóžnješ, Firefox startowu stronu tež jako stronu za nowy rajtark wužiwa. Zapodaj about:preferences#general do adresoweho pola, zo by startowu stronu změnił. Podpěruja so jenož startowe strony, kotrež so z http:// abo https:// započinaja. Hdyž su wjacore startowe strony skonfigurowane, budźe New Tab Override prěnju wužiwać."
   },
-  "homepage_future_version_description": {
-    "message": "Wot Firefox 57 (planowane wozjewjenje: 14. nowembra 2017) móže Firefox startowu stronu tež awtomatisce jako stronu za nowy rajtark wužiwać. Wubjer prošu do toho nastajenje „wot wužiwarja definowany URL“, zo by stronu manuelnje nastajił."
-  },
   "introduction_part_one": {
     "message": "Tuta strona staja so k dispoziciji wot"
   },

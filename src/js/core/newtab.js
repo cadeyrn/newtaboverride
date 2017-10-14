@@ -13,17 +13,12 @@ const NEW_TAB_PAGE = 'html/newtab.html';
  * @exports newtab
  */
 const newtab = {
-  firefox57 : false,
-
   /**
    * This method is used to navigate to the set new tab page.
    *
    * @returns {void}
    */
   async init () {
-    const browserInfo = await browser.runtime.getBrowserInfo();
-    newtab.firefox57 = utils.parseVersion(browserInfo.version).major >= FIREFOX_57;
-
     const options = await browser.storage.local.get(defaults);
     const url = options.type === 'about:home' ? options.type : options.url;
 
@@ -36,29 +31,23 @@ const newtab = {
         newtab.openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
-        // only on Firefox 57+
-        if (newtab.firefox57) {
-          const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
+        const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
 
-          // a permission is needed
-          if (isAllowed) {
-            const homepage = await browser.browserSettings.homepageOverride.get({});
-            const firstHomepage = homepage.value.split('|')[0];
+        // a permission is needed
+        if (isAllowed) {
+          const homepage = await browser.browserSettings.homepageOverride.get({});
+          const firstHomepage = homepage.value.split('|')[0];
 
-            if (!URI_REGEX.test(firstHomepage)) {
-              browser.tabs.update({ url : 'about:blank' });
-              break;
-            }
-
-            newtab.openNewTabPage(firstHomepage, options.focus_website);
+          if (!URI_REGEX.test(firstHomepage)) {
+            browser.tabs.update({ url : 'about:blank' });
+            break;
           }
-          // no permission granted
-          else {
-            newtab.openNewTabPage(browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION), options.focus_website);
-          }
+
+          newtab.openNewTabPage(firstHomepage, options.focus_website);
         }
+        // no permission granted
         else {
-          browser.tabs.update({ url : 'about:blank' });
+          newtab.openNewTabPage(browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION), options.focus_website);
         }
 
         break;
@@ -103,18 +92,8 @@ const newtab = {
     }
     // set focus on address bar
     else {
-      let options;
-
       // set loadReplace to true to disable the back button
-      if (newtab.firefox57) {
-        options = { url : url || 'about:blank', loadReplace : true };
-      }
-      // loadReplace is not available before Firefox 57
-      else {
-        options = { url : url || 'about:blank' };
-      }
-
-      await browser.tabs.update(options, () => {
+      await browser.tabs.update({ url : url || 'about:blank', loadReplace : true }, () => {
         // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
       });
     }
