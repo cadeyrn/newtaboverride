@@ -52,10 +52,12 @@ The extension is currently available in the following languages:
 
 ### Permissions
 
-New Tab Override needs several permissions to work properly. Some permissions are mandatory, some are optional. This
-overview gives you full transparency.
+New Tab Override needs several permissions to work properly. Some permissions are mandatory, some are optional. To give
+you full transparency this overview also lists "silent" permissions.
 
 #### mandatory permissions
+
+New Tab Override does not work without the following permissions:
 
 ##### access browser history
 _(since 9.0.0)_
@@ -70,10 +72,13 @@ page if the settings page is already opened in another tab and you click the but
 
 #### optional permissions
 
+These permissions are not needed to install and use New Tab Override. New Tab Override asks you at runtime once one of
+these permissions is needed:
+
 ##### access data for www.soeren-hentzschel.at
 
 The permission to access data for www.soeren-hentzschel.at is only needed if you enable the option to see the latest
-news about Mozilla as new tab page. If enabled New Tab Override reads the feed of www.soeren-hentzschel.at to show
+news about Mozilla as new tab page. If enabled, New Tab Override reads the feed of www.soeren-hentzschel.at to show
 you the latest news.
 
 ##### read and modify browser settings
