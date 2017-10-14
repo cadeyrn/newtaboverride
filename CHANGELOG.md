@@ -2,6 +2,13 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 11.0.0 (2017-11-xx)
+
+- [CODE QUALITY] removed all code pathes for Firefox below version 57
+- [CODE QUALITY] removed code for upgrade notices for users from the legacy version of New Tab Override
+
+**Minimum required Firefox version is Firefox 57 now.**
+
 ### Version 10.0.0 (2017-10-14)
 
 - [ENHANCEMENT] New Tab Override no longer loses container information if the option "Set focus to the web page instead
