@@ -14,12 +14,6 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 
 **New Tab Override is a WebExtension and also compatible with Firefox 57 and later.**
 
-### Permissions
-
-New Tab Override needs the permissions to access your tabs and your history. Why does New Tab Override need access to
-your history? It's needed to prevent spammy "moz-extension://" entries in your browsing history every time you open a
-new tab. There is no way to prevent this without this permission.
-
 ### Features
 
 - change the new tab page to whatever web accesible URL you like
@@ -55,6 +49,61 @@ The extension is currently available in the following languages:
 - Chinese (simplified) (Thanks, zhaiyusci!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
+
+### Permissions
+
+New Tab Override needs several permissions to work properly. Some permissions are mandatory, some are optional. This
+overview gives you full transparency.
+
+#### mandatory permissions
+
+##### access browser history
+_(since 9.0.0)_
+
+The permission to access the browser history is needed to prevent spammy "moz-extension://" entries in your browsing
+history every time you open a new tab. There is no way to prevent this without this permission.
+
+##### access browser tabs
+
+The permission to access the browser tabs is needed so that New Tab Override can jump to the already opened settings
+page if the settings page is already opened in another tab and you click the button to open New Tab Override's settings.
+
+#### optional permissions
+
+##### access data for www.soeren-hentzschel.at
+
+The permission to access data for www.soeren-hentzschel.at is only needed if you enable the option to see the latest
+news about Mozilla as new tab page. If enabled New Tab Override reads the feed of www.soeren-hentzschel.at to show
+you the latest news.
+
+##### read and modify browser settings
+_(since 9.0.0)_
+
+The permission to read and modify browser settings is only needed if you enable the option to automatically use your
+home page as new tab page. Without this permission New Tab Override does not know your home page and you have to
+manually set your new tab page.
+
+#### silent permissions
+
+New Tab Override needs some more permissions, but Firefox does not prompt for the following permissions:
+
+##### cookies
+_(since 10.0.0)_
+
+The cookies permission is needed to prevent the loss of the container information if the option "Set focus to the web
+page instead of the address bar" and the container tabs feature of Firefox are used.
+
+##### menus
+_(since 10.0.0)_
+
+The menus permission is needed for providing an menu entry in the tools menu for accessing New Tab Override's settings.
+
+##### storage
+
+The storage permission is needed so that New Tab Override can store settings such as your new tab page.
+
+the permissions to access your tabs and your history. Why does New Tab Override need access to
+your history? 
 
 ## Compatibility
 
