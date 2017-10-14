@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 10.0.0 (2017-10-xx)
+### (Work in Progress) Version 10.0.0 (2017-10-14)
 
 - [ENHANCEMENT] New Tab Override no longer loses container information if the option "Set focus to the web page instead
   of the address bar" and the container tabs feature of Firefox are used (Thanks, m-khvoinitsky!)
