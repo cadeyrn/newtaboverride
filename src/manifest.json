@@ -41,6 +41,7 @@
   "permissions": [
     "cookies",
     "history",
+    "menus",
     "storage",
     "tabs"
   ],

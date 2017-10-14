@@ -6,6 +6,8 @@
 
 - [ENHANCEMENT] New Tab Override no longer loses container information if the option "Set focus to the web page instead
   of the address bar" and the container tabs feature of Firefox are used (Thanks, m-khvoinitsky!)
+- [ENHANCEMENT] added a menu item to the tools menu to open New Tab Override's settings, fixes
+  [#35](https://github.com/cadeyrn/newtaboverride/issues/35)
 - [TRANSLATION] added Chinese (simplified) translation (Thanks, zhaiyusci!)
 - [DEPENDENCY] updated eslint from version 4.7.2 to 4.8.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 1.0.4 to 2.0.1

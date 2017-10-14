@@ -132,3 +132,9 @@ browser.omnibox.onInputChanged.addListener(newtaboverride.showOmniboxSuggestions
 browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
 browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
 browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
+
+browser.menus.create({
+  title : browser.i18n.getMessage('settings_title'),
+  contexts : ['tools_menu'],
+  command : '_execute_browser_action'
+});
