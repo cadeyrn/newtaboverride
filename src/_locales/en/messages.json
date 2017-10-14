@@ -8,12 +8,6 @@
   "clear_addressbar_title": {
     "message": "Clear address bar"
   },
-  "compat_notice_message": {
-    "message": "New Tab Override was developed from the ground up as so-called WebExtension. This makes New Tab Override compatible with Firefox 57 and later. Not all options of the previous version are currently available as WebExtension. As soon as Mozilla implements support for missing functionalities in Firefox, they will be integrated in a future update of New Tab Override."
-  },
-  "compat_notice_title": {
-    "message": "Missing some options?"
-  },
   "default_option_description": {
     "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
@@ -148,9 +142,6 @@
   },
   "type_title": {
     "message": "Option"
-  },
-  "upgrade_notice_message": {
-    "message": "Users of previous versions of New Tab Override need to reconfigure the extension."
   },
   "url_description": {
     "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with http:// or https:// are supported. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the “local file” option or a local web server, for example via MAMP or XAMPP."

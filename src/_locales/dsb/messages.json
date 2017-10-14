@@ -8,12 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adresowe pólo wuprozniś"
   },
-  "compat_notice_message": {
-    "message": "New Tab Override jo se dopołnje nowy ako tak pomjenjone WebExtension wuwiło. Pśez to jo New Tab Override teke kompatibelne z Firefox 57 a nowšymi. Nic wšykne opcije pjerwjejšneje wersije su tuchylu ako WebExtension realizěrujobne. Gaž Mozilla pódpěru za felujuce funkcije wudopołnjujo, se toś te ako aktualizacija New Tab Override pśidaju."
-  },
-  "compat_notice_title": {
-    "message": "Feluju funkcije?"
-  },
   "default_option_description": {
     "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
   },
@@ -148,9 +142,6 @@
   },
   "type_title": {
     "message": "Opcija"
-  },
-  "upgrade_notice_message": {
-    "message": "Wužywarje doněntnych wersijow New Tab Override muse rozšyrjenje konfigurěrowaś."
   },
   "url_description": {
     "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z http:// abo https:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP."

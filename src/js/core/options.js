@@ -5,7 +5,6 @@
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
-const elCompatNotice = document.getElementById('compat-notice');
 const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
@@ -152,11 +151,6 @@ const options = {
 
     if (option.type === 'feed') {
       permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
-    }
-
-    // only for updates from the legacy add-on
-    if (option.show_compat_notice === true) {
-      elCompatNotice.classList.remove('hidden');
     }
   }
 };

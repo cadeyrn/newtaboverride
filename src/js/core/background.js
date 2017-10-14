@@ -2,7 +2,6 @@
 
 /* global utils */
 
-const FIRST_WEBEXT_VERSION_NUMBER = 7;
 const OPTIONS_PAGE = 'html/options.html';
 
 /**
@@ -22,17 +21,6 @@ const newtaboverride = {
     // new install
     if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
-    }
-
-    // update
-    if (details.reason === 'update') {
-      if (utils.parseVersion(details.previousVersion).major < FIRST_WEBEXT_VERSION_NUMBER) {
-        browser.runtime.openOptionsPage();
-        browser.storage.local.set({ show_compat_notice : true });
-      }
-      else {
-        browser.storage.local.set({ show_compat_notice : false });
-      }
     }
   },
 

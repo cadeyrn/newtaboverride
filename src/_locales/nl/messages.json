@@ -8,12 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adresbalk wissen"
   },
-  "compat_notice_message": {
-    "message": "New Tab Override is opnieuw ontwikkeld als zogenaamde WebExtension. Dit maakt New Tab Override compatibel met Firefox 57 en hoger. Momenteel zijn niet alle opties van de vorige versie beschikbaar als WebExtension. Zodra Mozilla ondersteuning voor ontbrekende functionaliteiten in Firefox toevoegt, zullen deze in een toekomstige update van New Tab Override worden geïntegreerd."
-  },
-  "compat_notice_title": {
-    "message": "Mist u bepaalde opties?"
-  },
   "default_option_description": {
     "message": "Open about:addons en schakel de New Tab Override-extensie uit om de standaardpagina van Firefox te gebruiken (geen de-installatie vereist)."
   },
@@ -148,9 +142,6 @@
   },
   "type_title": {
     "message": "Optie"
-  },
-  "upgrade_notice_message": {
-    "message": "Gebruikers van eerdere versies van New Tab Override dienen de extensie opnieuw te configureren."
   },
   "url_description": {
     "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL’s die met http:// of https:// beginnen worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."

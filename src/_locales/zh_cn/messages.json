@@ -8,12 +8,6 @@
   "clear_addressbar_title": {
     "message": "清空地址栏"
   },
-  "compat_notice_message": {
-    "message": "New Tab Override 基于 WebExtension 标准重新开发，这使得它与 Firefox 57+ 版本兼容。由于 WebExtension 的限制，并非旧版本中的全部功能在新版本中都能够实现。在 Mozilla 将必要的功能加入 WebExtension 后，在未来的 New Tab Override 更新中我们将尽快加入这些功能。"
-  },
-  "compat_notice_title": {
-    "message": "缺少一些选项？"
-  },
   "default_option_description": {
     "message": "要使用 Firefox 默认的页面，请在附加组建管理器中禁用 New Tab Override 扩展（不必卸载）"
   },
@@ -148,9 +142,6 @@
   },
   "type_title": {
     "message": "选项"
-  },
-  "upgrade_notice_message": {
-    "message": "老版本 New Tab Override 的用户需要重新设置此扩展。"
   },
   "url_description": {
     "message": "此网页将在打开新标签页时显示。仅支持以 http:// 或 https:// 开头的网址。请注意：由于 Firefox 的限制，扩展无法读取本地文件。请考虑使用“本地文件”或采用 MAMP 或 XAMPP 等本地服务器并选择“自定义网址”。"
