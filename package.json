@@ -1,6 +1,6 @@
 {
   "name": "newtaboberride",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "description": "New Tab Override brings back the ability to change the page which is shown when opening a new tab.",
   "author": {
     "name": "Sören Hentzschel",
@@ -21,7 +21,7 @@
     "Firefox >= 57"
   ],
   "devDependencies": {
-    "eslint": "4.8.0",
+    "eslint": "4.9.0",
     "eslint-plugin-compat": "2.0.1",
     "eslint-plugin-no-unsanitized": "2.0.1",
     "eslint-plugin-sort-requires": "2.1.0",

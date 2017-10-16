@@ -9,6 +9,12 @@
 
 **Minimum required Firefox version is Firefox 57 now.**
 
+### Version 10.1.0 (2017-10-16)
+
+- [TRANSLATION] added Polish translation (Thanks, WaldiPL!)
+- [TRANSLATION] updated French translation (Thanks, SuperPat45!)
+- [DEPENDENCY] updated eslint from version 4.8.0 to 4.9.0 and added two new eslint rules
+
 ### Version 10.0.0 (2017-10-14)
 
 - [ENHANCEMENT] New Tab Override no longer loses container information if the option "Set focus to the web page instead
