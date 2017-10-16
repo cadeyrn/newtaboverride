@@ -15,7 +15,7 @@
     "message": "New Tab Override ramène la possibilité de modifier la page qui s'affiche lors de l'ouverture d'un nouvel onglet"
   },
   "extension_name": {
-    "message": "Nouvelle affectation des onglets"
+    "message": "New Tab Override"
   },
   "feed_published_at": {
     "message": "Publié :"
@@ -36,7 +36,7 @@
     "message": "New Tab Override sur GitHub"
   },
   "github_notice": {
-    "message": "Demandes de fonctions ou rapport d'erreur ? Ouvrez un ticket sur GitHub :"
+    "message": "Demandes de fonctions ou rapport d'erreur ? Ouvrez un ticket sur GitHub :"
   },
   "homepage_description": {
     "message": "Si cette option est activée, Firefox utilisera également la page d'accueil comme page nouvel onglet. Vous pouvez modifier la page d'accueil en entrant about:preferences#general dans la barre d'adresse. Seules les pages d'accueil commençant par http:// ou https:// sont pris en charge. Si plusieurs pages d'accueil sont configurées, New Tab Override utilisera la première."
@@ -48,16 +48,16 @@
     "message": "Sélectionnez la page à ouvrir en tant que nouvel onglet!"
   },
   "local_file_delete_confirmation": {
-    "message": "Êtes-vous sûr de vouloir supprimer le fichier du stockage de l'extension ?"
+    "message": "Êtes-vous sûr de vouloir supprimer le fichier du stockage de l'extension ?"
   },
   "local_file_delete_text": {
     "message": "supprimer le fichier existant"
   },
   "local_file_description": {
-   "message": "En raison des restrictions de Firefox, il n'est pas possible pour les extensions d'accéder aux fichiers locaux. New Tab Override vous permet de charger des fichiers HTML locaux dans le stockage de l'extension et de les utiliser comme nouveau contenu d'onglet. Toute URL et lien vers des images, des fichiers CSS et des fichiers JavaScript pouvant être inclus doivent être accessibles via le Web, car Firefox ne peut pas accéder aux fichiers locaux du système. Vous pouvez également envisager d'utiliser un serveur Web local, par exemple via MAMP ou XAMPP, avec l'option „URL personnalisée“. Cela fonctionne sans aucune restriction."
+   "message": "En raison des restrictions de Firefox, il n'est pas possible pour les extensions d'accéder aux fichiers locaux. New Tab Override vous permet de charger des fichiers HTML locaux dans le stockage de l'extension et de les utiliser comme nouveau contenu d'onglet. Toute URL et lien vers des images, des fichiers CSS et des fichiers JavaScript pouvant être inclus doivent être accessibles via le Web, car Firefox ne peut pas accéder aux fichiers locaux du système. Vous pouvez également envisager d'utiliser un serveur Web local, par exemple via MAMP ou XAMPP, avec l'option « URL personnalisée ». Cela fonctionne sans aucune restriction."
   },
   "local_file_no_file": {
-    "message": "Vous avez sélectionné l'option „fichier local“, mais n'a stocké aucun fichier local. Veuillez enregistrer un fichier dans les paramètres de New Tab Override."
+    "message": "Vous avez sélectionné l'option « fichier local », mais n'avez stocké aucun fichier local. Veuillez enregistrer un fichier dans les paramètres de New Tab Override."
   },
   "local_file_title": {
     "message": "Fichier local"
@@ -72,7 +72,7 @@
     "message": "Ouvrez les paramètres du nouvel onglet"
   },
   "review_text": {
-    "message": "Aimez-vous l'extension ? Alors, laissez une critique sur"
+    "message": "Aimez-vous l'extension ? Alors, laissez une critique sur"
   },
   "settings_donate": {
     "message": "Faire un don"
@@ -81,31 +81,31 @@
     "message": "Veuillez envisager un don pour soutenir le développement continu de cette extension."
   },
   "settings_feed_permission_description": {
-    "message": "Firefox a besoin de votre permission pour lire le flux de nouvelles de soeren-hentzschel.at. Vous pouvez révoquer cette autorisation à tout moment."
+    "message": "Firefox a besoin de votre autorisation pour lire le flux de nouvelles de soeren-hentzschel.at. Vous pouvez révoquer cette autorisation à tout moment."
   },
   "settings_feed_permission_needed": {
     "message": "Pour utiliser cette fonctionnalité, vous devez autoriser Firefox à accéder à la source de données."
   },
   "settings_feed_permission_revoke_description": {
-    "message": "Firefox a besoin de votre permission de lire le flux de nouvelles de soeren-hentzschel.at. Vous avez déjà accordé cette autorisation."
+    "message": "Firefox a besoin de votre autorisation pour lire le flux de nouvelles de soeren-hentzschel.at. Vous avez déjà accordé cette autorisation."
   },
   "settings_homepage_permission_description": {
-    "message": "Firefox a besoin de votre permission de lire et de modifier les paramètres du navigateur. Vous pouvez révoquer cette autorisation à tout moment."
+    "message": "Firefox a besoin de votre autorisation pour lire et modifier les paramètres du navigateur. Vous pouvez révoquer cette autorisation à tout moment."
   },
   "settings_homepage_permission_needed": {
     "message": "Pour utiliser cette fonctionnalité, vous devez autoriser Firefox à lire et à modifier les paramètres du navigateur."
   },
   "settings_homepage_permission_revoke_description": {
-    "message": "Firefox a besoin de votre permission de lire et de modifier les paramètres du navigateur. Vous avez déjà accordé cette autorisation."
+    "message": "Firefox a besoin de votre autorisation pour lire et modifier les paramètres du navigateur. Vous avez déjà accordé cette autorisation."
   },
   "settings_main_caption": {
     "message": "Paramètres"
   },
   "settings_permission_action": {
-    "message": "Accorder la permission"
+    "message": "Accorder l'autorisation"
   },
   "settings_permission_revoke_action": {
-    "message": "Révocation d'autorisation"
+    "message": "Révoquer l'autorisation"
   },
   "settings_support_caption": {
     "message": "Support"
@@ -131,7 +131,7 @@
   "type_options_empty_page": {
     "message": "page vide (about:blank)"
   },
-   "type_options_feed": {
+  "type_options_feed": {
     "message": "Mozilla News (Allemand)"
   },
   "type_options_homepage": {
@@ -144,7 +144,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "La page Web saisie ici s'affiche lors de l'ouverture d'un nouvel onglet. Seules les URL commençant par http:// ou https:// sont prises en charge. Remarque: L'accès aux fichiers locaux via une URL n'est plus possible en raison des restrictions de Firefox. Veuillez utiliser l'option „fichier local“ ou un serveur Web local, par exemple via MAMP ou XAMPP."
+    "message": "La page Web saisie ici s'affiche lors de l'ouverture d'un nouvel onglet. Seules les URL commençant par http:// ou https:// sont prises en charge. Remarque: L'accès aux fichiers locaux via une URL n'est plus possible en raison des restrictions de Firefox. Veuillez utiliser l'option « fichier local » ou un serveur Web local, par exemple via MAMP ou XAMPP."
   },
   "url_title": {
     "message": "URL"

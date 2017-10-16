@@ -1,0 +1,170 @@
+{
+  "background_color_title": {
+    "message": "Kolor tła"
+  },
+  "clear_addressbar_description": {
+    "message": "Automatyczne czyszczenie paska adresu będzie możliwe ponownie w późniejszych wersjach Firefoksa. Wymaga to zmiany ze strony Mozilli."
+  },
+  "clear_addressbar_title": {
+    "message": "Czyszczenie paska adresu"
+  },
+  "compat_notice_message": {
+    "message": "New Tab Override został stworzony od podstaw jako tzw. WebExtension. To sprawia, że New Tab Override będzie kompatybilne z Firefoksem 57 i kolejnymi. Nie wszystkie opcje z poprzedniej wersji są obecnie dostępne jako WebExtension. Gdy tylko Mozilla wprowadzi obsługę brakujących funkcjonalności w Firefoksie, zostaną one zintegrowane z przyszłą aktualizacją New Tab Override."
+  },
+  "compat_notice_title": {
+    "message": "Brakuje niektórych opcji?"
+  },
+  "default_option_description": {
+    "message": "Aby używać domyślnej strony Firefoksa, otwórz about:addons i wyłącz rozszerzenie New Tab Override (nie wymaga odinstalowania)."
+  },
+  "extension_description": {
+    "message": "New Tab Override przywraca możliwość zmiany strony, która jest wyświetlana po otwarciu nowej karty"
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Opublikowano:"
+  },
+  "feed_read_more": {
+    "message": "Czytaj więcej…"
+  },
+  "feed_title": {
+    "message": "Aktualności Mozilli"
+  },
+  "focus_website_description": {
+    "message": "Ustaw skupienie na stronie zamiast na pasku adresu"
+  },
+  "focus_website_title": {
+    "message": "Skupienie"
+  },
+  "github_link": {
+    "message": "New Tab Override na GitHub"
+  },
+  "github_notice": {
+    "message": "Prośba o funkcję lub zgłoszenie błędu? Otwórz wątek na GitHub:"
+  },
+  "homepage_description": {
+    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#general w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
+  },
+  "homepage_future_version_description": {
+    "message": "Od wersji 57 (planowane wydanie: 14 listopada 2017) Firefox będzie mógł automatycznie używać strony startowej jako nowej karty. Do tego czasu należy wybrać opcję „niestandardowy adres URL”, aby ręcznie ustawić stronę."
+  },
+  "introduction_part_one": {
+    "message": "Ta strona jest dostarczona przez"
+  },
+  "introduction_part_two": {
+    "message": "Wybierz stronę, która powinna być otwierana jako nowa karta!"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Czy na pewno chcesz usunąć plik z pamięci rozszerzenia?"
+  },
+  "local_file_delete_text": {
+    "message": "usuń istniejący plik"
+  },
+  "local_file_description": {
+   "message": "Z powodu ograniczeń Firefoksa  nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
+  },
+  "local_file_no_file": {
+    "message": "Wybrano opcję „plik lokalny”, ale nie został on wczytany. Proszę wczytać plik w ustawieniach New Tab Override"
+  },
+  "local_file_title": {
+    "message": "Plik lokalny"
+  },
+  "local_file_upload": {
+    "message": "Wczytaj plik lokalny"
+  },
+  "new_tab_title": {
+    "message": "Nowa karta"
+  },
+  "omnibox_command_settings": {
+    "message": "Otwórz ustawienia nowej karty"
+  },
+  "review_text": {
+    "message": "Lubisz to rozszerzenie? Proszę pozostaw opinię na"
+  },
+  "settings_donate": {
+    "message": "Przekaż darowiznę"
+  },
+  "settings_donation_text": {
+    "message": "Proszę rozważyć darowiznę na wsparcie ciągłego rozwoju tego rozszerzenia."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox potrzebuje twojego pozwolenia na odczyt kanału informacyjnego ze strony soeren-hentzschel.at. Możesz cofnąć to uprawnienie w każdej chwili."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Aby używać tej funkcji musisz zezwolić Firefoksowi na dostęp do źródła danych."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox potrzebuje twojego pozwolenia na odczyt kanału informacyjnego ze strony soeren-hentzschel.at. To pozwolenie zostało już udzielone."
+  },
+  "settings_homepage_permission_description": {
+    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. Możesz cofnąć to uprawnienie w każdej chwili."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "Aby używać tej funkcji musisz zezwolić Firefoksowi na odczyt i modyfikację ustawień przeglądarki."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. To pozwolenie zostało już udzielone."
+  },
+  "settings_main_caption": {
+    "message": "Ustawienia"
+  },
+  "settings_permission_action": {
+    "message": "Przyznaj uprawnienia"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Cofnij uprawnienia"
+  },
+  "settings_support_caption": {
+    "message": "Wsparcie"
+  },
+  "settings_title": {
+    "message": "Nowa Karta — Ustawienia"
+  },
+  "settings_url_field_placeholder": {
+    "message": "Adres URL"
+  },
+  "type_options_background_color": {
+    "message": "kolorowe tło"
+  },
+  "type_options_custom_url": {
+    "message": "niestandardowy adres URL"
+  },
+  "type_options_default_home_page": {
+    "message": "domyślna strona startowa Firefoksa (about:home)"
+  },
+  "type_options_default_new_tab": {
+    "message": "domyślna nowa karta Firefoksa (about:newtab)"
+  },
+  "type_options_empty_page": {
+    "message": "pusta strona (about:blank)"
+  },
+   "type_options_feed": {
+    "message": "Aktualności Mozilli (Niemiecki)"
+  },
+  "type_options_homepage": {
+    "message": "obecna strona startowa"
+  },
+  "type_options_local_file": {
+    "message": "plik lokalny"
+  },
+  "type_title": {
+    "message": "Opcja"
+  },
+  "upgrade_notice_message": {
+    "message": "Użytkownicy poprzednich wersji New Tab Override muszą ponownie skonfigurować rozszerzenie."
+  },
+  "url_description": {
+    "message": "Wprowadzona tutaj strona wyświetlana jest po otwarciu nowej karty. Obsługiwane są tylko adresy rozpoczynające się od http:// lub https://. Uwaga: Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy z powodu ograniczeń Firefoksa. Rozważ użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP."
+  },
+  "url_title": {
+    "message": "Adres URL"
+  },
+  "url_validation_default": {
+    "message": "To nie jest prawidłowy adres URL."
+  },
+  "url_validation_file": {
+    "message": "Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy dla rozszerzeń."
+  }
+}
