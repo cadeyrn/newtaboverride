@@ -140,7 +140,7 @@
   "type_options_empty_page": {
     "message": "Пустая страница (about:blank)"
   },
-   "type_options_feed": {
+  "type_options_feed": {
     "message": "Новости Mozilla (Германия)"
   },
   "type_options_homepage": {

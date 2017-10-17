@@ -140,7 +140,7 @@
   "type_options_empty_page": {
     "message": "empty page (about:blank)"
   },
-   "type_options_feed": {
+  "type_options_feed": {
     "message": "Mozilla News (German)"
   },
   "type_options_homepage": {
