@@ -9,6 +9,10 @@
 
 **Minimum required Firefox version is Firefox 57 now.**
 
+### Version 10.2.0 (2017-10-xx)
+
+- [TRANSLATION] added Russian translation (Thanks, vanja-san!)
+
 ### Version 10.1.0 (2017-10-16)
 
 - [TRANSLATION] added Polish translation (Thanks, WaldiPL!)
