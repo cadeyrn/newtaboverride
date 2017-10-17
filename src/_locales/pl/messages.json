@@ -8,12 +8,6 @@
   "clear_addressbar_title": {
     "message": "Czyszczenie paska adresu"
   },
-  "compat_notice_message": {
-    "message": "New Tab Override został stworzony od podstaw jako tzw. WebExtension. To sprawia, że New Tab Override będzie kompatybilne z Firefoksem 57 i kolejnymi. Nie wszystkie opcje z poprzedniej wersji są obecnie dostępne jako WebExtension. Gdy tylko Mozilla wprowadzi obsługę brakujących funkcjonalności w Firefoksie, zostaną one zintegrowane z przyszłą aktualizacją New Tab Override."
-  },
-  "compat_notice_title": {
-    "message": "Brakuje niektórych opcji?"
-  },
   "default_option_description": {
     "message": "Aby używać domyślnej strony Firefoksa, otwórz about:addons i wyłącz rozszerzenie New Tab Override (nie wymaga odinstalowania)."
   },
@@ -46,9 +40,6 @@
   },
   "homepage_description": {
     "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#general w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
-  },
-  "homepage_future_version_description": {
-    "message": "Od wersji 57 (planowane wydanie: 14 listopada 2017) Firefox będzie mógł automatycznie używać strony startowej jako nowej karty. Do tego czasu należy wybrać opcję „niestandardowy adres URL”, aby ręcznie ustawić stronę."
   },
   "introduction_part_one": {
     "message": "Ta strona jest dostarczona przez"
@@ -140,7 +131,7 @@
   "type_options_empty_page": {
     "message": "pusta strona (about:blank)"
   },
-   "type_options_feed": {
+  "type_options_feed": {
     "message": "Aktualności Mozilli (Niemiecki)"
   },
   "type_options_homepage": {
@@ -151,9 +142,6 @@
   },
   "type_title": {
     "message": "Opcja"
-  },
-  "upgrade_notice_message": {
-    "message": "Użytkownicy poprzednich wersji New Tab Override muszą ponownie skonfigurować rozszerzenie."
   },
   "url_description": {
     "message": "Wprowadzona tutaj strona wyświetlana jest po otwarciu nowej karty. Obsługiwane są tylko adresy rozpoczynające się od http:// lub https://. Uwaga: Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy z powodu ograniczeń Firefoksa. Rozważ użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP."
