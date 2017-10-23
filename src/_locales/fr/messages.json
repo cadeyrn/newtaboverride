@@ -54,7 +54,7 @@
     "message": "supprimer le fichier existant"
   },
   "local_file_description": {
-   "message": "En raison des restrictions de Firefox, il n'est pas possible pour les extensions d'accéder aux fichiers locaux. New Tab Override vous permet de charger des fichiers HTML locaux dans le stockage de l'extension et de les utiliser comme nouveau contenu d'onglet. Toute URL et lien vers des images, des fichiers CSS et des fichiers JavaScript pouvant être inclus doivent être accessibles via le Web, car Firefox ne peut pas accéder aux fichiers locaux du système. Vous pouvez également envisager d'utiliser un serveur Web local, par exemple via MAMP ou XAMPP, avec l'option « URL personnalisée ». Cela fonctionne sans aucune restriction."
+    "message": "En raison des restrictions de Firefox, il n'est pas possible pour les extensions d'accéder aux fichiers locaux. New Tab Override vous permet de charger des fichiers HTML locaux dans le stockage de l'extension et de les utiliser comme nouveau contenu d'onglet. Toute URL et lien vers des images, des fichiers CSS et des fichiers JavaScript pouvant être inclus doivent être accessibles via le Web, car Firefox ne peut pas accéder aux fichiers locaux du système. Vous pouvez également envisager d'utiliser un serveur Web local, par exemple via MAMP ou XAMPP, avec l'option « URL personnalisée ». Cela fonctionne sans aucune restriction."
   },
   "local_file_no_file": {
     "message": "Vous avez sélectionné l'option « fichier local », mais n'avez stocké aucun fichier local. Veuillez enregistrer un fichier dans les paramètres de New Tab Override."

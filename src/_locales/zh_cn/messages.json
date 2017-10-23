@@ -54,7 +54,7 @@
     "message": "删除现有文件"
   },
   "local_file_description": {
-   "message": "由于 Firefox 的限制，扩展无法访问本地文件。New Tab Override 通过将本地 HTML 文件加载到扩展存储区并将其作为新标签页的内容来使其变为可能。任何包含的的网址以及图片、CSS、JavaScript文件等必须能够通过互联网访问，因为Firefox无法访问系统中的本地文件。或者请您考虑采用 MAMP 或 XAMPP 等本地服务器技术，并采用“自定义网址”选项。这将没有任何的限制。"
+    "message": "由于 Firefox 的限制，扩展无法访问本地文件。New Tab Override 通过将本地 HTML 文件加载到扩展存储区并将其作为新标签页的内容来使其变为可能。任何包含的的网址以及图片、CSS、JavaScript文件等必须能够通过互联网访问，因为Firefox无法访问系统中的本地文件。或者请您考虑采用 MAMP 或 XAMPP 等本地服务器技术，并采用“自定义网址”选项。这将没有任何的限制。"
   },
   "local_file_no_file": {
     "message": "你采用了“本地文件”选项，但是没有存储相应的页面。请在 New Tab Override 设置中存储页面。"

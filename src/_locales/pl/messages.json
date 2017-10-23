@@ -54,7 +54,7 @@
     "message": "usuń istniejący plik"
   },
   "local_file_description": {
-   "message": "Z powodu ograniczeń Firefoksa  nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
+    "message": "Z powodu ograniczeń Firefoksa  nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
   },
   "local_file_no_file": {
     "message": "Wybrano opcję „plik lokalny”, ale nie został on wczytany. Proszę wczytać plik w ustawieniach New Tab Override"
