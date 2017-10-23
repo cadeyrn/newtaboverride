@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 10.2.0 (2017-10-xx)
+### Version 10.2.0 (2017-10-23)
 
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)
 
