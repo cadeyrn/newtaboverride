@@ -10,7 +10,7 @@ Since Firefox 41 it's no longer possible to customize the page shown in a new ta
 browser.newtab.url in about.config. Because of the fact that hijackers abused the preference in the past, Mozilla
 decided to remove it. Fortunately, by removing it, Mozilla also introduced a new API to bring this functionality back
 to life as an add-on. This add-on allows the user to choose a certain page in a new tab. New Tab Override, today with
-**more than 100,000 users**, was the first add-on providing this functionality and **is therefore the original**.
+**more than 130,000 users**, was the first add-on providing this functionality and **is therefore the original**.
 
 **New Tab Override is a WebExtension and also compatible with Firefox 57 and later.**
 
