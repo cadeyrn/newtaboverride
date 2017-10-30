@@ -6,6 +6,7 @@
 
 - [CODE QUALITY] removed all code pathes for Firefox below version 57
 - [CODE QUALITY] removed code for upgrade notices for users from the legacy version of New Tab Override
+- [DEPENDENCY] updated htmllint from version 0.6.0 to 0.7.0
 - [DEPENDENCY] updated eslint from version 4.9.0 to 4.10.0
 
 **Minimum required Firefox version is Firefox 57 now.**
