@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "eslint": "4.10.0",
-    "eslint-plugin-compat": "2.0.1",
+    "eslint-plugin-compat": "2.1.0",
     "eslint-plugin-no-unsanitized": "2.0.1",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.8",
