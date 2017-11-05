@@ -3,10 +3,10 @@
     "message": "Achtergrondkleur"
   },
   "clear_addressbar_description": {
-    "message": "Het automatisch legen van de adresbalk wordt weer mogelijk in latere versies van Firefox. Dit vereist een wijziging door Mozilla."
+    "message": "Het automatisch legen van de adresbalk of selecteren van de URL is momenteel niet mogelijk voor WebExtensions. Dit vereist een wijziging door Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Adresbalk wissen"
+    "message": "Adresbalk wissen / URL selecteren"
   },
   "default_option_description": {
     "message": "Open about:addons en schakel de New Tab Override-extensie uit om de standaardpagina van Firefox te gebruiken (geen de-installatie vereist)."
@@ -48,7 +48,7 @@
     "message": "selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "learn_more": {
-    "message": "Weitere Informationen"
+    "message": "Meer info"
   },
   "local_file_delete_confirmation": {
     "message": "Weet u zeker dat u het bestand uit de opslag van de extensie wilt verwijderen?"
