@@ -20,12 +20,11 @@ const newtab = {
    */
   async init () {
     const options = await browser.storage.local.get(defaults);
-    const currentTab = await browser.tabs.getCurrent();
     const url = options.type === 'about:home' ? options.type : options.url;
 
     switch (options.type) {
       case 'about:blank':
-        browser.tabs.update(currentTab.id, { url : options.type });
+        newtab.openNewTabPage('about:blank', false);
         break;
       case 'about:home':
       case 'custom_url':
@@ -40,7 +39,7 @@ const newtab = {
           const firstHomepage = homepage.value.split('|')[0];
 
           if (!URI_REGEX.test(firstHomepage)) {
-            browser.tabs.update(currentTab.id, { url : 'about:blank' });
+            newtab.openNewTabPage('about:blank', false);
             break;
           }
 
@@ -67,7 +66,7 @@ const newtab = {
         }
         break;
       default:
-        browser.tabs.update(currentTab.id, { url : 'about:blank' });
+        newtab.openNewTabPage('about:blank', false);
     }
   },
 
@@ -94,6 +93,7 @@ const newtab = {
     // set focus on address bar
     else {
       const currentTab = await browser.tabs.getCurrent();
+
       // set loadReplace to true to disable the back button
       await browser.tabs.update(currentTab.id, { url : url || 'about:blank', loadReplace : true }, () => {
         // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
