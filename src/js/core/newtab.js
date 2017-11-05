@@ -80,13 +80,11 @@ const newtab = {
    */
   async openNewTabPage (url, focus_website) {
     await browser.tabs.getCurrent((tab) => {
-      const tabId = tab.id;
-
       // set focus on website
       if (focus_website) {
         // we need to pass the cookieStoreId to support the container tabs feature of Firefox
         browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
-          browser.tabs.remove(tabId);
+          browser.tabs.remove(tab.id);
         });
       }
       // set focus on address bar
