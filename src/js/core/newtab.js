@@ -91,7 +91,8 @@ const newtab = {
       }
       // set focus on address bar
       else {
-        // set loadReplace to true to disable the back button
+        // we explicitly set the tab id of the current tab to support the edge case of opening a new tab in the
+        // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
         browser.tabs.update(tab.id, { url : url || 'about:blank', loadReplace : true }, () => {
           // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
         });
