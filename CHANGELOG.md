@@ -4,11 +4,17 @@
 
 ### (Work in Progress) Version 11.0.0 (2017-11-xx)
 
+- [ENHANCEMENT] support the edge case of opening a new tab in the background, can be useful in conjunction with add-ons
+  like Gesturefy (Thanks, s25g5d4!), fixes [#81](https://github.com/cadeyrn/newtaboverride/issues/81)
+- [ENHANCEMENT] back button is now also disabled with about:blank as new tab page
+- [ENHANCEMENT] clarified notice about missing API for clearing the address bar or selecting the URL and added a link
+  to a open request ticket on bugzilla.mozilla.org, fixes [#72](https://github.com/cadeyrn/newtaboverride/issues/72)
+- [CODE QUALITY] unified different code pathes for opening new tabs with focus on address bar respectively web page
 - [CODE QUALITY] removed all code pathes for Firefox below version 57
 - [CODE QUALITY] removed code for upgrade notices for users from the legacy version of New Tab Override
-- [DEPENDENCY] updated htmllint from version 0.6.0 to 0.7.0
 - [DEPENDENCY] updated eslint from version 4.9.0 to 4.10.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.0.1 to 2.1.0
+- [DEPENDENCY] updated htmllint from version 0.6.0 to 0.7.0
 
 **Minimum required Firefox version is Firefox 57 now.**
 
