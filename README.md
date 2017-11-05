@@ -23,7 +23,7 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 - use any color as background color for the new tab page
 - store a local HTML file in the extension's storage and use the content as new tab content
 - get the latest news about Mozilla as new tab page (only in German language)
-- set the focus either to the address bar or to the web site (for example Google search field)
+- set the focus either to the address bar or to the web page (for example Google search field)
 - beautiful settings UI to make it easy to customize your new tab experience
 - automatically prepend http:// if protocol is missing
 - can be used together with the container tabs feature of Firefox
