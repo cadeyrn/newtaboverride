@@ -3,10 +3,10 @@
     "message": "Couleur de fond"
   },
   "clear_addressbar_description": {
-    "message": "La vidage automatique de la barre d'adresse sera de nouveau possible dans les versions ultérieures de Firefox. Cela nécessite une modification par Mozilla."
+    "message": "La vidage automatique de la barre d'adresse ou la sélection de l'URL n'est actuellement pas possible pour les WebExtensions. Cela nécessite une modification par Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Effacer la barre d'adresse"
+    "message": "Effacer la barre d'adresse / sélectionner une URL"
   },
   "default_option_description": {
     "message": "Pour utiliser la page par défaut de Firefox, ouvrez about:addons et désactivez l'extension New Tab Override (aucune désinstallation requise)."
@@ -48,7 +48,7 @@
     "message": "Sélectionnez la page à ouvrir en tant que nouvel onglet!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "En apprendre plus"
   },
   "local_file_delete_confirmation": {
     "message": "Êtes-vous sûr de vouloir supprimer le fichier du stockage de l'extension ?"
