@@ -3,10 +3,10 @@
     "message": "Pozadkowa barba"
   },
   "clear_addressbar_description": {
-    "message": "Awtomatiske prózdnjenje adresoweho pola budźe zaso móžno w pozdźišich wersijach Firefox. To sej změna ze strony Mozilla wužaduje."
+    "message": "Awtomatiske prózdnjenje adresoweho pola abo markěrowanje URL tuchwilu za WebExtensions móžne njeje. To sej změna ze strony Mozilla wužaduje."
   },
   "clear_addressbar_title": {
-    "message": "Adresowe polo wuprózdnić"
+    "message": "Adresowe polo wuprózdnić / URL měrkěrować"
   },
   "default_option_description": {
     "message": "Zo by standardnu stronu Firefox wužiwał, wuwołaj about:addons a znjemóžń rozšěrjenje Tab Override (žane wotinstalowanje trěbne)."
@@ -48,7 +48,7 @@
     "message": "Wubjer, kotra strona ma so jako nowy rajtark wočinić!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "Dalše Informacije"
   },
   "local_file_delete_confirmation": {
     "message": "Chceš woprawdźe dataju ze składowaka rozšěrjenja zhašeć?"

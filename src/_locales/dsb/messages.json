@@ -3,10 +3,10 @@
     "message": "Slězynowa barwa"
   },
   "clear_addressbar_description": {
-    "message": "Awtomatiske proznjenje adresowego póla buźo zasej móžne w póznjejšych wersijach Firefox. To se změna z boka Mozilla pomina."
+    "message": "Awtomatiske proznjenje  adresowego póla abo markěrowanje URL tuchylu njejo móžne za WebExtensions. To se změna z boka Mozilla pomina."
   },
   "clear_addressbar_title": {
-    "message": "Adresowe pólo wuprozniś"
+    "message": "Adresowe pólo wuprozniś / URL markěrowaś"
   },
   "default_option_description": {
     "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
@@ -48,7 +48,7 @@
     "message": "Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "Dalšne informacije"
   },
   "local_file_delete_confirmation": {
     "message": "Coš napšawdu dataju ze składowaka rozšyrjenja lašowaś?"
