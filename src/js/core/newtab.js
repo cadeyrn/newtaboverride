@@ -79,26 +79,24 @@ const newtab = {
    * @returns {void}
    */
   async openNewTabPage (url, focus_website) {
-    // set focus on website
-    if (focus_website) {
-      await browser.tabs.getCurrent((tab) => {
-        const tabId = tab.id;
+    await browser.tabs.getCurrent((tab) => {
+      const tabId = tab.id;
 
+      // set focus on website
+      if (focus_website) {
         // we need to pass the cookieStoreId to support the container tabs feature of Firefox
         browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
-      });
-    }
-    // set focus on address bar
-    else {
-      const currentTab = await browser.tabs.getCurrent();
-
-      // set loadReplace to true to disable the back button
-      await browser.tabs.update(currentTab.id, { url : url || 'about:blank', loadReplace : true }, () => {
-        // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
-      });
-    }
+      }
+      // set focus on address bar
+      else {
+        // set loadReplace to true to disable the back button
+        browser.tabs.update(tab.id, { url : url || 'about:blank', loadReplace : true }, () => {
+          // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
+        });
+      }
+    });
 
     // delete spammy new tab page entry from history
     browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
