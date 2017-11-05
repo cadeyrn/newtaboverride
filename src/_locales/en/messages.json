@@ -3,7 +3,7 @@
     "message": "Background color"
   },
   "clear_addressbar_description": {
-    "message": "The automatic emptying of the address bar or selecting of the URL is currently not possible for WebExtensions. This requires a change by Mozilla."
+    "message": "The automatic emptying of the address bar or selecting the URL is currently not possible for WebExtensions. This requires a change by Mozilla."
   },
   "clear_addressbar_title": {
     "message": "Clear address bar / select URL"
