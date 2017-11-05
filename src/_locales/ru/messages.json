@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Выберите, какую страницу следует открыть в качестве новой вкладки!"
   },
+  "learn_more": {
+    "message": "Learn more"
+  },
   "local_file_delete_confirmation": {
     "message": "Вы действительно хотите удалить файл из хранилища расширения?"
   },

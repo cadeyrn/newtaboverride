@@ -3,10 +3,10 @@
     "message": "Background color"
   },
   "clear_addressbar_description": {
-    "message": "The automatic emptying of the address bar will be possible again in later versions of Firefox. This requires a change by Mozilla."
+    "message": "The automatic emptying of the address bar or selecting of the URL is currently not possible for WebExtensions. This requires a change by Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Clear address bar"
+    "message": "Clear address bar / select URL"
   },
   "default_option_description": {
     "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
@@ -46,6 +46,9 @@
   },
   "introduction_part_two": {
     "message": "Select which page should open as new tab!"
+  },
+  "learn_more": {
+    "message": "Learn more"
   },
   "local_file_delete_confirmation": {
     "message": "Are you sure you want to delete the file from the extension's storage?"

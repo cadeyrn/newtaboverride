@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
+  "learn_more": {
+    "message": "Weitere Informationen"
+  },
   "local_file_delete_confirmation": {
     "message": "Weet u zeker dat u het bestand uit de opslag van de extensie wilt verwijderen?"
   },

@@ -3,10 +3,10 @@
     "message": "Hintergrund-Farbe"
   },
   "clear_addressbar_description": {
-    "message": "Das automatische Leeren der Adressleiste wird in späteren Versionen von Firefox wieder möglich sein. Dies erfordert eine Änderung seitens Mozilla."
+    "message": "Das automatische Leeren der Adressleiste oder Markieren der URL ist für WebExtensions derzeit nicht möglich. Dies erfordert eine Änderung seitens Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Adressleiste leeren"
+    "message": "Adressleiste leeren / URL markieren"
   },
   "default_option_description": {
     "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
@@ -46,6 +46,9 @@
   },
   "introduction_part_two": {
     "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
+  },
+  "learn_more": {
+    "message": "Weitere Informationen"
   },
   "local_file_delete_confirmation": {
     "message": "Bist du sicher, dass du die Datei aus dem Speicher der Erweiterung löschen möchtest?"

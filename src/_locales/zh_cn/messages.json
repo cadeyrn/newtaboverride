@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "选择新标签页打开的页面！"
   },
+  "learn_more": {
+    "message": "Learn more"
+  },
   "local_file_delete_confirmation": {
     "message": "确认要删除扩展的存储文件吗？"
   },

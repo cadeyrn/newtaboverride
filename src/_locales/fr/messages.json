@@ -47,6 +47,9 @@
   "introduction_part_two": {
     "message": "Sélectionnez la page à ouvrir en tant que nouvel onglet!"
   },
+  "learn_more": {
+    "message": "Learn more"
+  },
   "local_file_delete_confirmation": {
     "message": "Êtes-vous sûr de vouloir supprimer le fichier du stockage de l'extension ?"
   },
