@@ -3,10 +3,10 @@
     "message": "Kolor tła"
   },
   "clear_addressbar_description": {
-    "message": "Automatyczne czyszczenie paska adresu będzie możliwe ponownie w późniejszych wersjach Firefoksa. Wymaga to zmiany ze strony Mozilli."
+    "message": "Automatyczne czyszczenie paska adresu lub zaznaczanie adresu URL nie jest obecnie możliwe dla WebExtensions. Wymaga to zmiany ze strony Mozilli."
   },
   "clear_addressbar_title": {
-    "message": "Czyszczenie paska adresu"
+    "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
   "default_option_description": {
     "message": "Aby używać domyślnej strony Firefoksa, otwórz about:addons i wyłącz rozszerzenie New Tab Override (nie wymaga odinstalowania)."
@@ -48,7 +48,7 @@
     "message": "Wybierz stronę, która powinna być otwierana jako nowa karta!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "Więcej informacji"
   },
   "local_file_delete_confirmation": {
     "message": "Czy na pewno chcesz usunąć plik z pamięci rozszerzenia?"
