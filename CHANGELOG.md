@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 11.0.0 (2017-11-xx)
+### Version 11.0.0 (2017-11-07)
 
 - [ENHANCEMENT] support the edge case of opening a new tab in the background, can be useful in conjunction with add-ons
   like Gesturefy (Thanks, s25g5d4!), fixes [#81](https://github.com/cadeyrn/newtaboverride/issues/81)
