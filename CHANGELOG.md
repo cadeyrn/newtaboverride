@@ -15,6 +15,7 @@
 - [DEPENDENCY] updated eslint from version 4.9.0 to 4.10.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.0.1 to 2.1.0
 - [DEPENDENCY] updated htmllint from version 0.6.0 to 0.7.0
+- [DEPENDENCY] updated npm-run-all from version 4.1.1 to 4.1.2
 
 **Minimum required Firefox version is Firefox 57 now.**
 
