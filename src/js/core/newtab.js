@@ -2,12 +2,11 @@
 
 /* global defaults, utils */
 
-const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
-const HOME_PAGE_MISSING_PERMISSION = 'html/homepage_permission_needed.html';
-const LOCAL_FILE_PAGE = 'html/local_file.html';
-const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
-const FEED_PAGE = 'html/feed.html';
-const NEW_TAB_PAGE = 'html/newtab.html';
+const BACKGROUND_COLOR_PAGE = 'background_color.html';
+const HOME_PAGE_MISSING_PERMISSION = 'homepage_permission_needed.html';
+const LOCAL_FILE_MISSING_PAGE = 'local_file_missing.html';
+const FEED_PAGE = 'feed.html';
+const NEW_TAB_PAGE = 'newtab.html';
 
 /**
  * @exports newtab
@@ -24,11 +23,11 @@ const newtab = {
 
     switch (options.type) {
       case 'about:blank':
-        newtab.openNewTabPage('about:blank', false);
+        document.querySelector('iframe').src = 'about:blank';
         break;
       case 'about:home':
       case 'custom_url':
-        newtab.openNewTabPage(url, options.focus_website);
+        document.location = url;
         break;
       case 'homepage':
         const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
@@ -39,66 +38,35 @@ const newtab = {
           const firstHomepage = homepage.value.split('|')[0];
 
           if (!URI_REGEX.test(firstHomepage)) {
-            newtab.openNewTabPage('about:blank', false);
+            document.querySelector('iframe').src = 'about:blank';
             break;
           }
-
-          newtab.openNewTabPage(firstHomepage, options.focus_website);
+          document.querySelector('iframe').src = firstHomepage;
         }
         // no permission granted
         else {
-          newtab.openNewTabPage(browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION), options.focus_website);
+          document.querySelector('iframe').src = browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION);
         }
 
         break;
       case 'background_color':
-        newtab.openNewTabPage(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
+        const { background_color } = await browser.storage.local.get({ background_color : defaults.background_color });
+        document.body.style.background = background_color;
         break;
       case 'feed':
-        newtab.openNewTabPage(browser.extension.getURL(FEED_PAGE), options.focus_website);
+        document.querySelector('iframe').src = FEED_PAGE;
         break;
       case 'local_file':
         if (options.local_file) {
-          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_PAGE), options.focus_website);
-        }
-        else {
-          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
+          const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
+          document.documentElement.innerHTML = local_file;
+        } else {
+          document.querySelector('iframe').src = LOCAL_FILE_MISSING_PAGE;
         }
         break;
       default:
-        newtab.openNewTabPage('about:blank', false);
+        document.querySelector('iframe').src = 'about:blank';
     }
-  },
-
-  /**
-   * This method is used to set the focus either on the address bar or on the web page.
-   *
-   * @param {string} url - url to open
-   * @param {boolean} focus_website - whether the focus should be on the web page instead of the address bar
-   *
-   * @returns {void}
-   */
-  async openNewTabPage (url, focus_website) {
-    await browser.tabs.getCurrent((tab) => {
-      // set focus on website
-      if (focus_website) {
-        // we need to pass the cookieStoreId to support the container tabs feature of Firefox
-        browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
-          browser.tabs.remove(tab.id);
-        });
-      }
-      // set focus on address bar
-      else {
-        // we explicitly set the tab id of the current tab to support the edge case of opening a new tab in the
-        // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
-        browser.tabs.update(tab.id, { url : url || 'about:blank', loadReplace : true }, () => {
-          // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
-        });
-      }
-    });
-
-    // delete spammy new tab page entry from history
-    browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
   }
 };
 

@@ -4,14 +4,11 @@
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
-const elClearOption = document.getElementById('clear-option');
 const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
 const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-container');
 const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revoke');
-const elFocusOption = document.getElementById('focus-option');
-const elFocusWebsite = document.getElementById('focus-website');
 const elHomepageOption = document.getElementById('homepage-option');
 const elHomepagePermission = document.getElementById('homepage-permission-container');
 const elHomepagePermissionBtn = document.getElementById('homepage-permission');
@@ -53,8 +50,6 @@ const options = {
     let showDisableNotice = false;
     let showUrlOption = false;
     let showHomepageOption = false;
-    let showFocusOption = false;
-    let showClearOption = false;
     let showBackgroundColorOption = false;
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
@@ -64,30 +59,19 @@ const options = {
       showDisableNotice = true;
     }
 
-    // about:home
-    if (elType.options[elType.selectedIndex].value === 'about:home') {
-      showFocusOption = true;
-    }
-
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
-      showFocusOption = true;
-      showClearOption = true;
     }
 
     // custom url
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
-      showFocusOption = true;
-      showClearOption = true;
     }
 
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
-      showFocusOption = true;
-      showClearOption = true;
 
       const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
       if (local_file) {
@@ -98,21 +82,11 @@ const options = {
     // background color
     if (elType.options[elType.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
-      showFocusOption = true;
-      showClearOption = true;
-    }
-
-    // feed
-    if (elType.options[elType.selectedIndex].value === 'feed') {
-      showFocusOption = true;
-      showClearOption = true;
     }
 
     options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
     options.toggleVisibility(elHomepageOption, showHomepageOption);
-    options.toggleVisibility(elFocusOption, showFocusOption);
-    options.toggleVisibility(elClearOption, showClearOption);
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
     options.toggleVisibility(elLocalFileOption, showLocalFileOption);
     options.toggleVisibility(elLocalFileDeleteLink, showLocalFileDeleteLink);
@@ -139,7 +113,6 @@ const options = {
   async load () {
     const option = await browser.storage.local.get(defaults);
 
-    elFocusWebsite.checked = option.focus_website;
     elType.querySelector('[value="' + option.type + '"]').selected = true;
     elUrl.value = option.url;
     elBackgroundColor.value = option.background_color;
@@ -171,10 +144,6 @@ permissions.setupListeners({
   elRevokePermissionContainer: elHomepagePermissionRevoke,
   elGrantBtn: elHomepagePermissionBtn,
   elRevokeBtn: elHomepagePermissionRevokeBtn,
-});
-
-elFocusWebsite.addEventListener('change', (e) => {
-  browser.storage.local.set({ focus_website : e.target.checked });
 });
 
 elType.addEventListener('change', (e) => {
@@ -223,7 +192,7 @@ elLocalFile.addEventListener('change', () => {
   reader.readAsText(elLocalFile.files[0]);
   reader.addEventListener('loadend', async () => {
     const file = reader.result;
-
+    
     await browser.storage.local.set({ local_file : file });
     options.toggleVisibility(elLocalFileDeleteLink, true);
   });
