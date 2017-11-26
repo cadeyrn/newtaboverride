@@ -45,7 +45,7 @@ const newtab = {
         }
         // no permission granted
         else {
-          document.querySelector('iframe').src = browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION);
+          document.querySelector('iframe').src = HOME_PAGE_MISSING_PERMISSION;
         }
 
         break;
