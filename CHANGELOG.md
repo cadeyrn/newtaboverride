@@ -4,7 +4,7 @@
 
 ### (Work in Progress) Version 12.0.0 (2017-12-xx)
 
-- [DEPENDENCY] updated eslint from version 4.10.0 to 4.11.0
+- [DEPENDENCY] updated eslint from version 4.10.0 to 4.12.0 and added one new rule
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.0 to 1.2.1
 
 ### Version 11.0.0 (2017-11-07)
