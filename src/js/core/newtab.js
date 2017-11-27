@@ -41,7 +41,7 @@ const newtab = {
             document.querySelector('iframe').src = 'about:blank';
             break;
           }
-          document.querySelector('iframe').src = firstHomepage;
+          document.location = firstHomepage;
         }
         // no permission granted
         else {
