@@ -47,8 +47,6 @@ The extension is currently available in the following languages:
 - French (Thanks, SuperPat45!)
 - Dutch (Thanks, Tonnes!)
 - Polish (Thanks, WaldiPL!)
-- Russian (Thanks, vanja-san!)
-- Chinese (simplified) (Thanks, zhaiyusci!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
