@@ -5,6 +5,7 @@
 ### (Work in Progress) Version 12.0.0 (2017-12-xx)
 
 - [DEPENDENCY] updated eslint from version 4.10.0 to 4.12.1 and added one new rule
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.1 to 2.0.2
 - [DEPENDENCY] updated stylelint from version 8.2.0 to 8.3.1 and added two new rules
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.0 to 1.2.1
 
