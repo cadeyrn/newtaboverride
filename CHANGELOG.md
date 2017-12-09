@@ -4,6 +4,8 @@
 
 ### (Work in Progress) Version 12.0.0 (2017-12-xx)
 
+- [ENHANCEMENT] offer option to set focus on web page instead of address bar also for about:blank, can be useful in
+  conjunction with other add-ons like Vimium-FF, fixes [#92](https://github.com/cadeyrn/newtaboverride/issues/92)
 - [TRANSLATION] removed Russian and Chinese translations because of non responding translators
 - [DEPENDENCY] updated eslint from version 4.10.0 to 4.13.0 and added one new rule
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.1 to 2.0.2

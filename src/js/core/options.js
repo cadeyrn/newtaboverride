@@ -69,6 +69,11 @@ const options = {
       showFocusOption = true;
     }
 
+    // about:blank
+    if (elType.options[elType.selectedIndex].value === 'about:blank') {
+      showFocusOption = true;
+    }
+
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
       showHomepageOption = true;

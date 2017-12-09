@@ -24,8 +24,6 @@ const newtab = {
 
     switch (options.type) {
       case 'about:blank':
-        newtab.openNewTabPage('about:blank', false);
-        break;
       case 'about:home':
       case 'custom_url':
         newtab.openNewTabPage(url, options.focus_website);
