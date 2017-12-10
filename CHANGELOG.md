@@ -4,6 +4,8 @@
 
 ### (Work in Progress) Version 12.0.0 (2017-12-xx)
 
+- [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
+  fixes [#108](https://github.com/cadeyrn/newtaboverride/issues/108)
 - [ENHANCEMENT] offer option to set focus on web page instead of address bar also for about:blank, can be useful in
   conjunction with other add-ons like Vimium-FF, fixes [#92](https://github.com/cadeyrn/newtaboverride/issues/92)
 - [TRANSLATION] removed Russian and Chinese translations because of non responding translators
