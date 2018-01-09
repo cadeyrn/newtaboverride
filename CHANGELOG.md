@@ -12,6 +12,7 @@
 - [DEPENDENCY] updated eslint from version 4.10.0 to 4.15.0 and added one new rule
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.1 to 2.0.2
 - [DEPENDENCY] updated eslint-plugin-xss from version 0.1.8 to 0.1.9
+- [DEPENDENCY] updated gulp-eslint from version 4.0.0 to 4.0.1
 - [DEPENDENCY] updated stylelint from version 8.2.0 to 8.4.0 and added two new rules
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.0 to 1.2.1
 - [DEPENDENCY] updated stylelint-order from version 0.7.0 to 0.8.0
