@@ -38,7 +38,7 @@
     "stylelint": "8.4.0",
     "stylelint-csstree-validator": "1.2.1",
     "stylelint-order": "0.8.0",
-    "web-ext": "2.2.2"
+    "web-ext": "2.3.1"
   },
   "scripts": {
     "build": "cd src && web-ext build -a ../dist",
