@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 12.0.0 (2017-12-xx)
+### (Work in Progress) Version 12.0.0 (2018-01-xx)
 
 - [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
   fixes [#108](https://github.com/cadeyrn/newtaboverride/issues/108)
