@@ -109,7 +109,7 @@ The storage permission is needed so that New Tab Override can store settings suc
 
 ## Compatibility
 
-The extension requires at least Firefox 57. Because the extension makes use of modern web technologies and the latest
+The extension requires at least Firefox 58. Because the extension makes use of modern web technologies and the latest
 WebExtension APIs, support for older versions of Firefox is not possible for technical reasons.
 
 ## Download

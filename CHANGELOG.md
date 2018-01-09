@@ -19,6 +19,8 @@
 - [DEPENDENCY] updated stylelint-order from version 0.7.0 to 0.8.0
 - [DEPENDENCY] updated web-ext from version 2.2.2 to 2.3.1
 
+**Minimum required Firefox version is Firefox 58 now.**
+
 ### Version 11.0.0 (2017-11-07)
 
 - [ENHANCEMENT] support the edge case of opening a new tab in the background, can be useful in conjunction with add-ons
