@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 12.0.0 (2018-02-xx)
+### Version 12.0.0 (2018-02-03)
 
 - [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
   fixes [#108](https://github.com/cadeyrn/newtaboverride/issues/108)
@@ -187,7 +187,7 @@ Missing features:
 - [BUGFIX] settings UI was broken since version 3.1 for users with history set to "never remember" or in private
   browsing mode (Thanks, noitidart and NilkasG!)
 - [TRANSLATION] updated Dutch translation (Thanks, Tonnes!)
-- [DEPENDENCY] compiled with JPM 1.2.2 (before: 1.2.0) 
+- [DEPENDENCY] compiled with JPM 1.2.2 (before: 1.2.0)
 
 ### Version 4.0.1 (2016-10-10)
 
@@ -197,7 +197,7 @@ Missing features:
 
 - [ENHANCEMENT] new option for new tabs: the latest news about Mozilla (German)
 - [CODE QUALITY] internal code optimizations
-- [DEPENDENCY] compiled with JPM 1.2.0 (before: 1.1.4) 
+- [DEPENDENCY] compiled with JPM 1.2.0 (before: 1.1.4)
 
 ### Version 3.1.0 (2016-09-20)
 
@@ -221,7 +221,7 @@ Missing features:
 - [DEPENDENCY] compiled with JPM 1.0.7 (before: 1.0.4)
 
 **Minimum required Firefox version is Firefox 45 now.**
-  
+
 ### Version 2.3.1 (2016-01-19)
 
 - [BUGFIX] Workaround for Bugzilla #1240559 (New Tab Override works in Firefox 43 Stable, Firefox 45 Developer Edition
@@ -242,12 +242,12 @@ Missing features:
 
 - [ENHANCEMENT] added about:sync-tabs as new predefined option
 - [ENHANCEMENT] added URL validation for custom URLs (not only for the clipboard option)
-- [ENHANCEMENT] extended URL validation to about: pages 
+- [ENHANCEMENT] extended URL validation to about: pages
 - [BUGFIX] compatibility with Firefox 43.0.1 (fixed bug in the version detection)
 
 ### Version 2.1.0 (2015-11-28)
 
-- [ENHANCEMENT] Better validation for URLs in the clipboard option. 
+- [ENHANCEMENT] Better validation for URLs in the clipboard option.
 - [BUGFIX] New implementation of the clipboard option. In the last version the new tab page opened instead of the
   desired page under certain circumstances.
 
@@ -256,7 +256,7 @@ Missing features:
 - [ENHANCEMENT] about:blank, about:home and about:newtab as predefined options
 - [ENHANCEMENT] option to use homepage as new tab page
 - [ENHANCEMENT] option to use last url from clipboard as new tab page
-- [ENHANCEMENT] Firefox 44+: use of AboutNewTabService instead of NewTabURL.jsm 
+- [ENHANCEMENT] Firefox 44+: use of AboutNewTabService instead of NewTabURL.jsm
 
 ### Version 1.1.0 (2015-10-18)
 
