@@ -2,12 +2,14 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 12.0.0 (2018-01-xx)
+### (Work in Progress) Version 12.0.0 (2018-02-xx)
 
 - [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
   fixes [#108](https://github.com/cadeyrn/newtaboverride/issues/108)
 - [ENHANCEMENT] offer option to set focus on web page instead of address bar also for about:blank, can be useful in
   conjunction with other add-ons like Vimium-FF, fixes [#92](https://github.com/cadeyrn/newtaboverride/issues/92)
+- [ENHANCEMENT] explicitly set background color for body in CSS to avoid visual problems on settings page with
+  non-default values for browser.display.background_color
 - [TRANSLATION] removed Russian and Chinese translations because of non responding translators
 - [DEPENDENCY] updated eslint from version 4.10.0 to 4.17.0 and added one new rule
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.1.0 to 2.2.0
