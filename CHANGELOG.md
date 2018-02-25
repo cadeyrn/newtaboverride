@@ -7,6 +7,7 @@
 - [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
 - [DEPENDENCY] updated eslint from version 4.17.0 to 4.18.1
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.0
+- [DEPENDENCY] updated htmllint from version 0.7.0 to 0.7.2
 
 ### Version 12.0.0 (2018-02-03)
 
