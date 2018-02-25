@@ -50,6 +50,7 @@
   "line-end-style": "lf",
   "line-max-len": 120,
   "line-max-len-ignore-regex": false,
+  "line-no-trailing-whitespace": true,
   "spec-char-escape": false,
   "table-req-caption": true,
   "table-req-header": true,
