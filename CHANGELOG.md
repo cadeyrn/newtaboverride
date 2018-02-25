@@ -9,6 +9,7 @@
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.0
 - [DEPENDENCY] updated htmllint from version 0.7.0 to 0.7.2
 - [DEPENDENCY] updated stylelint from version 8.4.0 to 9.1.1
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.1 to 1.2.2
 
 ### Version 12.0.0 (2018-02-03)
 
