@@ -12,7 +12,7 @@ decided to remove it. Fortunately, by removing it, Mozilla also introduced a new
 to life as an add-on. This add-on allows the user to choose a certain page in a new tab. New Tab Override, today with
 **more than 130,000 users**, was the first add-on providing this functionality and **is therefore the original**.
 
-**New Tab Override is a WebExtension and also compatible with Firefox 57 and later.**
+**New Tab Override is a WebExtension and compatible with Firefox Quantum (Firefox 58 and later).**
 
 ### Features
 
@@ -45,8 +45,9 @@ The extension is currently available in the following languages:
 - English
 - German
 - French (Thanks, SuperPat45!)
-- Dutch (Thanks, Tonnes!)
 - Polish (Thanks, WaldiPL!)
+- Dutch (Thanks, Tonnes!)
+- Swedish (Thanks, Sopor-!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 

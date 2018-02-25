@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 13.0.0 (2018-03-xx)
+
+- [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
+
 ### Version 12.0.0 (2018-02-03)
 
 - [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
