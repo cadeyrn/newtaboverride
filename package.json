@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint": "4.18.1",
     "eslint-plugin-compat": "2.2.0",
-    "eslint-plugin-no-unsanitized": "2.0.2",
+    "eslint-plugin-no-unsanitized": "3.0.0",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.9",
     "gulp": "3.9.1",
