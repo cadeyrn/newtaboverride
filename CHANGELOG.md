@@ -5,6 +5,7 @@
 ### (Work in Progress) Version 13.0.0 (2018-03-xx)
 
 - [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
+- [DEPENDENCY] updated eslint from version 4.17.0 to 4.18.1
 
 ### Version 12.0.0 (2018-02-03)
 
