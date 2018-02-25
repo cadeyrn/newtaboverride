@@ -1,1 +1,161 @@
-
+{
+  "background_color_title": {
+    "message": "Bakgrundsfärg"
+  },
+  "clear_addressbar_description": {
+    "message": "Den automatiska tömningen av adressfältet eller val av webbadressen är för närvarande inte möjlig för webbtillägg. Detta kräver en förändring från Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Rensa adressraden / välj URL"
+  },
+  "default_option_description": {
+    "message": "För att använda Firefox standardsida, öppna about:addons och inaktivera tillägget New Tab Override (det kräver ingen avinstallation)."
+  },
+  "extension_description": {
+    "message": "New Tab Override ger tillbaka möjligheten att ändra den sida som visas när en ny flik öppnas"
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Publicerad:"
+  },
+  "feed_read_more": {
+    "message": "Läs mera…"
+  },
+  "feed_title": {
+    "message": "Mozilla nyheter"
+  },
+  "focus_website_description": {
+    "message": "Fokusera på webbsidan i stället för på adressfältet"
+  },
+  "focus_website_title": {
+    "message": "Fokus"
+  },
+  "github_link": {
+    "message": "New Tab Override på GitHub"
+  },
+  "github_notice": {
+    "message": "Funktionsönskemål eller felrapporter? Öppna en rapport på GitHub:"
+  },
+  "homepage_description": {
+    "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#general i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
+  },
+  "introduction_part_one": {
+    "message": "Denna sida tillhandahålls av"
+  },
+  "introduction_part_two": {
+    "message": "Välj viljen sida du vill ska öppnas som en ny flik!"
+  },
+  "learn_more": {
+    "message": "Lär dig mera"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Är du säker på att du vill ta bort filen från tilläggets lagring?"
+  },
+  "local_file_delete_text": {
+    "message": "ta bort befintlig fil"
+  },
+  "local_file_description": {
+    "message": "På grund av begränsningar i Firefox är det inte möjligt för tillägg att få åtkomst till lokala filer. New Tab Override ger dig möjlighet att ladda lokala HTML-filer i tilläggets lagring och att använda dem som en ny flikinnehåll. Alla URL:er och länkar till bilder, CSS-filer och JavaScript-filer som kan inkluderas måste vara tillgängligt via webben eftersom Firefox inte kan komma åt lokala filer på systemet. Alternativt kan du överväga att använda en lokal webbserver, som till exempel via MAMP eller XAMPP, med alternativet “egen URL”. Detta fungerar utan begränsning."
+  },
+  "local_file_no_file": {
+    "message": "Du valde alternativet “lokal fil”, men du lagrade inte någon lokal fil. Du måste därför lägga in en fil i New Tab Override-inställningarna."
+  },
+  "local_file_title": {
+    "message": "Lokal fil"
+  },
+  "local_file_upload": {
+    "message": "Spara lokal fil"
+  },
+  "new_tab_title": {
+    "message": "Ny flik"
+  },
+  "omnibox_command_settings": {
+    "message": "Öppna inställningar för nya flikar"
+  },
+  "review_text": {
+    "message": "Gillade du tillägget? Skriv då gärna en recension på"
+  },
+  "settings_donate": {
+    "message": "Donera"
+  },
+  "settings_donation_text": {
+    "message": "Du får gärna donera en slant för att stöda den fortsatta utvecklingen av tillägget."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox behöver ditt tillstånd att läsa nyhetsflödet från soeren-hentzschel.at. Du kan återkalla detta när du vill."
+  },
+  "settings_feed_permission_needed": {
+    "message": "För att använda denna funktionen måste du tillåta Firefox att komma åt datakällan."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox behöver ditt tillstånd att läsa nyhetsflödet från soeren-hentzschel.at. Du har redan beviljat den tillåtelse."
+  },
+  "settings_homepage_permission_description": {
+    "message": "Firefox behöver ditt tillstånd att läsa och ändra webbläsarens inställningar. Du kan återkalla detta när du vill."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "För att använda denna funktionen måste du tillåta Firefox att läsa och att ändra webbläsarens inställningar."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox behöver ditt tillstånd att läsa och ändra webbläsarens inställningar. Du har redan beviljat den tillåtelse."
+  },
+  "settings_main_caption": {
+    "message": "Inställningar"
+  },
+  "settings_permission_action": {
+    "message": "Tillåta"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Återkalla"
+  },
+  "settings_support_caption": {
+    "message": "Support"
+  },
+  "settings_title": {
+    "message": "Ny flik — Inställningar"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_background_color": {
+    "message": "bakgrundsfärg"
+  },
+  "type_options_custom_url": {
+    "message": "egen URL"
+  },
+  "type_options_default_home_page": {
+    "message": "Firefox standard startsida (about:home)"
+  },
+  "type_options_default_new_tab": {
+    "message": "Firefox standard ny fliksida (about:newtab)"
+  },
+  "type_options_empty_page": {
+    "message": "tom sida (about:blank)"
+  },
+  "type_options_feed": {
+    "message": "Mozilla nyheter (Tyska)"
+  },
+  "type_options_homepage": {
+    "message": "nuvarande hemsida"
+  },
+  "type_options_local_file": {
+    "message": "lokal fil"
+  },
+  "type_title": {
+    "message": "Alternativ"
+  },
+  "url_description": {
+    "message": "Webbsidan som anges här visas när du öppnar en ny flik. Endast URL:er som börjar med http:// eller https:// stöds. Observera: Åtkomst till lokala filer via URL är inte längre möjligt på grund av begränsningar i Firefox. Överväg gärna att använda alternativet “lokal fil” eller en lokal webbserver, till exempel via MAMP eller XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Detta är inte en giltig URL."
+  },
+  "url_validation_file": {
+    "message": "Tillägg har inte längre tillgång till lokala filer via URL:er."
+  }
+}
