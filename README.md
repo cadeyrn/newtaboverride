@@ -10,7 +10,7 @@ Since Firefox 41 it's no longer possible to customize the page shown in a new ta
 browser.newtab.url in about.config. Because of the fact that hijackers abused the preference in the past, Mozilla
 decided to remove it. Fortunately, by removing it, Mozilla also introduced a new API to bring this functionality back
 to life as an add-on. This add-on allows the user to choose a certain page in a new tab. New Tab Override, today with
-**more than 130,000 users**, was the first add-on providing this functionality and **is therefore the original**.
+**more than 150,000 users**, was the first add-on providing this functionality and **is therefore the original**.
 
 **New Tab Override is a WebExtension and compatible with Firefox Quantum (Firefox 58 and later).**
 
@@ -21,7 +21,7 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 - use about:home, the default home page of Firefox, as new tab page
 - use your current home page as new tab page
 - use any color as background color for the new tab page
-- store a local HTML file in the extension's storage and use the content as new tab content
+- store a local HTML file in the add-on's storage and use the content as new tab content
 - get the latest news about Mozilla as new tab page (only in German language)
 - set the focus either to the address bar or to the web page (for example Google search field)
 - beautiful settings UI to make it easy to customize your new tab experience
@@ -40,7 +40,7 @@ There are already some new features planned for the future. Please suggest your 
 
 ### Languages
 
-The extension is currently available in the following languages:
+The add-on is currently available in the following languages:
 
 - English
 - German
@@ -110,7 +110,7 @@ The storage permission is needed so that New Tab Override can store settings suc
 
 ## Compatibility
 
-The extension requires at least Firefox 58. Because the extension makes use of modern web technologies and the latest
+New Tab Override requires at least Firefox 58. Because the add-on makes use of modern web technologies and the latest
 WebExtension APIs, support for older versions of Firefox is not possible for technical reasons.
 
 ## Download
