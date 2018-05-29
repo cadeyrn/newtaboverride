@@ -12,7 +12,7 @@
     "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
   },
   "extension_description": {
-    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -42,10 +42,10 @@
     "message": "If this option is enabled, Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#general in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home pages are configured, New Tab Override will use the first one."
   },
   "introduction_part_one": {
-    "message": "This page is provided by"
+    "message": "This page is provided by "
   },
   "introduction_part_two": {
-    "message": "Select which page should open as new tab!"
+    "message": ": Select which page should open as new tab!"
   },
   "learn_more": {
     "message": "Learn more"

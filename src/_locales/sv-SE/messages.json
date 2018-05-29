@@ -12,7 +12,7 @@
     "message": "För att använda Firefox standardsida, öppna about:addons och inaktivera tillägget New Tab Override (det kräver ingen avinstallation)."
   },
   "extension_description": {
-    "message": "New Tab Override ger tillbaka möjligheten att ändra den sida som visas när en ny flik öppnas"
+    "message": "New Tab Override ger tillbaka möjligheten att ändra den sida som visas när en ny flik öppnas."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -42,10 +42,10 @@
     "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#general i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
   },
   "introduction_part_one": {
-    "message": "Denna sida tillhandahålls av"
+    "message": "Denna sida tillhandahålls av "
   },
   "introduction_part_two": {
-    "message": "Välj viljen sida du vill ska öppnas som en ny flik!"
+    "message": ": Välj viljen sida du vill ska öppnas som en ny flik!"
   },
   "learn_more": {
     "message": "Lär dig mera"
