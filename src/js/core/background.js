@@ -3,6 +3,7 @@
 /* global utils */
 
 const OPTIONS_PAGE = 'html/options.html';
+const REMOVED_DEFAULT_OPTION_VERSION = 13;
 
 /**
  * @exports newtaboverride
@@ -17,10 +18,20 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  onInstalledHandler (details) {
+  async onInstalledHandler (details) {
     // new install
     if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
+    }
+    // update
+    if (details.reason === 'update') {
+      if (utils.parseVersion(details.previousVersion).major < REMOVED_DEFAULT_OPTION_VERSION) {
+        const option = await browser.storage.local.get();
+
+        if (option.type === 'default') {
+          browser.storage.local.set({ type : 'about:blank' });
+        }
+      }
     }
   },
 
