@@ -51,11 +51,12 @@ const i18n = {
       const text = i18n.getMessage(node.dataset.i18n);
       node.innerHTML = '';
       const parts = text.split(/(\{\d+\})/);
-      parts.forEach(part => {
+      parts.forEach((part) => {
         if (/\{\d+\}/.test(part)) {
           const index = parseInt(part.slice(1));
           node.appendChild(children[index]);
-        } else {
+        }
+        else {
           node.appendChild(document.createTextNode(part));
         }
       });

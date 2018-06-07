@@ -150,19 +150,19 @@ const options = {
 document.addEventListener('DOMContentLoaded', options.load);
 
 permissions.setupListeners({
-  permission: PERMISSION_FEED,
-  elGrantPermissionContainer: elFeedPermission,
-  elRevokePermissionContainer: elFeedPermissionRevoke,
-  elGrantBtn: elFeedPermissionBtn,
-  elRevokeBtn: elFeedPermissionRevokeBtn,
+  permission : PERMISSION_FEED,
+  elGrantPermissionContainer : elFeedPermission,
+  elRevokePermissionContainer : elFeedPermissionRevoke,
+  elGrantBtn : elFeedPermissionBtn,
+  elRevokeBtn : elFeedPermissionRevokeBtn
 });
 
 permissions.setupListeners({
-  permission: PERMISSION_HOMEPAGE,
-  elGrantPermissionContainer: elHomepagePermission,
-  elRevokePermissionContainer: elHomepagePermissionRevoke,
-  elGrantBtn: elHomepagePermissionBtn,
-  elRevokeBtn: elHomepagePermissionRevokeBtn,
+  permission : PERMISSION_HOMEPAGE,
+  elGrantPermissionContainer : elHomepagePermission,
+  elRevokePermissionContainer : elHomepagePermissionRevoke,
+  elGrantBtn : elHomepagePermissionBtn,
+  elRevokeBtn : elHomepagePermissionRevokeBtn
 });
 
 elFocusWebsite.addEventListener('change', (e) => {
