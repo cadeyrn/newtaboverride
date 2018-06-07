@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#general w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
   },
-  "introduction_part_one": {
-    "message": "Ta strona jest dostarczona przez "
-  },
-  "introduction_part_two": {
-    "message": ": Wybierz stronę, która powinna być otwierana jako nowa karta!"
+  "introduction": {
+    "message": "Ta strona jest dostarczona przez {0}: Wybierz stronę, która powinna być otwierana jako nowa karta!"
   },
   "learn_more": {
     "message": "Więcej informacji"

@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Als deze optie is ingeschakeld, gebruikt Firefox de startpagina ook als de nieuw-tabbladpagina. U kunt de startpagina wijzigen door about:preferences#general in de adresbalk te typen. Alleen startpagina’s die met http:// of https:// beginnen worden ondersteund. Als meerdere startpagina’s zijn geconfigureerd, gebruikt New Tab Override de eerste."
   },
-  "introduction_part_one": {
-    "message": "Deze pagina wordt aangeboden door "
-  },
-  "introduction_part_two": {
-    "message": ": selecteer welke pagina als nieuw tabblad moet worden geopend!"
+  "introduction": {
+    "message": "Deze pagina wordt aangeboden door {0}: selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "learn_more": {
     "message": "Meer info"

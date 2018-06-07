@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "如果此选项被启用，Firefox 会使用主页作为新标签页。您可以通过在地址栏输入 about:preferences#general 设置主页。仅支持以 http:// 或 https:// 开头的网址。如果您配置了多个主页， New Tab Override 会使用第一个。"
   },
-  "introduction_part_one": {
-    "message": "当前页面由 "
-  },
-  "introduction_part_two": {
-    "message": " 提供：选择在新标签页打开的页面！"
+  "introduction": {
+    "message": "当前页面由 {0} 提供：选择在新标签页打开的页面！"
   },
   "learn_more": {
     "message": "详细了解"

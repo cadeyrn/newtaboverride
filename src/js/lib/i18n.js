@@ -21,67 +21,55 @@ const i18n = {
    * @returns {void}
    */
   setLangAttribute () {
-    document.querySelector('html').setAttribute('lang', browser.i18n.getUILanguage().substring(0, 2));
-  },
-
-  /**
-   * Returns an XPathResult based on a XPath expression.
-   *
-   * @param {string} path - a XPath expression
-   *
-   * @returns {XPathResult} - XPathResult based on an XPath expression
-   */
-  findWithXPath (path) {
-    return document.evaluate(path, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+    document.querySelector('html').setAttribute('lang', browser.i18n.getUILanguage());
   },
 
   /**
    * This method is used to get the translation for a given key.
    *
-   * @param {string} string - not used parameter
    * @param {string} key - translsation key
    *
    * @returns {string} - translation
    */
-  getMessage (string, key) {
+  getMessage (key) {
     return browser.i18n.getMessage(key);
   },
 
   /**
-   * Replaces a __MSG_<key>__ string with the correct translation.
-   *
-   * @param {string} string - __MSG_<key>__ string
-   *
-   * @returns {string} - translated string
-   */
-  replace (string) {
-    return string.replace(/__MSG_([a-z_.]+)__/gi, i18n.getMessage);
-  },
-
-  /**
-   * Translates all strings in text nodes, placesholders and title attributes.
+   * Translates all strings in the page
    *
    * @returns {void}
    */
   translate () {
     document.removeEventListener('DOMContentLoaded', i18n.translate);
 
-    const textNodes = i18n.findWithXPath('//text()[contains(self::text(), "__MSG_")]');
-    const textSnapshotLength = textNodes.snapshotLength;
+    const nodes = document.querySelectorAll('[data-i18n]');
 
-    for (let i = 0; i < textSnapshotLength; i++) {
-      const text = textNodes.snapshotItem(i);
-      text.nodeValue = i18n.replace(text.nodeValue);
+    for (let i = 0, len = nodes.length; i < len; i++) {
+      const node = nodes[i];
+      const children = Array.from(node.children);
+      const text = i18n.getMessage(node.dataset.i18n);
+      node.innerHTML = '';
+      const parts = text.split(/(\{\d+\})/);
+      parts.forEach(part => {
+        if (/\{\d+\}/.test(part)) {
+          const index = parseInt(part.slice(1));
+          node.appendChild(children[index]);
+        } else {
+          node.appendChild(document.createTextNode(part));
+        }
+      });
     }
 
-    const attributes = ['title', 'placeholder', 'data-confirm'];
+    const attributes = ['placeholder', 'data-confirm'];
     for (const attribute of attributes) {
-      const nodes = i18n.findWithXPath('//*/attribute::' + attribute + '[contains(., "__MSG_")]');
-      const AttributesSnapshotLength = nodes.snapshotLength;
+      const i18nAttribute = `data-i18n-${attribute}`;
+      const nodes = document.querySelectorAll(`[${i18nAttribute}]`);
 
-      for (let i = 0; i < AttributesSnapshotLength; i++) {
-        const node = nodes.snapshotItem(i);
-        node.value = i18n.replace(node.value);
+      for (let i = 0, len = nodes.length; i < len; i++) {
+        const node = nodes[i];
+        const msg = node.getAttribute(i18nAttribute);
+        node.setAttribute(attribute, i18n.getMessage(msg));
       }
     }
   }

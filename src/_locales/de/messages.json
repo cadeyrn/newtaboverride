@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Bei Aktivierung dieser Option verwendet Firefox die Startseite auch als Seite für den neuen Tab. Du kannst die Startseite ändern, indem du about:preferences#general in die Adressleiste eingibst. Nur Startseiten, welche mit http:// oder https:// beginnen, werden unterstützt. Wenn mehrere Startseiten konfiguriert sind, wird New Tab Override die erste nutzen."
   },
-  "introduction_part_one": {
-    "message": "Diese Seite wird bereitgestellt von "
-  },
-  "introduction_part_two": {
-    "message": ": Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
+  "introduction": {
+    "message": "Diese Seite wird bereitgestellt von {0}: Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
   },
   "learn_more": {
     "message": "Weitere Informationen"

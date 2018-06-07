@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#general i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
   },
-  "introduction_part_one": {
-    "message": "Denna sida tillhandahålls av "
-  },
-  "introduction_part_two": {
-    "message": ": Välj viljen sida du vill ska öppnas som en ny flik!"
+  "introduction": {
+    "message": "Denna sida tillhandahålls av {0}: Välj viljen sida du vill ska öppnas som en ny flik!"
   },
   "learn_more": {
     "message": "Lär dig mera"
