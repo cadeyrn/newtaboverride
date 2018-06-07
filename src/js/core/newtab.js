@@ -24,6 +24,8 @@ const newtab = {
 
     switch (options.type) {
       case 'about:blank':
+        newtab.openNewTabPage(url, false);
+        break;
       case 'about:home':
       case 'custom_url':
         newtab.openNewTabPage(url, options.focus_website);
@@ -78,11 +80,19 @@ const newtab = {
    */
   async openNewTabPage (url, focus_website) {
     await browser.tabs.getCurrent((tab) => {
+      let tabId = tab.id;
+
+      // Mozilla broke about:blank in Firefox 60 and the only way to work around the "about:blank" is the address bar
+      // is to create an error…
+      if (url === 'about:blank') {
+        tabId = undefinedVariable;
+      }
+
       // set focus on website
       if (focus_website) {
         // we need to pass the cookieStoreId to support the container tabs feature of Firefox
         browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
-          browser.tabs.remove(tab.id);
+          browser.tabs.remove(tabId);
         });
       }
       // set focus on address bar
