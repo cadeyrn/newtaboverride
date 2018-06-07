@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Rensa adressraden / välj URL"
   },
-  "default_option_description": {
-    "message": "För att använda Firefox standardsida, öppna about:addons och inaktivera tillägget New Tab Override (det kräver ingen avinstallation)."
-  },
   "extension_description": {
     "message": "New Tab Override ger tillbaka möjligheten att ändra den sida som visas när en ny flik öppnas."
   },

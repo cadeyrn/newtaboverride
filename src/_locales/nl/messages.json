@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adresbalk wissen / URL selecteren"
   },
-  "default_option_description": {
-    "message": "Open about:addons en schakel de New Tab Override-extensie uit om de standaardpagina van Firefox te gebruiken (geen de-installatie vereist)."
-  },
   "extension_description": {
     "message": "New Tab Override herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
   },

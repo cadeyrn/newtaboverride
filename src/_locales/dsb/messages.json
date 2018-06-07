@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adresowe pólo wuprozniś / URL markěrowaś"
   },
-  "default_option_description": {
-    "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
-  },
   "extension_description": {
     "message": "New Tab Override funkciju slědk pśinjaso, z kótarejuž móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },

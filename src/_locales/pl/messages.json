@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
-  "default_option_description": {
-    "message": "Aby używać domyślnej strony Firefoksa, otwórz about:addons i wyłącz rozszerzenie New Tab Override (nie wymaga odinstalowania)."
-  },
   "extension_description": {
     "message": "New Tab Override przywraca możliwość zmiany strony, która jest wyświetlana po otwarciu nowej karty."
   },

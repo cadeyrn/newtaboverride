@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adresowe polo wuprózdnić / URL měrkěrować"
   },
-  "default_option_description": {
-    "message": "Zo by standardnu stronu Firefox wužiwał, wuwołaj about:addons a znjemóžń rozšěrjenje Tab Override (žane wotinstalowanje trěbne)."
-  },
   "extension_description": {
     "message": "New Tab Override funkciju wróćo přinjese, z kotrejž móžeš stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje."
   },

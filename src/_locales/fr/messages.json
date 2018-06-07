@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Effacer la barre d'adresse / sélectionner une URL"
   },
-  "default_option_description": {
-    "message": "Pour utiliser la page par défaut de Firefox, ouvrez about:addons et désactivez l'extension New Tab Override (aucune désinstallation requise)."
-  },
   "extension_description": {
     "message": "New Tab Override ramène la possibilité de modifier la page qui s'affiche lors de l'ouverture d'un nouvel onglet."
   },

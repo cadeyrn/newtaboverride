@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Adressleiste leeren / URL markieren"
   },
-  "default_option_description": {
-    "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
-  },
   "extension_description": {
     "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },

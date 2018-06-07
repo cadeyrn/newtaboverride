@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Clear address bar / select URL"
   },
-  "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
-  },
   "extension_description": {
     "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab."
   },

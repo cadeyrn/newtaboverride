@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "清空地址栏 / 选中网址"
   },
-  "default_option_description": {
-    "message": "如果希望使用火狐默认的页面，请打开 about:addons 并禁用 New Tab Override 扩展（无需卸载）。"
-  },
   "extension_description": {
     "message": "New Tab Override 让您可以决定打开新标签页时显示的页面。"
   },
