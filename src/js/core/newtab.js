@@ -20,7 +20,7 @@ const newtab = {
    */
   async init () {
     const options = await browser.storage.local.get(defaults);
-    const url = options.type === 'about:home' ? options.type : options.url;
+    const url = options.type === 'about:home' || options.type === 'about:blank' ? options.type : options.url;
 
     switch (options.type) {
       case 'about:blank':
