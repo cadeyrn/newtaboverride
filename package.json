@@ -30,7 +30,7 @@
     "gulp-eslint": "4.0.2",
     "gulp-html-lint": "0.0.2",
     "gulp-jsdoc3": "2.0.0",
-    "gulp-stylelint": "6.0.0",
+    "gulp-stylelint": "7.0.0",
     "htmllint": "0.7.2",
     "jsdoc": "3.5.5",
     "jsdoc-strip-async-await": "0.1.0",
