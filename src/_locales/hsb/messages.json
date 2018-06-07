@@ -12,7 +12,7 @@
     "message": "Zo by standardnu stronu Firefox wužiwał, wuwołaj about:addons a znjemóžń rozšěrjenje Tab Override (žane wotinstalowanje trěbne)."
   },
   "extension_description": {
-    "message": "New Tab Override funkciju wróćo přinjese, z kotrejž móžeš stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje"
+    "message": "New Tab Override funkciju wróćo přinjese, z kotrejž móžeš stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Hdyž tute nastajenje zmóžnješ, Firefox startowu stronu tež jako stronu za nowy rajtark wužiwa. Zapodaj about:preferences#general do adresoweho pola, zo by startowu stronu změnił. Podpěruja so jenož startowe strony, kotrež so z http:// abo https:// započinaja. Hdyž su wjacore startowe strony skonfigurowane, budźe New Tab Override prěnju wužiwać."
   },
-  "introduction_part_one": {
-    "message": "Tuta strona staja so k dispoziciji wot"
-  },
-  "introduction_part_two": {
-    "message": "Wubjer, kotra strona ma so jako nowy rajtark wočinić!"
+  "introduction": {
+    "message": "Tuta strona staja so k dispoziciji wot {0}: Wubjer, kotra strona ma so jako nowy rajtark wočinić!"
   },
   "learn_more": {
     "message": "Dalše Informacije"

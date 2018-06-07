@@ -1,0 +1,158 @@
+{
+  "background_color_title": {
+    "message": "背景色"
+  },
+  "clear_addressbar_description": {
+    "message": "目前新式（WebExtension）扩展无法实现自动清空地址栏或自动选中网址的功能。这一功能依赖于 Mozilla 的改变。"
+  },
+  "clear_addressbar_title": {
+    "message": "清空地址栏 / 选中网址"
+  },
+  "default_option_description": {
+    "message": "如果希望使用火狐默认的页面，请打开 about:addons 并禁用 New Tab Override 扩展（无需卸载）。"
+  },
+  "extension_description": {
+    "message": "New Tab Override 让您可以决定打开新标签页时显示的页面。"
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "发布于："
+  },
+  "feed_read_more": {
+    "message": "了解更多…"
+  },
+  "feed_title": {
+    "message": "Mozilla 新闻"
+  },
+  "focus_website_description": {
+    "message": "将焦点移动到网页而非地址栏"
+  },
+  "focus_website_title": {
+    "message": "焦点"
+  },
+  "github_link": {
+    "message": "在 GitHub 上查阅 New Tab Override"
+  },
+  "github_notice": {
+    "message": "有任何功能需求或错误报告？来 GitHub 提交您的问题："
+  },
+  "homepage_description": {
+    "message": "如果此选项被启用，Firefox 会使用主页作为新标签页。您可以通过在地址栏输入 about:preferences#general 设置主页。仅支持以 http:// 或 https:// 开头的网址。如果您配置了多个主页， New Tab Override 会使用第一个。"
+  },
+  "introduction": {
+    "message": "当前页面由 {0} 提供：选择在新标签页打开的页面！"
+  },
+  "learn_more": {
+    "message": "详细了解"
+  },
+  "local_file_delete_confirmation": {
+    "message": "确定要从扩展的存储中删除该文件吗？"
+  },
+  "local_file_delete_text": {
+    "message": "删除现有文件"
+  },
+  "local_file_description": {
+    "message": "由于火狐的限制，扩展不能访问本地文件。New Tab Override 让您可以将本地的 HTML 文件加载到扩展的存储中，以作为新标签页的内容。因为扩展不能访问本地文件，网页中所有图片、CSS 文件和 JavaScript 文件的链接必须可以通过网络访问。除此之外，您还可以考虑通过如 MAMP 或 XAMPP 等软件架设本地服务器并使用“自定义网址”选项。这种方式将不会受到限制。"
+  },
+  "local_file_no_file": {
+    "message": "您选择了使用“本地文件”的选项，但是当前并未指定文件。请在 New Tab Override 的设置中存储文件。"
+  },
+  "local_file_title": {
+    "message": "本地文件"
+  },
+  "local_file_upload": {
+    "message": "选择本地文件"
+  },
+  "new_tab_title": {
+    "message": "新标签页"
+  },
+  "omnibox_command_settings": {
+    "message": "打开新标签页的设置"
+  },
+  "review_text": {
+    "message": "喜欢这个扩展？欢迎留下您的评论"
+  },
+  "settings_donate": {
+    "message": "捐助"
+  },
+  "settings_donation_text": {
+    "message": "请考虑通过捐助支持这个扩展的持续开发。"
+  },
+  "settings_feed_permission_description": {
+    "message": "火狐要求您允许扩展访问 soeren-hentzschel.at 获取新闻。您可以随时刻撤回此权限。"
+  },
+  "settings_feed_permission_needed": {
+    "message": "为了使用此功能，火狐要求您允许扩展访问数据源。"
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "火狐要求您允许扩展访问 soeren-hentzschel.at 获取新闻。您已授权。"
+  },
+  "settings_homepage_permission_description": {
+    "message": "火狐要求您允许扩展读取或修改浏览器设置。您可以随时撤回此权限。"
+  },
+  "settings_homepage_permission_needed": {
+    "message": "为了使用此功能，火狐要求您允许扩展读取或修改浏览器设置。"
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "火狐要求您的允许扩展读取或修改浏览器设置。您已授权。"
+  },
+  "settings_main_caption": {
+    "message": "设置"
+  },
+  "settings_permission_action": {
+    "message": "授权"
+  },
+  "settings_permission_revoke_action": {
+    "message": "撤回授权"
+  },
+  "settings_support_caption": {
+    "message": "支持"
+  },
+  "settings_title": {
+    "message": "新标签页 — 设置"
+  },
+  "settings_url_field_placeholder": {
+    "message": "网址"
+  },
+  "type_options_background_color": {
+    "message": "背景色"
+  },
+  "type_options_custom_url": {
+    "message": "自定义网址"
+  },
+  "type_options_default_home_page": {
+    "message": "火狐的默认主页（about:home）"
+  },
+  "type_options_default_new_tab": {
+    "message": "火狐的默认新标签页（about:newtab）"
+  },
+  "type_options_empty_page": {
+    "message": "空白页（about:blank）"
+  },
+  "type_options_feed": {
+    "message": "Mozilla 新闻（德语）"
+  },
+  "type_options_homepage": {
+    "message": "当前主页"
+  },
+  "type_options_local_file": {
+    "message": "本地文件"
+  },
+  "type_title": {
+    "message": "选择"
+  },
+  "url_description": {
+    "message": "打开新标签页时会显示在此处输入的网页。仅支持以 http:// 或 https:// 开头的网址。请注意：由于火狐的限制，扩展无法通过 URL访问本地文件。建议考虑使用“本地文件”选项或通过如 MAMP 或 XAMPP 等软件架设本地服务器。"
+  },
+  "url_title": {
+    "message": "网址"
+  },
+  "url_validation_default": {
+    "message": "网址格式不正确。"
+  },
+  "url_validation_file": {
+    "message": "扩展不再能够通过网址访问本地文件。"
+  }
+}

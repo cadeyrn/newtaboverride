@@ -12,7 +12,7 @@
     "message": "Pour utiliser la page par défaut de Firefox, ouvrez about:addons et désactivez l'extension New Tab Override (aucune désinstallation requise)."
   },
   "extension_description": {
-    "message": "New Tab Override ramène la possibilité de modifier la page qui s'affiche lors de l'ouverture d'un nouvel onglet"
+    "message": "New Tab Override ramène la possibilité de modifier la page qui s'affiche lors de l'ouverture d'un nouvel onglet."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Si cette option est activée, Firefox utilisera également la page d'accueil comme page nouvel onglet. Vous pouvez modifier la page d'accueil en entrant about:preferences#general dans la barre d'adresse. Seules les pages d'accueil commençant par http:// ou https:// sont pris en charge. Si plusieurs pages d'accueil sont configurées, New Tab Override utilisera la première."
   },
-  "introduction_part_one": {
-    "message": "Cette page est fournie par"
-  },
-  "introduction_part_two": {
-    "message": "Sélectionnez la page à ouvrir en tant que nouvel onglet!"
+  "introduction": {
+    "message": "Cette page est fournie par {0}: Sélectionnez la page à ouvrir en tant que nouvel onglet!"
   },
   "learn_more": {
     "message": "En apprendre plus"

@@ -12,7 +12,7 @@
     "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
   },
   "extension_description": {
-    "message": "New Tab Override funkciju slědk pśinjaso, z kótarejuž móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo"
+    "message": "New Tab Override funkciju slědk pśinjaso, z kótarejuž móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -41,11 +41,8 @@
   "homepage_description": {
     "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#general do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
   },
-  "introduction_part_one": {
-    "message": "Toś ten bok staja se k dispoziciji wót"
-  },
-  "introduction_part_two": {
-    "message": "Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"
+  "introduction": {
+    "message": "Toś ten bok staja se k dispoziciji wót {0}: Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"
   },
   "learn_more": {
     "message": "Dalšne informacije"

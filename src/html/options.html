@@ -2,123 +2,106 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>__MSG_settings_title__</title>
+  <title data-i18n='settings_title'></title>
   <link rel='stylesheet' href='../css/common.css' />
   <link rel='stylesheet' href='../css/options.css' />
-  <link rel='icon' type='image/png' href='../images/icon.svg' />
+  <link rel='icon' type='image/svg+xml' href='../images/icon.svg' />
 </head>
 <body>
   <header>
-    <h1>__MSG_settings_title__</h1>
+    <h1 data-i18n='settings_title'></h1>
   </header>
   <div id='nto-introduction'>
-    <span>__MSG_introduction_part_one__</span>
-    <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>
-      __MSG_extension_name__</a>:
-    <span>__MSG_introduction_part_two__</span>
+    <span data-i18n='introduction'>
+      <a data-i18n='extension_name' href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'></a>
+    </span>
   </div>
   <main>
     <section>
       <div class='grey-bg'>
-        <h2>__MSG_settings_main_caption__</h2>
+        <h2 data-i18n='settings_main_caption'></h2>
         <form>
           <div>
-            <h3>__MSG_type_title__</h3>
-            <label for='type' class='hidden-label'>__MSG_type_title__</label>
+            <h3 data-i18n='type_title'></h3>
+            <label data-i18n='type_title' for='type' class='hidden-label'></label>
             <select name='type' id='type'>
-              <option value='default'>__MSG_type_options_default_new_tab__</option>
-              <option value='about:home'>__MSG_type_options_default_home_page__</option>
-              <option value='about:blank'>__MSG_type_options_empty_page__</option>
-              <option value='homepage'>__MSG_type_options_homepage__</option>
-              <option value='custom_url'>__MSG_type_options_custom_url__</option>
-              <option value='local_file'>__MSG_type_options_local_file__</option>
-              <option value='background_color'>__MSG_type_options_background_color__</option>
-              <option value='feed'>__MSG_type_options_feed__</option>
+              <option data-i18n='type_options_default_new_tab' value='default'></option>
+              <option data-i18n='type_options_default_home_page' value='about:home'></option>
+              <option data-i18n='type_options_empty_page' value='about:blank'></option>
+              <option data-i18n='type_options_homepage' value='homepage'></option>
+              <option data-i18n='type_options_custom_url' value='custom_url'></option>
+              <option data-i18n='type_options_local_file' value='local_file'></option>
+              <option data-i18n='type_options_background_color' value='background_color'></option>
+              <option data-i18n='type_options_feed' value='feed'></option>
             </select>
           </div>
           <div id='default-option' class='hidden'>
-            <div class='info-icon'>__MSG_default_option_description__</div>
+            <div data-i18n='default_option_description' class='info-icon'></div>
           </div>
           <div id='url-option' class='hidden'>
-            <div class='info-icon'>__MSG_url_description__</div>
-            <h3>__MSG_url_title__</h3>
-            <label for='url' class='hidden-label'>__MSG_url_title__</label>
+            <div data-i18n='url_description' class='info-icon'></div>
+            <h3 data-i18n='url_title'></h3>
+            <label data-i18n='url_title' for='url' class='hidden-label'></label>
             <div id='url-wrapper'>
-              <input type='text' name='url' id='url' placeholder='__MSG_settings_url_field_placeholder__' />
-              <span class='error-message hidden default'>__MSG_url_validation_default__</span>
-              <span class='error-message hidden file'>__MSG_url_validation_file__</span>
+              <input type='text' name='url' id='url' data-i18n-placeholder='settings_url_field_placeholder' />
+              <span data-i18n='url_validation_default' class='error-message hidden default'></span>
+              <span data-i18n='url_validation_file' class='error-message hidden file'></span>
             </div>
           </div>
           <div id='homepage-option' class='hidden'>
-            <div class='info-icon'>__MSG_homepage_description__</div>
+            <div data-i18n='homepage_description' class='info-icon'></div>
           </div>
           <div id='homepage-permission-container' class='hidden'>
-            <h3>__MSG_settings_permission_action__</h3>
-            <label for='homepage-permission' class='hidden-label'>
-              __MSG_settings_permission_action__
-            </label>
-            <div class='info-icon'>
-              __MSG_settings_homepage_permission_description__
-            </div>
-            <button type='submit' name='homepage_permission' id='homepage-permission' class='button'>
-              __MSG_settings_permission_action__
-            </button>
+            <h3 data-i18n='settings_permission_action'></h3>
+            <label data-i18n='settings_permission_action' for='homepage-permission' class='hidden-label'></label>
+            <div data-i18n='settings_homepage_permission_description' class='info-icon'></div>
+            <button data-i18n='settings_permission_action' type='submit' name='homepage_permission' id='homepage-permission' class='button'></button>
           </div>
           <div id='homepage-permission-revoke-container' class='hidden'>
-            <h3>__MSG_settings_permission_revoke_action__</h3>
+            <h3 data-i18n='settings_permission_revoke_action'></h3>
             <div class='info-icon'>
-              __MSG_settings_homepage_permission_revoke_description__
-              <a href='#' id='homepage-permission-revoke'>__MSG_settings_permission_revoke_action__</a>
+              <span data-i18n='settings_homepage_permission_revoke_description'></span>
+              <a data-i18n='settings_permission_revoke_action' href='#' id='homepage-permission-revoke'></a>
             </div>
           </div>
           <div id='local-file-option' class='hidden'>
             <div class='info-icon'>
-              __MSG_local_file_description__<br />
-              <a href='#' id='delete-local-file' class='hidden' data-confirm='__MSG_local_file_delete_confirmation__'>
-                __MSG_local_file_delete_text__
-              </a>
+              <span data-i18n='local_file_description'></span><br />
+              <a data-i18n='local_file_delete_text' href='#' id='delete-local-file' class='hidden' data-i18n-data-confirm='local_file_delete_confirmation'></a>
             </div>
-            <h3>__MSG_local_file_upload__</h3>
+            <h3 data-i18n='local_file_upload'></h3>
             <input type='file' id='local-file' accept='.html, .htm' />
           </div>
           <div id='background-color-option' class='hidden'>
-            <h3>__MSG_background_color_title__</h3>
-            <label for='background-color' class='hidden-label'>__MSG_background_color_title__</label>
+            <h3 data-i18n='background_color_title'></h3>
+            <label data-i18n='background_color_title' for='background-color' class='hidden-label'></label>
             <input type='color' name='background_color' id='background-color' />
           </div>
           <div id='feed-permission-container' class='hidden'>
-            <h3>__MSG_settings_permission_action__</h3>
-            <label for='feed-permission' class='hidden-label'>
-              __MSG_settings_permission_action__
-            </label>
-            <div class='info-icon'>
-              __MSG_settings_feed_permission_description__
-            </div>
-            <button type='submit' name='feed_permission' id='feed-permission' class='button'>
-              __MSG_settings_permission_action__
-            </button>
+            <h3 data-i18n='settings_permission_action'></h3>
+            <label data-i18n='settings_permission_action' for='feed-permission' class='hidden-label'></label>
+            <div data-i18n='settings_feed_permission_description' class='info-icon'></div>
+            <button data-i18n='settings_permission_action' type='submit' name='feed_permission' id='feed-permission' class='button'></button>
           </div>
           <div id='feed-permission-revoke-container' class='hidden'>
-            <h3>__MSG_settings_permission_revoke_action__</h3>
+            <h3 data-i18n='settings_permission_revoke_action'></h3>
             <div class='info-icon'>
-              __MSG_settings_feed_permission_revoke_description__
-              <a href='#' id='feed-permission-revoke'>__MSG_settings_permission_revoke_action__</a>
+              <span data-i18n='settings_feed_permission_revoke_description'></span>
+              <a data-i18n='settings_permission_revoke_action' href='#' id='feed-permission-revoke'></a>
             </div>
           </div>
           <div id='focus-option' class='hidden'>
-            <h3>__MSG_focus_website_title__</h3>
+            <h3 data-i18n='focus_website_title'></h3>
             <div>
               <input type='checkbox' name='focus_website' id='focus-website' />
-              <label for='focus-website' class='has-own-label'>__MSG_focus_website_description__</label>
+              <label data-i18n='focus_website_description' for='focus-website' class='has-own-label'></label>
             </div>
           </div>
           <div id='clear-option' class='hidden'>
-            <h3>__MSG_clear_addressbar_title__</h3>
+            <h3 data-i18n='clear_addressbar_title'></h3>
             <div class='info-icon'>
-              __MSG_clear_addressbar_description__
-              <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1409675' target='_blank' rel='noopener'>
-                __MSG_learn_more__
-              </a>
+              <span data-i18n='clear_addressbar_description'></span>
+              <a data-i18n='learn_more' href='https://bugzilla.mozilla.org/show_bug.cgi?id=1409675' target='_blank' rel='noopener'></a>
             </div>
           </div>
         </form>
@@ -126,28 +109,24 @@
     </section>
     <aside>
       <div class='grey-bg'>
-        <h2>__MSG_settings_support_caption__</h2>
-        <p>__MSG_settings_donation_text__</p>
-        <a href='https://www.paypal.me/agenedia' class='button' target='_blank' rel='noopener'>
-          __MSG_settings_donate__
-        </a>
+        <h2 data-i18n='settings_support_caption'></h2>
+        <p data-i18n='settings_donation_text'></p>
+        <a data-i18n='settings_donate' href='https://www.paypal.me/agenedia' class='button' target='_blank' rel='noopener'></a>
         <p>
-          <span>__MSG_review_text__</span>
+          <span data-i18n='review_text'></span>
           <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>
-            addons.mozilla.org</a>.
+            addons.mozilla.org</a>
         </p>
         <p>
-          <span>__MSG_github_notice__</span><br />
-          <a href='https://github.com/cadeyrn/newtaboverride/issues' target='_blank' rel='noopener'>
-            __MSG_github_link__
-          </a>
+          <span data-i18n='github_notice'></span><br />
+          <a data-i18n='github_link' href='https://github.com/cadeyrn/newtaboverride/issues' target='_blank' rel='noopener'></a>
         </p>
       </div>
     </aside>
   </main>
   <footer>
     <a href='https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/' target='_blank' rel='noopener'>
-      __MSG_extension_name__ © 2015 - 2018, soeren-hentzschel.at
+      <span data-i18n='extension_name'></span> © 2015 - 2018, soeren-hentzschel.at
     </a>
   </footer>
   <script src='../js/lib/i18n.js'></script>
