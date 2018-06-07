@@ -20,13 +20,14 @@ const newtab = {
    */
   async init () {
     const options = await browser.storage.local.get(defaults);
-    const url = options.type === 'about:home' ? options.type : options.url;
 
     switch (options.type) {
       case 'about:blank':
       case 'about:home':
+        newtab.openNewTabPage(options.type, options.focus_website);
+        break;
       case 'custom_url':
-        newtab.openNewTabPage(url, options.focus_website);
+        newtab.openNewTabPage(options.url, options.focus_website);
         break;
       case 'homepage':
         const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
