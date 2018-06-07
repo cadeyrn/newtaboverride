@@ -5,7 +5,6 @@
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
-const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
 const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-container');
@@ -50,7 +49,6 @@ const options = {
    * @returns {void}
    */
   async toggleOptionsDetails () {
-    let showDisableNotice = false;
     let showUrlOption = false;
     let showHomepageOption = false;
     let showFocusOption = false;
@@ -58,11 +56,6 @@ const options = {
     let showBackgroundColorOption = false;
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
-
-    // default new tab page
-    if (elType.options[elType.selectedIndex].value === 'default') {
-      showDisableNotice = true;
-    }
 
     // about:home
     if (elType.options[elType.selectedIndex].value === 'about:home') {
@@ -113,7 +106,6 @@ const options = {
       showClearOption = true;
     }
 
-    options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
     options.toggleVisibility(elHomepageOption, showHomepageOption);
     options.toggleVisibility(elFocusOption, showFocusOption);

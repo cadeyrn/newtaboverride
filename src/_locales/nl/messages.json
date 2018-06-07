@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "standaard startpagina van Firefox (about:home)"
   },
-  "type_options_default_new_tab": {
-    "message": "standaard nieuw-tabbladpagina van Firefox (about:newtab)"
-  },
   "type_options_empty_page": {
     "message": "lege pagina (about:blank)"
   },

@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "domyślna strona startowa Firefoksa (about:home)"
   },
-  "type_options_default_new_tab": {
-    "message": "domyślna nowa karta Firefoksa (about:newtab)"
-  },
   "type_options_empty_page": {
     "message": "pusta strona (about:blank)"
   },

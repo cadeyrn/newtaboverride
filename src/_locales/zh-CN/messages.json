@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "火狐的默认主页（about:home）"
   },
-  "type_options_default_new_tab": {
-    "message": "火狐的默认新标签页（about:newtab）"
-  },
   "type_options_empty_page": {
     "message": "空白页（about:blank）"
   },

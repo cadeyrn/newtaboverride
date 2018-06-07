@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "Standard-Startseite von Firefox (about:home)"
   },
-  "type_options_default_new_tab": {
-    "message": "Standard-Seite von Firefox für den neuen Tab (about:newtab)"
-  },
   "type_options_empty_page": {
     "message": "leere Seite (about:blank)"
   },

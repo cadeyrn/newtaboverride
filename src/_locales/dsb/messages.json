@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "Standardny bok Firefox (about:home)"
   },
-  "type_options_default_new_tab": {
-    "message": "Standardny bok Firefox za nowy rejtark wužywaś (about:newtab)"
-  },
   "type_options_empty_page": {
     "message": "prozny bok (about:blank)"
   },

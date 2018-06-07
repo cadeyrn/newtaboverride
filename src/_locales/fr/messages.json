@@ -125,9 +125,6 @@
   "type_options_default_home_page": {
     "message": "page d'accueil par défaut de Firefox (about:home)"
   },
-  "type_options_default_new_tab": {
-    "message": "nouveau onglet par défaut de Firefox (about:newtab)"
-  },
   "type_options_empty_page": {
     "message": "page vide (about:blank)"
   },
