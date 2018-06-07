@@ -29,7 +29,7 @@
     "gulp": "3.9.1",
     "gulp-eslint": "4.0.2",
     "gulp-html-lint": "0.0.2",
-    "gulp-jsdoc3": "1.0.1",
+    "gulp-jsdoc3": "2.0.0",
     "gulp-stylelint": "6.0.0",
     "htmllint": "0.7.2",
     "jsdoc": "3.5.5",
