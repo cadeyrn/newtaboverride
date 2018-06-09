@@ -45,6 +45,7 @@ The add-on is currently available in the following languages:
 - English
 - German
 - French (Thanks, SuperPat45!)
+- Chinese, Simplified (Thanks, tiansh!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
 - Swedish (Thanks, Sopor-!)
@@ -110,8 +111,7 @@ The storage permission is needed so that New Tab Override can store settings suc
 
 ## Compatibility
 
-New Tab Override requires at least Firefox 58. Because the add-on makes use of modern web technologies and the latest
-WebExtension APIs, support for older versions of Firefox is not possible for technical reasons.
+New Tab Override requires at least Firefox 60. There is no support for older versions of Firefox.
 
 ## Download
 
