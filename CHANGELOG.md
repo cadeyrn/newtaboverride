@@ -2,15 +2,30 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 13.0.0 (2018-03-xx)
+### Version 13.0.0 (2018-06-09)
 
+- [BUGFIX] **Mozilla broke the "about:blank" option of New Tab Override in Firefox 60 ("about:blank in address bar instead of
+  an empty address bar), implemented ugly workaround to make this option usable again**, fixes
+  [#133](https://github.com/cadeyrn/newtaboverride/issues/133)
+- [BUGFIX] The "about:blank" option didn't work if the url field of the "custom url" options was not empty
+- [ENHANCEMENT] removed "default new tab" pseudo option and migrated users to "about:blank" option
+- [ENHANCEMENT] improved localization method to better support other languages (Thanks, tiansh!)
+- [TRANSLATION] added Chinese, Simplified translation (Thanks, tiansh!)
+- [TRANSLATION] added Span ish translation (Thanks, MissingUser!)
 - [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
-- [DEPENDENCY] updated eslint from version 4.17.0 to 4.18.1
-- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.0
+- [DEPENDENCY] updated eslint from version 4.17.0 to 4.19
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.2.0 to 2.3.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.2
+- [DEPENDENCY] updated gulp-jsdoc from version 1.0.1 to 2.0.0
+- [DEPENDENCY] updated gulp-stylelint from version 6.0.0 to 7.0.0
 - [DEPENDENCY] updated htmllint from version 0.7.0 to 0.7.2 and added one new rule
-- [DEPENDENCY] updated stylelint from version 8.4.0 to 9.1.1
-- [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.1 to 1.2.2
+- [DEPENDENCY] updated npm-run-all from version 4.1.2 to 4.1.3
+- [DEPENDENCY] updated stylelint from version 8.4.0 to 9.2.1
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.1 to 1.3.0
 - [DEPENDENCY] updated stylelint-order from version 0.8.0 to 0.8.1
+- [DEPENDENCY] updated web-ext from version 2.4.0 to 2.7.0
+
+**Minimum required Firefox version is Firefox 60 now.**
 
 ### Version 12.0.0 (2018-02-03)
 
