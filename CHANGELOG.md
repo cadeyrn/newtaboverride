@@ -9,9 +9,9 @@
   [#133](https://github.com/cadeyrn/newtaboverride/issues/133)
 - [BUGFIX] The "about:blank" option didn't work if the url field of the "custom url" options was not empty
 - [ENHANCEMENT] removed "default new tab" pseudo option and migrated users to "about:blank" option
-- [ENHANCEMENT] improved localization method to better support other languages (Thanks, tiansh!)
+- [ENHANCEMENT] improved localization architecture to better support other languages (Thanks, tiansh!)
 - [TRANSLATION] added Chinese, Simplified translation (Thanks, tiansh!)
-- [TRANSLATION] added Span ish translation (Thanks, MissingUser!)
+- [TRANSLATION] added Spanish translation (Thanks, MissingUser!)
 - [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
 - [DEPENDENCY] updated eslint from version 4.17.0 to 4.19
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.2.0 to 2.3.0
