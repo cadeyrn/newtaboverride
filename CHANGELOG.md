@@ -7,7 +7,7 @@
 - [BUGFIX] **Mozilla broke the "about:blank" option of New Tab Override in Firefox 60 ("about:blank in address bar instead of
   an empty address bar), implemented ugly workaround to make this option usable again**, fixes
   [#133](https://github.com/cadeyrn/newtaboverride/issues/133)
-- [BUGFIX] The "about:blank" option didn't work if the url field of the "custom url" options was not empty
+- [BUGFIX] The "about:blank" option didn't work if the url field of the "custom url" option was not empty
 - [ENHANCEMENT] removed "default new tab" pseudo option and migrated users to "about:blank" option
 - [ENHANCEMENT] improved localization architecture to better support other languages (Thanks, tiansh!)
 - [TRANSLATION] added Chinese, Simplified translation (Thanks, tiansh!)
