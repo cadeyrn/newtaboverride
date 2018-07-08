@@ -20,15 +20,10 @@ const newtab = {
    */
   async init () {
     const options = await browser.storage.local.get(defaults);
-    const url = options.type === 'about:home' || options.type === 'about:blank' ? options.type : options.url;
 
     switch (options.type) {
-      case 'about:blank':
-        newtab.openNewTabPage(url, false);
-        break;
-      case 'about:home':
       case 'custom_url':
-        newtab.openNewTabPage(url, options.focus_website);
+        newtab.openNewTabPage(options.url, options.focus_website);
         break;
       case 'homepage':
         const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
@@ -39,7 +34,7 @@ const newtab = {
           const firstHomepage = homepage.value.split('|')[0];
 
           if (!URI_REGEX.test(firstHomepage)) {
-            newtab.openNewTabPage('about:blank', false);
+            newtab.openNewTabPage('', false);
             break;
           }
 
@@ -66,7 +61,7 @@ const newtab = {
         }
         break;
       default:
-        newtab.openNewTabPage('about:blank', false);
+        newtab.openNewTabPage('', false);
     }
   },
 
@@ -79,19 +74,18 @@ const newtab = {
    * @returns {void}
    */
   async openNewTabPage (url, focus_website) {
-    await browser.tabs.getCurrent((tab) => {
-      let tabId = tab.id;
+    // return early if there is no valid url
+    if (!URI_REGEX.test(url)) {
+      return false;
+    }
 
-      // Mozilla broke about:blank in Firefox 60 and the only way to work around the "about:blank" is the address bar
-      // is to create an error…
-      if (url === 'about:blank') {
-        tabId = undefinedVariable;
-      }
+    await browser.tabs.getCurrent((tab) => {
+      const tabId = tab.id;
 
       // set focus on website
       if (focus_website) {
         // we need to pass the cookieStoreId to support the container tabs feature of Firefox
-        browser.tabs.create({ url : url || 'about:blank', cookieStoreId : tab.cookieStoreId }, () => {
+        browser.tabs.create({ url : url, cookieStoreId : tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
       }
@@ -99,7 +93,7 @@ const newtab = {
       else {
         // we explicitly set the tab id of the current tab to support the edge case of opening a new tab in the
         // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
-        browser.tabs.update(tab.id, { url : url || 'about:blank', loadReplace : true }, () => {
+        browser.tabs.update(tabId, { url : url, loadReplace : true }, () => {
           // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
         });
       }

@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "URL personalizada"
   },
-  "type_options_default_home_page": {
-    "message": "página incial de Firefox por defecto (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "página en blanco (about:blank)"
-  },
   "type_options_feed": {
     "message": "Noticias Mozilla (Alemán)"
   },

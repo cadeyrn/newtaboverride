@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "wót wužywarja definěrowany URL"
   },
-  "type_options_default_home_page": {
-    "message": "Standardny bok Firefox (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "prozny bok (about:blank)"
-  },
   "type_options_feed": {
     "message": "Nowinki Mozilla (nimski)"
   },

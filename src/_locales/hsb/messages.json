@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "wot wužiwarja definowany URL"
   },
-  "type_options_default_home_page": {
-    "message": "Standardna startowa strona Firefox (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "prózdna strona (about:blank)"
-  },
   "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
   },

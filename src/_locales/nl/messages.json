@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "aangepaste URL"
   },
-  "type_options_default_home_page": {
-    "message": "standaard startpagina van Firefox (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "lege pagina (about:blank)"
-  },
   "type_options_feed": {
     "message": "Mozilla-nieuws (Duits)"
   },

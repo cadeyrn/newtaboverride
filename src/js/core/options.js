@@ -36,7 +36,7 @@ const options = {
    * @returns {string} - URL with protocol
    */
   getValidUri (string) {
-    if (!URI_REGEX.test(string) && string !== '' && string !== 'about:blank' && string !== 'about:home') {
+    if (!URI_REGEX.test(string) && string !== '') {
       return 'http://' + string;
     }
 
@@ -56,11 +56,6 @@ const options = {
     let showBackgroundColorOption = false;
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
-
-    // about:home
-    if (elType.options[elType.selectedIndex].value === 'about:home') {
-      showFocusOption = true;
-    }
 
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {

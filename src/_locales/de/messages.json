@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "benutzerdefinierte URL"
   },
-  "type_options_default_home_page": {
-    "message": "Standard-Startseite von Firefox (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "leere Seite (about:blank)"
-  },
   "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"
   },

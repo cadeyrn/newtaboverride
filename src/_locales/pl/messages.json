@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "niestandardowy adres URL"
   },
-  "type_options_default_home_page": {
-    "message": "domyślna strona startowa Firefoksa (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "pusta strona (about:blank)"
-  },
   "type_options_feed": {
     "message": "Aktualności Mozilli (Niemiecki)"
   },

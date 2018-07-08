@@ -3,7 +3,7 @@
 /* global utils */
 
 const OPTIONS_PAGE = 'html/options.html';
-const REMOVED_DEFAULT_OPTION_VERSION = 13;
+const REMOVED_IN_PRODUCT_OPTIONS_VERSION = 14;
 
 /**
  * @exports newtaboverride
@@ -25,11 +25,11 @@ const newtaboverride = {
     }
     // update
     if (details.reason === 'update') {
-      if (utils.parseVersion(details.previousVersion).major < REMOVED_DEFAULT_OPTION_VERSION) {
+      if (utils.parseVersion(details.previousVersion).major < REMOVED_IN_PRODUCT_OPTIONS_VERSION) {
         const option = await browser.storage.local.get();
 
-        if (option.type === 'default') {
-          browser.storage.local.set({ type : 'about:blank' });
+        if (option.type === 'default' || option.type === 'about:blank' || option.type === 'about:home') {
+          browser.storage.local.set({ type : 'custom_url' });
         }
       }
     }

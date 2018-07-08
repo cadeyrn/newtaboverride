@@ -119,12 +119,6 @@
   "type_options_custom_url": {
     "message": "custom URL"
   },
-  "type_options_default_home_page": {
-    "message": "default home page of Firefox (about:home)"
-  },
-  "type_options_empty_page": {
-    "message": "empty page (about:blank)"
-  },
   "type_options_feed": {
     "message": "Mozilla News (German)"
   },
