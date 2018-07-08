@@ -76,7 +76,7 @@ const newtab = {
   async openNewTabPage (url, focus_website) {
     // return early if there is no valid url
     if (!URI_REGEX.test(url)) {
-      return false;
+      return void 0;
     }
 
     await browser.tabs.getCurrent((tab) => {
@@ -101,6 +101,8 @@ const newtab = {
 
     // delete spammy new tab page entry from history
     browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
+
+    return void 0;
   }
 };
 
