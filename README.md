@@ -48,6 +48,7 @@ The add-on is currently available in the following languages:
 - Italian (Thanks, Mozilla commmunity!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
+- Brazilian Portuguese (Thanks, Mozilla commmunity!)
 - Swedish (Thanks, Sopor-!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
