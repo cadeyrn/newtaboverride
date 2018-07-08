@@ -17,8 +17,6 @@ to life as an add-on. This add-on allows the user to choose a certain page in a 
 ### Features
 
 - change the new tab page to whatever web accesible URL you like
-- use a blank page as new tab page
-- use about:home, the default home page of Firefox, as new tab page
 - use your current home page as new tab page
 - use any color as background color for the new tab page
 - store a local HTML file in the add-on's storage and use the content as new tab content
