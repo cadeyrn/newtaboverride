@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 14.0.0 (2018-07-xx)
+### Version 14.0.0 (2018-07-08)
 
 - [ENHANCEMENT] **removed "about:home" and "about:blank" options because there are visible options in the preferences
   of Firefox 61 and both WebExtension options are broken in Firefox 61 anyway**
