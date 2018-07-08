@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "Colore di sfondo"
+  },
+  "clear_addressbar_description": {
+    "message": "Lo svuotamento automatico della barra degli indirizzi o la selezione dell'URL non sono al momento supportati da WebExtensions. Per implementarli è necessaria una modifica da parte di Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Cancella la barra degli indirizzi / seleziona URL"
+  },
+  "default_option_description": {
+    "message": "Per usare la pagina predefinita di Firefox, apri about:addons e disattiva l’estensione New Tab Override (non è necessario disinstallarla)."
+  },
+  "extension_description": {
+    "message": "New Tab Override dà nuovamente la possibilità di cambiare la pagina visualizzata quando viene aperta una nuova scheda."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Pubblicato il:"
+  },
+  "feed_read_more": {
+    "message": "Leggi di più…"
+  },
+  "feed_title": {
+    "message": "Novità su Mozilla"
+  },
+  "focus_website_description": {
+    "message": "Imposta il focus sul corpo della pagina web invece che sulla barra degli indirizzi"
+  },
+  "focus_website_title": {
+    "message": "Focus"
+  },
+  "github_link": {
+    "message": "New Tab Override su GitHub"
+  },
+  "github_notice": {
+    "message": "Vuoi richiedere nuove funzionalità o segnalare errori? Apri un ticket su GitHub:"
+  },
+  "homepage_description": {
+    "message": "Se questa opzione è attivata, Firefox utilizzerà la pagina iniziale anche come pagina per le nuove schede. È possibile modificare la pagina iniziale digitando about:preferences#general nella barra degli indirizzi. Sono supportate solo le pagine il cui URL inizia con http:// o https://. Se sono configurate più pagine iniziali, New Tab Override utilizzerà la prima."
+  },
+  "introduction": {
+    "message": "Questa pagina è fornita da {0}: Seleziona quale pagina aprire in una nuova scheda."
+  },
+  "learn_more": {
+    "message": "Scopri di più"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Eliminare il file presente nell'archivio dell’estensione?"
+  },
+  "local_file_delete_text": {
+    "message": "eliminare il file esistente"
+  },
+  "local_file_description": {
+    "message": "A causa delle restrizione di Firefox, le estensioni non possono accedere ai file locali. New Tab Override ti dà la possibilità di caricare dei file HTML dal tuo archivio all'interno dello spazio di archiviazione dell’estensione per usarli come contenuto di nuova scheda. Qualsiasi URL o link a immagini, file CSS o file JavaScrip incluso deve essere accessibile dal Web, in quanto Firefox non permette di accedere ai file locale del sistema. Se non vuoi avere questa restrizione, considera l'uso di un server web locale, per esempio attraverso MAMP o XAMPP con l’opzione “URL personalizzato”."
+  },
+  "local_file_no_file": {
+    "message": "Hai seleziona l’opzione “file locale”, ma non hai archiviato un file locale. Puoi caricare il file dalle impostazioni di New Tab Override."
+  },
+  "local_file_title": {
+    "message": "File locale"
+  },
+  "local_file_upload": {
+    "message": "Archivia file locale"
+  },
+  "new_tab_title": {
+    "message": "Nuova scheda"
+  },
+  "omnibox_command_settings": {
+    "message": "Apri le impostazioni per nuove schede"
+  },
+  "review_text": {
+    "message": "Ti piace questa estensione? Lascia una recensione."
+  },
+  "settings_donate": {
+    "message": "Donazioni"
+  },
+  "settings_donation_text": {
+    "message": "Considera l'idea di effettuare una donazione per sostenere il continuo sviluppo di questa estensione."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox ha bisogno del tuo consenso per leggere i feed di soeren-hentzschel.at. Puoi revocare il permesso in qualunque momento."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Per utilizzare questa funzionalità è necessario consentire a Firefox di accedere ai dati."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox ha bisogno del tuo consenso per leggere i feed di soeren-hentzschel.at. Hai già dato questo permesso."
+  },
+  "settings_homepage_permission_description": {
+    "message": "Firefox ha bisogno del tuo permesso per leggere e modificare le impostazioni del browser. Puoi revocare il permesso in qualunque momento."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "Per utilizzare questa funzionalità è necessario consentire a Firefox di leggere e di modificare le impostazioni del browser."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox ha bisogno del tuo permesso per leggere e modificare le impostazioni del browser. Hai già dato questo permesso."
+  },
+  "settings_main_caption": {
+    "message": "Impostazioni"
+  },
+  "settings_permission_action": {
+    "message": "Dai il permesso"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Revoca il permesso"
+  },
+  "settings_support_caption": {
+    "message": "Assistenza"
+  },
+  "settings_title": {
+    "message": "Nuova scheda — Impostazioni"
+  },
+  "settings_url_field_placeholder": {
+    "message": "Indirizzo URL"
+  },
+  "type_options_background_color": {
+    "message": "colore di sfondo"
+  },
+  "type_options_custom_url": {
+    "message": "URL personalizzato"
+  },
+  "type_options_feed": {
+    "message": "Novità Mozilla (Tedesco)"
+  },
+  "type_options_homepage": {
+    "message": "pagina iniziale attuale"
+  },
+  "type_options_local_file": {
+    "message": "file locale"
+  },
+  "type_title": {
+    "message": "Opzione"
+  },
+  "url_description": {
+    "message": "La pagina web inserita qui viene visualizzata quando si apre una nuova scheda. Sono supportati solo gli indirizzi URL che iniziano con http:// o https://. N. B.: Non è più possibile accedere ai file locali tramite URL a causa di restrizioni imposte da Firefox. Si consiglia di utilizzare l’opzione “file locali” o un server web locale, come MAMP o XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Questo indirizzo non è valido."
+  },
+  "url_validation_file": {
+    "message": "Non è più concesso, per le estensioni, accedere ai file locali tramite indirizzo URL."
+  }
+}
