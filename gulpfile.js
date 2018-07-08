@@ -2,13 +2,12 @@
 
 const gulp = require('gulp');
 const gulpEslint = require('gulp-eslint');
-const gulpHtmllint = require('gulp-html-lint');
+const gulpHtmllint = require('gulp-htmllint');
 const gulpStylelint = require('gulp-stylelint');
 const jsdoc = require('gulp-jsdoc3');
 
 gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
-  .pipe(gulpHtmllint({ htmllintrc : '.htmllintrc.json' }))
-  .pipe(gulpHtmllint.format())
+  .pipe(gulpHtmllint({ config : '.htmllintrc.json' }))
 );
 
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js'])
