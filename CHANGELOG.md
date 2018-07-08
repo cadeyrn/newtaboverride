@@ -6,6 +6,7 @@
 
 - [ENHANCEMENT] removed "about:home" and "about:blank" options because there are visible options in the Firefox preferences
   since Firefox 61 and both WebExtension options are broken anyway in Firefox 61
+- [TRANSLATION] updated Spanish translation (Thanks, Mozilla community!)
 - [DEPENDENCY] migrated from gulp-html-lint 0.0.2 to gulp-htmllint 0.0.15 because gulp-html-lint is no longer maintained
 - [DEPENDENCY] updated eslint from version 4.19.1 to 5.0.1
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.3.0 to 2.4.0

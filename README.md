@@ -44,7 +44,7 @@ The add-on is currently available in the following languages:
 - German
 - French (Thanks, SuperPat45!)
 - Chinese, Simplified (Thanks, tiansh!)
-- Spanish (Thanks, MissingUser!)
+- Spanish (Thanks, MissingUser and Mozilla commmunity!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
 - Swedish (Thanks, Sopor-!)
