@@ -10,6 +10,8 @@
 - [DEPENDENCY] updated gulp-eslint from version 4.0.2 to 5.0.0
 - [DEPENDENCY] updated stylelint from version 9.2.1 to 9.3.0
 
+**Minimum required Firefox version is Firefox 61 now.**
+
 ### Version 13.0.0 (2018-06-09)
 
 - [BUGFIX] **Mozilla broke the "about:blank" option of New Tab Override in Firefox 60 ("about:blank in address bar instead of

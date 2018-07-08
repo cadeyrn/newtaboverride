@@ -112,7 +112,7 @@ The storage permission is needed so that New Tab Override can store settings suc
 
 ## Compatibility
 
-New Tab Override requires at least Firefox 60. There is no support for older versions of Firefox.
+New Tab Override requires at least Firefox 61. There is no support for older versions of Firefox.
 
 ## Download
 
