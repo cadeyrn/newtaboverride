@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 14.0.0 (2018-07-xx)
+
+- [DEPENDENCY] updated eslint from version 4.19.1 to 5.0.1
+
 ### Version 13.0.0 (2018-06-09)
 
 - [BUGFIX] **Mozilla broke the "about:blank" option of New Tab Override in Firefox 60 ("about:blank in address bar instead of
@@ -13,7 +17,7 @@
 - [TRANSLATION] added Chinese, Simplified translation (Thanks, tiansh!)
 - [TRANSLATION] added Spanish translation (Thanks, MissingUser!)
 - [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
-- [DEPENDENCY] updated eslint from version 4.17.0 to 4.19
+- [DEPENDENCY] updated eslint from version 4.17.0 to 4.19.1
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.2.0 to 2.3.0
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.2
 - [DEPENDENCY] updated gulp-jsdoc from version 1.0.1 to 2.0.0
