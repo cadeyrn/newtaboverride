@@ -42,7 +42,7 @@ The add-on is currently available in the following languages:
 
 - English
 - German
-- French (Thanks, SuperPat45!)
+- French (Thanks, SuperPat45 and Mozilla commmunity!!)
 - Chinese, Simplified (Thanks, tiansh!)
 - Spanish (Thanks, MissingUser and Mozilla commmunity!)
 - Polish (Thanks, WaldiPL!)
