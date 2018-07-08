@@ -36,7 +36,7 @@
     "message": "Demande de fonctionnalités ou rapport d'erreur? Ouvrez un ticket sur GitHub:"
   },
   "homepage_description": {
-    "message": "Si cette option est activée, Firefox utilisera également la page d’accueil comme page nouvel onglet. Vous pouvez modifier la page d’accueil en saisissant about:preferences#general dans la barre d’adresse. Seules les pages d’accueil commençant par http:// ou https:// sont prises en charge. Si plusieurs pages d’accueil sont configurées, New Tab Override utilisera la première."
+    "message": "Si cette option est activée, Firefox utilisera également la page d’accueil comme page nouvel onglet. Vous pouvez modifier la page d’accueil en saisissant about:preferences#home dans la barre d’adresse. Seules les pages d’accueil commençant par http:// ou https:// sont prises en charge. Si plusieurs pages d’accueil sont configurées, New Tab Override utilisera la première."
   },
   "introduction": {
     "message": "Cette page est fournie par {0}: Sélectionnez la page à ouvrir en tant que nouvel onglet!"

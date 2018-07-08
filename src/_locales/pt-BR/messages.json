@@ -36,7 +36,7 @@
     "message": "Solicitações de recursos ou reportar erros? Abra um ticket no GitHub:"
   },
   "homepage_description": {
-    "message": "Se esta opção estiver ativada, o Firefox usará a página inicial também como página de nova aba. Você pode alterar a página inicial digitando about:preferences#general na barra de endereços. São suportadas apenas páginas começando com http:// ou https://. Se várias páginas iniciais estiverem configuradas, o New Tab Override usará a primeira."
+    "message": "Se esta opção estiver ativada, o Firefox usará a página inicial também como página de nova aba. Você pode alterar a página inicial digitando about:preferences#home na barra de endereços. São suportadas apenas páginas começando com http:// ou https://. Se várias páginas iniciais estiverem configuradas, o New Tab Override usará a primeira."
   },
   "introduction": {
     "message": "Esta página é fornecida por {0}: Selecione que página deve ser aberta como nova aba!"

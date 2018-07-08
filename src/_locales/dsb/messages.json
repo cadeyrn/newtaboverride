@@ -36,7 +36,7 @@
     "message": "Žycyš sebje funkcije abo coš zmólki k wěsći daś? Piš rozpšawu na GitHub:"
   },
   "homepage_description": {
-    "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#general do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
+    "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#home do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
   },
   "introduction": {
     "message": "Toś ten bok staja se k dispoziciji wót {0}: Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"

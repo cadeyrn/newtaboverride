@@ -36,7 +36,7 @@
     "message": "Prośba o funkcję lub zgłoszenie błędu? Otwórz wątek na GitHub:"
   },
   "homepage_description": {
-    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#general w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
+    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#home w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
   },
   "introduction": {
     "message": "Ta strona jest dostarczona przez {0}: Wybierz stronę, która powinna być otwierana jako nowa karta!"

@@ -36,7 +36,7 @@
     "message": "Vuoi richiedere nuove funzionalità o segnalare errori? Apri un ticket su GitHub:"
   },
   "homepage_description": {
-    "message": "Se questa opzione è attivata, Firefox utilizzerà la pagina iniziale anche come pagina per le nuove schede. È possibile modificare la pagina iniziale digitando about:preferences#general nella barra degli indirizzi. Sono supportate solo le pagine il cui URL inizia con http:// o https://. Se sono configurate più pagine iniziali, New Tab Override utilizzerà la prima."
+    "message": "Se questa opzione è attivata, Firefox utilizzerà la pagina iniziale anche come pagina per le nuove schede. È possibile modificare la pagina iniziale digitando about:preferences#home nella barra degli indirizzi. Sono supportate solo le pagine il cui URL inizia con http:// o https://. Se sono configurate più pagine iniziali, New Tab Override utilizzerà la prima."
   },
   "introduction": {
     "message": "Questa pagina è fornita da {0}: Seleziona quale pagina aprire in una nuova scheda."

@@ -36,7 +36,7 @@
     "message": "Funktionsönskemål eller felrapporter? Öppna en rapport på GitHub:"
   },
   "homepage_description": {
-    "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#general i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
+    "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#home i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
   },
   "introduction": {
     "message": "Denna sida tillhandahålls av {0}: Välj viljen sida du vill ska öppnas som en ny flik!"

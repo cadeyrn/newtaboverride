@@ -36,7 +36,7 @@
     "message": "想请求新功能或报告缺陷？开个 GitHub 工单："
   },
   "homepage_description": {
-    "message": "如果启用该选项，Firefox 的新标签页也会显示与主页相同的内容。您可以在地址栏输入 about:preferences#general 来改变主页内容。主页地址只支持http:// 或 https:// 协议。如果设置了多个主页，New Tab Override 会使用第一个。"
+    "message": "如果启用该选项，Firefox 的新标签页也会显示与主页相同的内容。您可以在地址栏输入 about:preferences#home 来改变主页内容。主页地址只支持http:// 或 https:// 协议。如果设置了多个主页，New Tab Override 会使用第一个。"
   },
   "introduction": {
     "message": "当前页面由 {0} 提供：选择在新标签页打开的页面！"

@@ -36,7 +36,7 @@
     "message": "¿Petición de nuevas características o informe de errores? Abre un ticket en GitHub:"
   },
   "homepage_description": {
-    "message": "Si se habilita esta opción, Firefox también utilizará la página de inicio como la página de incio de la nueva pestaña. Puedes cambiar la página de inicio al introducir la URL about:preferences#general en la barra de direcciones. Solamente están soportadas las páginas de inicio que empiecen con http:// o https://. Si se configuran varias páginas de inicio, New Tab Override utilizará la primera pagina configurada."
+    "message": "Si se habilita esta opción, Firefox también utilizará la página de inicio como la página de incio de la nueva pestaña. Puedes cambiar la página de inicio al introducir la URL about:preferences#home en la barra de direcciones. Solamente están soportadas las páginas de inicio que empiecen con http:// o https://. Si se configuran varias páginas de inicio, New Tab Override utilizará la primera pagina configurada."
   },
   "introduction": {
     "message": "Esta página esta proporcionada por {0}: ¡Selecciona qué página se deben abrir como una nueva pestaña!"
