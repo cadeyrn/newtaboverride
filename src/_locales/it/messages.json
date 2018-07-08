@@ -8,9 +8,6 @@
   "clear_addressbar_title": {
     "message": "Cancella la barra degli indirizzi / seleziona URL"
   },
-  "default_option_description": {
-    "message": "Per usare la pagina predefinita di Firefox, apri about:addons e disattiva l’estensione New Tab Override (non è necessario disinstallarla)."
-  },
   "extension_description": {
     "message": "New Tab Override dà nuovamente la possibilità di cambiare la pagina visualizzata quando viene aperta una nuova scheda."
   },
