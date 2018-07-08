@@ -1,6 +1,6 @@
 'use strict';
 
-/* global defaults, permissions, utils */
+/* global URI_REGEX, PERMISSION_FEED, PERMISSION_HOMEPAGE, defaults, permissions, utils */
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');

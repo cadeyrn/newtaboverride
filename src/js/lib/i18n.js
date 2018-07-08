@@ -65,10 +65,10 @@ const i18n = {
     const attributes = ['placeholder', 'data-confirm'];
     for (const attribute of attributes) {
       const i18nAttribute = `data-i18n-${attribute}`;
-      const nodes = document.querySelectorAll(`[${i18nAttribute}]`);
+      const attrNodes = document.querySelectorAll(`[${i18nAttribute}]`);
 
-      for (let i = 0, len = nodes.length; i < len; i++) {
-        const node = nodes[i];
+      for (let i = 0, len = attrNodes.length; i < len; i++) {
+        const node = attrNodes[i];
         const msg = node.getAttribute(i18nAttribute);
         node.setAttribute(attribute, i18n.getMessage(msg));
       }

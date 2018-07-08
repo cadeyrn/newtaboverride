@@ -1,6 +1,6 @@
 'use strict';
 
-/* global defaults, utils */
+/* global URI_REGEX, PERMISSION_HOMEPAGE, defaults, utils */
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const HOME_PAGE_MISSING_PERMISSION = 'html/homepage_permission_needed.html';
