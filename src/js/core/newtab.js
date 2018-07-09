@@ -23,6 +23,12 @@ const newtab = {
 
     switch (options.type) {
       case 'custom_url':
+        // return early if there is no valid url
+        if (!URI_REGEX.test(url)) {
+          newtab.openNewTabPage('', false);
+          break;
+        }
+
         newtab.openNewTabPage(options.url, options.focus_website);
         break;
       case 'homepage':
@@ -74,11 +80,6 @@ const newtab = {
    * @returns {void}
    */
   async openNewTabPage (url, focus_website) {
-    // return early if there is no valid url
-    if (!URI_REGEX.test(url)) {
-      return void 0;
-    }
-
     await browser.tabs.getCurrent((tab) => {
       const tabId = tab.id;
 
@@ -101,8 +102,6 @@ const newtab = {
 
     // delete spammy new tab page entry from history
     browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
-
-    return void 0;
   }
 };
 

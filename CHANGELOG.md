@@ -2,6 +2,11 @@
 
 ## Release Notes
 
+### Version 14.0.1 (2018-07-09)
+
+- [BUGFIX] There was a regression in version 14.0.0 that caused the local file option to stop working, fixes
+  [#158](https://github.com/cadeyrn/newtaboverride/issues/158)
+
 ### Version 14.0.0 (2018-07-08)
 
 - [ENHANCEMENT] **removed "about:home" and "about:blank" options because there are visible options in the preferences
