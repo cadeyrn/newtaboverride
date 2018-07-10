@@ -5,6 +5,7 @@
 ### (Work in Progress) Version X.Y.Z (2018-xx-xx)
 
 - [DEPENDENCY] updated eslint from version 5.0.1 to 5.1.0
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.4.0 to 2.5.0
 
 ### Version 14.0.2 (2018-07-09)
 
