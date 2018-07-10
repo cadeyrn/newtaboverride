@@ -24,7 +24,7 @@ const newtab = {
     switch (options.type) {
       case 'custom_url':
         // return early if there is no valid url
-        if (!URI_REGEX.test(url)) {
+        if (!URI_REGEX.test(options.url)) {
           newtab.openNewTabPage('', false);
           break;
         }

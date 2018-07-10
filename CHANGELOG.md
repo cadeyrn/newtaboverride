@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 14.0.2 (2018-07-09)
+
+- [BUGFIX] The bugfix in 14.0.1 was broken, sorry about that!
+
 ### Version 14.0.1 (2018-07-09)
 
 - [BUGFIX] There was a regression in version 14.0.0 that caused the local file option to stop working, fixes
