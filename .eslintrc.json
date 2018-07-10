@@ -90,7 +90,6 @@
     "no-buffer-constructor": "error",
     "no-caller": "error",
     "no-case-declarations": "off",
-    "no-catch-shadow": "error",
     "no-class-assign": "error",
     "no-compare-neg-zero": "error",
     "no-cond-assign": "error",

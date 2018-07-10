@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### (Work in Progress) Version X.Y.Z (2018-xx-xx)
+
+- [DEPENDENCY] updated eslint from version 5.0.1 to 5.1.0
+
 ### Version 14.0.2 (2018-07-09)
 
 - [BUGFIX] The bugfix in 14.0.1 was broken, sorry about that!
