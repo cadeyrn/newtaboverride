@@ -80,6 +80,10 @@ const newtab = {
    * @returns {void}
    */
   async openNewTabPage (url, focus_website) {
+    if (url.trim() === '') {
+      url = browser.extension.getURL('html/options.html');
+    }
+
     await browser.tabs.getCurrent((tab) => {
       const tabId = tab.id;
 

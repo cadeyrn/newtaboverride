@@ -196,7 +196,7 @@ elUrl.addEventListener('input', (e) => {
     elUrl.classList.remove('error');
     elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
 
-    browser.storage.local.set({ url : options.getValidUri(e.target.value) });
+    browser.storage.local.set({ url : options.getValidUri(e.target.value.trim()) });
   }
 });
 
