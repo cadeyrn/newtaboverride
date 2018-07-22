@@ -52,7 +52,7 @@ const i18n = {
       node.innerHTML = '';
       const parts = text.split(/(\{\d+\})/);
       parts.forEach((part) => {
-        if (/\{\d+\}/.test(part)) {
+        if ((/\{\d+\}/).test(part)) {
           const index = parseInt(part.slice(1));
           node.appendChild(children[index]);
         }

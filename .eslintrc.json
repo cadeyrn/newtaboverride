@@ -156,7 +156,7 @@
     "no-obj-calls": "error",
     "no-octal-escape": "error",
     "no-octal": "error",
-    "no-param-reassign": "error",
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-proto": "error",
     "no-prototype-builtins": "error",
