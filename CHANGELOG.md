@@ -6,7 +6,7 @@
 
 - [ENHANCEMENT] open the options page of New Tab Override as new tab page if the custom url option is selected and the
   url field is empty to prevent issues when opening a new tab and to make it more clear that an empty string is not
-  a valid URL, fixes #164
+  a valid URL, fixes [#164](https://github.com/cadeyrn/newtaboverride/issues/164)
 - [ENHANCEMENT] added validation for non-empty strings in URL field on options page
 - [DEPENDENCY] updated eslint from version 5.0.1 to 5.2.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.4.0 to 2.5.1
