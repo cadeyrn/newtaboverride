@@ -139,6 +139,11 @@ const options = {
     if (option.type === 'feed') {
       permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
     }
+
+    if (elUrl.value === '') {
+      elUrl.classList.add('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+    }
   }
 };
 
@@ -193,8 +198,16 @@ elUrl.addEventListener('input', (e) => {
   }
   // set url
   else {
-    elUrl.classList.remove('error');
     elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
+
+    if (e.target.value.trim() === '') {
+      elUrl.classList.add('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+    }
+    else {
+      elUrl.classList.remove('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
+    }
 
     browser.storage.local.set({ url : options.getValidUri(e.target.value.trim()) });
   }
