@@ -16,6 +16,8 @@
 - [DEPENDENCY] updated stylelint-order from version 0.8.1 to 2.0.0
 - [DEPENDENCY] updated web-ext from version 2.7.0 to 2.9.3
 
+**Minimum required Firefox version is Firefox 64 now.**
+
 ### Version 14.1.0 (2018-07-22)
 
 - [ENHANCEMENT] open the options page of New Tab Override as new tab page if the custom url option is selected and the
