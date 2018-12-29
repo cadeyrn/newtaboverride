@@ -11,6 +11,7 @@
 - [DEPENDENCY] updated gulp-htmllint from version 0.0.15 to 0.0.16
 - [DEPENDENCY] updated gulp-stylelint from version 7.0.0 to 8.0.0
 - [DEPENDENCY] updated htmllint from version 0.7.2 to 0.7.3 and updated htmllint configuration
+- [DEPENDENCY] updated npm-run-all from version 4.1.3 to 4.1.5
 
 ### Version 14.1.0 (2018-07-22)
 
