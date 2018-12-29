@@ -2,6 +2,11 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 14.2.0
+
+- [DEPENDENCY] added eslint-plugin-promise 4.0.1 as new dependency
+- [DEPENDENCY] updated eslint from version 5.2.0 to 5.11.1 and updated eslint configuration
+
 ### Version 14.1.0 (2018-07-22)
 
 - [ENHANCEMENT] open the options page of New Tab Override as new tab page if the custom url option is selected and the

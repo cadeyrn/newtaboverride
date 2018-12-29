@@ -81,6 +81,7 @@ const newtab = {
    */
   async openNewTabPage (url, focus_website) {
     if (url.trim() === '') {
+      /* eslint-disable-next-line no-param-reassign */
       url = browser.extension.getURL('html/options.html');
     }
 

@@ -3,7 +3,7 @@
 /* global utils */
 
 const OPTIONS_PAGE = 'html/options.html';
-const REMOVED_IN_PRODUCT_OPTIONS_VERSION = 14;
+const REMOVED_IN_VERSION = 14;
 
 /**
  * @exports newtaboverride
@@ -25,7 +25,7 @@ const newtaboverride = {
     }
     // update
     if (details.reason === 'update') {
-      if (utils.parseVersion(details.previousVersion).major < REMOVED_IN_PRODUCT_OPTIONS_VERSION) {
+      if (utils.parseVersion(details.previousVersion).major < REMOVED_IN_VERSION) {
         const option = await browser.storage.local.get();
 
         if (option.type === 'default' || option.type === 'about:blank' || option.type === 'about:home') {
