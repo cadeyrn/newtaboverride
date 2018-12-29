@@ -8,6 +8,7 @@
 - [DEPENDENCY] updated eslint from version 5.2.0 to 5.11.1 and updated eslint configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.5.1 to 2.6.3
 - [DEPENDENCY] updated gulp from version 3.9.1 to 4.0.0
+- [DEPENDENCY] updated gulp-htmllint from version 0.0.15 to 0.0.16
 
 ### Version 14.1.0 (2018-07-22)
 
