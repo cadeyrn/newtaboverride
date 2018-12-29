@@ -14,6 +14,7 @@
 - [DEPENDENCY] updated npm-run-all from version 4.1.3 to 4.1.5
 - [DEPENDENCY] updated stylelint from version 9.3.0 to 9.9.0 and updated stylelint configuration
 - [DEPENDENCY] updated stylelint-order from version 0.8.1 to 2.0.0
+- [DEPENDENCY] updated web-ext from version 2.7.0 to 2.9.3
 
 ### Version 14.1.0 (2018-07-22)
 
