@@ -2,8 +2,11 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 14.2.0
+### Version 14.2.0 (2018-12-29)
 
+- [CHANGE] changed copyright year from 2018 to 2019
+- [CHANGE] changed default amount of the donation button to the same value as on addons.mozilla.org
+- [CHANGE] added utm parameters to link in footer of option's page
 - [DEPENDENCY] added eslint-plugin-promise 4.0.1 as new dependency
 - [DEPENDENCY] updated eslint from version 5.2.0 to 5.11.1 and updated eslint configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.5.1 to 2.6.3
