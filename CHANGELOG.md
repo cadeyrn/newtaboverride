@@ -6,6 +6,7 @@
 
 - [DEPENDENCY] updated eslint from version 5.11.1 to 6.0.1
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.6.3 to 3.2.0
+- [DEPENDENCY] updated eslint-plugin-promise from version 4.0.1 to 4.2.1
 
 ### Version 14.2.0 (2018-12-29)
 
