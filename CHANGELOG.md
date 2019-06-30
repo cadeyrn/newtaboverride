@@ -10,6 +10,7 @@
 - [DEPENDENCY] updated gulp from version 4.0.0 to 4.0.2
 - [DEPENDENCY] updated gulp-eslint from version 5.0.0 to 6.0.0
 - [DEPENDENCY] updated gulp-stylelint from version 8.0.0 to 9.0.0
+- [DEPENDENCY] updated htmllint from version 0.7.3 to 0.8.0
 
 ### Version 14.2.0 (2018-12-29)
 
