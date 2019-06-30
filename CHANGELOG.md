@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### (Work in Progress) Version 14.3.0
+### Version 14.3.0 (2019-06-30)
 
 - [ENHANCEMENT] **removed the option to set the focus to the web page instead of the address bar since the focus is
   now always on the web page due to a change by Mozilla**
