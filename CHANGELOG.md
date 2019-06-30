@@ -14,6 +14,7 @@
 - [DEPENDENCY] updated jsdoc from version 3.5.5 to 3.6.2
 - [DEPENDENCY] updated stylelint from version 9.9.0 to 10.1.0
 - [DEPENDENCY] updated stylelint-order from version 2.0.0 to 3.0.0
+- [DEPENDENCY] updated web-ext from version 2.9.3 to 3.1.0
 
 ### Version 14.2.0 (2018-12-29)
 
