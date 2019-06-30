@@ -60,21 +60,21 @@ const options = {
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
-      showFocusOption = true;
+      showFocusOption = false;
       showClearOption = true;
     }
 
     // custom url
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
-      showFocusOption = true;
+      showFocusOption = false;
       showClearOption = true;
     }
 
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
-      showFocusOption = true;
+      showFocusOption = false;
       showClearOption = true;
 
       const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
@@ -86,13 +86,13 @@ const options = {
     // background color
     if (elType.options[elType.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
-      showFocusOption = true;
+      showFocusOption = false;
       showClearOption = true;
     }
 
     // feed
     if (elType.options[elType.selectedIndex].value === 'feed') {
-      showFocusOption = true;
+      showFocusOption = false;
       showClearOption = true;
     }
 
