@@ -27,7 +27,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.9",
-    "gulp": "4.0.0",
+    "gulp": "4.0.2",
     "gulp-eslint": "5.0.0",
     "gulp-htmllint": "0.0.16",
     "gulp-jsdoc3": "2.0.0",
