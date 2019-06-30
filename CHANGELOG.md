@@ -12,6 +12,7 @@
 - [DEPENDENCY] updated gulp-stylelint from version 8.0.0 to 9.0.0
 - [DEPENDENCY] updated htmllint from version 0.7.3 to 0.8.0
 - [DEPENDENCY] updated jsdoc from version 3.5.5 to 3.6.2
+- [DEPENDENCY] updated stylelint from version 9.9.0 to 10.1.0
 
 ### Version 14.2.0 (2018-12-29)
 
