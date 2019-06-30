@@ -16,6 +16,8 @@
 - [DEPENDENCY] updated stylelint-order from version 2.0.0 to 3.0.0
 - [DEPENDENCY] updated web-ext from version 2.9.3 to 3.1.0
 
+**Minimum required Firefox version is Firefox 67 now.**
+
 ### Version 14.2.0 (2018-12-29)
 
 - [CHANGE] changed copyright year from 2018 to 2019
