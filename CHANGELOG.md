@@ -6,6 +6,7 @@
 
 - [ENHANCEMENT] **removed the option to set the focus to the web page instead of the address bar since the focus is
   now always on the web page due to a change by Mozilla**
+- [TRANSLATION] fixed typo in German translation
 - [DEPENDENCY] updated eslint from version 5.11.1 to 6.0.1
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.6.3 to 3.2.0
 - [DEPENDENCY] updated eslint-plugin-promise from version 4.0.1 to 4.2.1
