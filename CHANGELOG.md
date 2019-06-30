@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### (Work in Progress) Version 14.3.0
+
+- [DEPENDENCY] updated eslint from version 5.11.1 to 6.0.1
+
 ### Version 14.2.0 (2018-12-29)
 
 - [CHANGE] changed copyright year from 2018 to 2019

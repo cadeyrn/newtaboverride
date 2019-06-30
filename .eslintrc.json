@@ -231,6 +231,7 @@
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "prefer-destructuring": ["error", { "array": false, "object": true }],
+    "prefer-named-capture-group": "off",
     "prefer-numeric-literals": "error",
     "prefer-object-spread": "off",
     "prefer-promise-reject-errors": "error",
