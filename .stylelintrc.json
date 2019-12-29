@@ -199,6 +199,7 @@
     "string-no-newline": true,
     "string-quotes": "single",
     "time-min-milliseconds": 100,
+    "unicode-bom": "never",
     "unit-blacklist": null,
     "unit-case": "lower",
     "unit-no-unknown": true,
