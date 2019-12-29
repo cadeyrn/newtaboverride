@@ -46,6 +46,7 @@ The add-on is currently available in the following languages:
 - Chinese, Simplified (Thanks, tiansh and Mozilla commmunity!)
 - Spanish (Thanks, MissingUser and Mozilla commmunity!)
 - Italian (Thanks, Mozilla commmunity!)
+- Russian (Thanks, vanja-san!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
 - Brazilian Portuguese (Thanks, Mozilla commmunity!)

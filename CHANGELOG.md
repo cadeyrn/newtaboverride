@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 14.4.0 (2019-12-30)
+
+- [TRANSLATION] added Russian translation (Thanks, vanja-san!)
+
 ### Version 14.3.0 (2019-06-30)
 
 - [ENHANCEMENT] **removed the option to set the focus to the web page instead of the address bar since the focus is
