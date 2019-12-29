@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 14.4.0 (2019-12-30)
+### Version 14.4.0 (2019-12-29)
 
 - [CHANGE] no longer request the "cookies" permission because it was only used in a now unused code path
 - [CHANGE] updated the description of the add-on
