@@ -4,6 +4,7 @@
 
 ### Version 14.4.0 (2019-12-30)
 
+- [CHANGE] no longer request the "cookies" permission because it was only used in a now unused code path
 - [CHANGE] updated the description of the add-on
 - [CHANGE] changed copyright year from 2019 to 2020
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)

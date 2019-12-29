@@ -39,7 +39,6 @@
     "open_in_tab": true
   },
   "permissions": [
-    "cookies",
     "history",
     "menus",
     "storage",
