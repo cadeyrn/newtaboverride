@@ -9,7 +9,7 @@
     "message": "Borrar barra de direcciones / seleccionar URL"
   },
   "extension_description": {
-    "message": "New Tab Override trae de vuelta la posibilidad de cambiar la página que se muestra al abrir una nueva pestaña."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

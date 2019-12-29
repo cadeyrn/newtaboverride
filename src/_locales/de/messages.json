@@ -9,7 +9,7 @@
     "message": "Adressleiste leeren / URL markieren"
   },
   "extension_description": {
-    "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird."
+    "message": "Mit New Tab Override kann die Seite festgelegt werden, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
   "extension_name": {
     "message": "New Tab Override"

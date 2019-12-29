@@ -9,7 +9,7 @@
     "message": "Очистить адресную строку / выбрать URL-адрес"
   },
   "extension_description": {
-    "message": "New Tab Override возвращает возможность изменить страницу, которая отображается при открытии новой вкладки."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

@@ -9,7 +9,7 @@
     "message": "Adresbalk wissen / URL selecteren"
   },
   "extension_description": {
-    "message": "New Tab Override herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

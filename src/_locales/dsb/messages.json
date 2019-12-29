@@ -9,7 +9,7 @@
     "message": "Adresowe pólo wuprozniś / URL markěrowaś"
   },
   "extension_description": {
-    "message": "New Tab Override funkciju slědk pśinjaso, z kótarejuž móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

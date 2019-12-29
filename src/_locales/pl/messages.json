@@ -9,7 +9,7 @@
     "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
   "extension_description": {
-    "message": "New Tab Override przywraca możliwość zmiany strony, która jest wyświetlana po otwarciu nowej karty."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

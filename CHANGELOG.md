@@ -5,6 +5,7 @@
 ### Version 14.4.0 (2019-12-30)
 
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)
+- [CHANGE] updated the description of the add-on
 
 ### Version 14.3.0 (2019-06-30)
 

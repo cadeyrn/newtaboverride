@@ -9,7 +9,7 @@
     "message": "Effacer la barre d’adresse / sélectionner une URL"
   },
   "extension_description": {
-    "message": "New Tab Override offre à nouveau la possibilité de modifier la page qui s’affiche lors de l’ouverture d’un nouvel onglet."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

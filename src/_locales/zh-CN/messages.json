@@ -9,7 +9,7 @@
     "message": "清空地址栏 / 选中网址"
   },
   "extension_description": {
-    "message": "New Tab Override 让您可以自行决定打开新标签页时要显示的内容。"
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

@@ -9,7 +9,7 @@
     "message": "Clear address bar / select URL"
   },
   "extension_description": {
-    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"

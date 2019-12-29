@@ -9,7 +9,7 @@
     "message": "Cancella la barra degli indirizzi / seleziona URL"
   },
   "extension_description": {
-    "message": "New Tab Override dà nuovamente la possibilità di cambiare la pagina visualizzata quando viene aperta una nuova scheda."
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
