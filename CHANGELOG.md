@@ -14,6 +14,7 @@
 - [DEPENDENCY] updated stylelint from version 10.1.0 to 12.0.1 and updated configuration
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.3.0 to 1.7.0
 - [DEPENDENCY] updated stylelint-order from version 3.0.0 to 3.1.1
+- [DEPENDENCY] updated web-ext from version 3.1.0 to 4.0.0
 
 **Minimum required Firefox version is Firefox 68 now.**
 
