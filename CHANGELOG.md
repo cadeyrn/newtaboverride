@@ -4,9 +4,10 @@
 
 ### Version 14.4.0 (2019-12-30)
 
-- [TRANSLATION] added Russian translation (Thanks, vanja-san!)
 - [CHANGE] updated the description of the add-on
 - [CHANGE] changed copyright year from 2019 to 2020
+- [TRANSLATION] added Russian translation (Thanks, vanja-san!)
+- [DEPENDENCY] updated eslint from version 6.0.1 to 6.8.0 and updated configuration
 
 **Minimum required Firefox version is Firefox 68 now.**
 
