@@ -6,6 +6,7 @@
 
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)
 - [CHANGE] updated the description of the add-on
+- [CHANGE] changed copyright year from 2019 to 2020
 
 ### Version 14.3.0 (2019-06-30)
 
