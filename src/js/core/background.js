@@ -92,7 +92,7 @@ const newtaboverride = {
    * @returns {void}
    */
   openUserInterface () {
-    const url = browser.extension.getURL(OPTIONS_PAGE);
+    const url = browser.runtime.getURL(OPTIONS_PAGE);
 
     browser.browserAction.setBadgeText({ text : '' });
     browser.tabs.query({}, (tabs) => {
