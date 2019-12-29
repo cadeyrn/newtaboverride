@@ -9,6 +9,7 @@
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)
 - [DEPENDENCY] updated eslint from version 6.0.1 to 6.8.0 and updated configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.2.0 to 3.3.0
+- [DEPENDENCY] updated gulp-stylelint from version 9.0.0 to 11.0.0
 - [DEPENDENCY] updated jsdoc from version 3.6.2 to 3.6.3
 - [DEPENDENCY] updated stylelint from version 10.1.0 to 12.0.1 and updated configuration
 
