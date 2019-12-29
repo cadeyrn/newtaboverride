@@ -8,6 +8,8 @@
 - [CHANGE] updated the description of the add-on
 - [CHANGE] changed copyright year from 2019 to 2020
 
+**Minimum required Firefox version is Firefox 68 now.**
+
 ### Version 14.3.0 (2019-06-30)
 
 - [ENHANCEMENT] **removed the option to set the focus to the web page instead of the address bar since the focus is
