@@ -13,6 +13,7 @@
 - [DEPENDENCY] updated jsdoc from version 3.6.2 to 3.6.3
 - [DEPENDENCY] updated stylelint from version 10.1.0 to 12.0.1 and updated configuration
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.3.0 to 1.7.0
+- [DEPENDENCY] updated stylelint-order from version 3.0.0 to 3.1.1
 
 **Minimum required Firefox version is Firefox 68 now.**
 
