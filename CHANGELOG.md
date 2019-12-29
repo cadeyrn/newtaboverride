@@ -1,4 +1,4 @@
-# Firefox Add-on: New Tab Override (WebExtension)
+# Firefox Add-on: New Tab Override
 
 ## Release Notes
 
