@@ -8,6 +8,7 @@
 - [CHANGE] changed copyright year from 2019 to 2020
 - [TRANSLATION] added Russian translation (Thanks, vanja-san!)
 - [DEPENDENCY] updated eslint from version 6.0.1 to 6.8.0 and updated configuration
+- [DEPENDENCY] updated eslint-plugin-compat from version 3.2.0 to 3.3.0
 
 **Minimum required Firefox version is Firefox 68 now.**
 
