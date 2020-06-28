@@ -1,0 +1,146 @@
+{
+  "background_color_title": {
+    "message": "Колір фону"
+  },
+  "clear_addressbar_description": {
+    "message": "Автоматичне очищення адресного рядка та вибір URL-адреси зараз недоступні для веб додатків. Це потребує змін зі сторони Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Очистити адресний рядок / вибрати URL"
+  },
+  "extension_description": {
+    "message": "New Tab Override дозволяє налаштувати сторінку, що буде відкриватися у новій вкладці."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Опубліковано:"
+  },
+  "feed_read_more": {
+    "message": "Детальніше…"
+  },
+  "feed_title": {
+    "message": "Новини Mozilla"
+  },
+  "focus_website_description": {
+    "message": "Встановити фокус на новій сторінці замість адресного рядка"
+  },
+  "focus_website_title": {
+    "message": "Фокус"
+  },
+  "github_link": {
+    "message": "New Tab Override на GitHub"
+  },
+  "github_notice": {
+    "message": "Маєте ідеї щодо нового функціоналу або знайшли помилку? Створіть тему на GitHub:"
+  },
+  "homepage_description": {
+    "message": "Якщо опцію вибрано, Firefox використовуватиме домашню сторінку при відкритті нової вкладки. Домашню сторінку можна змінити, ввівши about:preferences#home в адресному рядку. Підтримуються лише домашні сторінки, що починаються з http:// або https://. New Tab Override буде використовувати першу домашню сторінку, якщо задано більше однієї."
+  },
+  "introduction": {
+    "message": "Сторінка надана {0}: Виберіть, яка сторінка повинна відкриватися в новій вкладці!"
+  },
+  "learn_more": {
+    "message": "Детальніше"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Ви впевнені, що хочете видалити файл із сховища додатку?"
+  },
+  "local_file_delete_text": {
+    "message": "видалити існуючий файл"
+  },
+  "local_file_description": {
+    "message": "Через обмеження Firefox додатки не мають доступу до локальних файлів. New Tab Override надає можливість завантажити локальний HTML-файл в сховище додатку, та використовувати його в якості вмісту для нової вкладки. Веб-адреси та посилання на зображення, CSS та JavaScript файли повинні бути доступні через Інтернет, оскільки Firefox не має доступу до локальних файлів. Альтернативою є використання локального веб-серверу, наприклад MAMP або XAMPP, з опцією \"custom URL\". Це працює без обмежень."
+  },
+  "local_file_no_file": {
+    "message": "Вибрано опцію \"локальний файл\", але жодного файлу не збережено. Завантажте локальний файл в налаштуваннях New Tab Override."
+  },
+  "local_file_title": {
+    "message": "Локальний файл"
+  },
+  "local_file_upload": {
+    "message": "Зберегти локальний файл"
+  },
+  "new_tab_title": {
+    "message": "Нова вкладка"
+  },
+  "omnibox_command_settings": {
+    "message": "Відкрити налаштування нової вкладки"
+  },
+  "review_text": {
+    "message": "Сподобався додаток? Залиште відгук на"
+  },
+  "settings_donate": {
+    "message": "Підтримати"
+  },
+  "settings_donation_text": {
+    "message": "Для підтримки розробки цього додатку можна зробити пожертву."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox потрібен дозвіл на читання стрічки новин з soeren-hentzschel.at. Ви можете відкликати цей дозвіл у будь-який момент."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Для використання цієї функції потрібно надати Firefox доступ до джерела даних."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox потрібен дозвіл на читання стрічки новин з soeren-hentzschel.at. Ви вже надали цей дозвіл."
+  },
+  "settings_homepage_permission_description": {
+    "message": "Firefox потрібен Ваш дозвіл на перегляд та зміну налаштувань браузера. Ви можете відкликати цей дозвіл у будь-який момент."
+  },
+  "settings_homepage_permission_needed": {
+    "message": "Для використання цієї функції потрібно надати Firefox доступ на перегляд та зміну налаштувань браузера."
+  },
+  "settings_homepage_permission_revoke_description": {
+    "message": "Firefox потрібен Ваш дозвіл на перегляд та зміну налаштувань браузера. Ви вже надали цей дозвіл."
+  },
+  "settings_main_caption": {
+    "message": "Налаштування"
+  },
+  "settings_permission_action": {
+    "message": "Надати дозвіл"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Відкликати дозвіл"
+  },
+  "settings_support_caption": {
+    "message": "Підтримка"
+  },
+  "settings_title": {
+    "message": "Нова вкладка — Налаштування"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "type_options_background_color": {
+    "message": "колір фону"
+  },
+  "type_options_custom_url": {
+    "message": "Користувацький URL"
+  },
+  "type_options_feed": {
+    "message": "Новини Mozilla (Німецькою)"
+  },
+  "type_options_homepage": {
+    "message": "поточна домашня сторінка"
+  },
+  "type_options_local_file": {
+    "message": "локальний файл"
+  },
+  "type_title": {
+    "message": "Опції"
+  },
+  "url_description": {
+    "message": "Введена тут веб-сторінка буде відображатися при відкритті нової вкладки. Підтримуються лише веб-адреси, що починаються з http:// або https://. Зверніть увагу, що доступ до локальних файлів відсутній через обмежження Firefox. Альтернативою є використання опції \"локальний файл\" або локального веб-сервера, наприклад MAMP або XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Невалідний URL."
+  },
+  "url_validation_file": {
+    "message": "Додатки більше не мають доступу до локальних файлів через URL."
+  }
+}
