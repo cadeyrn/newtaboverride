@@ -13,6 +13,7 @@
 - Customize the background color for your new tab page
 - Store a local HTML file in the extension and use it for new tab content
 - Get the latest news about Mozilla as new tab page (German language only)
+- Customize where new tabs are opened
 - Automatically adds “http://” if protocol is missing from a URL
 - Can be used in conjunction with Firefox’s container tabs feature
 - Dark mode support for options interface
@@ -60,6 +61,11 @@ history every time you open a new tab. There is no way to prevent this without t
 The permission to access the browser tabs is needed so that New Tab Override can jump to the settings page if it’s
 already open in another tab when you click the button to open the extension’s settings.
 
+##### read and modify browser settings
+
+The permission to read and modify browser settings is needed to change the position of new tabs and for the option to
+automatically use your home page as new tab page.
+
 #### optional permissions
 
 These permissions are not needed to install and use New Tab Override:
@@ -69,11 +75,6 @@ These permissions are not needed to install and use New Tab Override:
 The permission to access data for www.soeren-hentzschel.at is only needed if you enable the option to see the latest
 news about Mozilla as new tab page. If enabled, New Tab Override reads the feed of www.soeren-hentzschel.at to show you
 the latest news.
-
-##### read and modify browser settings
-
-The permission to read and modify browser settings is only needed if you enable the option to automatically use your
-home page as new tab page. Without this permission, New Tab Override will not know your home page.
 
 #### silent permissions
 
