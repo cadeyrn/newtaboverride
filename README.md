@@ -34,6 +34,7 @@ New Tab Override is currently available in the following languages:
 - Russian (Thanks, vanja-san!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
+- Ukrainian (Thanks, Bergil32!)
 - Brazilian Portuguese (Thanks, Mozilla commmunity!)
 - Swedish (Thanks, Sopor-!)
 - Upper Sorbian (Thanks, milupo!)

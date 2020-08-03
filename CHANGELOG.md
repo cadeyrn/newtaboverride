@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### NTO.next
+
+[TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
+
 ### Version 14.4.0 (2019-12-29)
 
 - [CHANGE] **no longer requires the "cookies" permission** because it was only needed for an unused code path
