@@ -29,7 +29,7 @@
     "eslint-plugin-xss": "0.1.10",
     "gulp": "4.0.2",
     "gulp-eslint": "6.0.0",
-    "gulp-htmllint": "0.0.16",
+    "gulp-htmllint": "0.0.19",
     "gulp-jsdoc3": "2.0.0",
     "gulp-stylelint": "11.0.0",
     "htmllint": "0.8.0",
