@@ -2,6 +2,8 @@
 
 /* global URI_REGEX, PERMISSION_FEED, PERMISSION_HOMEPAGE, defaults, permissions, utils */
 
+const FIREFOX_80 = 80;
+
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
@@ -53,7 +55,7 @@ const options = {
    * @returns {void}
    */
   init (info) {
-    if (utils.parseVersion(info.version).major >= utils.FIREFOX_80) {
+    if (utils.parseVersion(info.version).major >= FIREFOX_80) {
       options.focusOptionAvailable = true;
     }
   },
