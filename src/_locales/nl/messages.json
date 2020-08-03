@@ -108,13 +108,13 @@
     "message": "Tab Position"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab (default)"
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
   },
   "tab_position_option_afterCurrent": {
     "message": "Open all new tabs next to the current tab"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all tabs at the end of the tabstrip"
+    "message": "Open all new tabs at the end of the tabstrip"
   },
   "type_options_background_color": {
     "message": "achtergrondkleur"
