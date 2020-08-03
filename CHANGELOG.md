@@ -25,6 +25,8 @@
 - [DEPENDENCY] updated stylelint-order from version 3.1.1 to 4.1.0
 - [DEPENDENCY] updated web-ext from version 4.0.0 to 5.0.0
 
+**Minimum required Firefox version is Firefox 78 now.**
+
 ### Version 14.4.0 (2019-12-29)
 
 - [CHANGE] **no longer requires the "cookies" permission** because it was only needed for an unused code path
