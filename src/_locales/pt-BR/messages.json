@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox precisa de sua permissão para ler o feed de soeren-hentzschel.at. Você já concedeu essa permissão."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox precisa de sua permissão para ler e modificar as configurações do navegador. Você pode revogar essa permissão a qualquer momento."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Para usar essa funcionalidade você precisa autorizar o Firefox a ler e modificar as configurações do navegador."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox precisa de sua permissão para ler e modificar as configurações do navegador. Você já concedeu essa permissão."
-  },
   "settings_main_caption": {
     "message": "Configurações"
   },

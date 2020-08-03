@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox necesita su permiso para leer la fuente de noticias desde soeren-hentzschel.at. Ya has concecido este permiso."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox necesita su permiso para leer y modificar la configuración del navegador. Puedes revocar este permiso en cualquier momento."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Para usar esta función, debe permitir que Firefox lea y modifique la configuración del navegador."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox necesita su permiso para leer y modificar la configuración del navegador. Ya has concecido este permiso."
-  },
   "settings_main_caption": {
     "message": "Ajustes"
   },

@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox 需要你的授权来收取来自 soeren-hentzschel.at 的新闻推送。您已经授权。"
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox 需要您的授权来读取和修改浏览器设置。你随时可以收回此授权。"
-  },
-  "settings_homepage_permission_needed": {
-    "message": "为了使用此功能，您须要允许 Firefox 读取和修改浏览器设置。"
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox 需要您的授权来读取和修改浏览器设置。您已经授权。"
-  },
   "settings_main_caption": {
     "message": "设置"
   },

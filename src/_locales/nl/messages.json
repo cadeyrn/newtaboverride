@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox heeft uw toestemming nodig om de nieuwsfeed van soeren-hentzschel.at te lezen. U hebt deze toestemming al verleend."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U kunt deze toestemming altijd intrekken."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "U moet Firefox toestemming geven voor het lezen en aanpassen van de browserinstellingen om deze functie te gebruiken."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U hebt deze toestemming al verleend."
-  },
   "settings_main_caption": {
     "message": "Instellingen"
   },

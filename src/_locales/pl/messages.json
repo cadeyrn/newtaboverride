@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox potrzebuje twojego pozwolenia na odczyt kanału informacyjnego ze strony soeren-hentzschel.at. To pozwolenie zostało już udzielone."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. Możesz cofnąć to uprawnienie w każdej chwili."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Aby używać tej funkcji musisz zezwolić Firefoksowi na odczyt i modyfikację ustawień przeglądarki."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. To pozwolenie zostało już udzielone."
-  },
   "settings_main_caption": {
     "message": "Ustawienia"
   },

@@ -1,9 +1,8 @@
 'use strict';
 
-/* global URI_REGEX, PERMISSION_HOMEPAGE, defaults, utils */
+/* global URI_REGEX, defaults, utils */
 
 const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
-const HOME_PAGE_MISSING_PERMISSION = 'html/homepage_permission_needed.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
 const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
 const FEED_PAGE = 'html/feed.html';
@@ -32,25 +31,15 @@ const newtab = {
         newtab.openNewTabPage(options.url, options.focus_website);
         break;
       case 'homepage':
-        const isAllowed = await browser.permissions.contains(PERMISSION_HOMEPAGE);
+        const homepage = await browser.browserSettings.homepageOverride.get({});
+        const firstHomepage = homepage.value.split('|')[0];
 
-        // a permission is needed
-        if (isAllowed) {
-          const homepage = await browser.browserSettings.homepageOverride.get({});
-          const firstHomepage = homepage.value.split('|')[0];
-
-          if (!URI_REGEX.test(firstHomepage)) {
-            newtab.openNewTabPage('', false);
-            break;
-          }
-
-          newtab.openNewTabPage(firstHomepage, options.focus_website);
-        }
-        // no permission granted
-        else {
-          newtab.openNewTabPage(browser.extension.getURL(HOME_PAGE_MISSING_PERMISSION), options.focus_website);
+        if (!URI_REGEX.test(firstHomepage)) {
+          newtab.openNewTabPage('', false);
+          break;
         }
 
+        newtab.openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
         newtab.openNewTabPage(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);

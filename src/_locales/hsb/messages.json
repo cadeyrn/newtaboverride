@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox dowolnosć trjeba, zo by powěsćowy kanal soeren-hentzschel.at čitał. Sy tutu dowolnosć hižo dał."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox twoju dowolnosć trjeba, zo by nastajenja wobhladowaka čitał a změnił. Móžeš dowolnosć kóždy čas zebrać."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Zo by móhł tutu funkciju wužiwać, dyrbiš Firefox dowolić, nastajenja wobhladowaka čitać a změnić."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox twoju dowolnosć trjeba, zo by nastajenja wobhladowaka čitał a změnił. Sy tutu dowolnosć hižo dał."
-  },
   "settings_main_caption": {
     "message": "Nastajenja"
   },

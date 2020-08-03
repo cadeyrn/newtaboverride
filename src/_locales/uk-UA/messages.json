@@ -86,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox потрібен дозвіл на читання стрічки новин з soeren-hentzschel.at. Ви вже надали цей дозвіл."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox потрібен Ваш дозвіл на перегляд та зміну налаштувань браузера. Ви можете відкликати цей дозвіл у будь-який момент."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Для використання цієї функції потрібно надати Firefox доступ на перегляд та зміну налаштувань браузера."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox потрібен Ваш дозвіл на перегляд та зміну налаштувань браузера. Ви вже надали цей дозвіл."
-  },
   "settings_main_caption": {
     "message": "Налаштування"
   },
