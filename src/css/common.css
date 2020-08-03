@@ -1,15 +1,15 @@
 body {
   margin: 0;
   font-family: Verdana, sans-serif;
-  color: rgb(50, 50, 50);
   background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
 }
 
 header {
   padding: 0 20px;
   height: 64px;
   line-height: 64px;
-  background: rgb(239, 239, 239);
+  background-color: rgb(239, 239, 239);
 }
 
 main {
@@ -38,7 +38,8 @@ aside > div {
 h1 {
   margin: 0;
   padding-left: 80px;
-  background: url('../images/icon.svg') no-repeat;
+  background-image: url('../images/icon.svg');
+  background-repeat: no-repeat;
   background-size: 54px auto;
   background-position: 0 6px;
 }
@@ -106,7 +107,8 @@ footer {
 footer a {
   display: block;
   padding-left: 40px;
-  background: url('../images/sh-at.png') no-repeat;
+  background-image: url('../images/sh-at.png');
+  background-repeat: no-repeat;
   background-size: 32px 32px;
   background-position: center left;
   color: rgb(33, 37, 42);
@@ -171,5 +173,24 @@ footer a {
 @media screen and (max-width: 344px) {
   h1 {
     font-size: 18px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(42, 42, 46);
+    color: rgb(249, 249, 250);
+  }
+
+  header, footer, .grey-bg {
+    background-color: rgb(56, 56, 61);
+  }
+
+  footer a {
+    color: rgb(249, 249, 250);
+  }
+
+  .info-icon {
+    color: rgb(171, 171, 172);
   }
 }
