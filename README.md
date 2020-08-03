@@ -13,6 +13,7 @@
 - Customize the background color for your new tab page
 - Store a local HTML file in the extension and use it for new tab content
 - Get the latest news about Mozilla as new tab page (German language only)
+- You can set the focus to the address bar or the website
 - Customize where new tabs are opened
 - Automatically adds “http://” if protocol is missing from a URL
 - Can be used in conjunction with Firefox’s container tabs feature
