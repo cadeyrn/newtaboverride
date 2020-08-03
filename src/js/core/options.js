@@ -17,6 +17,7 @@ const elHomepageOption = document.getElementById('homepage-option');
 const elLocalFile = document.getElementById('local-file');
 const elLocalFileDeleteLink = document.getElementById('delete-local-file');
 const elLocalFileOption = document.getElementById('local-file-option');
+const elTabPosition = document.getElementById('tab-position');
 const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
 const elUrlOption = document.getElementById('url-option');
@@ -138,9 +139,11 @@ const options = {
    */
   async load () {
     const option = await browser.storage.local.get(defaults);
+    const tabPosition = await browser.browserSettings.newTabPosition.get({});
 
     elFocusWebsite.checked = option.focus_website;
     elType.querySelector('[value="' + option.type + '"]').selected = true;
+    elTabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
     elUrl.value = option.url;
     elBackgroundColor.value = option.background_color;
     options.toggleOptionsDetails();
@@ -181,6 +184,10 @@ elType.addEventListener('change', (e) => {
 
   browser.storage.local.set({ type : e.target.value });
   options.toggleOptionsDetails();
+});
+
+elTabPosition.addEventListener('change', (e) => {
+  browser.browserSettings.newTabPosition.set({ value : e.target.value });
 });
 
 elUrl.addEventListener('input', (e) => {

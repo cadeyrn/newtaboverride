@@ -104,6 +104,18 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "tab_position_title": {
+    "message": "Tab-Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Neue Tabs neben dem aktuellen Tab öffnen, wenn sich dieser auf den aktiven Tab bezieht (Standard)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Alle neuen Tabs neben dem aktiven Tab öffnen"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Alle Tabs am Ende der Tableiste öffnen"
+  },
   "type_options_background_color": {
     "message": "Hintergrund-Farbe"
   },
