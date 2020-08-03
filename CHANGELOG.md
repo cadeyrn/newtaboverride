@@ -10,6 +10,7 @@
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
 - [DEPENDENCY] updated eslint-plugin-xss from version 0.1.9 to 0.1.10
 - [DEPENDENCY] updated gulp-htmllint from version 0.0.16 to 0.0.19
+- [DEPENDENCY] updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
 
 ### Version 14.4.0 (2019-12-29)
 
