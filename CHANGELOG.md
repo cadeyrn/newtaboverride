@@ -16,6 +16,7 @@
 - [DEPENDENCY] updated stylelint from version 12.0.1 to 13.6.1
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.7.0 to 1.8.0
 - [DEPENDENCY] updated stylelint-order from version 3.1.1 to 4.1.0
+- [DEPENDENCY] updated web-ext from version 4.0.0 to 5.0.0
 
 ### Version 14.4.0 (2019-12-29)
 
