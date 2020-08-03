@@ -7,6 +7,7 @@
 - [TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
 - [DEPENDENCY] updated eslint from version 6.8.0 to 7.6.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.3.0 to 3.8.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
 
 ### Version 14.4.0 (2019-12-29)
 
