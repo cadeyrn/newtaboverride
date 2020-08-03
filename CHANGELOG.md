@@ -4,7 +4,8 @@
 
 ### NTO.next
 
-[TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
+- [TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
+- [DEPENDENCY] updated eslint from version 6.8.0 to 7.6.0
 
 ### Version 14.4.0 (2019-12-29)
 
