@@ -85,13 +85,6 @@ const newtab = {
       url = browser.extension.getURL('html/options.html');
     }
 
-    // Mozilla broke this feature, now the focus is always on the web page. We set focus_website to false so that
-    // New Tab Override will always use the second code path until there is a working solution. For context see
-    // https://github.com/cadeyrn/newtaboverride/issues/157 and https://bugzilla.mozilla.org/show_bug.cgi?id=1516777
-    // Don't forget to request the cookies permission again once the "focus_website" code path will be used again.
-    // eslint-disable-next-line no-param-reassign
-    focus_website = false;
-
     await browser.tabs.getCurrent((tab) => {
       const tabId = tab.id;
 

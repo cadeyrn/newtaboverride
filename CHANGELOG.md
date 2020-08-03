@@ -4,6 +4,9 @@
 
 ### NTO.next
 
+- [ENHANCEMENT] **The option to set the focus to either the web page or the address bar has been reintroduced.** That's
+  why the cookies permission is needed again (as in New Tab Override 14.3.0 and older). This feature is only available
+  in Firefox 80 and newer.
 - [TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
 - [DEPENDENCY] updated eslint from version 6.8.0 to 7.6.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.3.0 to 3.8.0

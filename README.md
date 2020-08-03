@@ -78,6 +78,11 @@ home page as new tab page. Without this permission, New Tab Override will not kn
 
 New Tab Override requires additional permissions, but Firefox does not prompt requests for the following:
 
+##### cookies
+
+The cookies permission is needed to prevent the loss of container information if the container tabs feature of Firefox
+is used.
+
 ##### menus
 
 The menus permission is needed for providing an entry in the tools menu for accessing New Tab Override's settings.

@@ -6,6 +6,8 @@ const PERMISSION_HOMEPAGE = { permissions : ['browserSettings'] };
 // a not very advanced regex to match most URLs…
 const URI_REGEX = /^https?:\/\//i;
 
+const FIREFOX_80 = 80;
+
 /**
  * @exports utils
  */

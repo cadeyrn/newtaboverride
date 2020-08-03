@@ -28,6 +28,8 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
+  focusOptionAvailable : false,
+
   /**
    * prepend "http://" to string if the string does not start with "http://" or "https://"
    *
@@ -41,6 +43,19 @@ const options = {
     }
 
     return string;
+  },
+
+  /**
+   * This method will be fired on add-on init.
+   *
+   * @param {Object} info - an object containing information about the browser
+   *
+   * @returns {void}
+   */
+  init (info) {
+    if (utils.parseVersion(info.version).major >= utils.FIREFOX_80) {
+      options.focusOptionAvailable = true;
+    }
   },
 
   /**
@@ -60,21 +75,21 @@ const options = {
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
-      showFocusOption = false;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // custom url
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
-      showFocusOption = false;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
-      showFocusOption = false;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
 
       const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
@@ -86,13 +101,13 @@ const options = {
     // background color
     if (elType.options[elType.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
-      showFocusOption = false;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // feed
     if (elType.options[elType.selectedIndex].value === 'feed') {
-      showFocusOption = false;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
@@ -240,3 +255,5 @@ elLocalFileDeleteLink.addEventListener('click', (e) => {
   browser.storage.local.set({ local_file : '' });
   options.toggleVisibility(elLocalFileDeleteLink, false);
 });
+
+browser.runtime.getBrowserInfo().then(options.init).catch();
