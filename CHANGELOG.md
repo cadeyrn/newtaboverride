@@ -15,6 +15,7 @@
 - [DEPENDENCY] updated jsdoc from version 3.6.3 to 3.6.5
 - [DEPENDENCY] updated stylelint from version 12.0.1 to 13.6.1
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.7.0 to 1.8.0
+- [DEPENDENCY] updated stylelint-order from version 3.1.1 to 4.1.0
 
 ### Version 14.4.0 (2019-12-29)
 
