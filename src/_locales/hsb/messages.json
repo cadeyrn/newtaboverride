@@ -105,16 +105,16 @@
     "message": "URL"
   },
   "tab_position_title": {
-    "message": "Tab Position"
+    "message": "Rajtarkowa pozicija"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+    "message": "Nowe rajtarki pódla aktualneho rajtarka wočinić, jeli z nim zwisuja, hewak na kóncu rajtarkoweje lajsty (standard)"
   },
   "tab_position_option_afterCurrent": {
-    "message": "Open all new tabs next to the current tab"
+    "message": "Wšě nowe rajtarki pódla aktualneho rajtarka wočinić"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all new tabs at the end of the tabstrip"
+    "message": "Wšě rajtarki na kóncu rajtarkoweje lajsty wočinić"
   },
   "type_options_background_color": {
     "message": "pozadkowa barba"

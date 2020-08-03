@@ -105,16 +105,16 @@
     "message": "URL"
   },
   "tab_position_title": {
-    "message": "Tab Position"
+    "message": "Rejtarikowa pozicija"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+    "message": "Nowe rejtariki pódla aktualnego rejtarika wócyniś, jolic z nim zwisuju, howac na kóńcu rejtarkoweje rědki (standard)"
   },
   "tab_position_option_afterCurrent": {
-    "message": "Open all new tabs next to the current tab"
+    "message": "Wšykne nowe rejtariki pódla aktualnego rejtarika wócyniś"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all new tabs at the end of the tabstrip"
+    "message": "Wšě rajtarki na kóncu rajtarkoweje lajsty wočinić"
   },
   "type_options_background_color": {
     "message": "slězynowa barwa"
