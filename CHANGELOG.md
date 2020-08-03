@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### NTO.next
+### Version 15.0.0 (2020-08-03)
 
 - [ENHANCEMENT] **Focus option!** The option to set the focus to either the web page or the address bar has been
   reintroduced. That's why the cookies permission is needed again (as in New Tab Override 14.3.0 and older). This
