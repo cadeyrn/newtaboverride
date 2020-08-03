@@ -15,6 +15,7 @@
 - Get the latest news about Mozilla as new tab page (German language only)
 - Automatically adds “http://” if protocol is missing from a URL
 - Can be used in conjunction with Firefox’s container tabs feature
+- Dark mode support for options interface
 
 ### Shortcuts
 
