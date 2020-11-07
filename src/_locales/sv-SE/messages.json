@@ -9,7 +9,7 @@
     "message": "Rensa adressraden / välj URL"
   },
   "extension_description": {
-    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+    "message": "New Tab Override låter dig ställa in den sidan som visas när du öppnar en ny flik."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -39,7 +39,7 @@
     "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#home i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
   },
   "introduction": {
-    "message": "Denna sida tillhandahålls av {0}: Välj viljen sida du vill ska öppnas som en ny flik!"
+    "message": "Denna sida tillhandahålls av {0}: Välj vilken sida du vill ska öppnas som en ny flik!"
   },
   "learn_more": {
     "message": "Lär dig mera"
@@ -105,16 +105,16 @@
     "message": "URL"
   },
   "tab_position_title": {
-    "message": "Tab Position"
+    "message": "Flikplacering"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+    "message": "Öppna nya flikar bredvid den aktuella fliken om de är relaterade till den aktuella fliken, annars öppna i slutet av flikraden (standard)"
   },
   "tab_position_option_afterCurrent": {
-    "message": "Open all new tabs next to the current tab"
+    "message": "Öppna alla nya flikar bredvid den aktuella fliken"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all new tabs at the end of the tabstrip"
+    "message": "Öppna alla nya flikar i slutet av flikraden"
   },
   "type_options_background_color": {
     "message": "bakgrundsfärg"
