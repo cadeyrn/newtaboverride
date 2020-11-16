@@ -8,11 +8,8 @@
   "clear_addressbar_title": {
     "message": "Adresbalk wissen / URL selecteren"
   },
-  "default_option_description": {
-    "message": "Open about:addons en schakel de New Tab Override-extensie uit om de standaardpagina van Firefox te gebruiken (geen de-installatie vereist)."
-  },
   "extension_description": {
-    "message": "New Tab Override herstelt de mogelijkheid om de pagina te wijzigen die bij het openen van een nieuw tabblad wordt weergegeven"
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -21,7 +18,7 @@
     "message": "Gepubliceerd:"
   },
   "feed_read_more": {
-    "message": "Meer info…"
+    "message": "Meer lezen…"
   },
   "feed_title": {
     "message": "Mozilla-nieuws"
@@ -39,13 +36,10 @@
     "message": "Aanvragen voor functies of een fout melden? Open een ticket op GitHub:"
   },
   "homepage_description": {
-    "message": "Als deze optie is ingeschakeld, gebruikt Firefox de startpagina ook als de nieuw-tabbladpagina. U kunt de startpagina wijzigen door about:preferences#general in de adresbalk te typen. Alleen startpagina’s die met http:// of https:// beginnen worden ondersteund. Als meerdere startpagina’s zijn geconfigureerd, gebruikt New Tab Override de eerste."
+    "message": "Als deze optie is ingeschakeld, gebruikt Firefox de startpagina ook als de nieuw-tabbladpagina. U kunt de startpagina wijzigen door about:preferences#home in de adresbalk te typen. Alleen startpagina’s die met http:// of https:// beginnen worden ondersteund. Als meerdere startpagina’s zijn geconfigureerd, gebruikt New Tab Override de eerste."
   },
-  "introduction_part_one": {
-    "message": "Deze pagina wordt aangeboden door"
-  },
-  "introduction_part_two": {
-    "message": "selecteer welke pagina als nieuw tabblad moet worden geopend!"
+  "introduction": {
+    "message": "Deze pagina wordt aangeboden door {0}: selecteer welke pagina als nieuw tabblad moet worden geopend!"
   },
   "learn_more": {
     "message": "Meer info"
@@ -92,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox heeft uw toestemming nodig om de nieuwsfeed van soeren-hentzschel.at te lezen. U hebt deze toestemming al verleend."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U kunt deze toestemming altijd intrekken."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "U moet Firefox toestemming geven voor het lezen en aanpassen van de browserinstellingen om deze functie te gebruiken."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox heeft uw toestemming nodig om de browserinstellingen te lezen en aan te passen. U hebt deze toestemming al verleend."
-  },
   "settings_main_caption": {
     "message": "Instellingen"
   },
@@ -119,20 +104,23 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
   "type_options_background_color": {
     "message": "achtergrondkleur"
   },
   "type_options_custom_url": {
     "message": "aangepaste URL"
-  },
-  "type_options_default_home_page": {
-    "message": "standaard startpagina van Firefox (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "standaard nieuw-tabbladpagina van Firefox (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "lege pagina (about:blank)"
   },
   "type_options_feed": {
     "message": "Mozilla-nieuws (Duits)"

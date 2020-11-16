@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "Color de fondo"
+  },
+  "clear_addressbar_description": {
+    "message": "El vaciado automático de la barra de direcciones o la selección de la URL actualmente no es posible para WebExtensions. Esto requiere un cambio por parte de Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Borrar barra de direcciones / seleccionar URL"
+  },
+  "extension_description": {
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Publicado:"
+  },
+  "feed_read_more": {
+    "message": "Más información…"
+  },
+  "feed_title": {
+    "message": "Noticias de Mozilla"
+  },
+  "focus_website_description": {
+    "message": "Fijar el foco en la página de web en lugar de la barra de direcciones"
+  },
+  "focus_website_title": {
+    "message": "Focus"
+  },
+  "github_link": {
+    "message": "New Tab Override en GitHub"
+  },
+  "github_notice": {
+    "message": "¿Petición de nuevas características o informe de errores? Abre un ticket en GitHub:"
+  },
+  "homepage_description": {
+    "message": "Si se activa esta opción, Firefox también utilizará la página de inicio como la página de incio de la nueva pestaña, también. Puedes cambiar la página de inicio al introducir la URL about:preferences#home en la barra de direcciones. Solo están soportadas las páginas de inicio que empiecen con http:// o https://. Si se configuran múltiples páginas de inicio, New Tab Override usará la primera."
+  },
+  "introduction": {
+    "message": "Esta página esta proporcionada por {0}: ¡Selecciona qué página se deben abrir como una nueva pestaña!"
+  },
+  "learn_more": {
+    "message": "Aprende más"
+  },
+  "local_file_delete_confirmation": {
+    "message": "¿Seguro que quieres borrar el archivo del almacenamiento de la extensión?"
+  },
+  "local_file_delete_text": {
+    "message": "Eliminar archivo existente"
+  },
+  "local_file_description": {
+    "message": "Debido a las restricciones de Firefox, no es posible que las extensiones accedan a archivos locales. New Tab Override te proporciona la posibilidad de subir archivos HTML locales al espacio de almacenamiento de la extensión y para utilizarlos como el contenido de la nueva pestaña. Cualquier URL o enlaces a imágenes, los archivos CSS y archivos JavaScript que se pueden incluir deben ser accesibles vía web debido a que Firefox no puede acceder archivos locales del sistema. Alternativamente, considera en utilizar un servidor local web, por ejemplo via MAMP o XAMPP, con la opción “URL personalizada”. Esto funciona sin ningún tipo de restricción."
+  },
+  "local_file_no_file": {
+    "message": "Has seleccionado la opción “archivo local”, pero no has almacenado un archivo local. Guarda un archivo en los ajustes de New Tab Override."
+  },
+  "local_file_title": {
+    "message": "Archivo local"
+  },
+  "local_file_upload": {
+    "message": "Guardar un archivo local"
+  },
+  "new_tab_title": {
+    "message": "Nueva pestaña"
+  },
+  "omnibox_command_settings": {
+    "message": "Abrir los ajustes de nueva pestaña"
+  },
+  "review_text": {
+    "message": "¿Te gusta la extensión? Si es así, déjanos una reseña en"
+  },
+  "settings_donate": {
+    "message": "Donar"
+  },
+  "settings_donation_text": {
+    "message": "Por favor, considere hacer una donación para apoyar el desarrollo continuo de esta extensión."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox necesita su permiso para leer la fuente de noticias desde soeren-hentzschel.at. Puedes revocar este permiso en cualquier momento."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Para usar esta función, debes autorizar a Firefox a acceder a la fuente de datos."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox necesita su permiso para leer la fuente de noticias desde soeren-hentzschel.at. Ya has concecido este permiso."
+  },
+  "settings_main_caption": {
+    "message": "Ajustes"
+  },
+  "settings_permission_action": {
+    "message": "Conceder permiso"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Revocar permiso"
+  },
+  "settings_support_caption": {
+    "message": "Soporte"
+  },
+  "settings_title": {
+    "message": "Nueva pestaña — Ajustes"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
+  "type_options_background_color": {
+    "message": "Color de Fondo"
+  },
+  "type_options_custom_url": {
+    "message": "URL personalizada"
+  },
+  "type_options_feed": {
+    "message": "Noticias de Mozilla (Alemán)"
+  },
+  "type_options_homepage": {
+    "message": "Página de Inicio Actual"
+  },
+  "type_options_local_file": {
+    "message": "Archivo local"
+  },
+  "type_title": {
+    "message": "Opción"
+  },
+  "url_description": {
+    "message": "La página de web introducida aquí se muestra al abrir una nueva pestaña nueva. Solo se soportan las URL que empiecen con http:// o https://. Tenga en cuenta: El acceso a los archivos locales a través de una URL ya no es posible debido a las restricciones de Firefox. Por favor, considere usar la opción “archivo local” o un servidor web local, por ejemplo vía MAMP o XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Esta URL no es válida."
+  },
+  "url_validation_file": {
+    "message": "El acceso a los archivos locales vía URL ya no es posible para las extensiones."
+  }
+}

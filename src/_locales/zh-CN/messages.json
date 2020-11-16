@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "背景色"
+  },
+  "clear_addressbar_description": {
+    "message": "目前 WebExtension 还不支持自动清空地址栏或选中地址栏中的网址。实现该功能需要 Mozilla 做出更改。"
+  },
+  "clear_addressbar_title": {
+    "message": "清空地址栏 / 选中网址"
+  },
+  "extension_description": {
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "发布："
+  },
+  "feed_read_more": {
+    "message": "详细了解…"
+  },
+  "feed_title": {
+    "message": "Mozilla 快讯"
+  },
+  "focus_website_description": {
+    "message": "把焦点放在网页上而非地址栏上"
+  },
+  "focus_website_title": {
+    "message": "焦点"
+  },
+  "github_link": {
+    "message": "GitHub 上的 New Tab Override"
+  },
+  "github_notice": {
+    "message": "想请求新功能或报告缺陷？开个 GitHub 工单："
+  },
+  "homepage_description": {
+    "message": "如果启用该选项，Firefox 的新标签页也会显示与主页相同的内容。您可以在地址栏输入 about:preferences#home 来改变主页内容。主页地址只支持http:// 或 https:// 协议。如果设置了多个主页，New Tab Override 会使用第一个。"
+  },
+  "introduction": {
+    "message": "当前页面由 {0} 提供：选择在新标签页打开的页面！"
+  },
+  "learn_more": {
+    "message": "详细了解"
+  },
+  "local_file_delete_confirmation": {
+    "message": "确定要从该扩展的存储数据中删除此文件？"
+  },
+  "local_file_delete_text": {
+    "message": "删除已有文件"
+  },
+  "local_file_description": {
+    "message": "由于 Firefox 的限制，扩展无法访问本地文件。New Tab Override 的解决方法是把本地 HTML 文件加载到本扩展的存储空间，再把本扩展存储空间的文件设为主页。网址、指向图片的链接、CSS 文件和 JavaScript 文件必须可通过网络访问才能够添加，因为 Firefox 无法访问系统的本地文件。要解决这个问题，请考虑使用诸如 MAMP 和 XAMPP 等带有“自定义网址”选项的本地网络服务，绕开上述限制。"
+  },
+  "local_file_no_file": {
+    "message": "你选择了“本地文件”选项，但是还未把本地文件存到本扩展的存储空间。请在 New Tab Override 设置中保存一个本地文件。"
+  },
+  "local_file_title": {
+    "message": "本地文件"
+  },
+  "local_file_upload": {
+    "message": "把本地文件存到存储空间"
+  },
+  "new_tab_title": {
+    "message": "新标签页"
+  },
+  "omnibox_command_settings": {
+    "message": "打开新标签页设置"
+  },
+  "review_text": {
+    "message": "喜欢这个扩展吗？欢迎留下评论"
+  },
+  "settings_donate": {
+    "message": "捐赠"
+  },
+  "settings_donation_text": {
+    "message": "请捐助以支持本扩展的进一步开发。"
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox 需要你的授权来收取来自 soeren-hentzschel.at 的新闻推送。你随时可以收回此授权。"
+  },
+  "settings_feed_permission_needed": {
+    "message": "为了使用该功能，你需要允许 Firefox 访问数据源。"
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox 需要你的授权来收取来自 soeren-hentzschel.at 的新闻推送。您已经授权。"
+  },
+  "settings_main_caption": {
+    "message": "设置"
+  },
+  "settings_permission_action": {
+    "message": "授予权限"
+  },
+  "settings_permission_revoke_action": {
+    "message": "撤回权限"
+  },
+  "settings_support_caption": {
+    "message": "支持"
+  },
+  "settings_title": {
+    "message": "新标签页 — 设置"
+  },
+  "settings_url_field_placeholder": {
+    "message": "网址"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
+  "type_options_background_color": {
+    "message": "背景色"
+  },
+  "type_options_custom_url": {
+    "message": "自定义网址"
+  },
+  "type_options_feed": {
+    "message": "Mozilla 新闻（德语）"
+  },
+  "type_options_homepage": {
+    "message": "自定义主页"
+  },
+  "type_options_local_file": {
+    "message": "本地文件"
+  },
+  "type_title": {
+    "message": "选项"
+  },
+  "url_description": {
+    "message": "打开新标签页时，页面上会显示在此输入的网页。仅支持以 http:// 或 https:// 开头的网址。请注意：由于 Firefox 的限制，通过网址访问本地文件不再被支持。请考虑使用使用“本地文件“选项或本地网络服务器，比如 MAMP 或 XAMPP。"
+  },
+  "url_title": {
+    "message": "网址"
+  },
+  "url_validation_default": {
+    "message": "网址无效。"
+  },
+  "url_validation_file": {
+    "message": "扩展不再能通过网址访问本地文件。"
+  }
+}

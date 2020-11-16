@@ -8,11 +8,8 @@
   "clear_addressbar_title": {
     "message": "Clear address bar / select URL"
   },
-  "default_option_description": {
-    "message": "To use Firefox's default page, please open about:addons and disable the New Tab Override extension (no uninstall required)."
-  },
   "extension_description": {
-    "message": "New Tab Override brings back the ability to change the page which is shown when opening a new tab"
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -39,13 +36,10 @@
     "message": "Feature requests or error report? Open a ticket on GitHub:"
   },
   "homepage_description": {
-    "message": "If this option is enabled, Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#general in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home pages are configured, New Tab Override will use the first one."
+    "message": "If this option is enabled, Firefox will use the home page as the new tab page, too. You can change the home page by typing about:preferences#home in the address bar. Only home pages starting with http:// or https:// are supported. If multiple home pages are configured, New Tab Override will use the first one."
   },
-  "introduction_part_one": {
-    "message": "This page is provided by"
-  },
-  "introduction_part_two": {
-    "message": "Select which page should open as new tab!"
+  "introduction": {
+    "message": "This page is provided by {0}: Select which page should open as new tab!"
   },
   "learn_more": {
     "message": "Learn more"
@@ -92,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox needs your permission to read the news feed from soeren-hentzschel.at. You have already granted this permission."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox needs your permission to read and to modify the browser settings. You can revoke this permission at any time."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "To use this feature you have to allow Firefox to read and to modify the browser settings."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox needs your permission to read and to modify the browser settings. You have already granted this permission."
-  },
   "settings_main_caption": {
     "message": "Settings"
   },
@@ -119,20 +104,23 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tab strip"
+  },
   "type_options_background_color": {
     "message": "background color"
   },
   "type_options_custom_url": {
     "message": "custom URL"
-  },
-  "type_options_default_home_page": {
-    "message": "default home page of Firefox (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "default new tab page of Firefox (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "empty page (about:blank)"
   },
   "type_options_feed": {
     "message": "Mozilla News (German)"

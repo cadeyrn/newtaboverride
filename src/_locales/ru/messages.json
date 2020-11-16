@@ -3,31 +3,28 @@
     "message": "Цвет фона"
   },
   "clear_addressbar_description": {
-    "message": "Автоматическое заполнение адресной строки будет возможно в более поздних версиях Firefox. Это требуют изменения Mozilla."
+    "message": "Автоочистка адресной строки или выбор URL-адреса в настоящее время невозможны для WebExtensions. Это изменение требуется со стороны Mozilla."
   },
   "clear_addressbar_title": {
-    "message": "Очистить адресную строку"
-  },
-  "default_option_description": {
-    "message": "Чтобы использовать страницу Firefox по умолчанию, откройте about:addons и отключите расширение New Tab Override (удаление не требуется)."
+    "message": "Очистить адресную строку / выбрать URL-адрес"
   },
   "extension_description": {
-    "message": "New Tab Override возвращает возможность изменения страницы, отображаемой при открытии новой вкладки"
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
   },
   "feed_published_at": {
-    "message": "Опубликован:"
+    "message": "Опубликовано:"
   },
   "feed_read_more": {
-    "message": "Читать далее…"
+    "message": "Подробнее..."
   },
   "feed_title": {
     "message": "Новости Mozilla"
   },
   "focus_website_description": {
-    "message": "Установить фокус на веб-страницу вместо адресной строки"
+    "message": "Установить фокус на веб-странице вместо адресной строки"
   },
   "focus_website_title": {
     "message": "Фокус"
@@ -36,79 +33,67 @@
     "message": "New Tab Override на GitHub"
   },
   "github_notice": {
-    "message": "Есть пожелания или хотите сообщить об ошибке? Создайте issue на GitHub:"
+    "message": "Запросы функций или сообщение об ошибке? Откройте вопрос на GitHub:"
   },
   "homepage_description": {
-    "message": "Если эта опция включена, Firefox также будет использовать домашнюю страницу в качестве новой вкладки. Вы можете изменить домашнюю страницу, введя about:preferences#general в адресной строке. Поддерживаются только домашние страницы, начинающиеся с http: // или https: //. Если настроено несколько домашних страниц, New Tab Override будет использовать первую."
+    "message": "Если эта опция включена, Firefox будет использовать домашнюю страницу в качестве новой страницы вкладки. Вы можете изменить домашнюю страницу, введя about:preferences#home в адресной строке. Поддерживаются только домашние страницы, начинающиеся с http:// или https://. Если настроено несколько домашних страниц, то New Tab Override будет использовать первую."
   },
-  "introduction_part_one": {
-    "message": "Эта страница предоставлена"
-  },
-  "introduction_part_two": {
-    "message": "Выберите, какую страницу следует открыть в качестве новой вкладки!"
+  "introduction": {
+    "message": "Эта страница предоставлена {0}: Выберите, какая страница должна открываться в качестве новой вкладки!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "Подробнее"
   },
   "local_file_delete_confirmation": {
-    "message": "Вы действительно хотите удалить файл из хранилища расширения?"
+    "message": "Удалить файл из хранилища расширения?"
   },
   "local_file_delete_text": {
-    "message": "удалить существующий файл"
+    "message": "Удалить существующий файл"
   },
   "local_file_description": {
-    "message": "Из-за ограничений Firefox, расширения не могут получить доступ к локальным файлам. New Tab Override предоставляет возможность загружать локальные HTML-файлы в хранилище расширения и использовать их в качестве нового содержимого вкладки. Любые URL-адреса и ссылки на изображения, файлы CSS и файлы JavaScript, которые могут быть включены, должны быть доступны через Интернет, так как Firefox не может получить доступ к локальным файлам в системе. В качестве альтернативы, пожалуйста, рассмотрите возможность использования локального веб-сервера, например, через MAMP или XAMPP, с опцией «Настраиваемый URL». Это работает без каких-либо ограничений."
+    "message": "Из-за ограничений Firefox, расширения не могут получить доступ к локальным файлам. New Tab Override предоставляет вам возможность загружать локальные HTML-файлы в хранилище расширения и использовать их в качестве нового содержимого вкладки. Любые URL-адреса и ссылки на изображения, CSS и JavaScript файлы, которые могут быть включены, должны быть доступны через Интернет, потому что Firefox не может получить доступ к локальным файлам в системе. В качестве альтернативы можно использовать локальный веб-сервер, например, через MAMP или XAMPP, с опцией \"Пользовательский URL-адрес\". Это работает без ограничений."
   },
   "local_file_no_file": {
-    "message": "Вы выбрали параметр «Локальный файл», но не сохранили локальный файл. Пожалуйста, сохраните файл в настройках New Tab Override."
+    "message": "Вы выбрали опцию \"Локальный файл\", но не сохранили локальный файл. Пожалуйста, храните файл в настройках New Tab Override."
   },
   "local_file_title": {
     "message": "Локальный файл"
   },
   "local_file_upload": {
-    "message": "Сохранить локальный файл"
+    "message": "Хранить локальный файл"
   },
   "new_tab_title": {
     "message": "Новая вкладка"
   },
   "omnibox_command_settings": {
-    "message": "Откройте настройки новой вкладки"
+    "message": "Открыть настройки новой вкладки"
   },
   "review_text": {
-    "message": "Вам нравится расширение? Тогда, пожалуйста, оставьте отзыв о"
+    "message": "Вам нравится расширение? Тогда, пожалуйста, оставьте отзыв на"
   },
   "settings_donate": {
     "message": "Пожертвовать"
   },
   "settings_donation_text": {
-    "message": "Пожалуйста, подумайте о пожертвовании, чтобы поддержать продолжающееся развитие этого расширения."
+    "message": "Пожалуйста, подумайте о пожертвовании для поддержки текущей разработки этого расширения."
   },
   "settings_feed_permission_description": {
-    "message": "Firefox требуется разрешение на чтение канала новостей из Soeren-hentzschel.at. Это разрешение можно отменить в любое время."
+    "message": "Firefox требуется разрешение на чтение ленты новостей из soeren-hentzschel.at. Вы можете отозвать это разрешение в любое время."
   },
   "settings_feed_permission_needed": {
-    "message": "Чтобы использовать эту функцию, вы должны разрешить Firefox получать доступ к источнику данных."
+    "message": "Чтобы использовать эту функцию, вы должны разрешить Firefox доступ к источнику данных."
   },
   "settings_feed_permission_revoke_description": {
-    "message": "Firefox требуется разрешение на чтение канала новостей из Soeren-hentzschel.at. Вы уже предоставили это разрешение."
-  },
-  "settings_homepage_permission_description": {
-    "message": "Firefox необходимо разрешение на чтение и изменение настроек браузера. Это разрешение можно отменить в любое время."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Чтобы использовать эту функцию, вы должны разрешить Firefox читать и изменять настройки браузера."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox необходимо разрешение на чтение и изменение настроек браузера. Вы уже предоставили это разрешение."
+    "message": "Firefox требуется разрешение на чтение ленты новостей из soeren-hentzschel.at. Вы уже дали это разрешение."
   },
   "settings_main_caption": {
     "message": "Настройки"
   },
   "settings_permission_action": {
-    "message": "Предоставить разрешение"
+    "message": "Выдать разрешение"
   },
   "settings_permission_revoke_action": {
-    "message": "Отменить разрешение"
+    "message": "Отозвать разрешение"
   },
   "settings_support_caption": {
     "message": "Поддержка"
@@ -119,23 +104,26 @@
   "settings_url_field_placeholder": {
     "message": "URL-адрес"
   },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
   "type_options_background_color": {
-    "message": "Цветной фон"
+    "message": "Цвет фона"
   },
   "type_options_custom_url": {
-    "message": "Настраевыемый URL"
-  },
-  "type_options_default_home_page": {
-    "message": "Домашняя страница Firefox по умолчанию (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "Новая вкладка Firefox по умолчанию (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "Пустая страница (about:blank)"
+    "message": "Пользовательский URL-адрес"
   },
   "type_options_feed": {
-    "message": "Новости Mozilla (Германия)"
+    "message": "Новости Mozilla (German)"
   },
   "type_options_homepage": {
     "message": "Текущая домашняя страница"
@@ -144,18 +132,18 @@
     "message": "Локальный файл"
   },
   "type_title": {
-    "message": "Опция"
+    "message": "Опции"
   },
   "url_description": {
-    "message": "Введенная здесь веб-страница отображается при открытии новой вкладки. Поддерживаются только URL-адреса, начинающиеся с http: // или https: //. Пожалуйста, обратите внимание: Доступ к локальным файлам по URL-адресу больше невозможен из-за ограничений Firefox. Пожалуйста, рассмотрите возможность использования «Локального файла» или локального веб-сервера, например, через MAMP или XAMPP."
+    "message": "Введенная здесь веб-страница будет отображаться при открытии новой вкладки. Поддерживаются только URL-адреса начинающиеся с http:// или https:// . Обратите внимание: Доступ к локальным файлам по URL больше невозможен из-за ограничений Firefox. Пожалуйста, подумайте об использовании опции \"Локальный файл\" или локального веб-сервера, например, через MAMP или XAMPP."
   },
   "url_title": {
     "message": "URL-адрес"
   },
   "url_validation_default": {
-    "message": "Этот URL-адрес не допустим."
+    "message": "Это недопустимый URL-адрес."
   },
   "url_validation_file": {
-    "message": "Доступ к локальным файлам по URL-адресу больше невозможен для расширений."
+    "message": "Доступ к локальным файлам через URL-адрес больше не возможно для расширений."
   }
 }

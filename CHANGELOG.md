@@ -1,8 +1,171 @@
-# Firefox Add-on: New Tab Override (WebExtension)
+# Firefox Add-on: New Tab Override
 
 ## Release Notes
 
-### (Work in Progress) Version 11.0.0 (2017-11-xx)
+### Version 15.0.0 (2020-08-03)
+
+- [ENHANCEMENT] **Focus option!** The option to set the focus to either the web page or the address bar has been
+  reintroduced. That's why the cookies permission is needed again (as in New Tab Override 14.3.0 and older). This
+  feature is only available in Firefox 80 and newer.
+- [ENHANCEMENT] **Tab position!** You can now change the opening position of new tabs. That's why the browser settings
+  permission is no longer optional and requested for all users at install time.
+- [ENHANCEMENT] **Dark mode support!** When the system-wide dark mode is enabled, the options interface of
+  New Tab Override is dark now.
+- [TRANSLATION] added Ukrainian translation (Thanks, Bergil32!)
+- [DEPENDENCY] updated eslint from version 6.8.0 to 7.6.0
+- [DEPENDENCY] updated eslint-plugin-compat from version 3.3.0 to 3.8.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.0.2 to 3.1.2
+- [DEPENDENCY] updated eslint-plugin-xss from version 0.1.9 to 0.1.10
+- [DEPENDENCY] updated gulp-htmllint from version 0.0.16 to 0.0.19
+- [DEPENDENCY] updated gulp-jsdoc3 from version 2.0.0 to 3.0.0
+- [DEPENDENCY] updated gulp-stylelint from version 11.0.0 to 13.0.0
+- [DEPENDENCY] updated jsdoc from version 3.6.3 to 3.6.5
+- [DEPENDENCY] updated stylelint from version 12.0.1 to 13.6.1
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.7.0 to 1.8.0
+- [DEPENDENCY] updated stylelint-order from version 3.1.1 to 4.1.0
+- [DEPENDENCY] updated web-ext from version 4.0.0 to 5.0.0
+
+**Minimum required Firefox version is Firefox 78 now.**
+
+### Version 14.4.0 (2019-12-29)
+
+- [CHANGE] **no longer requires the "cookies" permission** because it was only needed for an unused code path
+- [CHANGE] updated the description of the add-on
+- [CHANGE] changed copyright year from 2019 to 2020
+- [TRANSLATION] added Russian translation (Thanks, vanja-san!)
+- [CODE QUALITY] replaced deprecated method call, fixes [#193](https://github.com/cadeyrn/newtaboverride/issues/193)
+- [DEPENDENCY] updated eslint from version 6.0.1 to 6.8.0 and updated configuration
+- [DEPENDENCY] updated eslint-plugin-compat from version 3.2.0 to 3.3.0
+- [DEPENDENCY] updated gulp-stylelint from version 9.0.0 to 11.0.0
+- [DEPENDENCY] updated jsdoc from version 3.6.2 to 3.6.3
+- [DEPENDENCY] updated stylelint from version 10.1.0 to 12.0.1 and updated configuration
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.3.0 to 1.7.0
+- [DEPENDENCY] updated stylelint-order from version 3.0.0 to 3.1.1
+- [DEPENDENCY] updated web-ext from version 3.1.0 to 4.0.0
+
+**Minimum required Firefox version is Firefox 68 now.**
+
+### Version 14.3.0 (2019-06-30)
+
+- [ENHANCEMENT] **removed the option to set the focus to the web page instead of the address bar since the focus is
+  now always on the web page due to a change by Mozilla**
+- [TRANSLATION] fixed typo in German translation
+- [DEPENDENCY] updated eslint from version 5.11.1 to 6.0.1
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.6.3 to 3.2.0
+- [DEPENDENCY] updated eslint-plugin-promise from version 4.0.1 to 4.2.1
+- [DEPENDENCY] updated gulp from version 4.0.0 to 4.0.2
+- [DEPENDENCY] updated gulp-eslint from version 5.0.0 to 6.0.0
+- [DEPENDENCY] updated gulp-stylelint from version 8.0.0 to 9.0.0
+- [DEPENDENCY] updated htmllint from version 0.7.3 to 0.8.0
+- [DEPENDENCY] updated jsdoc from version 3.5.5 to 3.6.2
+- [DEPENDENCY] updated stylelint from version 9.9.0 to 10.1.0
+- [DEPENDENCY] updated stylelint-order from version 2.0.0 to 3.0.0
+- [DEPENDENCY] updated web-ext from version 2.9.3 to 3.1.0
+
+**Minimum required Firefox version is Firefox 67 now.**
+
+### Version 14.2.0 (2018-12-29)
+
+- [CHANGE] changed copyright year from 2018 to 2019
+- [CHANGE] changed default amount of the donation button to the same value as on addons.mozilla.org
+- [CHANGE] added utm parameters to link in footer of option's page
+- [DEPENDENCY] added eslint-plugin-promise 4.0.1 as new dependency
+- [DEPENDENCY] updated eslint from version 5.2.0 to 5.11.1 and updated eslint configuration
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.5.1 to 2.6.3
+- [DEPENDENCY] updated gulp from version 3.9.1 to 4.0.0
+- [DEPENDENCY] updated gulp-htmllint from version 0.0.15 to 0.0.16
+- [DEPENDENCY] updated gulp-stylelint from version 7.0.0 to 8.0.0
+- [DEPENDENCY] updated htmllint from version 0.7.2 to 0.7.3 and updated htmllint configuration
+- [DEPENDENCY] updated npm-run-all from version 4.1.3 to 4.1.5
+- [DEPENDENCY] updated stylelint from version 9.3.0 to 9.9.0 and updated stylelint configuration
+- [DEPENDENCY] updated stylelint-order from version 0.8.1 to 2.0.0
+- [DEPENDENCY] updated web-ext from version 2.7.0 to 2.9.3
+
+**Minimum required Firefox version is Firefox 64 now.**
+
+### Version 14.1.0 (2018-07-22)
+
+- [ENHANCEMENT] open the options page of New Tab Override as new tab page if the custom url option is selected and the
+  url field is empty to prevent issues when opening a new tab and to make it more clear that an empty string is not
+  a valid URL, fixes [#164](https://github.com/cadeyrn/newtaboverride/issues/164)
+- [ENHANCEMENT] added validation for non-empty strings in URL field on options page
+- [DEPENDENCY] updated eslint from version 5.0.1 to 5.2.0
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.4.0 to 2.5.1
+
+### Version 14.0.2 (2018-07-09)
+
+- [BUGFIX] The bugfix in 14.0.1 was broken, sorry about that!
+
+### Version 14.0.1 (2018-07-09)
+
+- [BUGFIX] There was a regression in version 14.0.0 that caused the local file option to stop working, fixes
+  [#158](https://github.com/cadeyrn/newtaboverride/issues/158)
+
+### Version 14.0.0 (2018-07-08)
+
+- [ENHANCEMENT] **removed "about:home" and "about:blank" options because there are visible options in the preferences
+  of Firefox 61 and both WebExtension options are broken in Firefox 61 anyway**
+- [TRANSLATION] added Italian translation (Thanks, Mozilla community!)
+- [TRANSLATION] added Brazilian Portuguese translation (Thanks, Mozilla community!)
+- [TRANSLATION] updated French translation (Thanks, Mozilla community!)
+- [TRANSLATION] updated Chinese translation (Thanks, Mozilla community!)
+- [TRANSLATION] updated Spanish translation (Thanks, Mozilla community!)
+- [DEPENDENCY] migrated from gulp-html-lint 0.0.2 to gulp-htmllint 0.0.15 because gulp-html-lint is no longer maintained
+- [DEPENDENCY] updated eslint from version 4.19.1 to 5.0.1
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.3.0 to 2.4.0
+- [DEPENDENCY] updated gulp-eslint from version 4.0.2 to 5.0.0
+- [DEPENDENCY] updated stylelint from version 9.2.1 to 9.3.0
+
+**Minimum required Firefox version is Firefox 61 now.**
+
+### Version 13.0.0 (2018-06-09)
+
+- [BUGFIX] **Mozilla broke the "about:blank" option of New Tab Override in Firefox 60 ("about:blank in address bar instead of
+  an empty address bar), implemented ugly workaround to make this option usable again**, fixes
+  [#133](https://github.com/cadeyrn/newtaboverride/issues/133)
+- [BUGFIX] The "about:blank" option didn't work if the url field of the "custom url" option was not empty
+- [ENHANCEMENT] removed "default new tab" pseudo option and migrated users to "about:blank" option
+- [ENHANCEMENT] improved localization architecture to better support other languages (Thanks, tiansh!)
+- [TRANSLATION] added Chinese, Simplified translation (Thanks, tiansh!)
+- [TRANSLATION] added Spanish translation (Thanks, MissingUser!)
+- [TRANSLATION] added Swedish translation (Thanks, Sopor-!)
+- [DEPENDENCY] updated eslint from version 4.17.0 to 4.19.1
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.2.0 to 2.3.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.2 to 3.0.2
+- [DEPENDENCY] updated gulp-jsdoc from version 1.0.1 to 2.0.0
+- [DEPENDENCY] updated gulp-stylelint from version 6.0.0 to 7.0.0
+- [DEPENDENCY] updated htmllint from version 0.7.0 to 0.7.2 and added one new rule
+- [DEPENDENCY] updated npm-run-all from version 4.1.2 to 4.1.3
+- [DEPENDENCY] updated stylelint from version 8.4.0 to 9.2.1
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.1 to 1.3.0
+- [DEPENDENCY] updated stylelint-order from version 0.8.0 to 0.8.1
+- [DEPENDENCY] updated web-ext from version 2.4.0 to 2.7.0
+
+**Minimum required Firefox version is Firefox 60 now.**
+
+### Version 12.0.0 (2018-02-03)
+
+- [ENHANCEMENT] extract the content of the <title> tag and use it as tab title when the local file option is used,
+  fixes [#108](https://github.com/cadeyrn/newtaboverride/issues/108)
+- [ENHANCEMENT] offer option to set focus on web page instead of address bar also for about:blank, can be useful in
+  conjunction with other add-ons like Vimium-FF, fixes [#92](https://github.com/cadeyrn/newtaboverride/issues/92)
+- [ENHANCEMENT] explicitly set background color for body in CSS to avoid visual problems on settings page with
+  non-default values for browser.display.background_color
+- [TRANSLATION] removed Russian and Chinese translations because of non responding translators
+- [DEPENDENCY] updated eslint from version 4.10.0 to 4.17.0 and added one new rule
+- [DEPENDENCY] updated eslint-plugin-compat from version 2.1.0 to 2.2.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 2.0.1 to 2.0.2
+- [DEPENDENCY] updated eslint-plugin-xss from version 0.1.8 to 0.1.9
+- [DEPENDENCY] updated gulp-eslint from version 4.0.0 to 4.0.2
+- [DEPENDENCY] updated gulp-stylelint from version 5.0.0 to 6.0.0
+- [DEPENDENCY] updated stylelint from version 8.2.0 to 8.4.0 and added two new rules
+- [DEPENDENCY] updated stylelint-csstree-validator from version 1.2.0 to 1.2.1
+- [DEPENDENCY] updated stylelint-order from version 0.7.0 to 0.8.0
+- [DEPENDENCY] updated web-ext from version 2.2.2 to 2.4.0
+
+**Minimum required Firefox version is Firefox 58 now.**
+
+### Version 11.0.0 (2017-11-07)
 
 - [ENHANCEMENT] support the edge case of opening a new tab in the background, can be useful in conjunction with add-ons
   like Gesturefy (Thanks, s25g5d4!), fixes [#81](https://github.com/cadeyrn/newtaboverride/issues/81)
@@ -15,6 +178,7 @@
 - [DEPENDENCY] updated eslint from version 4.9.0 to 4.10.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 2.0.1 to 2.1.0
 - [DEPENDENCY] updated htmllint from version 0.6.0 to 0.7.0
+- [DEPENDENCY] updated npm-run-all from version 4.1.1 to 4.1.2
 
 **Minimum required Firefox version is Firefox 57 now.**
 
@@ -164,7 +328,7 @@ Missing features:
 - [BUGFIX] settings UI was broken since version 3.1 for users with history set to "never remember" or in private
   browsing mode (Thanks, noitidart and NilkasG!)
 - [TRANSLATION] updated Dutch translation (Thanks, Tonnes!)
-- [DEPENDENCY] compiled with JPM 1.2.2 (before: 1.2.0) 
+- [DEPENDENCY] compiled with JPM 1.2.2 (before: 1.2.0)
 
 ### Version 4.0.1 (2016-10-10)
 
@@ -174,7 +338,7 @@ Missing features:
 
 - [ENHANCEMENT] new option for new tabs: the latest news about Mozilla (German)
 - [CODE QUALITY] internal code optimizations
-- [DEPENDENCY] compiled with JPM 1.2.0 (before: 1.1.4) 
+- [DEPENDENCY] compiled with JPM 1.2.0 (before: 1.1.4)
 
 ### Version 3.1.0 (2016-09-20)
 
@@ -198,7 +362,7 @@ Missing features:
 - [DEPENDENCY] compiled with JPM 1.0.7 (before: 1.0.4)
 
 **Minimum required Firefox version is Firefox 45 now.**
-  
+
 ### Version 2.3.1 (2016-01-19)
 
 - [BUGFIX] Workaround for Bugzilla #1240559 (New Tab Override works in Firefox 43 Stable, Firefox 45 Developer Edition
@@ -219,12 +383,12 @@ Missing features:
 
 - [ENHANCEMENT] added about:sync-tabs as new predefined option
 - [ENHANCEMENT] added URL validation for custom URLs (not only for the clipboard option)
-- [ENHANCEMENT] extended URL validation to about: pages 
+- [ENHANCEMENT] extended URL validation to about: pages
 - [BUGFIX] compatibility with Firefox 43.0.1 (fixed bug in the version detection)
 
 ### Version 2.1.0 (2015-11-28)
 
-- [ENHANCEMENT] Better validation for URLs in the clipboard option. 
+- [ENHANCEMENT] Better validation for URLs in the clipboard option.
 - [BUGFIX] New implementation of the clipboard option. In the last version the new tab page opened instead of the
   desired page under certain circumstances.
 
@@ -233,7 +397,7 @@ Missing features:
 - [ENHANCEMENT] about:blank, about:home and about:newtab as predefined options
 - [ENHANCEMENT] option to use homepage as new tab page
 - [ENHANCEMENT] option to use last url from clipboard as new tab page
-- [ENHANCEMENT] Firefox 44+: use of AboutNewTabService instead of NewTabURL.jsm 
+- [ENHANCEMENT] Firefox 44+: use of AboutNewTabService instead of NewTabURL.jsm
 
 ### Version 1.1.0 (2015-10-18)
 

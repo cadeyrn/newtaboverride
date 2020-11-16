@@ -1,11 +1,12 @@
 'use strict';
 
-/* global defaults, permissions, utils */
+/* global URI_REGEX, PERMISSION_FEED, defaults, permissions, utils */
+
+const FIREFOX_80 = 80;
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
 const elClearOption = document.getElementById('clear-option');
-const elDefaultOption = document.getElementById('default-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
 const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-container');
@@ -13,13 +14,10 @@ const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revok
 const elFocusOption = document.getElementById('focus-option');
 const elFocusWebsite = document.getElementById('focus-website');
 const elHomepageOption = document.getElementById('homepage-option');
-const elHomepagePermission = document.getElementById('homepage-permission-container');
-const elHomepagePermissionBtn = document.getElementById('homepage-permission');
-const elHomepagePermissionRevoke = document.getElementById('homepage-permission-revoke-container');
-const elHomepagePermissionRevokeBtn = document.getElementById('homepage-permission-revoke');
 const elLocalFile = document.getElementById('local-file');
 const elLocalFileDeleteLink = document.getElementById('delete-local-file');
 const elLocalFileOption = document.getElementById('local-file-option');
+const elTabPosition = document.getElementById('tab-position');
 const elType = document.getElementById('type');
 const elUrl = document.getElementById('url');
 const elUrlOption = document.getElementById('url-option');
@@ -29,6 +27,8 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
+  focusOptionAvailable : false,
+
   /**
    * prepend "http://" to string if the string does not start with "http://" or "https://"
    *
@@ -37,11 +37,24 @@ const options = {
    * @returns {string} - URL with protocol
    */
   getValidUri (string) {
-    if (!URI_REGEX.test(string) && string !== '' && string !== 'about:blank' && string !== 'about:home') {
+    if (!URI_REGEX.test(string) && string !== '') {
       return 'http://' + string;
     }
 
     return string;
+  },
+
+  /**
+   * This method will be fired on add-on init.
+   *
+   * @param {Object} info - an object containing information about the browser
+   *
+   * @returns {void}
+   */
+  init (info) {
+    if (utils.parseVersion(info.version).major >= FIREFOX_80) {
+      options.focusOptionAvailable = true;
+    }
   },
 
   /**
@@ -50,7 +63,6 @@ const options = {
    * @returns {void}
    */
   async toggleOptionsDetails () {
-    let showDisableNotice = false;
     let showUrlOption = false;
     let showHomepageOption = false;
     let showFocusOption = false;
@@ -59,34 +71,24 @@ const options = {
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
 
-    // default new tab page
-    if (elType.options[elType.selectedIndex].value === 'default') {
-      showDisableNotice = true;
-    }
-
-    // about:home
-    if (elType.options[elType.selectedIndex].value === 'about:home') {
-      showFocusOption = true;
-    }
-
     // home page
     if (elType.options[elType.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
-      showFocusOption = true;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // custom url
     if (elType.options[elType.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
-      showFocusOption = true;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // local file
     if (elType.options[elType.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
-      showFocusOption = true;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
 
       const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
@@ -98,17 +100,16 @@ const options = {
     // background color
     if (elType.options[elType.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
-      showFocusOption = true;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
     // feed
     if (elType.options[elType.selectedIndex].value === 'feed') {
-      showFocusOption = true;
+      showFocusOption = options.focusOptionAvailable;
       showClearOption = true;
     }
 
-    options.toggleVisibility(elDefaultOption, showDisableNotice);
     options.toggleVisibility(elUrlOption, showUrlOption);
     options.toggleVisibility(elHomepageOption, showHomepageOption);
     options.toggleVisibility(elFocusOption, showFocusOption);
@@ -138,19 +139,22 @@ const options = {
    */
   async load () {
     const option = await browser.storage.local.get(defaults);
+    const tabPosition = await browser.browserSettings.newTabPosition.get({});
 
     elFocusWebsite.checked = option.focus_website;
     elType.querySelector('[value="' + option.type + '"]').selected = true;
+    elTabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
     elUrl.value = option.url;
     elBackgroundColor.value = option.background_color;
     options.toggleOptionsDetails();
 
-    if (option.type === 'homepage') {
-      permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
-    }
-
     if (option.type === 'feed') {
       permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
+    }
+
+    if (elUrl.value === '') {
+      elUrl.classList.add('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
     }
   }
 };
@@ -158,19 +162,11 @@ const options = {
 document.addEventListener('DOMContentLoaded', options.load);
 
 permissions.setupListeners({
-  permission: PERMISSION_FEED,
-  elGrantPermissionContainer: elFeedPermission,
-  elRevokePermissionContainer: elFeedPermissionRevoke,
-  elGrantBtn: elFeedPermissionBtn,
-  elRevokeBtn: elFeedPermissionRevokeBtn,
-});
-
-permissions.setupListeners({
-  permission: PERMISSION_HOMEPAGE,
-  elGrantPermissionContainer: elHomepagePermission,
-  elRevokePermissionContainer: elHomepagePermissionRevoke,
-  elGrantBtn: elHomepagePermissionBtn,
-  elRevokeBtn: elHomepagePermissionRevokeBtn,
+  permission : PERMISSION_FEED,
+  elGrantPermissionContainer : elFeedPermission,
+  elRevokePermissionContainer : elFeedPermissionRevoke,
+  elGrantBtn : elFeedPermissionBtn,
+  elRevokeBtn : elFeedPermissionRevokeBtn
 });
 
 elFocusWebsite.addEventListener('change', (e) => {
@@ -178,14 +174,6 @@ elFocusWebsite.addEventListener('change', (e) => {
 });
 
 elType.addEventListener('change', (e) => {
-  if (e.target.value === 'homepage') {
-    permissions.testPermission(PERMISSION_HOMEPAGE, elHomepagePermission, elHomepagePermissionRevoke);
-  }
-  else {
-    elHomepagePermission.classList.add('hidden');
-    elHomepagePermissionRevoke.classList.add('hidden');
-  }
-
   if (e.target.value === 'feed') {
     permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
   }
@@ -198,6 +186,10 @@ elType.addEventListener('change', (e) => {
   options.toggleOptionsDetails();
 });
 
+elTabPosition.addEventListener('change', (e) => {
+  browser.browserSettings.newTabPosition.set({ value : e.target.value });
+});
+
 elUrl.addEventListener('input', (e) => {
   // local file access is not allowed for WebExtensions
   if (e.target.value.startsWith('file://')) {
@@ -206,10 +198,18 @@ elUrl.addEventListener('input', (e) => {
   }
   // set url
   else {
-    elUrl.classList.remove('error');
     elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
 
-    browser.storage.local.set({ url : options.getValidUri(e.target.value) });
+    if (e.target.value.trim() === '') {
+      elUrl.classList.add('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+    }
+    else {
+      elUrl.classList.remove('error');
+      elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
+    }
+
+    browser.storage.local.set({ url : options.getValidUri(e.target.value.trim()) });
   }
 });
 
@@ -240,3 +240,5 @@ elLocalFileDeleteLink.addEventListener('click', (e) => {
   browser.storage.local.set({ local_file : '' });
   options.toggleVisibility(elLocalFileDeleteLink, false);
 });
+
+browser.runtime.getBrowserInfo().then(options.init).catch();

@@ -3,6 +3,7 @@
 /* global utils */
 
 const OPTIONS_PAGE = 'html/options.html';
+const REMOVED_IN_VERSION = 14;
 
 /**
  * @exports newtaboverride
@@ -17,10 +18,20 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  onInstalledHandler (details) {
+  async onInstalledHandler (details) {
     // new install
     if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
+    }
+    // update
+    if (details.reason === 'update') {
+      if (utils.parseVersion(details.previousVersion).major < REMOVED_IN_VERSION) {
+        const option = await browser.storage.local.get();
+
+        if (option.type === 'default' || option.type === 'about:blank' || option.type === 'about:home') {
+          browser.storage.local.set({ type : 'custom_url' });
+        }
+      }
     }
   },
 
@@ -81,7 +92,7 @@ const newtaboverride = {
    * @returns {void}
    */
   openUserInterface () {
-    const url = browser.extension.getURL(OPTIONS_PAGE);
+    const url = browser.runtime.getURL(OPTIONS_PAGE);
 
     browser.browserAction.setBadgeText({ text : '' });
     browser.tabs.query({}, (tabs) => {

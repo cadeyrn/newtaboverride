@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "Cor de fundo"
+  },
+  "clear_addressbar_description": {
+    "message": "A limpeza automática da barra de endereços ou selecionar a URL atualmente não é possível para WebExtensions. Isto requer uma mudança pela Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Limpar a barra de endereços / Selecionar URL"
+  },
+  "extension_description": {
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Publicado:"
+  },
+  "feed_read_more": {
+    "message": "Leia mais…"
+  },
+  "feed_title": {
+    "message": "Notícias da Mozilla"
+  },
+  "focus_website_description": {
+    "message": "Colocar o foco na página em vez da barra de endereços"
+  },
+  "focus_website_title": {
+    "message": "Foco"
+  },
+  "github_link": {
+    "message": "New Tab Override no GitHub"
+  },
+  "github_notice": {
+    "message": "Solicitações de recursos ou reportar erros? Abra um ticket no GitHub:"
+  },
+  "homepage_description": {
+    "message": "Se esta opção estiver ativada, o Firefox usará a página inicial também como página de nova aba. Você pode alterar a página inicial digitando about:preferences#home na barra de endereços. São suportadas apenas páginas começando com http:// ou https://. Se várias páginas iniciais estiverem configuradas, o New Tab Override usará a primeira."
+  },
+  "introduction": {
+    "message": "Esta página é fornecida por {0}: Selecione que página deve ser aberta como nova aba!"
+  },
+  "learn_more": {
+    "message": "Saiba mais"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Tem certeza que deseja excluir o arquivo do armazenamento da extensão?"
+  },
+  "local_file_delete_text": {
+    "message": "excluir o arquivo existente"
+  },
+  "local_file_description": {
+    "message": "Devido a restrições do Firefox, não é possível para extensões acessar arquivos locais. O New Tab Override fornece a possibilidade de carregar arquivos HTML locais no armazenamento da extensão e usá-los como conteúdo de nova aba. Quaisquer URLs e links para imagens, arquivos CSS e arquivos JavaScript que possam ser incluídos devem estar acessíveis através da web, porque o Firefox não permite acessar arquivos locais no sistema. Como alternativa, considere usar um servidor web local, por exemplo através do MAMP ou XAMPP, com a opção \"URL personalizada\". Isso funciona sem qualquer restrição."
+  },
+  "local_file_no_file": {
+    "message": "Você selecionou a opção \"arquivo local\", mas não armazenou um arquivo local. Armazene um arquivo nas configurações do New Tab Override."
+  },
+  "local_file_title": {
+    "message": "Arquivo local"
+  },
+  "local_file_upload": {
+    "message": "Armazenar localmente um arquivo"
+  },
+  "new_tab_title": {
+    "message": "Nova aba"
+  },
+  "omnibox_command_settings": {
+    "message": "Abrir as configurações de nova aba"
+  },
+  "review_text": {
+    "message": "Você gostou dessa extensão? Por favor deixe uma avaliação"
+  },
+  "settings_donate": {
+    "message": "Doar"
+  },
+  "settings_donation_text": {
+    "message": "Por favor, considere uma doação para apoiar o desenvolvimento contínuo desta extensão."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox precisa de sua permissão para ler o feed de soeren-hentzschel.at. Você pode revogar essa permissão a qualquer momento."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Para usar esse recurso, você precisa permitir que o Firefox acesse a fonte de dados."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox precisa de sua permissão para ler o feed de soeren-hentzschel.at. Você já concedeu essa permissão."
+  },
+  "settings_main_caption": {
+    "message": "Configurações"
+  },
+  "settings_permission_action": {
+    "message": "Conceder permissão"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Revogar permissão"
+  },
+  "settings_support_caption": {
+    "message": "Suporte"
+  },
+  "settings_title": {
+    "message": "Nova aba - Configurações"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
+  "type_options_background_color": {
+    "message": "cor de fundo"
+  },
+  "type_options_custom_url": {
+    "message": "URL personalizada"
+  },
+  "type_options_feed": {
+    "message": "Noticias da Mozilla (alemão)"
+  },
+  "type_options_homepage": {
+    "message": "página inicial atual"
+  },
+  "type_options_local_file": {
+    "message": "arquivo local"
+  },
+  "type_title": {
+    "message": "Opções"
+  },
+  "url_description": {
+    "message": "A pagina cadastrada aqui é exibida ao abrir uma nova aba. Somente URLs começadas com http:// ou https:// são suportadas. Observação: acesso a arquivos locais através de URL não é mais possível devido a restrições do Firefox. Considere usar a opção \"arquivo local\" ou um servidor web local, por exemplo MAMP ou XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Esta não é uma URL válida."
+  },
+  "url_validation_file": {
+    "message": "Acesso aos arquivos locais via URL não é mais possível para extensões."
+  }
+}

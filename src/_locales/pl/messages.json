@@ -8,11 +8,8 @@
   "clear_addressbar_title": {
     "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
-  "default_option_description": {
-    "message": "Aby używać domyślnej strony Firefoksa, otwórz about:addons i wyłącz rozszerzenie New Tab Override (nie wymaga odinstalowania)."
-  },
   "extension_description": {
-    "message": "New Tab Override przywraca możliwość zmiany strony, która jest wyświetlana po otwarciu nowej karty"
+    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -39,13 +36,10 @@
     "message": "Prośba o funkcję lub zgłoszenie błędu? Otwórz wątek na GitHub:"
   },
   "homepage_description": {
-    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#general w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
+    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#home w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
   },
-  "introduction_part_one": {
-    "message": "Ta strona jest dostarczona przez"
-  },
-  "introduction_part_two": {
-    "message": "Wybierz stronę, która powinna być otwierana jako nowa karta!"
+  "introduction": {
+    "message": "Ta strona jest dostarczona przez {0}: Wybierz stronę, która powinna być otwierana jako nowa karta!"
   },
   "learn_more": {
     "message": "Więcej informacji"
@@ -92,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox potrzebuje twojego pozwolenia na odczyt kanału informacyjnego ze strony soeren-hentzschel.at. To pozwolenie zostało już udzielone."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. Możesz cofnąć to uprawnienie w każdej chwili."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Aby używać tej funkcji musisz zezwolić Firefoksowi na odczyt i modyfikację ustawień przeglądarki."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox potrzebuje twojego pozwolenia na odczyt i modyfikację ustawień przeglądarki. To pozwolenie zostało już udzielone."
-  },
   "settings_main_caption": {
     "message": "Ustawienia"
   },
@@ -119,20 +104,23 @@
   "settings_url_field_placeholder": {
     "message": "Adres URL"
   },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Open all new tabs next to the current tab"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Open all new tabs at the end of the tabstrip"
+  },
   "type_options_background_color": {
     "message": "kolorowe tło"
   },
   "type_options_custom_url": {
     "message": "niestandardowy adres URL"
-  },
-  "type_options_default_home_page": {
-    "message": "domyślna strona startowa Firefoksa (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "domyślna nowa karta Firefoksa (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "pusta strona (about:blank)"
   },
   "type_options_feed": {
     "message": "Aktualności Mozilli (Niemiecki)"

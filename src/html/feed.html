@@ -2,50 +2,46 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>__MSG_feed_title__</title>
+  <title data-i18n='feed_title'></title>
   <link rel='stylesheet' href='../css/common.css' />
   <link rel='stylesheet' href='../css/feed.css' />
   <link rel='icon' type='image/png' href='../images/icon.svg' />
 </head>
 <body>
   <header>
-    <h1>__MSG_feed_title__</h1>
+    <h1 data-i18n='feed_title'></h1>
   </header>
   <main>
     <section>
       <div class='grey-bg'>
         <div id='throbber-wrapper'><div id='throbber'></div></div>
         <div id='permission-needed' class='hidden'>
-          <div class='info-icon'>__MSG_settings_feed_permission_needed__</div>
-          <a href='options.html' class='button'>__MSG_settings_permission_action__</a>
+          <div data-i18n='settings_feed_permission_needed' class='info-icon'></div>
+          <a data-i18n='settings_permission_action' href='options.html' class='button'></a>
         </div>
         <ul id='feed-items'></ul>
       </div>
     </section>
     <aside>
       <div class='grey-bg'>
-        <h2>__MSG_settings_support_caption__</h2>
-        <p>__MSG_settings_donation_text__</p>
-        <a href='https://www.paypal.me/agenedia' class='button' target='_blank' rel='noopener'>
-          __MSG_settings_donate__
-        </a>
+        <h2 data-i18n='settings_support_caption'></h2>
+        <p data-i18n='settings_donation_text'></p>
+        <a data-i18n='settings_donate' href='https://www.paypal.me/agenedia/3' class='button' target='_blank' rel='noopener'></a>
         <p>
-          <span>__MSG_review_text__</span>
+          <span data-i18n='review_text'></span>
           <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>
             addons.mozilla.org</a>.
         </p>
         <p>
-          <span>__MSG_github_notice__</span><br />
-          <a href='https://github.com/cadeyrn/newtaboverride/issues' target='_blank' rel='noopener'>
-            __MSG_github_link__
-          </a>
+          <span data-i18n='github_notice'></span><br />
+          <a data-i18n='github_link' href='https://github.com/cadeyrn/newtaboverride/issues' target='_blank' rel='noopener'></a>
         </p>
       </div>
     </aside>
   </main>
   <footer>
-    <a href='https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/' target='_blank' rel='noopener'>
-      __MSG_extension_name__ © 2015 - 2017, soeren-hentzschel.at
+    <a href='https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/?utm_campaign=webext&utm_term=newtaboverride' target='_blank' rel='noopener'>
+      <span data-i18n='extension_name'></span> © 2015 - 2020, soeren-hentzschel.at
     </a>
   </footer>
   <script src='../js/lib/i18n.js'></script>

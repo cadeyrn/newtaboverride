@@ -3,16 +3,13 @@
     "message": "Slězynowa barwa"
   },
   "clear_addressbar_description": {
-    "message": "Awtomatiske proznjenje adresowego póla buźo zasej móžne w póznjejšych wersijach Firefox. To se změna z boka Mozilla pomina."
+    "message": "Awtomatiske proznjenje  adresowego póla abo markěrowanje URL tuchylu njejo móžne za WebExtensions. To se změna z boka Mozilla pomina."
   },
   "clear_addressbar_title": {
-    "message": "Adresowe pólo wuprozniś"
-  },
-  "default_option_description": {
-    "message": "Aby standardny bok Firefox wužywał, wuwołaj about:addons a znjemóžni rozšyrjenje Tab Override (žedno wótinstalěrowanje trěbne)."
+    "message": "Adresowe pólo wuprozniś / URL markěrowaś"
   },
   "extension_description": {
-    "message": "New Tab Override funkciju slědk pśinjaso, z kótarejuž móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo"
+    "message": "Z New Tab Override móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -39,16 +36,13 @@
     "message": "Žycyš sebje funkcije abo coš zmólki k wěsći daś? Piš rozpšawu na GitHub:"
   },
   "homepage_description": {
-    "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#general do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
+    "message": "Gaž toś to nastajenje zmóžnjaš, Firefox startowy bok teke ako bok za nowy rejtark wužywa. Zapódaj about:preferences#home do adresowego póla, aby startowy bok změnił. Pódpěraju se jano startowe boki, kótarež se z http:// abo https:// zachopinaju. Gaž su někotare startowe boki skonfigurěrowane, buźo New Tab Override prědny wužywaś."
   },
-  "introduction_part_one": {
-    "message": "Toś ten bok staja se k dispoziciji wót"
-  },
-  "introduction_part_two": {
-    "message": "Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"
+  "introduction": {
+    "message": "Toś ten bok staja se k dispoziciji wót {0}: Wubjeŕ, kótary bok ma se ako nowy rejtark wócyniś!"
   },
   "learn_more": {
-    "message": "Learn more"
+    "message": "Dalšne informacije"
   },
   "local_file_delete_confirmation": {
     "message": "Coš napšawdu dataju ze składowaka rozšyrjenja lašowaś?"
@@ -92,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox dowólnosć trjeba, aby powěsćowy kanal soeren-hentzschel.at cytał. Sy toś tu dowólnosć južo dał."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox twóju dowólnosć trjeba, aby nastajenja wobglědowaka cytał a změnił. Móžoš dowólnosć kuždy cas zajmjeś."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Aby mógał toś tu funkciju wužywaś, musyš Firefox dowóliś, nastajenja wobglědowaka cytaś a změniś."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox twóju dowólnosć trjeba, aby nastajenja wobglědowaka cytał a změnił. Sy toś tu dowólnosć južo dał."
-  },
   "settings_main_caption": {
     "message": "Nastajenja"
   },
@@ -119,20 +104,23 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "tab_position_title": {
+    "message": "Rejtarikowa pozicija"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Nowe rejtariki pódla aktualnego rejtarika wócyniś, jolic z nim zwisuju, howac na kóńcu rejtarkoweje rědki (standard)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Wšykne nowe rejtariki pódla aktualnego rejtarika wócyniś"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Wšě rajtarki na kóncu rajtarkoweje lajsty wočinić"
+  },
   "type_options_background_color": {
     "message": "slězynowa barwa"
   },
   "type_options_custom_url": {
     "message": "wót wužywarja definěrowany URL"
-  },
-  "type_options_default_home_page": {
-    "message": "Standardny bok Firefox (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "Standardny bok Firefox za nowy rejtark wužywaś (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "prozny bok (about:blank)"
   },
   "type_options_feed": {
     "message": "Nowinki Mozilla (nimski)"

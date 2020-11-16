@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+dist
 docs
 node_modules
 _TODO.txt

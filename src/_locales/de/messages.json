@@ -8,11 +8,8 @@
   "clear_addressbar_title": {
     "message": "Adressleiste leeren / URL markieren"
   },
-  "default_option_description": {
-    "message": "Zur Verwendung der Standard-Seite von Firefox rufe bitte about:addons auf und deaktiviere die Erweiterung New Tab Override (keine Deinstallation notwendig)."
-  },
   "extension_description": {
-    "message": "New Tab Override bringt die Funktion zurück, die Seite festzulegen, welche beim Öffnen eines neuen Tabs angezeigt wird"
+    "message": "Mit New Tab Override kann die Seite festgelegt werden, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -39,13 +36,10 @@
     "message": "Feature-Wünsche oder Fehler-Bericht? Eröffne ein Ticket auf GitHub:"
   },
   "homepage_description": {
-    "message": "Bei Aktivierung dieser Option verwendet Firefox die Startseite auch als Seite für den neuen Tab. Du kannst die Startseite ändern, indem du about:preferences#general in die Adressleiste eingibst. Nur Startseiten, welche mit http:// oder https:// beginnen, werden unterstützt. Wenn mehrere Startseiten konfiguriert sind, wird New Tab Override die erste nutzen."
+    "message": "Bei Aktivierung dieser Option verwendet Firefox die Startseite auch als Seite für den neuen Tab. Du kannst die Startseite ändern, indem du about:preferences#home in die Adressleiste eingibst. Nur Startseiten, welche mit http:// oder https:// beginnen, werden unterstützt. Wenn mehrere Startseiten konfiguriert sind, wird New Tab Override die erste nutzen."
   },
-  "introduction_part_one": {
-    "message": "Diese Seite wird bereitgestellt von"
-  },
-  "introduction_part_two": {
-    "message": "Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
+  "introduction": {
+    "message": "Diese Seite wird bereitgestellt von {0}: Wähle, welche Seite beim Öffnen eines neuen Tabs angezeigt werden soll!"
   },
   "learn_more": {
     "message": "Weitere Informationen"
@@ -92,15 +86,6 @@
   "settings_feed_permission_revoke_description": {
     "message": "Firefox benötigt deine Erlaubnis, um den News-Feed von soeren-hentzschel.at zu lesen. Du hast diese Berechtigung bereits erteilt."
   },
-  "settings_homepage_permission_description": {
-    "message": "Firefox benötigt deine Erlaubnis, Browser-Einstellungen zu lesen und zu verändern. Die Berechtigung kann jederzeit widerrufen werden."
-  },
-  "settings_homepage_permission_needed": {
-    "message": "Um diese Funktion nutzen zu können, musst du Firefox erlauben, Browser-Einstellungen zu lesen und zu modifizieren."
-  },
-  "settings_homepage_permission_revoke_description": {
-    "message": "Firefox benötigt deine Erlaubnis, um Browser-Einstellungen zu lesen und zu modifizieren. Du hast diese Berechtigung bereits erteilt."
-  },
   "settings_main_caption": {
     "message": "Einstellungen"
   },
@@ -119,20 +104,23 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
+  "tab_position_title": {
+    "message": "Tab-Position"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Neue Tabs neben dem aktuellen Tab öffnen, wenn sie mit diesem zusammenhängen, ansonsten am Ende der Tableiste (Standard)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Alle neuen Tabs neben dem aktuellen Tab öffnen"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Alle neuen Tabs am Ende der Tableiste öffnen"
+  },
   "type_options_background_color": {
     "message": "Hintergrund-Farbe"
   },
   "type_options_custom_url": {
     "message": "benutzerdefinierte URL"
-  },
-  "type_options_default_home_page": {
-    "message": "Standard-Startseite von Firefox (about:home)"
-  },
-  "type_options_default_new_tab": {
-    "message": "Standard-Seite von Firefox für den neuen Tab (about:newtab)"
-  },
-  "type_options_empty_page": {
-    "message": "leere Seite (about:blank)"
   },
   "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"

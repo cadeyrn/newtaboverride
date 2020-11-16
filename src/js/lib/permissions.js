@@ -12,11 +12,11 @@ const permissions = {
    * @returns {void}
    */
   setupListeners (obj) {
-    obj.elGrantBtn.addEventListener('click', function (e) {
+    obj.elGrantBtn.addEventListener('click', (e) => {
       permissions.requestPermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
     });
 
-    obj.elRevokeBtn.addEventListener('click', function (e) {
+    obj.elRevokeBtn.addEventListener('click', (e) => {
       permissions.revokePermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
     });
   },
