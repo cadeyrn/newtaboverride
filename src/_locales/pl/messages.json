@@ -9,7 +9,7 @@
     "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
   "extension_description": {
-    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+    "message": "New Tab Override pozwala na ustawienie strony, która wyświetlana jest po każdym otwarciu nowej karty."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -24,7 +24,7 @@
     "message": "Aktualności Mozilli"
   },
   "focus_website_description": {
-    "message": "Ustaw skupienie na stronie zamiast na pasku adresu"
+    "message": "Ustawienie skupienia na stronie zamiast na pasku adresu"
   },
   "focus_website_title": {
     "message": "Skupienie"
@@ -51,7 +51,7 @@
     "message": "usuń istniejący plik"
   },
   "local_file_description": {
-    "message": "Z powodu ograniczeń Firefoksa  nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
+    "message": "Z powodu ograniczeń Firefoksa nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
   },
   "local_file_no_file": {
     "message": "Wybrano opcję „plik lokalny”, ale nie został on wczytany. Proszę wczytać plik w ustawieniach New Tab Override"
@@ -75,7 +75,7 @@
     "message": "Przekaż darowiznę"
   },
   "settings_donation_text": {
-    "message": "Proszę rozważyć darowiznę na wsparcie ciągłego rozwoju tego rozszerzenia."
+    "message": "Proszę rozważyć przekazanie darowizny na wsparcie ciągłego rozwoju tego rozszerzenia."
   },
   "settings_feed_permission_description": {
     "message": "Firefox potrzebuje twojego pozwolenia na odczyt kanału informacyjnego ze strony soeren-hentzschel.at. Możesz cofnąć to uprawnienie w każdej chwili."
@@ -105,16 +105,16 @@
     "message": "Adres URL"
   },
   "tab_position_title": {
-    "message": "Tab Position"
+    "message": "Pozycja karty"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+    "message": "Otwieranie nowych kart obok obecnej karty, jeśli są one związane z obecną kartą, w przeciwnym razie na końcu paska kart (domyślne)"
   },
   "tab_position_option_afterCurrent": {
-    "message": "Open all new tabs next to the current tab"
+    "message": "Otwieranie wszystkich nowych kart obok obecnej karty"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all new tabs at the end of the tabstrip"
+    "message": "Otwieranie wszystkich nowych kart na końcu paska kart"
   },
   "type_options_background_color": {
     "message": "kolorowe tło"
