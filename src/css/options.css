@@ -100,3 +100,9 @@ input:focus {
 #delete-local-file {
   font-size: 12px;
 }
+
+@media (prefers-color-scheme: dark) {
+  label.has-own-label {
+    color: rgb(171, 171, 172);
+  }
+}
