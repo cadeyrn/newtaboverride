@@ -5,6 +5,7 @@
 ### Version 15.1.0 (2021-05-13)
 
 - [CODE QUALITY] made sure that links are actually links in feed component (AMO review)
+- [DEPENDENCY] updated eslint from version 7.6.0 to 7.26.0
 
 ### Version 15.0.0 (2020-08-03)
 
