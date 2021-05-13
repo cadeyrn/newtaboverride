@@ -9,6 +9,7 @@
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.8.0 to 3.9.0
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.1.2 to 3.1.5
 - [DEPENDENCY] updated eslint-plugin-promise from version 4.2.1 to 5.1.0
+- [DEPENDENCY] updated jsdoc from version 3.6.5 to 3.6.6
 
 ### Version 15.0.0 (2020-08-03)
 
