@@ -9,6 +9,7 @@
 - [TRANSLATION] updated Dutch translation (Thanks, Tonnes!)
 - [TRANSLATION] updated Polish translation (Thanks, WaldiPL!)
 - [TRANSLATION] updated Swedish translation (Thanks, Sopor-!)
+- [CHANGE] changed copyright year from 2020 to 2021
 - [DEPENDENCY] updated eslint from version 7.6.0 to 7.26.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.8.0 to 3.9.0
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.1.2 to 3.1.5
