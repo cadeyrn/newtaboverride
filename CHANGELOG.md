@@ -5,6 +5,7 @@
 ### Version 15.1.0 (2021-05-13)
 
 - [CODE QUALITY] made sure that links are actually links in feed component (AMO review)
+- [TRANSLATION] updated Dutch translation (Thanks, Tonnes!)
 - [DEPENDENCY] updated eslint from version 7.6.0 to 7.26.0
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.8.0 to 3.9.0
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.1.2 to 3.1.5

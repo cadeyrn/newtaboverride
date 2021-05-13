@@ -9,7 +9,7 @@
     "message": "Adresbalk wissen / URL selecteren"
   },
   "extension_description": {
-    "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
+    "message": "Met New Tab Override kunt u de pagina instellen die bij het openen van een nieuw tabblad wordt weergegeven."
   },
   "extension_name": {
     "message": "New Tab Override"
@@ -108,13 +108,13 @@
     "message": "Tab Position"
   },
   "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+    "message": "Nieuwe tabbladen openen naast het huidige tabblad als deze aan het huidige tabblad zijn gerelateerd, anders aan het einde van de tabbladenstrook (standaard)"
   },
   "tab_position_option_afterCurrent": {
-    "message": "Open all new tabs next to the current tab"
+    "message": "Alle nieuwe tabbladen openen naast het huidige tabblad"
   },
   "tab_position_option_atEnd": {
-    "message": "Open all new tabs at the end of the tabstrip"
+    "message": "Alle nieuwe tabbladen openen aan het einde van de tabbladenstrook"
   },
   "type_options_background_color": {
     "message": "achtergrondkleur"
