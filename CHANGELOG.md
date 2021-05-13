@@ -10,6 +10,7 @@
 - [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.1.2 to 3.1.5
 - [DEPENDENCY] updated eslint-plugin-promise from version 4.2.1 to 5.1.0
 - [DEPENDENCY] updated jsdoc from version 3.6.5 to 3.6.6
+- [DEPENDENCY] updated stylelint from version 13.6.1 to 13.13.1
 
 ### Version 15.0.0 (2020-08-03)
 
