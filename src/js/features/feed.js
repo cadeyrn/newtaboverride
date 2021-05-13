@@ -65,16 +65,21 @@ const feed = {
       const br1 = document.createElement('br');
       li.appendChild(br1);
 
-      const a1 = document.createElement('a');
-      a1.setAttribute('href', items[i].link);
-      a1.setAttribute('target', '_blank');
-      a1.setAttribute('rel', 'noopener');
-      li.appendChild(a1);
+      const { link } = items[i];
+      const hasValidWebLink = link.startsWith('https://');
 
-      const strong = document.createElement('strong');
-      a1.appendChild(strong);
-      const text2 = document.createTextNode(items[i].title);
-      strong.appendChild(text2);
+      if (hasValidWebLink) {
+        const a1 = document.createElement('a');
+        a1.setAttribute('href', link);
+        a1.setAttribute('target', '_blank');
+        a1.setAttribute('rel', 'noopener');
+        li.appendChild(a1);
+
+        const strong = document.createElement('strong');
+        a1.appendChild(strong);
+        const text2 = document.createTextNode(items[i].title);
+        strong.appendChild(text2);
+      }
 
       const br2 = document.createElement('br');
       li.appendChild(br2);
@@ -84,15 +89,17 @@ const feed = {
       const text3 = document.createTextNode(description);
       p.appendChild(text3);
 
-      const a2 = document.createElement('a');
-      a2.setAttribute('href', items[i].link);
-      a2.setAttribute('class', 'button readmore-button');
-      a2.setAttribute('target', '_blank');
-      a2.setAttribute('rel', 'noopener');
-      li.appendChild(a2);
+      if (hasValidWebLink) {
+        const a2 = document.createElement('a');
+        a2.setAttribute('href', link);
+        a2.setAttribute('class', 'button readmore-button');
+        a2.setAttribute('target', '_blank');
+        a2.setAttribute('rel', 'noopener');
+        li.appendChild(a2);
 
-      const text4 = document.createTextNode(browser.i18n.getMessage('feed_read_more'));
-      a2.appendChild(text4);
+        const text4 = document.createTextNode(browser.i18n.getMessage('feed_read_more'));
+        a2.appendChild(text4);
+      }
 
       document.getElementById('feed-items').appendChild(docFragment);
     }

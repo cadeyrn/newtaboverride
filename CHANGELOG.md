@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 15.1.0 (2021-05-13)
+
+- [CODE QUALITY] made sure that links are actually links in feed component (AMO review)
+
 ### Version 15.0.0 (2020-08-03)
 
 - [ENHANCEMENT] **Focus option!** The option to set the focus to either the web page or the address bar has been
