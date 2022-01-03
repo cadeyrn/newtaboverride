@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "Warna latar belakang"
+  },
+  "clear_addressbar_description": {
+    "message": "Fitur mengosongkan otomatis untuk pada tempat alamat atau memilih URL saat ini tidak tersedia pada WebExtensions. Hal ini membutuhkan perubahan dari Mozilla."
+  },
+  "clear_addressbar_title": {
+    "message": "Hapus alamat / pilih URL"
+  },
+  "extension_description": {
+    "message": "New Tab Override memungkinkan Anda untuk menyetel halaman secara otomatis setiap kali Anda membuka tab baru."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Dipublikasikan pada:"
+  },
+  "feed_read_more": {
+    "message": "Lihat lebih banyak…"
+  },
+  "feed_title": {
+    "message": "Berita Mozilla"
+  },
+  "focus_website_description": {
+    "message": "Setel fokus pada halaman web, bukan pada bar alamat."
+  },
+  "focus_website_title": {
+    "message": "Fokus"
+  },
+  "github_link": {
+    "message": "Github New Tab Override"
+  },
+  "github_notice": {
+    "message": "Permintaan fitur atau laporan kesalahan? Buka tiket pada Github:"
+  },
+  "homepage_description": {
+    "message": "Jika opsi ini diaktifkan, Firefox akan menggunakan halaman utama sebagai halaman baru. Anda bisa mengubah halaman utama dengan menngetik about:preferences#home di bar alamat. Fitur ini hanya mendukung halaman utama dengan awalan https:// atau https://. Jika ada lebih dari satu halaman utama yang telah dikonfigurasi, New Tab Override akan menggunakan halaman pertama."
+  },
+  "introduction": {
+    "message": "Halaman in didukung oleh {0}: Pilih halaman mana yang akan dibuka sebagai tab baru!"
+  },
+  "learn_more": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Apakah Anda yakin untuk menghapus file ini dari penyimpanan ekstensi?"
+  },
+  "local_file_delete_text": {
+    "message": "hapus file yang ada"
+  },
+  "local_file_description": {
+    "message": "Karena restriksi Firefox, ekstensi ini tidak bisa mengakses file lokal. New Tab Override memberi Anda kemungkinan untuk memuat file HTML lokal ke dalam penyimpanan ekstensi dan menggunakannya sebagai konten pada tab baru. Setiap URL dan tautan ke gambar, file CSS, dan file JavaScript yang mungkin disertakan harus dapat diakses melalui web karena Firefox tidak dapat mengakses file lokal di sistem. Sebagai alternatif, Anda bisa menggunakan server web lokal, misalnya melalui MAMP atau XAMPP, dengan opsi “URL khusus”. Hal ini dapat bekerja tanpa restriksi apapun."
+  },
+  "local_file_no_file": {
+    "message": "Anda memilih opsi “file lokal”, tetapi tidak menyimpan file lokal. Harap simpan file pada pengaturan New Tab Override."
+  },
+  "local_file_title": {
+    "message": "File lokal"
+  },
+  "local_file_upload": {
+    "message": "Simpan file lokal"
+  },
+  "new_tab_title": {
+    "message": "Tab Baru"
+  },
+  "omnibox_command_settings": {
+    "message": "Buka pengaturan tab baru"
+  },
+  "review_text": {
+    "message": "Apakah Anda menyukai ekstensi ini? Silakan tinggalkan ulasan."
+  },
+  "settings_donate": {
+    "message": "Donasi"
+  },
+  "settings_donation_text": {
+    "message": "Donasi dari Anda akan sangat membantu dan mendukung pengembangan dari ekstensi ini."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox memerlukan izin Anda untuk membaca umpan berita dari soeren-hentzschel.at. Anda dapat mencabut izin ini kapan saja."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Untuk menggunakan fitur ini, Anda harus mengizinkan Firefox untuk mengakses sumbe data."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox memerlukan izin Anda untuk membaca umpan berita dari soeren-hentzschel.at. Anda telah memberikan izin ini. "
+  },
+  "settings_main_caption": {
+    "message": "Pengaturan"
+  },
+  "settings_permission_action": {
+    "message": "Memberikan izin"
+  },
+  "settings_permission_revoke_action": {
+    "message": "Cabut izin"
+  },
+  "settings_support_caption": {
+    "message": "Dukungan"
+  },
+  "settings_title": {
+    "message": "Tab Baru — Pengaturan"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "tab_position_title": {
+    "message": "Posisi Tab"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Buka tab baru di sebelah tab saat ini jika terkait dengan tab saat ini, jika tidak di akhir setrip tab (default) "
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Buka semua tab baru di sebelah tab saat ini."
+  },
+  "tab_position_option_atEnd": {
+    "message": "Buka semua tab baru di akhir strip tab"
+  },
+  "type_options_background_color": {
+    "message": "warna latar belakang"
+  },
+  "type_options_custom_url": {
+    "message": "URL khusus"
+  },
+  "type_options_feed": {
+    "message": "Berita Mozilla (Indonesian)"
+  },
+  "type_options_homepage": {
+    "message": "halaman utama saat ini"
+  },
+  "type_options_local_file": {
+    "message": "file lokal"
+  },
+  "type_title": {
+    "message": "Opsi"
+  },
+  "url_description": {
+    "message": "Halaman web yang dimasukkan di sini ditampilkan saat membuka tab baru. Hanya URL yang dimulai dengan http:// atau https:// yang didukung. Harap diperhatikan: Akses ke file lokal melalui URL tidak lagi dimungkinkan karena pembatasan Firefox. Harap pertimbangkan untuk menggunakan opsi “file lokal” atau server web lokal, misalnya melalui MAMP atau XAMPP."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "URL tidak valid."
+  },
+  "url_validation_file": {
+    "message": "Akses ke file lokal melalui URL tidak lagi memungkinkan untuk ekstensi."
+  }
+}
