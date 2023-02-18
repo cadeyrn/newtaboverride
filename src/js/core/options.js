@@ -30,7 +30,7 @@ const options = {
   focusOptionAvailable : false,
 
   /**
-   * prepend "http://" to string if the string does not start with "http://" or "https://"
+   * prepend "http://" to string if the string does not start with a protocol like "http://"
    *
    * @param {string} string - string to check
    *
