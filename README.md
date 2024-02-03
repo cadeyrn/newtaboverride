@@ -96,7 +96,8 @@ The storage permission is needed so that New Tab Override can store settings suc
 
 ## Compatibility
 
-The extension requires at least Firefox 78. There is no support for older versions of Firefox.
+New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 115 or
+higher is required for the latest version of New Tab Override).
 
 ## Download
 

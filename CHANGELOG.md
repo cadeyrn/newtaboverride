@@ -17,6 +17,8 @@
 - [DEPENDENCY] updated stylelint-order from version 4.1.0 to 6.0.4
 - [DEPENDENCY] updated web-ext from version 6.1.0 to 7.11.0
 
+**Minimum required Firefox version is Firefox 115 now.**
+
 ### Version 15.1.0 (2021-05-13)
 
 - [CODE QUALITY] made sure that links are actually links in feed component (AMO review)

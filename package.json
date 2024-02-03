@@ -18,7 +18,7 @@
   },
   "private": true,
   "browserslist": [
-    "Firefox >= 78"
+    "Firefox >= 115"
   ],
   "devDependencies": {
     "eslint": "8.56.0",
