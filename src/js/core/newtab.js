@@ -2,7 +2,6 @@
 
 /* global URI_REGEX, defaults, utils */
 
-const BACKGROUND_COLOR_PAGE = 'html/background_color.html';
 const LOCAL_FILE_PAGE = 'html/local_file.html';
 const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
 const FEED_PAGE = 'html/feed.html';
@@ -42,7 +41,8 @@ const newtab = {
         newtab.openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
-        newtab.openNewTabPage(browser.runtime.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
+        const { background_color } = await browser.storage.local.get({ background_color : defaults.background_color });
+        document.body.style.background = background_color;
         break;
       case 'feed':
         newtab.openNewTabPage(browser.runtime.getURL(FEED_PAGE), options.focus_website);

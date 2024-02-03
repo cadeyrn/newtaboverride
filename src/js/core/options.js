@@ -100,7 +100,7 @@ const options = {
     // background color
     if (elType.options[elType.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
-      showFocusOption = options.focusOptionAvailable;
+      showFocusOption = false;
       showClearOption = true;
     }
 
