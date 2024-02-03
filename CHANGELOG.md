@@ -2,6 +2,12 @@
 
 ## Release Notes
 
+### Version 16.0.0 (2024-02-xx)
+
+- [DEPENDENCY] updated jsdoc from version 3.6.5 to 3.6.11
+- [DEPENDENCY] updated stylelint from version 13.13.1 to 15.10.1
+- [DEPENDENCY] updated web-ext from version 6.1.0 to 7.6.1
+
 ### Version 15.1.0 (2021-05-13)
 
 - [CODE QUALITY] made sure that links are actually links in feed component (AMO review)
