@@ -15,7 +15,7 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  async onInstalledHandler (details) {
+  onInstalledHandler (details) {
     // new install
     if (details.reason === 'install') {
       browser.browserAction.setBadgeText({ text : '★' });
