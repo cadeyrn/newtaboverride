@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title data-i18n='settings_title'></title>
-  <link rel='stylesheet' href='../css/common.css' />
-  <link rel='stylesheet' href='../css/options.css' />
-  <link rel='icon' type='image/svg+xml' href='../images/icon.svg' />
+  <meta charset="utf-8" />
+  <title data-i18n="settings_title"></title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/options.css" />
+  <link rel="icon" type="image/svg+xml" href="../images/icon.svg" />
 </head>
 <body>
   <header>
-    <h1 data-i18n='settings_title'></h1>
+    <h1 data-i18n="settings_title"></h1>
   </header>
-  <div id='nto-introduction'>
-    <span data-i18n='introduction'>
-      <a data-i18n='extension_name' href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'></a>
+  <div id="nto-introduction">
+    <span data-i18n="introduction">
+      <a data-i18n="extension_name" href="https://addons.mozilla.org/firefox/addon/new-tab-override/" target="_blank" rel="noopener"></a>
     </span>
   </div>
   <main>
     <section>
-      <div class='grey-bg'>
-        <h2 data-i18n='settings_main_caption'></h2>
+      <div class="grey-bg">
+        <h2 data-i18n="settings_main_caption"></h2>
         <form>
           <div>
-            <h3 data-i18n='type_title'></h3>
-            <label data-i18n='type_title' for='type' class='hidden-label'></label>
-            <select name='type' id='type'>
-              <option data-i18n='type_options_homepage' value='homepage'></option>
-              <option data-i18n='type_options_custom_url' value='custom_url'></option>
-              <option data-i18n='type_options_local_file' value='local_file'></option>
-              <option data-i18n='type_options_background_color' value='background_color'></option>
-              <option data-i18n='type_options_feed' value='feed'></option>
+            <h3 data-i18n="type_title"></h3>
+            <label data-i18n="type_title" for="type" class="hidden-label"></label>
+            <select name="type" id="type">
+              <option data-i18n="type_options_homepage" value="homepage"></option>
+              <option data-i18n="type_options_custom_url" value="custom_url"></option>
+              <option data-i18n="type_options_local_file" value="local_file"></option>
+              <option data-i18n="type_options_background_color" value="background_color"></option>
+              <option data-i18n="type_options_feed" value="feed"></option>
             </select>
           </div>
-          <div id='url-option' class='hidden'>
-            <div data-i18n='url_description' class='info-icon'></div>
-            <h3 data-i18n='url_title'></h3>
-            <label data-i18n='url_title' for='url' class='hidden-label'></label>
-            <div id='url-wrapper'>
-              <input type='text' name='url' id='url' data-i18n-placeholder='settings_url_field_placeholder' />
-              <span data-i18n='url_validation_default' class='error-message hidden default'></span>
-              <span data-i18n='url_validation_file' class='error-message hidden file'></span>
+          <div id="url-option" class="hidden">
+            <div data-i18n="url_description" class="info-icon"></div>
+            <h3 data-i18n="url_title"></h3>
+            <label data-i18n="url_title" for="url" class="hidden-label"></label>
+            <div id="url-wrapper">
+              <input type="text" name="url" id="url" data-i18n-placeholder="settings_url_field_placeholder" />
+              <span data-i18n="url_validation_default" class="error-message hidden default"></span>
+              <span data-i18n="url_validation_file" class="error-message hidden file"></span>
             </div>
           </div>
-          <div id='homepage-option' class='hidden'>
-            <div data-i18n='homepage_description' class='info-icon'></div>
+          <div id="homepage-option" class="hidden">
+            <div data-i18n="homepage_description" class="info-icon"></div>
           </div>
-          <div id='local-file-option' class='hidden'>
-            <div class='info-icon'>
-              <span data-i18n='local_file_description'></span><br />
-              <a data-i18n='local_file_delete_text' href='#' id='delete-local-file' class='hidden' data-i18n-data-confirm='local_file_delete_confirmation'></a>
+          <div id="local-file-option" class="hidden">
+            <div class="info-icon">
+              <span data-i18n="local_file_description"></span><br />
+              <a data-i18n="local_file_delete_text" href="#" id="delete-local-file" class="hidden" data-i18n-data-confirm="local_file_delete_confirmation"></a>
             </div>
-            <h3 data-i18n='local_file_upload'></h3>
-            <input type='file' id='local-file' accept='.html, .htm' />
+            <h3 data-i18n="local_file_upload"></h3>
+            <input type="file" id="local-file" accept=".html, .htm" />
           </div>
-          <div id='background-color-option' class='hidden'>
-            <h3 data-i18n='background_color_title'></h3>
-            <label data-i18n='background_color_title' for='background-color' class='hidden-label'></label>
-            <input type='color' name='background_color' id='background-color' />
+          <div id="background-color-option" class="hidden">
+            <h3 data-i18n="background_color_title"></h3>
+            <label data-i18n="background_color_title" for="background-color" class="hidden-label"></label>
+            <input type="color" name="background_color" id="background-color" />
           </div>
-          <div id='feed-permission-container' class='hidden'>
-            <h3 data-i18n='settings_permission_action'></h3>
-            <label data-i18n='settings_permission_action' for='feed-permission' class='hidden-label'></label>
-            <div data-i18n='settings_feed_permission_description' class='info-icon'></div>
-            <button data-i18n='settings_permission_action' type='submit' name='feed_permission' id='feed-permission' class='button'></button>
+          <div id="feed-permission-container" class="hidden">
+            <h3 data-i18n="settings_permission_action"></h3>
+            <label data-i18n="settings_permission_action" for="feed-permission" class="hidden-label"></label>
+            <div data-i18n="settings_feed_permission_description" class="info-icon"></div>
+            <button data-i18n="settings_permission_action" type="submit" name="feed_permission" id="feed-permission" class="button"></button>
           </div>
-          <div id='feed-permission-revoke-container' class='hidden'>
-            <h3 data-i18n='settings_permission_revoke_action'></h3>
-            <div class='info-icon'>
-              <span data-i18n='settings_feed_permission_revoke_description'></span>
-              <a data-i18n='settings_permission_revoke_action' href='#' id='feed-permission-revoke'></a>
+          <div id="feed-permission-revoke-container" class="hidden">
+            <h3 data-i18n="settings_permission_revoke_action"></h3>
+            <div class="info-icon">
+              <span data-i18n="settings_feed_permission_revoke_description"></span>
+              <a data-i18n="settings_permission_revoke_action" href="#" id="feed-permission-revoke"></a>
             </div>
           </div>
-          <div id='tab-position-option'>
-            <h3 data-i18n='tab_position_title'></h3>
+          <div id="tab-position-option">
+            <h3 data-i18n="tab_position_title"></h3>
             <div>
-              <label data-i18n='type_title' for='type' class='hidden-label'></label>
-              <select name='type' id='tab-position'>
-                <option data-i18n='tab_position_option_relatedAfterCurrent' value='relatedAfterCurrent'></option>
-                <option data-i18n='tab_position_option_afterCurrent' value='afterCurrent'></option>
-                <option data-i18n='tab_position_option_atEnd' value='atEnd'></option>
+              <label data-i18n="type_title" for="type" class="hidden-label"></label>
+              <select name="type" id="tab-position">
+                <option data-i18n="tab_position_option_relatedAfterCurrent" value="relatedAfterCurrent"></option>
+                <option data-i18n="tab_position_option_afterCurrent" value="afterCurrent"></option>
+                <option data-i18n="tab_position_option_atEnd" value="atEnd"></option>
               </select>
             </div>
           </div>
-          <div id='focus-option' class='hidden'>
-            <h3 data-i18n='focus_website_title'></h3>
+          <div id="focus-option" class="hidden">
+            <h3 data-i18n="focus_website_title"></h3>
             <div>
-              <input type='checkbox' name='focus_website' id='focus-website' />
-              <label data-i18n='focus_website_description' for='focus-website' class='has-own-label'></label>
+              <input type="checkbox" name="focus_website" id="focus-website" />
+              <label data-i18n="focus_website_description" for="focus-website" class="has-own-label"></label>
             </div>
           </div>
-          <div id='clear-option' class='hidden'>
-            <h3 data-i18n='clear_addressbar_title'></h3>
-            <div class='info-icon'>
-              <span data-i18n='clear_addressbar_description'></span>
-              <a data-i18n='learn_more' href='https://bugzilla.mozilla.org/show_bug.cgi?id=1409675' target='_blank' rel='noopener'></a>
+          <div id="clear-option" class="hidden">
+            <h3 data-i18n="clear_addressbar_title"></h3>
+            <div class="info-icon">
+              <span data-i18n="clear_addressbar_description"></span>
+              <a data-i18n="learn_more" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1409675" target="_blank" rel="noopener"></a>
             </div>
           </div>
         </form>
       </div>
     </section>
     <aside>
-      <div class='grey-bg'>
-        <h2 data-i18n='settings_support_caption'></h2>
-        <p data-i18n='settings_donation_text'></p>
-        <a data-i18n='settings_donate' href='https://www.paypal.me/agenedia/3' class='button' target='_blank' rel='noopener'></a>
+      <div class="grey-bg">
+        <h2 data-i18n="settings_support_caption"></h2>
+        <p data-i18n="settings_donation_text"></p>
+        <a data-i18n="settings_donate" href="https://www.paypal.me/agenedia/3" class="button" target="_blank" rel="noopener"></a>
         <p>
-          <span data-i18n='review_text'></span>
-          <a href='https://addons.mozilla.org/firefox/addon/new-tab-override/' target='_blank' rel='noopener'>
+          <span data-i18n="review_text"></span>
+          <a href="https://addons.mozilla.org/firefox/addon/new-tab-override/" target="_blank" rel="noopener">
             addons.mozilla.org</a>
         </p>
         <p>
-          <span data-i18n='github_notice'></span><br />
-          <a data-i18n='github_link' href='https://github.com/cadeyrn/newtaboverride/issues' target='_blank' rel='noopener'></a>
+          <span data-i18n="github_notice"></span><br />
+          <a data-i18n="github_link" href="https://github.com/cadeyrn/newtaboverride/issues" target="_blank" rel="noopener"></a>
         </p>
       </div>
     </aside>
   </main>
   <footer>
-    <a href='https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/?utm_campaign=webext&utm_term=newtaboverride' target='_blank' rel='noopener'>
-      <span data-i18n='extension_name'></span> © 2015 - 2024, soeren-hentzschel.at
+    <a href="https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/?utm_campaign=webext&utm_term=newtaboverride" target="_blank" rel="noopener">
+      <span data-i18n="extension_name"></span> © 2015 - 2024, soeren-hentzschel.at
     </a>
   </footer>
-  <script src='../js/lib/i18n.js'></script>
-  <script src='../js/lib/permissions.js'></script>
-  <script src='../js/core/defaults.js'></script>
-  <script src='../js/core/utils.js'></script>
-  <script src='../js/core/options.js'></script>
+  <script src="../js/lib/i18n.js"></script>
+  <script src="../js/lib/permissions.js"></script>
+  <script src="../js/core/defaults.js"></script>
+  <script src="../js/core/utils.js"></script>
+  <script src="../js/core/options.js"></script>
 </body>
 </html>
