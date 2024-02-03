@@ -13,6 +13,7 @@
 - [DEPENDENCY] updated jsdoc from version 3.6.5 to 4.0.2
 - [DEPENDENCY] updated stylelint from version 13.13.1 to 16.2.1 and updated configuration
 - [DEPENDENCY] updated stylelint-csstree-validator from version 1.9.0 to 3.0.0
+- [DEPENDENCY] updated stylelint-order from version 4.1.0 to 6.0.4
 - [DEPENDENCY] updated web-ext from version 6.1.0 to 7.6.1
 
 ### Version 15.1.0 (2021-05-13)
