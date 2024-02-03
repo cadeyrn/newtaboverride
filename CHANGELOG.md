@@ -8,6 +8,7 @@
 - [ENHANCEMENT] allow moz-extension:// URIs as new tab page, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
 - [ENHANCEMENT] default to https:// instead of http:// for URLs without protocol, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
+- [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
 - [CHANGE] changed copyright year from 2021 to 2024
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration

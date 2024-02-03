@@ -19,7 +19,6 @@
     "newtab": "html/newtab.html"
   },
   "browser_action": {
-    "browser_style": false,
     "default_area": "navbar",
     "default_icon": "images/icon.svg",
     "default_title": "__MSG_settings_title__"
