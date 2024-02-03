@@ -42,17 +42,17 @@ const newtab = {
         newtab.openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
-        newtab.openNewTabPage(browser.extension.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
+        newtab.openNewTabPage(browser.runtime.getURL(BACKGROUND_COLOR_PAGE), options.focus_website);
         break;
       case 'feed':
-        newtab.openNewTabPage(browser.extension.getURL(FEED_PAGE), options.focus_website);
+        newtab.openNewTabPage(browser.runtime.getURL(FEED_PAGE), options.focus_website);
         break;
       case 'local_file':
         if (options.local_file) {
-          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_PAGE), options.focus_website);
+          newtab.openNewTabPage(browser.runtime.getURL(LOCAL_FILE_PAGE), options.focus_website);
         }
         else {
-          newtab.openNewTabPage(browser.extension.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
+          newtab.openNewTabPage(browser.runtime.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
         }
         break;
       default:
@@ -71,7 +71,7 @@ const newtab = {
   async openNewTabPage (url, focus_website) {
     if (url.trim() === '') {
       /* eslint-disable-next-line no-param-reassign */
-      url = browser.extension.getURL('html/options.html');
+      url = browser.runtime.getURL('html/options.html');
     }
 
     await browser.tabs.getCurrent((tab) => {
@@ -95,7 +95,7 @@ const newtab = {
     });
 
     // delete spammy new tab page entry from history
-    browser.history.deleteUrl({ url : browser.extension.getURL(NEW_TAB_PAGE) });
+    browser.history.deleteUrl({ url : browser.runtime.getURL(NEW_TAB_PAGE) });
   }
 };
 

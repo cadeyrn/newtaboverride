@@ -122,7 +122,7 @@ const newtaboverride = {
    * @returns {void}
    */
   openUserInterfaceInCurrentTab () {
-    browser.tabs.update(null, { url : browser.extension.getURL(OPTIONS_PAGE) });
+    browser.tabs.update(null, { url : browser.runtime.getURL(OPTIONS_PAGE) });
   }
 };
 
