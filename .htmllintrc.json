@@ -21,7 +21,7 @@
     "id",
     "class"
   ],
-  "attr-quote-style": "single",
+  "attr-quote-style": "double",
   "attr-req-value": true,
   "class-no-dup": true,
   "class-style": "dash",
