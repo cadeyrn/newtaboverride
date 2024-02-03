@@ -4,6 +4,12 @@
 
 ### Version 16.0.0 (2024-02-xx)
 
+- [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
+- [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration
+- [DEPENDENCY] updated eslint-plugin-compat from version 3.9.0 to 4.2.0
+- [DEPENDENCY] updated eslint-plugin-no-unsanitized from version 3.1.5 to 4.0.2
+- [DEPENDENCY] updated eslint-plugin-promise from version 5.1.0 to 6.1.1
+- [DEPENDENCY] updated eslint-plugin-xss from version 0.1.10 to 0.1.12
 - [DEPENDENCY] updated jsdoc from version 3.6.5 to 3.6.11
 - [DEPENDENCY] updated stylelint from version 13.13.1 to 15.10.1
 - [DEPENDENCY] updated web-ext from version 6.1.0 to 7.6.1
