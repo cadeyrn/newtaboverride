@@ -4,6 +4,7 @@
 
 ### Version 16.0.0 (2024-02-xx)
 
+- [CHANGE] changed copyright year from 2021 to 2024
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.9.0 to 4.2.0
