@@ -7,6 +7,7 @@
 - [ENHANCEMENT] fixed white flash when using dark mode, fixes [#261](https://github.com/cadeyrn/newtaboverride/issues/261)
 - [ENHANCEMENT] allow moz-extension:// URIs as new tab page, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
 - [ENHANCEMENT] default to https:// instead of http:// for URLs without protocol, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
+- [ENHANCEMENT] keep the address bar empty when using the background color option, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
 - [CHANGE] changed copyright year from 2021 to 2024
