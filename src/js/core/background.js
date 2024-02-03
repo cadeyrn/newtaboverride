@@ -18,7 +18,7 @@ const newtaboverride = {
   onInstalledHandler (details) {
     // new install
     if (details.reason === 'install') {
-      browser.browserAction.setBadgeText({ text : '★' });
+      browser.action.setBadgeText({ text : '★' });
     }
   },
 
@@ -81,7 +81,7 @@ const newtaboverride = {
   openUserInterface () {
     const url = browser.runtime.getURL(OPTIONS_PAGE);
 
-    browser.browserAction.setBadgeText({ text : '' });
+    browser.action.setBadgeText({ text : '' });
     browser.tabs.query({}, (tabs) => {
       let tabId = null;
 
@@ -113,14 +113,17 @@ const newtaboverride = {
   }
 };
 
-browser.browserAction.onClicked.addListener(newtaboverride.openUserInterface);
+browser.action.onClicked.addListener(newtaboverride.openUserInterface);
 browser.omnibox.onInputChanged.addListener(newtaboverride.showOmniboxSuggestions);
 browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
 browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
 browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
 
-browser.menus.create({
-  title : browser.i18n.getMessage('settings_title'),
-  contexts : ['tools_menu'],
-  command : '_execute_browser_action'
+browser.runtime.onInstalled.addListener(() => {
+  browser.menus.create({
+    id : 'nto-tools-menu-entry',
+    title : browser.i18n.getMessage('settings_title'),
+    contexts : ['tools_menu'],
+    command : '_execute_browser_action'
+  });
 });

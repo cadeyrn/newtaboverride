@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_extension_name__",
   "version": "16.0.0",
   "description": "__MSG_extension_description__",
@@ -18,13 +18,13 @@
   "chrome_url_overrides" : {
     "newtab": "html/newtab.html"
   },
-  "browser_action": {
+  "action": {
     "default_area": "navbar",
     "default_icon": "images/icon.svg",
     "default_title": "__MSG_settings_title__"
   },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Shift+F12"
       }
@@ -45,11 +45,11 @@
     "storage",
     "tabs"
   ],
-  "optional_permissions": [
+  "host_permissions": [
     "https://www.soeren-hentzschel.at/*"
   ],
   "default_locale": "en",
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "newtaboverride@agenedia.com",
       "strict_min_version": "115.0"
