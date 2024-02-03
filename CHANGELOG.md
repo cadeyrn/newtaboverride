@@ -4,6 +4,7 @@
 
 ### Version 16.0.0 (2024-02-xx)
 
+- [ENHANCEMENT] allow moz-extension:// URIs as new tab page, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
 - [CHANGE] changed copyright year from 2021 to 2024
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration
