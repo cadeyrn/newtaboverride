@@ -30,7 +30,7 @@ const options = {
   focusOptionAvailable : false,
 
   /**
-   * prepend "http://" to string if the string does not start with "http://" or "https://"
+   * prepend "https://" to string if the string does not start with "https://", "http://" or "moz-extension://"
    *
    * @param {string} string - string to check
    *
@@ -38,7 +38,7 @@ const options = {
    */
   getValidUri (string) {
     if (!URI_REGEX.test(string) && string !== '') {
-      return 'http://' + string;
+      return 'https://' + string;
     }
 
     return string;
