@@ -10,6 +10,7 @@
 - [ENHANCEMENT] keep the address bar empty when using the background color option, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
+- [CODE QUALITY] updated the translation mechanism to the newest version to share more code with other extensions and to improve the maintainability, fixes [#332](https://github.com/cadeyrn/newtaboverride/issues/332)
 - [CHANGE] changed copyright year from 2021 to 2024
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration

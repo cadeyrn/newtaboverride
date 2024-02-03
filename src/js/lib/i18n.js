@@ -27,7 +27,7 @@ const i18n = {
   /**
    * This method is used to get the translation for a given key.
    *
-   * @param {string} key - translsation key
+   * @param {string} key - translation key
    *
    * @returns {string} - translation
    */
@@ -36,23 +36,24 @@ const i18n = {
   },
 
   /**
-   * Translates all strings in the page
+   * Translates all strings in text nodes, placeholders and title attributes.
    *
    * @returns {void}
    */
   translate () {
     document.removeEventListener('DOMContentLoaded', i18n.translate);
 
+    // text node translation
     const nodes = document.querySelectorAll('[data-i18n]');
 
     for (let i = 0, len = nodes.length; i < len; i++) {
       const node = nodes[i];
       const children = Array.from(node.children);
       const text = i18n.getMessage(node.dataset.i18n);
-      node.innerHTML = '';
-      const parts = text.split(/(\{\d+\})/);
+      const parts = text.split(/({\d+})/);
+
       parts.forEach((part) => {
-        if ((/\{\d+\}/).test(part)) {
+        if ((/{\d+}/).test(part)) {
           const index = parseInt(part.slice(1));
           node.appendChild(children[index]);
         }
@@ -62,12 +63,15 @@ const i18n = {
       });
     }
 
-    const attributes = ['placeholder', 'data-confirm'];
+    // attribute translation
+    const attributes = ['data-confirm', 'placeholder', 'title'];
+
     for (const attribute of attributes) {
       const i18nAttribute = `data-i18n-${attribute}`;
       const attrNodes = document.querySelectorAll(`[${i18nAttribute}]`);
+      const { length } = attrNodes;
 
-      for (let i = 0, len = attrNodes.length; i < len; i++) {
+      for (let i = 0; i < length; i++) {
         const node = attrNodes[i];
         const msg = node.getAttribute(i18nAttribute);
         node.setAttribute(attribute, i18n.getMessage(msg));
