@@ -6,4 +6,4 @@ const PERMISSION_FEED = { origins : ['https://www.soeren-hentzschel.at/*'] };
 const URI_REGEX = /^(https?|moz-extension):\/\//i;
 
 // general protocol check
-const PROTOCOL_REGEX = /^(.*):\/\//i;
+const PROTOCOL_REGEX = /^[^:^/]+:\/\//i;
