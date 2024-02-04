@@ -7,7 +7,7 @@
 - [ENHANCEMENT] **New Tab Override now uses Manifest v3**, fixes [#274](https://github.com/cadeyrn/newtaboverride/issues/274)
 - [ENHANCEMENT] **fixed white flash when using dark mode**, fixes [#261](https://github.com/cadeyrn/newtaboverride/issues/261)
 - [ENHANCEMENT] **allow moz-extension:// URIs as new tab page**, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
-- [ENHANCEMENT] **show error message if an unsupported protocol is used** instead of silently prepending https:// in that case (Thanks, @amithm7!), fixes [#334](https://github.com/cadeyrn/newtaboverride/issues/334)
+- [ENHANCEMENT] **show error message if an unsupported protocol is used** instead of silently prepending https:// in that case (Thanks, [@amithm7](https://github.com/amithm7)!), fixes [#334](https://github.com/cadeyrn/newtaboverride/issues/334)
 - [ENHANCEMENT] **default to https:// instead of http:// for URLs without protocol**, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
 - [ENHANCEMENT] **keep the address bar empty when the background color option is used**, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [ENHANCEMENT] improved colors on options page for better accessibility (a11y), fixes [#338](https://github.com/cadeyrn/newtaboverride/issues/338)
