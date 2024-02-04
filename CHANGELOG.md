@@ -11,6 +11,7 @@
 - [ENHANCEMENT] **default to https:// instead of http:// for URLs without protocol**, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
 - [ENHANCEMENT] **keep the address bar empty when the background color option is used** (Thanks, [@Juraj-Masiar](https://github.com/Juraj-Masiar)!), fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [ENHANCEMENT] improved colors on options page for better accessibility (a11y), fixes [#338](https://github.com/cadeyrn/newtaboverride/issues/338)
+- [TRANSLATION] added Indonesian translation (Thanks, [@rosatiara](https://github.com/rosatiara)!)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
 - [CODE QUALITY] removed code that was only relevant for old versions of Firefox and New Tab Override, fixes [#333](https://github.com/cadeyrn/newtaboverride/issues/333)
@@ -18,7 +19,6 @@
 - [CODE QUALITY] make use of CSS variables for colors, fixes [#336](https://github.com/cadeyrn/newtaboverride/issues/336)
 - [CODE QUALITY] don't use background shorthand in CSS, fixes [#337](https://github.com/cadeyrn/newtaboverride/issues/337)
 - [CHANGE] changed copyright year from 2021 to 2024
-- [TRANSLATION] added Indonesian translation (Thanks, [@rosatiara](https://github.com/rosatiara)!)
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.9.0 to 4.2.0
