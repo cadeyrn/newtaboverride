@@ -18,7 +18,7 @@
 - [CODE QUALITY] make use of CSS variables for colors, fixes [#336](https://github.com/cadeyrn/newtaboverride/issues/336)
 - [CODE QUALITY] don't use background shorthand in CSS, fixes [#337](https://github.com/cadeyrn/newtaboverride/issues/337)
 - [CHANGE] changed copyright year from 2021 to 2024
-- [TRANSLATION] updated Indonesian translation (Thanks, [@rosatiara](https://github.com/rosatiara)!)
+- [TRANSLATION] added Indonesian translation (Thanks, [@rosatiara](https://github.com/rosatiara)!)
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
 - [DEPENDENCY] updated eslint from version 7.26.0 to 8.56.0 and updated configuration
 - [DEPENDENCY] updated eslint-plugin-compat from version 3.9.0 to 4.2.0
