@@ -1,3 +1,5 @@
+@import 'variables.css';
+
 form > div {
   margin-bottom: 20px;
 }
@@ -12,7 +14,7 @@ label:not(.has-own-label):not(.hidden-label) {
 }
 
 label.has-own-label {
-  color: rgb(90, 90, 90);
+  color: var(--color-label);
 }
 
 select {
@@ -27,7 +29,7 @@ input[type='text'] {
   width: 100%;
   height: 24px;
   line-height: 24px;
-  border: 1px solid rgb(218, 218, 218);
+  border: 1px solid var(--color-input-border);
   transition: border ease 250ms;
 }
 
@@ -36,14 +38,14 @@ input[type='checkbox'] {
 }
 
 input:focus {
-  border-color: rgb(38, 169, 224);
+  border-color: var(--color-accent);
 }
 
 #nto-introduction {
   margin: 20px 20px 0;
   padding: 10px;
-  background-color: rgb(38, 169, 224);
-  color: rgb(255, 255, 255);
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
 }
 
 #nto-introduction a {
@@ -53,7 +55,7 @@ input:focus {
 }
 
 #nto-introduction a:hover {
-  color: rgb(235, 235, 235);
+  color: var(--color-accent-contrast-hover);
 }
 
 .hidden-label {
@@ -81,28 +83,22 @@ input:focus {
   min-height: 20px;
   line-height: 20px;
   font-size: 12px;
-  background-color: rgb(220, 100, 83);
-  color: rgb(255, 255, 255);
+  background-color: var(--color-status-error);
+  color: var(--color-status-error-contrast);
 }
 
 #url {
-  border: 1px solid rgb(38, 169, 224);
+  border: 1px solid var(--color-accent);
 }
 
 #url:focus {
-  border-color: rgb(58, 189, 244);
+  border-color: var(--color-accent);
 }
 
 #url.error {
-  border-color: rgb(220, 100, 83);
+  border-color: var(--color-status-error);
 }
 
 #delete-local-file {
   font-size: 12px;
-}
-
-@media (prefers-color-scheme: dark) {
-  label.has-own-label {
-    color: rgb(171, 171, 172);
-  }
 }

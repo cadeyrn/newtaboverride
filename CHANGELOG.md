@@ -14,6 +14,7 @@
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
 - [CODE QUALITY] removed code that was only relevant for old versions of Firefox and New Tab Override, fixes [#333](https://github.com/cadeyrn/newtaboverride/issues/333)
 - [CODE QUALITY] updated the translation mechanism to the newest version to share more code with other extensions and to improve the maintainability, fixes [#332](https://github.com/cadeyrn/newtaboverride/issues/332)
+- [CODE QUALITY] make use of CSS variables for colors, fixes [#336](https://github.com/cadeyrn/newtaboverride/issues/336)
 - [CODE QUALITY] don't use background shorthand in CSS, fixes [#337](https://github.com/cadeyrn/newtaboverride/issues/337)
 - [CHANGE] changed copyright year from 2021 to 2024
 - [DEPENDENCY] replaced gulp-eslint 6.0.0 with gulp-eslint-new 1.9.0
