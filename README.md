@@ -1,10 +1,18 @@
 # Firefox Add-on: New Tab Override
 
-<img src="logo.png" alt="Logo" width="200" border="0" />
+<img src="logo.png" alt="Logo" width="200" border="0">
+
+## Support the development
+
+**Please consider making [a donation](https://www.paypal.com/paypalme/agenedia/) to support the further development of
+New Tab Override. Thank you very much!**
 
 ## Description
 
 **New Tab Override allows you to set the page that shows whenever you open a new tab.**
+
+New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 115 or
+higher is required for the latest version of New Tab Override).
 
 ### Features
 
@@ -15,7 +23,7 @@
 - Get the latest news about Mozilla as new tab page (German language only)
 - You can set the focus to the address bar or the website
 - Customize where new tabs are opened
-- Automatically adds “http://” if protocol is missing from a URL
+- Automatically adds “https://” if protocol is missing from a URL
 - Can be used in conjunction with Firefox’s container tabs feature
 - Dark mode support for options interface
 
@@ -23,6 +31,11 @@
 
 The settings interface can be accessed via **Shift + F12**. It is also possible to open the settings interface by
 entering **newtab settings** in the address bar or from the menu entry in the **tools menu**.
+
+### Planned features
+
+You can find the roadmap and request new features in the
+[issues tracker](https://github.com/cadeyrn/newtaboverride/issues).
 
 ### Languages
 
@@ -93,11 +106,6 @@ The menus permission is needed for providing an entry in the tools menu for acce
 ##### storage
 
 The storage permission is needed so that New Tab Override can store settings such as your new tab page.
-
-## Compatibility
-
-New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 115 or
-higher is required for the latest version of New Tab Override).
 
 ## Download
 
