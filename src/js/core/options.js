@@ -178,7 +178,7 @@ elUrl.addEventListener('input', (e) => {
     elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
     elUrl.classList.add('error');
   }
-  // pretend https:// for every other input
+  // prepend https:// for every other input
   else {
     url = 'https://' + url;
   }
