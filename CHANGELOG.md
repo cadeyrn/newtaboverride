@@ -2,11 +2,12 @@
 
 ## Release Notes
 
-### Version 16.0.0 (2024-02-xx)
+### Version 16.0.0 (2024-02-04)
 
 - [ENHANCEMENT] **New Tab Override now uses Manifest v3**, fixes [#274](https://github.com/cadeyrn/newtaboverride/issues/274)
 - [ENHANCEMENT] fixed white flash when using dark mode, fixes [#261](https://github.com/cadeyrn/newtaboverride/issues/261)
 - [ENHANCEMENT] allow moz-extension:// URIs as new tab page, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
+- [ENHANCEMENT] show error message if an unsupported protocol is used instead of silently pretending https:// in that case, fixes [#334](https://github.com/cadeyrn/newtaboverride/issues/334)
 - [ENHANCEMENT] default to https:// instead of http:// for URLs without protocol, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
 - [ENHANCEMENT] keep the address bar empty when using the background color option, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)

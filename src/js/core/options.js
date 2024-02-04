@@ -1,6 +1,6 @@
 'use strict';
 
-/* global URI_REGEX, PERMISSION_FEED, defaults, permissions */
+/* global URI_REGEX, PERMISSION_FEED, PROTOCOL_REGEX, defaults, permissions */
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
@@ -25,21 +25,6 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
-  /**
-   * prepend "https://" to string if the string does not start with "https://", "http://" or "moz-extension://"
-   *
-   * @param {string} string - string to check
-   *
-   * @returns {string} - URL with protocol
-   */
-  getValidUri (string) {
-    if (!URI_REGEX.test(string) && string !== '') {
-      return 'https://' + string;
-    }
-
-    return string;
-  },
-
   /**
    * This method handles the visibilty of the sub sections of some options.
    *
@@ -174,27 +159,34 @@ elTabPosition.addEventListener('change', (e) => {
 });
 
 elUrl.addEventListener('input', (e) => {
+  let url = e.target.value.trim();
+
+  // valid URL
+  if (URI_REGEX.test(url)) {
+    elUrlWrapper.querySelector('.error-message').classList.add('hidden');
+    elUrl.classList.remove('error');
+  }
   // local file access is not allowed for WebExtensions
-  if (e.target.value.startsWith('file://')) {
-    elUrl.classList.add('error');
+  else if (url.startsWith('file://')) {
+    elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
     elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
+    elUrl.classList.add('error');
   }
-  // set url
-  else {
+  // unsupported protocol or empty URL
+  else if (PROTOCOL_REGEX.test(url) || url === '') {
+    elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
     elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
-
-    if (e.target.value.trim() === '') {
-      elUrl.classList.add('error');
-      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
-    }
-    else {
-      elUrl.classList.remove('error');
-      elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
-    }
-
-    browser.storage.local.set({ url : options.getValidUri(e.target.value.trim()) });
+    elUrl.classList.add('error');
   }
+  // pretend https:// for every other input
+  else {
+    url = 'https://' + url;
+  }
+
+  browser.storage.local.set({ url });
 });
+
+elUrl.dispatchEvent(new CustomEvent('input'));
 
 elBackgroundColor.addEventListener('input', (e) => {
   browser.storage.local.set({ background_color : e.target.value });
