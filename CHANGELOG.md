@@ -9,7 +9,7 @@
 - [ENHANCEMENT] **allow moz-extension:// URIs as new tab page**, fixes [#310](https://github.com/cadeyrn/newtaboverride/issues/310)
 - [ENHANCEMENT] **show error message if an unsupported protocol is used** instead of silently prepending https:// in that case (Thanks, [@amithm7](https://github.com/amithm7)!), fixes [#334](https://github.com/cadeyrn/newtaboverride/issues/334)
 - [ENHANCEMENT] **default to https:// instead of http:// for URLs without protocol**, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
-- [ENHANCEMENT] **keep the address bar empty when the background color option is used**, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
+- [ENHANCEMENT] **keep the address bar empty when the background color option is used** (Thanks, [@Juraj-Masiar](https://github.com/Juraj-Masiar)!), fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
 - [ENHANCEMENT] improved colors on options page for better accessibility (a11y), fixes [#338](https://github.com/cadeyrn/newtaboverride/issues/338)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
