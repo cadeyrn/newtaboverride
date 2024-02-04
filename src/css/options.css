@@ -42,7 +42,7 @@ input:focus {
 #nto-introduction {
   margin: 20px 20px 0;
   padding: 10px;
-  background: rgb(38, 169, 224);
+  background-color: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
 }
 
@@ -81,7 +81,7 @@ input:focus {
   min-height: 20px;
   line-height: 20px;
   font-size: 12px;
-  background: rgb(220, 100, 83);
+  background-color: rgb(220, 100, 83);
   color: rgb(255, 255, 255);
 }
 

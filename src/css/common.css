@@ -65,7 +65,7 @@ a:not(.button):hover {
 .grey-bg {
   box-sizing: border-box;
   padding: 20px;
-  background: rgb(239, 239, 239);
+  background-color: rgb(239, 239, 239);
 }
 
 .hidden {
@@ -81,7 +81,7 @@ a:not(.button):hover {
   border-radius: 3px;
   font-size: 16px;
   font-weight: 700;
-  background: rgb(38, 169, 224);
+  background-color: rgb(38, 169, 224);
   color: rgb(255, 255, 255);
   text-align: center;
   cursor: pointer;
@@ -89,7 +89,7 @@ a:not(.button):hover {
 }
 
 .button:hover {
-  background: rgb(18, 149, 204);
+  background-color: rgb(18, 149, 204);
 }
 
 footer {
@@ -101,7 +101,7 @@ footer {
   height: 64px;
   line-height: 64px;
   font-size: 14px;
-  background: rgb(239, 239, 239);
+  background-color: rgb(239, 239, 239);
 }
 
 footer a {
@@ -128,7 +128,8 @@ footer a {
   left: 0;
   width: 18px;
   height: 18px;
-  background: url('../images/info.svg') center center / 18px 18px no-repeat transparent;
+  background-image: url('../images/info.svg');
+  background-size: 18px 18px;
 }
 
 @media screen and (min-width: 900px) {
@@ -160,7 +161,7 @@ footer a {
 @media screen and (max-width: 479px) {
   h1, footer a {
     padding-left: 0;
-    background: none;
+    background-image: none;
   }
 
   footer {
