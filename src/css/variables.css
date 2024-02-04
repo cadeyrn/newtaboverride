@@ -1,11 +1,12 @@
 :root {
-  --color-accent: rgb(38, 169, 224);
+  --color-accent: rgb(41, 144, 187);
   --color-accent-contrast: rgb(255, 255, 255);
   --color-accent-contrast-hover: rgb(235, 235, 235);
-  --color-accent-lighter: rgb(18, 149, 204);
+  --color-accent-link: rgb(21, 120, 162);
+  --color-accent-link-hover: rgb(18, 149, 204);
   --color-body-background: rgb(255, 255, 255);
   --color-body-text: rgb(50, 50, 50);
-  --color-box-background: rgb(239, 239, 239);
+  --color-box-background: rgb(245, 245, 245);
   --color-input-border: rgb(218, 218, 218);
   --color-label: rgb(90, 90, 90);
   --color-status-error: rgb(220, 100, 83);
@@ -15,9 +16,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-accent: rgb(21, 120, 162);
+    --color-accent-link: rgb(44, 181, 238);
     --color-body-background: rgb(42, 42, 46);
     --color-body-text: rgb(249, 249, 250);
     --color-box-background: rgb(56, 56, 61);
-    --color-label: rgb(171, 171, 172);
+    --color-label: rgb(198, 198, 198);
   }
 }

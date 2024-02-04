@@ -10,6 +10,7 @@
 - [ENHANCEMENT] **show error message if an unsupported protocol is used** instead of silently prepending https:// in that case, fixes [#334](https://github.com/cadeyrn/newtaboverride/issues/334)
 - [ENHANCEMENT] **default to https:// instead of http:// for URLs without protocol**, fixes [#329](https://github.com/cadeyrn/newtaboverride/issues/329)
 - [ENHANCEMENT] **keep the address bar empty when the background color option is used**, fixes [#252](https://github.com/cadeyrn/newtaboverride/issues/252)
+- [ENHANCEMENT] improved colors on options page for better accessibility (a11y), fixes [#338](https://github.com/cadeyrn/newtaboverride/issues/338)
 - [CODE QUALITY] replaced deprecated method call, fixes [#330](https://github.com/cadeyrn/newtaboverride/issues/330)
 - [CODE QUALITY] removed deprecated manifest key, fixes [#331](https://github.com/cadeyrn/newtaboverride/issues/331)
 - [CODE QUALITY] removed code that was only relevant for old versions of Firefox and New Tab Override, fixes [#333](https://github.com/cadeyrn/newtaboverride/issues/333)

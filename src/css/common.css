@@ -55,13 +55,13 @@ h2:first-child {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-link);
   text-decoration: none;
   transition: color ease 250ms;
 }
 
 a:not(.button):hover {
-  color: var(--color-accent-lighter);
+  color: var(--color-accent-link-hover);
 }
 
 .grey-bg {
@@ -91,7 +91,7 @@ a:not(.button):hover {
 }
 
 .button:hover {
-  background-color: var(--color-accent-lighter);
+  background-color: var(--color-accent-link-hover);
 }
 
 footer {
