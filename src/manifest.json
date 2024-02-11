@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extension_name__",
-  "version": "16.0.0",
+  "version": "16.1.0",
   "description": "__MSG_extension_description__",
   "icons": {
     "48": "images/icon.svg",
