@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 16.1.0 (TBD)
+
+- [ENHANCEMENT] worked around a Firefox bug that cause missing menu item in the tools menu under certain circumstances, fixes [#339](https://github.com/cadeyrn/newtaboverride/issues/339)
+
 ### Version 16.0.0 (2024-02-04)
 
 - [ENHANCEMENT] **New Tab Override now uses Manifest v3**, fixes [#274](https://github.com/cadeyrn/newtaboverride/issues/274)
