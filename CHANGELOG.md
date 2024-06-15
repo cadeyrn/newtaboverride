@@ -4,7 +4,7 @@
 
 ### Version 16.0.1 (2024-06-15)
 
-- [BUGFIX] fixed a bug that caused the new tab page to be reset when the settings were opened, fixes
+- [BUGFIX] fixed a bug that caused the new tab page to be reset when the settings of New Tab Override were opened, fixes
   [#341](https://github.com/cadeyrn/newtaboverride/issues/341)
 - [DEPENDENCY] added eslint-plugin-jsdoc 48.2.12
 - [DEPENDENCY] updated eslint from version 8.56.0 to 9.5.0 and updated configuration
