@@ -186,8 +186,6 @@ elUrl.addEventListener('input', (e) => {
   browser.storage.local.set({ url });
 });
 
-elUrl.dispatchEvent(new CustomEvent('input'));
-
 elBackgroundColor.addEventListener('input', (e) => {
   browser.storage.local.set({ background_color : e.target.value });
 });

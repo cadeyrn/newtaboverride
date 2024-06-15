@@ -2,6 +2,11 @@
 
 ## Release Notes
 
+### Version 16.0.1 (2024-06-15)
+
+- [BUGFIX] fixed a bug that caused the new tab page to be reset when the settings were opened, fixes
+  [#341](https://github.com/cadeyrn/newtaboverride/issues/341)
+
 ### Version 16.0.0 (2024-02-04)
 
 - [ENHANCEMENT] **New Tab Override now uses Manifest v3**, fixes [#274](https://github.com/cadeyrn/newtaboverride/issues/274)
