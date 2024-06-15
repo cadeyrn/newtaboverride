@@ -21,25 +21,23 @@
     "Firefox >= 115"
   ],
   "devDependencies": {
-    "eslint": "8.56.0",
-    "eslint-plugin-compat": "4.2.0",
-    "eslint-plugin-no-unsanitized": "4.0.2",
-    "eslint-plugin-promise": "6.1.1",
+    "eslint": "9.5.0",
+    "eslint-plugin-jsdoc": "48.2.12",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.12",
-    "gulp": "4.0.2",
-    "gulp-eslint-new": "1.9.0",
+    "gulp": "5.0.0",
+    "gulp-eslint-new": "2.1.0",
     "gulp-htmllint": "0.0.19",
     "gulp-jsdoc3": "3.0.0",
     "gulp-stylelint": "13.0.0",
     "htmllint": "0.8.0",
-    "jsdoc": "4.0.2",
+    "jsdoc": "4.0.3",
     "jsdoc-strip-async-await": "0.1.0",
     "npm-run-all": "4.1.5",
     "stylelint": "15.11.0",
     "stylelint-csstree-validator": "3.0.0",
     "stylelint-order": "6.0.4",
-    "web-ext": "7.11.0"
+    "web-ext": "8.1.0"
   },
   "scripts": {
     "build": "cd src && web-ext build -a ../dist",

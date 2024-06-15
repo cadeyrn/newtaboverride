@@ -11,13 +11,19 @@ gulp.task('lint-html', () => gulp.src(['./src/html/*.html'])
 );
 
 gulp.task('lint-js', () => gulp.src(['gulpfile.js', './src/js/**/*.js'])
-  .pipe(gulpEslint({ overrideConfigFile : '.eslintrc.json' }))
+  .pipe(gulpEslint({ overrideConfigFile : '.eslintrc.json', configType : 'eslintrc' }))
   .pipe(gulpEslint.format())
 );
 
 gulp.task('lint-css', () => gulp.src(['./src/css/*.css'])
   .pipe(gulpStylelint({
-    failAfterError : false
+    failAfterError : false,
+    reporters : [
+      {
+        formatter : 'string',
+        console : true
+      }
+    ]
   }))
 );
 

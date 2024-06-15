@@ -6,6 +6,16 @@
 
 - [BUGFIX] fixed a bug that caused the new tab page to be reset when the settings were opened, fixes
   [#341](https://github.com/cadeyrn/newtaboverride/issues/341)
+- [DEPENDENCY] added eslint-plugin-jsdoc 48.2.12
+- [DEPENDENCY] updated eslint from version 8.56.0 to 9.5.0 and updated configuration
+- [DEPENDENCY] updated gulp from version 4.0.2 to 5.0.0
+- [DEPENDENCY] updated gulp-eslint-new from version 1.9.0 to 2.1.0
+- [DEPENDENCY] updated jsdoc from version 4.0.2 to 4.0.3
+- [DEPENDENCY] updated stylelint configuration
+- [DEPENDENCY] updated web-ext from version 7.11.0 to 8.1.0
+- [DEPENDENCY] removed eslint-plugin-compat
+- [DEPENDENCY] removed eslint-plugin-no-unsanitized
+- [DEPENDENCY] removed eslint-plugin-promise
 
 ### Version 16.0.0 (2024-02-04)
 

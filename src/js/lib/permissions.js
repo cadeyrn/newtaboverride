@@ -7,7 +7,7 @@ const permissions = {
   /**
    * This method is used to set up the listeners for granting and revoking a permission.
    *
-   * @param {Object} obj - an object containing the permission and the needed DOM elements for the permission actions
+   * @param {object} obj - an object containing the permission and the needed DOM elements for the permission actions
    *
    * @returns {void}
    */
@@ -25,7 +25,7 @@ const permissions = {
    * Checks if the requested permission is granted. If so it shows the option to revoke the permission.
    * Otherwise, it shows the option to grant the permission.
    *
-   * @param {Object} permission - the permission object
+   * @param {object} permission - the permission object
    * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
    *
@@ -46,7 +46,7 @@ const permissions = {
    * This method is used to request and to grant a permission.
    *
    * @param {Event} e - event
-   * @param {Object} permission - the permission object
+   * @param {object} permission - the permission object
    * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
    *
@@ -67,7 +67,7 @@ const permissions = {
    * This method is used to revoke a permission.
    *
    * @param {Event} e - event
-   * @param {Object} permission - the permission object
+   * @param {object} permission - the permission object
    * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
    *

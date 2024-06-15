@@ -27,10 +27,10 @@ const newtaboverride = {
    * its keyword in the address bar and then pressing the space key.
    *
    * @param {string} input - user input in the address bar, not including the add-on's keyword itself or the space
-   *                 after the keyword<br /><br />
-   *                 <strong>Supported value:</strong> settings
-   * @param {function} suggest - a callback function that the event listener can call to supply suggestions for the
-   *                   address bar's drop-down list
+   * after the keyword<br /><br />
+   * <strong>Supported value:</strong> settings
+   * @param {Function} suggest - a callback function that the event listener can call to supply suggestions for the
+   * address bar's drop-down list
    *
    * @returns {void}
    */
