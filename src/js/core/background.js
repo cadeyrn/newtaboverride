@@ -119,15 +119,11 @@ browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
 browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
 browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
 
-(async () => {
-  const { contextMenuInitialized } = await browser.storage.session.get('isContextMenuInitialized');
-  if (!contextMenuInitialized) {
-    browser.menus.create({
-      id : 'nto-tools-menu-entry',
-      title : browser.i18n.getMessage('settings_title'),
-      contexts : ['tools_menu'],
-      command : '_execute_browser_action'
-    });
-    browser.storage.session.set({ contextMenuInitialized : true });
-  }
-})();
+browser.runtime.onInstalled.addListener(() => {
+  browser.menus.create({
+    id : 'nto-tools-menu-entry',
+    title : browser.i18n.getMessage('settings_title'),
+    contexts : ['tools_menu'],
+    command : '_execute_browser_action'
+  });
+});
