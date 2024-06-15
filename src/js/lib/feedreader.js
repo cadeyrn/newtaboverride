@@ -15,7 +15,7 @@ const feedreader = {
    *
    * @param {string} url - the URL to load
    *
-   * @returns {Array.Object} - an array with the content of all feed items
+   * @returns {Array.object} - an array with the content of all feed items
    */
   getFeedItems (url) {
     if (feedreader.feedItems === null || (Date.now() - feedreader.lastFetched > INTERVAL_BETWEEN_FETCHES_IN_MS)) {
@@ -31,7 +31,7 @@ const feedreader = {
    *
    * @param {string} url - the URL to load
    *
-   * @returns {Array.Object} - an array with the content of all feed items
+   * @returns {Array.object} - an array with the content of all feed items
    */
   async fetch (url) {
     const feeditems = [];

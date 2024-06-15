@@ -26,7 +26,7 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  */
 const options = {
   /**
-   * This method handles the visibilty of the sub sections of some options.
+   * This method handles the visibility of the subsections of some options.
    *
    * @returns {void}
    */

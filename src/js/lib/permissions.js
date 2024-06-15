@@ -23,7 +23,7 @@ const permissions = {
 
   /**
    * Checks if the requested permission is granted. If so it shows the option to revoke the permission.
-   * Otherwise it shows the option to grant the permission.
+   * Otherwise, it shows the option to grant the permission.
    *
    * @param {Object} permission - the permission object
    * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission

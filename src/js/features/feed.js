@@ -35,7 +35,7 @@ const feed = {
   /**
    * This method is used to read the news feed defined in FEED_URL.
    *
-   * @param {Array.Object} items - an array with feed items
+   * @param {Array.object} items - an array with feed items
    *
    * @returns {void}
    */
