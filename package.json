@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "eslint": "9.5.0",
-    "eslint-plugin-jsdoc": "48.2.12",
+    "eslint-plugin-jsdoc": "48.2.13",
     "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-xss": "0.1.12",
     "gulp": "5.0.0",
@@ -37,7 +37,7 @@
     "stylelint": "15.11.0",
     "stylelint-csstree-validator": "3.0.0",
     "stylelint-order": "6.0.4",
-    "web-ext": "8.1.0"
+    "web-ext": "8.2.0"
   },
   "scripts": {
     "build": "cd src && web-ext build -a ../dist",

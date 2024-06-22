@@ -2,6 +2,11 @@
 
 ## Release Notes
 
+### Version 16.1.0 (in Progress)
+
+- [DEPENDENCY] updated eslint-plugin-jsdoc from version 48.2.12 to 48.2.13
+- [DEPENDENCY] updated web-ext from version 8.1.0 to 8.2.0
+
 ### Version 16.0.1 (2024-06-15)
 
 - [BUGFIX] fixed a bug that caused the new tab page to be reset when the settings of New Tab Override were opened, fixes
