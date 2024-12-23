@@ -1,0 +1,149 @@
+{
+  "background_color_title": {
+    "message": "Arkaplan Rengi"
+  },
+  "clear_addressbar_description": {
+    "message": "Otomatik olarak arama çubuğunun temizlenmesi ya da URL'nin seçilmesi WebExtensionlar için mümkün değil. Bu, Mozilla tarafından bir değişiklik yapılmasını gerektirir."
+  },
+  "clear_addressbar_title": {
+    "message": "Arama Çubuğunu temizle / URL'yi seç"
+  },
+  "extension_description": {
+    "message": "New Tab Override yeni bir sekme açtığınızda gösterilecek sayfayı seçmenizi sağlar."
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "Yayınlanma tarihi:" 
+  },
+  "feed_read_more": {
+    "message": "Devamını oku…"
+  },
+  "feed_title": {
+    "message": "Mozilla Haberleri"
+  },
+  "focus_website_description": {
+    "message": "Arama çubuğu yerine sayfaya odaklan"
+  },
+  "focus_website_title": {
+    "message": "Odak"
+  },
+  "github_link": {
+    "message": "GitHub'ta New Tab Override"
+  },
+  "github_notice": {
+    "message": "Öneri ya da şikayetiniz mi var? GitHub'ta ticket açabilirsiniz:"
+  },
+  "homepage_description": {
+    "message": "Eğer bu seçenek seçili ise Firefox, ana ekranı yeni sekme olarak da kullanacak. Ana ekranı değiştirmek için arama çubuğuna about:preferences#home yazın. Sadece http:// ve https:// ile başlayan linkler desteklenmektedir. Eğer birden fazla ana sayfa mevcut ise, ilk olan kullanılacaktır."
+  },
+  "introduction": {
+    "message": "Bu sayfa {0} tarafından sağlanmıştır: Hangi sayfanın yeni sekme olarak açılacağını seç!"
+  },
+  "learn_more": {
+    "message": "Daha bilgi için"
+  },
+  "local_file_delete_confirmation": {
+    "message": "Bu dosyayı uzantı hafızasından silmek istediğine emin misin?"
+  },
+  "local_file_delete_text": {
+    "message": "varolan dosyayı sil"
+  },
+  "local_file_description": {
+    "message": "Firefox'un sınırlamaları nedeniyle yerel dosyalara erişilemiyor. New Tab Override yerel HTML dosyalarını uzantının hafızasına yüklemenize ve bu dosyaları yeni sekme olarak açmanıza olanak tanır. Firefox yerel dosyalara erişemediğinden eklenen her URL, fotoğraf linki, CSS ve JavaScript dosyası web tarafından erişilebilir olmalıdır. Aksitaktirde yerel bir web sunucusu, örneğin MAMP ya da XAMPP, ve “özel URL” seçeneğini kullanın. Bu yöntem herhangi bir kısıtlama olmadan çalışmaktadır."
+  },
+  "local_file_no_file": {
+    "message": "“yerel dosya” seçeneğini seçtiniz, fakat yerel bir dosya yüklemediniz. Lütfen ayarlardan yerel bir dosya yükleyin."
+  },
+  "local_file_title": {
+    "message": "Yerel dosya"
+  },
+  "local_file_upload": {
+    "message": "Yerel dosyayı depolayın"
+  },
+  "new_tab_title": {
+    "message": "Yeni Sekme"
+  },
+  "omnibox_command_settings": {
+    "message": "Yeni sekme ayarlarını aç"
+  },
+  "review_text": {
+    "message": "Bu uzantıyı beğendiniz mi? Lütfen buradan uygulamaya puan verin"
+  },
+  "settings_donate": {
+    "message": "Bağış Yap"
+  },
+  "settings_donation_text": {
+    "message": "Bu uzantının gelişmesini desteklemek için lütfen bağış yapın."
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox soeren-hentzschel.at sayfasındaki haberlere erişmek için izninize ihtiyacı var. Bu izni istediğiniz zaman kaldırabilirsiniz."
+  },
+  "settings_feed_permission_needed": {
+    "message": "Bu özelliği kullanmak için Firefox'un veri kaynağına erişimine izin vermelisiniz."
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox soeren-hentzschel.at sayfasındaki haberlere erişmek için izninize ihtiyacı var. Bu izni zaten verdiniz."
+  },
+  "settings_main_caption": {
+    "message": "Ayarlar"
+  },
+  "settings_permission_action": {
+    "message": "İzin ver"
+  },
+  "settings_permission_revoke_action": {
+    "message": "İzinleri kaldır"
+  },
+  "settings_support_caption": {
+    "message": "Destek"
+  },
+  "settings_title": {
+    "message": "Yeni Sekme - Ayarlar"
+  },
+  "settings_url_field_placeholder": {
+    "message": "URL"
+  },
+  "tab_position_title": {
+    "message": "Sekme Pozisyonu"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Yeni sekmeleri, mevcut sayfa ile alakalı ise yanına aksitaktirde sekme çubuğunun sonuna aç (varsayılan)"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "Yeni sekmeleri mevcut sayfanın yanına aç"
+  },
+  "tab_position_option_atEnd": {
+    "message": "Yeni sekmeleri sekme çubuğunun sonuna aç"
+  },
+  "type_options_background_color": {
+    "message": "arkaplan rengi"
+  },
+  "type_options_custom_url": {
+    "message": "özel URL"
+  },
+  "type_options_feed": {
+    "message": "Mozilla Haberleri (Almanca)"
+  },
+  "type_options_homepage": {
+    "message": "mevcut ana sayfa"
+  },
+  "type_options_local_file": {
+    "message": "yerel dosya"
+  },
+  "type_title": {
+    "message": "Ayarlar"
+  },
+  "url_description": {
+    "message": "Burada girilen sayfa yeni sekme açıldığında gösterilecektir. Sadece http:// ve https:// ile başlayan linkler desteklenmektedir. Firefox sınırlandırmaları nedeniyle URL ile yerel dosyalara erişim mümkün değil, bu nedenle “yerel dosya” ya da MMAMP ve XAMPP gibi yerel web sunucularını kullanın."
+  },
+  "url_title": {
+    "message": "URL"
+  },
+  "url_validation_default": {
+    "message": "Bu geçerli bir URL değil."
+  },
+  "url_validation_file": {
+    "message": "URL ile yerel dosyaya erişim bu uzantı için artık mümkün değil."
+  }
+}
