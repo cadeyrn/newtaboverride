@@ -135,7 +135,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with http:// or https:// are supported. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the “local file” option or a local web server, for example via MAMP or XAMPP. Specify multiple URLs with a pipe (`|`), one will be chosen at random for each new tab."
+    "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with http:// or https:// are supported. Please note: Access to local files via URL is no longer possible due to Firefox restrictions. Please consider using the “local file” option or a local web server, for example via MAMP or XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

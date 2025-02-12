@@ -135,7 +135,7 @@
     "message": "Optie"
   },
   "url_description": {
-    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL’s die met http:// of https:// beginnen worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP."
+    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL’s die met http:// of https:// beginnen worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

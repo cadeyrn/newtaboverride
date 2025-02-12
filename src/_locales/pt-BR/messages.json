@@ -135,7 +135,7 @@
     "message": "Opções"
   },
   "url_description": {
-    "message": "A pagina cadastrada aqui é exibida ao abrir uma nova aba. Somente URLs começadas com http:// ou https:// são suportadas. Observação: acesso a arquivos locais através de URL não é mais possível devido a restrições do Firefox. Considere usar a opção \"arquivo local\" ou um servidor web local, por exemplo MAMP ou XAMPP."
+    "message": "A pagina cadastrada aqui é exibida ao abrir uma nova aba. Somente URLs começadas com http:// ou https:// são suportadas. Observação: acesso a arquivos locais através de URL não é mais possível devido a restrições do Firefox. Considere usar a opção \"arquivo local\" ou um servidor web local, por exemplo MAMP ou XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

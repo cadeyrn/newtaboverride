@@ -25,7 +25,8 @@ const newtab = {
 
         if (url.indexOf('|') > -1) {
           const urls = options.url.split('|');
-          url = urls[utils.getRandomInt(0, urls.length - 1)].trim();
+          randIndex = Math.floor(Math.random() * urls.length);
+          url = urls[randIndex].trim();
         }
 
         // return early if there is no valid url
