@@ -25,7 +25,7 @@ const newtab = {
 
         if (url.indexOf('|') > -1) {
           const urls = options.url.split('|');
-          randIndex = Math.floor(Math.random() * urls.length);
+          const randIndex = Math.floor(Math.random() * urls.length);
           url = urls[randIndex].trim();
         }
 
