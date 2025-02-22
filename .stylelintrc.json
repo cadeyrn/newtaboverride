@@ -133,7 +133,7 @@
     "no-irregular-whitespace": true,
     "no-missing-end-of-source-newline": true,
     "no-unknown-animations": true,
-    "no-unknown-custom-properties": false,
+    "no-unknown-custom-properties": null,
     "number-leading-zero": "never",
     "number-max-precision": 2,
     "number-no-trailing-zeros": true,
