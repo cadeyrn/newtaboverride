@@ -21,7 +21,7 @@ const newtab = {
 
     switch (options.type) {
       case 'custom_url':
-        let url = options.url;
+        let { url } = options;
 
         if (url.indexOf('|') > -1) {
           const urls = options.url.split('|');
