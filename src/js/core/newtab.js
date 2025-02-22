@@ -42,7 +42,7 @@ const newtab = {
         const firstHomepage = homepage.value.split('|')[0];
 
         if (!URI_REGEX.test(firstHomepage)) {
-          newtab.openNewTabPage('', false);
+          newtab.openNewTabPage('https://' + firstHomepage, false);
           break;
         }
 

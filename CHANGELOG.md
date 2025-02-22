@@ -5,7 +5,8 @@
 ### Version 17.0.0 (in Progress)
 
 - [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
-- [ENHANCEMENT] improved description for custom URL to to mention https:// first and also mention moz-extension:// as allowed protocol, fixes [#361](https://github.com/cadeyrn/newtaboverride/issues/361)
+- [ENHANCEMENT] improved description for custom URL to mention https:// first and also mention moz-extension:// as allowed protocol, fixes [#361](https://github.com/cadeyrn/newtaboverride/issues/361)
+- [ENHANCEMENT] use https:// if the homepage option is used without a protocol instead of discarding the homepage and displaying the options page, fixes [#347](https://github.com/cadeyrn/newtaboverride/issues/347)
 - [TRANSLATION] added Turkish translation (Thanks, [@boranroni ](https://github.com/boranroni)!), see [#356](https://github.com/cadeyrn/newtaboverride/issues/356)
 - [CHANGE] changed copyright year from 2024 to 2025
 - [DEPENDENCY] updated eslint from version 9.5.0 to 9.21.0 and updated configuration
