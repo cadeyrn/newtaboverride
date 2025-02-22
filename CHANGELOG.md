@@ -8,8 +8,11 @@
 - [ENHANCEMENT] improved description for custom URL to to mention https:// first and also mention moz-extension:// as allowed protocol, fixes [#361](https://github.com/cadeyrn/newtaboverride/issues/361)
 - [TRANSLATION] added Turkish translation (Thanks, [@boranroni ](https://github.com/boranroni)!), see [#356](https://github.com/cadeyrn/newtaboverride/issues/356)
 - [CHANGE] changed copyright year from 2024 to 2025
-- [DEPENDENCY] updated eslint-plugin-jsdoc from version 48.2.12 to 48.2.13
-- [DEPENDENCY] updated web-ext from version 8.1.0 to 8.2.0
+- [DEPENDENCY] updated eslint from version 9.5.0 to 9.21.0 and updated configuration
+- [DEPENDENCY] updated eslint-plugin-jsdoc from version 48.2.12 to 50.6.3
+- [DEPENDENCY] updated gulp-eslint-new from version 2.1.0 to 2.4.0
+- [DEPENDENCY] updated jsdoc from version 4.0.3 to 4.0.4
+- [DEPENDENCY] updated web-ext from version 8.1.0 to 8.4.0
 
 ### Version 16.0.1 (2024-06-15)
 
