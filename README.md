@@ -17,7 +17,7 @@ higher is required for the latest version of New Tab Override).
 ### Features
 
 - Change your new tab page to whatever website you like
-- You can use the pipe character ("|") to randomly select a page from several pages
+- You can use the pipe character (“|”) to randomly select a page from several pages
 - Use your current home page as new tab page
 - Customize the background color for your new tab page
 - Store a local HTML file in the extension and use it for new tab content
