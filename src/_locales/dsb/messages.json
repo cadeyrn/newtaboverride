@@ -138,7 +138,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z https://, http:// abo moz-extension:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z https://, http:// abo moz-extension:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP. Znamuško Pipe („|“) dajo se wužywaś, aby někotare URL pódało. Jaden z toś tych URL se pón pó pśipadowem principje wuběra."
   },
   "url_title": {
     "message": "URL"

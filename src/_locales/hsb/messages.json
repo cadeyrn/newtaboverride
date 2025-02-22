@@ -138,7 +138,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Podpěruja so jenož URL, kotrež so z https://, http:// abo moz-extension:// započinaja. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Podpěruja so jenož URL, kotrež so z https://, http:// abo moz-extension:// započinaja. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP. Znamješko Pipe („|“) da so wužiwać, zo by wjacore URL podało. Jedyn z tutych URL so potom po připadowym principje wuběra."
   },
   "url_title": {
     "message": "URL"
