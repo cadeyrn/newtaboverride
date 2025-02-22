@@ -2,8 +2,10 @@
 
 ## Release Notes
 
-### Version 16.1.0 (in Progress)
+### Version 17.0.0 (in Progress)
 
+- [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character ("|") to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
+- [TRANSLATION] added Turkish translation (Thanks, [@boranroni ](https://github.com/boranroni)!), see [#356](https://github.com/cadeyrn/newtaboverride/issues/356)
 - [DEPENDENCY] updated eslint-plugin-jsdoc from version 48.2.12 to 48.2.13
 - [DEPENDENCY] updated web-ext from version 8.1.0 to 8.2.0
 
