@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 17.0.0 (in Progress)
+### Version 17.0.0 (2025-02-22)
 
 - [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
 - [ENHANCEMENT] added button to options page to change the extension shortcut (Firefox 137 and higher), fixes [#362](https://github.com/cadeyrn/newtaboverride/issues/362)
