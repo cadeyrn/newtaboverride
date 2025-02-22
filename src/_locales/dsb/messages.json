@@ -135,7 +135,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z http:// abo https:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP."
+    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z http:// abo https:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

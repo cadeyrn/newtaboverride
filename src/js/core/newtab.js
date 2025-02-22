@@ -21,13 +21,21 @@ const newtab = {
 
     switch (options.type) {
       case 'custom_url':
+        let url = options.url;
+
+        if (url.indexOf('|') > -1) {
+          const urls = options.url.split('|');
+          const randIndex = Math.floor(Math.random() * urls.length);
+          url = urls[randIndex].trim();
+        }
+
         // return early if there is no valid url
-        if (!URI_REGEX.test(options.url)) {
+        if (!URI_REGEX.test(url)) {
           newtab.openNewTabPage('', false);
           break;
         }
 
-        newtab.openNewTabPage(options.url, options.focus_website);
+        newtab.openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
         const homepage = await browser.browserSettings.homepageOverride.get({});

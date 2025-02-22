@@ -135,7 +135,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Podpěruja so jenož URL, kotrež so z http:// abo https:// započinaja. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP."
+    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Podpěruja so jenož URL, kotrež so z http:// abo https:// započinaja. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

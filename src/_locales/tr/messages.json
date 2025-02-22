@@ -135,7 +135,7 @@
     "message": "Ayarlar"
   },
   "url_description": {
-    "message": "Burada girilen sayfa yeni sekme açıldığında gösterilecektir. Sadece http:// ve https:// ile başlayan linkler desteklenmektedir. Firefox sınırlandırmaları nedeniyle URL ile yerel dosyalara erişim mümkün değil, bu nedenle “yerel dosya” ya da MMAMP ve XAMPP gibi yerel web sunucularını kullanın."
+    "message": "Burada girilen sayfa yeni sekme açıldığında gösterilecektir. Sadece http:// ve https:// ile başlayan linkler desteklenmektedir. Firefox sınırlandırmaları nedeniyle URL ile yerel dosyalara erişim mümkün değil, bu nedenle “yerel dosya” ya da MMAMP ve XAMPP gibi yerel web sunucularını kullanın. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

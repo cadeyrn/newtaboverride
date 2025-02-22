@@ -135,7 +135,7 @@
     "message": "选项"
   },
   "url_description": {
-    "message": "打开新标签页时，页面上会显示在此输入的网页。仅支持以 http:// 或 https:// 开头的网址。请注意：由于 Firefox 的限制，通过网址访问本地文件不再被支持。请考虑使用使用“本地文件“选项或本地网络服务器，比如 MAMP 或 XAMPP。"
+    "message": "打开新标签页时，页面上会显示在此输入的网页。仅支持以 http:// 或 https:// 开头的网址。请注意：由于 Firefox 的限制，通过网址访问本地文件不再被支持。请考虑使用使用“本地文件“选项或本地网络服务器，比如 MAMP 或 XAMPP。 Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "网址"

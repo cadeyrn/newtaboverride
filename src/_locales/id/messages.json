@@ -135,7 +135,7 @@
     "message": "Opsi"
   },
   "url_description": {
-    "message": "Halaman web yang dimasukkan di sini ditampilkan saat membuka tab baru. Hanya URL yang dimulai dengan http:// atau https:// yang didukung. Harap diperhatikan: Akses ke file lokal melalui URL tidak lagi dimungkinkan karena pembatasan Firefox. Harap pertimbangkan untuk menggunakan opsi “file lokal” atau server web lokal, misalnya melalui MAMP atau XAMPP."
+    "message": "Halaman web yang dimasukkan di sini ditampilkan saat membuka tab baru. Hanya URL yang dimulai dengan http:// atau https:// yang didukung. Harap diperhatikan: Akses ke file lokal melalui URL tidak lagi dimungkinkan karena pembatasan Firefox. Harap pertimbangkan untuk menggunakan opsi “file lokal” atau server web lokal, misalnya melalui MAMP atau XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"

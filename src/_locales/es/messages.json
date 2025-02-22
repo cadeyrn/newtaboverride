@@ -135,7 +135,7 @@
     "message": "Opción"
   },
   "url_description": {
-    "message": "La página de web introducida aquí se muestra al abrir una nueva pestaña nueva. Solo se soportan las URL que empiecen con http:// o https://. Tenga en cuenta: El acceso a los archivos locales a través de una URL ya no es posible debido a las restricciones de Firefox. Por favor, considere usar la opción “archivo local” o un servidor web local, por ejemplo vía MAMP o XAMPP."
+    "message": "La página de web introducida aquí se muestra al abrir una nueva pestaña nueva. Solo se soportan las URL que empiecen con http:// o https://. Tenga en cuenta: El acceso a los archivos locales a través de una URL ya no es posible debido a las restricciones de Firefox. Por favor, considere usar la opción “archivo local” o un servidor web local, por ejemplo vía MAMP o XAMPP.  Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
   },
   "url_title": {
     "message": "URL"
