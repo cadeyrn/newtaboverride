@@ -135,7 +135,7 @@
     "message": "Opzione"
   },
   "url_description": {
-    "message": "La pagina web inserita qui viene visualizzata quando si apre una nuova scheda. Sono supportati solo gli indirizzi URL che iniziano con http:// o https://. N. B.: Non è più possibile accedere ai file locali tramite URL a causa di restrizioni imposte da Firefox. Si consiglia di utilizzare l’opzione “file locali” o un server web locale, come MAMP o XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
+    "message": "La pagina web inserita qui viene visualizzata quando si apre una nuova scheda. Sono supportati solo gli indirizzi URL che iniziano con https://, http:// o moz-extension://. N. B.: Non è più possibile accedere ai file locali tramite URL a causa di restrizioni imposte da Firefox. Si consiglia di utilizzare l’opzione “file locali” o un server web locale, come MAMP o XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
   },
   "url_title": {
     "message": "URL"

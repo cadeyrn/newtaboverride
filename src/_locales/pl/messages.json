@@ -135,7 +135,7 @@
     "message": "Opcja"
   },
   "url_description": {
-    "message": "Wprowadzona tutaj strona wyświetlana jest po otwarciu nowej karty. Obsługiwane są tylko adresy rozpoczynające się od http:// lub https://. Uwaga: Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy z powodu ograniczeń Firefoksa. Rozważ użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
+    "message": "Wprowadzona tutaj strona wyświetlana jest po otwarciu nowej karty. Obsługiwane są tylko adresy rozpoczynające się od https://, http:// lub moz-extension://. Uwaga: Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy z powodu ograniczeń Firefoksa. Rozważ użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP. You can use the pipe character („|”) to provide multiple URLs. One of these URLs will then randomly be selected."
   },
   "url_title": {
     "message": "Adres URL"

@@ -135,7 +135,7 @@
     "message": "Опції"
   },
   "url_description": {
-    "message": "Введена тут веб-сторінка буде відображатися при відкритті нової вкладки. Підтримуються лише веб-адреси, що починаються з http:// або https://. Зверніть увагу, що доступ до локальних файлів відсутній через обмежження Firefox. Альтернативою є використання опції \"локальний файл\" або локального веб-сервера, наприклад MAMP або XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
+    "message": "Введена тут веб-сторінка буде відображатися при відкритті нової вкладки. Підтримуються лише веб-адреси, що починаються з https://, http:// або moz-extension://. Зверніть увагу, що доступ до локальних файлів відсутній через обмежження Firefox. Альтернативою є використання опції \"локальний файл\" або локального веб-сервера, наприклад MAMP або XAMPP. You can use the pipe character (\"|\") to provide multiple URLs. One of these URLs will then randomly be selected."
   },
   "url_title": {
     "message": "URL"

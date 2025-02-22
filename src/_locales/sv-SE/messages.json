@@ -135,7 +135,7 @@
     "message": "Alternativ"
   },
   "url_description": {
-    "message": "Webbsidan som anges här visas när du öppnar en ny flik. Endast URL:er som börjar med http:// eller https:// stöds. Observera: Åtkomst till lokala filer via URL är inte längre möjligt på grund av begränsningar i Firefox. Överväg gärna att använda alternativet “lokal fil” eller en lokal webbserver, till exempel via MAMP eller XAMPP. Specify multiple URLs with a pipe (`|`); one will be chosen at random for each new tab."
+    "message": "Webbsidan som anges här visas när du öppnar en ny flik. Endast URL:er som börjar med https://, http:// eller moz-extension:// stöds. Observera: Åtkomst till lokala filer via URL är inte längre möjligt på grund av begränsningar i Firefox. Överväg gärna att använda alternativet “lokal fil” eller en lokal webbserver, till exempel via MAMP eller XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
   },
   "url_title": {
     "message": "URL"
