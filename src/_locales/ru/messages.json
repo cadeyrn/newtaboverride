@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Цвет фона"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Автоочистка адресной строки или выбор URL-адреса в настоящее время невозможны для WebExtensions. Это изменение требуется со стороны Mozilla."
   },

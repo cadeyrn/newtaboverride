@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Couleur de fond"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "L’effacement automatique de la barre d’adresse ou de la sélection de l’URL n’est actuellement pas possible pour les WebExtensions. Cela nécessite une modification par Mozilla."
   },

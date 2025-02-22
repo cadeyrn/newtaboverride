@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Kolor tła"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Automatyczne czyszczenie paska adresu lub zaznaczanie adresu URL nie jest obecnie możliwe dla WebExtensions. Wymaga to zmiany ze strony Mozilli."
   },

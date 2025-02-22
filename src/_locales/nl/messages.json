@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Achtergrondkleur"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Het automatisch legen van de adresbalk of selecteren van de URL is momenteel niet mogelijk voor WebExtensions. Dit vereist een wijziging door Mozilla."
   },

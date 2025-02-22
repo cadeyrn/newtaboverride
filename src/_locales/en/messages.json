@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Background color"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "The automatic emptying of the address bar or selecting the URL is currently not possible for WebExtensions. This requires a change by Mozilla."
   },

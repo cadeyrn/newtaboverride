@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Slězynowa barwa"
   },
+  "change_settings_shortcut": {
+    "message": "Tastowu kombinaciju změniś"
+  },
   "clear_addressbar_description": {
     "message": "Awtomatiske proznjenje  adresowego póla abo markěrowanje URL tuchylu njejo móžne za WebExtensions. To se změna z boka Mozilla pomina."
   },

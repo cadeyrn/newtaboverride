@@ -1,9 +1,13 @@
 'use strict';
 
-/* global URI_REGEX, PERMISSION_FEED, PROTOCOL_REGEX, defaults, permissions */
+/* global URI_REGEX, PERMISSION_FEED, PROTOCOL_REGEX, defaults, permissions, utils */
+
+const FIREFOX_137 = 137;
 
 const elBackgroundColor = document.getElementById('background-color');
 const elBackgroundColorOption = document.getElementById('background-color-option');
+const elChangeSettingsShortcutWrapper = document.getElementById('change-settings-shortcut-wrapper');
+const elChangeSettingsShortcut = document.getElementById('change-settings-shortcut');
 const elClearOption = document.getElementById('clear-option');
 const elFeedPermission = document.getElementById('feed-permission-container');
 const elFeedPermissionBtn = document.getElementById('feed-permission');
@@ -25,6 +29,18 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
+  changeSettingsShortcutButton : false,
+
+  /**
+   * This method will be fired on add-on init.
+   *
+   * @param {object} info - an object containing information about the browser
+   * @returns {void}
+   */
+  init (info) {
+    options.changeSettingsShortcutButton = utils.parseVersion(info.version).major >= FIREFOX_137;
+  },
+
   /**
    * This method handles the visibility of the subsections of some options.
    *
@@ -85,6 +101,7 @@ const options = {
     options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
     options.toggleVisibility(elLocalFileOption, showLocalFileOption);
     options.toggleVisibility(elLocalFileDeleteLink, showLocalFileDeleteLink);
+    options.toggleVisibility(elChangeSettingsShortcutWrapper, options.changeSettingsShortcutButton);
   },
 
   /**
@@ -213,3 +230,10 @@ elLocalFileDeleteLink.addEventListener('click', (e) => {
   browser.storage.local.set({ local_file : '' });
   options.toggleVisibility(elLocalFileDeleteLink, false);
 });
+
+elChangeSettingsShortcut.addEventListener('click', (e) => {
+  e.preventDefault();
+  browser.commands.openShortcutSettings();
+});
+
+browser.runtime.getBrowserInfo().then(options.init).catch();

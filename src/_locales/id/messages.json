@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Warna latar belakang"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Fitur mengosongkan otomatis untuk pada tempat alamat atau memilih URL saat ini tidak tersedia pada WebExtensions. Hal ini membutuhkan perubahan dari Mozilla."
   },

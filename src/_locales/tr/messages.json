@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Arkaplan Rengi"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Otomatik olarak arama çubuğunun temizlenmesi ya da URL'nin seçilmesi WebExtensionlar için mümkün değil. Bu, Mozilla tarafından bir değişiklik yapılmasını gerektirir."
   },

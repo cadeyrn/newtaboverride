@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Hintergrund-Farbe"
   },
+  "change_settings_shortcut": {
+    "message": "Tastenkombination ändern"
+  },
   "clear_addressbar_description": {
     "message": "Das automatische Leeren der Adressleiste oder Markieren der URL ist für WebExtensions derzeit nicht möglich. Dies erfordert eine Änderung seitens Mozilla."
   },

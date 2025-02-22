@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "背景色"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "目前 WebExtension 还不支持自动清空地址栏或选中地址栏中的网址。实现该功能需要 Mozilla 做出更改。"
   },

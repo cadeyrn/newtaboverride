@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Pozadkowa barba"
   },
+  "change_settings_shortcut": {
+    "message": "Tastowu kombinaciju změnić"
+  },
   "clear_addressbar_description": {
     "message": "Awtomatiske prózdnjenje adresoweho pola abo markěrowanje URL tuchwilu za WebExtensions móžne njeje. To sej změna ze strony Mozilla wužaduje."
   },

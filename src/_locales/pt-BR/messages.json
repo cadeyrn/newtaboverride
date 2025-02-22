@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Cor de fundo"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "A limpeza automática da barra de endereços ou selecionar a URL atualmente não é possível para WebExtensions. Isto requer uma mudança pela Mozilla."
   },

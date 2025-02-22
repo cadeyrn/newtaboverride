@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Bakgrundsfärg"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "Den automatiska tömningen av adressfältet eller val av webbadressen är för närvarande inte möjlig för webbtillägg. Detta kräver en förändring från Mozilla."
   },

@@ -2,6 +2,9 @@
   "background_color_title": {
     "message": "Color de fondo"
   },
+  "change_settings_shortcut": {
+    "message": "Change shortcut"
+  },
   "clear_addressbar_description": {
     "message": "El vaciado automático de la barra de direcciones o la selección de la URL actualmente no es posible para WebExtensions. Esto requiere un cambio por parte de Mozilla."
   },
