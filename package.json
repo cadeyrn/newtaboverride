@@ -56,6 +56,6 @@
   "dependencies": {
     "geckodriver": "^6.1.0",
     "selenium-webdriver": "^4.40.0",
-    "selenium-webext-bridge": "^0.1.0"
+    "selenium-webext-bridge": "^0.2.0"
   }
 }

@@ -17,18 +17,6 @@ const {
 const NTO_EXT_DIR = path.join(__dirname, 'src');
 const NTO_EXT_ID = 'newtaboverride@agenedia.com'; // Extension ID
 
-async function closeTabs(driver) {
-  const handles = await driver.getAllWindowHandles();
-  if (handles.length > 1) {
-    for (let i = handles.length - 1; i > 0; i--) {
-      await driver.switchTo().window(handles[i]);
-      await driver.close();
-    }
-    await driver.switchTo().window(handles[0]);
-    await sleep(500);
-  }
-}
-
 async function main() {
   console.log('===== Integration Tests =====');
 
@@ -80,12 +68,13 @@ async function main() {
         };
       });
 
-      if (elements.type && elements.url && elements.color && elements.focus && elements.tabPos)
+      if (elements.type && elements.url && elements.color && elements.focus && elements.tabPos) {
         results.pass('Options page loaded correctly');
-      else
+      } else {
         results.fail('Options page loaded correctly', JSON.stringify(elements));
-    } catch (e) { 
-      results.error('Options page loaded correctly', e); 
+      }
+    } catch (e) {
+      results.error('Options page loaded correctly', e);
     }
 
     // Check to see if the options are populated from storage.
@@ -98,13 +87,14 @@ async function main() {
         };
       });
 
-      if (stored === selected)
+      if (stored === selected) {
         results.pass('Options page contains stored settings');
-      else
+      } else {
         results.fail('Options page contains stored settings',
           `stored: ${stored}, selected: ${selected}`);
-    } catch (e) { 
-      results.error('Options page contains stored settings', e); 
+      }
+    } catch (e) {
+      results.error('Options page contains stored settings', e);
     }
 
     console.log('----- Custom URL Mode -----');
@@ -127,22 +117,22 @@ async function main() {
       await driver.switchTo().newWindow('tab');
       await driver.get(newtabUrl);
 
-      // Wait for extesion to redirect URL.
+      // Wait for extension to redirect URL.
       const landed = await waitForCondition(async () => {
         const url = await driver.getCurrentUrl();
         return url.includes('newtab-custom-url-test') ? url : null;
       }, 10000, 500);
 
-      if (landed)
+      if (landed) {
         results.pass('newtab.html redirects to configured custom URL');
-      else {
+      } else {
         const finalUrl = await driver.getCurrentUrl();
         results.fail('newtab.html redirects to configured custom URL', `got: ${finalUrl}`);
       }
 
-      await closeTabs(driver);
+      await bridge.closeOtherTabsAndWindows();
     } catch (e) {
-      results.error('newtab.html redirects to configured custom URL', e); 
+      results.error('newtab.html redirects to configured custom URL', e);
     }
 
   } catch (e) {
