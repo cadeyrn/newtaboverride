@@ -4,6 +4,10 @@
 
 ### Version 18.0.0 (Work in Progress)
 
+#### Developer Experience
+
+- [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies
+
 **Minimum required Firefox version is Firefox 140 now.**
 
 ### Version 17.0.0 (2025-02-22)
