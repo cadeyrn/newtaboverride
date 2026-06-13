@@ -132,7 +132,7 @@ class Background {
       id: 'nto-tools-menu-entry',
       title: browser.i18n.getMessage('settings_title'),
       contexts: ['tools_menu'],
-      command: '_execute_browser_action'
+      command: '_execute_action'
     });
   }
 }

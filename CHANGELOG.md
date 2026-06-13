@@ -10,6 +10,10 @@
 - [ENHANCEMENT] **redesigned the user interface**, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
 - [ENHANCEMENT] display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
 
+#### Bugfixes
+
+- [BUGFIX] The tools menu entry to open the settings page did not work, see [#383](https://github.com/cadeyrn/newtaboverride/issues/383)
+
 #### Developer Experience
 
 - [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
