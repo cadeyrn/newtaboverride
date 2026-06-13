@@ -91,9 +91,35 @@ class NewTab {
 
     // set focus on website
     if (focus_website) {
-      // pass the cookieStoreId to support container tabs in Firefox and keep the replacement tab at the same position
-      // as the temporary internal new tab page
-      const createdTab = await browser.tabs.create({ url, cookieStoreId: tab.cookieStoreId, index: tab.index });
+      let sourceTab = null;
+
+      if (tab.openerTabId > 0) {
+        sourceTab = await browser.tabs.get(tab.openerTabId);
+      }
+
+      // Firefox may create the temporary internal new tab page in the default container even though the user opened
+      // the tab from a container tab. Reusing the previously active tab as the source keeps the replacement tab in the
+      // expected container and avoids an unnecessary reopen by other tab-management extensions.
+      if (!sourceTab && tab.cookieStoreId === 'firefox-default') {
+        const tabs = await browser.tabs.query({ windowId: tab.windowId });
+
+        sourceTab = tabs.find(candidate => candidate.id !== tab.id && candidate.successorTabId === tab.id) ??
+          tabs.filter(candidate => candidate.id !== tab.id).sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ??
+          null;
+      }
+
+      const createdTabProperties = {
+        url,
+        index: tab.index,
+        windowId: tab.windowId,
+        cookieStoreId: sourceTab?.cookieStoreId || tab.cookieStoreId
+      };
+
+      if (sourceTab) {
+        createdTabProperties.openerTabId = sourceTab.id;
+      }
+
+      const createdTab = await browser.tabs.create(createdTabProperties);
 
       // if the temporary internal new tab page belongs to a tab group, move the replacement tab back into that
       // same group
