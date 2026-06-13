@@ -138,7 +138,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Nur URLs, welche mit https://, http:// or moz-extension:// beginnen, werden unterstützt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP. Es kann das Pipe-Zeichen („|“) verwendet werden, um mehrere URLs anzugeben. Eine dieser URLs wird dann nach dem Zufallsprinzip ausgewählt."
+    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Nur URLs, welche mit https://, http:// oder moz-extension:// beginnen, werden unterstützt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP. Es kann das Pipe-Zeichen („|“) verwendet werden, um mehrere URLs anzugeben. Eine dieser URLs wird dann nach dem Zufallsprinzip ausgewählt."
   },
   "url_title": {
     "message": "URL"
