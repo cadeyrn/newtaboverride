@@ -23,13 +23,12 @@
 
 #### Other Changes
 
+- Firefox 140 or later is now required
 - Changed copyright year from 2025 to 2026
 
 #### Developer Experience
 
 - Replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
-
-**Minimum required Firefox version is Firefox 140 now.**
 
 ### Version 17.0.0 (2025-02-22)
 
