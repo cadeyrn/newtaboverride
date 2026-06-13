@@ -6,22 +6,28 @@
 
 #### Enhancements
 
-- [ENHANCEMENT] New Tab Override does not collect any data. A new property in the extension manifest makes this explicit. Users now see a corresponding note during installation and in the add-ons manager, see [#376](https://github.com/cadeyrn/newtaboverride/issues/376)
-- [ENHANCEMENT] redesigned the user interface, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
-- [ENHANCEMENT] Internal New Tab Override pages no longer appear in Firefox's recently closed tabs list when the option to set the focus to the website is used. This requires a new permission to access recently closed tabs, see [#369](https://github.com/cadeyrn/newtaboverride/issues/369)
-- [ENHANCEMENT] preserve tab group membership when the option to set the focus to the website is used, see [#371](https://github.com/cadeyrn/newtaboverride/issues/371)
-- [ENHANCEMENT] display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
+- New Tab Override does not collect any data. A new property in the extension manifest makes this explicit. Users now see a corresponding note during installation and in the add-ons manager, see [#376](https://github.com/cadeyrn/newtaboverride/issues/376)
+- Redesigned the user interface, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
+- Internal New Tab Override pages no longer appear in Firefox's recently closed tabs list when the option to set the focus to the website is used. This requires a new permission to access recently closed tabs, see [#369](https://github.com/cadeyrn/newtaboverride/issues/369)
+- Preserve tab group membership when the option to set the focus to the website is used, see [#371](https://github.com/cadeyrn/newtaboverride/issues/371)
+- Display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
 
 #### Bugfixes
 
-- [BUGFIX] The tools menu entry to open the settings page did not work, see [#383](https://github.com/cadeyrn/newtaboverride/issues/383)
+- The tools menu entry to open the settings page did not work, see [#383](https://github.com/cadeyrn/newtaboverride/issues/383)
+
+#### Code Quality
+
+- Refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
+- Refactored the CSS files to use CSS nesting, see [#335](https://github.com/cadeyrn/newtaboverride/issues/335)
+
+#### Other Changes
+
+- Changed copyright year from 2025 to 2026
 
 #### Developer Experience
 
-- [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
-- [CODE QUALITY] refactored the CSS files to use CSS nesting, see [#335](https://github.com/cadeyrn/newtaboverride/issues/335)
-- [CHANGE] changed copyright year from 2025 to 2026
-- [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
+- Replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
 
 **Minimum required Firefox version is Firefox 140 now.**
 
