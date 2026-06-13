@@ -53,10 +53,8 @@
   --shadow-glass: 0 8px 18px rgba(41, 52, 79, .08);
   --shadow-soft: 0 16px 28px rgba(41, 52, 79, .06);
   color-scheme: light dark;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
+  @media (prefers-color-scheme: dark) {
     --color-blue-translucent: rgba(111, 168, 237, .16);
     --color-card-gradient-end: rgba(35, 39, 46, .94);
     --color-card-gradient-start: rgba(43, 47, 54, .98);
