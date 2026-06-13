@@ -1,83 +1,82 @@
 'use strict';
 
-/**
- * @exports i18n
- */
-const i18n = {
+class I18n {
   /**
-   * Fired when the initial HTML document has been completely loaded and parsed. Starts the translation of all the
-   * strings.
+   * Start the translation of all the strings.
    *
    * @returns {void}
    */
-  init () {
-    i18n.translate();
-    i18n.setLangAttribute();
-  },
+  static init () {
+    I18n.#setLangAttribute();
+    I18n.#translate();
+  }
 
   /**
-   * This method is used to set the lang attribute to the <html> element.
-   *
-   * @returns {void}
-   */
-  setLangAttribute () {
-    document.querySelector('html').setAttribute('lang', browser.i18n.getUILanguage());
-  },
-
-  /**
-   * This method is used to get the translation for a given key.
+   * Translate a message and return the translation key if no translation is available.
    *
    * @param {string} key - translation key
+   * @param {string|string[]|null} substitutions - substitutions for placeholders in the translation
    *
-   * @returns {string} - translation
+   * @returns {string} - the translated message or the key if no translation is available
    */
-  getMessage (key) {
-    return browser.i18n.getMessage(key);
-  },
+  static getMessage (key, substitutions = null) {
+    const message = browser.i18n.getMessage(key, substitutions);
+
+    return message ? message : key;
+  }
 
   /**
-   * Translates all strings in text nodes, placeholders and title attributes.
+   * Set the lang attribute of the <html> element.
    *
    * @returns {void}
    */
-  translate () {
-    document.removeEventListener('DOMContentLoaded', i18n.translate);
+  static #setLangAttribute () {
+    document.querySelector('html').setAttribute('lang', browser.i18n.getUILanguage());
+  }
+
+  /**
+   * Translate all strings in text nodes, placeholders, and title attributes.
+   *
+   * @returns {void}
+   */
+  static #translate () {
+    document.removeEventListener('DOMContentLoaded', I18n.#translate);
 
     // text node translation
-    const nodes = document.querySelectorAll('[data-i18n]');
+    const $nodes = document.querySelectorAll('[data-i18n]');
 
-    for (let i = 0, len = nodes.length; i < len; i++) {
-      const node = nodes[i];
-      const children = Array.from(node.children);
-      const text = i18n.getMessage(node.dataset.i18n);
+    $nodes.forEach($node => {
+      const $children = Array.from($node.children);
+      const text = I18n.getMessage($node.dataset.i18n);
       const parts = text.split(/({\d+})/);
 
       parts.forEach(part => {
         if ((/{\d+}/).test(part)) {
-          const index = parseInt(part.slice(1));
-          node.appendChild(children[index]);
+          const idx = parseInt(part.slice(1));
+          $node.appendChild($children[idx]);
         }
         else {
-          node.appendChild(document.createTextNode(part));
+          $node.appendChild(document.createTextNode(part));
         }
       });
-    }
+
+      $node.removeAttribute('data-i18n');
+    });
 
     // attribute translation
     const attributes = ['data-confirm', 'placeholder', 'title'];
 
     for (const attribute of attributes) {
       const i18nAttribute = `data-i18n-${attribute}`;
-      const attrNodes = document.querySelectorAll(`[${i18nAttribute}]`);
-      const { length } = attrNodes;
+      const $attrNodes = document.querySelectorAll(`[${i18nAttribute}]`);
 
-      for (let i = 0; i < length; i++) {
-        const node = attrNodes[i];
-        const msg = node.getAttribute(i18nAttribute);
-        node.setAttribute(attribute, i18n.getMessage(msg));
-      }
+      $attrNodes.forEach($node => {
+        const msg = $node.getAttribute(i18nAttribute);
+        $node.setAttribute(attribute, I18n.getMessage(msg));
+        $node.removeAttribute(i18nAttribute);
+      });
     }
   }
-};
+}
 
-window.addEventListener('DOMContentLoaded', i18n.init);
+window.addEventListener('DOMContentLoaded', I18n.init);
