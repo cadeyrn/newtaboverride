@@ -10,6 +10,7 @@
 - Redesigned the user interface, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
 - Internal New Tab Override pages no longer appear in Firefox's recently closed tabs list when the option to set the focus to the website is used. This requires a new permission to access recently closed tabs, see [#369](https://github.com/cadeyrn/newtaboverride/issues/369)
 - Preserve tab group membership when the option to set the focus to the website is used, see [#371](https://github.com/cadeyrn/newtaboverride/issues/371)
+- Improved compatibility with container-aware tab extensions when the option to set the focus to the website is used, see [#217](https://github.com/cadeyrn/newtaboverride/issues/217)
 - Display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
 
 #### Bugfixes
