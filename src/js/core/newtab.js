@@ -97,7 +97,7 @@ class NewTab {
 
       // if the temporary internal new tab page belongs to a tab group, move the replacement tab back into that
       // same group
-      if (browser.tabs.group && Number.isInteger(createdTab.id) && Number.isInteger(tab.groupId) && tab.groupId !== -1) {
+      if (browser.tabs.group && tab.groupId > -1) {
         await browser.tabs.group({ groupId: tab.groupId, tabIds: createdTab.id });
       }
 

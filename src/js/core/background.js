@@ -157,7 +157,7 @@ class Background {
    * @returns {void}
    */
   static #handleMessage (message) {
-    if (message?.type !== 'forget-closed-new-tab' || !Number.isInteger(message.windowId)) {
+    if (message?.type !== 'forget-closed-new-tab') {
       return;
     }
 
