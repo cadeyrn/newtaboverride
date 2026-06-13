@@ -91,8 +91,15 @@ class NewTab {
 
     // set focus on website
     if (focus_website) {
-      // pass the cookieStoreId to support container tabs in Firefox
-      await browser.tabs.create({ url, cookieStoreId: tab.cookieStoreId });
+      // pass the cookieStoreId to support container tabs in Firefox and keep the replacement tab at the same position
+      // as the temporary internal new tab page
+      const createdTab = await browser.tabs.create({ url, cookieStoreId: tab.cookieStoreId, index: tab.index });
+
+      // if the temporary internal new tab page belongs to a tab group, move the replacement tab back into that
+      // same group
+      if (browser.tabs.group && Number.isInteger(createdTab.id) && Number.isInteger(tab.groupId) && tab.groupId !== -1) {
+        await browser.tabs.group({ groupId: tab.groupId, tabIds: createdTab.id });
+      }
 
       // remember this window so the background script can remove the closed internal new tab page from the recently
       // closed tabs list again
