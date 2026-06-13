@@ -1,23 +1,23 @@
 'use strict';
 
-/* global URI_REGEX, defaults, utils */
+/* global Defaults, Utils */
 
-const LOCAL_FILE_PAGE = 'html/local_file.html';
-const LOCAL_FILE_MISSING_PAGE = 'html/local_file_missing.html';
-const FEED_PAGE = 'html/feed.html';
-const NEW_TAB_PAGE = 'html/newtab.html';
+class NewTab {
+  static #localFilePage = 'html/local_file.html';
 
-/**
- * @exports newtab
- */
-const newtab = {
+  static #localFileMissingPage = 'html/local_file_missing.html';
+
+  static #feedPage = 'html/feed.html';
+
+  static #newTabPage = 'html/newtab.html';
+
   /**
    * This method is used to navigate to the set new tab page.
    *
    * @returns {void}
    */
-  async init () {
-    const options = await browser.storage.local.get(defaults);
+  static async init () {
+    const options = await browser.storage.local.get(Defaults.values);
 
     switch (options.type) {
       case 'custom_url':
@@ -30,43 +30,43 @@ const newtab = {
         }
 
         // return early if there is no valid url
-        if (!URI_REGEX.test(url)) {
-          newtab.openNewTabPage('', false);
+        if (!Utils.uriRegex.test(url)) {
+          NewTab.#openNewTabPage('', false);
           break;
         }
 
-        newtab.openNewTabPage(url, options.focus_website);
+        NewTab.#openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
         const homepage = await browser.browserSettings.homepageOverride.get({});
         const firstHomepage = homepage.value.split('|')[0];
 
-        if (!URI_REGEX.test(firstHomepage)) {
-          newtab.openNewTabPage('https://' + firstHomepage, false);
+        if (!Utils.uriRegex.test(firstHomepage)) {
+          NewTab.#openNewTabPage('https://' + firstHomepage, false);
           break;
         }
 
-        newtab.openNewTabPage(firstHomepage, options.focus_website);
+        NewTab.#openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
-        const { background_color } = await browser.storage.local.get({ background_color : defaults.background_color });
+        const { background_color } = await browser.storage.local.get({ background_color: Defaults.values.background_color });
         document.body.style.background = background_color;
         break;
       case 'feed':
-        newtab.openNewTabPage(browser.runtime.getURL(FEED_PAGE), options.focus_website);
+        NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website);
         break;
       case 'local_file':
         if (options.local_file) {
-          newtab.openNewTabPage(browser.runtime.getURL(LOCAL_FILE_PAGE), options.focus_website);
+          NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFilePage), options.focus_website);
         }
         else {
-          newtab.openNewTabPage(browser.runtime.getURL(LOCAL_FILE_MISSING_PAGE), options.focus_website);
+          NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFileMissingPage), options.focus_website);
         }
         break;
       default:
-        newtab.openNewTabPage('', false);
+        NewTab.#openNewTabPage('', false);
     }
-  },
+  }
 
   /**
    * This method is used to set the focus either on the address bar or on the web page.
@@ -76,35 +76,34 @@ const newtab = {
    *
    * @returns {void}
    */
-  async openNewTabPage (url, focus_website) {
+  static async #openNewTabPage (url, focus_website) {
     if (url.trim() === '') {
       /* eslint-disable-next-line no-param-reassign */
       url = browser.runtime.getURL('html/options.html');
     }
 
-    await browser.tabs.getCurrent((tab) => {
+    await browser.tabs.getCurrent(tab => {
       const tabId = tab.id;
 
       // set focus on website
       if (focus_website) {
-        // we need to pass the cookieStoreId to support the container tabs feature of Firefox
-        browser.tabs.create({ url : url, cookieStoreId : tab.cookieStoreId }, () => {
+        // pass the cookieStoreId to support container tabs in Firefox
+        browser.tabs.create({ url: url, cookieStoreId: tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
       }
       // set focus on address bar
       else {
-        // we explicitly set the tab id of the current tab to support the edge case of opening a new tab in the
-        // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
-        browser.tabs.update(tabId, { url : url, loadReplace : true }, () => {
+        // use loadReplace to keep the back button disabled and to support background new-tab flows from add-ons
+        browser.tabs.update(tabId, { url: url, loadReplace: true }, () => {
           // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
         });
       }
     });
 
-    // delete spammy new tab page entry from history
-    browser.history.deleteUrl({ url : browser.runtime.getURL(NEW_TAB_PAGE) });
+    // delete the internal new tab page entry from history after redirecting
+    browser.history.deleteUrl({ url: browser.runtime.getURL(NewTab.#newTabPage) });
   }
-};
+}
 
-newtab.init();
+NewTab.init();

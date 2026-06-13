@@ -39,10 +39,7 @@
     "message": "Přeješ sej funkcije abo chceš zmylk zdźělić? Pisaj rozprawu na GitHub:"
   },
   "homepage_description": {
-    "message": "Hdyž tute nastajenje zmóžnješ, Firefox startowu stronu tež jako stronu za nowy rajtark wužiwa. Zapodaj about:preferences#home do adresoweho pola, zo by startowu stronu změnił. Podpěruja so jenož startowe strony, kotrež so z http:// abo https:// započinaja. Hdyž su wjacore startowe strony skonfigurowane, budźe New Tab Override prěnju wužiwać."
-  },
-  "introduction": {
-    "message": "Tuta strona staja so k dispoziciji wot {0}: Wubjer, kotra strona ma so jako nowy rajtark wočinić!"
+    "message": "Hdyž tute nastajenje zmóžnješ, Firefox startowu stronu tež jako stronu za nowy rajtark wužiwa. Zapodaj about:preferences#home do adresoweho pola, zo by startowu stronu změnił. Podpěruja so jenož startowe strony, kotrež so z https:// abo http:// započinaja. Hdyž su wjacore startowe strony skonfigurowane, budźe New Tab Override prěnju wužiwać."
   },
   "learn_more": {
     "message": "Dalše Informacije"
@@ -51,7 +48,7 @@
     "message": "Chceš woprawdźe dataju ze składowaka rozšěrjenja zhašeć?"
   },
   "local_file_delete_text": {
-    "message": "eksistowacu dataju zhašeć"
+    "message": "Eksistowacu dataju zhašeć"
   },
   "local_file_description": {
     "message": "Restrikcijow přez Firefox dla za rozšěrjenja móžno njeje, přistup na lokalne dataje měć. New Tab Override ći znajmjeńša móžnosć skići, lokalne dataje do składowaka rozšěrjenja začitać a na tute wašnje jako wobsah za nowy rajtark wužiwać. Ewentuelnje w nim wobsahowane URL a zwjazanja k wobrazam a CSS- a JavaScriptowym datajam dyrbja přez web docpějomne być, dokelž Firefox přistup na lokalne dataje na systemje nima. Rozwaž prošu wužiwanje lokalneho webserwera jako alternatiwu, na přikład přez MAMP abo XAMPP z nastajenjom  „wot wužiwarja definowany URL“. To bjez wobmjezowanja funguje."
@@ -75,7 +72,7 @@
     "message": "Přidatk so ći spodoba? Da zawostaj pohódnoćenje na"
   },
   "settings_donate": {
-    "message": "Darić"
+    "message": "Nětko darić"
   },
   "settings_donation_text": {
     "message": "Prošu rozmysluj dar, zo by dalše wuwiwanje tutoho přidatka podpěrał."
@@ -107,32 +104,32 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Rajtarkowa pozicija"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Nowe rajtarki pódla aktualneho rajtarka wočinić, jeli z nim zwisuja, hewak na kóncu rajtarkoweje lajsty (standard)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Wšě nowe rajtarki pódla aktualneho rajtarka wočinić"
   },
   "tab_position_option_atEnd": {
     "message": "Wšě rajtarki na kóncu rajtarkoweje lajsty wočinić"
   },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Nowe rajtarki pódla aktualneho rajtarka wočinić, jeli z nim zwisuja, hewak na kóncu rajtarkoweje lajsty (standard)"
+  },
+  "tab_position_title": {
+    "message": "Rajtarkowa pozicija"
+  },
   "type_options_background_color": {
-    "message": "pozadkowa barba"
+    "message": "Pozadkowa barba"
   },
   "type_options_custom_url": {
-    "message": "wot wužiwarja definowany URL"
+    "message": "Wot wužiwarja definowany URL"
   },
   "type_options_feed": {
     "message": "Nowinki Mozilla (němsce)"
   },
   "type_options_homepage": {
-    "message": "aktualna startowa strona"
+    "message": "Aktualna startowa strona"
   },
   "type_options_local_file": {
-    "message": "lokalna dataja"
+    "message": "Lokalna dataja"
   },
   "type_title": {
     "message": "Opcija"
@@ -144,9 +141,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "To płaćiwy URL njeje."
+    "message": "To płaćiwy URL njeje"
   },
   "url_validation_file": {
-    "message": "Přistup na lokalne dataje přez URL za rozšěrjenja hižo móžny njeje."
+    "message": "Přistup na lokalne dataje přez URL za rozšěrjenja hižo móžny njeje"
   }
 }

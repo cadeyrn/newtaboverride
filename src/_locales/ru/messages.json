@@ -39,10 +39,7 @@
     "message": "Запросы функций или сообщение об ошибке? Откройте вопрос на GitHub:"
   },
   "homepage_description": {
-    "message": "Если эта опция включена, Firefox будет использовать домашнюю страницу в качестве новой страницы вкладки. Вы можете изменить домашнюю страницу, введя about:preferences#home в адресной строке. Поддерживаются только домашние страницы, начинающиеся с http:// или https://. Если настроено несколько домашних страниц, то New Tab Override будет использовать первую."
-  },
-  "introduction": {
-    "message": "Эта страница предоставлена {0}: Выберите, какая страница должна открываться в качестве новой вкладки!"
+    "message": "Если эта опция включена, Firefox будет использовать домашнюю страницу в качестве новой страницы вкладки. Вы можете изменить домашнюю страницу, введя about:preferences#home в адресной строке. Поддерживаются только домашние страницы, начинающиеся с https:// или http://. Если настроено несколько домашних страниц, то New Tab Override будет использовать первую."
   },
   "learn_more": {
     "message": "Подробнее"
@@ -75,7 +72,7 @@
     "message": "Вам нравится расширение? Тогда, пожалуйста, оставьте отзыв на"
   },
   "settings_donate": {
-    "message": "Пожертвовать"
+    "message": "Пожертвовать сейчас"
   },
   "settings_donation_text": {
     "message": "Пожалуйста, подумайте о пожертвовании для поддержки текущей разработки этого расширения."
@@ -107,17 +104,17 @@
   "settings_url_field_placeholder": {
     "message": "URL-адрес"
   },
-  "tab_position_title": {
-    "message": "Tab Position"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Open all new tabs next to the current tab"
   },
   "tab_position_option_atEnd": {
     "message": "Open all new tabs at the end of the tabstrip"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Open new tabs next to the current tab if they are related to the current tab, otherwise at the end of the tab strip (default)"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
   },
   "type_options_background_color": {
     "message": "Цвет фона"
@@ -144,9 +141,9 @@
     "message": "URL-адрес"
   },
   "url_validation_default": {
-    "message": "Это недопустимый URL-адрес."
+    "message": "Это недопустимый URL-адрес"
   },
   "url_validation_file": {
-    "message": "Доступ к локальным файлам через URL-адрес больше не возможно для расширений."
+    "message": "Доступ к локальным файлам через URL-адрес больше не возможно для расширений"
   }
 }

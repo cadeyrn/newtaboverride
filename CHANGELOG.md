@@ -2,6 +2,20 @@
 
 ## Release Notes
 
+### Version 18.0.0 (Work in Progress)
+
+#### Enhancements
+
+- [ENHANCEMENT] **redesigned the user interface**, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
+
+#### Developer Experience
+
+- [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
+- [CHANGE] changed copyright year from 2025 to 2026
+- [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
+
+**Minimum required Firefox version is Firefox 140 now.**
+
 ### Version 17.0.0 (2025-02-22)
 
 - [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)

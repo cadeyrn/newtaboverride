@@ -1,11 +1,22 @@
 'use strict';
 
-const OPTIONS_PAGE = 'html/options.html';
+class Background {
+  static #optionsPage = 'html/options.html';
 
-/**
- * @exports newtaboverride
- */
-const newtaboverride = {
+  /**
+   * Register the listeners needed by the background script.
+   *
+   * @returns {void}
+   */
+  static init () {
+    browser.action.onClicked.addListener(Background.#openUserInterface);
+    browser.omnibox.onInputChanged.addListener(Background.#showOmniboxSuggestions);
+    browser.omnibox.onInputEntered.addListener(Background.#callOmniboxAction);
+    browser.omnibox.setDefaultSuggestion({ description: browser.i18n.getMessage('extension_description') });
+    browser.runtime.onInstalled.addListener(Background.#onInstalledHandler);
+    browser.runtime.onInstalled.addListener(Background.#createToolsMenuEntry);
+  }
+
   /**
    * Fired when the extension is first installed, when the extension is updated to a new version or when the browser
    * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed.
@@ -15,12 +26,11 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  onInstalledHandler (details) {
-    // new install
+  static #onInstalledHandler (details) {
     if (details.reason === 'install') {
-      browser.action.setBadgeText({ text : '★' });
+      browser.action.setBadgeText({ text: '★' });
     }
-  },
+  }
 
   /**
    * Fired whenever the user changes the input, after the user has started interacting with the add-on by entering
@@ -34,28 +44,28 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  showOmniboxSuggestions (input, suggest) {
+  static #showOmniboxSuggestions (input, suggest) {
     const availableCommands = ['settings'];
     const suggestions = [];
 
     for (const command of availableCommands) {
       if (command.indexOf(input) !== -1) {
         suggestions.push({
-          content : command,
-          description : browser.i18n.getMessage('omnibox_command_' + command)
+          content: command,
+          description: browser.i18n.getMessage('omnibox_command_' + command)
         });
       }
 
       if (suggestions.length === 0) {
         suggestions.push({
-          content : 'settings',
-          description : browser.i18n.getMessage('omnibox_command_settings')
+          content: 'settings',
+          description: browser.i18n.getMessage('omnibox_command_settings')
         });
       }
     }
 
     suggest(suggestions);
-  },
+  }
 
   /**
    * Fired when the user has selected one of the suggestions the add-on has added to the address bar's drop-down list.
@@ -64,13 +74,13 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  callOmniboxAction (input) {
+  static #callOmniboxAction (input) {
     switch (input) {
       case 'settings':
       default:
-        newtaboverride.openUserInterfaceInCurrentTab();
+        Background.#openUserInterfaceInCurrentTab();
     }
-  },
+  }
 
   /**
    * Fired when the toolbar icon is clicked. This method is used to open the user interface in a new tab or to switch
@@ -78,11 +88,11 @@ const newtaboverride = {
    *
    * @returns {void}
    */
-  openUserInterface () {
-    const url = browser.runtime.getURL(OPTIONS_PAGE);
+  static #openUserInterface () {
+    const url = browser.runtime.getURL(Background.#optionsPage);
 
-    browser.action.setBadgeText({ text : '' });
-    browser.tabs.query({}, (tabs) => {
+    browser.action.setBadgeText({ text: '' });
+    browser.tabs.query({}, tabs => {
       let tabId = null;
 
       for (const tab of tabs) {
@@ -94,36 +104,37 @@ const newtaboverride = {
 
       // there is already a tab open
       if (tabId) {
-        browser.tabs.update(tabId, { active : true });
+        browser.tabs.update(tabId, { active: true });
       }
       // open a new tab
       else {
         browser.tabs.create({ url });
       }
     });
-  },
+  }
 
   /**
    * This method is used to open the user interface in the current tab. It's used for the omnibox suggestions.
    *
    * @returns {void}
    */
-  openUserInterfaceInCurrentTab () {
-    browser.tabs.update(null, { url : browser.runtime.getURL(OPTIONS_PAGE) });
+  static #openUserInterfaceInCurrentTab () {
+    browser.tabs.update(null, { url: browser.runtime.getURL(Background.#optionsPage) });
   }
-};
 
-browser.action.onClicked.addListener(newtaboverride.openUserInterface);
-browser.omnibox.onInputChanged.addListener(newtaboverride.showOmniboxSuggestions);
-browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
-browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
-browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
+  /**
+   * Create the entry in the tools menu after installation.
+   *
+   * @returns {void}
+   */
+  static #createToolsMenuEntry () {
+    browser.menus.create({
+      id: 'nto-tools-menu-entry',
+      title: browser.i18n.getMessage('settings_title'),
+      contexts: ['tools_menu'],
+      command: '_execute_browser_action'
+    });
+  }
+}
 
-browser.runtime.onInstalled.addListener(() => {
-  browser.menus.create({
-    id : 'nto-tools-menu-entry',
-    title : browser.i18n.getMessage('settings_title'),
-    contexts : ['tools_menu'],
-    command : '_execute_browser_action'
-  });
-});
+Background.init();

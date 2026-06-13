@@ -1,9 +1,6 @@
 'use strict';
 
-/**
- * @exports permissions
- */
-const permissions = {
+class PermissionHelper {
   /**
    * This method is used to set up the listeners for granting and revoking a permission.
    *
@@ -11,15 +8,15 @@ const permissions = {
    *
    * @returns {void}
    */
-  setupListeners (obj) {
-    obj.elGrantBtn.addEventListener('click', (e) => {
-      permissions.requestPermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
+  static setupListeners (obj) {
+    obj.elGrantBtn.addEventListener('click', e => {
+      PermissionHelper.#requestPermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
     });
 
-    obj.elRevokeBtn.addEventListener('click', (e) => {
-      permissions.revokePermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
+    obj.elRevokeBtn.addEventListener('click', e => {
+      PermissionHelper.#revokePermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
     });
-  },
+  }
 
   /**
    * Checks if the requested permission is granted. If so it shows the option to revoke the permission.
@@ -31,7 +28,7 @@ const permissions = {
    *
    * @returns {void}
    */
-  async testPermission (permission, elPermission, elPermissionRevoke) {
+  static async testPermission (permission, elPermission, elPermissionRevoke) {
     const isAllowed = await browser.permissions.contains(permission);
 
     if (isAllowed) {
@@ -40,7 +37,7 @@ const permissions = {
     else {
       elPermission.classList.remove('hidden');
     }
-  },
+  }
 
   /**
    * This method is used to request and to grant a permission.
@@ -52,7 +49,7 @@ const permissions = {
    *
    * @returns {void}
    */
-  async requestPermission (e, permission, elPermission, elPermissionRevoke) {
+  static async #requestPermission (e, permission, elPermission, elPermissionRevoke) {
     e.preventDefault();
 
     const granted = await browser.permissions.request(permission);
@@ -61,7 +58,7 @@ const permissions = {
       elPermission.classList.add('hidden');
       elPermissionRevoke.classList.remove('hidden');
     }
-  },
+  }
 
   /**
    * This method is used to revoke a permission.
@@ -73,7 +70,7 @@ const permissions = {
    *
    * @returns {void}
    */
-  async revokePermission (e, permission, elPermission, elPermissionRevoke) {
+  static async #revokePermission (e, permission, elPermission, elPermissionRevoke) {
     e.preventDefault();
 
     const revoked = await browser.permissions.remove(permission);
@@ -83,4 +80,4 @@ const permissions = {
       elPermissionRevoke.classList.add('hidden');
     }
   }
-};
+}

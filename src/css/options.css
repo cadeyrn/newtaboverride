@@ -1,74 +1,244 @@
 @import 'variables.css';
 
-form > div {
-  margin-bottom: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-h3 {
-  font-size: 16px;
+form > div {
+  --option-content-offset: 18px;
+  padding: 0;
+}
+
+form > div > :last-child {
+  margin-bottom: 0;
+}
+
+.option-content {
+  margin-left: var(--option-content-offset);
+  width: calc(100% - var(--option-content-offset));
 }
 
 label:not(.has-own-label, .hidden-label) {
   display: block;
-  font-weight: 700;
+  margin-bottom: 7px;
+  padding-left: 5px;
+  font-size: .875rem;
+  color: var(--color-muted);
 }
 
 label.has-own-label {
-  color: var(--color-label);
-}
-
-select {
-  box-sizing: border-box;
-  padding: 2px 5px;
-  width: 100%;
-}
-
-input[type='text'] {
-  box-sizing: border-box;
-  padding: 2px 5px;
-  width: 100%;
-  height: 24px;
-  line-height: 24px;
-  border: 1px solid var(--color-input-border);
-  transition: border ease 250ms;
-}
-
-input[type='checkbox'] {
-  vertical-align: text-bottom;
-}
-
-input:focus {
-  border-color: var(--color-accent);
-}
-
-#nto-introduction {
-  margin: 20px 20px 0;
-  padding: 10px;
-  background-color: var(--color-accent);
-  color: var(--color-accent-contrast);
-}
-
-#nto-introduction a {
-  color: inherit;
-  font-weight: 700;
-  transition: color ease 250ms;
-}
-
-#nto-introduction a:hover {
-  color: var(--color-accent-contrast-hover);
+  font-size: .9rem;
+  color: var(--color-muted);
 }
 
 .hidden-label {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
-.vertical-align > div {
-  display: table-cell;
-  vertical-align: middle;
+select, input[type='text'], input[type='file'], input[type='color'] {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: var(--color-control-background);
+  box-shadow: var(--shadow-field);
+  color: var(--color-page-text);
+  outline: 2px solid transparent;
+  outline-offset: -1px;
+  transition: border-color ease 220ms, outline-color ease 220ms, background-color ease 220ms;
 }
 
-.vertical-align label {
-  margin-left: 5px;
+select, input[type='text'], input[type='color'] {
+  min-height: 38px;
+  padding: 0 12px;
+}
+
+input[type='color'] {
+  cursor: pointer;
+}
+
+input[type='color']::-moz-color-swatch {
+  border: 0;
+  border-radius: 6px;
+}
+
+#background-color-wrapper {
+  --background-color-preview: rgb(255, 255, 255);
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 52px 0 88px;
+  border: 1px solid var(--color-surface-border);
+  background-color: var(--background-color-preview);
+  background-clip: padding-box;
+  overflow: hidden;
+  align-items: center;
+  min-height: 38px;
+  border-radius: var(--border-radius-field);
+  box-shadow: var(--shadow-field);
+}
+
+#background-color-wrapper:has(#background-color:focus-visible) {
+  border-color: var(--color-focus-border);
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -1px;
+}
+
+#background-color-value {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  padding: 0 12px;
+  height: 100%;
+  line-height: 1;
+  background-color: var(--color-control-background);
+  color: var(--color-muted);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  border-right: 1px solid var(--color-surface-border);
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: .02em;
+  pointer-events: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#background-color-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 42px;
+  border-left: 1px solid var(--color-surface-border);
+  background-color: var(--color-control-background);
+  pointer-events: none;
+}
+
+#background-color-wrapper::after {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 11px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  content: '';
+  background-image: linear-gradient(135deg, rgb(255, 122, 89) 0%, rgb(255, 188, 67) 26%, rgb(80, 196, 118) 52%, rgb(64, 156, 255) 78%, rgb(158, 108, 255) 100%);
+  mask-image: url('../images/color-swatch.svg');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  pointer-events: none;
+}
+
+#background-color {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  opacity: 0;
+}
+
+select {
+  appearance: none;
+  padding-right: 42px;
+  background-image:
+    url('../images/chevron.svg'),
+    linear-gradient(var(--color-control-background), var(--color-control-background));
+  background-repeat: no-repeat;
+  background-position: calc(100% - 14px) center, right 2px center;
+  background-size: 12px 12px, 32px calc(100% - 4px);
+  cursor: pointer;
+}
+
+input[type='file'] {
+  padding: 8px 12px;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+input[type='file']::file-selector-button {
+  margin-right: 12px;
+  padding: 7px 12px;
+  font: inherit;
+  border: 1px solid var(--color-accent-border-soft);
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-control-background);
+  font-weight: 500;
+  color: var(--color-dark-border);
+  cursor: pointer;
+  transition: border-color ease 350ms, background-color ease 350ms;
+}
+
+input[type='file']:hover::file-selector-button {
+  border-color: var(--color-accent-border-strong);
+  background-color: var(--color-blue-translucent);
+}
+
+input[type='text']:focus-visible,
+input[type='file']:focus-visible,
+input[type='color']:focus-visible,
+select:focus-visible {
+  border-color: var(--color-focus-border);
+  outline-color: var(--color-focus-ring);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-control-border);
+  border-radius: 6px;
+  background-color: var(--color-control-background);
+  box-shadow: var(--shadow-control);
+  cursor: pointer;
+}
+
+input[type='checkbox']::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 9px;
+  transform: translate(-50%, -58%) rotate(40deg);
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  opacity: 0;
+}
+
+input[type='checkbox']:checked {
+  border-color: var(--color-blue);
+  background-image: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-dark) 100%);
+}
+
+input[type='checkbox']:checked::after {
+  opacity: 1;
+}
+
+input[type='checkbox']:focus-visible {
+  outline: 0;
+  box-shadow: var(--focus-ring-strong);
 }
 
 #url-wrapper {
@@ -77,28 +247,63 @@ input:focus {
 
 #url-wrapper .error-message {
   position: absolute;
-  bottom: -21px;
-  right: 0;
-  padding: 0 10px;
-  min-height: 20px;
-  line-height: 20px;
-  font-size: 12px;
-  background-color: var(--color-status-error);
-  color: var(--color-status-error-contrast);
+  z-index: 1;
+  top: 50%;
+  right: 8px;
+  padding: 3px 8px;
+  max-width: calc(100% - 32px);
+  line-height: 1.3;
+  transform: translateY(-50%);
+  border: 1px solid var(--color-red-soft);
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-error-badge-background);
+  color: var(--color-red);
+  font-size: .75rem;
+  box-shadow: var(--shadow-error-badge);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+#url-wrapper:has(> .error-message:not(.hidden)) > input {
+  padding-right: 196px;
 }
 
 #url {
-  border: 1px solid var(--color-accent);
-}
-
-#url:focus {
-  border-color: var(--color-accent);
+  border-color: var(--color-accent-border-soft);
 }
 
 #url.error {
-  border-color: var(--color-status-error);
+  border-color: var(--color-red);
+}
+
+#tab-position-option,
+#focus-option,
+#clear-option,
+#change-settings-shortcut-wrapper {
+  margin-top: 8px;
 }
 
 #delete-local-file {
-  font-size: 12px;
+  font-size: inherit;
+  white-space: nowrap;
+}
+
+#focus-option > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#feed-permission,
+#change-settings-shortcut {
+  margin-left: var(--option-content-offset);
+  width: auto;
+}
+
+@media screen and (max-width: 499px) {
+  form {
+    gap: 10px;
+  }
 }

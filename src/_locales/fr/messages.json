@@ -39,10 +39,7 @@
     "message": "Demande de fonctionnalités ou rapport d'erreur? Ouvrez un ticket sur GitHub:"
   },
   "homepage_description": {
-    "message": "Si cette option est activée, Firefox utilisera également la page d’accueil comme page nouvel onglet. Vous pouvez modifier la page d’accueil en saisissant about:preferences#home dans la barre d’adresse. Seules les pages d’accueil commençant par http:// ou https:// sont prises en charge. Si plusieurs pages d’accueil sont configurées, New Tab Override utilisera la première."
-  },
-  "introduction": {
-    "message": "Cette page est fournie par {0}: Sélectionnez la page à ouvrir en tant que nouvel onglet!"
+    "message": "Si cette option est activée, Firefox utilisera également la page d’accueil comme page nouvel onglet. Vous pouvez modifier la page d’accueil en saisissant about:preferences#home dans la barre d’adresse. Seules les pages d’accueil commençant par https:// ou http:// sont prises en charge. Si plusieurs pages d’accueil sont configurées, New Tab Override utilisera la première."
   },
   "learn_more": {
     "message": "En apprendre davantage"
@@ -51,7 +48,7 @@
     "message": "Voulez-vous vraiment supprimer le fichier du stockage de l’extension?"
   },
   "local_file_delete_text": {
-    "message": "supprimer le fichier existant"
+    "message": "Supprimer le fichier existant"
   },
   "local_file_description": {
     "message": "En raison des restrictions de Firefox, il n’est pas possible pour les extensions d’accéder aux fichiers locaux. New Tab Override vous permet de charger des fichiers HTML locaux dans le stockage de l’extension et de les utiliser comme nouveau contenu d’onglet. Toute URL et lien vers des images, des fichiers CSS et des fichiers JavaScript pouvant être inclus doivent être accessibles via le Web, car Firefox ne peut pas accéder aux fichiers locaux du système. Vous pouvez également envisager d’utiliser un serveur web local, par exemple via MAMP ou XAMPP, avec l’option « URL personnalisée ». Cela fonctionne sans aucune restriction."
@@ -75,7 +72,7 @@
     "message": "Appréciez-vous l’extension? N’hésitez pas à laisser une critique sur"
   },
   "settings_donate": {
-    "message": "Faire un don"
+    "message": "Faire un don maintenant"
   },
   "settings_donation_text": {
     "message": "N’hésitez pas à faire un don pour soutenir le développement continu de cette extension."
@@ -107,20 +104,20 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Tab Position"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Ouvrir de nouveaux onglets à côté de l'onglet actuel s'ils sont liés à l'onglet actuel, sinon à la fin de la bande d'onglets (par défaut)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Ouvrir tous les nouveaux onglets à côté de l'onglet actuel"
   },
   "tab_position_option_atEnd": {
     "message": "Ouvrir tous les nouveaux onglets à la fin de la barre d'onglets"
   },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Ouvrir de nouveaux onglets à côté de l'onglet actuel s'ils sont liés à l'onglet actuel, sinon à la fin de la bande d'onglets (par défaut)"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
+  },
   "type_options_background_color": {
-    "message": "couleur de fond"
+    "message": "Couleur de fond"
   },
   "type_options_custom_url": {
     "message": "URL personnalisée"
@@ -129,10 +126,10 @@
     "message": "Actualité Mozilla (en allemand)"
   },
   "type_options_homepage": {
-    "message": "page d’accueil actuelle"
+    "message": "Page d’accueil actuelle"
   },
   "type_options_local_file": {
-    "message": "fichier local"
+    "message": "Fichier local"
   },
   "type_title": {
     "message": "Option"
@@ -144,9 +141,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "Ceci n’est pas une URL valide."
+    "message": "Ceci n’est pas une URL valide"
   },
   "url_validation_file": {
-    "message": "L’accès aux fichiers locaux via une URL n’est plus possible pour les extensions."
+    "message": "L’accès aux fichiers locaux via une URL n’est plus possible pour les extensions"
   }
 }

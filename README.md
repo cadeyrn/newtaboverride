@@ -11,7 +11,7 @@ New Tab Override. Thank you very much!**
 
 **New Tab Override allows you to set the page that shows whenever you open a new tab.**
 
-New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 115 or
+New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 140 or
 higher is required for the latest version of New Tab Override).
 
 ### Features

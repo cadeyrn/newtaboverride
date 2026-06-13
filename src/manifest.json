@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extension_name__",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "__MSG_extension_description__",
   "icons": {
     "48": "images/icon.svg",
@@ -52,7 +52,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "newtaboverride@agenedia.com",
-      "strict_min_version": "115.0"
+      "strict_min_version": "140.0"
     }
   }
 }
