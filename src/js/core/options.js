@@ -1,35 +1,63 @@
 'use strict';
 
-/* global URI_REGEX, PERMISSION_FEED, PROTOCOL_REGEX, defaults, permissions, utils */
+/* global Defaults, PermissionHelper, Utils */
 
-const FIREFOX_137 = 137;
+class Options {
+  // eslint-disable-next-line no-magic-numbers
+  static #firefox137 = 137;
 
-const elBackgroundColor = document.getElementById('background-color');
-const elBackgroundColorOption = document.getElementById('background-color-option');
-const elChangeSettingsShortcutWrapper = document.getElementById('change-settings-shortcut-wrapper');
-const elChangeSettingsShortcut = document.getElementById('change-settings-shortcut');
-const elClearOption = document.getElementById('clear-option');
-const elFeedPermission = document.getElementById('feed-permission-container');
-const elFeedPermissionBtn = document.getElementById('feed-permission');
-const elFeedPermissionRevoke = document.getElementById('feed-permission-revoke-container');
-const elFeedPermissionRevokeBtn = document.getElementById('feed-permission-revoke');
-const elFocusOption = document.getElementById('focus-option');
-const elFocusWebsite = document.getElementById('focus-website');
-const elHomepageOption = document.getElementById('homepage-option');
-const elLocalFile = document.getElementById('local-file');
-const elLocalFileDeleteLink = document.getElementById('delete-local-file');
-const elLocalFileOption = document.getElementById('local-file-option');
-const elTabPosition = document.getElementById('tab-position');
-const elType = document.getElementById('type');
-const elUrl = document.getElementById('url');
-const elUrlOption = document.getElementById('url-option');
-const elUrlWrapper = document.getElementById('url-wrapper');
+  static #changeSettingsShortcutButton = false;
 
-/**
- * @exports options
- */
-const options = {
-  changeSettingsShortcutButton: false,
+  static #elements = {
+    backgroundColor: document.getElementById('background-color'),
+    backgroundColorOption: document.getElementById('background-color-option'),
+    changeSettingsShortcutWrapper: document.getElementById('change-settings-shortcut-wrapper'),
+    changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
+    clearOption: document.getElementById('clear-option'),
+    feedPermission: document.getElementById('feed-permission-container'),
+    feedPermissionBtn: document.getElementById('feed-permission'),
+    feedPermissionRevoke: document.getElementById('feed-permission-revoke-container'),
+    feedPermissionRevokeBtn: document.getElementById('feed-permission-revoke'),
+    focusOption: document.getElementById('focus-option'),
+    focusWebsite: document.getElementById('focus-website'),
+    homepageOption: document.getElementById('homepage-option'),
+    localFile: document.getElementById('local-file'),
+    localFileDeleteLink: document.getElementById('delete-local-file'),
+    localFileOption: document.getElementById('local-file-option'),
+    tabPosition: document.getElementById('tab-position'),
+    type: document.getElementById('type'),
+    url: document.getElementById('url'),
+    urlOption: document.getElementById('url-option'),
+    urlWrapper: document.getElementById('url-wrapper')
+  };
+
+  /**
+   * Register listeners and initialize the options page.
+   *
+   * @returns {void}
+   */
+  static bootstrap () {
+    document.addEventListener('DOMContentLoaded', Options.#load);
+
+    PermissionHelper.setupListeners({
+      permission: Utils.feedPermission,
+      elGrantPermissionContainer: Options.#elements.feedPermission,
+      elRevokePermissionContainer: Options.#elements.feedPermissionRevoke,
+      elGrantBtn: Options.#elements.feedPermissionBtn,
+      elRevokeBtn: Options.#elements.feedPermissionRevokeBtn
+    });
+
+    Options.#elements.focusWebsite.addEventListener('change', Options.#handleFocusWebsiteChange);
+    Options.#elements.type.addEventListener('change', Options.#handleTypeChange);
+    Options.#elements.tabPosition.addEventListener('change', Options.#handleTabPositionChange);
+    Options.#elements.url.addEventListener('input', Options.#handleUrlInput);
+    Options.#elements.backgroundColor.addEventListener('input', Options.#handleBackgroundColorInput);
+    Options.#elements.localFile.addEventListener('change', Options.#handleLocalFileChange);
+    Options.#elements.localFileDeleteLink.addEventListener('click', Options.#handleLocalFileDeleteClick);
+    Options.#elements.changeSettingsShortcut.addEventListener('click', Options.#handleChangeSettingsShortcutClick);
+
+    browser.runtime.getBrowserInfo().then(Options.#init).catch();
+  }
 
   /**
    * This method will be fired on add-on init.
@@ -37,16 +65,16 @@ const options = {
    * @param {object} info - an object containing information about the browser
    * @returns {void}
    */
-  init (info) {
-    options.changeSettingsShortcutButton = utils.parseVersion(info.version).major >= FIREFOX_137;
-  },
+  static #init (info) {
+    Options.#changeSettingsShortcutButton = Utils.parseVersion(info.version).major >= Options.#firefox137;
+  }
 
   /**
    * This method handles the visibility of the subsections of some options.
    *
    * @returns {void}
    */
-  async toggleOptionsDetails () {
+  static async #toggleOptionsDetails () {
     let showUrlOption = false;
     let showHomepageOption = false;
     let showFocusOption = false;
@@ -55,54 +83,49 @@ const options = {
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
 
-    // home page
-    if (elType.options[elType.selectedIndex].value === 'homepage') {
+    if (Options.#elements.type.options[Options.#elements.type.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
       showFocusOption = true;
       showClearOption = true;
     }
 
-    // custom url
-    if (elType.options[elType.selectedIndex].value === 'custom_url') {
+    if (Options.#elements.type.options[Options.#elements.type.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
       showFocusOption = true;
       showClearOption = true;
     }
 
-    // local file
-    if (elType.options[elType.selectedIndex].value === 'local_file') {
+    if (Options.#elements.type.options[Options.#elements.type.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
       showFocusOption = true;
       showClearOption = true;
 
-      const { local_file } = await browser.storage.local.get({ local_file: defaults.local_file });
+      const { local_file } = await browser.storage.local.get({ local_file: Defaults.values.local_file });
       if (local_file) {
         showLocalFileDeleteLink = true;
       }
     }
 
-    // background color
-    if (elType.options[elType.selectedIndex].value === 'background_color') {
+    if (Options.#elements.type.options[Options.#elements.type.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
       showFocusOption = false;
       showClearOption = true;
     }
 
-    // feed
-    if (elType.options[elType.selectedIndex].value === 'feed') {
+    if (Options.#elements.type.options[Options.#elements.type.selectedIndex].value === 'feed') {
       showFocusOption = true;
       showClearOption = true;
     }
 
-    options.toggleVisibility(elUrlOption, showUrlOption);
-    options.toggleVisibility(elHomepageOption, showHomepageOption);
-    options.toggleVisibility(elFocusOption, showFocusOption);
-    options.toggleVisibility(elClearOption, showClearOption);
-    options.toggleVisibility(elBackgroundColorOption, showBackgroundColorOption);
-    options.toggleVisibility(elLocalFileOption, showLocalFileOption);
-    options.toggleVisibility(elLocalFileDeleteLink, showLocalFileDeleteLink);
-    options.toggleVisibility(elChangeSettingsShortcutWrapper, options.changeSettingsShortcutButton);
-  },
+    Options.#toggleVisibility(Options.#elements.urlOption, showUrlOption);
+    Options.#toggleVisibility(Options.#elements.homepageOption, showHomepageOption);
+    Options.#toggleVisibility(Options.#elements.focusOption, showFocusOption);
+    Options.#toggleVisibility(Options.#elements.clearOption, showClearOption);
+    Options.#toggleVisibility(Options.#elements.backgroundColorOption, showBackgroundColorOption);
+    Options.#toggleVisibility(Options.#elements.localFileOption, showLocalFileOption);
+    Options.#toggleVisibility(Options.#elements.localFileDeleteLink, showLocalFileDeleteLink);
+    Options.#toggleVisibility(Options.#elements.changeSettingsShortcutWrapper, Options.#changeSettingsShortcutButton);
+  }
 
   /**
    * This method is used to make an DOM element either visible or invisible based on a given condition.
@@ -112,9 +135,9 @@ const options = {
    *
    * @returns {void}
    */
-  toggleVisibility (el, condition) {
+  static #toggleVisibility (el, condition) {
     condition ? el.classList.remove('hidden') : el.classList.add('hidden');
-  },
+  }
 
   /**
    * Fired when the initial HTML document has been completely loaded and parsed. This method is used to load the
@@ -122,118 +145,170 @@ const options = {
    *
    * @returns {void}
    */
-  async load () {
-    const option = await browser.storage.local.get(defaults);
+  static async #load () {
+    const option = await browser.storage.local.get(Defaults.values);
     const tabPosition = await browser.browserSettings.newTabPosition.get({});
 
-    elFocusWebsite.checked = option.focus_website;
-    elType.querySelector('[value="' + option.type + '"]').selected = true;
-    elTabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
-    elUrl.value = option.url;
-    elBackgroundColor.value = option.background_color;
-    options.toggleOptionsDetails();
+    Options.#elements.focusWebsite.checked = option.focus_website;
+    Options.#elements.type.querySelector('[value="' + option.type + '"]').selected = true;
+    Options.#elements.tabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
+    Options.#elements.url.value = option.url;
+    Options.#elements.backgroundColor.value = option.background_color;
+    Options.#toggleOptionsDetails();
 
     if (option.type === 'feed') {
-      permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
+      PermissionHelper.testPermission(
+        Utils.feedPermission,
+        Options.#elements.feedPermission,
+        Options.#elements.feedPermissionRevoke
+      );
     }
 
-    if (elUrl.value === '') {
-      elUrl.classList.add('error');
-      elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+    if (Options.#elements.url.value === '') {
+      Options.#elements.url.classList.add('error');
+      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.remove('hidden');
     }
   }
-};
 
-document.addEventListener('DOMContentLoaded', options.load);
-
-permissions.setupListeners({
-  permission: PERMISSION_FEED,
-  elGrantPermissionContainer: elFeedPermission,
-  elRevokePermissionContainer: elFeedPermissionRevoke,
-  elGrantBtn: elFeedPermissionBtn,
-  elRevokeBtn: elFeedPermissionRevokeBtn
-});
-
-elFocusWebsite.addEventListener('change', e => {
-  browser.storage.local.set({ focus_website: e.target.checked });
-});
-
-elType.addEventListener('change', e => {
-  if (e.target.value === 'feed') {
-    permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
-  }
-  else {
-    elFeedPermission.classList.add('hidden');
-    elFeedPermissionRevoke.classList.add('hidden');
+  /**
+   * Persist the focus setting when the user toggles it.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleFocusWebsiteChange (e) {
+    browser.storage.local.set({ focus_website: e.target.checked });
   }
 
-  browser.storage.local.set({ type: e.target.value });
-  options.toggleOptionsDetails();
-});
+  /**
+   * Persist the selected type and update the related UI.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleTypeChange (e) {
+    if (e.target.value === 'feed') {
+      PermissionHelper.testPermission(
+        Utils.feedPermission,
+        Options.#elements.feedPermission,
+        Options.#elements.feedPermissionRevoke
+      );
+    }
+    else {
+      Options.#elements.feedPermission.classList.add('hidden');
+      Options.#elements.feedPermissionRevoke.classList.add('hidden');
+    }
 
-elTabPosition.addEventListener('change', e => {
-  browser.browserSettings.newTabPosition.set({ value: e.target.value });
-});
-
-elUrl.addEventListener('input', e => {
-  let url = e.target.value.trim();
-
-  // valid URL
-  if (URI_REGEX.test(url)) {
-    elUrlWrapper.querySelector('.error-message').classList.add('hidden');
-    elUrl.classList.remove('error');
-  }
-  // local file access is not allowed for WebExtensions
-  else if (url.startsWith('file://')) {
-    elUrlWrapper.querySelector('.error-message.default').classList.add('hidden');
-    elUrlWrapper.querySelector('.error-message.file').classList.remove('hidden');
-    elUrl.classList.add('error');
-  }
-  // unsupported protocol or empty URL
-  else if (PROTOCOL_REGEX.test(url) || url === '') {
-    elUrlWrapper.querySelector('.error-message.default').classList.remove('hidden');
-    elUrlWrapper.querySelector('.error-message.file').classList.add('hidden');
-    elUrl.classList.add('error');
-  }
-  // prepend https:// for every other input
-  else {
-    url = 'https://' + url;
+    browser.storage.local.set({ type: e.target.value });
+    Options.#toggleOptionsDetails();
   }
 
-  browser.storage.local.set({ url });
-});
-
-elBackgroundColor.addEventListener('input', e => {
-  browser.storage.local.set({ background_color: e.target.value });
-});
-
-elLocalFile.addEventListener('change', () => {
-  const reader = new FileReader();
-
-  reader.readAsText(elLocalFile.files[0]);
-  reader.addEventListener('loadend', async () => {
-    const file = reader.result;
-
-    await browser.storage.local.set({ local_file: file });
-    options.toggleVisibility(elLocalFileDeleteLink, true);
-  });
-});
-
-elLocalFileDeleteLink.addEventListener('click', e => {
-  e.preventDefault();
-
-  // eslint-disable-next-line no-alert
-  if (!confirm(e.target.getAttribute('data-confirm'))) {
-    return;
+  /**
+   * Persist the selected tab position.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleTabPositionChange (e) {
+    browser.browserSettings.newTabPosition.set({ value: e.target.value });
   }
 
-  browser.storage.local.set({ local_file: '' });
-  options.toggleVisibility(elLocalFileDeleteLink, false);
-});
+  /**
+   * Validate and persist the custom URL setting.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleUrlInput (e) {
+    let url = e.target.value.trim();
 
-elChangeSettingsShortcut.addEventListener('click', e => {
-  e.preventDefault();
-  browser.commands.openShortcutSettings();
-});
+    // valid URL
+    if (Utils.uriRegex.test(url)) {
+      Options.#elements.urlWrapper.querySelector('.error-message').classList.add('hidden');
+      Options.#elements.url.classList.remove('error');
+    }
+    // local file access is not allowed for WebExtensions
+    else if (url.startsWith('file://')) {
+      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.add('hidden');
+      Options.#elements.urlWrapper.querySelector('.error-message.file').classList.remove('hidden');
+      Options.#elements.url.classList.add('error');
+    }
+    // unsupported protocol or empty URL
+    else if (Utils.protocolRegex.test(url) || url === '') {
+      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+      Options.#elements.urlWrapper.querySelector('.error-message.file').classList.add('hidden');
+      Options.#elements.url.classList.add('error');
+    }
+    // prepend https:// for every other input
+    else {
+      url = 'https://' + url;
+    }
 
-browser.runtime.getBrowserInfo().then(options.init).catch();
+    browser.storage.local.set({ url });
+  }
+
+  /**
+   * Persist the selected background color.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleBackgroundColorInput (e) {
+    browser.storage.local.set({ background_color: e.target.value });
+  }
+
+  /**
+   * Store the selected local file content.
+   *
+   * @returns {void}
+   */
+  static #handleLocalFileChange () {
+    const reader = new FileReader();
+
+    reader.readAsText(Options.#elements.localFile.files[0]);
+    reader.addEventListener('loadend', async () => {
+      const file = reader.result;
+
+      await browser.storage.local.set({ local_file: file });
+      Options.#toggleVisibility(Options.#elements.localFileDeleteLink, true);
+    });
+  }
+
+  /**
+   * Delete the stored local file content after confirmation.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleLocalFileDeleteClick (e) {
+    e.preventDefault();
+
+    // eslint-disable-next-line no-alert
+    if (!confirm(e.target.getAttribute('data-confirm'))) {
+      return;
+    }
+
+    browser.storage.local.set({ local_file: '' });
+    Options.#toggleVisibility(Options.#elements.localFileDeleteLink, false);
+  }
+
+  /**
+   * Open Firefox's shortcut settings UI.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {void}
+   */
+  static #handleChangeSettingsShortcutClick (e) {
+    e.preventDefault();
+    browser.commands.openShortcutSettings();
+  }
+}
+
+Options.bootstrap();

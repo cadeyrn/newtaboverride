@@ -1,36 +1,32 @@
 'use strict';
 
-/* global feedreader */
+/* global FeedReader */
 
-const FEED_PERMISSION = { origins: ['https://www.soeren-hentzschel.at/*'] };
-const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
+class Feed {
+  static #permission = { origins: ['https://www.soeren-hentzschel.at/*'] };
 
-const elPermissionNeeded = document.getElementById('permission-needed');
+  static #url = 'https://www.soeren-hentzschel.at/feed/';
 
-/**
- * @exports feed
- */
-const feed = {
+  static #elPermissionNeeded = document.getElementById('permission-needed');
+
   /**
    * This method checks if the permission is granted to read the feed. If so it reads the feed, otherwise it shows
    * an error message and a link to the options page.
    *
    * @returns {void}
    */
-  async init () {
-    const isAllowed = await browser.permissions.contains(FEED_PERMISSION);
+  static async init () {
+    const isAllowed = await browser.permissions.contains(Feed.#permission);
 
-    // permission is granted
     if (isAllowed) {
-      const result = await feedreader.getFeedItems(FEED_URL);
-      feed.readFeedItems(result);
+      const result = await FeedReader.getFeedItems(Feed.#url);
+      Feed.#readFeedItems(result);
     }
-    // permission is not granted
     else {
       document.getElementById('throbber').remove();
-      elPermissionNeeded.classList.remove('hidden');
+      Feed.#elPermissionNeeded.classList.remove('hidden');
     }
-  },
+  }
 
   /**
    * This method is used to read the news feed defined in FEED_URL.
@@ -39,14 +35,14 @@ const feed = {
    *
    * @returns {void}
    */
-  readFeedItems (items) {
+  static #readFeedItems (items) {
     document.getElementById('throbber').remove();
 
     for (let i = 0; i < items.length; i++) {
       const date = new Date(items[i].pubDate);
       const dateAsString = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 
-      // strip html from description
+      // strip HTML from description
       let description = items[i].description.replace(/<(?:.|\n)*?>/gm, '');
 
       // remove last paragraph from soeren-hentzschel.at feed
@@ -104,6 +100,6 @@ const feed = {
       document.getElementById('feed-items').appendChild(docFragment);
     }
   }
-};
+}
 
-feed.init();
+Feed.init();

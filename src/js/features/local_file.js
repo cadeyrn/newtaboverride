@@ -1,16 +1,18 @@
 'use strict';
 
-/* global defaults */
+/* global Defaults */
 
-/**
- * @exports localfile
- */
-const localfile = {
-  async init () {
+class LocalFile {
+  /**
+   * Render the stored local file content as the current page.
+   *
+   * @returns {void}
+   */
+  static async init () {
     const body = document.querySelector('body');
-    const { local_file } = await browser.storage.local.get({ local_file: defaults.local_file });
+    const { local_file } = await browser.storage.local.get({ local_file: Defaults.values.local_file });
 
-    // The file has been uploaded by the user. Therefore, the user wants the content, regardless of possible problems
+    // The user has uploaded the file. Therefore, the user wants the content, regardless of possible problems.
     body.insertAdjacentHTML('beforeend', local_file);
 
     // set page title if there is a title tag in the document
@@ -20,6 +22,6 @@ const localfile = {
       document.title = match[1];
     }
   }
-};
+}
 
-localfile.init();
+LocalFile.init();

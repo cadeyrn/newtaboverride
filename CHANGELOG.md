@@ -6,6 +6,7 @@
 
 #### Developer Experience
 
+- [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
 - [CHANGE] changed copyright year from 2025 to 2026
 - [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies
 
