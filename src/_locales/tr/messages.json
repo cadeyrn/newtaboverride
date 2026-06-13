@@ -18,7 +18,7 @@
     "message": "New Tab Override"
   },
   "feed_published_at": {
-    "message": "Yayınlanma tarihi:" 
+    "message": "Yayınlanma tarihi:"
   },
   "feed_read_more": {
     "message": "Devamını oku…"
@@ -39,10 +39,7 @@
     "message": "Öneri ya da şikayetiniz mi var? GitHub'ta ticket açabilirsiniz:"
   },
   "homepage_description": {
-    "message": "Eğer bu seçenek seçili ise Firefox, ana ekranı yeni sekme olarak da kullanacak. Ana ekranı değiştirmek için arama çubuğuna about:preferences#home yazın. Sadece http:// ve https:// ile başlayan linkler desteklenmektedir. Eğer birden fazla ana sayfa mevcut ise, ilk olan kullanılacaktır."
-  },
-  "introduction": {
-    "message": "Bu sayfa {0} tarafından sağlanmıştır: Hangi sayfanın yeni sekme olarak açılacağını seç!"
+    "message": "Eğer bu seçenek seçili ise Firefox, ana ekranı yeni sekme olarak da kullanacak. Ana ekranı değiştirmek için arama çubuğuna about:preferences#home yazın. Sadece https:// ve http:// ile başlayan linkler desteklenmektedir. Eğer birden fazla ana sayfa mevcut ise, ilk olan kullanılacaktır."
   },
   "learn_more": {
     "message": "Daha bilgi için"
@@ -51,7 +48,7 @@
     "message": "Bu dosyayı uzantı hafızasından silmek istediğine emin misin?"
   },
   "local_file_delete_text": {
-    "message": "varolan dosyayı sil"
+    "message": "Varolan dosyayı sil"
   },
   "local_file_description": {
     "message": "Firefox'un sınırlamaları nedeniyle yerel dosyalara erişilemiyor. New Tab Override yerel HTML dosyalarını uzantının hafızasına yüklemenize ve bu dosyaları yeni sekme olarak açmanıza olanak tanır. Firefox yerel dosyalara erişemediğinden eklenen her URL, fotoğraf linki, CSS ve JavaScript dosyası web tarafından erişilebilir olmalıdır. Aksitaktirde yerel bir web sunucusu, örneğin MAMP ya da XAMPP, ve “özel URL” seçeneğini kullanın. Bu yöntem herhangi bir kısıtlama olmadan çalışmaktadır."
@@ -75,7 +72,7 @@
     "message": "Bu uzantıyı beğendiniz mi? Lütfen buradan uygulamaya puan verin"
   },
   "settings_donate": {
-    "message": "Bağış Yap"
+    "message": "Şimdi bağış yap"
   },
   "settings_donation_text": {
     "message": "Bu uzantının gelişmesini desteklemek için lütfen bağış yapın."
@@ -120,19 +117,19 @@
     "message": "Sekme Pozisyonu"
   },
   "type_options_background_color": {
-    "message": "arkaplan rengi"
+    "message": "Arkaplan rengi"
   },
   "type_options_custom_url": {
-    "message": "özel URL"
+    "message": "Özel URL"
   },
   "type_options_feed": {
     "message": "Mozilla Haberleri (Almanca)"
   },
   "type_options_homepage": {
-    "message": "mevcut ana sayfa"
+    "message": "Mevcut ana sayfa"
   },
   "type_options_local_file": {
-    "message": "yerel dosya"
+    "message": "Yerel dosya"
   },
   "type_title": {
     "message": "Ayarlar"
@@ -144,9 +141,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "Bu geçerli bir URL değil."
+    "message": "Bu geçerli bir URL değil"
   },
   "url_validation_file": {
-    "message": "URL ile yerel dosyaya erişim bu uzantı için artık mümkün değil."
+    "message": "URL ile yerel dosyaya erişim bu uzantı için artık mümkün değil"
   }
 }

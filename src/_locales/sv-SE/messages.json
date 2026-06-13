@@ -39,10 +39,7 @@
     "message": "Funktionsönskemål eller felrapporter? Öppna en rapport på GitHub:"
   },
   "homepage_description": {
-    "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#home i adressraden. Endast URL:er som börjar med http:// eller https:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
-  },
-  "introduction": {
-    "message": "Denna sida tillhandahålls av {0}: Välj vilken sida du vill ska öppnas som en ny flik!"
+    "message": "Om det här alternativet är aktiverat, kommer Firefox att använda hemsida även som en ny fliksida. Du kan ändra hemsida genom att skriva about:preferences#home i adressraden. Endast URL:er som börjar med https:// eller http:// stöds. Om flera hemsidor är inlagda kommer New Tab Override att använda den första av dem."
   },
   "learn_more": {
     "message": "Lär dig mera"
@@ -51,7 +48,7 @@
     "message": "Är du säker på att du vill ta bort filen från tilläggets lagring?"
   },
   "local_file_delete_text": {
-    "message": "ta bort befintlig fil"
+    "message": "Ta bort befintlig fil"
   },
   "local_file_description": {
     "message": "På grund av begränsningar i Firefox är det inte möjligt för tillägg att få åtkomst till lokala filer. New Tab Override ger dig möjlighet att ladda lokala HTML-filer i tilläggets lagring och att använda dem som en ny flikinnehåll. Alla URL:er och länkar till bilder, CSS-filer och JavaScript-filer som kan inkluderas måste vara tillgängligt via webben eftersom Firefox inte kan komma åt lokala filer på systemet. Alternativt kan du överväga att använda en lokal webbserver, som till exempel via MAMP eller XAMPP, med alternativet “egen URL”. Detta fungerar utan begränsning."
@@ -75,7 +72,7 @@
     "message": "Gillade du tillägget? Skriv då gärna en recension på"
   },
   "settings_donate": {
-    "message": "Donera"
+    "message": "Donera nu"
   },
   "settings_donation_text": {
     "message": "Du får gärna donera en slant för att stöda den fortsatta utvecklingen av tillägget."
@@ -120,19 +117,19 @@
     "message": "Flikplacering"
   },
   "type_options_background_color": {
-    "message": "bakgrundsfärg"
+    "message": "Bakgrundsfärg"
   },
   "type_options_custom_url": {
-    "message": "egen URL"
+    "message": "Egen URL"
   },
   "type_options_feed": {
     "message": "Mozilla nyheter (Tyska)"
   },
   "type_options_homepage": {
-    "message": "nuvarande hemsida"
+    "message": "Nuvarande hemsida"
   },
   "type_options_local_file": {
-    "message": "lokal fil"
+    "message": "Lokal fil"
   },
   "type_title": {
     "message": "Alternativ"
@@ -144,9 +141,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "Detta är inte en giltig URL."
+    "message": "Detta är inte en giltig URL"
   },
   "url_validation_file": {
-    "message": "Tillägg har inte längre tillgång till lokala filer via URL:er."
+    "message": "Tillägg har inte längre tillgång till lokala filer via URL:er"
   }
 }

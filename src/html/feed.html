@@ -9,44 +9,56 @@
     <link rel="icon" type="image/png" href="../images/icon.svg">
   </head>
   <body>
-    <header>
-      <h1 data-i18n="feed_title"></h1>
-    </header>
-    <main>
-      <section>
-        <div class="grey-bg">
-          <div id="throbber-wrapper">
-            <div id="throbber"></div>
+    <div id="page-container">
+      <header id="header">
+        <div id="logo">
+          <img src="../images/icon.svg" width="54" height="50" alt="">
+          <div class="brand-copy">
+            <span class="brand-name" data-i18n="extension_name"></span>
+            <span class="brand-section" data-i18n="feed_title"></span>
           </div>
-          <div id="permission-needed" class="hidden">
-            <div data-i18n="settings_feed_permission_needed" class="info-icon"></div>
-            <a data-i18n="settings_permission_action" href="options.html" class="button"></a>
+        </div>
+      </header>
+      <h1 class="visually-hidden" data-i18n="feed_title"></h1>
+      <main id="main">
+        <section>
+          <div class="panel-stack feed-stack">
+            <h2 data-i18n="feed_title"></h2>
+            <div class="grey-bg panel-card">
+              <div id="throbber"></div>
+            </div>
+            <div id="permission-needed" class="grey-bg panel-card hidden">
+              <div data-i18n="settings_feed_permission_needed" class="info-icon"></div>
+              <a data-i18n="settings_permission_action" href="options.html" class="button"></a>
+            </div>
+            <ul id="feed-items"></ul>
           </div>
-          <ul id="feed-items"></ul>
-        </div>
-      </section>
-      <aside>
-        <div class="grey-bg">
-          <h2 data-i18n="settings_support_caption"></h2>
-          <p data-i18n="settings_donation_text"></p>
-          <a data-i18n="settings_donate" href="https://www.paypal.me/agenedia/3" class="button" target="_blank" rel="noopener"></a>
-          <p>
-            <span data-i18n="review_text"></span>
-            <a href="https://addons.mozilla.org/firefox/addon/new-tab-override/" target="_blank" rel="noopener">
-              addons.mozilla.org</a>.
-          </p>
-          <p>
-            <span data-i18n="github_notice"></span><br>
-            <a data-i18n="github_link" href="https://github.com/cadeyrn/newtaboverride/issues" target="_blank" rel="noopener"></a>
-          </p>
-        </div>
-      </aside>
-    </main>
-    <footer>
-      <a href="https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/?utm_campaign=webext&utm_term=newtaboverride" target="_blank" rel="noopener">
-        <span data-i18n="extension_name"></span> © 2026, soeren-hentzschel.at
-      </a>
-    </footer>
+        </section>
+        <aside class="sidebar-stack">
+          <div class="grey-bg panel-card support-links">
+            <h2 data-i18n="settings_support_caption"></h2>
+            <p>
+              <span data-i18n="review_text"></span>
+              <a href="https://addons.mozilla.org/firefox/addon/new-tab-override/" target="_blank" rel="noopener">
+                addons.mozilla.org</a>.
+            </p>
+            <p>
+              <span data-i18n="github_notice"></span>
+              <a data-i18n="github_link" href="https://github.com/cadeyrn/newtaboverride/issues" target="_blank" rel="noopener"></a>
+            </p>
+          </div>
+          <div class="promo-box">
+            <p data-i18n="settings_donation_text"></p>
+            <a data-i18n="settings_donate" href="https://www.paypal.me/agenedia/3" class="button" target="_blank" rel="noopener"></a>
+          </div>
+        </aside>
+      </main>
+      <footer id="footer">
+        <a href="https://www.soeren-hentzschel.at/firefox-webextensions/new-tab-override/?utm_campaign=webext&utm_term=newtaboverride" target="_blank" rel="noopener">
+          <span data-i18n="extension_name"></span>&nbsp;© 2026, soeren-hentzschel.at
+        </a>
+      </footer>
+    </div>
     <script src="../js/lib/i18n.js"></script>
     <script src="../js/lib/feedreader.js"></script>
     <script src="../js/features/feed.js"></script>

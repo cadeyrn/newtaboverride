@@ -4,6 +4,10 @@
 
 ### Version 18.0.0 (Work in Progress)
 
+#### Enhancements
+
+- [ENHANCEMENT] **redesigned the user interface**, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
+
 #### Developer Experience
 
 - [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)

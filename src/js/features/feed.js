@@ -3,6 +3,8 @@
 /* global FeedReader */
 
 class Feed {
+  static #elThrobber = document.getElementById('throbber').parentElement;
+
   static #permission = { origins: ['https://www.soeren-hentzschel.at/*'] };
 
   static #url = 'https://www.soeren-hentzschel.at/feed/';
@@ -23,7 +25,7 @@ class Feed {
       Feed.#readFeedItems(result);
     }
     else {
-      document.getElementById('throbber').remove();
+      Feed.#elThrobber.remove();
       Feed.#elPermissionNeeded.classList.remove('hidden');
     }
   }
@@ -36,7 +38,7 @@ class Feed {
    * @returns {void}
    */
   static #readFeedItems (items) {
-    document.getElementById('throbber').remove();
+    Feed.#elThrobber.remove();
 
     for (let i = 0; i < items.length; i++) {
       const date = new Date(items[i].pubDate);
@@ -58,13 +60,15 @@ class Feed {
       const text1 = document.createTextNode(browser.i18n.getMessage('feed_published_at') + ' ' + dateAsString);
       small.appendChild(text1);
 
-      const br1 = document.createElement('br');
-      li.appendChild(br1);
-
-      const { link } = items[i];
+      let { link } = items[i];
       const hasValidWebLink = link.startsWith('https://');
 
       if (hasValidWebLink) {
+        const url = new URL(link);
+        url.searchParams.set('utm_campaign', 'webext');
+        url.searchParams.set('utm_term', 'newtaboverride');
+        link = url.toString();
+
         const a1 = document.createElement('a');
         a1.setAttribute('href', link);
         a1.setAttribute('target', '_blank');
@@ -76,9 +80,6 @@ class Feed {
         const text2 = document.createTextNode(items[i].title);
         strong.appendChild(text2);
       }
-
-      const br2 = document.createElement('br');
-      li.appendChild(br2);
 
       const paragraph = document.createElement('p');
       li.appendChild(paragraph);

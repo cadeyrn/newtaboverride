@@ -39,10 +39,7 @@
     "message": "Vuoi richiedere nuove funzionalità o segnalare errori? Apri un ticket su GitHub:"
   },
   "homepage_description": {
-    "message": "Se questa opzione è attivata, Firefox utilizzerà la pagina iniziale anche come pagina per le nuove schede. È possibile modificare la pagina iniziale digitando about:preferences#home nella barra degli indirizzi. Sono supportate solo le pagine il cui URL inizia con http:// o https://. Se sono configurate più pagine iniziali, New Tab Override utilizzerà la prima."
-  },
-  "introduction": {
-    "message": "Questa pagina è fornita da {0}: Seleziona quale pagina aprire in una nuova scheda."
+    "message": "Se questa opzione è attivata, Firefox utilizzerà la pagina iniziale anche come pagina per le nuove schede. È possibile modificare la pagina iniziale digitando about:preferences#home nella barra degli indirizzi. Sono supportate solo le pagine il cui URL inizia con https:// o http://. Se sono configurate più pagine iniziali, New Tab Override utilizzerà la prima."
   },
   "learn_more": {
     "message": "Scopri di più"
@@ -51,7 +48,7 @@
     "message": "Eliminare il file presente nell'archivio dell’estensione?"
   },
   "local_file_delete_text": {
-    "message": "eliminare il file esistente"
+    "message": "Eliminare il file esistente"
   },
   "local_file_description": {
     "message": "A causa delle restrizione di Firefox, le estensioni non possono accedere ai file locali. New Tab Override ti dà la possibilità di caricare dei file HTML dal tuo archivio all'interno dello spazio di archiviazione dell’estensione per usarli come contenuto di nuova scheda. Qualsiasi URL o link a immagini, file CSS o file JavaScrip incluso deve essere accessibile dal Web, in quanto Firefox non permette di accedere ai file locale del sistema. Se non vuoi avere questa restrizione, considera l'uso di un server web locale, per esempio attraverso MAMP o XAMPP con l’opzione “URL personalizzato”."
@@ -75,7 +72,7 @@
     "message": "Ti piace questa estensione? Lascia una recensione."
   },
   "settings_donate": {
-    "message": "Donazioni"
+    "message": "Dona ora"
   },
   "settings_donation_text": {
     "message": "Considera l'idea di effettuare una donazione per sostenere il continuo sviluppo di questa estensione."
@@ -120,7 +117,7 @@
     "message": "Tab Position"
   },
   "type_options_background_color": {
-    "message": "colore di sfondo"
+    "message": "Colore di sfondo"
   },
   "type_options_custom_url": {
     "message": "URL personalizzato"
@@ -129,10 +126,10 @@
     "message": "Novità Mozilla (Tedesco)"
   },
   "type_options_homepage": {
-    "message": "pagina iniziale attuale"
+    "message": "Pagina iniziale attuale"
   },
   "type_options_local_file": {
-    "message": "file locale"
+    "message": "File locale"
   },
   "type_title": {
     "message": "Opzione"
@@ -144,9 +141,9 @@
     "message": "URL"
   },
   "url_validation_default": {
-    "message": "Questo indirizzo non è valido."
+    "message": "Questo indirizzo non è valido"
   },
   "url_validation_file": {
-    "message": "Non è più concesso, per le estensioni, accedere ai file locali tramite indirizzo URL."
+    "message": "Non è più concesso, per le estensioni, accedere ai file locali tramite indirizzo URL"
   }
 }

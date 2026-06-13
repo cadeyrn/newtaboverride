@@ -27,6 +27,8 @@ class Options {
     tabPosition: document.getElementById('tab-position'),
     type: document.getElementById('type'),
     url: document.getElementById('url'),
+    urlValidationDefault: document.querySelector('#url-wrapper .error-message.default'),
+    urlValidationFile: document.querySelector('#url-wrapper .error-message.file'),
     urlOption: document.getElementById('url-option'),
     urlWrapper: document.getElementById('url-wrapper')
   };
@@ -166,7 +168,7 @@ class Options {
 
     if (Options.#elements.url.value === '') {
       Options.#elements.url.classList.add('error');
-      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.remove('hidden');
+      Options.#elements.urlValidationDefault.classList.remove('hidden');
     }
   }
 
@@ -228,23 +230,27 @@ class Options {
 
     // valid URL
     if (Utils.uriRegex.test(url)) {
-      Options.#elements.urlWrapper.querySelector('.error-message').classList.add('hidden');
+      Options.#elements.urlValidationDefault.classList.add('hidden');
+      Options.#elements.urlValidationFile.classList.add('hidden');
       Options.#elements.url.classList.remove('error');
     }
     // local file access is not allowed for WebExtensions
     else if (url.startsWith('file://')) {
-      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.add('hidden');
-      Options.#elements.urlWrapper.querySelector('.error-message.file').classList.remove('hidden');
+      Options.#elements.urlValidationDefault.classList.add('hidden');
+      Options.#elements.urlValidationFile.classList.remove('hidden');
       Options.#elements.url.classList.add('error');
     }
     // unsupported protocol or empty URL
     else if (Utils.protocolRegex.test(url) || url === '') {
-      Options.#elements.urlWrapper.querySelector('.error-message.default').classList.remove('hidden');
-      Options.#elements.urlWrapper.querySelector('.error-message.file').classList.add('hidden');
+      Options.#elements.urlValidationDefault.classList.remove('hidden');
+      Options.#elements.urlValidationFile.classList.add('hidden');
       Options.#elements.url.classList.add('error');
     }
     // prepend https:// for every other input
     else {
+      Options.#elements.urlValidationDefault.classList.add('hidden');
+      Options.#elements.urlValidationFile.classList.add('hidden');
+      Options.#elements.url.classList.remove('error');
       url = 'https://' + url;
     }
 

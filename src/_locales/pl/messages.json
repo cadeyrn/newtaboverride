@@ -39,10 +39,7 @@
     "message": "Prośba o funkcję lub zgłoszenie błędu? Otwórz wątek na GitHub:"
   },
   "homepage_description": {
-    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#home w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od http:// lub https://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
-  },
-  "introduction": {
-    "message": "Ta strona jest dostarczona przez {0}: Wybierz stronę, która powinna być otwierana jako nowa karta!"
+    "message": "Jeśli ta opcja jest włączona, Firefox będzie używał strony startowej jako nowej karty. Możesz zmienić stronę startową wpisując about:preferences#home w pasek adresu. Obsługiwane są tylko strony rozpoczynające się od https:// lub http://. Jeśli skonfigurowano wiele stron startowych, New Tab Override będzie używał tylko pierwszej."
   },
   "learn_more": {
     "message": "Więcej informacji"
@@ -51,7 +48,7 @@
     "message": "Czy na pewno chcesz usunąć plik z pamięci rozszerzenia?"
   },
   "local_file_delete_text": {
-    "message": "usuń istniejący plik"
+    "message": "Usuń istniejący plik"
   },
   "local_file_description": {
     "message": "Z powodu ograniczeń Firefoksa nie jest możliwy dostęp do plików lokalnych dla rozszerzeń. New Tab Override umożliwia załadowanie lokalnych plików HTML do pamięci rozszerzenia i używanie ich jako zawartości nowej karty. Wszystkie adresy URL i linki do obrazów, plików CSS i JavaScript muszą być dostępne za pośrednictwem sieci, ponieważ Firefox nie może uzyskać dostępu do lokalnych plików w systemie. Alternatywnie rozważ użycie lokalnego serwera WWW, na przykład MAMP lub XAMPP, z opcją „niestandardowy adres URL”. To działa bez żadnych ograniczeń."
@@ -75,7 +72,7 @@
     "message": "Lubisz to rozszerzenie? Proszę pozostaw opinię na"
   },
   "settings_donate": {
-    "message": "Przekaż darowiznę"
+    "message": "Przekaż darowiznę teraz"
   },
   "settings_donation_text": {
     "message": "Proszę rozważyć przekazanie darowizny na wsparcie ciągłego rozwoju tego rozszerzenia."
@@ -120,19 +117,19 @@
     "message": "Pozycja karty"
   },
   "type_options_background_color": {
-    "message": "kolorowe tło"
+    "message": "Kolorowe tło"
   },
   "type_options_custom_url": {
-    "message": "niestandardowy adres URL"
+    "message": "Niestandardowy adres URL"
   },
   "type_options_feed": {
     "message": "Aktualności Mozilli (Niemiecki)"
   },
   "type_options_homepage": {
-    "message": "obecna strona startowa"
+    "message": "Obecna strona startowa"
   },
   "type_options_local_file": {
-    "message": "plik lokalny"
+    "message": "Plik lokalny"
   },
   "type_title": {
     "message": "Opcja"
@@ -144,9 +141,9 @@
     "message": "Adres URL"
   },
   "url_validation_default": {
-    "message": "To nie jest prawidłowy adres URL."
+    "message": "To nie jest prawidłowy adres URL"
   },
   "url_validation_file": {
-    "message": "Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy dla rozszerzeń."
+    "message": "Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy dla rozszerzeń"
   }
 }
