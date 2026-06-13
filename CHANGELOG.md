@@ -6,7 +6,7 @@
 
 #### Enhancements
 
-- [ENHANCEMENT] New Tab Override does not collect any data. A new property in the extension manifest makes this explicit. Users now see a corresponding note during installation and in the add-ons manager, see [#341](https://github.com/cadeyrn/newtaboverride/issues/341)
+- [ENHANCEMENT] New Tab Override does not collect any data. A new property in the extension manifest makes this explicit. Users now see a corresponding note during installation and in the add-ons manager, see [#376](https://github.com/cadeyrn/newtaboverride/issues/376)
 - [ENHANCEMENT] **redesigned the user interface**, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
 - [ENHANCEMENT] display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
 
