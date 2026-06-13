@@ -2,7 +2,7 @@
 
 /* global feedreader */
 
-const FEED_PERMISSION = { origins : ['https://www.soeren-hentzschel.at/*'] };
+const FEED_PERMISSION = { origins: ['https://www.soeren-hentzschel.at/*'] };
 const FEED_URL = 'https://www.soeren-hentzschel.at/feed/';
 
 const elPermissionNeeded = document.getElementById('permission-needed');
@@ -84,10 +84,10 @@ const feed = {
       const br2 = document.createElement('br');
       li.appendChild(br2);
 
-      const p = document.createElement('p');
-      li.appendChild(p);
+      const paragraph = document.createElement('p');
+      li.appendChild(paragraph);
       const text3 = document.createTextNode(description);
-      p.appendChild(text3);
+      paragraph.appendChild(text3);
 
       if (hasValidWebLink) {
         const a2 = document.createElement('a');

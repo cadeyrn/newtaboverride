@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Flikplacering"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Öppna nya flikar bredvid den aktuella fliken om de är relaterade till den aktuella fliken, annars öppna i slutet av flikraden (standard)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Öppna alla nya flikar bredvid den aktuella fliken"
   },
   "tab_position_option_atEnd": {
     "message": "Öppna alla nya flikar i slutet av flikraden"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Öppna nya flikar bredvid den aktuella fliken om de är relaterade till den aktuella fliken, annars öppna i slutet av flikraden (standard)"
+  },
+  "tab_position_title": {
+    "message": "Flikplacering"
   },
   "type_options_background_color": {
     "message": "bakgrundsfärg"

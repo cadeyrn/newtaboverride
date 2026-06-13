@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Tab Position"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Nieuwe tabbladen openen naast het huidige tabblad als deze aan het huidige tabblad zijn gerelateerd, anders aan het einde van de tabbladenstrook (standaard)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Alle nieuwe tabbladen openen naast het huidige tabblad"
   },
   "tab_position_option_atEnd": {
     "message": "Alle nieuwe tabbladen openen aan het einde van de tabbladenstrook"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Nieuwe tabbladen openen naast het huidige tabblad als deze aan het huidige tabblad zijn gerelateerd, anders aan het einde van de tabbladenstrook (standaard)"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
   },
   "type_options_background_color": {
     "message": "achtergrondkleur"

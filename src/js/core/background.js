@@ -18,7 +18,7 @@ const newtaboverride = {
   onInstalledHandler (details) {
     // new install
     if (details.reason === 'install') {
-      browser.action.setBadgeText({ text : '★' });
+      browser.action.setBadgeText({ text: '★' });
     }
   },
 
@@ -41,15 +41,15 @@ const newtaboverride = {
     for (const command of availableCommands) {
       if (command.indexOf(input) !== -1) {
         suggestions.push({
-          content : command,
-          description : browser.i18n.getMessage('omnibox_command_' + command)
+          content: command,
+          description: browser.i18n.getMessage('omnibox_command_' + command)
         });
       }
 
       if (suggestions.length === 0) {
         suggestions.push({
-          content : 'settings',
-          description : browser.i18n.getMessage('omnibox_command_settings')
+          content: 'settings',
+          description: browser.i18n.getMessage('omnibox_command_settings')
         });
       }
     }
@@ -81,8 +81,8 @@ const newtaboverride = {
   openUserInterface () {
     const url = browser.runtime.getURL(OPTIONS_PAGE);
 
-    browser.action.setBadgeText({ text : '' });
-    browser.tabs.query({}, (tabs) => {
+    browser.action.setBadgeText({ text: '' });
+    browser.tabs.query({}, tabs => {
       let tabId = null;
 
       for (const tab of tabs) {
@@ -94,7 +94,7 @@ const newtaboverride = {
 
       // there is already a tab open
       if (tabId) {
-        browser.tabs.update(tabId, { active : true });
+        browser.tabs.update(tabId, { active: true });
       }
       // open a new tab
       else {
@@ -109,21 +109,21 @@ const newtaboverride = {
    * @returns {void}
    */
   openUserInterfaceInCurrentTab () {
-    browser.tabs.update(null, { url : browser.runtime.getURL(OPTIONS_PAGE) });
+    browser.tabs.update(null, { url: browser.runtime.getURL(OPTIONS_PAGE) });
   }
 };
 
 browser.action.onClicked.addListener(newtaboverride.openUserInterface);
 browser.omnibox.onInputChanged.addListener(newtaboverride.showOmniboxSuggestions);
 browser.omnibox.onInputEntered.addListener(newtaboverride.callOmniboxAction);
-browser.omnibox.setDefaultSuggestion({ description : browser.i18n.getMessage('extension_description') });
+browser.omnibox.setDefaultSuggestion({ description: browser.i18n.getMessage('extension_description') });
 browser.runtime.onInstalled.addListener(newtaboverride.onInstalledHandler);
 
 browser.runtime.onInstalled.addListener(() => {
   browser.menus.create({
-    id : 'nto-tools-menu-entry',
-    title : browser.i18n.getMessage('settings_title'),
-    contexts : ['tools_menu'],
-    command : '_execute_browser_action'
+    id: 'nto-tools-menu-entry',
+    title: browser.i18n.getMessage('settings_title'),
+    contexts: ['tools_menu'],
+    command: '_execute_browser_action'
   });
 });

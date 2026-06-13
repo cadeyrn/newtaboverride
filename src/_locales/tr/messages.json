@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Sekme Pozisyonu"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Yeni sekmeleri, mevcut sayfa ile alakalı ise yanına aksitaktirde sekme çubuğunun sonuna aç (varsayılan)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Yeni sekmeleri mevcut sayfanın yanına aç"
   },
   "tab_position_option_atEnd": {
     "message": "Yeni sekmeleri sekme çubuğunun sonuna aç"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Yeni sekmeleri, mevcut sayfa ile alakalı ise yanına aksitaktirde sekme çubuğunun sonuna aç (varsayılan)"
+  },
+  "tab_position_title": {
+    "message": "Sekme Pozisyonu"
   },
   "type_options_background_color": {
     "message": "arkaplan rengi"

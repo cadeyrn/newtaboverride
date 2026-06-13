@@ -49,7 +49,7 @@ const newtab = {
         newtab.openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
-        const { background_color } = await browser.storage.local.get({ background_color : defaults.background_color });
+        const { background_color } = await browser.storage.local.get({ background_color: defaults.background_color });
         document.body.style.background = background_color;
         break;
       case 'feed':
@@ -82,13 +82,13 @@ const newtab = {
       url = browser.runtime.getURL('html/options.html');
     }
 
-    await browser.tabs.getCurrent((tab) => {
+    await browser.tabs.getCurrent(tab => {
       const tabId = tab.id;
 
       // set focus on website
       if (focus_website) {
         // we need to pass the cookieStoreId to support the container tabs feature of Firefox
-        browser.tabs.create({ url : url, cookieStoreId : tab.cookieStoreId }, () => {
+        browser.tabs.create({ url: url, cookieStoreId: tab.cookieStoreId }, () => {
           browser.tabs.remove(tabId);
         });
       }
@@ -96,14 +96,14 @@ const newtab = {
       else {
         // we explicitly set the tab id of the current tab to support the edge case of opening a new tab in the
         // background, for support of add-ons like Gesturefy; we set loadReplace to true to disable the back button
-        browser.tabs.update(tabId, { url : url, loadReplace : true }, () => {
+        browser.tabs.update(tabId, { url: url, loadReplace: true }, () => {
           // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
         });
       }
     });
 
     // delete spammy new tab page entry from history
-    browser.history.deleteUrl({ url : browser.runtime.getURL(NEW_TAB_PAGE) });
+    browser.history.deleteUrl({ url: browser.runtime.getURL(NEW_TAB_PAGE) });
   }
 };
 

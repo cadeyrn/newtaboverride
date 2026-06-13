@@ -7,8 +7,8 @@ const INTERVAL_BETWEEN_FETCHES_IN_MS = 3600000;
  * @exports feedreader
  */
 const feedreader = {
-  lastFetched : null,
-  feedItems : null,
+  lastFetched: null,
+  feedItems: null,
 
   /**
    * Checks for new feed items, only once per INTERVAL_BETWEEN_FETCHES_IN_MS milliseconds.
@@ -37,7 +37,7 @@ const feedreader = {
     const feeditems = [];
 
     const parser = new DOMParser();
-    const response = await fetch(url, { cache : 'no-store' });
+    const response = await fetch(url, { cache: 'no-store' });
     const text = await response.text();
     const doc = await parser.parseFromString(text, 'text/xml');
 

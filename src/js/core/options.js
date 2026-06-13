@@ -29,7 +29,7 @@ const elUrlWrapper = document.getElementById('url-wrapper');
  * @exports options
  */
 const options = {
-  changeSettingsShortcutButton : false,
+  changeSettingsShortcutButton: false,
 
   /**
    * This method will be fired on add-on init.
@@ -75,7 +75,7 @@ const options = {
       showFocusOption = true;
       showClearOption = true;
 
-      const { local_file } = await browser.storage.local.get({ local_file : defaults.local_file });
+      const { local_file } = await browser.storage.local.get({ local_file: defaults.local_file });
       if (local_file) {
         showLocalFileDeleteLink = true;
       }
@@ -147,18 +147,18 @@ const options = {
 document.addEventListener('DOMContentLoaded', options.load);
 
 permissions.setupListeners({
-  permission : PERMISSION_FEED,
-  elGrantPermissionContainer : elFeedPermission,
-  elRevokePermissionContainer : elFeedPermissionRevoke,
-  elGrantBtn : elFeedPermissionBtn,
-  elRevokeBtn : elFeedPermissionRevokeBtn
+  permission: PERMISSION_FEED,
+  elGrantPermissionContainer: elFeedPermission,
+  elRevokePermissionContainer: elFeedPermissionRevoke,
+  elGrantBtn: elFeedPermissionBtn,
+  elRevokeBtn: elFeedPermissionRevokeBtn
 });
 
-elFocusWebsite.addEventListener('change', (e) => {
-  browser.storage.local.set({ focus_website : e.target.checked });
+elFocusWebsite.addEventListener('change', e => {
+  browser.storage.local.set({ focus_website: e.target.checked });
 });
 
-elType.addEventListener('change', (e) => {
+elType.addEventListener('change', e => {
   if (e.target.value === 'feed') {
     permissions.testPermission(PERMISSION_FEED, elFeedPermission, elFeedPermissionRevoke);
   }
@@ -167,15 +167,15 @@ elType.addEventListener('change', (e) => {
     elFeedPermissionRevoke.classList.add('hidden');
   }
 
-  browser.storage.local.set({ type : e.target.value });
+  browser.storage.local.set({ type: e.target.value });
   options.toggleOptionsDetails();
 });
 
-elTabPosition.addEventListener('change', (e) => {
-  browser.browserSettings.newTabPosition.set({ value : e.target.value });
+elTabPosition.addEventListener('change', e => {
+  browser.browserSettings.newTabPosition.set({ value: e.target.value });
 });
 
-elUrl.addEventListener('input', (e) => {
+elUrl.addEventListener('input', e => {
   let url = e.target.value.trim();
 
   // valid URL
@@ -203,8 +203,8 @@ elUrl.addEventListener('input', (e) => {
   browser.storage.local.set({ url });
 });
 
-elBackgroundColor.addEventListener('input', (e) => {
-  browser.storage.local.set({ background_color : e.target.value });
+elBackgroundColor.addEventListener('input', e => {
+  browser.storage.local.set({ background_color: e.target.value });
 });
 
 elLocalFile.addEventListener('change', () => {
@@ -214,12 +214,12 @@ elLocalFile.addEventListener('change', () => {
   reader.addEventListener('loadend', async () => {
     const file = reader.result;
 
-    await browser.storage.local.set({ local_file : file });
+    await browser.storage.local.set({ local_file: file });
     options.toggleVisibility(elLocalFileDeleteLink, true);
   });
 });
 
-elLocalFileDeleteLink.addEventListener('click', (e) => {
+elLocalFileDeleteLink.addEventListener('click', e => {
   e.preventDefault();
 
   // eslint-disable-next-line no-alert
@@ -227,11 +227,11 @@ elLocalFileDeleteLink.addEventListener('click', (e) => {
     return;
   }
 
-  browser.storage.local.set({ local_file : '' });
+  browser.storage.local.set({ local_file: '' });
   options.toggleVisibility(elLocalFileDeleteLink, false);
 });
 
-elChangeSettingsShortcut.addEventListener('click', (e) => {
+elChangeSettingsShortcut.addEventListener('click', e => {
   e.preventDefault();
   browser.commands.openShortcutSettings();
 });

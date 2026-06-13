@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "Adres URL"
   },
-  "tab_position_title": {
-    "message": "Pozycja karty"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Otwieranie nowych kart obok obecnej karty, jeśli są one związane z obecną kartą, w przeciwnym razie na końcu paska kart (domyślne)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Otwieranie wszystkich nowych kart obok obecnej karty"
   },
   "tab_position_option_atEnd": {
     "message": "Otwieranie wszystkich nowych kart na końcu paska kart"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Otwieranie nowych kart obok obecnej karty, jeśli są one związane z obecną kartą, w przeciwnym razie na końcu paska kart (domyślne)"
+  },
+  "tab_position_title": {
+    "message": "Pozycja karty"
   },
   "type_options_background_color": {
     "message": "kolorowe tło"

@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Posisi Tab"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Buka tab baru di sebelah tab saat ini jika terkait dengan tab saat ini, jika tidak di akhir setrip tab (default) "
-  },
   "tab_position_option_afterCurrent": {
     "message": "Buka semua tab baru di sebelah tab saat ini."
   },
   "tab_position_option_atEnd": {
     "message": "Buka semua tab baru di akhir strip tab"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Buka tab baru di sebelah tab saat ini jika terkait dengan tab saat ini, jika tidak di akhir setrip tab (default) "
+  },
+  "tab_position_title": {
+    "message": "Posisi Tab"
   },
   "type_options_background_color": {
     "message": "warna latar belakang"

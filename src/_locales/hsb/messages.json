@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Rajtarkowa pozicija"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Nowe rajtarki pódla aktualneho rajtarka wočinić, jeli z nim zwisuja, hewak na kóncu rajtarkoweje lajsty (standard)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Wšě nowe rajtarki pódla aktualneho rajtarka wočinić"
   },
   "tab_position_option_atEnd": {
     "message": "Wšě rajtarki na kóncu rajtarkoweje lajsty wočinić"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Nowe rajtarki pódla aktualneho rajtarka wočinić, jeli z nim zwisuja, hewak na kóncu rajtarkoweje lajsty (standard)"
+  },
+  "tab_position_title": {
+    "message": "Rajtarkowa pozicija"
   },
   "type_options_background_color": {
     "message": "pozadkowa barba"

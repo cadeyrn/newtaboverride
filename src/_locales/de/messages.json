@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Tab-Position"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Neue Tabs neben dem aktuellen Tab öffnen, wenn sie mit diesem zusammenhängen, ansonsten am Ende der Tableiste (Standard)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Alle neuen Tabs neben dem aktuellen Tab öffnen"
   },
   "tab_position_option_atEnd": {
     "message": "Alle neuen Tabs am Ende der Tableiste öffnen"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Neue Tabs neben dem aktuellen Tab öffnen, wenn sie mit diesem zusammenhängen, ansonsten am Ende der Tableiste (Standard)"
+  },
+  "tab_position_title": {
+    "message": "Tab-Position"
   },
   "type_options_background_color": {
     "message": "Hintergrund-Farbe"

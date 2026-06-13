@@ -107,17 +107,17 @@
   "settings_url_field_placeholder": {
     "message": "URL"
   },
-  "tab_position_title": {
-    "message": "Tab Position"
-  },
-  "tab_position_option_relatedAfterCurrent": {
-    "message": "Ouvrir de nouveaux onglets à côté de l'onglet actuel s'ils sont liés à l'onglet actuel, sinon à la fin de la bande d'onglets (par défaut)"
-  },
   "tab_position_option_afterCurrent": {
     "message": "Ouvrir tous les nouveaux onglets à côté de l'onglet actuel"
   },
   "tab_position_option_atEnd": {
     "message": "Ouvrir tous les nouveaux onglets à la fin de la barre d'onglets"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "Ouvrir de nouveaux onglets à côté de l'onglet actuel s'ils sont liés à l'onglet actuel, sinon à la fin de la bande d'onglets (par défaut)"
+  },
+  "tab_position_title": {
+    "message": "Tab Position"
   },
   "type_options_background_color": {
     "message": "couleur de fond"
