@@ -42,6 +42,7 @@
     "cookies",
     "history",
     "menus",
+    "sessions",
     "storage",
     "tabs"
   ],

@@ -9,8 +9,6 @@ class NewTab {
 
   static #feedPage = 'html/feed.html';
 
-  static #newTabPage = 'html/newtab.html';
-
   /**
    * This method is used to navigate to the set new tab page.
    *
@@ -82,27 +80,35 @@ class NewTab {
       url = browser.runtime.getURL('html/options.html');
     }
 
-    await browser.tabs.getCurrent(tab => {
-      const tabId = tab.id;
+    const newTabPageUrl = browser.runtime.getURL('html/newtab.html');
+    const tab = await browser.tabs.getCurrent();
 
-      // set focus on website
-      if (focus_website) {
-        // pass the cookieStoreId to support container tabs in Firefox
-        browser.tabs.create({ url: url, cookieStoreId: tab.cookieStoreId }, () => {
-          browser.tabs.remove(tabId);
-        });
-      }
-      // set focus on address bar
-      else {
-        // use loadReplace to keep the back button disabled and to support background new-tab flows from add-ons
-        browser.tabs.update(tabId, { url: url, loadReplace: true }, () => {
-          // there is nothing to do, but it's needed, otherwise browser.history.deleteUrl() does not work
-        });
-      }
-    });
+    if (!tab) {
+      browser.history.deleteUrl({ url: newTabPageUrl });
 
-    // delete the internal new tab page entry from history after redirecting
-    browser.history.deleteUrl({ url: browser.runtime.getURL(NewTab.#newTabPage) });
+      return;
+    }
+
+    // set focus on website
+    if (focus_website) {
+      // pass the cookieStoreId to support container tabs in Firefox
+      await browser.tabs.create({ url, cookieStoreId: tab.cookieStoreId });
+
+      // remember this window so the background script can remove the closed internal new tab page from the recently
+      // closed tabs list again
+      await browser.runtime.sendMessage({ type: 'forget-closed-new-tab', windowId: tab.windowId });
+      browser.history.deleteUrl({ url: newTabPageUrl });
+      await browser.tabs.remove(tab.id);
+    }
+    // set focus on address bar
+    else {
+      // use loadReplace to keep the back button disabled and to support background new-tab flows from add-ons
+      browser.tabs.update(tab.id, { url, loadReplace: true }, () => {
+        // this callback intentionally stays empty. Firefox may otherwise keep newtab.html in the browsing history when
+        // browser.history.deleteUrl() runs right after browser.tabs.update()
+      });
+      browser.history.deleteUrl({ url: newTabPageUrl });
+    }
   }
 }
 

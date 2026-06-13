@@ -73,6 +73,11 @@ New Tab Override will not work without the following permissions:
 The permission to access the browser history is needed to prevent spammy "moz-extension://" entries in your browsing
 history every time you open a new tab. There is no way to prevent this without this permission.
 
+##### access recently closed tabs
+
+The permission to access recently closed tabs is needed so that New Tab Override can remove internally closed new tab
+pages from Firefox's recently closed tabs list when the option to set the focus to the website is used.
+
 ##### access browser tabs
 
 The permission to access the browser tabs is needed so that New Tab Override can jump to the settings page if it’s

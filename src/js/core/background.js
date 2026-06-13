@@ -4,6 +4,29 @@ class Background {
   static #optionsPage = 'html/options.html';
 
   /**
+   * Window IDs queued for cleanup, once per internal new tab entry that should later be removed from Firefox's
+   * recently closed tabs list. We store window IDs instead of tab IDs because the sessions API exposes the closed tab
+   * only afterward, together with its sessionId and windowId.
+   *
+   * @type {number[]}
+   */
+  static #pendingClosedNewTabs = [];
+
+  /**
+   * Promise of the currently running cleanup pass so concurrent events can reuse the same processing cycle
+   *
+   * @type {Promise<void> | null}
+   */
+  static #pendingClosedTabsProcessing = null;
+
+  /**
+   * Indicates that Firefox's recently closed tabs list changed again while a cleanup pass was already running
+   *
+   * @type {boolean}
+   */
+  static #pendingClosedTabsListChange = false;
+
+  /**
    * Register the listeners needed by the background script.
    *
    * @returns {void}
@@ -15,6 +38,8 @@ class Background {
     browser.omnibox.setDefaultSuggestion({ description: browser.i18n.getMessage('extension_description') });
     browser.runtime.onInstalled.addListener(Background.#onInstalledHandler);
     browser.runtime.onInstalled.addListener(Background.#createToolsMenuEntry);
+    browser.runtime.onMessage.addListener(Background.#handleMessage);
+    browser.sessions.onChanged.addListener(Background.#handleClosedTabsChanged);
   }
 
   /**
@@ -120,6 +145,98 @@ class Background {
    */
   static #openUserInterfaceInCurrentTab () {
     browser.tabs.update(null, { url: browser.runtime.getURL(Background.#optionsPage) });
+  }
+
+  /**
+   * Remember the window of an internal new tab page that will soon be closed. The closed tab itself only becomes
+   * visible later through browser.sessions.getRecentlyClosed(), so at this point windowId is the stable link we can
+   * carry over until Firefox gives us the closed tab's sessionId.
+   *
+   * @param {object} message - runtime message
+   *
+   * @returns {void}
+   */
+  static #handleMessage (message) {
+    if (message?.type !== 'forget-closed-new-tab' || !Number.isInteger(message.windowId)) {
+      return;
+    }
+
+    Background.#pendingClosedNewTabs.push(message.windowId);
+  }
+
+  /**
+   * React to changes in Firefox's list of recently closed tabs and windows.
+   *
+   * @returns {void}
+   */
+  static #handleClosedTabsChanged () {
+    if (Background.#pendingClosedNewTabs.length === 0) {
+      return;
+    }
+
+    Background.#pendingClosedTabsListChange = true;
+    void Background.#processPendingClosedNewTabs();
+  }
+
+  /**
+   * Remove pending internal new tab pages from Firefox's recently closed tabs list once those entries are exposed
+   * through the sessions API.
+   *
+   * @returns {void}
+   */
+  static #processPendingClosedNewTabs () {
+    if (Background.#pendingClosedTabsProcessing || Background.#pendingClosedNewTabs.length === 0) {
+      return;
+    }
+
+    Background.#pendingClosedTabsListChange = false;
+
+    const processingPromise = (async () => {
+      const url = browser.runtime.getURL('html/newtab.html');
+
+      // work on a copy first, so we only acknowledge queue entries after Firefox has accepted the actual cleanup
+      const remainingPendingWindowIds = [...Background.#pendingClosedNewTabs];
+      const sessions = await browser.sessions.getRecentlyClosed({ maxResults: browser.sessions.MAX_SESSION_RESULTS });
+      const matchingSessions = [];
+
+      for (const session of sessions) {
+        if (session.tab?.sessionId && session.tab.url === url) {
+          const { sessionId, windowId } = session.tab;
+          const pendingIndex = remainingPendingWindowIds.indexOf(windowId);
+
+          // A window can contribute multiple pending entries, so each match may consume only one queued window ID.
+          // The remembered windowId is just the bridge that lets us find the correct closed tab and its sessionId here.
+          if (pendingIndex !== -1) {
+            remainingPendingWindowIds.splice(pendingIndex, 1);
+            matchingSessions.push({ sessionId, windowId });
+          }
+        }
+      }
+
+      // forgetClosedTab() identifies a recently closed tab by the combination of windowId and the sessionId that only
+      // became available through getRecentlyClosed().
+      await Promise.all(matchingSessions.map(({ sessionId, windowId }) => browser.sessions.forgetClosedTab(windowId, sessionId)));
+
+      for (const { windowId } of matchingSessions) {
+        const pendingIndex = Background.#pendingClosedNewTabs.indexOf(windowId);
+
+        if (pendingIndex !== -1) {
+          Background.#pendingClosedNewTabs.splice(pendingIndex, 1);
+        }
+      }
+    })();
+
+    Background.#pendingClosedTabsProcessing = processingPromise;
+
+    void processingPromise.finally(() => {
+      if (Background.#pendingClosedTabsProcessing === processingPromise) {
+        Background.#pendingClosedTabsProcessing = null;
+      }
+
+      if (Background.#pendingClosedTabsListChange && Background.#pendingClosedNewTabs.length > 0) {
+        Background.#processPendingClosedNewTabs();
+      }
+    });
   }
 
   /**
