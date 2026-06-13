@@ -11,6 +11,8 @@ class Options {
   static #elements = {
     backgroundColor: document.getElementById('background-color'),
     backgroundColorOption: document.getElementById('background-color-option'),
+    backgroundColorValue: document.getElementById('background-color-value'),
+    backgroundColorWrapper: document.getElementById('background-color-wrapper'),
     changeSettingsShortcutWrapper: document.getElementById('change-settings-shortcut-wrapper'),
     changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
     clearOption: document.getElementById('clear-option'),
@@ -156,6 +158,7 @@ class Options {
     Options.#elements.tabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
     Options.#elements.url.value = option.url;
     Options.#elements.backgroundColor.value = option.background_color;
+    Options.#updateBackgroundColorPreview(option.background_color);
     Options.#toggleOptionsDetails();
 
     if (option.type === 'feed') {
@@ -265,7 +268,22 @@ class Options {
    * @returns {void}
    */
   static #handleBackgroundColorInput (e) {
+    Options.#updateBackgroundColorPreview(e.target.value);
     browser.storage.local.set({ background_color: e.target.value });
+  }
+
+  /**
+   * Update the visual color field with the selected hex code and a readable text color.
+   *
+   * @param {string} hexColor - the selected color
+   *
+   * @returns {void}
+   */
+  static #updateBackgroundColorPreview (hexColor) {
+    const normalizedHexColor = hexColor.toLowerCase();
+
+    Options.#elements.backgroundColorValue.textContent = normalizedHexColor;
+    Options.#elements.backgroundColorWrapper.style.setProperty('--background-color-preview', normalizedHexColor);
   }
 
   /**

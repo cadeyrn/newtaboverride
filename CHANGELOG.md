@@ -7,6 +7,7 @@
 #### Enhancements
 
 - [ENHANCEMENT] **redesigned the user interface**, see [#386](https://github.com/cadeyrn/newtaboverride/issues/386)
+- [ENHANCEMENT] display the selected hex color value for the background color option on the settings page, see [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
 
 #### Developer Experience
 
