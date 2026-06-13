@@ -6,6 +6,7 @@
 
 #### Developer Experience
 
+- [CHANGE] changed copyright year from 2025 to 2026
 - [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies
 
 **Minimum required Firefox version is Firefox 140 now.**
