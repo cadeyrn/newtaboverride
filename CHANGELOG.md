@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### Version 18.0.0 (Work in Progress)
+
+**Minimum required Firefox version is Firefox 140 now.**
+
 ### Version 17.0.0 (2025-02-22)
 
 - [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
