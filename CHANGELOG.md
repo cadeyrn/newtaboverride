@@ -8,7 +8,7 @@
 
 - [CODE QUALITY] refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
 - [CHANGE] changed copyright year from 2025 to 2026
-- [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies, , see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
+- [DEVELOPER EXPERIENCE] replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
 
 **Minimum required Firefox version is Firefox 140 now.**
 
