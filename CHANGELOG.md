@@ -33,7 +33,7 @@
 
 ### Version 17.0.0 (2025-02-22)
 
-- [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel ](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
+- [ENHANCEMENT] **added option to randomly select a page from several pages.** Just use the pipe character (“|”) to provide multiple URLs (Thanks, [@mnadel](https://github.com/mnadel)!), see [#359](https://github.com/cadeyrn/newtaboverride/issues/359)
 - [ENHANCEMENT] added button to options page to change the extension shortcut (Firefox 137 and higher), fixes [#362](https://github.com/cadeyrn/newtaboverride/issues/362)
 - [ENHANCEMENT] improved description for custom URL to mention https:// first and also mention moz-extension:// as allowed protocol, fixes [#361](https://github.com/cadeyrn/newtaboverride/issues/361)
 - [ENHANCEMENT] use https:// if the homepage option is used without a protocol instead of discarding the homepage and displaying the options page, fixes [#347](https://github.com/cadeyrn/newtaboverride/issues/347)
@@ -390,7 +390,7 @@ New Tab Override.
 - [ENHANCEMENT] you can open the settings via keyboard shortcut Shift + F12
 - [ENHANCEMENT] you can open the settings via entering "newtab settings" in the address bar
 - [ENHANCEMENT] there is an upgrade notice for users of the legecy version of New Tab Override. This notice is not
-  visible on fresh installs
+  visible on fresh installations
 - [CODE QUALITY] improved code quality and added more code documentation, use of ESLint, stylelint, htmllint and JSDoc
 
 **Thanks to [Ura Design](https://ura.design/) for the new logo!**
