@@ -3,17 +3,11 @@
 /* global Defaults, PermissionHelper, Utils */
 
 class Options {
-  // eslint-disable-next-line no-magic-numbers
-  static #firefox137 = 137;
-
-  static #changeSettingsShortcutButton = false;
-
   static #elements = {
     backgroundColor: document.getElementById('background-color'),
     backgroundColorOption: document.getElementById('background-color-option'),
     backgroundColorValue: document.getElementById('background-color-value'),
     backgroundColorWrapper: document.getElementById('background-color-wrapper'),
-    changeSettingsShortcutWrapper: document.getElementById('change-settings-shortcut-wrapper'),
     changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
     clearOption: document.getElementById('clear-option'),
     feedPermission: document.getElementById('feed-permission-container'),
@@ -59,18 +53,6 @@ class Options {
     Options.#elements.localFile.addEventListener('change', Options.#handleLocalFileChange);
     Options.#elements.localFileDeleteLink.addEventListener('click', Options.#handleLocalFileDeleteClick);
     Options.#elements.changeSettingsShortcut.addEventListener('click', Options.#handleChangeSettingsShortcutClick);
-
-    browser.runtime.getBrowserInfo().then(Options.#init).catch();
-  }
-
-  /**
-   * This method will be fired on add-on init.
-   *
-   * @param {object} info - an object containing information about the browser
-   * @returns {void}
-   */
-  static #init (info) {
-    Options.#changeSettingsShortcutButton = Utils.parseVersion(info.version).major >= Options.#firefox137;
   }
 
   /**
@@ -128,7 +110,6 @@ class Options {
     Options.#toggleVisibility(Options.#elements.backgroundColorOption, showBackgroundColorOption);
     Options.#toggleVisibility(Options.#elements.localFileOption, showLocalFileOption);
     Options.#toggleVisibility(Options.#elements.localFileDeleteLink, showLocalFileDeleteLink);
-    Options.#toggleVisibility(Options.#elements.changeSettingsShortcutWrapper, Options.#changeSettingsShortcutButton);
   }
 
   /**
