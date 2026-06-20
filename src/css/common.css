@@ -55,7 +55,7 @@ button {
   cursor: pointer;
 
   &:focus-visible {
-    outline: 2px solid var(--color-focus-ring);
+    outline: 2px solid var(--color-focus-border);
     outline-offset: 2px;
   }
 }
@@ -245,8 +245,8 @@ p {
   }
 
   &:focus-visible {
-    outline: 0;
-    box-shadow: var(--focus-ring-strong);
+    outline: 2px solid var(--color-focus-border);
+    outline-offset: 2px;
   }
 }
 
@@ -326,7 +326,7 @@ p {
     text-overflow: ellipsis;
 
     &:hover {
-      color: var(--color-dark-border);
+      color: var(--color-footer-link-hover);
       text-decoration: none;
     }
   }
