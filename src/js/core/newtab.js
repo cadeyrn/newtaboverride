@@ -116,10 +116,15 @@ class NewTab {
       // expected container and avoids an unnecessary reopening by other tab-management extensions.
       if (!sourceTab && tab.cookieStoreId === 'firefox-default') {
         const tabs = await browser.tabs.query({ windowId: tab.windowId });
+        const otherTabs = tabs.filter(candidate => candidate.id !== tab.id);
+        const sourceTabFromSuccessor = otherTabs.find(candidate => candidate.successorTabId === tab.id);
 
-        sourceTab = tabs.find(candidate => candidate.id !== tab.id && candidate.successorTabId === tab.id) ??
-          tabs.filter(candidate => candidate.id !== tab.id).sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ??
-          null;
+        if (sourceTabFromSuccessor) {
+          sourceTab = sourceTabFromSuccessor;
+        }
+        else {
+          sourceTab = otherTabs.sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ?? null;
+        }
       }
 
       const createdTabProperties = {
