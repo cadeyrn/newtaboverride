@@ -28,7 +28,7 @@ class FeedReader {
    *
    * @param {string} url - the URL to load
    *
-   * @returns {Array.object} - an array with the content of all feed items
+   * @returns {Promise<object[]>} - a promise resolving to an array with the content of all feed items
    */
   static getFeedItems (url) {
     if (FeedReader.#feedItems === null || (Date.now() - FeedReader.#lastFetched > FeedReader.#intervalBetweenFetchesInMs)) {
@@ -44,7 +44,7 @@ class FeedReader {
    *
    * @param {string} url - the URL to load
    *
-   * @returns {Array.object} - an array with the content of all feed items
+   * @returns {Promise<object[]>} - a promise resolving to an array with the content of all feed items
    */
   static async #fetch (url) {
     const feedItems = [];
@@ -52,7 +52,7 @@ class FeedReader {
     const parser = new DOMParser();
     const response = await fetch(url, { cache: 'no-store' });
     const text = await response.text();
-    const $document = await parser.parseFromString(text, 'text/xml');
+    const $document = parser.parseFromString(text, 'text/xml');
 
     if ($document === null) {
       return feedItems;

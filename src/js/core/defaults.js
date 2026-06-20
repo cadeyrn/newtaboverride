@@ -2,7 +2,7 @@
 
 class Defaults {
   /**
-   * Default settings used to initialize and read stored option.
+   * Default settings used to initialize and read stored options.
    *
    * @type {object}
    */

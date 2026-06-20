@@ -64,7 +64,7 @@ class OptionsPage {
   /**
    * This method handles the visibility of the subsections of some options.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #toggleOptionsDetails () {
     let showUrlOption = false;
@@ -134,7 +134,7 @@ class OptionsPage {
    * Fired when the initial HTML document has been completely loaded and parsed. This method is used to load the
    * current options.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #load () {
     const [localSettings, managedSettings, tabPosition] = await Promise.all([
@@ -165,7 +165,7 @@ class OptionsPage {
       OptionsPage.#toggleVisibility($managedOption.querySelector('.managed-badge'), isManaged);
     }
 
-    OptionsPage.#toggleOptionsDetails();
+    await OptionsPage.#toggleOptionsDetails();
 
     if (Utils.uriRegex.test(url)) {
       OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
@@ -184,7 +184,7 @@ class OptionsPage {
     }
 
     if (option.type === 'feed') {
-      PermissionHelper.testPermission(
+      await PermissionHelper.testPermission(
         Utils.feedPermission,
         OptionsPage.#$elements.$feedPermission,
         OptionsPage.#$elements.$feedPermissionRevoke
@@ -200,7 +200,7 @@ class OptionsPage {
    * @returns {void}
    */
   static #handleFocusWebsiteChange (e) {
-    browser.storage.local.set({ focus_website: e.target.checked });
+    void browser.storage.local.set({ focus_website: e.target.checked });
   }
 
   /**
@@ -212,7 +212,7 @@ class OptionsPage {
    */
   static #handleTypeChange (e) {
     if (e.target.value === 'feed') {
-      PermissionHelper.testPermission(
+      void PermissionHelper.testPermission(
         Utils.feedPermission,
         OptionsPage.#$elements.$feedPermission,
         OptionsPage.#$elements.$feedPermissionRevoke
@@ -223,8 +223,8 @@ class OptionsPage {
       OptionsPage.#$elements.$feedPermissionRevoke.classList.add('hidden');
     }
 
-    browser.storage.local.set({ type: e.target.value });
-    OptionsPage.#toggleOptionsDetails();
+    void browser.storage.local.set({ type: e.target.value });
+    void OptionsPage.#toggleOptionsDetails();
   }
 
   /**
@@ -235,7 +235,7 @@ class OptionsPage {
    * @returns {void}
    */
   static #handleTabPositionChange (e) {
-    browser.browserSettings.newTabPosition.set({ value: e.target.value });
+    void browser.browserSettings.newTabPosition.set({ value: e.target.value });
   }
 
   /**
@@ -274,7 +274,7 @@ class OptionsPage {
       url = 'https://' + url;
     }
 
-    browser.storage.local.set({ url });
+    void browser.storage.local.set({ url });
   }
 
   /**
@@ -286,7 +286,7 @@ class OptionsPage {
    */
   static #handleBackgroundColorInput (e) {
     OptionsPage.#updateBackgroundColorPreview(e.target.value);
-    browser.storage.local.set({ background_color: e.target.value });
+    void browser.storage.local.set({ background_color: e.target.value });
   }
 
   /**
@@ -335,7 +335,7 @@ class OptionsPage {
       return;
     }
 
-    browser.storage.local.set({ local_file: '' });
+    void browser.storage.local.set({ local_file: '' });
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, false);
   }
 
@@ -348,7 +348,7 @@ class OptionsPage {
    */
   static #handleChangeSettingsShortcutClick (e) {
     e.preventDefault();
-    browser.commands.openShortcutSettings();
+    void browser.commands.openShortcutSettings();
   }
 }
 

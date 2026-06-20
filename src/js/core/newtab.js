@@ -27,7 +27,7 @@ class NewTab {
   /**
    * This method is used to navigate to the set new tab page.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async init () {
     const options = await Settings.get();
@@ -44,39 +44,39 @@ class NewTab {
 
         // return early if there is no valid url
         if (!Utils.uriRegex.test(url)) {
-          NewTab.#openNewTabPage('', false);
+          await NewTab.#openNewTabPage('', false);
           break;
         }
 
-        NewTab.#openNewTabPage(url, options.focus_website);
+        await NewTab.#openNewTabPage(url, options.focus_website);
         break;
       case 'homepage':
         const homepage = await browser.browserSettings.homepageOverride.get({});
         const firstHomepage = homepage.value.split('|')[0];
 
         if (!Utils.uriRegex.test(firstHomepage)) {
-          NewTab.#openNewTabPage('https://' + firstHomepage, false);
+          await NewTab.#openNewTabPage('https://' + firstHomepage, false);
           break;
         }
 
-        NewTab.#openNewTabPage(firstHomepage, options.focus_website);
+        await NewTab.#openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
         document.body.style.background = options.background_color;
         break;
       case 'feed':
-        NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website);
+        await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website);
         break;
       case 'local_file':
         if (options.local_file) {
-          NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFilePage), options.focus_website);
+          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFilePage), options.focus_website);
         }
         else {
-          NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFileMissingPage), options.focus_website);
+          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFileMissingPage), options.focus_website);
         }
         break;
       default:
-        NewTab.#openNewTabPage('', false);
+        await NewTab.#openNewTabPage('', false);
     }
   }
 
@@ -86,7 +86,7 @@ class NewTab {
    * @param {string} url - url to open
    * @param {boolean} focus_website - whether the focus should be on the web page instead of the address bar
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #openNewTabPage (url, focus_website) {
     if (url.trim() === '') {
@@ -98,7 +98,7 @@ class NewTab {
     const tab = await browser.tabs.getCurrent();
 
     if (!tab) {
-      browser.history.deleteUrl({ url: newTabPageUrl });
+      void browser.history.deleteUrl({ url: newTabPageUrl });
 
       return;
     }
@@ -144,19 +144,17 @@ class NewTab {
       // remember this window so the background script can remove the closed internal new tab page from the recently
       // closed tabs list again
       await browser.runtime.sendMessage({ type: 'forget-closed-new-tab', windowId: tab.windowId });
-      browser.history.deleteUrl({ url: newTabPageUrl });
+      void browser.history.deleteUrl({ url: newTabPageUrl });
       await browser.tabs.remove(tab.id);
     }
     // set focus on address bar
     else {
-      // use loadReplace to keep the back button disabled and to support background new-tab flows from add-ons
-      browser.tabs.update(tab.id, { url, loadReplace: true }, () => {
-        // this callback intentionally stays empty. Firefox may otherwise keep the newtab.html in the browsing history
-        // when browser.history.deleteUrl() runs right after browser.tabs.update()
-      });
-      browser.history.deleteUrl({ url: newTabPageUrl });
+      // wait until Firefox has accepted the tab update before cleaning up the temporary newtab.html history entry.
+      // Running deleteUrl() immediately after tabs.update() may otherwise leave the internal page in history.
+      await browser.tabs.update(tab.id, { url, loadReplace: true });
+      void browser.history.deleteUrl({ url: newTabPageUrl });
     }
   }
 }
 
-NewTab.init();
+void NewTab.init();

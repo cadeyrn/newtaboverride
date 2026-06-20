@@ -6,7 +6,7 @@ class LocalFile {
   /**
    * Render the stored local file content as the current page.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async init () {
     const $body = document.querySelector('body');
@@ -24,4 +24,4 @@ class LocalFile {
   }
 }
 
-LocalFile.init();
+void LocalFile.init();

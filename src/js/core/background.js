@@ -58,7 +58,7 @@ class Background {
    */
   static #onInstalledHandler (details) {
     if (details.reason === 'install') {
-      browser.action.setBadgeText({ text: '★' });
+      void browser.action.setBadgeText({ text: '★' });
     }
   }
 
@@ -116,31 +116,30 @@ class Background {
    * Fired when the toolbar icon is clicked. This method is used to open the user interface in a new tab or to switch
    * to the tab with the user interface if the user interface is already opened.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
-  static #openUserInterface () {
+  static async #openUserInterface () {
     const url = browser.runtime.getURL(Background.#optionsPage);
 
-    browser.action.setBadgeText({ text: '' });
-    browser.tabs.query({}, tabs => {
-      let tabId = null;
+    void browser.action.setBadgeText({ text: '' });
+    const tabs = await browser.tabs.query({});
+    let tabId = null;
 
-      for (const tab of tabs) {
-        if (tab.url === url) {
-          tabId = tab.id;
-          break;
-        }
+    for (const tab of tabs) {
+      if (tab.url === url) {
+        tabId = tab.id;
+        break;
       }
+    }
 
-      // there is already a tab open
-      if (tabId) {
-        browser.tabs.update(tabId, { active: true });
-      }
-      // open a new tab
-      else {
-        browser.tabs.create({ url });
-      }
-    });
+    // there is already a tab open
+    if (tabId) {
+      void browser.tabs.update(tabId, { active: true });
+    }
+    // open a new tab
+    else {
+      void browser.tabs.create({ url });
+    }
   }
 
   /**
@@ -149,7 +148,7 @@ class Background {
    * @returns {void}
    */
   static #openUserInterfaceInCurrentTab () {
-    browser.tabs.update(null, { url: browser.runtime.getURL(Background.#optionsPage) });
+    void browser.tabs.update({ url: browser.runtime.getURL(Background.#optionsPage) });
   }
 
   /**

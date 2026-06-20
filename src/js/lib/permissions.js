@@ -11,7 +11,7 @@ class PermissionHelper {
    */
   static setupListeners (obj) {
     obj.$grantBtn.addEventListener('click', e => {
-      PermissionHelper.#requestPermission(
+      void PermissionHelper.#requestPermission(
         e,
         obj.permission,
         obj.$grantPermissionContainer,
@@ -20,7 +20,7 @@ class PermissionHelper {
     });
 
     obj.$revokeBtn.addEventListener('click', e => {
-      PermissionHelper.#revokePermission(
+      void PermissionHelper.#revokePermission(
         e,
         obj.permission,
         obj.$grantPermissionContainer,
@@ -37,7 +37,7 @@ class PermissionHelper {
    * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async testPermission (permission, $permission, $permissionRevoke) {
     const isAllowed = await browser.permissions.contains(permission);
@@ -58,7 +58,7 @@ class PermissionHelper {
    * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #requestPermission (e, permission, $permission, $permissionRevoke) {
     e.preventDefault();
@@ -79,7 +79,7 @@ class PermissionHelper {
    * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
    * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async #revokePermission (e, permission, $permission, $permissionRevoke) {
     e.preventDefault();

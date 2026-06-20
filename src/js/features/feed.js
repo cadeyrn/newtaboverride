@@ -35,7 +35,7 @@ class Feed {
    * This method checks if the permission is granted to read the feed. If so, it reads the feed, otherwise it shows
    * an error message and a link to the option page.
    *
-   * @returns {void}
+   * @returns {Promise<void>}
    */
   static async init () {
     const isAllowed = await browser.permissions.contains(Feed.#permission);
@@ -53,7 +53,7 @@ class Feed {
   /**
    * This method is used to read the news feed defined in FEED_URL.
    *
-   * @param {Array.object} items - an array with feed items
+   * @param {object[]} items - an array with feed items
    *
    * @returns {void}
    */
@@ -126,4 +126,4 @@ class Feed {
   }
 }
 
-Feed.init();
+void Feed.init();
