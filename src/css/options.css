@@ -117,8 +117,11 @@ input[type='color'] {
   min-height: 38px;
   border: 1px solid var(--color-surface-border);
   border-radius: var(--border-radius-field);
-  background-color: var(--background-color-preview);
-  background-clip: padding-box;
+  background-color: var(--color-control-background);
+  background-image: linear-gradient(var(--background-color-preview), var(--background-color-preview));
+  background-repeat: no-repeat;
+  background-position: 81px 1px;
+  background-size: calc(100% - 123px) calc(100% - 2px);
   box-shadow: var(--shadow-field);
   overflow: hidden;
 
@@ -132,16 +135,19 @@ input[type='color'] {
     display: flex;
     position: absolute;
     z-index: 1;
-    left: 0;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
     min-width: 80px;
     padding: 0 12px;
-    height: 100%;
     line-height: 1;
     border-right: 1px solid var(--color-surface-border);
+    border-radius: calc(var(--border-radius-field) - 1px) 0 0 calc(var(--border-radius-field) - 1px);
     background-color: var(--color-control-background);
+    background-clip: padding-box;
     color: var(--color-muted);
     font-family: Menlo, Monaco, 'Courier New', monospace;
     font-size: .8rem;
@@ -157,12 +163,14 @@ input[type='color'] {
     content: '';
     position: absolute;
     z-index: 1;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 42px;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    width: 41px;
     border-left: 1px solid var(--color-surface-border);
+    border-radius: 0 calc(var(--border-radius-field) - 1px) calc(var(--border-radius-field) - 1px) 0;
     background-color: var(--color-control-background);
+    background-clip: padding-box;
     pointer-events: none;
   }
 
@@ -199,7 +207,7 @@ select {
   appearance: none;
   padding-right: 42px;
   background-image:
-    url('../images/chevron.svg'),
+    var(--image-select-chevron),
     linear-gradient(var(--color-control-background), var(--color-control-background));
   background-repeat: no-repeat;
   background-position: calc(100% - 14px) center, right 2px center;
@@ -302,11 +310,11 @@ input[type='checkbox'] {
     padding: 3px 8px;
     line-height: 1.3;
     transform: translateY(-50%);
-    border: 1px solid var(--color-red-soft);
+    border: 1px solid var(--color-error-border-soft);
     border-radius: var(--border-radius-pill);
     background-color: var(--color-error-badge-background);
     box-shadow: var(--shadow-error-badge);
-    color: var(--color-red);
+    color: var(--color-error-badge-text);
     font-size: .75rem;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -323,7 +331,8 @@ input[type='checkbox'] {
   border-color: var(--color-accent-border-soft);
 
   &.error {
-    border-color: var(--color-red);
+    border-color: var(--color-error-border);
+    box-shadow: 0 0 0 1px var(--color-error-ring);
   }
 }
 

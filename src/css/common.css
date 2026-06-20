@@ -351,9 +351,11 @@ p {
     left: 10px;
     width: 18px;
     height: 18px;
-    background-image: url('../images/info.svg');
-    background-repeat: no-repeat;
-    background-size: 18px 18px;
+    background-color: var(--color-interface-icon);
+    mask-image: url('../images/info.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 18px;
   }
 
   a {

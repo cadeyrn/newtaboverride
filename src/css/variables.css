@@ -16,7 +16,11 @@
   --color-control-background: rgb(255, 255, 255);
   --color-control-border: rgba(54, 57, 89, .34);
   --color-dark-border: rgb(54, 57, 89);
-  --color-error-badge-background: rgb(255, 255, 255);
+  --color-error-badge-background: rgb(255, 244, 247);
+  --color-error-badge-text: rgb(166, 0, 29);
+  --color-error-border: rgb(215, 0, 34);
+  --color-error-border-soft: rgba(215, 0, 34, .18);
+  --color-error-ring: rgba(215, 0, 34, .12);
   --color-focus-border: rgba(5, 116, 228, .55);
   --color-focus-ring: rgba(5, 116, 228, .42);
   --color-green: rgb(16, 138, 3);
@@ -24,6 +28,7 @@
   --color-heading-accent-end: rgb(99, 169, 238);
   --color-heading-accent-shadow: rgba(5, 116, 228, .18);
   --color-info-background: rgba(250, 253, 255, .9);
+  --color-interface-icon: var(--color-dark-border);
   --color-link: rgb(34, 87, 160);
   --color-link-hover: rgb(23, 63, 119);
   --color-link-underline: rgba(34, 87, 160, .35);
@@ -46,6 +51,7 @@
   --color-white: rgb(255, 255, 255);
   --focus-ring: 0 0 0 2px var(--color-focus-ring);
   --focus-ring-strong: 0 0 0 2px var(--color-white), 0 0 0 4px rgba(5, 116, 228, .5);
+  --image-select-chevron: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448.14999%20256.04999%22%3E%3Cpath%20d%3D%22m201.475%20246.675c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200l-169.4%20169.4-169.4-169.3c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%20fill%3D%22%23363959%22%2F%3E%3C%2Fsvg%3E");
   --shadow-card: 0 10px 22px rgba(41, 52, 79, .05);
   --shadow-control: 0 8px 18px rgba(41, 52, 79, .05);
   --shadow-error-badge: 0 3px 8px rgba(215, 0, 34, .08);
@@ -61,11 +67,16 @@
     --color-control-background: rgb(43, 47, 54);
     --color-control-border: rgba(176, 188, 208, .32);
     --color-dark-border: rgb(236, 240, 247);
-    --color-error-badge-background: rgb(43, 47, 54);
+    --color-error-badge-background: rgb(84, 36, 47);
+    --color-error-badge-text: rgb(255, 217, 224);
+    --color-error-border: rgb(255, 133, 149);
+    --color-error-border-soft: rgba(255, 133, 149, .44);
+    --color-error-ring: rgba(255, 133, 149, .18);
     --color-focus-border: rgba(111, 168, 237, .72);
     --color-focus-ring: rgba(111, 168, 237, .36);
     --color-heading-accent-end: rgb(133, 185, 241);
     --color-info-background: rgba(41, 45, 52, .9);
+    --color-interface-icon: var(--color-page-text);
     --color-link: rgb(111, 168, 237);
     --color-link-hover: rgb(150, 197, 250);
     --color-link-underline: rgba(150, 197, 250, .45);
@@ -83,6 +94,7 @@
     --color-surface-border: rgba(152, 169, 197, .22);
     --color-throbber: rgba(111, 168, 237, .18);
     --focus-ring-strong: 0 0 0 2px var(--color-surface-base), 0 0 0 4px rgba(111, 168, 237, .5);
+    --image-select-chevron: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448.14999%20256.04999%22%3E%3Cpath%20d%3D%22m201.475%20246.675c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200l-169.4%20169.4-169.4-169.3c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%20fill%3D%22%23ebeff5%22%2F%3E%3C%2Fsvg%3E");
     --shadow-card: 0 14px 34px rgba(0, 0, 0, .28);
     --shadow-control: 0 10px 24px rgba(0, 0, 0, .26);
     --shadow-field: 0 8px 18px rgba(0, 0, 0, .22);
