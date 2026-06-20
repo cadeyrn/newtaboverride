@@ -219,7 +219,6 @@ p {
   background: var(--color-blue);
   color: var(--color-white);
   font-size: .9rem;
-  font-weight: 700;
   text-align: center;
   overflow: hidden;
   transition: color ease 350ms, background-color ease 350ms;
