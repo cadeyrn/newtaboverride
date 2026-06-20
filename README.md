@@ -88,7 +88,7 @@ Example `policies.json`:
       "Extensions": {
         "newtaboverride@agenedia.com": {
           "type": "custom_url",
-          "url": "https://example.com/intranet/",
+          "url": "https://www.soeren-hentzschel.at",
           "focus_website": true
         }
       }
@@ -97,7 +97,7 @@ Example `policies.json`:
 }
 ```
 
-This example forces New Tab Override to open `https://example.com/intranet/` in every new tab and to set the focus to
+This example forces New Tab Override to open `https://www.soeren-hentzschel.at` in every new tab and to set the focus to
 the website instead of the address bar.
 
 ### Permissions
