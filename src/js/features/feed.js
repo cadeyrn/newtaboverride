@@ -12,8 +12,8 @@ class Feed {
   static #$permissionNeeded = document.getElementById('permission-needed');
 
   /**
-   * This method checks if the permission is granted to read the feed. If so it reads the feed, otherwise it shows
-   * an error message and a link to the options page.
+   * This method checks if the permission is granted to read the feed. If so, it reads the feed, otherwise it shows
+   * an error message and a link to the option page.
    *
    * @returns {void}
    */

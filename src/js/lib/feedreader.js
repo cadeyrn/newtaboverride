@@ -26,7 +26,7 @@ class FeedReader {
 
   /**
    * Loads the content for a given URL via fetch() API and assign the content of the feed items to an object. Returns
-   * an array with all of feed item objects.
+   * an array with all the feed item objects.
    *
    * @param {string} url - the URL to load
    *

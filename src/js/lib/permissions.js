@@ -30,7 +30,7 @@ class PermissionHelper {
   }
 
   /**
-   * Checks if the requested permission is granted. If so it shows the option to revoke the permission.
+   * Checks if the requested permission is granted. If so, it shows the option to revoke the permission.
    * Otherwise, it shows the option to grant the permission.
    *
    * @param {object} permission - the permission object

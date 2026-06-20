@@ -43,9 +43,9 @@ class Background {
   }
 
   /**
-   * Fired when the extension is first installed, when the extension is updated to a new version or when the browser
+   * Fired when the extension is first installed, when the extension is updated to a new version, or when the browser
    * is updated to a new version. We want to show a badge on our toolbar icon when the extension is first installed.
-   * If the legacy version of this add-on was previously installed we want to open the options page.
+   * If the legacy version of this add-on was previously installed, we want to open the option page.
    *
    * @param {runtime.OnInstalledReason} details - details.reason contains the reason why this event is being dispatched
    *

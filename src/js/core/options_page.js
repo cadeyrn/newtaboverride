@@ -31,7 +31,7 @@ class OptionsPage {
   };
 
   /**
-   * Register listeners and initialize the options page.
+   * Register listeners and initialize the option page.
    *
    * @returns {void}
    */

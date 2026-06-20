@@ -98,7 +98,7 @@ class NewTab {
 
       // Firefox may create the temporary internal new tab page in the default container even though the user opened
       // the tab from a container tab. Reusing the previously active tab as the source keeps the replacement tab in the
-      // expected container and avoids an unnecessary reopen by other tab-management extensions.
+      // expected container and avoids an unnecessary reopening by other tab-management extensions.
       if (!sourceTab && tab.cookieStoreId === 'firefox-default') {
         const tabs = await browser.tabs.query({ windowId: tab.windowId });
 
@@ -136,8 +136,8 @@ class NewTab {
     else {
       // use loadReplace to keep the back button disabled and to support background new-tab flows from add-ons
       browser.tabs.update(tab.id, { url, loadReplace: true }, () => {
-        // this callback intentionally stays empty. Firefox may otherwise keep newtab.html in the browsing history when
-        // browser.history.deleteUrl() runs right after browser.tabs.update()
+        // this callback intentionally stays empty. Firefox may otherwise keep the newtab.html in the browsing history
+        // when browser.history.deleteUrl() runs right after browser.tabs.update()
       });
       browser.history.deleteUrl({ url: newTabPageUrl });
     }
