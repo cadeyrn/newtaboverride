@@ -42,6 +42,31 @@ label.has-own-label {
   white-space: nowrap;
 }
 
+#managed-options-notice {
+  margin: 0 0 6px;
+}
+
+.managed-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 20px;
+  padding: 0 8px;
+  line-height: 1;
+  border: 1px solid var(--color-accent-border-soft);
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-blue-translucent);
+  color: var(--color-blue-dark);
+  font-size: .7rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &.hidden {
+    display: none;
+  }
+}
+
 select, input[type='text'], input[type='file'], input[type='color'] {
   box-sizing: border-box;
   width: 100%;
@@ -58,6 +83,14 @@ select, input[type='text'], input[type='file'], input[type='color'] {
     border-color: var(--color-focus-border);
     outline-color: var(--color-focus-ring);
   }
+}
+
+:is(select, input[type='text'], input[type='file']):disabled {
+  border-style: dashed;
+  background-color: var(--color-surface);
+  box-shadow: none;
+  color: var(--color-muted);
+  cursor: not-allowed;
 }
 
 select, input[type='text'], input[type='color'] {
@@ -237,6 +270,24 @@ input[type='checkbox'] {
     outline: 0;
     box-shadow: var(--focus-ring-strong);
   }
+
+  &:disabled {
+    border-color: var(--color-surface-border);
+    background-color: var(--color-surface);
+    border-style: dashed;
+    background-image: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &:checked:disabled {
+    background-color: var(--color-muted);
+  }
+
+  &:disabled + label {
+    cursor: not-allowed;
+    opacity: .78;
+  }
 }
 
 #url-wrapper {
@@ -278,6 +329,33 @@ input[type='checkbox'] {
 
 #tab-position-option, #focus-option, #clear-option, #change-settings-shortcut-wrapper {
   margin-top: 8px;
+}
+
+.managed-option {
+  #background-color-wrapper {
+    border-style: dashed;
+    box-shadow: none;
+    cursor: not-allowed;
+
+    &::after {
+      opacity: .8;
+    }
+
+    #background-color {
+      cursor: not-allowed;
+    }
+  }
+}
+
+#focus-option.managed-option {
+  > .option-content {
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px dashed var(--color-surface-border);
+    border-radius: var(--border-radius-field);
+    background-color: var(--color-surface);
+    box-shadow: none;
+  }
 }
 
 #delete-local-file {

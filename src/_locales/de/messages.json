@@ -89,6 +89,12 @@
   "settings_main_caption": {
     "message": "Einstellungen"
   },
+  "settings_managed_badge": {
+    "message": "Verwaltet"
+  },
+  "settings_managed_notice": {
+    "message": "Manche Einstellungen werden durch eine Unternehmensrichtlinie verwaltet und können nicht geändert werden. Bitte wende dich hierzu an den zuständigen Administrator."
+  },
   "settings_permission_action": {
     "message": "Berechtigung erteilen"
   },

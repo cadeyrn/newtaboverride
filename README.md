@@ -59,6 +59,47 @@ New Tab Override is currently available in the following languages:
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
+### Configuration via enterprise policies
+
+New Tab Override supports the configuration via enterprise policies through `storage.managed`. Managed values override
+the same local setting in the extension.
+
+Supported managed settings:
+
+- `type`
+- `url`
+- `focus_website`
+- `background_color`
+
+Supported managed `type` values:
+
+- `custom_url`
+- `homepage`
+- `background_color`
+
+The `local_file` option and the new tab position remain device-local settings.
+
+Example `policies.json`:
+
+```json
+{
+  "policies": {
+    "3rdparty": {
+      "Extensions": {
+        "newtaboverride@agenedia.com": {
+          "type": "custom_url",
+          "url": "https://example.com/intranet/",
+          "focus_website": true
+        }
+      }
+    }
+  }
+}
+```
+
+This example forces New Tab Override to open `https://example.com/intranet/` in every new tab and to set the focus to
+the website instead of the address bar.
+
 ### Permissions
 
 New Tab Override needs several permissions to work properly. Some permissions are mandatory, some are optional. To offer
@@ -113,7 +154,8 @@ The menus permission is needed for providing an entry in the tools menu for acce
 
 ##### storage
 
-The storage permission is needed so that New Tab Override can store settings such as your new tab page.
+The storage permission is needed so that New Tab Override can store settings such as your new tab page and read
+enterprise-managed settings provided through Firefox policies.
 
 ## Download
 

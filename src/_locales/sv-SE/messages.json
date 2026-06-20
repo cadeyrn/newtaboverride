@@ -89,6 +89,12 @@
   "settings_main_caption": {
     "message": "Inställningar"
   },
+  "settings_managed_badge": {
+    "message": "Managed"
+  },
+  "settings_managed_notice": {
+    "message": "Some settings are managed by an enterprise policy and cannot be changed. Please contact your administrator about this."
+  },
   "settings_permission_action": {
     "message": "Tillåta"
   },

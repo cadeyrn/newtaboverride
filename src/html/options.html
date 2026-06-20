@@ -25,8 +25,9 @@
           <div class="grey-bg panel-card">
             <h2 data-i18n="settings_main_caption"></h2>
             <form>
-              <div id="type-option">
-                <h3 data-i18n="type_title"></h3>
+              <div id="managed-options-notice" class="info-icon hidden" data-i18n="settings_managed_notice"></div>
+              <div id="type-option" data-managed-key="type">
+                <h3><span data-i18n="type_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
                 <label data-i18n="type_title" for="type" class="hidden-label"></label>
                 <select name="type" id="type" class="option-content">
                   <option data-i18n="type_options_homepage" value="homepage"></option>
@@ -39,9 +40,9 @@
               <div id="homepage-option" class="hidden type-option-detail">
                 <div data-i18n="homepage_description" class="info-icon option-content"></div>
               </div>
-              <div id="url-option" class="hidden type-option-detail">
+              <div id="url-option" class="hidden type-option-detail" data-managed-key="url">
                 <div data-i18n="url_description" class="info-icon option-content"></div>
-                <h3 data-i18n="url_title"></h3>
+                <h3><span data-i18n="url_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
                 <label data-i18n="url_title" for="url" class="hidden-label"></label>
                 <div id="url-wrapper" class="option-content">
                   <input type="text" name="url" id="url" data-i18n-placeholder="settings_url_field_placeholder">
@@ -57,8 +58,8 @@
                 <h3 data-i18n="local_file_upload"></h3>
                 <input type="file" id="local-file" class="option-content" accept=".html, .htm">
               </div>
-              <div id="background-color-option" class="hidden type-option-detail">
-                <h3 data-i18n="background_color_title"></h3>
+              <div id="background-color-option" class="hidden type-option-detail" data-managed-key="background_color">
+                <h3><span data-i18n="background_color_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
                 <label data-i18n="background_color_title" for="background-color" class="hidden-label"></label>
                 <div id="background-color-wrapper" class="option-content">
                   <span id="background-color-value" aria-hidden="true"></span>
@@ -88,8 +89,8 @@
                   <option data-i18n="tab_position_option_atEnd" value="atEnd"></option>
                 </select>
               </div>
-              <div id="focus-option" class="hidden">
-                <h3 data-i18n="focus_website_title"></h3>
+              <div id="focus-option" class="hidden" data-managed-key="focus_website">
+                <h3><span data-i18n="focus_website_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
                 <div class="option-content">
                   <input type="checkbox" name="focus_website" id="focus-website">
                   <label data-i18n="focus_website_description" for="focus-website" class="has-own-label"></label>
@@ -138,6 +139,7 @@
     <script src="../js/lib/permissions.js"></script>
     <script src="../js/core/defaults.js"></script>
     <script src="../js/core/utils.js"></script>
-    <script src="../js/core/options.js"></script>
+    <script src="../js/core/settings.js"></script>
+    <script src="../js/core/options_page.js"></script>
   </body>
 </html>

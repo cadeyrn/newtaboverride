@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Defaults, Utils */
+/* global Settings, Utils */
 
 class NewTab {
   static #localFilePage = 'html/local_file.html';
@@ -15,7 +15,7 @@ class NewTab {
    * @returns {void}
    */
   static async init () {
-    const options = await browser.storage.local.get(Defaults.values);
+    const options = await Settings.get();
 
     switch (options.type) {
       case 'custom_url':
@@ -47,8 +47,7 @@ class NewTab {
         NewTab.#openNewTabPage(firstHomepage, options.focus_website);
         break;
       case 'background_color':
-        const { background_color } = await browser.storage.local.get({ background_color: Defaults.values.background_color });
-        document.body.style.background = background_color;
+        document.body.style.background = options.background_color;
         break;
       case 'feed':
         NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website);
