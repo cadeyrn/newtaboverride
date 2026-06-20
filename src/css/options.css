@@ -54,10 +54,10 @@ label.has-own-label {
   min-height: 20px;
   padding: 0 8px;
   line-height: 1;
-  border: 1px solid var(--color-accent-border-soft);
+  border: 1px solid var(--color-managed-badge-border);
   border-radius: var(--border-radius-pill);
-  background-color: var(--color-blue-translucent);
-  color: var(--color-blue-dark);
+  background-color: var(--color-managed-badge-background);
+  color: var(--color-managed-badge-text);
   font-size: .7rem;
   font-weight: 700;
   white-space: nowrap;
@@ -281,8 +281,8 @@ input[type='checkbox'] {
   }
 
   &:disabled {
-    border-color: var(--color-surface-border);
-    background-color: var(--color-surface);
+    border-color: var(--color-checkbox-disabled-border);
+    background-color: var(--color-checkbox-disabled-background);
     border-style: dashed;
     background-image: none;
     box-shadow: none;
@@ -290,8 +290,8 @@ input[type='checkbox'] {
   }
 
   &:checked:disabled {
-    border-color: var(--color-muted);
-    background-color: var(--color-muted);
+    border-color: var(--color-blue);
+    background-color: var(--color-blue);
     background-image: none;
   }
 

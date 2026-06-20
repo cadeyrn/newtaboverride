@@ -13,6 +13,8 @@
   --color-blue-translucent: rgba(5, 116, 228, .1);
   --color-card-gradient-end: rgba(250, 253, 255, .94);
   --color-card-gradient-start: rgba(255, 255, 255, .98);
+  --color-checkbox-disabled-background: var(--color-surface);
+  --color-checkbox-disabled-border: var(--color-surface-border);
   --color-checkbox-unchecked-background: var(--color-control-background);
   --color-control-background: rgb(255, 255, 255);
   --color-control-border: rgba(54, 57, 89, .34);
@@ -36,6 +38,9 @@
   --color-list-separator: rgba(84, 107, 147, .14);
   --color-main-gradient-start: rgba(250, 253, 255, .92);
   --color-main-radial: rgba(5, 116, 228, .08);
+  --color-managed-badge-background: var(--color-blue-translucent);
+  --color-managed-badge-border: var(--color-accent-border-soft);
+  --color-managed-badge-text: var(--color-blue-dark);
   --color-muted: rgb(86, 99, 123);
   --color-page-background: rgb(255, 255, 255);
   --color-page-text: rgb(33, 37, 42);
@@ -65,6 +70,8 @@
     --color-blue-translucent: rgba(111, 168, 237, .16);
     --color-card-gradient-end: rgba(35, 39, 46, .94);
     --color-card-gradient-start: rgba(43, 47, 54, .98);
+    --color-checkbox-disabled-background: rgb(72, 79, 90);
+    --color-checkbox-disabled-border: rgba(196, 207, 226, .46);
     --color-checkbox-unchecked-background: rgb(58, 64, 74);
     --color-control-background: rgb(43, 47, 54);
     --color-control-border: rgba(176, 188, 208, .32);
@@ -85,6 +92,9 @@
     --color-list-separator: rgba(152, 169, 197, .18);
     --color-main-gradient-start: rgba(32, 36, 42, .94);
     --color-main-radial: rgba(5, 116, 228, .18);
+    --color-managed-badge-background: rgba(111, 168, 237, .18);
+    --color-managed-badge-border: rgba(111, 168, 237, .4);
+    --color-managed-badge-text: rgb(219, 234, 255);
     --color-muted: rgb(184, 193, 207);
     --color-page-background: rgb(28, 31, 36);
     --color-page-text: rgb(235, 239, 245);
