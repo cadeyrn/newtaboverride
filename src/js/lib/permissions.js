@@ -4,17 +4,28 @@ class PermissionHelper {
   /**
    * This method is used to set up the listeners for granting and revoking a permission.
    *
-   * @param {object} obj - an object containing the permission and the needed DOM elements for the permission actions
+   * @param {object} obj - an object containing the permission and the DOM elements for the
+   * permission actions
    *
    * @returns {void}
    */
   static setupListeners (obj) {
-    obj.elGrantBtn.addEventListener('click', e => {
-      PermissionHelper.#requestPermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
+    obj.$grantBtn.addEventListener('click', e => {
+      PermissionHelper.#requestPermission(
+        e,
+        obj.permission,
+        obj.$grantPermissionContainer,
+        obj.$revokePermissionContainer
+      );
     });
 
-    obj.elRevokeBtn.addEventListener('click', e => {
-      PermissionHelper.#revokePermission(e, obj.permission, obj.elGrantPermissionContainer, obj.elRevokePermissionContainer);
+    obj.$revokeBtn.addEventListener('click', e => {
+      PermissionHelper.#revokePermission(
+        e,
+        obj.permission,
+        obj.$grantPermissionContainer,
+        obj.$revokePermissionContainer
+      );
     });
   }
 
@@ -23,19 +34,19 @@ class PermissionHelper {
    * Otherwise, it shows the option to grant the permission.
    *
    * @param {object} permission - the permission object
-   * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
-   * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
+   * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
+   * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
    * @returns {void}
    */
-  static async testPermission (permission, elPermission, elPermissionRevoke) {
+  static async testPermission (permission, $permission, $permissionRevoke) {
     const isAllowed = await browser.permissions.contains(permission);
 
     if (isAllowed) {
-      elPermissionRevoke.classList.remove('hidden');
+      $permissionRevoke.classList.remove('hidden');
     }
     else {
-      elPermission.classList.remove('hidden');
+      $permission.classList.remove('hidden');
     }
   }
 
@@ -44,19 +55,19 @@ class PermissionHelper {
    *
    * @param {Event} e - event
    * @param {object} permission - the permission object
-   * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
-   * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
+   * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
+   * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
    * @returns {void}
    */
-  static async #requestPermission (e, permission, elPermission, elPermissionRevoke) {
+  static async #requestPermission (e, permission, $permission, $permissionRevoke) {
     e.preventDefault();
 
     const granted = await browser.permissions.request(permission);
 
     if (granted) {
-      elPermission.classList.add('hidden');
-      elPermissionRevoke.classList.remove('hidden');
+      $permission.classList.add('hidden');
+      $permissionRevoke.classList.remove('hidden');
     }
   }
 
@@ -65,19 +76,19 @@ class PermissionHelper {
    *
    * @param {Event} e - event
    * @param {object} permission - the permission object
-   * @param {HTMLElement} elPermission - the DOM element containing the UI for granting the permission
-   * @param {HTMLElement} elPermissionRevoke - the DOM element containing the UI for revoking the permission
+   * @param {HTMLElement} $permission - the DOM element containing the UI for granting the permission
+   * @param {HTMLElement} $permissionRevoke - the DOM element containing the UI for revoking the permission
    *
    * @returns {void}
    */
-  static async #revokePermission (e, permission, elPermission, elPermissionRevoke) {
+  static async #revokePermission (e, permission, $permission, $permissionRevoke) {
     e.preventDefault();
 
     const revoked = await browser.permissions.remove(permission);
 
     if (revoked) {
-      elPermission.classList.remove('hidden');
-      elPermissionRevoke.classList.add('hidden');
+      $permission.classList.remove('hidden');
+      $permissionRevoke.classList.add('hidden');
     }
   }
 }

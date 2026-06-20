@@ -38,20 +38,21 @@ class FeedReader {
     const parser = new DOMParser();
     const response = await fetch(url, { cache: 'no-store' });
     const text = await response.text();
-    const doc = await parser.parseFromString(text, 'text/xml');
+    const $document = await parser.parseFromString(text, 'text/xml');
 
-    if (doc === null) {
+    if ($document === null) {
       return feedItems;
     }
 
-    const items = doc.querySelectorAll('item');
+    const $items = $document.querySelectorAll('item');
+    const itemsLength = $items.length;
 
-    for (let i = 0; i < items.length; i++) {
+    for (let i = 0; i < itemsLength; i++) {
       const feedItem = {};
-      feedItem.title = items[i].getElementsByTagName('title')[0].textContent;
-      feedItem.description = items[i].getElementsByTagName('description')[0].textContent;
-      feedItem.link = items[i].getElementsByTagName('link')[0].textContent;
-      feedItem.pubDate = items[i].getElementsByTagName('pubDate')[0].textContent;
+      feedItem.title = $items[i].getElementsByTagName('title')[0].textContent;
+      feedItem.description = $items[i].getElementsByTagName('description')[0].textContent;
+      feedItem.link = $items[i].getElementsByTagName('link')[0].textContent;
+      feedItem.pubDate = $items[i].getElementsByTagName('pubDate')[0].textContent;
       feedItems.push(feedItem);
     }
 

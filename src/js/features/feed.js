@@ -3,13 +3,13 @@
 /* global FeedReader */
 
 class Feed {
-  static #elThrobber = document.getElementById('throbber').parentElement;
+  static #$throbber = document.getElementById('throbber').parentElement;
 
   static #permission = { origins: ['https://www.soeren-hentzschel.at/*'] };
 
   static #url = 'https://www.soeren-hentzschel.at/feed/';
 
-  static #elPermissionNeeded = document.getElementById('permission-needed');
+  static #$permissionNeeded = document.getElementById('permission-needed');
 
   /**
    * This method checks if the permission is granted to read the feed. If so it reads the feed, otherwise it shows
@@ -25,8 +25,8 @@ class Feed {
       Feed.#readFeedItems(result);
     }
     else {
-      Feed.#elThrobber.remove();
-      Feed.#elPermissionNeeded.classList.remove('hidden');
+      Feed.#$throbber.remove();
+      Feed.#$permissionNeeded.classList.remove('hidden');
     }
   }
 
@@ -38,9 +38,12 @@ class Feed {
    * @returns {void}
    */
   static #readFeedItems (items) {
-    Feed.#elThrobber.remove();
+    const $feedItems = document.getElementById('feed-items');
+    const itemsLength = $feedItems.lengt;
 
-    for (let i = 0; i < items.length; i++) {
+    Feed.#$throbber.remove();
+
+    for (let i = 0; i < itemsLength; i++) {
       const date = new Date(items[i].pubDate);
       const dateAsString = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 
@@ -50,15 +53,15 @@ class Feed {
       // remove last paragraph from soeren-hentzschel.at feed
       description = description.replace(/(.*)\s*Der Beitrag.* erschien zuerst auf.*/, '$1');
 
-      const docFragment = document.createDocumentFragment();
+      const $fragment = document.createDocumentFragment();
 
-      const li = document.createElement('li');
-      docFragment.appendChild(li);
+      const $listItem = document.createElement('li');
+      $fragment.appendChild($listItem);
 
-      const small = document.createElement('small');
-      li.appendChild(small);
+      const $publishedAt = document.createElement('small');
+      $listItem.appendChild($publishedAt);
       const text1 = document.createTextNode(browser.i18n.getMessage('feed_published_at') + ' ' + dateAsString);
-      small.appendChild(text1);
+      $publishedAt.appendChild(text1);
 
       let { link } = items[i];
       const hasValidWebLink = link.startsWith('https://');
@@ -69,36 +72,36 @@ class Feed {
         url.searchParams.set('utm_term', 'newtaboverride');
         link = url.toString();
 
-        const a1 = document.createElement('a');
-        a1.setAttribute('href', link);
-        a1.setAttribute('target', '_blank');
-        a1.setAttribute('rel', 'noopener');
-        li.appendChild(a1);
+        const $titleLink = document.createElement('a');
+        $titleLink.setAttribute('href', link);
+        $titleLink.setAttribute('target', '_blank');
+        $titleLink.setAttribute('rel', 'noopener');
+        $listItem.appendChild($titleLink);
 
-        const strong = document.createElement('strong');
-        a1.appendChild(strong);
+        const $title = document.createElement('strong');
+        $titleLink.appendChild($title);
         const text2 = document.createTextNode(items[i].title);
-        strong.appendChild(text2);
+        $title.appendChild(text2);
       }
 
-      const paragraph = document.createElement('p');
-      li.appendChild(paragraph);
+      const $description = document.createElement('p');
+      $listItem.appendChild($description);
       const text3 = document.createTextNode(description);
-      paragraph.appendChild(text3);
+      $description.appendChild(text3);
 
       if (hasValidWebLink) {
-        const a2 = document.createElement('a');
-        a2.setAttribute('href', link);
-        a2.setAttribute('class', 'button readmore-button');
-        a2.setAttribute('target', '_blank');
-        a2.setAttribute('rel', 'noopener');
-        li.appendChild(a2);
+        const $readMoreLink = document.createElement('a');
+        $readMoreLink.setAttribute('href', link);
+        $readMoreLink.setAttribute('class', 'button readmore-button');
+        $readMoreLink.setAttribute('target', '_blank');
+        $readMoreLink.setAttribute('rel', 'noopener');
+        $listItem.appendChild($readMoreLink);
 
         const text4 = document.createTextNode(browser.i18n.getMessage('feed_read_more'));
-        a2.appendChild(text4);
+        $readMoreLink.appendChild(text4);
       }
 
-      document.getElementById('feed-items').appendChild(docFragment);
+      $feedItems.appendChild($fragment);
     }
   }
 }

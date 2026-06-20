@@ -3,31 +3,31 @@
 /* global Defaults, PermissionHelper, Settings, Utils */
 
 class OptionsPage {
-  static #elements = {
-    backgroundColor: document.getElementById('background-color'),
-    backgroundColorOption: document.getElementById('background-color-option'),
-    backgroundColorValue: document.getElementById('background-color-value'),
-    backgroundColorWrapper: document.getElementById('background-color-wrapper'),
-    changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
-    clearOption: document.getElementById('clear-option'),
-    feedPermission: document.getElementById('feed-permission-container'),
-    feedPermissionBtn: document.getElementById('feed-permission'),
-    feedPermissionRevoke: document.getElementById('feed-permission-revoke-container'),
-    feedPermissionRevokeBtn: document.getElementById('feed-permission-revoke'),
-    focusOption: document.getElementById('focus-option'),
-    focusWebsite: document.getElementById('focus-website'),
-    homepageOption: document.getElementById('homepage-option'),
-    localFile: document.getElementById('local-file'),
-    localFileDeleteLink: document.getElementById('delete-local-file'),
-    localFileOption: document.getElementById('local-file-option'),
-    managedNotice: document.getElementById('managed-options-notice'),
-    tabPosition: document.getElementById('tab-position'),
-    type: document.getElementById('type'),
-    url: document.getElementById('url'),
-    urlValidationDefault: document.querySelector('#url-wrapper .error-message.default'),
-    urlValidationFile: document.querySelector('#url-wrapper .error-message.file'),
-    urlOption: document.getElementById('url-option'),
-    urlWrapper: document.getElementById('url-wrapper')
+  static #$elements = {
+    $backgroundColor: document.getElementById('background-color'),
+    $backgroundColorOption: document.getElementById('background-color-option'),
+    $backgroundColorValue: document.getElementById('background-color-value'),
+    $backgroundColorWrapper: document.getElementById('background-color-wrapper'),
+    $changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
+    $clearOption: document.getElementById('clear-option'),
+    $feedPermission: document.getElementById('feed-permission-container'),
+    $feedPermissionBtn: document.getElementById('feed-permission'),
+    $feedPermissionRevoke: document.getElementById('feed-permission-revoke-container'),
+    $feedPermissionRevokeBtn: document.getElementById('feed-permission-revoke'),
+    $focusOption: document.getElementById('focus-option'),
+    $focusWebsite: document.getElementById('focus-website'),
+    $homepageOption: document.getElementById('homepage-option'),
+    $localFile: document.getElementById('local-file'),
+    $localFileDeleteLink: document.getElementById('delete-local-file'),
+    $localFileOption: document.getElementById('local-file-option'),
+    $managedNotice: document.getElementById('managed-options-notice'),
+    $tabPosition: document.getElementById('tab-position'),
+    $type: document.getElementById('type'),
+    $url: document.getElementById('url'),
+    $urlValidationDefault: document.querySelector('#url-wrapper .error-message.default'),
+    $urlValidationFile: document.querySelector('#url-wrapper .error-message.file'),
+    $urlOption: document.getElementById('url-option'),
+    $urlWrapper: document.getElementById('url-wrapper')
   };
 
   /**
@@ -40,20 +40,20 @@ class OptionsPage {
 
     PermissionHelper.setupListeners({
       permission: Utils.feedPermission,
-      elGrantPermissionContainer: OptionsPage.#elements.feedPermission,
-      elRevokePermissionContainer: OptionsPage.#elements.feedPermissionRevoke,
-      elGrantBtn: OptionsPage.#elements.feedPermissionBtn,
-      elRevokeBtn: OptionsPage.#elements.feedPermissionRevokeBtn
+      $grantPermissionContainer: OptionsPage.#$elements.$feedPermission,
+      $revokePermissionContainer: OptionsPage.#$elements.$feedPermissionRevoke,
+      $grantBtn: OptionsPage.#$elements.$feedPermissionBtn,
+      $revokeBtn: OptionsPage.#$elements.$feedPermissionRevokeBtn
     });
 
-    OptionsPage.#elements.focusWebsite.addEventListener('change', OptionsPage.#handleFocusWebsiteChange);
-    OptionsPage.#elements.type.addEventListener('change', OptionsPage.#handleTypeChange);
-    OptionsPage.#elements.tabPosition.addEventListener('change', OptionsPage.#handleTabPositionChange);
-    OptionsPage.#elements.url.addEventListener('input', OptionsPage.#handleUrlInput);
-    OptionsPage.#elements.backgroundColor.addEventListener('input', OptionsPage.#handleBackgroundColorInput);
-    OptionsPage.#elements.localFile.addEventListener('change', OptionsPage.#handleLocalFileChange);
-    OptionsPage.#elements.localFileDeleteLink.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
-    OptionsPage.#elements.changeSettingsShortcut.addEventListener('click', OptionsPage.#handleChangeSettingsShortcutClick);
+    OptionsPage.#$elements.$focusWebsite.addEventListener('change', OptionsPage.#handleFocusWebsiteChange);
+    OptionsPage.#$elements.$type.addEventListener('change', OptionsPage.#handleTypeChange);
+    OptionsPage.#$elements.$tabPosition.addEventListener('change', OptionsPage.#handleTabPositionChange);
+    OptionsPage.#$elements.$url.addEventListener('input', OptionsPage.#handleUrlInput);
+    OptionsPage.#$elements.$backgroundColor.addEventListener('input', OptionsPage.#handleBackgroundColorInput);
+    OptionsPage.#$elements.$localFile.addEventListener('change', OptionsPage.#handleLocalFileChange);
+    OptionsPage.#$elements.$localFileDeleteLink.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
+    OptionsPage.#$elements.$changeSettingsShortcut.addEventListener('click', OptionsPage.#handleChangeSettingsShortcutClick);
   }
 
   /**
@@ -70,19 +70,19 @@ class OptionsPage {
     let showLocalFileOption = false;
     let showLocalFileDeleteLink = false;
 
-    if (OptionsPage.#elements.type.options[OptionsPage.#elements.type.selectedIndex].value === 'homepage') {
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
       showFocusOption = true;
       showClearOption = true;
     }
 
-    if (OptionsPage.#elements.type.options[OptionsPage.#elements.type.selectedIndex].value === 'custom_url') {
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'custom_url') {
       showUrlOption = true;
       showFocusOption = true;
       showClearOption = true;
     }
 
-    if (OptionsPage.#elements.type.options[OptionsPage.#elements.type.selectedIndex].value === 'local_file') {
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'local_file') {
       showLocalFileOption = true;
       showFocusOption = true;
       showClearOption = true;
@@ -93,36 +93,36 @@ class OptionsPage {
       }
     }
 
-    if (OptionsPage.#elements.type.options[OptionsPage.#elements.type.selectedIndex].value === 'background_color') {
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'background_color') {
       showBackgroundColorOption = true;
       showFocusOption = false;
       showClearOption = true;
     }
 
-    if (OptionsPage.#elements.type.options[OptionsPage.#elements.type.selectedIndex].value === 'feed') {
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'feed') {
       showFocusOption = true;
       showClearOption = true;
     }
 
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.urlOption, showUrlOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.homepageOption, showHomepageOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.focusOption, showFocusOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.clearOption, showClearOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.backgroundColorOption, showBackgroundColorOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.localFileOption, showLocalFileOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.localFileDeleteLink, showLocalFileDeleteLink);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$urlOption, showUrlOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$homepageOption, showHomepageOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$focusOption, showFocusOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$clearOption, showClearOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$backgroundColorOption, showBackgroundColorOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileOption, showLocalFileOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, showLocalFileDeleteLink);
   }
 
   /**
-   * This method is used to make an DOM element either visible or invisible based on a given condition.
+   * This method is used to make a DOM element either visible or invisible based on a given condition.
    *
-   * @param {HTMLElement} el - the DOM element which should be visible or hidden
+   * @param {HTMLElement} $el - the DOM element which should be visible or hidden
    * @param {boolean} condition - whether the element should be visible or hidden
    *
    * @returns {void}
    */
-  static #toggleVisibility (el, condition) {
-    condition ? el.classList.remove('hidden') : el.classList.add('hidden');
+  static #toggleVisibility ($el, condition) {
+    condition ? $el.classList.remove('hidden') : $el.classList.add('hidden');
   }
 
   /**
@@ -141,48 +141,48 @@ class OptionsPage {
     const managedKeySet = new Set(Object.keys(managedSettings));
     const url = option.url.trim();
 
-    OptionsPage.#elements.focusWebsite.checked = option.focus_website;
-    OptionsPage.#elements.type.querySelector('[value="' + option.type + '"]').selected = true;
-    OptionsPage.#elements.tabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
-    OptionsPage.#elements.url.value = option.url;
-    OptionsPage.#elements.backgroundColor.value = option.background_color;
+    OptionsPage.#$elements.$focusWebsite.checked = option.focus_website;
+    OptionsPage.#$elements.$type.querySelector('[value="' + option.type + '"]').selected = true;
+    OptionsPage.#$elements.$tabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
+    OptionsPage.#$elements.$url.value = option.url;
+    OptionsPage.#$elements.$backgroundColor.value = option.background_color;
     OptionsPage.#updateBackgroundColorPreview(option.background_color);
-    OptionsPage.#elements.type.disabled = managedKeySet.has('type');
-    OptionsPage.#elements.url.disabled = managedKeySet.has('url');
-    OptionsPage.#elements.focusWebsite.disabled = managedKeySet.has('focus_website');
-    OptionsPage.#elements.backgroundColor.disabled = managedKeySet.has('background_color');
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.managedNotice, managedKeySet.size > 0);
+    OptionsPage.#$elements.$type.disabled = managedKeySet.has('type');
+    OptionsPage.#$elements.$url.disabled = managedKeySet.has('url');
+    OptionsPage.#$elements.$focusWebsite.disabled = managedKeySet.has('focus_website');
+    OptionsPage.#$elements.$backgroundColor.disabled = managedKeySet.has('background_color');
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$managedNotice, managedKeySet.size > 0);
 
-    for (const elManagedOption of document.querySelectorAll('[data-managed-key]')) {
-      const isManaged = managedKeySet.has(elManagedOption.getAttribute('data-managed-key'));
+    for (const $managedOption of document.querySelectorAll('[data-managed-key]')) {
+      const isManaged = managedKeySet.has($managedOption.getAttribute('data-managed-key'));
 
-      elManagedOption.classList.toggle('managed-option', isManaged);
-      OptionsPage.#toggleVisibility(elManagedOption.querySelector('.managed-badge'), isManaged);
+      $managedOption.classList.toggle('managed-option', isManaged);
+      OptionsPage.#toggleVisibility($managedOption.querySelector('.managed-badge'), isManaged);
     }
 
     OptionsPage.#toggleOptionsDetails();
 
     if (Utils.uriRegex.test(url)) {
-      OptionsPage.#elements.urlValidationDefault.classList.add('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.add('hidden');
-      OptionsPage.#elements.url.classList.remove('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.add('hidden');
+      OptionsPage.#$elements.$url.classList.remove('error');
     }
     else if (url.startsWith('file://')) {
-      OptionsPage.#elements.urlValidationDefault.classList.add('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.remove('hidden');
-      OptionsPage.#elements.url.classList.add('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.remove('hidden');
+      OptionsPage.#$elements.$url.classList.add('error');
     }
     else {
-      OptionsPage.#elements.urlValidationDefault.classList.remove('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.add('hidden');
-      OptionsPage.#elements.url.classList.add('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.remove('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.add('hidden');
+      OptionsPage.#$elements.$url.classList.add('error');
     }
 
     if (option.type === 'feed') {
       PermissionHelper.testPermission(
         Utils.feedPermission,
-        OptionsPage.#elements.feedPermission,
-        OptionsPage.#elements.feedPermissionRevoke
+        OptionsPage.#$elements.$feedPermission,
+        OptionsPage.#$elements.$feedPermissionRevoke
       );
     }
   }
@@ -209,13 +209,13 @@ class OptionsPage {
     if (e.target.value === 'feed') {
       PermissionHelper.testPermission(
         Utils.feedPermission,
-        OptionsPage.#elements.feedPermission,
-        OptionsPage.#elements.feedPermissionRevoke
+        OptionsPage.#$elements.$feedPermission,
+        OptionsPage.#$elements.$feedPermissionRevoke
       );
     }
     else {
-      OptionsPage.#elements.feedPermission.classList.add('hidden');
-      OptionsPage.#elements.feedPermissionRevoke.classList.add('hidden');
+      OptionsPage.#$elements.$feedPermission.classList.add('hidden');
+      OptionsPage.#$elements.$feedPermissionRevoke.classList.add('hidden');
     }
 
     browser.storage.local.set({ type: e.target.value });
@@ -245,27 +245,27 @@ class OptionsPage {
 
     // valid URL
     if (Utils.uriRegex.test(url)) {
-      OptionsPage.#elements.urlValidationDefault.classList.add('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.add('hidden');
-      OptionsPage.#elements.url.classList.remove('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.add('hidden');
+      OptionsPage.#$elements.$url.classList.remove('error');
     }
     // local file access is not allowed for WebExtensions
     else if (url.startsWith('file://')) {
-      OptionsPage.#elements.urlValidationDefault.classList.add('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.remove('hidden');
-      OptionsPage.#elements.url.classList.add('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.remove('hidden');
+      OptionsPage.#$elements.$url.classList.add('error');
     }
     // unsupported protocol or empty URL
     else if (Utils.protocolRegex.test(url) || url === '') {
-      OptionsPage.#elements.urlValidationDefault.classList.remove('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.add('hidden');
-      OptionsPage.#elements.url.classList.add('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.remove('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.add('hidden');
+      OptionsPage.#$elements.$url.classList.add('error');
     }
     // prepend https:// for every other input
     else {
-      OptionsPage.#elements.urlValidationDefault.classList.add('hidden');
-      OptionsPage.#elements.urlValidationFile.classList.add('hidden');
-      OptionsPage.#elements.url.classList.remove('error');
+      OptionsPage.#$elements.$urlValidationDefault.classList.add('hidden');
+      OptionsPage.#$elements.$urlValidationFile.classList.add('hidden');
+      OptionsPage.#$elements.$url.classList.remove('error');
       url = 'https://' + url;
     }
 
@@ -294,8 +294,8 @@ class OptionsPage {
   static #updateBackgroundColorPreview (hexColor) {
     const normalizedHexColor = hexColor.toLowerCase();
 
-    OptionsPage.#elements.backgroundColorValue.textContent = normalizedHexColor;
-    OptionsPage.#elements.backgroundColorWrapper.style.setProperty('--background-color-preview', normalizedHexColor);
+    OptionsPage.#$elements.$backgroundColorValue.textContent = normalizedHexColor;
+    OptionsPage.#$elements.$backgroundColorWrapper.style.setProperty('--background-color-preview', normalizedHexColor);
   }
 
   /**
@@ -306,12 +306,12 @@ class OptionsPage {
   static #handleLocalFileChange () {
     const reader = new FileReader();
 
-    reader.readAsText(OptionsPage.#elements.localFile.files[0]);
+    reader.readAsText(OptionsPage.#$elements.$localFile.files[0]);
     reader.addEventListener('loadend', async () => {
       const file = reader.result;
 
       await browser.storage.local.set({ local_file: file });
-      OptionsPage.#toggleVisibility(OptionsPage.#elements.localFileDeleteLink, true);
+      OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, true);
     });
   }
 
@@ -331,7 +331,7 @@ class OptionsPage {
     }
 
     browser.storage.local.set({ local_file: '' });
-    OptionsPage.#toggleVisibility(OptionsPage.#elements.localFileDeleteLink, false);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, false);
   }
 
   /**
