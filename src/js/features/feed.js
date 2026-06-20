@@ -3,12 +3,32 @@
 /* global FeedReader */
 
 class Feed {
+  /**
+   * Wrapper element containing the loading throbber
+   *
+   * @type {HTMLElement}
+   */
   static #$throbber = document.getElementById('throbber').parentElement;
 
+  /**
+   * Optional permission required to load the external feed
+   *
+   * @type {object}
+   */
   static #permission = { origins: ['https://www.soeren-hentzschel.at/*'] };
 
+  /**
+   * Feed URL used for the news view
+   *
+   * @type {string}
+   */
   static #url = 'https://www.soeren-hentzschel.at/feed/';
 
+  /**
+   * Info box shown when the feed permission is missing
+   *
+   * @type {HTMLElement}
+   */
   static #$permissionNeeded = document.getElementById('permission-needed');
 
   /**

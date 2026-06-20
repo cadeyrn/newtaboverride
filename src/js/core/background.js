@@ -1,6 +1,11 @@
 'use strict';
 
 class Background {
+  /**
+   * Path to the option page
+   *
+   * @type {string}
+   */
   static #optionsPage = 'html/options.html';
 
   /**

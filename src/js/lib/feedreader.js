@@ -1,12 +1,26 @@
 'use strict';
 
 class FeedReader {
-  // one hour in milliseconds
+  /**
+   * Minimum time between two feed fetches
+   *
+   * @type {number}
+   */
   // eslint-disable-next-line no-magic-numbers
   static #intervalBetweenFetchesInMs = 3600000;
 
+  /**
+   * Timestamp of the last successful feed fetch
+   *
+   * @type {number | null}
+   */
   static #lastFetched = null;
 
+  /**
+   * Cached promise resolving to the current feed items
+   *
+   * @type {Promise<object[]> | null}
+   */
   static #feedItems = null;
 
   /**

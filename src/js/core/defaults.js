@@ -1,6 +1,11 @@
 'use strict';
 
 class Defaults {
+  /**
+   * Default settings used to initialize and read stored option.
+   *
+   * @type {object}
+   */
   static #values = {
     background_color: '#ffffff',
     focus_website: false,

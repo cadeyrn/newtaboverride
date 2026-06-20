@@ -3,6 +3,11 @@
 /* global Defaults, PermissionHelper, Settings, Utils */
 
 class OptionsPage {
+  /**
+   * DOM elements used throughout the option page
+   *
+   * @type {object}
+   */
   static #$elements = {
     $backgroundColor: document.getElementById('background-color'),
     $backgroundColorOption: document.getElementById('background-color-option'),

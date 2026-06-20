@@ -3,10 +3,25 @@
 /* global Settings, Utils */
 
 class NewTab {
+  /**
+   * Internal page used to render locally stored files
+   *
+   * @type {string}
+   */
   static #localFilePage = 'html/local_file.html';
 
+  /**
+   * Internal fallback page shown when no local file has been stored
+   *
+   * @type {string}
+   */
   static #localFileMissingPage = 'html/local_file_missing.html';
 
+  /**
+   * Internal page used to render the feed view
+   *
+   * @type {string}
+   */
   static #feedPage = 'html/feed.html';
 
   /**

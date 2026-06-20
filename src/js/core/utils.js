@@ -1,10 +1,25 @@
 'use strict';
 
 class Utils {
+  /**
+   * Optional permission required to load the external feed
+   *
+   * @type {object}
+   */
   static #feedPermission = { origins: ['https://www.soeren-hentzschel.at/*'] };
 
+  /**
+   * Regular expression used to validate supported URLs
+   *
+   * @type {RegExp}
+   */
   static #uriRegex = /^(https?|moz-extension):\/\//i;
 
+  /**
+   * Regular expression used to detect whether the input already contains a protocol
+   *
+   * @type {RegExp}
+   */
   static #protocolRegex = /^[^:^/]+:\/\//i;
 
   /**
