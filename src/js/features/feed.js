@@ -59,7 +59,7 @@ class Feed {
    */
   static #readFeedItems (items) {
     const $feedItems = document.getElementById('feed-items');
-    const itemsLength = $feedItems.length;
+    const itemsLength = items.length;
 
     Feed.#$throbber.remove();
 
