@@ -31,7 +31,19 @@
 
 #### Developer Experience
 
-- Replaced the previous build and linting setup and updated all development dependencies, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
+- Replaced the previous build and linting setup, see [#385](https://github.com/cadeyrn/newtaboverride/issues/385)
+
+#### Dependencies
+
+- Added @eslint/json, @html-eslint/eslint-plugin, and @stylistic/eslint-plugin
+- Updated eslint from version 9.21.0 to 10.5.0
+- Updated eslint-plugin-jsdoc from version 50.6.3 to 63.0.6
+- Updated stylelint from version 15.11.0 to 17.13.0
+- Updated stylelint-order from version 6.0.4 to 8.1.1
+- Updated web-ext from version 8.4.0 to 10.4.0
+- Replaced htmllint and gulp-htmllint with html-eslint
+- Removed eslint-plugin-sort-requires, gulp, gulp-eslint-new, gulp-jsdoc3, gulp-stylelint, htmllint, jsdoc,
+  jsdoc-strip-async-await, npm-run-all, and stylelint-csstree-validator
 
 ### Version 17.0.0 (2025-02-22)
 
