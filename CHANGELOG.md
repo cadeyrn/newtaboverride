@@ -19,7 +19,7 @@
   see [#217](https://github.com/cadeyrn/newtaboverride/issues/217)
 - Display the selected hex color value for the background color option on the settings page, see
   [#387](https://github.com/cadeyrn/newtaboverride/issues/387)
-- Added support for configuration via enterprise policies. The README now documents the available options and includes
+- Added support for configuration via enterprise policies. The README documents the available options and includes
   an example, see [#358](https://github.com/cadeyrn/newtaboverride/issues/358)
 - Replaced the native confirmation prompt for deleting a stored local file with a dialog that matches the redesigned
   user interface, see [#388](https://github.com/cadeyrn/newtaboverride/issues/388)
