@@ -9,7 +9,7 @@ New Tab Override. Thank you very much!**
 
 ## Description
 
-Allows you to choose which page Firefox shows whenever you open a new tab.
+New Tab Override allows you to choose which page Firefox shows whenever you open a new tab.
 
 New Tab Override can open any website you like, use your current homepage, display a stored local HTML file, or show a
 plain background color. It also includes options for focus behavior, tab position, and compatibility with Firefox
