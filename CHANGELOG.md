@@ -47,7 +47,7 @@
 
 - Added @eslint/json, @html-eslint/eslint-plugin, and @stylistic/eslint-plugin
 - Updated eslint from version 9.21.0 to 10.5.0
-- Updated eslint-plugin-jsdoc from version 50.6.3 to 63.0.6
+- Updated eslint-plugin-jsdoc from version 50.6.3 to 63.0.7
 - Updated stylelint from version 15.11.0 to 17.13.0
 - Updated stylelint-order from version 6.0.4 to 8.1.1
 - Updated web-ext from version 8.4.0 to 10.4.0
