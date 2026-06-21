@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 18.0.0 (Work in Progress)
+### Version 18.0.0 (2026-06-21)
 
 #### Enhancements
 
@@ -55,6 +55,9 @@
 - Removed eslint-plugin-sort-requires, gulp, gulp-eslint-new, gulp-jsdoc3, gulp-stylelint, htmllint, jsdoc,
   jsdoc-strip-async-await, npm-run-all, and stylelint-csstree-validator
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v17.0.0...v18.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 17.0.0 (2025-02-22)
@@ -88,6 +91,9 @@
 - Updated jsdoc from version 4.0.3 to 4.0.4
 - Updated web-ext from version 8.1.0 to 8.4.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v16.0.1...v17.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 16.0.1 (2024-06-15)
@@ -109,6 +115,9 @@
 - Removed eslint-plugin-compat
 - Removed eslint-plugin-no-unsanitized
 - Removed eslint-plugin-promise
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v16.0.0...v16.0.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -166,6 +175,9 @@
 - Updated stylelint-order from version 4.1.0 to 6.0.4
 - Updated web-ext from version 6.1.0 to 7.11.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v15.1.0...v16.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 15.1.0 (2021-05-13)
@@ -198,6 +210,9 @@
 - Updated stylelint from version 13.6.1 to 13.13.1
 - Updated stylelint-csstree-validator from version 1.8.0 to 1.9.0
 - Updated web-ext from version 5.0.0 to 6.1.0
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v15.0.0...v15.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -235,6 +250,9 @@
 - Updated stylelint-order from version 3.1.1 to 4.1.0
 - Updated web-ext from version 4.0.0 to 5.0.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.4.0...v15.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 14.4.0 (2019-12-29)
@@ -265,6 +283,9 @@
 - Updated stylelint-order from version 3.0.0 to 3.1.1
 - Updated web-ext from version 3.1.0 to 4.0.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.3.0...v14.4.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 14.3.0 (2019-06-30)
@@ -293,6 +314,9 @@
 - Updated stylelint-order from version 2.0.0 to 3.0.0
 - Updated web-ext from version 2.9.3 to 3.1.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.2.0...v14.3.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 14.2.0 (2018-12-29)
@@ -318,6 +342,9 @@
 - Updated stylelint-order from version 0.8.1 to 2.0.0
 - Updated web-ext from version 2.7.0 to 2.9.3
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.1.0...v14.2.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 14.1.0 (2018-07-22)
@@ -334,6 +361,9 @@
 - Updated eslint from version 5.0.1 to 5.2.0
 - Updated eslint-plugin-compat from version 2.4.0 to 2.5.1
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.0.2...v14.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 14.0.2 (2018-07-09)
@@ -341,6 +371,9 @@
 #### Bugfixes
 
 - The bugfix in version 14.0.1 was broken
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.0.1...v14.0.2)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -350,6 +383,9 @@
 
 - Fixed a regression in version 14.0.0 that caused the local file option to stop working, fixes
   [#158](https://github.com/cadeyrn/newtaboverride/issues/158)
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v14.0.0...v14.0.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -376,6 +412,9 @@
 - Updated eslint-plugin-compat from version 2.3.0 to 2.4.0
 - Updated gulp-eslint from version 4.0.2 to 5.0.0
 - Updated stylelint from version 9.2.1 to 9.3.0
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v13.0.0...v14.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -418,6 +457,9 @@
 - Updated stylelint-order from version 0.8.0 to 0.8.1
 - Updated web-ext from version 2.4.0 to 2.7.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v12.0.0...v13.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 12.0.0 (2018-02-03)
@@ -452,6 +494,9 @@
 - Updated stylelint-order from version 0.7.0 to 0.8.0
 - Updated web-ext from version 2.2.2 to 2.4.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v11.0.0...v12.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 11.0.0 (2017-11-07)
@@ -481,6 +526,9 @@
 - Updated htmllint from version 0.6.0 to 0.7.0
 - Updated npm-run-all from version 4.1.1 to 4.1.2
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v10.2.0...v11.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 10.2.0 (2017-10-23)
@@ -488,6 +536,9 @@
 #### Translations
 
 - Added Russian translation (Thanks, vanja-san!)
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v10.1.0...v10.2.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -501,6 +552,9 @@
 #### Dependencies
 
 - Updated eslint from version 4.8.0 to 4.9.0 and added two new rules
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v10.0.0...v10.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -528,6 +582,9 @@
 - Updated eslint-plugin-compat from version 1.0.4 to 2.0.1
 - Updated stylelint from version 8.1.1 to 8.2.0
 - Updated web-ext from version 2.0.0 to 2.2.2
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v9.0.0...v10.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -570,6 +627,9 @@
 - Updated stylelint-csstree-validator from version 1.1.1 to 1.2.0
 - Updated stylelint-order from version 0.6.0 to 0.7.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v8.0.0...v9.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 8.0.0 (2017-08-22)
@@ -599,6 +659,9 @@
 
 - Updated ESLint from version 4.4.1 to 4.5.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v7.1.0...v8.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 7.1.0 (2017-08-13)
@@ -619,6 +682,9 @@
 
 - Updated gulp-stylelint from version 3.9.0 to 4.0.0
 - Updated jsdoc from version 3.5.3 to 3.5.4
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v7.0.0...v7.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -660,6 +726,9 @@
 - Thanks to [Ura Design](https://ura.design/) for the new logo
 - Firefox 55 or later is now required
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v6.0.1...v7.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 6.0.1 (2016-12-27)
@@ -667,6 +736,9 @@
 #### Translations
 
 - Updated translations
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v6.0.0...v6.0.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -681,6 +753,9 @@
 - Added Upper Sorbian translation (Thanks, milupo!)
 - Added Lower Sorbian translation (Thanks, milupo!)
 - Updated Dutch translation (Thanks, Tonnes!)
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v5.0.0...v6.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -699,6 +774,9 @@
 
 - Repaired the donation button in the feed settings
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v4.0.2...v5.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 4.0.2 (2016-11-14)
@@ -716,6 +794,9 @@
 
 - Compiled with JPM 1.2.2 instead of 1.2.0
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v4.0.1...v4.0.2)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 4.0.1 (2016-10-10)
@@ -723,6 +804,9 @@
 #### Code Quality
 
 - Stopped using `innerHTML`
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v4.0.0...v4.0.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -739,6 +823,9 @@
 #### Dependencies
 
 - Compiled with JPM 1.2.0 instead of 1.1.4
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v3.1.0...v4.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -764,6 +851,9 @@
 
 - Compiled with JPM 1.1.4 instead of 1.0.7
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v3.0.0...v3.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 3.0.0 (2016-06-27)
@@ -785,6 +875,9 @@
 
 - Compiled with JPM 1.0.7 instead of 1.0.4
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.3.1...v3.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 2.3.1 (2016-01-19)
@@ -793,6 +886,9 @@
 
 - Added a workaround for Bugzilla #1240559. New Tab Override works in Firefox 43 Stable, Firefox 45 Developer Edition,
   and Firefox 46 Nightly, but not in Firefox 44 Beta
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.3.0...v2.3.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -807,6 +903,9 @@
 
 - Added Dutch translation (Thanks, Tonnes!)
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.2.1...v2.3.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 2.2.1 (2015-12-20)
@@ -815,6 +914,9 @@
 
 - Disabled validation for the custom URL option because it was too restrictive and not really needed there. It is only
   needed for the clipboard option
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.2.0...v2.2.1)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -830,6 +932,9 @@
 
 - Fixed compatibility with Firefox 43.0.1 by correcting a bug in the version detection
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.1.0...v2.2.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 2.1.0 (2015-11-28)
@@ -843,6 +948,9 @@
 - Reworked the clipboard option. In the previous version, the new tab page opened instead of the desired page under
   certain circumstances
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v2.0.0...v2.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 2.0.0 (2015-11-21)
@@ -853,6 +961,9 @@
 - Added an option to use the homepage as the new tab page
 - Added an option to use the last URL from the clipboard as the new tab page
 - On Firefox 44 and later, New Tab Override now uses `AboutNewTabService` instead of `NewTabURL.jsm`
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v1.1.0...v2.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
@@ -866,8 +977,13 @@
 
 - Repacked with JPM 1.0.2 for compatibility with Firefox 44 and later
 
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v1.0.0...v1.1.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
+
 ---
 
 ### Version 1.0.0 (2015-06-27)
 
 - Initial release for [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/)
+
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
