@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "清空地址栏 / 选中网址"
   },
+  "common_dialog_btn_cancel": {
+    "message": "取消"
+  },
   "extension_description": {
     "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },

@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Hapus alamat / pilih URL"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Batal"
+  },
   "extension_description": {
     "message": "New Tab Override memungkinkan Anda untuk menyetel halaman secara otomatis setiap kali Anda membuka tab baru."
   },

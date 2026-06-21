@@ -21,15 +21,15 @@
       </header>
       <h1 class="visually-hidden" data-i18n="settings_title"></h1>
       <main id="main">
-        <section class="panel-stack">
-          <div class="grey-bg panel-card">
-            <h2 data-i18n="settings_main_caption"></h2>
-            <form>
-              <div id="managed-options-notice" class="info-icon hidden" data-i18n="settings_managed_notice"></div>
-              <div id="type-option" data-managed-key="type">
-                <h3><span data-i18n="type_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
-                <label data-i18n="type_title" for="type" class="hidden-label"></label>
-                <select name="type" id="type" class="option-content">
+        <section class="grey-bg panel-card">
+          <h2 data-i18n="settings_main_caption"></h2>
+          <form>
+            <div id="managed-options-notice" class="info-icon hidden" data-i18n="settings_managed_notice"></div>
+            <div id="type-option" data-managed-key="type">
+              <h3><span data-i18n="type_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
+              <label data-i18n="type_title" for="type" class="hidden-label"></label>
+              <div class="select-wrapper option-content">
+                <select name="type" id="type">
                   <option data-i18n="type_options_homepage" value="homepage"></option>
                   <option data-i18n="type_options_custom_url" value="custom_url"></option>
                   <option data-i18n="type_options_local_file" value="local_file"></option>
@@ -37,78 +37,80 @@
                   <option data-i18n="type_options_feed" value="feed"></option>
                 </select>
               </div>
-              <div id="homepage-option" class="hidden type-option-detail">
-                <div data-i18n="homepage_description" class="info-icon option-content"></div>
+            </div>
+            <div id="homepage-option" class="hidden type-option-detail">
+              <div data-i18n="homepage_description" class="info-icon option-content"></div>
+            </div>
+            <div id="url-option" class="hidden type-option-detail" data-managed-key="url">
+              <div data-i18n="url_description" class="info-icon option-content"></div>
+              <h3><span data-i18n="url_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
+              <label data-i18n="url_title" for="url" class="hidden-label"></label>
+              <div id="url-wrapper" class="option-content">
+                <input type="text" name="url" id="url" data-i18n-placeholder="settings_url_field_placeholder">
+                <span data-i18n="url_validation_default" class="error-message hidden default"></span>
+                <span data-i18n="url_validation_file" class="error-message hidden file"></span>
               </div>
-              <div id="url-option" class="hidden type-option-detail" data-managed-key="url">
-                <div data-i18n="url_description" class="info-icon option-content"></div>
-                <h3><span data-i18n="url_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
-                <label data-i18n="url_title" for="url" class="hidden-label"></label>
-                <div id="url-wrapper" class="option-content">
-                  <input type="text" name="url" id="url" data-i18n-placeholder="settings_url_field_placeholder">
-                  <span data-i18n="url_validation_default" class="error-message hidden default"></span>
-                  <span data-i18n="url_validation_file" class="error-message hidden file"></span>
-                </div>
+            </div>
+            <div id="local-file-option" class="hidden type-option-detail">
+              <div class="info-icon option-content">
+                <span data-i18n="local_file_description"></span>
+                <button type="button" data-i18n="local_file_delete_text" id="delete-local-file" class="hidden"></button>
               </div>
-              <div id="local-file-option" class="hidden type-option-detail">
-                <div class="info-icon option-content">
-                  <span data-i18n="local_file_description"></span>
-                  <a data-i18n="local_file_delete_text" href="#" id="delete-local-file" class="hidden" data-i18n-data-confirm="local_file_delete_confirmation"></a>
-                </div>
-                <h3 data-i18n="local_file_upload"></h3>
-                <input type="file" id="local-file" class="option-content" accept=".html, .htm">
+              <h3 data-i18n="local_file_upload"></h3>
+              <input type="file" id="local-file" class="option-content" accept=".html, .htm">
+            </div>
+            <div id="background-color-option" class="hidden type-option-detail" data-managed-key="background_color">
+              <h3><span data-i18n="background_color_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
+              <label data-i18n="background_color_title" for="background-color" class="hidden-label"></label>
+              <div id="background-color-wrapper" class="option-content">
+                <span id="background-color-value" aria-hidden="true"></span>
+                <!-- eslint-disable-next-line html/use-baseline -->
+                <input type="color" name="background_color" id="background-color">
               </div>
-              <div id="background-color-option" class="hidden type-option-detail" data-managed-key="background_color">
-                <h3><span data-i18n="background_color_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
-                <label data-i18n="background_color_title" for="background-color" class="hidden-label"></label>
-                <div id="background-color-wrapper" class="option-content">
-                  <span id="background-color-value" aria-hidden="true"></span>
-                  <!-- eslint-disable-next-line html/use-baseline -->
-                  <input type="color" name="background_color" id="background-color">
-                </div>
+            </div>
+            <div id="feed-permission-container" class="hidden type-option-detail">
+              <h3 data-i18n="settings_permission_action"></h3>
+              <label data-i18n="settings_permission_action" for="feed-permission" class="hidden-label"></label>
+              <div data-i18n="settings_feed_permission_description" class="info-icon option-content"></div>
+              <button data-i18n="settings_permission_action" type="submit" name="feed_permission" id="feed-permission" class="button"></button>
+            </div>
+            <div id="feed-permission-revoke-container" class="hidden type-option-detail">
+              <h3 data-i18n="settings_permission_revoke_action"></h3>
+              <div class="info-icon option-content">
+                <span data-i18n="settings_feed_permission_revoke_description"></span>
+                <a data-i18n="settings_permission_revoke_action" href="#" id="feed-permission-revoke"></a>
               </div>
-              <div id="feed-permission-container" class="hidden type-option-detail">
-                <h3 data-i18n="settings_permission_action"></h3>
-                <label data-i18n="settings_permission_action" for="feed-permission" class="hidden-label"></label>
-                <div data-i18n="settings_feed_permission_description" class="info-icon option-content"></div>
-                <button data-i18n="settings_permission_action" type="submit" name="feed_permission" id="feed-permission" class="button"></button>
-              </div>
-              <div id="feed-permission-revoke-container" class="hidden type-option-detail">
-                <h3 data-i18n="settings_permission_revoke_action"></h3>
-                <div class="info-icon option-content">
-                  <span data-i18n="settings_feed_permission_revoke_description"></span>
-                  <a data-i18n="settings_permission_revoke_action" href="#" id="feed-permission-revoke"></a>
-                </div>
-              </div>
-              <div id="tab-position-option">
-                <h3 data-i18n="tab_position_title"></h3>
-                <label data-i18n="type_title" for="type" class="hidden-label"></label>
-                <select name="type" id="tab-position" class="option-content">
+            </div>
+            <div id="tab-position-option">
+              <h3 data-i18n="tab_position_title"></h3>
+              <label data-i18n="type_title" for="type" class="hidden-label"></label>
+              <div class="select-wrapper option-content">
+                <select name="type" id="tab-position">
                   <option data-i18n="tab_position_option_relatedAfterCurrent" value="relatedAfterCurrent"></option>
                   <option data-i18n="tab_position_option_afterCurrent" value="afterCurrent"></option>
                   <option data-i18n="tab_position_option_atEnd" value="atEnd"></option>
                 </select>
               </div>
-              <div id="focus-option" class="hidden" data-managed-key="focus_website">
-                <h3><span data-i18n="focus_website_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
-                <div class="option-content">
-                  <input type="checkbox" name="focus_website" id="focus-website">
-                  <label data-i18n="focus_website_description" for="focus-website" class="has-own-label"></label>
-                </div>
+            </div>
+            <div id="focus-option" class="hidden" data-managed-key="focus_website">
+              <h3><span data-i18n="focus_website_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
+              <div class="option-content">
+                <input type="checkbox" name="focus_website" id="focus-website">
+                <label data-i18n="focus_website_description" for="focus-website" class="has-own-label"></label>
               </div>
-              <div id="clear-option" class="hidden">
-                <h3 data-i18n="clear_addressbar_title"></h3>
-                <div class="info-icon option-content">
-                  <span data-i18n="clear_addressbar_description"></span>
-                  <a data-i18n="learn_more" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1426058" target="_blank" rel="noopener"></a>
-                </div>
+            </div>
+            <div id="clear-option" class="hidden">
+              <h3 data-i18n="clear_addressbar_title"></h3>
+              <div class="info-icon option-content">
+                <span data-i18n="clear_addressbar_description"></span>
+                <a data-i18n="learn_more" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1426058" target="_blank" rel="noopener"></a>
               </div>
-              <div id="change-settings-shortcut-wrapper">
-                <h3 data-i18n="change_settings_shortcut"></h3>
-                <button type="button" id="change-settings-shortcut" class="button" data-i18n="change_settings_shortcut"></button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div id="change-settings-shortcut-wrapper">
+              <h3 data-i18n="change_settings_shortcut"></h3>
+              <button type="button" id="change-settings-shortcut" class="button" data-i18n="change_settings_shortcut"></button>
+            </div>
+          </form>
         </section>
         <aside class="sidebar-stack">
           <div class="grey-bg panel-card support-links">
@@ -135,6 +137,18 @@
         </a>
       </footer>
     </div>
+    <dialog id="delete-local-file-dialog" aria-labelledby="delete-local-file-dialog-header">
+      <header>
+        <div id="delete-local-file-dialog-header" data-i18n="local_file_delete_text"></div>
+      </header>
+      <div class="content text-only">
+        <p data-i18n="local_file_delete_confirmation"></p>
+      </div>
+      <aside>
+        <button type="button" id="delete-local-file-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel" autofocus></button>
+        <button type="button" id="delete-local-file-confirm" class="button destructive-action" data-i18n="local_file_delete_text"></button>
+      </aside>
+    </dialog>
     <script src="../js/lib/i18n.js"></script>
     <script src="../js/lib/permissions.js"></script>
     <script src="../js/core/defaults.js"></script>

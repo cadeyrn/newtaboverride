@@ -52,7 +52,7 @@
   --color-red-soft: rgba(215, 0, 34, .18);
   --color-surface: rgb(250, 253, 255);
   --color-surface-base: rgb(255, 255, 255);
-  --color-surface-border: rgba(84, 107, 147, .16);
+  --color-surface-border: rgb(223, 230, 238);
   --color-throbber: rgba(5, 116, 228, .2);
   --color-white: rgb(255, 255, 255);
   --focus-ring: 0 0 0 2px var(--color-focus-ring);

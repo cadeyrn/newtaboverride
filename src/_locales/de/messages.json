@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Adressleiste leeren / URL markieren"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Abbrechen"
+  },
   "extension_description": {
     "message": "Mit New Tab Override kann die Seite festgelegt werden, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },

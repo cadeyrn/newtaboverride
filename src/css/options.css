@@ -452,7 +452,17 @@ input[type='checkbox'] {
 
 #delete-local-file {
   font-size: inherit;
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
   white-space: nowrap;
+
+  &:hover {
+    color: var(--color-link-hover);
+    text-decoration: none;
+  }
 }
 
 #focus-option {
@@ -468,8 +478,159 @@ input[type='checkbox'] {
   width: auto;
 }
 
+dialog {
+  padding: 0;
+  width: min(640px, calc(100vw - 40px));
+  max-width: 90vw;
+  max-height: calc(100vh - 40px);
+  transform: translateY(10px) scale(.98);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-card-large);
+  background-image: linear-gradient(180deg, var(--color-card-gradient-start) 0%, var(--color-card-gradient-end) 100%);
+  color: var(--color-page-text);
+  font-size: .9rem;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    opacity 260ms ease-in-out,
+    transform 260ms ease-in-out,
+    overlay 260ms ease-in-out allow-discrete,
+    display 260ms ease-in-out allow-discrete;
+
+  &:open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+
+    @starting-style {
+      transform: translateY(10px) scale(.98);
+      opacity: 0;
+    }
+  }
+
+  &.closing {
+    transform: translateY(10px) scale(.98);
+    opacity: 0;
+  }
+
+  &::backdrop {
+    background-color: rgba(33, 37, 42, .62);
+    transition:
+      background-color 260ms ease-in-out,
+      overlay 260ms ease-in-out allow-discrete,
+      display 260ms ease-in-out allow-discrete;
+
+    @starting-style {
+      background-color: rgba(33, 37, 42, 0);
+    }
+  }
+
+  &.closing::backdrop {
+    background-color: rgba(33, 37, 42, 0);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-surface-border);
+    background-image: linear-gradient(180deg, var(--color-surface-base) 0%, var(--color-surface) 100%);
+    color: var(--color-dark-border);
+    font-size: .95rem;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px;
+      height: 24px;
+      border-radius: var(--border-radius-pill);
+      background-image: linear-gradient(180deg, var(--color-blue) 0%, var(--color-heading-accent-end) 100%);
+      box-shadow: 0 6px 14px var(--color-heading-accent-shadow);
+    }
+  }
+
+  .content {
+    padding: 22px;
+    line-height: 1.55;
+    color: var(--color-muted);
+
+    &.text-only {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  aside {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 14px 20px 18px;
+    border-top: 1px solid var(--color-surface-border);
+    background-image: linear-gradient(180deg, var(--color-card-gradient-end) 0%, var(--color-card-gradient-start) 100%);
+  }
+
+  .button {
+    &.secondary-action, &.destructive-action {
+      display: inline-grid;
+      place-items: center;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      border-radius: var(--border-radius-pill);
+      font-weight: 500;
+      isolation: isolate;
+    }
+
+    &.secondary-action {
+      border-color: var(--color-accent-border-soft);
+      background: var(--color-control-background);
+      color: var(--color-dark-border);
+
+      &::before {
+        background: var(--color-blue-translucent);
+      }
+
+      &:hover {
+        border-color: var(--color-accent-border-strong);
+        color: var(--color-dark-border);
+      }
+    }
+
+    &.destructive-action {
+      border-color: var(--color-red);
+      background: var(--color-red);
+
+      &::before {
+        background: rgba(0, 0, 0, .18);
+      }
+
+      &:hover {
+        border-color: var(--color-red);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 499px) {
   form {
     gap: 10px;
+  }
+
+  dialog {
+    aside {
+      flex-direction: column;
+
+      .button {
+        width: 100%;
+      }
+    }
   }
 }

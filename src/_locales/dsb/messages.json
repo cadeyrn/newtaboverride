@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Adresowe pólo wuprozniś / URL markěrowaś"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Pśetergnuś"
+  },
   "extension_description": {
     "message": "Z New Tab Override móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },

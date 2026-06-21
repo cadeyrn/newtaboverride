@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Очистить адресную строку / выбрать URL-адрес"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Отмена"
+  },
   "extension_description": {
     "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },

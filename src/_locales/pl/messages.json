@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Czyszczenie paska adresu / zaznaczanie adresu URL"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Anuluj"
+  },
   "extension_description": {
     "message": "New Tab Override pozwala na ustawienie strony, która wyświetlana jest po każdym otwarciu nowej karty."
   },

@@ -64,7 +64,7 @@ class I18n {
     });
 
     // attribute translation
-    const attributes = ['data-confirm', 'placeholder', 'title'];
+    const attributes = ['placeholder', 'title'];
 
     for (const attribute of attributes) {
       const i18nAttribute = `data-i18n-${attribute}`;

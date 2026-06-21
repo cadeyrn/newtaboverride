@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Adresbalk wissen / URL selecteren"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Annuleren"
+  },
   "extension_description": {
     "message": "Met New Tab Override kunt u de pagina instellen die bij het openen van een nieuw tabblad wordt weergegeven."
   },

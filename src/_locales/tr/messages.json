@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Arama Çubuğunu temizle / URL'yi seç"
   },
+  "common_dialog_btn_cancel": {
+    "message": "İptal"
+  },
   "extension_description": {
     "message": "New Tab Override yeni bir sekme açtığınızda gösterilecek sayfayı seçmenizi sağlar."
   },

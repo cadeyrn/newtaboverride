@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Effacer la barre d’adresse / sélectionner une URL"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Annuler"
+  },
   "extension_description": {
     "message": "New Tab Override vous permet de définir la page qui s'affiche à chaque fois que vous ouvrez un nouvel onglet."
   },

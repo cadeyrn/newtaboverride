@@ -357,7 +357,7 @@ p {
     mask-size: 18px 18px;
   }
 
-  a:not(.hidden) {
+  a, button:not(.hidden) {
     display: inline-block;
     margin: -2px;
     padding: 2px;

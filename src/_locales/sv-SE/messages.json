@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Rensa adressraden / välj URL"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Avbryt"
+  },
   "extension_description": {
     "message": "New Tab Override låter dig ställa in den sidan som visas när du öppnar en ny flik."
   },

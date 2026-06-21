@@ -2,6 +2,8 @@
 
 /* global Defaults, PermissionHelper, Settings, Utils */
 
+const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 260;
+
 class OptionsPage {
   /**
    * DOM elements used throughout the option page
@@ -15,6 +17,9 @@ class OptionsPage {
     $backgroundColorWrapper: document.getElementById('background-color-wrapper'),
     $changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
     $clearOption: document.getElementById('clear-option'),
+    $deleteLocalFileCancelButton: document.getElementById('delete-local-file-cancel'),
+    $deleteLocalFileConfirmButton: document.getElementById('delete-local-file-confirm'),
+    $deleteLocalFileDialog: document.getElementById('delete-local-file-dialog'),
     $feedPermission: document.getElementById('feed-permission-container'),
     $feedPermissionBtn: document.getElementById('feed-permission'),
     $feedPermissionRevoke: document.getElementById('feed-permission-revoke-container'),
@@ -23,7 +28,7 @@ class OptionsPage {
     $focusWebsite: document.getElementById('focus-website'),
     $homepageOption: document.getElementById('homepage-option'),
     $localFile: document.getElementById('local-file'),
-    $localFileDeleteLink: document.getElementById('delete-local-file'),
+    $localFileDeleteButton: document.getElementById('delete-local-file'),
     $localFileOption: document.getElementById('local-file-option'),
     $managedNotice: document.getElementById('managed-options-notice'),
     $tabPosition: document.getElementById('tab-position'),
@@ -51,13 +56,26 @@ class OptionsPage {
       $revokeBtn: OptionsPage.#$elements.$feedPermissionRevokeBtn
     });
 
+    OptionsPage.#$elements.$deleteLocalFileDialog.addEventListener('cancel', e => {
+      e.preventDefault();
+      void OptionsPage.#closeDialog(OptionsPage.#$elements.$deleteLocalFileDialog);
+    });
+    OptionsPage.#$elements.$deleteLocalFileDialog.addEventListener('close', () => {
+      OptionsPage.#$elements.$deleteLocalFileDialog.classList.remove('closing');
+    });
+    OptionsPage.#$elements.$deleteLocalFileCancelButton.addEventListener('click', () => {
+      void OptionsPage.#closeDialog(OptionsPage.#$elements.$deleteLocalFileDialog);
+    });
+    OptionsPage.#$elements.$deleteLocalFileConfirmButton.addEventListener('click', () => {
+      void OptionsPage.#handleLocalFileDeleteConfirmClick();
+    });
     OptionsPage.#$elements.$focusWebsite.addEventListener('change', OptionsPage.#handleFocusWebsiteChange);
     OptionsPage.#$elements.$type.addEventListener('change', OptionsPage.#handleTypeChange);
     OptionsPage.#$elements.$tabPosition.addEventListener('change', OptionsPage.#handleTabPositionChange);
     OptionsPage.#$elements.$url.addEventListener('input', OptionsPage.#handleUrlInput);
     OptionsPage.#$elements.$backgroundColor.addEventListener('input', OptionsPage.#handleBackgroundColorInput);
     OptionsPage.#$elements.$localFile.addEventListener('change', OptionsPage.#handleLocalFileChange);
-    OptionsPage.#$elements.$localFileDeleteLink.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
+    OptionsPage.#$elements.$localFileDeleteButton.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
     OptionsPage.#$elements.$changeSettingsShortcut.addEventListener('click', OptionsPage.#handleChangeSettingsShortcutClick);
   }
 
@@ -73,7 +91,7 @@ class OptionsPage {
     let showClearOption = false;
     let showBackgroundColorOption = false;
     let showLocalFileOption = false;
-    let showLocalFileDeleteLink = false;
+    let showLocalFileDeleteButton = false;
 
     if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'homepage') {
       showHomepageOption = true;
@@ -94,7 +112,7 @@ class OptionsPage {
 
       const { local_file } = await browser.storage.local.get({ local_file: Defaults.values.local_file });
       if (local_file) {
-        showLocalFileDeleteLink = true;
+        showLocalFileDeleteButton = true;
       }
     }
 
@@ -115,7 +133,7 @@ class OptionsPage {
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$clearOption, showClearOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$backgroundColorOption, showBackgroundColorOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileOption, showLocalFileOption);
-    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, showLocalFileDeleteLink);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteButton, showLocalFileDeleteButton);
   }
 
   /**
@@ -128,6 +146,52 @@ class OptionsPage {
    */
   static #toggleVisibility ($el, condition) {
     condition ? $el.classList.remove('hidden') : $el.classList.add('hidden');
+  }
+
+  /**
+   * Close a dialog after the CSS exit transition has finished.
+   *
+   * @param {HTMLDialogElement} $dialog - the dialog to close
+   *
+   * @returns {Promise<void>}
+   */
+  static #closeDialog ($dialog) {
+    if (!$dialog.open) {
+      return Promise.resolve();
+    }
+
+    if ($dialog.classList.contains('closing')) {
+      return new Promise(resolve => {
+        $dialog.addEventListener('close', resolve, { once: true });
+      });
+    }
+
+    $dialog.classList.add('closing');
+
+    return new Promise(resolve => {
+      let didClose = false;
+      const close = () => {
+        if (didClose) {
+          return;
+        }
+
+        didClose = true;
+        $dialog.close();
+      };
+
+      const onTransitionEnd = e => {
+        if (e.target === $dialog && e.propertyName === 'opacity') {
+          close();
+        }
+      };
+
+      window.setTimeout(close, DIALOG_CLOSE_ANIMATION_DURATION_IN_MS);
+      $dialog.addEventListener('close', () => {
+        $dialog.removeEventListener('transitionend', onTransitionEnd);
+        resolve();
+      }, { once: true });
+      $dialog.addEventListener('transitionend', onTransitionEnd);
+    });
   }
 
   /**
@@ -316,27 +380,29 @@ class OptionsPage {
       const file = reader.result;
 
       await browser.storage.local.set({ local_file: file });
-      OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, true);
+      OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteButton, true);
     });
   }
 
   /**
    * Delete the stored local file content after confirmation.
    *
-   * @param {Event} e - event
-   *
    * @returns {void}
    */
-  static #handleLocalFileDeleteClick (e) {
-    e.preventDefault();
+  static #handleLocalFileDeleteClick () {
+    OptionsPage.#$elements.$deleteLocalFileDialog.showModal();
+  }
 
-    // eslint-disable-next-line no-alert
-    if (!confirm(e.target.getAttribute('data-confirm'))) {
-      return;
-    }
-
-    void browser.storage.local.set({ local_file: '' });
-    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteLink, false);
+  /**
+   * Delete the stored local file content after confirmation.
+   *
+   * @returns {Promise<void>}
+   */
+  static async #handleLocalFileDeleteConfirmClick () {
+    await browser.storage.local.set({ local_file: '' });
+    OptionsPage.#$elements.$localFile.value = '';
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteButton, false);
+    await OptionsPage.#closeDialog(OptionsPage.#$elements.$deleteLocalFileDialog);
   }
 
   /**

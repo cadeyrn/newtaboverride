@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Очистити адресний рядок / вибрати URL"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Скасувати"
+  },
   "extension_description": {
     "message": "New Tab Override дозволяє налаштувати сторінку, що буде відкриватися у новій вкладці."
   },

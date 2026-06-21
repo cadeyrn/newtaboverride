@@ -11,6 +11,9 @@
   "clear_addressbar_title": {
     "message": "Adresowe polo wuprózdnić / URL měrkěrować"
   },
+  "common_dialog_btn_cancel": {
+    "message": "Přetorhnyć"
+  },
   "extension_description": {
     "message": "Z New Tab Override móžeš stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje."
   },
