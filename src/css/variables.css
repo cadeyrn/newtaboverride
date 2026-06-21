@@ -57,7 +57,6 @@
   --color-white: rgb(255, 255, 255);
   --focus-ring: 0 0 0 2px var(--color-focus-ring);
   --focus-ring-strong: 0 0 0 2px var(--color-white), 0 0 0 4px rgba(5, 116, 228, .5);
-  --image-select-chevron: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448.14999%20256.04999%22%3E%3Cpath%20d%3D%22m201.475%20246.675c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200l-169.4%20169.4-169.4-169.3c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%20fill%3D%22%23363959%22%2F%3E%3C%2Fsvg%3E");
   --shadow-card: 0 10px 22px rgba(41, 52, 79, .05);
   --shadow-control: 0 8px 18px rgba(41, 52, 79, .05);
   --shadow-error-badge: 0 3px 8px rgba(215, 0, 34, .08);
@@ -103,10 +102,9 @@
     --color-promo-gradient-start: rgba(32, 54, 34, .96);
     --color-surface: rgb(31, 35, 41);
     --color-surface-base: rgb(36, 40, 47);
-    --color-surface-border: rgba(152, 169, 197, .22);
+    --color-surface-border: rgb(74, 82, 94);
     --color-throbber: rgba(111, 168, 237, .18);
     --focus-ring-strong: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-focus-border);
-    --image-select-chevron: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448.14999%20256.04999%22%3E%3Cpath%20d%3D%22m201.475%20246.675c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200l-169.4%20169.4-169.4-169.3c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%20fill%3D%22%23ebeff5%22%2F%3E%3C%2Fsvg%3E");
     --shadow-card: 0 14px 34px rgba(0, 0, 0, .28);
     --shadow-control: 0 10px 24px rgba(0, 0, 0, .26);
     --shadow-field: 0 8px 18px rgba(0, 0, 0, .22);
