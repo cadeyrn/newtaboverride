@@ -9,60 +9,65 @@ New Tab Override. Thank you very much!**
 
 ## Description
 
-**New Tab Override allows you to set the page that shows whenever you open a new tab.**
+Allows you to choose which page Firefox shows whenever you open a new tab.
 
-New Tab Override is a WebExtension and compatible with Firefox Browser 41 and higher (Firefox Browser 140 or
-higher is required for the latest version of New Tab Override).
+New Tab Override can open any website you like, use your current homepage, display a stored local HTML file, or show a
+plain background color. It also includes options for focus behavior, tab position, and compatibility with Firefox
+features such as container tabs.
+
+**New Tab Override is a WebExtension and compatible with Firefox 41 and later. The latest release requires Firefox 140
+or later.**
 
 ### Features
 
-- Change your new tab page to whatever website you like
-- You can use the pipe character (“|”) to randomly select a page from several pages
-- Use your current home page as new tab page
-- Customize the background color for your new tab page
-- Store a local HTML file in the extension and use it for new tab content
-- Get the latest news about Mozilla as new tab page (German language only)
-- You can set the focus to the address bar or the website
-- Customize where new tabs are opened
-- Automatically adds “https://” if protocol is missing from a URL
-- Can be used in conjunction with Firefox’s container tabs feature
-- Dark mode support for options interface
+- Set any website as your new tab page
+- Randomly select one page from multiple URLs separated by the pipe character (`|`)
+- Use your current homepage as the new tab page
+- Store a local HTML file in the extension and use it as new tab content
+- Use a custom background color for new tabs
+- Show the latest Mozilla news as the new tab page (German only)
+- Choose whether the focus should go to the address bar or the website
+- Control where new tabs are opened
+- Automatically add `https://` when a URL is missing a protocol
+- Work with Firefox container tabs
+- Support dark mode in the settings interface
+- Support configuration via enterprise policies
 
-### Shortcuts
+### Keyboard shortcuts
 
-The settings interface can be accessed via **Shift + F12**. It is also possible to open the settings interface by
-entering **newtab settings** in the address bar or from the menu entry in the **tools menu**.
-
-### Planned features
-
-You can find the roadmap and request new features in the
-[issues tracker](https://github.com/cadeyrn/newtaboverride/issues).
+The settings interface can be opened via the keyboard or from the menu. Use <kbd>Shift</kbd> + <kbd>F12</kbd> to open
+it. You can also open it by entering `newtab settings` in the address bar or via the menu entry in the "Tools" menu.
 
 ### Languages
 
-New Tab Override is currently available in the following languages:
+The add-on is currently available in the following languages:
 
 - English
 - German
-- French (Thanks, SuperPat45 and Mozilla commmunity!)
-- Chinese, Simplified (Thanks, tiansh and Mozilla commmunity!)
-- Spanish (Thanks, MissingUser and Mozilla commmunity!)
-- Italian (Thanks, Mozilla commmunity!)
+- French (Thanks, SuperPat45 and Mozilla community!)
+- Simplified Chinese (Thanks, tiansh and Mozilla community!)
+- Spanish (Thanks, MissingUser and Mozilla community!)
+- Italian (Thanks, Mozilla community!)
 - Russian (Thanks, vanja-san!)
 - Polish (Thanks, WaldiPL!)
 - Dutch (Thanks, Tonnes!)
 - Turkish (Thanks, boranroni!)
 - Ukrainian (Thanks, Bergil32!)
-- Brazilian Portuguese (Thanks, Mozilla commmunity!)
+- Brazilian Portuguese (Thanks, Mozilla community!)
 - Swedish (Thanks, Sopor-!)
 - Indonesian (Thanks, rosatiara!)
 - Upper Sorbian (Thanks, milupo!)
 - Lower Sorbian (Thanks, milupo!)
 
-### Configuration via enterprise policies
+### Roadmap
 
-New Tab Override supports the configuration via enterprise policies through `storage.managed`. Managed values override
-the same local setting in the extension.
+You can view the roadmap and request new features in the
+[issues tracker](https://github.com/cadeyrn/newtaboverride/issues).
+
+### Configuration via Enterprise Policies
+
+New Tab Override supports configuration via enterprise policies through `storage.managed`. Managed values override the
+same settings configured locally in the extension.
 
 Supported managed settings:
 
@@ -71,7 +76,7 @@ Supported managed settings:
 - `focus_website`
 - `background_color`
 
-Supported managed `type` values:
+Supported values for managed `type`:
 
 - `custom_url`
 - `homepage`
@@ -97,64 +102,64 @@ Example `policies.json`:
 }
 ```
 
-This example forces New Tab Override to open `https://www.soeren-hentzschel.at` in every new tab and to set the focus to
-the website instead of the address bar.
+This example forces New Tab Override to open `https://www.soeren-hentzschel.at` in every new tab and place the focus
+on the website instead of the address bar.
 
 ### Permissions
 
-New Tab Override needs several permissions to work properly. Some permissions are mandatory, some are optional. To offer
-full transparency, this overview also lists "silent" permissions.
+New Tab Override requires several permissions to work properly. Some are mandatory, some are optional, and Firefox does
+not prompt for some of them.
 
-#### mandatory permissions
+#### Mandatory Permissions
 
-New Tab Override will not work without the following permissions:
+New Tab Override will not work as intended without the following permissions:
 
-##### access browser history
+##### Access browser history
 
-The permission to access the browser history is needed to prevent spammy "moz-extension://" entries in your browsing
-history every time you open a new tab. There is no way to prevent this without this permission.
+This permission is required to prevent spammy `moz-extension://` entries from being added to the browsing history every
+time you open a new tab.
 
-##### access recently closed tabs
+##### Access recently closed tabs
 
-The permission to access recently closed tabs is needed so that New Tab Override can remove internally closed new tab
-pages from Firefox's recently closed tabs list when the option to set the focus to the website is used.
+This permission is required so that New Tab Override can remove internally closed new tab pages from Firefox's recently
+closed tabs list when the option to set the focus to the website is used.
 
-##### access browser tabs
+##### Access browser tabs
 
-The permission to access the browser tabs is needed so that New Tab Override can jump to the settings page if it’s
-already open in another tab when you click the button to open the extension’s settings.
+This permission is required so that New Tab Override can focus the settings page if it is already open in another tab
+instead of opening it again.
 
-##### read and modify browser settings
+##### Read and modify browser settings
 
-The permission to read and modify browser settings is needed to change the position of new tabs and for the option to
-automatically use your home page as new tab page.
+This permission is required to change the position of new tabs and to use the option that automatically opens the
+current homepage as the new tab page.
 
-#### optional permissions
+#### Optional Permissions
 
-These permissions are not needed to install and use New Tab Override:
+This permission is not required to install and use New Tab Override, but the extension will request it at runtime when
+needed:
 
-##### access data for www.soeren-hentzschel.at
+##### Access data for www.soeren-hentzschel.at
 
-The permission to access data for www.soeren-hentzschel.at is only needed if you enable the option to see the latest
-news about Mozilla as new tab page. If enabled, New Tab Override reads the feed of www.soeren-hentzschel.at to show you
-the latest news.
+This permission is only required if you enable the option to show the latest Mozilla news as the new tab page. If
+enabled, New Tab Override reads the feed from www.soeren-hentzschel.at to display the latest news.
 
-#### silent permissions
+#### Silent Permissions
 
-New Tab Override requires additional permissions, but Firefox does not prompt requests for the following:
+New Tab Override requires additional permissions, but Firefox does not prompt for the following:
 
 ##### cookies
 
-The cookies permission is needed to prevent the loss of container information if the container tabs feature of Firefox
-is used.
+The cookies permission is required to preserve container information when New Tab Override is used together with
+Firefox container tabs.
 
 ##### menus
 
-The menus permission is needed for providing an entry in the tools menu for accessing New Tab Override's settings.
+The menus permission is required to provide a menu entry in the "Tools" menu for accessing the settings page.
 
 ##### storage
 
-The storage permission is needed so that New Tab Override can store settings such as your new tab page and read
+The storage permission is required to save settings such as your selected new tab page and to read
 enterprise-managed settings provided through Firefox policies.
 
 ## Download
