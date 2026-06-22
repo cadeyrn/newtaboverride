@@ -32,7 +32,7 @@
 #### Code Quality
 
 - Refactored the JavaScript code to use classes, see [#384](https://github.com/cadeyrn/newtaboverride/issues/384)
-- Refactored the CSS files to use CSS nesting, see [#335](https://github.com/cadeyrn/newtaboverride/issues/335)
+- Refactored the CSS files to use nesting, see [#335](https://github.com/cadeyrn/newtaboverride/issues/335)
 
 #### Other Changes
 
