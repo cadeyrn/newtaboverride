@@ -125,6 +125,8 @@ class NewTab {
         else {
           sourceTab = otherTabs.sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ?? null;
         }
+        // The sourceTab only matters if they are in different cookieStore.
+        sourceTab = sourceTab.cookieStoreId !== tab.cookieStoreId ? sourceTab : null;
       }
 
       const createdTabProperties = {
