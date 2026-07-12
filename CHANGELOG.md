@@ -17,6 +17,7 @@
 
 - Updated eslint from version 10.5.0 to 10.7.0
 - Updated eslint/json from version 2.0.0 to 2.0.1
+- Updated eslint-plugin-jsdoc from version 63.0.7 to 63.0.13
 - Updated html-eslint/eslint-plugin from version 0.62.0 to 0.64.0
 
 ---
