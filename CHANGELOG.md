@@ -4,6 +4,8 @@
 
 ### Version 19.0.0 (Work in Progress)
 
+#### Bugfixes
+
 - Fixed unexpected behavior with tab groups and container tabs when the option to focus the website instead of the
   address bar is enabled. New tabs are no longer treated as related to the previously active tab, preventing them from
   being opened in the wrong container or attached to an unrelated tab group, see
