@@ -13,6 +13,12 @@
   [#390](https://github.com/cadeyrn/newtaboverride/issues/390),
   [#391](https://github.com/cadeyrn/newtaboverride/issues/391)
 
+#### Dependencies
+
+- Updated eslint/json from version 2.0.0 to 2.0.1
+
+---
+
 ### Version 18.0.0 (2026-06-21)
 
 #### Enhancements
