@@ -16,6 +16,7 @@
 #### Dependencies
 
 - Updated eslint/json from version 2.0.0 to 2.0.1
+- Updated html-eslint/eslint-plugin from version 0.62.0 to 0.64.0
 
 ---
 
