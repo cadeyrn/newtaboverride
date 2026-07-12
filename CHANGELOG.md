@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### Version 19.0.0 (Work in Progress)
+
+- Fixed unexpected behavior with tab groups and container tabs when the option to focus the website instead of the
+  address bar is enabled. New tabs are no longer treated as related to the previously active tab, preventing them from
+  being opened in the wrong container or attached to an unrelated tab group, see
+  [#389](https://github.com/cadeyrn/newtaboverride/issues/389),
+  [#390](https://github.com/cadeyrn/newtaboverride/issues/390),
+  [#391](https://github.com/cadeyrn/newtaboverride/issues/391)
+
 ### Version 18.0.0 (2026-06-21)
 
 #### Enhancements
