@@ -165,6 +165,7 @@ export default [
       'jsdoc/no-restricted-syntax': 'off',
       'jsdoc/no-types': 'off',
       'jsdoc/no-undefined-types': 'off',
+      'jsdoc/normalize-see-links': 'off',
       'jsdoc/prefer-import-tag': 'warn',
       'jsdoc/reject-any-type': 'off',
       'jsdoc/reject-function-type': 'off',

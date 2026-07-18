@@ -17,7 +17,7 @@
 
 - Updated eslint from version 10.5.0 to 10.7.0
 - Updated eslint/json from version 2.0.0 to 2.0.1
-- Updated eslint-plugin-jsdoc from version 63.0.7 to 63.0.13
+- Updated eslint-plugin-jsdoc from version 63.0.7 to 63.1.0
 - Updated html-eslint/eslint-plugin from version 0.62.0 to 0.64.0
 - Updated stylelint from version 17.13.0 to 17.14.0
 - Updated web-ext from version 10.4.0 to 10.5.0
@@ -67,7 +67,7 @@
 
 #### Dependencies
 
-- Added @eslint/json, @html-eslint/eslint-plugin, and @stylistic/eslint-plugin
+- Added eslint/json, html-eslint/eslint-plugin, and stylistic/eslint-plugin
 - Updated eslint from version 9.21.0 to 10.5.0
 - Updated eslint-plugin-jsdoc from version 50.6.3 to 63.0.7
 - Updated stylelint from version 15.11.0 to 17.13.0
