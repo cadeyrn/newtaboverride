@@ -7,8 +7,9 @@
 #### Enhancements
 
 - Added support for assigning different new tab URLs to tab groups or tab containers. Tab group rules take
-  precedence over container rules. This requires new silent permissions to read contextual identities and tab groups,
-  see [#393](https://github.com/cadeyrn/newtaboverride/issues/393)
+  precedence over container rules, and rules can also be configured through enterprise policies. This requires new
+  silent permissions to read tab groups and contextual identities, see
+  [#393](https://github.com/cadeyrn/newtaboverride/issues/393)
 - Added a theme switcher to the settings page for choosing light mode, dark mode, or automatic appearance based
   on the system preference, see [#395](https://github.com/cadeyrn/newtaboverride/issues/395)
 - Removed the dedicated button for changing the settings shortcut from the settings page. Shortcut settings remain
