@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### Version 19.0.0 (Work in Progress)
+### Version 19.0.0 (2026-07-19)
 
 #### Enhancements
 
@@ -32,6 +32,9 @@
 - Updated html-eslint/eslint-plugin from version 0.62.0 to 0.64.0
 - Updated stylelint from version 17.13.0 to 17.14.0
 - Updated web-ext from version 10.4.0 to 10.5.0
+
+[All Changes](https://github.com/cadeyrn/newtaboverride/compare/v18.0.0...v19.0.0)<br />
+[Download Signed WebExtension](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/versions/)
 
 ---
 
