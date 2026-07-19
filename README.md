@@ -124,7 +124,7 @@ Example `policies.json`:
 ```
 
 This example forces New Tab Override to open `https://www.soeren-hentzschel.at` by default, use different URLs in the
-configured tab environment and tab group, and place the focus on the website instead of the address bar.
+configured tab container and tab group, and place the focus on the website instead of the address bar.
 
 ### Permissions
 
