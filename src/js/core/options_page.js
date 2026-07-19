@@ -15,7 +15,6 @@ class OptionsPage {
     $backgroundColorOption: document.getElementById('background-color-option'),
     $backgroundColorValue: document.getElementById('background-color-value'),
     $backgroundColorWrapper: document.getElementById('background-color-wrapper'),
-    $changeSettingsShortcut: document.getElementById('change-settings-shortcut'),
     $clearOption: document.getElementById('clear-option'),
     $contextRuleContainer: document.getElementById('context-rule-container'),
     $contextRuleContainerField: document.getElementById('context-rule-container-field'),
@@ -171,7 +170,6 @@ class OptionsPage {
     OptionsPage.#$elements.$backgroundColor.addEventListener('input', OptionsPage.#handleBackgroundColorInput);
     OptionsPage.#$elements.$localFile.addEventListener('change', OptionsPage.#handleLocalFileChange);
     OptionsPage.#$elements.$localFileDeleteButton.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
-    OptionsPage.#$elements.$changeSettingsShortcut.addEventListener('click', OptionsPage.#handleChangeSettingsShortcutClick);
   }
 
   /**
@@ -905,18 +903,6 @@ class OptionsPage {
     OptionsPage.#$elements.$localFile.value = '';
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteButton, false);
     await OptionsPage.#closeDialog(OptionsPage.#$elements.$deleteLocalFileDialog);
-  }
-
-  /**
-   * Open Firefox's shortcut settings UI.
-   *
-   * @param {Event} e - event
-   *
-   * @returns {void}
-   */
-  static #handleChangeSettingsShortcutClick (e) {
-    e.preventDefault();
-    void browser.commands.openShortcutSettings();
   }
 }
 

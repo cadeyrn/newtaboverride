@@ -2,9 +2,6 @@
   "background_color_title": {
     "message": "Колір фону"
   },
-  "change_settings_shortcut": {
-    "message": "Змінити комбінацію клавіш"
-  },
   "clear_addressbar_description": {
     "message": "Автоматичне очищення адресного рядка та вибір URL-адреси зараз недоступні для веб додатків. Це потребує змін зі сторони Mozilla."
   },

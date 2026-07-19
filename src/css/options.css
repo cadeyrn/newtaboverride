@@ -419,7 +419,7 @@ input[type='checkbox'] {
   }
 }
 
-#context-rules-option, #tab-position-option, #focus-option, #clear-option, #change-settings-shortcut-wrapper {
+#context-rules-option, #tab-position-option, #focus-option, #clear-option {
   margin-top: 8px;
 }
 
@@ -721,7 +721,7 @@ input[type='checkbox'] {
   }
 }
 
-#feed-permission, #change-settings-shortcut {
+#feed-permission {
   margin-left: var(--option-content-offset);
   width: auto;
 }
