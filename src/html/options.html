@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="settings_title"></title>
+    <script src="../js/lib/theme.js"></script>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/options.css">
     <link rel="icon" type="image/svg+xml" href="../images/icon.svg">
@@ -16,6 +17,24 @@
           <div class="brand-copy">
             <span class="brand-name" data-i18n="extension_name"></span>
             <span class="brand-section" data-i18n="settings_title"></span>
+          </div>
+        </div>
+        <div id="theme-switcher" role="group" aria-labelledby="theme-switcher-label">
+          <span id="theme-switcher-label" class="visually-hidden" data-i18n="settings_theme_title"></span>
+          <div id="theme-switcher-options">
+            <span id="theme-switcher-active-indicator" aria-hidden="true"></span>
+            <button type="button" data-theme-option="light" aria-pressed="false">
+              <span class="theme-icon" aria-hidden="true"></span>
+              <span data-i18n="settings_theme_light"></span>
+            </button>
+            <button type="button" data-theme-option="dark" aria-pressed="false">
+              <span class="theme-icon" aria-hidden="true"></span>
+              <span data-i18n="settings_theme_dark"></span>
+            </button>
+            <button type="button" data-theme-option="auto" aria-pressed="true">
+              <span class="theme-icon" aria-hidden="true"></span>
+              <span data-i18n="settings_theme_auto"></span>
+            </button>
           </div>
         </div>
       </header>

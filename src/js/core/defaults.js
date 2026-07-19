@@ -15,6 +15,7 @@ class Defaults {
     focus_website: false,
     local_file: '',
     storage_schema: '1',
+    theme: 'auto',
     type: 'custom_url',
     url: ''
   };

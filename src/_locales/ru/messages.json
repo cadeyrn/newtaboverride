@@ -158,6 +158,18 @@
   "settings_support_caption": {
     "message": "Поддержка"
   },
+  "settings_theme_auto": {
+    "message": "Auto"
+  },
+  "settings_theme_dark": {
+    "message": "Dark"
+  },
+  "settings_theme_light": {
+    "message": "Light"
+  },
+  "settings_theme_title": {
+    "message": "Theme"
+  },
   "settings_title": {
     "message": "Новая вкладка — Настройки"
   },

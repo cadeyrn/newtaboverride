@@ -119,7 +119,13 @@ p {
 }
 
 #header {
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-sizing: border-box;
+  padding: 0 24px;
   height: 82px;
   border-bottom: 1px solid var(--color-surface-border);
   background-image: linear-gradient(180deg, var(--color-surface-base) 0%, var(--color-surface) 100%);
@@ -130,7 +136,6 @@ p {
   align-items: center;
   gap: 16px;
   box-sizing: border-box;
-  padding: 0 24px;
   height: 100%;
 
   > img {
@@ -138,6 +143,95 @@ p {
     width: 54px;
     height: 50px;
   }
+}
+
+#theme-switcher {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+#theme-switcher-options {
+  --theme-switcher-active-left: 3px;
+  --theme-switcher-active-width: 0;
+  display: inline-flex;
+  position: relative;
+  gap: 2px;
+  isolation: isolate;
+  padding: 3px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-control-background);
+  box-shadow: var(--shadow-control);
+
+  &.theme-switcher-ready #theme-switcher-active-indicator {
+    transition: transform 240ms ease, background-color 220ms ease, box-shadow 220ms ease;
+  }
+}
+
+#theme-switcher-active-indicator {
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  width: var(--theme-switcher-active-width);
+  transform: translateX(var(--theme-switcher-active-left));
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-blue);
+  box-shadow: var(--shadow-glass);
+}
+
+[data-theme-option] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  min-height: 30px;
+  padding: 5px 11px;
+  min-width: 0;
+  border-radius: var(--border-radius-pill);
+  line-height: 1.2;
+  color: var(--color-muted);
+  font-size: .8rem;
+  transition: color ease 220ms;
+
+  &:hover {
+    color: var(--color-dark-border);
+  }
+
+  &[aria-pressed='true'] {
+    color: var(--color-white);
+  }
+
+  .theme-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    background-color: currentcolor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
+  }
+
+  > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+[data-theme-option='light'] .theme-icon {
+  mask-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M8 1.2a.8.8 0 0 1 .8.8v1a.8.8 0 0 1-1.6 0V2a.8.8 0 0 1 .8-.8Zm0 4a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm0-1.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8Zm6.8 4.4a.8.8 0 0 1-.8.8h-1a.8.8 0 0 1 0-1.6h1a.8.8 0 0 1 .8.8ZM3.8 8a.8.8 0 0 1-.8.8H2a.8.8 0 0 1 0-1.6h1a.8.8 0 0 1 .8.8Zm8.7-5.3a.8.8 0 0 1 0 1.1l-.7.7a.8.8 0 0 1-1.1-1.1l.7-.7a.8.8 0 0 1 1.1 0Zm-7.2 8.8a.8.8 0 0 1 0 1.1l-.7.7a.8.8 0 0 1-1.1-1.1l.7-.7a.8.8 0 0 1 1.1 0Zm7.2 1.8a.8.8 0 0 1-1.1 0l-.7-.7a.8.8 0 0 1 1.1-1.1l.7.7a.8.8 0 0 1 0 1.1ZM5.3 3.4a.8.8 0 0 1-1.1 1.1l-.7-.7a.8.8 0 0 1 1.1-1.1l.7.7ZM8 12.2a.8.8 0 0 1 .8.8v1a.8.8 0 0 1-1.6 0v-1a.8.8 0 0 1 .8-.8Z%22/%3E%3C/svg%3E');
+}
+
+[data-theme-option='dark'] .theme-icon {
+  mask-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z%22 fill=%22none%22 stroke=%22black%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22/%3E%3C/svg%3E');
+}
+
+[data-theme-option='auto'] .theme-icon {
+  mask-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cg fill=%22none%22 stroke=%22black%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%226.6%22 stroke-width=%221%22/%3E%3Cpath d=%22M5.6 11.2 8 4.8l2.4 6.4M6.5 9.2h3%22 stroke-width=%221.2%22/%3E%3C/g%3E%3C/svg%3E');
 }
 
 .brand-copy {
@@ -391,10 +485,28 @@ p {
   }
 }
 
+@media screen and (max-width: 599px) {
+  #theme-switcher {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 499px) {
-  #logo, #main, #footer {
+  #header, #main, #footer {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #header {
+    gap: 10px;
+    min-height: 82px;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  #logo {
+    height: auto;
   }
 
   .brand-name {

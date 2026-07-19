@@ -158,6 +158,18 @@
   "settings_support_caption": {
     "message": "Unterstützung"
   },
+  "settings_theme_auto": {
+    "message": "Auto"
+  },
+  "settings_theme_dark": {
+    "message": "Dunkel"
+  },
+  "settings_theme_light": {
+    "message": "Hell"
+  },
+  "settings_theme_title": {
+    "message": "Design"
+  },
   "settings_title": {
     "message": "Neuer Tab — Einstellungen"
   },

@@ -158,6 +158,18 @@
   "settings_support_caption": {
     "message": "支持"
   },
+  "settings_theme_auto": {
+    "message": "Auto"
+  },
+  "settings_theme_dark": {
+    "message": "Dark"
+  },
+  "settings_theme_light": {
+    "message": "Light"
+  },
+  "settings_theme_title": {
+    "message": "Theme"
+  },
   "settings_title": {
     "message": "新标签页 — 设置"
   },

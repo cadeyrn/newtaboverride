@@ -1,6 +1,6 @@
 'use strict';
 
-/* global Defaults, PermissionHelper, Settings, Utils */
+/* global Defaults, PermissionHelper, Settings, Theme, Utils */
 
 const DIALOG_CLOSE_ANIMATION_DURATION_IN_MS = 260;
 
@@ -50,6 +50,8 @@ class OptionsPage {
     $localFileOption: document.getElementById('local-file-option'),
     $managedNotice: document.getElementById('managed-options-notice'),
     $tabPosition: document.getElementById('tab-position'),
+    $themeOptionsContainer: document.getElementById('theme-switcher-options'),
+    $themeOptions: document.querySelectorAll('[data-theme-option]'),
     $type: document.getElementById('type')
   };
 
@@ -170,6 +172,16 @@ class OptionsPage {
     OptionsPage.#$elements.$backgroundColor.addEventListener('input', OptionsPage.#handleBackgroundColorInput);
     OptionsPage.#$elements.$localFile.addEventListener('change', OptionsPage.#handleLocalFileChange);
     OptionsPage.#$elements.$localFileDeleteButton.addEventListener('click', OptionsPage.#handleLocalFileDeleteClick);
+
+    for (const $themeOption of OptionsPage.#$elements.$themeOptions) {
+      $themeOption.addEventListener('click', e => {
+        void OptionsPage.#handleThemeOptionClick(e);
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      OptionsPage.#updateThemeSwitcher(document.documentElement.dataset.theme ?? 'auto');
+    });
   }
 
   /**
@@ -321,6 +333,7 @@ class OptionsPage {
     OptionsPage.#$elements.$type.querySelector('[value="' + option.type + '"]').selected = true;
     OptionsPage.#$elements.$tabPosition.querySelector('[value="' + tabPosition.value + '"]').selected = true;
     OptionsPage.#$elements.$backgroundColor.value = option.background_color;
+    OptionsPage.#updateThemeSwitcher(Theme.apply(option.theme));
     OptionsPage.#updateBackgroundColorPreview(option.background_color);
     OptionsPage.#$elements.$type.disabled = managedKeySet.has('type');
     OptionsPage.#$elements.$focusWebsite.disabled = managedKeySet.has('focus_website');
@@ -368,6 +381,64 @@ class OptionsPage {
    */
   static #handleFocusWebsiteChange (e) {
     void browser.storage.local.set({ focus_website: e.target.checked });
+  }
+
+  /**
+   * Persist and apply the selected settings interface theme.
+   *
+   * @param {Event} e - event
+   *
+   * @returns {Promise<void>}
+   */
+  static async #handleThemeOptionClick (e) {
+    const theme = await Theme.save(e.currentTarget.dataset.themeOption);
+
+    OptionsPage.#updateThemeSwitcher(theme);
+  }
+
+  /**
+   * Mark the currently selected theme in the header switcher.
+   *
+   * @param {string} theme - active theme
+   *
+   * @returns {void}
+   */
+  static #updateThemeSwitcher (theme) {
+    let $activeThemeOption = null;
+
+    for (const $themeOption of OptionsPage.#$elements.$themeOptions) {
+      const isActive = $themeOption.dataset.themeOption === theme;
+
+      $themeOption.setAttribute(
+        'aria-pressed',
+        String(isActive)
+      );
+
+      if (isActive) {
+        $activeThemeOption = $themeOption;
+      }
+    }
+
+    if (!$activeThemeOption) {
+      return;
+    }
+
+    const { $themeOptionsContainer } = OptionsPage.#$elements;
+
+    $themeOptionsContainer.style.setProperty(
+      '--theme-switcher-active-left',
+      $activeThemeOption.offsetLeft + 'px'
+    );
+    $themeOptionsContainer.style.setProperty(
+      '--theme-switcher-active-width',
+      $activeThemeOption.offsetWidth + 'px'
+    );
+
+    if (!$themeOptionsContainer.classList.contains('theme-switcher-ready')) {
+      window.requestAnimationFrame(() => {
+        $themeOptionsContainer.classList.add('theme-switcher-ready');
+      });
+    }
   }
 
   /**
