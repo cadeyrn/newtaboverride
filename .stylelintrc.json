@@ -2,6 +2,7 @@
   "plugins": [
     "stylelint-order"
   ],
+  "referenceFiles": "src/css/variables.css",
   "rules": {
     "alpha-value-notation": "number",
     "annotation-no-unknown": true,
@@ -95,7 +96,7 @@
     "no-irregular-whitespace": true,
     "no-unknown-animations": true,
     "no-unknown-custom-media": true,
-    "no-unknown-custom-properties": null,
+    "no-unknown-custom-properties": true,
     "number-max-precision": 3,
     "order/custom-properties-alphabetical-order": true,
     "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
