@@ -247,6 +247,17 @@ p {
     outline: 2px solid var(--color-focus-border);
     outline-offset: 2px;
   }
+
+  &:disabled {
+    background: var(--color-surface);
+    color: var(--color-muted);
+    cursor: not-allowed;
+    opacity: .75;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .promo-box {

@@ -8,7 +8,7 @@ class Settings {
    *
    * @type {string[]}
    */
-  static #managedKeys = ['background_color', 'focus_website', 'type', 'url'];
+  static #managedKeys = ['background_color', 'context_rules', 'focus_website', 'type', 'url'];
 
   /**
    * New tab types that can be configured through enterprise policies.
@@ -23,6 +23,90 @@ class Settings {
    * @type {RegExp}
    */
   static #backgroundColorRegex = /^#[\da-f]{6}$/i;
+
+  /**
+   * Check whether a value is a plain object.
+   *
+   * @param {any} value - value to check
+   *
+   * @returns {boolean} - whether the value is a plain object
+   */
+  static #isPlainObject (value) {
+    return value !== null && typeof value === 'object' && !Array.isArray(value);
+  }
+
+  /**
+   * Validate and normalize a managed URL.
+   *
+   * @param {any} value - managed URL value
+   * @param {object} options - validation options
+   *
+   * @returns {string|null} - sanitized URL, or null if the value is invalid
+   */
+  static #sanitizeUrl (value, options = {}) {
+    const { allowEmpty = true, allowFileUrl = true, allowUnsupportedProtocol = true } = options;
+
+    if (typeof value !== 'string') {
+      return null;
+    }
+
+    const url = value.trim();
+
+    if (Utils.uriRegex.test(url)) {
+      return url;
+    }
+
+    if ((allowEmpty && url === '') || (allowFileUrl && url.startsWith('file://'))) {
+      return url;
+    }
+
+    if (allowUnsupportedProtocol && Utils.protocolRegex.test(url)) {
+      return url;
+    }
+
+    if (Utils.protocolRegex.test(url) || url === '') {
+      return null;
+    }
+
+    return 'https://' + url;
+  }
+
+  /**
+   * Validate and normalize managed context-specific URL rules.
+   *
+   * @param {any} contextRules - managed context rules
+   *
+   * @returns {{containers: object, groups: object}|null} - sanitized context rules, or null if the value is invalid
+   */
+  static #sanitizeContextRules (contextRules) {
+    if (!Settings.#isPlainObject(contextRules)) {
+      return null;
+    }
+
+    const sanitizedContextRules = {
+      containers: {},
+      groups: {}
+    };
+
+    for (const scope of ['containers', 'groups']) {
+      if (Settings.#isPlainObject(contextRules[scope])) {
+        for (const [identifier, value] of Object.entries(contextRules[scope])) {
+          const ruleIdentifier = identifier.trim();
+          const url = Settings.#sanitizeUrl(value, {
+            allowEmpty: false,
+            allowFileUrl: false,
+            allowUnsupportedProtocol: false
+          });
+
+          if (ruleIdentifier && url !== null) {
+            sanitizedContextRules[scope][ruleIdentifier] = url;
+          }
+        }
+      }
+    }
+
+    return sanitizedContextRules;
+  }
 
   /**
    * Read the managed settings supported by New Tab Override.
@@ -43,16 +127,10 @@ class Settings {
       }
 
       if (Object.hasOwn(managedSettings, 'url') && typeof managedSettings.url === 'string') {
-        const url = managedSettings.url.trim();
+        const url = Settings.#sanitizeUrl(managedSettings.url);
 
-        if (Utils.uriRegex.test(url)) {
+        if (url !== null) {
           sanitizedSettings.url = url;
-        }
-        else if (url === '' || url.startsWith('file://') || Utils.protocolRegex.test(url)) {
-          sanitizedSettings.url = url;
-        }
-        else {
-          sanitizedSettings.url = 'https://' + url;
         }
       }
 
@@ -66,6 +144,14 @@ class Settings {
         }
       }
 
+      if (Object.hasOwn(managedSettings, 'context_rules')) {
+        const contextRules = Settings.#sanitizeContextRules(managedSettings.context_rules);
+
+        if (contextRules !== null) {
+          sanitizedSettings.context_rules = contextRules;
+        }
+      }
+
       return sanitizedSettings;
     }
     catch {
@@ -76,14 +162,25 @@ class Settings {
   /**
    * Read the current settings, with managed settings overriding local settings for supported keys.
    *
-   * @returns {Promise<object>} - current settings
+   * @returns {Promise<{managedKeys: string[], values: object}>} - current settings and keys controlled by policies
    */
   static async get () {
     const [localSettings, managedSettings] = await Promise.all([
       browser.storage.local.get(Defaults.values),
       Settings.getManaged()
     ]);
+    const contextRules = localSettings.context_rules;
 
-    return { ...localSettings, ...managedSettings };
+    localSettings.context_rules = {
+      containers: contextRules?.containers && typeof contextRules.containers === 'object' &&
+        !Array.isArray(contextRules.containers) ? contextRules.containers : {},
+      groups: contextRules?.groups && typeof contextRules.groups === 'object' &&
+        !Array.isArray(contextRules.groups) ? contextRules.groups : {}
+    };
+
+    return {
+      managedKeys: Object.keys(managedSettings),
+      values: { ...localSettings, ...managedSettings }
+    };
   }
 }

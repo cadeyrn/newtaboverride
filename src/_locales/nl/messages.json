@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Annuleren"
   },
+  "context_rules_container_label": {
+    "message": "Firefox-container"
+  },
+  "context_rules_container_none": {
+    "message": "Geen containers beschikbaar"
+  },
+  "context_rules_default_empty": {
+    "message": "Nog geen regel geconfigureerd"
+  },
+  "context_rules_delete": {
+    "message": "Verwijderen"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Wilt u de URL-regel $1 echt verwijderen?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "URL-regel verwijderen"
+  },
+  "context_rules_group_label": {
+    "message": "Naam van tabbladgroep"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Naam"
+  },
+  "context_rules_list_containers": {
+    "message": "Containers"
+  },
+  "context_rules_list_groups": {
+    "message": "Tabbladgroepen"
+  },
+  "context_rules_list_title": {
+    "message": "Regeloverzicht"
+  },
+  "context_rules_save": {
+    "message": "Regel opslaan"
+  },
+  "context_rules_scope_container": {
+    "message": "Container"
+  },
+  "context_rules_scope_default": {
+    "message": "Standaard"
+  },
+  "context_rules_scope_group": {
+    "message": "Tabbladgroep"
+  },
+  "context_rules_scope_label": {
+    "message": "Regeltype"
+  },
+  "context_rules_title": {
+    "message": "URL-regels beheren"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "Met New Tab Override kunt u de pagina instellen die bij het openen van een nieuw tabblad wordt weergegeven."
   },
@@ -144,7 +198,7 @@
     "message": "Optie"
   },
   "url_description": {
-    "message": "De hier ingevoerde webpagina wordt bij het openen van een nieuw tabblad weergegeven. Alleen URL’s die met https://, http:// of moz-extension:// beginnen worden ondersteund. Let op: toegang tot lokale bestanden via een URL is niet meer mogelijk vanwege beperkingen van Firefox. Overweeg het gebruik van de optie ‘lokaal bestand’ of een lokale webserver, zoals via MAMP of XAMPP. You can use the pipe character (‘|’) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Alleen URL’s die beginnen met https://, http:// of moz-extension:// worden ondersteund. Toegang tot lokale bestanden via een URL is niet mogelijk vanwege beperkingen van Firefox. Overweeg hiervoor de optie ‘lokaal bestand’ of een lokale webserver te gebruiken, bijvoorbeeld via MAMP of XAMPP. U kunt het pipe-teken (‘|’) gebruiken om meerdere URL’s op te geven. Een van deze URL’s wordt vervolgens willekeurig geselecteerd."
   },
   "url_title": {
     "message": "URL"

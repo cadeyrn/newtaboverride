@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Annuler"
   },
+  "context_rules_container_label": {
+    "message": "Conteneur Firefox"
+  },
+  "context_rules_container_none": {
+    "message": "Aucun conteneur disponible"
+  },
+  "context_rules_default_empty": {
+    "message": "Aucune règle n’est encore configurée"
+  },
+  "context_rules_delete": {
+    "message": "Supprimer"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Voulez-vous vraiment supprimer la règle d’URL $1 ?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Supprimer la règle d’URL"
+  },
+  "context_rules_group_label": {
+    "message": "Nom du groupe d’onglets"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Nom"
+  },
+  "context_rules_list_containers": {
+    "message": "Conteneurs"
+  },
+  "context_rules_list_groups": {
+    "message": "Groupes d’onglets"
+  },
+  "context_rules_list_title": {
+    "message": "Aperçu des règles"
+  },
+  "context_rules_save": {
+    "message": "Enregistrer la règle"
+  },
+  "context_rules_scope_container": {
+    "message": "Conteneur"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Groupe d’onglets"
+  },
+  "context_rules_scope_label": {
+    "message": "Type de règle"
+  },
+  "context_rules_title": {
+    "message": "Gérer les règles d’URL"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override vous permet de définir la page qui s'affiche à chaque fois que vous ouvrez un nouvel onglet."
   },
@@ -144,7 +198,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "La page web saisie ici s’affiche lors de l’ouverture d’un nouvel onglet. Seules les URL commençant par https://, http:// ou moz-extension:// sont prises en charge. Remarque: L'accès aux fichiers locaux via une URL n’est plus possible en raison des restrictions de Firefox. Veuillez utiliser l’option «fichier local» ou un serveur Web local, par exemple via MAMP ou XAMPP. You can use the pipe character («|») to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Seules les URL commençant par https://, http:// ou moz-extension:// sont prises en charge. L’accès aux fichiers locaux via une URL n’est pas possible en raison des restrictions de Firefox. Pour cela, veuillez envisager d’utiliser l’option « fichier local » ou un serveur web local, par exemple MAMP ou XAMPP. Vous pouvez utiliser le caractère barre verticale (« | ») pour indiquer plusieurs URL. L’une de ces URL sera alors sélectionnée aléatoirement."
   },
   "url_title": {
     "message": "URL"

@@ -41,16 +41,6 @@
             <div id="homepage-option" class="hidden type-option-detail">
               <div data-i18n="homepage_description" class="info-icon option-content"></div>
             </div>
-            <div id="url-option" class="hidden type-option-detail" data-managed-key="url">
-              <div data-i18n="url_description" class="info-icon option-content"></div>
-              <h3><span data-i18n="url_title"></span><span data-i18n="settings_managed_badge" class="managed-badge hidden"></span></h3>
-              <label data-i18n="url_title" for="url" class="hidden-label"></label>
-              <div id="url-wrapper" class="option-content">
-                <input type="text" name="url" id="url" data-i18n-placeholder="settings_url_field_placeholder">
-                <span data-i18n="url_validation_default" class="error-message hidden default"></span>
-                <span data-i18n="url_validation_file" class="error-message hidden file"></span>
-              </div>
-            </div>
             <div id="local-file-option" class="hidden type-option-detail">
               <div class="info-icon option-content">
                 <span data-i18n="local_file_description"></span>
@@ -80,6 +70,34 @@
                 <span data-i18n="settings_feed_permission_revoke_description"></span>
                 <a data-i18n="settings_permission_revoke_action" href="#" id="feed-permission-revoke"></a>
               </div>
+            </div>
+            <div id="context-rules-option" class="hidden">
+              <h3><span data-i18n="context_rules_title"></span><span data-i18n="settings_managed_badge" id="context-rules-managed-badge" class="managed-badge hidden"></span></h3>
+              <div class="info-icon option-content" data-i18n="url_description"></div>
+              <div id="context-rule-editor" class="option-content">
+                <label data-i18n="context_rules_scope_label" for="context-rule-scope" class="context-rule-scope-label"></label>
+                <div class="select-wrapper context-rule-scope-field">
+                  <select id="context-rule-scope"></select>
+                </div>
+                <label data-i18n="context_rules_container_label" for="context-rule-container" id="context-rule-container-label"></label>
+                <div id="context-rule-container-field" class="select-wrapper">
+                  <select id="context-rule-container"></select>
+                </div>
+                <label data-i18n="context_rules_group_label" for="context-rule-group" id="context-rule-group-label" class="hidden"></label>
+                <input type="text" id="context-rule-group" class="hidden" data-i18n-placeholder="context_rules_group_placeholder">
+                <label data-i18n="context_rules_url_label" for="context-rule-url" class="context-rule-url-label"></label>
+                <div id="context-rule-url-wrapper" class="url-wrapper context-rule-url-field">
+                  <input type="text" id="context-rule-url" data-i18n-placeholder="settings_url_field_placeholder">
+                  <span data-i18n="url_validation_default" class="error-message hidden default"></span>
+                  <span data-i18n="url_validation_file" class="error-message hidden file"></span>
+                </div>
+                <button type="button" id="context-rule-save" class="button" data-i18n="context_rules_save"></button>
+              </div>
+              <h4 class="context-rules-list-title">
+                <span data-i18n="context_rules_list_title"></span>
+                <span data-i18n="settings_managed_badge" id="context-rules-list-managed-badge" class="managed-badge hidden"></span>
+              </h4>
+              <div id="context-rules" class="option-content"></div>
             </div>
             <div id="tab-position-option">
               <h3 data-i18n="tab_position_title"></h3>
@@ -137,6 +155,18 @@
         </a>
       </footer>
     </div>
+    <dialog id="delete-context-rule-dialog" aria-labelledby="delete-context-rule-dialog-header">
+      <header>
+        <div id="delete-context-rule-dialog-header" data-i18n="context_rules_delete_dialog_title"></div>
+      </header>
+      <div class="content text-only">
+        <p id="delete-context-rule-dialog-text"></p>
+      </div>
+      <aside>
+        <button type="button" id="delete-context-rule-cancel" class="button secondary-action" data-i18n="common_dialog_btn_cancel" autofocus></button>
+        <button type="button" id="delete-context-rule-confirm" class="button destructive-action" data-i18n="context_rules_delete"></button>
+      </aside>
+    </dialog>
     <dialog id="delete-local-file-dialog" aria-labelledby="delete-local-file-dialog-header">
       <header>
         <div id="delete-local-file-dialog-header" data-i18n="local_file_delete_text"></div>

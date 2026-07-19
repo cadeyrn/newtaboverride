@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "取消"
   },
+  "context_rules_container_label": {
+    "message": "Firefox 容器"
+  },
+  "context_rules_container_none": {
+    "message": "没有可用的容器"
+  },
+  "context_rules_default_empty": {
+    "message": "尚未配置规则"
+  },
+  "context_rules_delete": {
+    "message": "移除"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "确实要移除 URL 规则 $1 吗？"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "移除 URL 规则"
+  },
+  "context_rules_group_label": {
+    "message": "标签页组名称"
+  },
+  "context_rules_group_placeholder": {
+    "message": "名称"
+  },
+  "context_rules_list_containers": {
+    "message": "容器"
+  },
+  "context_rules_list_groups": {
+    "message": "标签页组"
+  },
+  "context_rules_list_title": {
+    "message": "规则概览"
+  },
+  "context_rules_save": {
+    "message": "保存规则"
+  },
+  "context_rules_scope_container": {
+    "message": "容器"
+  },
+  "context_rules_scope_default": {
+    "message": "标准"
+  },
+  "context_rules_scope_group": {
+    "message": "标签页组"
+  },
+  "context_rules_scope_label": {
+    "message": "规则类型"
+  },
+  "context_rules_title": {
+    "message": "管理 URL 规则"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
@@ -144,7 +198,7 @@
     "message": "选项"
   },
   "url_description": {
-    "message": "打开新标签页时，页面上会显示在此输入的网页。仅支持以 https://, http:// 或 moz-extension:// 开头的网址。请注意：由于 Firefox 的限制，通过网址访问本地文件不再被支持。请考虑使用使用“本地文件“选项或本地网络服务器，比如 MAMP 或 XAMPP。 You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "仅支持以 https://、http:// 或 moz-extension:// 开头的 URL。由于 Firefox 的限制，无法通过 URL 访问本地文件。为此，请考虑使用“本地文件”选项或本地 Web 服务器，例如 MAMP 或 XAMPP。您可以使用竖线字符（“|”）提供多个 URL。随后将随机选择其中一个 URL。"
   },
   "url_title": {
     "message": "网址"

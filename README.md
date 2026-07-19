@@ -24,7 +24,7 @@ options for the focus behavior and the tab position.
 - Choose whether the focus should go to the address bar or the website
 - Control where new tabs are opened
 - Automatically add `https://` when a URL is missing a protocol
-- Work with Firefox container tabs
+- Assign specific new tab URLs to tab groups or tab containers
 - Support dark mode in the settings interface
 - Support configuration via enterprise policies
 
@@ -68,6 +68,7 @@ Supported managed settings:
 
 - `type`
 - `url`
+- `context_rules`
 - `focus_website`
 - `background_color`
 
@@ -76,6 +77,23 @@ Supported values for managed `type`:
 - `custom_url`
 - `homepage`
 - `background_color`
+
+The `context_rules` setting supports context-specific URLs for Firefox tab environments and named tab groups:
+
+```json
+{
+  "containers": {
+    "firefox-container-1": "https://example.com/work/"
+  },
+  "groups": {
+    "Project Alpha": "https://example.com/project/"
+  }
+}
+```
+
+Context-specific rules are applied when `type` is set to `custom_url`. Tab group rules take precedence over tab
+environment rules. Container rules use Firefox's `cookieStoreId` values as keys, while tab group rules use the tab
+group name. The standard URL can be empty if at least one context-specific rule is configured.
 
 The `local_file` option and the new tab position remain device-local settings.
 
@@ -89,6 +107,14 @@ Example `policies.json`:
         "newtaboverride@agenedia.com": {
           "type": "custom_url",
           "url": "https://www.soeren-hentzschel.at",
+          "context_rules": {
+            "containers": {
+              "firefox-container-1": "https://example.org/container/"
+            },
+            "groups": {
+              "Example Group": "https://example.org/group/"
+            }
+          },
           "focus_website": true
         }
       }
@@ -97,8 +123,8 @@ Example `policies.json`:
 }
 ```
 
-This example forces New Tab Override to open `https://www.soeren-hentzschel.at` in every new tab and place the focus
-on the website instead of the address bar.
+This example forces New Tab Override to open `https://www.soeren-hentzschel.at` by default, use different URLs in the
+configured tab environment and tab group, and place the focus on the website instead of the address bar.
 
 ### Permissions
 
@@ -148,6 +174,11 @@ New Tab Override requires additional permissions, but Firefox does not prompt fo
 The cookies permission is required to preserve container information when New Tab Override is used together with
 Firefox container tabs.
 
+##### contextual identities
+
+The contextual identities permission is required to list the available Firefox containers when configuring
+context-specific new tab pages.
+
 ##### menus
 
 The menus permission is required to provide a menu entry in the "Tools" menu for accessing the settings page.
@@ -156,6 +187,11 @@ The menus permission is required to provide a menu entry in the "Tools" menu for
 
 The storage permission is required to save settings such as your selected new tab page and to read
 enterprise-managed settings provided through Firefox policies.
+
+##### tab groups
+
+The tab groups permission is required to read the name of the tab group in which a new tab is opened. This allows New
+Tab Override to apply the matching context-specific new tab page.
 
 ## Download
 

@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Cancel"
   },
+  "context_rules_container_label": {
+    "message": "Firefox container"
+  },
+  "context_rules_container_none": {
+    "message": "No containers available"
+  },
+  "context_rules_default_empty": {
+    "message": "No rule configured yet"
+  },
+  "context_rules_delete": {
+    "message": "Remove"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Do you really want to remove the URL rule $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Remove URL rule"
+  },
+  "context_rules_group_label": {
+    "message": "Tab group name"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Name"
+  },
+  "context_rules_list_containers": {
+    "message": "Containers"
+  },
+  "context_rules_list_groups": {
+    "message": "Tab groups"
+  },
+  "context_rules_list_title": {
+    "message": "Rules overview"
+  },
+  "context_rules_save": {
+    "message": "Save rule"
+  },
+  "context_rules_scope_container": {
+    "message": "Container"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Tab group"
+  },
+  "context_rules_scope_label": {
+    "message": "Rule type"
+  },
+  "context_rules_title": {
+    "message": "Manage URL rules"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
@@ -144,7 +198,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "The web page entered here is displayed when opening a new tab. Only URLs starting with https://, http:// or moz-extension:// are supported. Please note: Access to local files via URL is not possible due to Firefox restrictions. Please consider using the “local file” option or a local web server, for example via MAMP or XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Only URLs starting with https://, http:// or moz-extension:// are supported. Access to local files via URL is not possible due to Firefox restrictions. Please consider using the “local file” option or a local web server for this purpose, for example via MAMP or XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then be selected at random."
   },
   "url_title": {
     "message": "URL"

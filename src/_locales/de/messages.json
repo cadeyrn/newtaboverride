@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Abbrechen"
   },
+  "context_rules_container_label": {
+    "message": "Name der Tab-Umgebung"
+  },
+  "context_rules_container_none": {
+    "message": "Keine Tab-Umgebungen verfügbar"
+  },
+  "context_rules_default_empty": {
+    "message": "Noch keine Regel konfiguriert"
+  },
+  "context_rules_delete": {
+    "message": "Entfernen"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Möchtest du die URL-Regel $1 wirklich entfernen?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "URL-Regel entfernen"
+  },
+  "context_rules_group_label": {
+    "message": "Name der Tab-Gruppe"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Name"
+  },
+  "context_rules_list_containers": {
+    "message": "Tab-Umgebungen"
+  },
+  "context_rules_list_groups": {
+    "message": "Tab-Gruppen"
+  },
+  "context_rules_list_title": {
+    "message": "Regelübersicht"
+  },
+  "context_rules_save": {
+    "message": "Regel speichern"
+  },
+  "context_rules_scope_container": {
+    "message": "Tab-Umgebung"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Tab-Gruppe"
+  },
+  "context_rules_scope_label": {
+    "message": "Regeltyp"
+  },
+  "context_rules_title": {
+    "message": "URL-Regeln verwalten"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "Mit New Tab Override kann die Seite festgelegt werden, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
@@ -144,7 +198,7 @@
     "message": "Option"
   },
   "url_description": {
-    "message": "Die hier eingegebene Webseite wird beim Öffnen eines neuen Tabs angezeigt. Nur URLs, welche mit https://, http:// oder moz-extension:// beginnen, werden unterstützt. Bitte beachte: Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht möglich. Bitte erwäge die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP. Es kann das Pipe-Zeichen („|“) verwendet werden, um mehrere URLs anzugeben. Eine dieser URLs wird dann nach dem Zufallsprinzip ausgewählt."
+    "message": "Nur URLs, welche mit https://, http:// oder moz-extension:// beginnen, werden unterstützt. Der Zugriff auf lokale Dateien via URL ist aufgrund von Firefox-Restriktionen nicht möglich. Bitte erwäge hierfür die Verwendung der Option „lokale Datei“ oder eines lokalen Webservers, zum Beispiel über MAMP oder XAMPP. Es kann das Pipe-Zeichen („|“) verwendet werden, um mehrere URLs anzugeben. Eine dieser URLs wird dann nach dem Zufallsprinzip ausgewählt."
   },
   "url_title": {
     "message": "URL"

@@ -20,7 +20,7 @@ class Background {
   /**
    * Promise of the currently running cleanup pass so concurrent events can reuse the same processing cycle
    *
-   * @type {Promise<void> | null}
+   * @type {Promise<void>|null}
    */
   static #pendingClosedTabsProcessing = null;
 

@@ -24,7 +24,7 @@ form > div {
   }
 }
 
-label:not(.has-own-label, .hidden-label) {
+label:not(.has-own-label, .hidden, .hidden-label) {
   display: block;
   margin-bottom: 7px;
   padding-left: 5px;
@@ -390,7 +390,7 @@ input[type='checkbox'] {
   }
 }
 
-#url-wrapper {
+.url-wrapper {
   position: relative;
 
   .error-message {
@@ -419,8 +419,244 @@ input[type='checkbox'] {
   }
 }
 
-#tab-position-option, #focus-option, #clear-option, #change-settings-shortcut-wrapper {
+#context-rules-option, #tab-position-option, #focus-option, #clear-option, #change-settings-shortcut-wrapper {
   margin-top: 8px;
+}
+
+#context-rule-editor {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    'scope-label target-label'
+    'scope target'
+    'url-label url-label'
+    'url url'
+    'save save';
+  gap: 7px 12px;
+  margin-bottom: 12px;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  &.default-rule {
+    grid-template-areas:
+      'scope-label scope-label'
+      'scope scope'
+      'url-label url-label'
+      'url url'
+      'save save';
+  }
+}
+
+.context-rule-scope-label {
+  grid-area: scope-label;
+}
+
+.context-rule-scope-field {
+  grid-area: scope;
+}
+
+#context-rule-container-label, #context-rule-group-label {
+  grid-area: target-label;
+}
+
+#context-rule-container-field, #context-rule-group {
+  grid-area: target;
+  min-width: 0;
+  width: 100%;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.context-rule-url-label {
+  grid-area: url-label;
+  margin-top: 5px;
+}
+
+.context-rule-url-field {
+  grid-area: url;
+}
+
+#context-rule-save {
+  grid-area: save;
+  justify-self: start;
+  margin-top: 5px;
+  width: auto;
+}
+
+.context-rules-list-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: .95rem;
+  line-height: 1.35;
+  color: var(--color-dark-border);
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 8px;
+    height: 22px;
+    border-radius: var(--border-radius-pill);
+    background-image: linear-gradient(180deg, var(--color-blue) 0%, var(--color-heading-accent-end) 100%);
+    box-shadow: 0 6px 14px var(--color-heading-accent-shadow);
+  }
+}
+
+#context-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.context-rules-section-title {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 7px;
+  padding-left: 5px;
+  font-size: .85rem;
+  line-height: 1.35;
+  color: var(--color-dark-border);
+}
+
+.context-rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.context-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--border-radius-field);
+  background-color: var(--color-info-background);
+
+  &.default-rule {
+    border-color: transparent;
+    background:
+      linear-gradient(var(--color-info-background)) padding-box,
+      linear-gradient(96deg, oklch(76% .2 290deg) 20.68%, oklch(79% .17 50deg) 79.34%) border-box;
+  }
+
+  &[data-rule-color='blue'] {
+    --context-rule-color: light-dark(oklch(62% .24 260deg), oklch(90% .13 260deg));
+  }
+
+  &[data-rule-color='cyan'] {
+    --context-rule-color: light-dark(oklch(62% .21 205deg), oklch(90% .07 205deg));
+  }
+
+  &[data-rule-color='grey'] {
+    --context-rule-color: light-dark(rgb(167, 167, 179), rgb(251, 251, 254));
+  }
+
+  &[data-rule-color='green'] {
+    --context-rule-color: light-dark(oklch(62% .21 145deg), oklch(90% .1 145deg));
+  }
+
+  &[data-rule-color='orange'] {
+    --context-rule-color: light-dark(oklch(65% .21 50deg), oklch(90% .1 50deg));
+  }
+
+  &[data-rule-color='pink'] {
+    --context-rule-color: light-dark(oklch(62% .21 360deg), oklch(90% .1 360deg));
+  }
+
+  &[data-rule-color='purple'] {
+    --context-rule-color: light-dark(oklch(62% .21 315deg), oklch(90% .1 315deg));
+  }
+
+  &[data-rule-color='red'] {
+    --context-rule-color: light-dark(oklch(62% .21 15deg), oklch(90% .1 15deg));
+  }
+
+  &[data-rule-color='yellow'] {
+    --context-rule-color: light-dark(oklch(65% .24 90deg), oklch(93% .1 90deg));
+  }
+}
+
+.context-rule-indicator {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+
+  &.context-rule-color::before {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    width: 13px;
+    height: 13px;
+    border: 1px solid var(--color-control-border);
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &.context-rule-icon {
+    background-color: var(--context-rule-color);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
+  }
+}
+
+.context-rule.has-rule-color {
+  .context-rule-color::before {
+    border-color: color-mix(in srgb, var(--context-rule-color) 65%, var(--color-page-text));
+    background-color: var(--context-rule-color);
+    box-shadow: 0 0 0 2px var(--color-info-background);
+  }
+}
+
+.context-rule-description {
+  min-width: 0;
+
+  > .context-rule-heading, > span {
+    display: block;
+  }
+
+  > .context-rule-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 3px;
+  }
+
+  > span {
+    color: var(--color-muted);
+    font-size: .8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.context-rule-name {
+  color: var(--color-dark-border);
+  font-size: .85rem;
+  font-weight: 700;
 }
 
 .managed-option {
@@ -450,7 +686,7 @@ input[type='checkbox'] {
   }
 }
 
-#delete-local-file {
+#delete-local-file, .context-rule-delete {
   font-size: inherit;
   color: var(--color-link);
   text-decoration: underline;
@@ -462,6 +698,18 @@ input[type='checkbox'] {
   &:hover {
     color: var(--color-link-hover);
     text-decoration: none;
+  }
+}
+
+.context-rule-delete {
+  flex-shrink: 0;
+  font-size: .8rem;
+
+  &:disabled {
+    color: var(--color-muted);
+    text-decoration: none;
+    cursor: not-allowed;
+    opacity: .75;
   }
 }
 
@@ -622,6 +870,27 @@ dialog {
 @media screen and (max-width: 499px) {
   form {
     gap: 10px;
+  }
+
+  #context-rule-editor {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'scope-label'
+      'scope'
+      'target-label'
+      'target'
+      'url-label'
+      'url'
+      'save';
+
+    &.default-rule {
+      grid-template-areas:
+        'scope-label'
+        'scope'
+        'url-label'
+        'url'
+        'save';
+    }
   }
 
   dialog {

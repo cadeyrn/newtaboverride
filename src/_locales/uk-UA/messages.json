@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Скасувати"
   },
+  "context_rules_container_label": {
+    "message": "Контейнер Firefox"
+  },
+  "context_rules_container_none": {
+    "message": "Немає доступних контейнерів"
+  },
+  "context_rules_default_empty": {
+    "message": "Правило ще не налаштовано"
+  },
+  "context_rules_delete": {
+    "message": "Видалити"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Ви справді хочете видалити правило URL-адреси $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Видалити правило URL-адреси"
+  },
+  "context_rules_group_label": {
+    "message": "Назва групи вкладок"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Назва"
+  },
+  "context_rules_list_containers": {
+    "message": "Контейнери"
+  },
+  "context_rules_list_groups": {
+    "message": "Групи вкладок"
+  },
+  "context_rules_list_title": {
+    "message": "Огляд правил"
+  },
+  "context_rules_save": {
+    "message": "Зберегти правило"
+  },
+  "context_rules_scope_container": {
+    "message": "Контейнер"
+  },
+  "context_rules_scope_default": {
+    "message": "Стандартна"
+  },
+  "context_rules_scope_group": {
+    "message": "Група вкладок"
+  },
+  "context_rules_scope_label": {
+    "message": "Тип правила"
+  },
+  "context_rules_title": {
+    "message": "Керування правилами URL-адрес"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override дозволяє налаштувати сторінку, що буде відкриватися у новій вкладці."
   },
@@ -144,7 +198,7 @@
     "message": "Опції"
   },
   "url_description": {
-    "message": "Введена тут веб-сторінка буде відображатися при відкритті нової вкладки. Підтримуються лише веб-адреси, що починаються з https://, http:// або moz-extension://. Зверніть увагу, що доступ до локальних файлів відсутній через обмежження Firefox. Альтернативою є використання опції \"локальний файл\" або локального веб-сервера, наприклад MAMP або XAMPP. You can use the pipe character (\"|\") to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Підтримуються лише URL-адреси, що починаються з https://, http:// або moz-extension://. Доступ до локальних файлів за URL-адресою неможливий через обмеження Firefox. Для цього розгляньте можливість використання опції «Локальний файл» або локального вебсервера, наприклад MAMP або XAMPP. Для зазначення кількох URL-адрес можна використовувати символ вертикальної риски («|»). Потім одну з цих URL-адрес буде вибрано випадковим чином."
   },
   "url_title": {
     "message": "URL"

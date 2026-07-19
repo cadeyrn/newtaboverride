@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Batal"
   },
+  "context_rules_container_label": {
+    "message": "Kontainer Firefox"
+  },
+  "context_rules_container_none": {
+    "message": "Tidak ada kontainer yang tersedia"
+  },
+  "context_rules_default_empty": {
+    "message": "Belum ada aturan yang dikonfigurasi"
+  },
+  "context_rules_delete": {
+    "message": "Hapus"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Apakah Anda benar-benar ingin menghapus aturan URL $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Hapus aturan URL"
+  },
+  "context_rules_group_label": {
+    "message": "Nama grup tab"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Nama"
+  },
+  "context_rules_list_containers": {
+    "message": "Kontainer"
+  },
+  "context_rules_list_groups": {
+    "message": "Grup tab"
+  },
+  "context_rules_list_title": {
+    "message": "Ringkasan aturan"
+  },
+  "context_rules_save": {
+    "message": "Simpan aturan"
+  },
+  "context_rules_scope_container": {
+    "message": "Kontainer"
+  },
+  "context_rules_scope_default": {
+    "message": "Standar"
+  },
+  "context_rules_scope_group": {
+    "message": "Grup tab"
+  },
+  "context_rules_scope_label": {
+    "message": "Jenis aturan"
+  },
+  "context_rules_title": {
+    "message": "Kelola aturan URL"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override memungkinkan Anda untuk menyetel halaman secara otomatis setiap kali Anda membuka tab baru."
   },
@@ -144,7 +198,7 @@
     "message": "Opsi"
   },
   "url_description": {
-    "message": "Halaman web yang dimasukkan di sini ditampilkan saat membuka tab baru. Hanya URL yang dimulai dengan https://, http:// atau moz-extension:// yang didukung. Harap diperhatikan: Akses ke file lokal melalui URL tidak lagi dimungkinkan karena pembatasan Firefox. Harap pertimbangkan untuk menggunakan opsi “file lokal” atau server web lokal, misalnya melalui MAMP atau XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Hanya URL yang diawali dengan https://, http://, atau moz-extension:// yang didukung. Akses ke file lokal melalui URL tidak dimungkinkan karena pembatasan Firefox. Untuk tujuan ini, pertimbangkan untuk menggunakan opsi “file lokal” atau server web lokal, misalnya MAMP atau XAMPP. Anda dapat menggunakan karakter pipa (“|”) untuk memberikan beberapa URL. Salah satu URL tersebut kemudian akan dipilih secara acak."
   },
   "url_title": {
     "message": "URL"

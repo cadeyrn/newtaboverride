@@ -30,54 +30,133 @@ class NewTab {
    * @returns {Promise<void>}
    */
   static async init () {
-    const options = await Settings.get();
+    const [settings, tab] = await Promise.all([
+      Settings.get(),
+      browser.tabs.getCurrent()
+    ]);
+    const { managedKeys, values: options } = settings;
+    let contextTab = null;
+    const hasContainerRules = Object.keys(options.context_rules.containers).length > 0;
+    const hasUrlRules = hasContainerRules || Object.keys(options.context_rules.groups).length > 0;
 
-    switch (options.type) {
+    if (tab && hasContainerRules) {
+      if (tab.openerTabId > 0) {
+        contextTab = await browser.tabs.get(tab.openerTabId);
+      }
+
+      // Firefox may create the temporary internal new tab page in the default container even though the user opened
+      // the tab from a container tab. Use the previously active tab only to resolve URL rules; the replacement tab
+      // still keeps the container Firefox chose for the temporary new tab.
+      if (!contextTab && tab.cookieStoreId === 'firefox-default') {
+        const tabs = await browser.tabs.query({ windowId: tab.windowId });
+        const otherTabs = tabs.filter(candidate => candidate.id !== tab.id);
+        const contextTabFromSuccessor = otherTabs.find(candidate => candidate.successorTabId === tab.id);
+
+        if (contextTabFromSuccessor) {
+          contextTab = contextTabFromSuccessor;
+        }
+        else {
+          contextTab = otherTabs.sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ?? null;
+        }
+      }
+    }
+
+    let { type, url } = options;
+    const contextUrl = await NewTab.#findContextUrl(options, managedKeys, tab, contextTab);
+
+    if (contextUrl) {
+      type = 'custom_url';
+      url = contextUrl;
+    }
+
+    switch (type) {
       case 'custom_url':
-        let { url } = options;
-
         if (url.indexOf('|') > -1) {
-          const urls = options.url.split('|');
+          const urls = url.split('|');
           const randIndex = Math.floor(Math.random() * urls.length);
           url = urls[randIndex].trim();
         }
 
         // return early if there is no valid url
         if (!Utils.uriRegex.test(url)) {
-          await NewTab.#openNewTabPage('', false);
+          const openOptionsPage = url.trim() !== '' || !hasUrlRules;
+
+          await NewTab.#openNewTabPage('', false, tab, openOptionsPage);
           break;
         }
 
-        await NewTab.#openNewTabPage(url, options.focus_website);
+        await NewTab.#openNewTabPage(url, options.focus_website, tab);
         break;
       case 'homepage':
         const homepage = await browser.browserSettings.homepageOverride.get({});
         const firstHomepage = homepage.value.split('|')[0];
 
         if (!Utils.uriRegex.test(firstHomepage)) {
-          await NewTab.#openNewTabPage('https://' + firstHomepage, false);
+          await NewTab.#openNewTabPage('https://' + firstHomepage, false, tab);
           break;
         }
 
-        await NewTab.#openNewTabPage(firstHomepage, options.focus_website);
+        await NewTab.#openNewTabPage(firstHomepage, options.focus_website, tab);
         break;
       case 'background_color':
         document.body.style.background = options.background_color;
         break;
       case 'feed':
-        await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website);
+        await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#feedPage), options.focus_website, tab);
         break;
       case 'local_file':
         if (options.local_file) {
-          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFilePage), options.focus_website);
+          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFilePage), options.focus_website, tab);
         }
         else {
-          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFileMissingPage), options.focus_website);
+          await NewTab.#openNewTabPage(browser.runtime.getURL(NewTab.#localFileMissingPage), options.focus_website, tab);
         }
         break;
       default:
-        await NewTab.#openNewTabPage('', false);
+        await NewTab.#openNewTabPage('', false, tab);
     }
+  }
+
+  /**
+   * Find the URL assigned to the current tab group or container. Named tab group rules take precedence over container
+   * rules. Local context rules must not override enterprise-managed new tab settings, but enterprise-managed context
+   * rules may intentionally override the managed default URL.
+   *
+   * @param {object} options - current settings
+   * @param {string[]} managedKeys - settings controlled by enterprise policies
+   * @param {tabs.Tab|null} tab - temporary internal new tab page
+   * @param {tabs.Tab|null} contextTab - source tab used to identify matching container rules
+   *
+   * @returns {Promise<string>} - matching context-specific URL or an empty string
+   */
+  static async #findContextUrl (options, managedKeys, tab, contextTab) {
+    const hasManagedContextRules = managedKeys.includes('context_rules');
+
+    if (options.type !== 'custom_url' ||
+        (!hasManagedContextRules && (managedKeys.includes('type') || managedKeys.includes('url')))) {
+      return '';
+    }
+
+    if (tab?.groupId > -1) {
+      try {
+        const group = await browser.tabGroups.get(tab.groupId);
+
+        if (group.title && Object.hasOwn(options.context_rules.groups, group.title)) {
+          return options.context_rules.groups[group.title];
+        }
+      }
+      catch {
+        // The group may disappear while the internal new tab page is loading.
+      }
+    }
+
+    const cookieStoreId = contextTab?.cookieStoreId || tab?.cookieStoreId;
+
+    if (cookieStoreId && Object.hasOwn(options.context_rules.containers, cookieStoreId)) {
+      return options.context_rules.containers[cookieStoreId];
+    }
+
+    return '';
   }
 
   /**
@@ -85,17 +164,24 @@ class NewTab {
    *
    * @param {string} url - url to open
    * @param {boolean} focus_website - whether the focus should be on the web page instead of the address bar
+   * @param {tabs.Tab|null} tab - temporary internal new tab page
+   * @param {boolean} openOptionsPage - whether an empty URL should open the settings page
    *
    * @returns {Promise<void>}
    */
-  static async #openNewTabPage (url, focus_website) {
+  static async #openNewTabPage (url, focus_website, tab, openOptionsPage = true) {
+    const newTabPageUrl = browser.runtime.getURL('html/newtab.html');
+
     if (url.trim() === '') {
+      if (!openOptionsPage) {
+        void browser.history.deleteUrl({ url: newTabPageUrl });
+
+        return;
+      }
+
       /* eslint-disable-next-line no-param-reassign */
       url = browser.runtime.getURL('html/options.html');
     }
-
-    const newTabPageUrl = browser.runtime.getURL('html/newtab.html');
-    const tab = await browser.tabs.getCurrent();
 
     if (!tab) {
       void browser.history.deleteUrl({ url: newTabPageUrl });
@@ -105,38 +191,14 @@ class NewTab {
 
     // set focus on website
     if (focus_website) {
-      let sourceTab = null;
-
-      if (tab.openerTabId > 0) {
-        sourceTab = await browser.tabs.get(tab.openerTabId);
-      }
-
-      // Firefox may create the temporary internal new tab page in the default container even though the user opened
-      // the tab from a container tab. Reusing the previously active tab as the source keeps the replacement tab in the
-      // expected container and avoids an unnecessary reopening by other tab-management extensions.
-      if (!sourceTab && tab.cookieStoreId === 'firefox-default') {
-        const tabs = await browser.tabs.query({ windowId: tab.windowId });
-        const otherTabs = tabs.filter(candidate => candidate.id !== tab.id);
-        const sourceTabFromSuccessor = otherTabs.find(candidate => candidate.successorTabId === tab.id);
-
-        if (sourceTabFromSuccessor) {
-          sourceTab = sourceTabFromSuccessor;
-        }
-        else {
-          sourceTab = otherTabs.sort((a, b) => b.lastAccessed - a.lastAccessed)[0] ?? null;
-        }
-      }
-
+      // keep the replacement tab in the container Firefox chose for the temporary new tab. Copying the context tab or
+      // opener would make unrelated new tabs look related again for Firefox and tab-management extensions
       const createdTabProperties = {
         url,
         index: tab.index,
         windowId: tab.windowId,
-        cookieStoreId: sourceTab?.cookieStoreId || tab.cookieStoreId
+        cookieStoreId: tab.cookieStoreId
       };
-
-      if (sourceTab) {
-        createdTabProperties.openerTabId = sourceTab.id;
-      }
 
       const createdTab = await browser.tabs.create(createdTabProperties);
 
@@ -154,8 +216,8 @@ class NewTab {
     }
     // set focus on address bar
     else {
-      // wait until Firefox has accepted the tab update before cleaning up the temporary newtab.html history entry.
-      // Running deleteUrl() immediately after tabs.update() may otherwise leave the internal page in history.
+      // wait until Firefox has accepted the tab update before cleaning up the temporary newtab.html history entry,
+      // running deleteUrl() immediately after tabs.update() may otherwise leave the internal page in history
       await browser.tabs.update(tab.id, { url, loadReplace: true });
       void browser.history.deleteUrl({ url: newTabPageUrl });
     }

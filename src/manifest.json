@@ -39,11 +39,13 @@
   },
   "permissions": [
     "browserSettings",
+    "contextualIdentities",
     "cookies",
     "history",
     "menus",
     "sessions",
     "storage",
+    "tabGroups",
     "tabs"
   ],
   "host_permissions": [

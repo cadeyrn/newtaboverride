@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Anuluj"
   },
+  "context_rules_container_label": {
+    "message": "Kontener Firefoksa"
+  },
+  "context_rules_container_none": {
+    "message": "Brak dostępnych kontenerów"
+  },
+  "context_rules_default_empty": {
+    "message": "Nie skonfigurowano jeszcze żadnej reguły"
+  },
+  "context_rules_delete": {
+    "message": "Usuń"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Czy na pewno chcesz usunąć regułę adresu URL $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Usuń regułę adresu URL"
+  },
+  "context_rules_group_label": {
+    "message": "Nazwa grupy kart"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Nazwa"
+  },
+  "context_rules_list_containers": {
+    "message": "Kontenery"
+  },
+  "context_rules_list_groups": {
+    "message": "Grupy kart"
+  },
+  "context_rules_list_title": {
+    "message": "Przegląd reguł"
+  },
+  "context_rules_save": {
+    "message": "Zapisz regułę"
+  },
+  "context_rules_scope_container": {
+    "message": "Kontener"
+  },
+  "context_rules_scope_default": {
+    "message": "Standardowa"
+  },
+  "context_rules_scope_group": {
+    "message": "Grupa kart"
+  },
+  "context_rules_scope_label": {
+    "message": "Typ reguły"
+  },
+  "context_rules_title": {
+    "message": "Zarządzaj regułami adresów URL"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override pozwala na ustawienie strony, która wyświetlana jest po każdym otwarciu nowej karty."
   },
@@ -144,7 +198,7 @@
     "message": "Opcja"
   },
   "url_description": {
-    "message": "Wprowadzona tutaj strona wyświetlana jest po otwarciu nowej karty. Obsługiwane są tylko adresy rozpoczynające się od https://, http:// lub moz-extension://. Uwaga: Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest już możliwy z powodu ograniczeń Firefoksa. Rozważ użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP. You can use the pipe character („|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Obsługiwane są tylko adresy URL rozpoczynające się od https://, http:// lub moz-extension://. Dostęp do plików lokalnych za pośrednictwem adresu URL nie jest możliwy z powodu ograniczeń Firefoksa. Rozważ w tym celu użycie opcji „plik lokalny” lub lokalnego serwera WWW, na przykład MAMP lub XAMPP. Za pomocą znaku potoku („|”) można podać wiele adresów URL. Jeden z nich zostanie następnie wybrany losowo."
   },
   "url_title": {
     "message": "Adres URL"

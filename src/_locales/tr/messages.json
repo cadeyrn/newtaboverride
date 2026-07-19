@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "İptal"
   },
+  "context_rules_container_label": {
+    "message": "Firefox kapsayıcısı"
+  },
+  "context_rules_container_none": {
+    "message": "Kullanılabilir kapsayıcı yok"
+  },
+  "context_rules_default_empty": {
+    "message": "Henüz yapılandırılmış bir kural yok"
+  },
+  "context_rules_delete": {
+    "message": "Kaldır"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "$1 URL kuralını gerçekten kaldırmak istiyor musunuz?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "URL kuralını kaldır"
+  },
+  "context_rules_group_label": {
+    "message": "Sekme grubu adı"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Ad"
+  },
+  "context_rules_list_containers": {
+    "message": "Kapsayıcılar"
+  },
+  "context_rules_list_groups": {
+    "message": "Sekme grupları"
+  },
+  "context_rules_list_title": {
+    "message": "Kural özeti"
+  },
+  "context_rules_save": {
+    "message": "Kuralı kaydet"
+  },
+  "context_rules_scope_container": {
+    "message": "Kapsayıcı"
+  },
+  "context_rules_scope_default": {
+    "message": "Standart"
+  },
+  "context_rules_scope_group": {
+    "message": "Sekme grubu"
+  },
+  "context_rules_scope_label": {
+    "message": "Kural türü"
+  },
+  "context_rules_title": {
+    "message": "URL kurallarını yönet"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override yeni bir sekme açtığınızda gösterilecek sayfayı seçmenizi sağlar."
   },
@@ -144,7 +198,7 @@
     "message": "Ayarlar"
   },
   "url_description": {
-    "message": "Burada girilen sayfa yeni sekme açıldığında gösterilecektir. Sadece https://, http:// ve moz-extension:// ile başlayan linkler desteklenmektedir. Firefox sınırlandırmaları nedeniyle URL ile yerel dosyalara erişim mümkün değil, bu nedenle “yerel dosya” ya da MMAMP ve XAMPP gibi yerel web sunucularını kullanın. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Yalnızca https://, http:// veya moz-extension:// ile başlayan URL’ler desteklenir. Firefox kısıtlamaları nedeniyle yerel dosyalara URL üzerinden erişmek mümkün değildir. Bunun için lütfen “yerel dosya” seçeneğini veya MAMP ya da XAMPP gibi yerel bir web sunucusunu kullanmayı değerlendirin. Birden fazla URL belirtmek için dikey çizgi (“|”) karakterini kullanabilirsiniz. Ardından bu URL’lerden biri rastgele seçilir."
   },
   "url_title": {
     "message": "URL"

@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Pśetergnuś"
   },
+  "context_rules_container_label": {
+    "message": "Firefoxowy kontejner"
+  },
+  "context_rules_container_none": {
+    "message": "Žedne kontejnery k dispoziciji"
+  },
+  "context_rules_default_empty": {
+    "message": "Hyšći žedno pšawidło konfigurěrowane"
+  },
+  "context_rules_delete": {
+    "message": "Wótwónoźeś"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Cośo URL-pšawidło $1 napšawdu wótpóraś?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "URL-pšawidło wótpóraś"
+  },
+  "context_rules_group_label": {
+    "message": "Mě kupki rejtarkow"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Mě"
+  },
+  "context_rules_list_containers": {
+    "message": "Kontejnery"
+  },
+  "context_rules_list_groups": {
+    "message": "Kupki rejtarkow"
+  },
+  "context_rules_list_title": {
+    "message": "Pśeglěd pšawidłow"
+  },
+  "context_rules_save": {
+    "message": "Pšawidło składowaś"
+  },
+  "context_rules_scope_container": {
+    "message": "Kontejner"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Kupka rejtarkow"
+  },
+  "context_rules_scope_label": {
+    "message": "Typ pšawidła"
+  },
+  "context_rules_title": {
+    "message": "URL-pšawidła zastojaś"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "Z New Tab Override móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },
@@ -144,7 +198,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "How zapódany webbok se pśi wócynjanju nowego rejtarka pokazujo. Pódpěraju se jano URL, kótarež se z https://, http:// abo moz-extension:// zachopinaju. Glědajśo: Pśistup na lokalne dataje pśez URL njejo wěcej móžno restrikcijow Firefox dla. Pšosym rozwaž wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP. Znamuško Pipe („|“) dajo se wužywaś, aby někotare URL pódało. Jaden z toś tych URL se pón pó pśipadowem principje wuběra."
+    "message": "Pódpěraju se jano URL, kótarež se z https://, http:// abo moz-extension:// zachopinaju. Pśistup na lokalne dataje pśez URL njejo móžno restrikcijow Firefox dla. Pšosym rozwaž za to wužywanje opcije „lokalna dataja“ abo lokalnego webserwera, na pśikład pśez MAMP abo XAMPP. Znamuško Pipe („|“) dajo se wužywaś, aby někotare URL pódało. Jaden z toś tych URL se pón pó pśipadowem principje wuběra."
   },
   "url_title": {
     "message": "URL"

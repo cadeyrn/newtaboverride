@@ -12,14 +12,14 @@ class FeedReader {
   /**
    * Timestamp of the last successful feed fetch
    *
-   * @type {number | null}
+   * @type {number|null}
    */
   static #lastFetched = null;
 
   /**
    * Cached promise resolving to the current feed items
    *
-   * @type {Promise<object[]> | null}
+   * @type {Promise<object[]>|null}
    */
   static #feedItems = null;
 

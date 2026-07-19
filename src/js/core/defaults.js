@@ -8,6 +8,10 @@ class Defaults {
    */
   static #values = {
     background_color: '#ffffff',
+    context_rules: {
+      containers: {},
+      groups: {}
+    },
     focus_website: false,
     local_file: '',
     storage_schema: '1',

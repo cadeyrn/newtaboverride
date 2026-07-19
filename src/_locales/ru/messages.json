@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Отмена"
   },
+  "context_rules_container_label": {
+    "message": "Контейнер Firefox"
+  },
+  "context_rules_container_none": {
+    "message": "Нет доступных контейнеров"
+  },
+  "context_rules_default_empty": {
+    "message": "Правило ещё не настроено"
+  },
+  "context_rules_delete": {
+    "message": "Удалить"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Вы действительно хотите удалить правило URL $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Удалить правило URL"
+  },
+  "context_rules_group_label": {
+    "message": "Название группы вкладок"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Название"
+  },
+  "context_rules_list_containers": {
+    "message": "Контейнеры"
+  },
+  "context_rules_list_groups": {
+    "message": "Группы вкладок"
+  },
+  "context_rules_list_title": {
+    "message": "Обзор правил"
+  },
+  "context_rules_save": {
+    "message": "Сохранить правило"
+  },
+  "context_rules_scope_container": {
+    "message": "Контейнер"
+  },
+  "context_rules_scope_default": {
+    "message": "Стандартный"
+  },
+  "context_rules_scope_group": {
+    "message": "Группа вкладок"
+  },
+  "context_rules_scope_label": {
+    "message": "Тип правила"
+  },
+  "context_rules_title": {
+    "message": "Управление правилами URL"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override allows you to set the page that shows whenever you open a new tab."
   },
@@ -144,7 +198,7 @@
     "message": "Опции"
   },
   "url_description": {
-    "message": "Введенная здесь веб-страница будет отображаться при открытии новой вкладки. Поддерживаются только URL-адреса начинающиеся с https://, http:// или hmoz-extension://. Обратите внимание: Доступ к локальным файлам по URL больше невозможен из-за ограничений Firefox. Пожалуйста, подумайте об использовании опции \"Локальный файл\" или локального веб-сервера, например, через MAMP или XAMPP. You can use the pipe character (\"|\") to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Поддерживаются только URL-адреса, начинающиеся с https://, http:// или moz-extension://. Доступ к локальным файлам по URL невозможен из-за ограничений Firefox. Для этого рассмотрите возможность использования опции «Локальный файл» или локального веб-сервера, например MAMP или XAMPP. Для указания нескольких URL можно использовать символ вертикальной черты («|»). Затем один из этих URL будет выбран случайным образом."
   },
   "url_title": {
     "message": "URL-адрес"

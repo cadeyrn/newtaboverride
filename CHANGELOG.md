@@ -4,6 +4,12 @@
 
 ### Version 19.0.0 (Work in Progress)
 
+#### Enhancements
+
+- Added support for assigning different new tab URLs to tab groups or tab containers. Tab group rules take
+  precedence over container rules. This requires new silent permissions to read contextual identities and tab groups,
+  see [#393](https://github.com/cadeyrn/newtaboverride/issues/393)
+
 #### Bugfixes
 
 - Fixed unexpected behavior with tab groups and container tabs when the option to focus the website instead of the

@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Avbryt"
   },
+  "context_rules_container_label": {
+    "message": "Firefox-behållare"
+  },
+  "context_rules_container_none": {
+    "message": "Inga behållare är tillgängliga"
+  },
+  "context_rules_default_empty": {
+    "message": "Ingen regel konfigurerad ännu"
+  },
+  "context_rules_delete": {
+    "message": "Ta bort"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Vill du verkligen ta bort URL-regeln $1?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "Ta bort URL-regel"
+  },
+  "context_rules_group_label": {
+    "message": "Flikgruppens namn"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Namn"
+  },
+  "context_rules_list_containers": {
+    "message": "Behållare"
+  },
+  "context_rules_list_groups": {
+    "message": "Flikgrupper"
+  },
+  "context_rules_list_title": {
+    "message": "Regelöversikt"
+  },
+  "context_rules_save": {
+    "message": "Spara regel"
+  },
+  "context_rules_scope_container": {
+    "message": "Behållare"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Flikgrupp"
+  },
+  "context_rules_scope_label": {
+    "message": "Regeltyp"
+  },
+  "context_rules_title": {
+    "message": "Hantera URL-regler"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "New Tab Override låter dig ställa in den sidan som visas när du öppnar en ny flik."
   },
@@ -144,7 +198,7 @@
     "message": "Alternativ"
   },
   "url_description": {
-    "message": "Webbsidan som anges här visas när du öppnar en ny flik. Endast URL:er som börjar med https://, http:// eller moz-extension:// stöds. Observera: Åtkomst till lokala filer via URL är inte längre möjligt på grund av begränsningar i Firefox. Överväg gärna att använda alternativet “lokal fil” eller en lokal webbserver, till exempel via MAMP eller XAMPP. You can use the pipe character (“|”) to provide multiple URLs. One of these URLs will then randomly be selected."
+    "message": "Endast webbadresser som börjar med https://, http:// eller moz-extension:// stöds. Åtkomst till lokala filer via en webbadress är inte möjlig på grund av begränsningar i Firefox. Överväg för detta ändamål att använda alternativet ”lokal fil” eller en lokal webbserver, till exempel MAMP eller XAMPP. Du kan använda pipe-tecknet (”|”) för att ange flera webbadresser. En av dessa väljs sedan slumpmässigt."
   },
   "url_title": {
     "message": "URL"

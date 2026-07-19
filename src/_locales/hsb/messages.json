@@ -14,6 +14,60 @@
   "common_dialog_btn_cancel": {
     "message": "Přetorhnyć"
   },
+  "context_rules_container_label": {
+    "message": "Firefoxowy kontejner"
+  },
+  "context_rules_container_none": {
+    "message": "Žane kontejnery k dispoziciji"
+  },
+  "context_rules_default_empty": {
+    "message": "Hišće žane prawidło konfigurowane"
+  },
+  "context_rules_delete": {
+    "message": "Wotstronić"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "Chceće URL-prawidło $1 woprawdźe wotstronić?"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "URL-prawidło wotstronić"
+  },
+  "context_rules_group_label": {
+    "message": "Mjeno skupiny rajtarkow"
+  },
+  "context_rules_group_placeholder": {
+    "message": "Mjeno"
+  },
+  "context_rules_list_containers": {
+    "message": "Kontejnery"
+  },
+  "context_rules_list_groups": {
+    "message": "Skupiny rajtarkow"
+  },
+  "context_rules_list_title": {
+    "message": "Přehlad prawidłow"
+  },
+  "context_rules_save": {
+    "message": "Prawidło składować"
+  },
+  "context_rules_scope_container": {
+    "message": "Kontejner"
+  },
+  "context_rules_scope_default": {
+    "message": "Standard"
+  },
+  "context_rules_scope_group": {
+    "message": "Skupina rajtarkow"
+  },
+  "context_rules_scope_label": {
+    "message": "Typ prawidła"
+  },
+  "context_rules_title": {
+    "message": "URL-prawidła zrjadować"
+  },
+  "context_rules_url_label": {
+    "message": "URL"
+  },
   "extension_description": {
     "message": "Z New Tab Override móžeš stronu postajić, kotraž so při wočinjenju noweho rajtarka pokazuje."
   },
@@ -144,7 +198,7 @@
     "message": "Opcija"
   },
   "url_description": {
-    "message": "Tu zapodata webstrona so při wočinjenju noweho rajtarka pokazuje. Podpěruja so jenož URL, kotrež so z https://, http:// abo moz-extension:// započinaja. Kedźbu: Přistup na lokalne dataje přez URL restrikcijow Firefox dla hižo móžny njeje. Prošu rozwaž wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP. Znamješko Pipe („|“) da so wužiwać, zo by wjacore URL podało. Jedyn z tutych URL so potom po připadowym principje wuběra."
+    "message": "Podpěruja so jenož URL, kotrež so z https://, http:// abo moz-extension:// započinaja. Přistup na lokalne dataje přez URL restrikcijow Firefox dla móžny njeje. Prošu rozwaž za to wužiwanje opcije „lokalna dataja“ abo lokalneho webserwera, na přikład přez MAMP abo XAMPP. Znamješko Pipe („|“) da so wužiwać, zo by wjacore URL podało. Jedyn z tutych URL so potom po připadowym principje wuběra."
   },
   "url_title": {
     "message": "URL"
