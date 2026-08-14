@@ -65,6 +65,9 @@
   "context_rules_url_label": {
     "message": "URL"
   },
+  "custom_url_iframe_warning": {
+    "message": "De nombreux sites web ne peuvent pas être intégrés dans un iFrame. Si l'administrateur définit des règles de sécurité correspondantes (X-Frame-Options ou Content-Security-Policy), la page intégrée reste vide."
+  },
   "extension_description": {
     "message": "New Tab Override vous permet de définir la page qui s'affiche à chaque fois que vous ouvrez un nouvel onglet."
   },
@@ -193,6 +196,9 @@
   },
   "type_options_custom_url": {
     "message": "URL personnalisée"
+  },
+  "type_options_custom_url_iframe": {
+    "message": "URL personnalisée (iFrame)"
   },
   "type_options_feed": {
     "message": "Actualité Mozilla (en allemand)"

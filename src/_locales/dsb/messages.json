@@ -65,6 +65,9 @@
   "context_rules_url_label": {
     "message": "URL"
   },
+  "custom_url_iframe_warning": {
+    "message": "Many websites cannot be embedded in an iFrame. If the website owner sets the appropriate security rules (X-Frame-Options or Content-Security-Policy), the embedded page will remain blank."
+  },
   "extension_description": {
     "message": "Z New Tab Override móžoš bok póstajiś, kótaryž se pśi wócynjanju nowego rejtarka pokazujo."
   },
@@ -193,6 +196,9 @@
   },
   "type_options_custom_url": {
     "message": "Wót wužywarja definěrowany URL"
+  },
+  "type_options_custom_url_iframe": {
+    "message": "Custom URL (iFrame)"
   },
   "type_options_feed": {
     "message": "Nowinki Mozilla (nimski)"

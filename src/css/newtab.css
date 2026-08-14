@@ -1,3 +1,15 @@
+body.iframe-mode {
+  margin: 0;
+  overflow: hidden;
+}
+
+iframe.newtab-frame {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: rgb(28, 27, 34);

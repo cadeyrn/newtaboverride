@@ -65,6 +65,9 @@
   "context_rules_url_label": {
     "message": "URL"
   },
+  "custom_url_iframe_warning": {
+    "message": "Viele Websites lassen sich nicht in einem iFrame einbinden. Setzt der Betreiber entsprechende Sicherheitsregeln (X-Frame-Options oder Content-Security-Policy), bleibt die eingebettete Seite leer."
+  },
   "extension_description": {
     "message": "Mit New Tab Override kann die Seite festgelegt werden, welche beim Öffnen eines neuen Tabs angezeigt wird."
   },
@@ -193,6 +196,9 @@
   },
   "type_options_custom_url": {
     "message": "Benutzerdefinierte URL"
+  },
+  "type_options_custom_url_iframe": {
+    "message": "Benutzerdefinierte URL (iFrame)"
   },
   "type_options_feed": {
     "message": "Mozilla-Neuigkeiten"

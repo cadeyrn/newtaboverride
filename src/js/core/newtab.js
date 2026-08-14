@@ -18,6 +18,63 @@ class NewTab {
   static #feedPage = 'html/feed.html';
 
   /**
+   * Resolve URL input for custom URL modes, including random selection when multiple URLs are configured.
+   *
+   * @param {string} url - configured URL(s)
+   * @param {boolean} hasUrlRules - whether any context URL rules are configured
+   *
+   * @returns {{isValid: boolean, openOptionsPage: boolean, url: string}} - resolved URL and fallback behavior
+   */
+  static #resolveCustomUrl (url, hasUrlRules) {
+    let resolvedUrl = url;
+
+    if (resolvedUrl.indexOf('|') > -1) {
+      const urls = url.split('|');
+      const randIndex = Math.floor(Math.random() * urls.length);
+
+      resolvedUrl = urls[randIndex].trim();
+    }
+
+    if (!Utils.uriRegex.test(resolvedUrl)) {
+      return {
+        isValid: false,
+        openOptionsPage: resolvedUrl.trim() !== '' || !hasUrlRules,
+        url: ''
+      };
+    }
+
+    return {
+      isValid: true,
+      openOptionsPage: true,
+      url: resolvedUrl
+    };
+  }
+
+  /**
+   * Render a custom URL inside an iframe on the internal new tab page.
+   *
+   * @param {string} url - URL to load in the iframe
+   * @param {boolean} focusWebsite - whether focus should move into the embedded page
+   *
+   * @returns {void}
+   */
+  static #openNewTabIFrame (url, focusWebsite) {
+    const $frame = document.createElement('iframe');
+
+    document.body.classList.add('iframe-mode');
+    $frame.classList.add('newtab-frame');
+    $frame.src = url;
+
+    if (focusWebsite) {
+      $frame.addEventListener('load', () => {
+        $frame.focus();
+      }, { once: true });
+    }
+
+    document.body.appendChild($frame);
+  }
+
+  /**
    * This method is used to navigate to the set new tab page.
    *
    * @returns {Promise<void>}
@@ -54,31 +111,30 @@ class NewTab {
       }
     }
 
-    let { type, url } = options;
+    const { type, url } = options;
     const contextUrl = await NewTab.#findContextUrl(options, managedKeys, tab, contextTab);
-
-    if (contextUrl) {
-      type = 'custom_url';
-      url = contextUrl;
-    }
+    const resolvedUrl = contextUrl || url;
 
     switch (type) {
       case 'custom_url':
-        if (url.indexOf('|') > -1) {
-          const urls = url.split('|');
-          const randIndex = Math.floor(Math.random() * urls.length);
-          url = urls[randIndex].trim();
-        }
+        const customUrl = NewTab.#resolveCustomUrl(resolvedUrl, hasUrlRules);
 
-        // return early if there is no valid url
-        if (!Utils.uriRegex.test(url)) {
-          const openOptionsPage = url.trim() !== '' || !hasUrlRules;
-
-          await NewTab.#openNewTabPage('', false, tab, openOptionsPage);
+        if (!customUrl.isValid) {
+          await NewTab.#openNewTabPage('', false, tab, customUrl.openOptionsPage);
           break;
         }
 
-        await NewTab.#openNewTabPage(url, options.focus_website, tab);
+        await NewTab.#openNewTabPage(customUrl.url, options.focus_website, tab);
+        break;
+      case 'custom_url_iframe':
+        const iframeUrl = NewTab.#resolveCustomUrl(resolvedUrl, hasUrlRules);
+
+        if (!iframeUrl.isValid) {
+          await NewTab.#openNewTabPage('', false, tab, iframeUrl.openOptionsPage);
+          break;
+        }
+
+        NewTab.#openNewTabIFrame(iframeUrl.url, options.focus_website);
         break;
       case 'homepage':
         const homepage = await browser.browserSettings.homepageOverride.get({});
@@ -136,7 +192,7 @@ class NewTab {
   static async #findContextUrl (options, managedKeys, tab, contextTab) {
     const hasManagedContextRules = managedKeys.includes('context_rules');
 
-    if (options.type !== 'custom_url' ||
+    if (!['custom_url', 'custom_url_iframe'].includes(options.type) ||
         (!hasManagedContextRules && (managedKeys.includes('type') || managedKeys.includes('url')))) {
       return '';
     }

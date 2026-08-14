@@ -15,7 +15,7 @@ class Settings {
    *
    * @type {string[]}
    */
-  static #supportedManagedTypes = ['background_color', 'custom_url', 'homepage'];
+  static #supportedManagedTypes = ['background_color', 'custom_url', 'custom_url_iframe', 'homepage'];
 
   /**
    * Regular expression used to validate managed background colors.

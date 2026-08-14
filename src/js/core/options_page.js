@@ -22,6 +22,7 @@ class OptionsPage {
     $contextRuleEditor: document.getElementById('context-rule-editor'),
     $contextRuleGroup: document.getElementById('context-rule-group'),
     $contextRuleGroupLabel: document.getElementById('context-rule-group-label'),
+    $customUrlIframeOption: document.getElementById('custom-url-iframe-option'),
     $contextRules: document.getElementById('context-rules'),
     $contextRulesListManagedBadge: document.getElementById('context-rules-list-managed-badge'),
     $contextRulesManagedBadge: document.getElementById('context-rules-managed-badge'),
@@ -194,6 +195,7 @@ class OptionsPage {
     let showFocusOption = false;
     let showClearOption = false;
     let showBackgroundColorOption = false;
+    let showCustomUrlIframeOption = false;
     let showLocalFileOption = false;
     let showLocalFileDeleteButton = false;
     let showContextRulesOption = false;
@@ -208,6 +210,13 @@ class OptionsPage {
       showContextRulesOption = true;
       showFocusOption = true;
       showClearOption = true;
+    }
+
+    if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'custom_url_iframe') {
+      showContextRulesOption = true;
+      showCustomUrlIframeOption = true;
+      showFocusOption = true;
+      showClearOption = false;
     }
 
     if (OptionsPage.#$elements.$type.options[OptionsPage.#$elements.$type.selectedIndex].value === 'local_file') {
@@ -236,6 +245,7 @@ class OptionsPage {
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$focusOption, showFocusOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$clearOption, showClearOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$backgroundColorOption, showBackgroundColorOption);
+    OptionsPage.#toggleVisibility(OptionsPage.#$elements.$customUrlIframeOption, showCustomUrlIframeOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileOption, showLocalFileOption);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$localFileDeleteButton, showLocalFileDeleteButton);
     OptionsPage.#toggleVisibility(OptionsPage.#$elements.$contextRulesOption, showContextRulesOption);
