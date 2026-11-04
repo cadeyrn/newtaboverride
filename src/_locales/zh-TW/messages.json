@@ -1,0 +1,221 @@
+{
+  "background_color_title": {
+    "message": "背景顏色"
+  },
+  "clear_addressbar_description": {
+    "message": "目前 WebExtensions 尚不支援自動清空網址列或選取其中的網址；這需要 Mozilla 修改相關功能。"
+  },
+  "clear_addressbar_title": {
+    "message": "清空網址列／選取網址"
+  },
+  "common_dialog_btn_cancel": {
+    "message": "取消"
+  },
+  "context_rules_container_label": {
+    "message": "Firefox 容器"
+  },
+  "context_rules_container_none": {
+    "message": "沒有可用的容器"
+  },
+  "context_rules_default_empty": {
+    "message": "尚未設定任何規則"
+  },
+  "context_rules_delete": {
+    "message": "移除"
+  },
+  "context_rules_delete_confirmation": {
+    "message": "確定要移除網址規則 $1 嗎？"
+  },
+  "context_rules_delete_dialog_title": {
+    "message": "移除網址規則"
+  },
+  "context_rules_group_label": {
+    "message": "分頁群組名稱"
+  },
+  "context_rules_group_placeholder": {
+    "message": "名稱"
+  },
+  "context_rules_list_containers": {
+    "message": "容器"
+  },
+  "context_rules_list_groups": {
+    "message": "分頁群組"
+  },
+  "context_rules_list_title": {
+    "message": "規則總覽"
+  },
+  "context_rules_save": {
+    "message": "儲存規則"
+  },
+  "context_rules_scope_container": {
+    "message": "容器"
+  },
+  "context_rules_scope_default": {
+    "message": "一般"
+  },
+  "context_rules_scope_group": {
+    "message": "分頁群組"
+  },
+  "context_rules_scope_label": {
+    "message": "規則類型"
+  },
+  "context_rules_title": {
+    "message": "管理網址規則"
+  },
+  "context_rules_url_label": {
+    "message": "網址"
+  },
+  "extension_description": {
+    "message": "New Tab Override 可讓您自訂開啟新分頁時顯示的頁面。"
+  },
+  "extension_name": {
+    "message": "New Tab Override"
+  },
+  "feed_published_at": {
+    "message": "發布日期："
+  },
+  "feed_read_more": {
+    "message": "閱讀更多…"
+  },
+  "feed_title": {
+    "message": "Mozilla 新聞"
+  },
+  "focus_website_description": {
+    "message": "將焦點設在網頁，而非網址列"
+  },
+  "focus_website_title": {
+    "message": "焦點"
+  },
+  "github_link": {
+    "message": "在 GitHub 上查看 New Tab Override"
+  },
+  "github_notice": {
+    "message": "要提出功能建議或回報問題嗎？請前往 GitHub 提交 Issue："
+  },
+  "homepage_description": {
+    "message": "啟用此選項後，Firefox 也會將首頁設為新分頁頁面。您可以在網址列輸入 about:preferences#home 變更首頁。僅支援以 https:// 或 http:// 開頭的首頁網址。如果設定了多個首頁，New Tab Override 會使用第一個。"
+  },
+  "learn_more": {
+    "message": "進一步了解"
+  },
+  "local_file_delete_confirmation": {
+    "message": "確定要從擴充套件的儲存空間刪除此檔案嗎？"
+  },
+  "local_file_delete_text": {
+    "message": "刪除現有檔案"
+  },
+  "local_file_description": {
+    "message": "由於 Firefox 的限制，擴充套件無法直接讀取本機檔案。New Tab Override 可讓您將本機 HTML 檔案載入擴充套件的儲存空間，並作為新分頁的內容。檔案中若包含其他網址、圖片、CSS 或 JavaScript 檔案的連結，這些資源仍須能透過網路存取，因為 Firefox 無法讀取系統中的本機檔案。或者，您也可以使用本機網頁伺服器（例如 MAMP 或 XAMPP），並搭配「自訂網址」選項；這種方式不受限制。"
+  },
+  "local_file_no_file": {
+    "message": "您已選擇「本機檔案」選項，但尚未將檔案儲存至 New Tab Override。請在設定中儲存檔案。"
+  },
+  "local_file_title": {
+    "message": "本機檔案"
+  },
+  "local_file_upload": {
+    "message": "儲存本機檔案"
+  },
+  "new_tab_title": {
+    "message": "新分頁"
+  },
+  "omnibox_command_settings": {
+    "message": "開啟新分頁設定"
+  },
+  "review_text": {
+    "message": "喜歡這個擴充套件嗎？歡迎前往以下平台留下評論："
+  },
+  "settings_donate": {
+    "message": "立即捐款"
+  },
+  "settings_donation_text": {
+    "message": "歡迎考慮捐款，支持這個擴充套件持續開發。"
+  },
+  "settings_feed_permission_description": {
+    "message": "Firefox 需要取得您的授權，才能讀取 soeren-hentzschel.at 的新聞摘要。您隨時可以撤銷此授權。"
+  },
+  "settings_feed_permission_needed": {
+    "message": "若要使用此功能，您必須允許 Firefox 存取資料來源。"
+  },
+  "settings_feed_permission_revoke_description": {
+    "message": "Firefox 需要取得您的授權，才能讀取 soeren-hentzschel.at 的新聞摘要。您已授予此授權。"
+  },
+  "settings_main_caption": {
+    "message": "設定"
+  },
+  "settings_managed_badge": {
+    "message": "受管理"
+  },
+  "settings_managed_notice": {
+    "message": "部分設定由企業政策管理，無法變更。請洽詢您的管理員。"
+  },
+  "settings_permission_action": {
+    "message": "授予權限"
+  },
+  "settings_permission_revoke_action": {
+    "message": "撤銷權限"
+  },
+  "settings_support_caption": {
+    "message": "支援"
+  },
+  "settings_theme_auto": {
+    "message": "自動"
+  },
+  "settings_theme_dark": {
+    "message": "深色"
+  },
+  "settings_theme_light": {
+    "message": "淺色"
+  },
+  "settings_theme_title": {
+    "message": "佈景主題"
+  },
+  "settings_title": {
+    "message": "新分頁 — 設定"
+  },
+  "settings_url_field_placeholder": {
+    "message": "網址"
+  },
+  "tab_position_option_afterCurrent": {
+    "message": "在目前分頁旁開啟所有新分頁"
+  },
+  "tab_position_option_atEnd": {
+    "message": "在分頁列末端開啟所有新分頁"
+  },
+  "tab_position_option_relatedAfterCurrent": {
+    "message": "若新分頁與目前分頁相關，則在目前分頁旁開啟；否則在分頁列末端開啟（預設）"
+  },
+  "tab_position_title": {
+    "message": "分頁位置"
+  },
+  "type_options_background_color": {
+    "message": "背景顏色"
+  },
+  "type_options_custom_url": {
+    "message": "自訂網址"
+  },
+  "type_options_feed": {
+    "message": "Mozilla 新聞（僅提供德文）"
+  },
+  "type_options_homepage": {
+    "message": "目前的首頁"
+  },
+  "type_options_local_file": {
+    "message": "本機檔案"
+  },
+  "type_title": {
+    "message": "選項"
+  },
+  "url_description": {
+    "message": "僅支援以 https://、http:// 或 moz-extension:// 開頭的網址。由於 Firefox 的限制，無法透過網址存取本機檔案。若有此需求，請使用「本機檔案」選項或本機網頁伺服器（例如 MAMP 或 XAMPP）。您可以用垂直線符號（|）分隔多個網址，系統會隨機選擇其中一個。"
+  },
+  "url_title": {
+    "message": "網址"
+  },
+  "url_validation_default": {
+    "message": "網址無效"
+  },
+  "url_validation_file": {
+    "message": "擴充套件已無法透過網址存取本機檔案"
+  }
+}
